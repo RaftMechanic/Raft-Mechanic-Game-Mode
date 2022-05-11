@@ -1,0 +1,31 @@
+
+{
+	"bodies" : 
+	[
+		
+		{
+			"childs" : 
+			[
+				
+				{
+					"color" : "a5ca11",
+					"controller" : 
+					{
+						"id" : 154.0
+					},
+					"pos" : 
+					{
+						"x" : 0.0,
+						"y" : 0.0,
+						"z" : 0.0
+					},
+					"shapeId" : "ac0b5b0a-14e1-4b31-8944-0a351fbfcc67",
+					"xaxis" : -2.0,
+					"zaxis" : -1.0
+				}
+			],
+			"type" : 0.0
+		}
+	],
+	"version" : 3.0
+}

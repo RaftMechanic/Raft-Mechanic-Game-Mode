@@ -1,0 +1,27 @@
+
+{
+	"bodies" : 
+	[
+		
+		{
+			"childs" : 
+			[
+				
+				{
+					"color" : "fe878c",
+					"pos" : 
+					{
+						"x" : 0.0,
+						"y" : 0.0,
+						"z" : 0.0
+					},
+					"shapeId" : "cb7305b2-d8b5-4302-aff3-6cdd9212ca64",
+					"xaxis" : -2.0,
+					"zaxis" : -1.0
+				}
+			],
+			"type" : 0.0
+		}
+	],
+	"version" : 3.0
+}

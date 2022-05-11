@@ -1,0 +1,45 @@
+{
+	"harvestableList": [
+		{
+            "uuid": "2ab8edca-9cfe-4b1c-9f57-5092f94ea890",
+            "name": "hvs_farmables_oilgeyser",
+            "color": "51584dff",
+            "renderable": {
+                "lodList": [
+                    {
+                        "maxViewDistance": 15,
+                        "mesh": "$SURVIVAL_DATA/Harvestables/Mesh/Farmables/hvs_farmables_oilgeyser.fbx",
+                        "subMeshList": [
+							{
+								"custom": {
+									"color": "rock",
+									"textureTiling" : [1,1,1,8] 
+								},
+								"material": "DifAsgNorNorD",
+								"textureList": [
+									"$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_oilgeyser_dif.tga",
+                                    "$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_oilgeyser_asg.tga",
+                                    "$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_oilgeyser_nor.tga",
+									"$GAME_DATA/Textures/Tiled/Rocks/t_tiled_rocks_waterrock_nor.tga"
+								]
+							}
+						]
+                    }
+                ]
+            },
+            "collides": {
+				"character": false,
+				"body": false,
+				"projectile": false,
+				"melee": true
+			},
+			"col": "$SURVIVAL_DATA/Harvestables/Collision/Farmables/hvs_farmables_oilgeyser_col.obj",
+            "removable": true,
+            "script": { 
+                "file": "$CONTENT_DATA/Scripts/game/harvestable/OilGeyser.lua", 
+                "class": "OilGeyser", 
+                "data": {} 
+            }
+        }
+	]
+}
