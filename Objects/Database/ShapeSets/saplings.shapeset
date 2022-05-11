@@ -1,0 +1,184 @@
+{"partList":[
+    {
+        "uuid": "eefb0967-d21c-445e-8120-0a09422e1374",
+        "name": "obj_birchtree_sapling",
+        "renderable": {
+        "lodList": [
+            {
+            "subMeshList": [
+                {
+                "textureList": [
+                    "$CONTENT_DATA/Objects/Textures/birch_catkin_dif.png",
+                    "$GAME_DATA/Textures/Default/default_asg.tga",
+                    "$CONTENT_DATA/Objects/Textures/birch_catkin_nor.png"
+                ],
+                "material": "DifAsgNorAlphaFlip"
+                }
+            ],
+            "mesh": "$CONTENT_DATA/Objects/Mesh/birch_catkin.obj"
+            }
+        ]
+        },
+        "color": "a39d67",
+        "stackSize": 10,
+        "cylinder": {
+            "diameter": 1,
+            "depth": 1,
+            "margin": 0.1,
+            "axis": "Y"
+        },
+        "rotationSet": "PropY",
+        "sticky": "-Y",
+        "physicsMaterial": "Wood",
+            "ratings": {
+            "density": 2,
+            "durability": 1,
+            "friction": 5,
+            "buoyancy": 5
+        },
+        "flammable": true,
+        "scripted": {
+            "filename": "$CONTENT_DATA/Scripts/game/interactables/Sapling.lua",
+            "classname": "BirchSapling"
+        }
+    },
+    {
+        "uuid": "b84e5fbb-97f2-4de5-bc39-4adb325a56f1",
+        "name": "obj_leafytree_sapling",
+        "renderable": {
+        "lodList": [
+            {
+            "subMeshList": [
+                {
+                "textureList": [
+                    "$CONTENT_DATA/Objects/Textures/acorn_dif.png",
+                    "$GAME_DATA/Textures/Default/default_asg.tga",
+                    "$CONTENT_DATA/Objects/Textures/acorn_nor.png"
+                ],
+                "material": "DifAsgNor"
+                }
+            ],
+            "mesh": "$CONTENT_DATA/Objects/Mesh/acorn.obj"
+            }
+        ]
+        },
+            "color": "57410d",
+            "stackSize": 10,
+            "cylinder": {
+            "diameter": 1,
+            "depth": 1,
+            "margin": 0.1,
+            "axis": "Y"
+        },
+        "rotationSet": "PropYmmZ",
+        "sticky": "-X+X-Y-Z+Z",
+        "physicsMaterial": "Wood",
+        "ratings": {
+            "density": 2,
+            "durability": 1,
+            "friction": 5,
+            "buoyancy": 5
+        },
+        "flammable": true,
+        "scripted": {
+            "filename": "$CONTENT_DATA/Scripts/game/interactables/Sapling.lua",
+            "classname": "LeafySapling"
+        },
+        "restrictions": {
+            "destructable": true,
+            "erasable": true,
+            "buildable": true,
+            "usable": false,
+            "connectable": false,
+            "liftable": true,
+            "convertibleToDynamic": true,
+            "paintable": false
+        }
+    },
+    {
+        "uuid": "01a4d4c6-469a-4d28-8c69-b74fff83fbdf",
+        "name": "obj_sprucetree_sapling",
+        "renderable": {
+        "lodList": [
+            {
+            "subMeshList": [
+                {
+                "textureList": [
+                    "$CONTENT_DATA/Objects/Textures/spruce_cone_dif.png",
+                    "$GAME_DATA/Textures/Default/default_asg.tga",
+                    "$CONTENT_DATA/Objects/Textures/spruce_cone_nor.png"
+                ],
+                "material": "DifAsgNor"
+                }
+            ],
+            "mesh": "$CONTENT_DATA/Objects/Mesh/spruce_cone.obj"
+            }
+        ]
+        },
+        "color": "6b5a15",
+        "stackSize": 10,
+        "cylinder": {
+            "diameter": 1,
+            "depth": 2,
+            "margin": 0.1,
+            "axis": "Y"
+        },
+        "rotationSet": "PropYmmZ",
+        "sticky": "-X+X-Y-Z+Z",
+        "physicsMaterial": "Wood",
+        "ratings": {
+            "density": 2,
+            "durability": 1,
+            "friction": 5,
+            "buoyancy": 5
+        },
+        "flammable": true,
+        "scripted": {
+            "filename": "$CONTENT_DATA/Scripts/game/interactables/Sapling.lua",
+            "classname": "SpruceSapling"
+        }
+    },
+    {
+        "uuid": "9e815dcf-cfb0-4672-b0f4-34f1e9ecc1a1",
+        "name": "obj_pinetree_sapling",
+        "renderable": {
+        "lodList": [
+            {
+            "subMeshList": [
+                {
+                "textureList": [
+                    "$CONTENT_DATA/Objects/Textures/pine_cone_dif.png",
+                    "$GAME_DATA/Textures/Default/default_asg.tga",
+                    "$CONTENT_DATA/Objects/Textures/pine_cone_nor.png"
+                ],
+                "material": "DifAsgNor"
+                }
+            ],
+            "mesh": "$CONTENT_DATA/Objects/Mesh/pine_cone.obj"
+            }
+        ]
+        },
+        "color": "402c0d",
+        "stackSize": 10,
+        "cylinder": {
+            "diameter": 1,
+            "depth": 1,
+            "margin": 0.1,
+            "axis": "Y"
+        },
+        "rotationSet": "PropY",
+        "sticky": "-Y",
+        "physicsMaterial": "Wood",
+        "ratings": {
+            "density": 2,
+            "durability": 1,
+            "friction": 5,
+            "buoyancy": 5
+        },
+        "flammable": true,
+            "scripted": {
+            "filename": "$CONTENT_DATA/Scripts/game/interactables/Sapling.lua",
+            "classname": "PineSapling"
+        }
+    }
+]}
