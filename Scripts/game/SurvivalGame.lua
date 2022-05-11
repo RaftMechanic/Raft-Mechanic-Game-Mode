@@ -18,8 +18,6 @@ dofile( "$SURVIVAL_DATA/Scripts/game/util/Timer.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestEntityManager.lua" )
 dofile( "$GAME_DATA/Scripts/game/managers/EventManager.lua" )
 
-SURVIVAL_DEV_SPAWN_POINT = sm.vec3.new(0,0,10)
-
 
 ---@class SurvivalGame : GameClass
 ---@field sv table
