@@ -1,0 +1,7 @@
+Each custom tile needs to be added to:
+
+"$CONTENT_DATA/Scripts/terrain/overworld/celldata.lua"
+"$CONTENT_DATA/Scripts/terrain/overworld/poi.lua"
+"$CONTENT_DATA/Scripts/terrain/overworld/generate_cells.lua"
+
+search for "RAFT"
