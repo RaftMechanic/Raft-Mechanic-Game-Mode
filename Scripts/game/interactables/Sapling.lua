@@ -1,3 +1,5 @@
+dofile("$CONTENT_DATA/Scripts/game/managers/LanguageManager.lua")
+
 dofile("$SURVIVAL_DATA/Scripts/game/survival_loot.lua")
 dofile("$SURVIVAL_DATA/Scripts/game/survival_harvestable.lua")
 
@@ -66,11 +68,11 @@ end
 
 function Sapling.client_canInteract(self)
 	if self.planted then
-		sm.gui.setInteractionText("", "Growing...", "")
+		sm.gui.setInteractionText("", Tags["SaplingGrow"], "")
 	elseif self.valid then
-		sm.gui.setInteractionText("Splash with", "Liquid", "")
+		sm.gui.setInteractionText(Tags["SaplingNeedLiquid1"], Tags["SaplingNeedLiquid2"], "")
 	elseif not self.caculating then
-		sm.gui.setInteractionText("Place on the", "#ff0000Surface", "")
+		sm.gui.setInteractionText(Tags["SaplingNeedGround1"], "#ff0000" .. Tags["SaplingNeedGround2"], "")
 	end
 	return true
 end
