@@ -1,3 +1,6 @@
+# Folders
+Cache/
+
 # Compiled Lua sources
 luac.out
 
