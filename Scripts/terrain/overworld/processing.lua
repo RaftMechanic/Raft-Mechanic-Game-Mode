@@ -36,10 +36,12 @@ function flattenPoiCliff( poi )
 	local type = math.floor( poi.type / 100 )
 	if type == 0 then 
 		return 
+	elseif type == 69 then
+		type = 1
 	end
 
 
-	local pad = type ~= TYPE_MEADOW and 1 or 0
+	local pad = 0
 	-- Cliff level flatten
 	for y0 = -pad, poi.size + pad do
 		for x0 = -pad, poi.size + pad do

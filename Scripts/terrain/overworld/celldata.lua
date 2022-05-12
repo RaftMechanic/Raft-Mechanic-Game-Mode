@@ -1,12 +1,12 @@
 dofile "$SURVIVAL_DATA/Scripts/terrain/overworld/tile_database.lua"
 
 
---RAFT --Make sure number is below 100
+--RAFT --Use number under 100 for non islands! Else use 69xx
 POI_RAFT_CRASHEDSHIP_S = 98
-POI_RAFT_WOCTEMPLE_XL = 97
+POI_RAFT_WOCTEMPLE_XL = 6900
 POI_RAFT_MAZE_S = 96
 POI_RAFT_RUIN_M = 95
-POI_RAFT_RANGERSTATION_M = 94
+POI_RAFT_RANGERSTATION_M = 6901
 
 --------------------------------------------------------------------------------
 -- Cell type constants

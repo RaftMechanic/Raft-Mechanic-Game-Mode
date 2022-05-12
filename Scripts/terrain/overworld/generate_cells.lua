@@ -126,7 +126,7 @@ function generateOverworldCelldata( xMin, xMax, yMin, yMax, seed, data, padding 
 	pois[#pois + 1] = { x = -29, y = 2, type = POI_RAFT_CRASHEDSHIP_S, rotation = 0, size = 1, road = false, flat = true, cellDebug = DEBUG_R, edges = {} }
 	pois[#pois + 1] = { x = 24, y = 20, type = POI_RAFT_MAZE_S, rotation = 0, size = 1, road = false, flat = true, cellDebug = DEBUG_R, edges = {} }
 	pois[#pois + 1] = { x = 0, y = 0, type = POI_RAFT_RUIN_M, rotation = 0, size = 2, road = false, flat = true, cellDebug = DEBUG_R, edges = {} }
-	pois[#pois + 1] = { x = -27, y = -26, type = POI_RAFT_RANGERSTATION_M, size = 2, road = false, flat = true, terrainType = TYPE_LAKE, cellDebug = DEBUG_R, edges = {} }
+	pois[#pois + 1] = { x = -27, y = -26, type = POI_RAFT_RANGERSTATION_M, size = 2, road = false, flat = true, cellDebug = DEBUG_R, edges = {} }
 	local mechanicStation = pois[#pois]
 
 	
