@@ -40,6 +40,18 @@
                 "class": "OilGeyser", 
                 "data": {} 
             }
+        },
+        {
+            "name": "hvs_farmables_beehive",
+            "uuid": "7261bb49-9c63-4097-999a-4dcab9645eb0",
+            "renderable": "$SURVIVAL_DATA/Harvestables/Renderable/Farmables/hvs_farmables_beehive.rend",
+            "col": "$SURVIVAL_DATA/Harvestables/Collision/Farmables/hvs_farmables_beehive_col.obj",
+            "color":"c5a100",
+            "script": { 
+                "file": "$CONTENT_DATA/Scripts/game/harvestable/BeeHive.lua",
+                "class": "BeeHive",
+				"data": {}
+            }
         }
 	]
 }

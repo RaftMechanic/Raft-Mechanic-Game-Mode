@@ -318,7 +318,6 @@ function SurvivalPlayer.server_onFixedUpdate( self, dt )
 	-- Update breathing
 	if character then
 		if character:isDiving() then
-			print("true")
 			self.sv.saved.stats.breath = math.max( self.sv.saved.stats.breath - BreathLostPerTick, 0 )
 			if self.sv.saved.stats.breath == 0 then
 				self.sv.drownTimer:tick()
