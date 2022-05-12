@@ -127,7 +127,7 @@
 						"Body": {
 							"material": "Dif",
 							"textureList": [
-								"$CONTENT/Objects/Textures/Parts/Bee/Body.jpg",
+								"$CONTENT_DATA/Objects/Textures/Parts/Bee/Body.jpg",
 								"",
 								""
 							]
@@ -135,7 +135,7 @@
 						"back": {
 							"material": "Dif",
 							"textureList": [
-								"$CONTENT/Objects/Textures/Parts/Bee/Back.png",
+								"$CONTENT_DATA/Objects/Textures/Parts/Bee/Back.png",
 								"",
 								""
 							]
@@ -143,7 +143,7 @@
 						"headlegs": {
 							"material": "Dif",
 							"textureList": [
-								"$CONTENT/Objects/Textures/Parts/Bee/Material1.png",
+								"$CONTENT_DATA/Objects/Textures/Parts/Bee/Material1.png",
 								"",
 								""
 							]
@@ -151,7 +151,7 @@
 						"Wings": {
 							"material": "Dif",
 							"textureList": [
-								"$CONTENT/Objects/Textures/Parts/Bee/Wings.png",
+								"$CONTENT_DATA/Objects/Textures/Parts/Bee/Wings.png",
 								"",
 								""
 							]
@@ -159,7 +159,7 @@
 						"Material2": {
 							"material": "Dif",
 							"textureList": [
-								"$CONTENT/Objects/Textures/Parts/Bee/Material2.png",
+								"$CONTENT_DATA/Objects/Textures/Parts/Bee/Material2.png",
 								"",
 								""
 							]
