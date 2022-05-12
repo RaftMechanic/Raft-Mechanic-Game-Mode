@@ -1,0 +1,191 @@
+{"partList":[
+    {
+		"uuid": "4a971f7d-14e6-454d-bce8-0879243c4934",
+		"name": "obj_sail_render",
+		"renderable": {
+			"lodList": [
+				{
+					"subMeshMap": {
+						"blinds1":{
+							"textureList": [
+								"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_blinds_dif.tga",
+								"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_blinds_asg.tga",
+								"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_blinds_nor.tga"
+							],
+							"material": "DifAsgNor"
+						},
+						"Shack_Atlas1":{
+							"textureList": [
+								"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_dif.tga",
+								"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_asg.tga",
+								"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_nor.tga"
+							],
+							"material": "DifAsgNor"
+						}
+					},
+					"mesh": "$CONTENT_DATA/Objects/Mesh/Renders/SailRender.fbx"
+				}
+			]
+		},
+		"color": "008ae1",
+		"box": {
+			"x": 1,
+			"y": 1,
+			"z": 1
+		},
+		"rotationSet": "PropFull",
+		"physicsMaterial": "Plastic",
+		"ratings": {
+			"density": 1,
+			"durability": 3,
+			"friction": 10,
+			"buoyancy": 10
+		},
+		"flammable": true,
+        "showInInventory": false
+	},
+	{
+		"uuid": "4a971f7d-14e6-454d-bce8-0879243c8735",
+		"name": "obj_hook_render",
+		"renderable": {
+			"lodList": [
+				{
+					"subMeshMap": {
+						"Hook":{
+							"textureList": [
+								"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkhook_dif.tga",
+								"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkhook_asg.tga",
+								"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkhook_nor.tga"
+							],
+							"material": "DifAsgNor"
+						}
+					},
+					"mesh": "$CONTENT_DATA/Objects/Mesh/Renders/HookRender.fbx"
+				}
+			]
+		},
+		"color": "008ae1",
+		"box": {
+			"x": 1,
+			"y": 1,
+			"z": 3
+		},
+		"rotationSet": "PropZ",
+		"sticky": "-Z",
+		"physicsMaterial": "Plastic",
+		"ratings": {
+			"density": 1,
+			"durability": 3,
+			"friction": 10,
+			"buoyancy": 10
+		},
+		"flammable": true,
+        "showInInventory": false
+	},
+	{
+		"uuid": "4a971f7d-14e6-454d-bce8-0879243c4859",
+		"name": "obj_windsock_render",
+		"renderable": {
+			"lodList": [
+				{
+					"subMeshMap": {
+						"Material":{
+							"textureList": [
+								"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_blinds_dif.tga",
+								"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_blinds_asg.tga",
+								"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_blinds_nor.tga"
+							],
+							"material": "DifAsgNor"
+						},
+						"lambert2":{
+							"textureList": [
+								"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+								"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+								"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+							],
+							"material": "DifAsgNor"
+						}
+					},
+					"mesh": "$CONTENT_DATA/Objects/Mesh/Renders/WindSockRender.fbx"
+				}
+			]
+		},
+		"color": "008ae1",
+		"box": {
+			"x": 1,
+			"y": 1,
+			"z": 1
+		},
+		"rotationSet": "PropFull",
+		"physicsMaterial": "Plastic",
+		"ratings": {
+			"density": 1,
+			"durability": 3,
+			"friction": 10,
+			"buoyancy": 10
+		},
+		"flammable": true,
+        "showInInventory": false
+	},
+	{
+		"uuid": "4a971f7d-14e6-454d-bce8-0879243c7642",
+		"name": "obj_fishingfloat_render",
+		"renderable": {
+			"lodList": [
+				{
+					"subMeshMap": {
+						"obj_consumable_milk_mat":{
+							"textureList": [
+								"$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_milk_dif.tga",
+                    		    "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_milk_asg.tga",
+                    		    "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_milk_nor.tga"
+							],
+							"material": "DifAsgNor"
+						},
+						"initialShadingGroup":{
+							"textureList": [
+								"$CONTENT_DATA/Characters/Char_Tools/Char_fishingrod/FishingRod.png",
+								"",
+								""
+							],
+							"material": "Dif"
+						},
+						"campfire_mat":{
+							"textureList": [
+								"$SURVIVAL_DATA/Terrain/Textures/Camping/env_camping_campfire_dif.tga",
+                    			"$SURVIVAL_DATA/Terrain/Textures/Camping/env_camping_campfire_asg.tga",
+                    			"$SURVIVAL_DATA/Terrain/Textures/Camping/env_camping_campfire_nor.tga"
+							],
+							"material": "DifAsgNor"
+						},
+						"glass_mat": {
+							"material": "Glass",
+							"textureList": [
+								"$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_milk_dif.tga",
+								"$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_milk_asg.tga",
+								"$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_milk_nor.tga"
+							]
+						}
+					},
+					"mesh": "$CONTENT_DATA/Objects/Mesh/Renders/FishingFloatRender.fbx"
+				}
+			]
+		},
+		"color": "008ae1",
+		"box": {
+			"x": 1,
+			"y": 1,
+			"z": 1
+		},
+		"rotationSet": "PropFull",
+		"physicsMaterial": "Plastic",
+		"ratings": {
+			"density": 1,
+			"durability": 3,
+			"friction": 10,
+			"buoyancy": 10
+		},
+		"flammable": true,
+        "showInInventory": false
+	}
+]}

@@ -1,0 +1,4 @@
+For new shapeset, link in "$CONTENT_DATA\Objects\Database"
+
+1. Names need to be added to "$CONTENT_DATA\Scripts\game\raft_items.lua"
+2. Add title & description to "$CONTENT_DATA\Gui\Language\English\InventoryDescriptions.json"

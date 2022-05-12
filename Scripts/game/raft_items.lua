@@ -1,3 +1,32 @@
+--saplings.shapeset
+obj_birchtree_sapling = sm.uuid.new("eefb0967-d21c-445e-8120-0a09422e1374")
+obj_leafytree_sapling = sm.uuid.new("b84e5fbb-97f2-4de5-bc39-4adb325a56f1")
+obj_sprucetree_sapling = sm.uuid.new("01a4d4c6-469a-4d28-8c69-b74fff83fbdf")
+obj_pinetree_sapling = sm.uuid.new("9e815dcf-cfb0-4672-b0f4-34f1e9ecc1a1")
+
+--renders.shapeset
+obj_sail_render = sm.uuid.new("4a971f7d-14e6-454d-bce8-0879243c4934")
+obj_hook_render = sm.uuid.new("4a971f7d-14e6-454d-bce8-0879243c8735")
+obj_windsock_render = sm.uuid.new("4a971f7d-14e6-454d-bce8-0879243c4859")
+obj_fishingfloat_render = sm.uuid.new("4a971f7d-14e6-454d-bce8-0879243c7642")
+
+--plants.shapeset
+obj_planter_bananna = sm.uuid.new("9fe45a4e-55a0-4275-88f9-6511f8211fad")
+obj_planter_blueberry = sm.uuid.new("8ea107e0-9ce6-4bfd-8bef-d2339b04f039")
+obj_planter_orange = sm.uuid.new("11155370-da30-45eb-8545-a60435686d6a")
+obj_planter_pipeapple = sm.uuid.new("cff54c25-6772-4424-b3ca-de0df19f1a57")
+obj_planter_carrot = sm.uuid.new("906f990e-68df-486b-820d-175ef33f6e17")
+obj_planter_redbeet = sm.uuid.new("a8a402f4-f3a0-4be5-b76f-8cfc26778702")
+obj_planter_tomato = sm.uuid.new("496c950a-14fd-4ad7-bfba-bb6509835d9c")
+obj_planter_broccoli = sm.uuid.new("704c9bb4-747b-4e54-b1f2-d51043929b5b")
+obj_planter_potato = sm.uuid.new("56ac7150-65b2-496d-9c65-0197a99ca571")
+obj_planter_cotton = sm.uuid.new("d9dce2fc-b158-464d-b5a6-163c6e65b512")
+
+
+
+
+
+
 obj_scrap_field = sm.uuid.new("8e75cddb-040e-4813-8dd6-7e72f3288a91")
 obj_large_field = sm.uuid.new("c80e2932-0d21-48bb-b5a2-dba03d73cfb7")
 obj_raft_base = sm.uuid.new("4a971f7d-14e6-454d-bce8-0879243c4474")
@@ -8,10 +37,7 @@ obj_airtank_full = sm.uuid.new("462baf58-6329-4f29-8f9e-c20d06fb6f7d")
 obj_scrap_purifier = sm.uuid.new("80c9edb7-0f86-4899-bf60-c3baca3fa841")
 obj_scrap_tree_grower = sm.uuid.new("819fb238-a68b-4aab-a6f2-c1037f6bfb5b")
 
-obj_birchtree_sapling = sm.uuid.new("eefb0967-d21c-445e-8120-0a09422e1374")
-obj_leafytree_sapling = sm.uuid.new("b84e5fbb-97f2-4de5-bc39-4adb325a56f1")
-obj_sprucetree_sapling = sm.uuid.new("01a4d4c6-469a-4d28-8c69-b74fff83fbdf")
-obj_pinetree_sapling = sm.uuid.new("9e815dcf-cfb0-4672-b0f4-34f1e9ecc1a1")
+
 
 obj_scrap_workbench = sm.uuid.new("f3163e62-e6c3-475c-805e-559f8bb07ad1")
 obj_apiary = sm.uuid.new("ebabda72-94d8-40c5-ab07-7001d1b67380")

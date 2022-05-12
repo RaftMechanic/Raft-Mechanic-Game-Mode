@@ -1,0 +1,587 @@
+{
+	"partList": [
+		{
+			"uuid": "9fe45a4e-55a0-4275-88f9-6511f8211fad",
+			"name": "obj_planter_bananna",
+			"renderable": {
+				"lodList": [
+                    {
+                        "includes": [
+                            "POSITION",
+                            "NORMAL",
+                            "UV0",
+                            "VERTEX_COLOR",
+                            "TANGENT"
+                        ], 
+                        "subMeshMap": {
+                            "bananaplant": {
+                                "material": "DifAsgNor",
+                                    "textureList": [
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_bananatrunk_dif.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_bananatrunk_asg.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_bananatrunk_nor.tga"
+                                    ]
+                            },
+                            "leaves": {
+                                "material": "DifAsgNor",
+                                    "textureList": [
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_bananaleaves_dif.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_bananaleaves_asg.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_bananaleaves_nor.tga"
+                                    ]
+                            },
+                            "Soil": {
+                                "material": "UVAnimDifAsgNor",
+                                "textureList": [
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_dif.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
+                                ],
+                                "custom":{
+                                              "uv0": { "u": 1, "v": 0.1 }
+                                 }
+                            }
+                        },
+                        "mesh": "$SURVIVAL_DATA/Harvestables/Mesh/Plantables/hvs_plantables_banana_finished.fbx"
+                    }
+                ]
+			},
+			"color": "e9bf04ff",
+			"box": {
+				"x": 6,
+				"y": 8,
+				"z": 1
+			},
+			"rotationSet": "PropYZ",
+			"sticky": "-Z+Y-Y+X-X",
+			"physicsMaterial": "Fruit",
+			"ratings": {
+				"density": 4,
+				"durability": 3,
+				"friction": 4,
+				"buoyancy": 6
+			},
+			"flammable": false,
+            "showInInventory": false
+		},
+
+        {
+			"uuid": "8ea107e0-9ce6-4bfd-8bef-d2339b04f039",
+			"name": "obj_planter_blueberry",
+			"renderable": {
+				"lodList": [
+                    {
+                        "includes": [
+                            "POSITION",
+                            "NORMAL",
+                            "UV0",
+                            "VERTEX_COLOR",
+                            "TANGENT"
+                        ], 
+                        "subMeshMap": {
+                            "blueberry_mat": {
+                                "material": "DifAsgNor",
+                                "textureList": [
+                                    "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_blueberry_dif.tga",
+                                    "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_blueberry_asg.tga",
+                                    "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_blueberry_nor.tga"
+                                ]
+                            },
+                            "Soil": {
+                                "material": "UVAnimDifAsgNor",
+                                "textureList": [
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_dif.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
+                                ],
+                                "custom":{
+                                              "uv0": { "u": 1, "v": 0.1 }
+                                 }
+                            }
+                        },
+                        "mesh": "$SURVIVAL_DATA/Harvestables/Mesh/Plantables/hvs_plantables_blueberry_finished.fbx"
+                    }
+                ]
+			},
+			"color": "c5a100",
+			"box": {
+				"x": 6,
+				"y": 8,
+				"z": 1
+			},
+			"rotationSet": "PropYZ",
+			"sticky": "-Z+Y-Y+X-X",
+			"physicsMaterial": "Fruit",
+			"ratings": {
+				"density": 4,
+				"durability": 3,
+				"friction": 4,
+				"buoyancy": 6
+			},
+			"flammable": false,
+            "showInInventory": false
+		},
+
+        {
+			"uuid": "11155370-da30-45eb-8545-a60435686d6a",
+			"name": "obj_planter_orange",
+			"renderable": {
+				"lodList": [
+                    {
+                        "subMeshMap": {
+                            "orange_mat": {
+                                "material": "DifAsgNor",
+                                "textureList": [
+                                    "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_orange_dif.tga",
+                                    "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_orange_asg.tga",
+                                    "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_orange_nor.tga"
+                                ]
+                            },
+                            "Soil": {
+                                "material": "UVAnimDifAsgNor",
+                                "textureList": [
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_dif.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
+                                ],
+                                "custom":{
+                                              "uv0": { "u": 1, "v": 0.1 }
+                                 }
+                            }
+                        },
+                        "mesh": "$SURVIVAL_DATA/Harvestables/Mesh/Plantables/hvs_plantables_orange_finished.fbx"
+                    }
+                ]
+			},
+			"color": "c5a100",
+			"box": {
+				"x": 6,
+				"y": 8,
+				"z": 1
+			},
+			"rotationSet": "PropYZ",
+			"sticky": "-Z+Y-Y+X-X",
+			"physicsMaterial": "Fruit",
+			"ratings": {
+				"density": 4,
+				"durability": 3,
+				"friction": 4,
+				"buoyancy": 6
+			},
+			"flammable": false,
+            "showInInventory": false
+		},
+
+        {
+			"uuid": "cff54c25-6772-4424-b3ca-de0df19f1a57",
+			"name": "obj_planter_pipeapple",
+			"renderable": {
+				"lodList": [
+                    {
+                        "includes": [
+                            "POSITION",
+                            "NORMAL",
+                            "UV0",
+                            "VERTEX_COLOR",
+                            "TANGENT"
+                        ], 
+                        "subMeshMap": {
+                            "trunk": {
+                                "material": "DifAsgNor",
+                                    "textureList": [
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_pineapple_dif.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_pineapple_asg.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_pineapple_nor.tga"
+                                    ]
+                            },
+                            "leaves": {
+                                "material": "DifAsgNor",
+                                    "textureList": [
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_pineapple_dif.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_pineapple_asg.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_pineapple_nor.tga"
+                                    ]
+                            },
+                            "Soil": {
+                                "material": "UVAnimDifAsgNor",
+                                "textureList": [
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_dif.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
+                                ],
+                                "custom":{
+                                              "uv0": { "u": 1, "v": 0.1 }
+                                 }
+                            }
+                        },
+                        "mesh": "$SURVIVAL_DATA/Harvestables/Mesh/Plantables/hvs_plantables_pineapple_finished.fbx"
+                    }
+                ]
+			},
+			"color": "e3ae20",
+			"box": {
+				"x": 6,
+				"y": 8,
+				"z": 1
+			},
+			"rotationSet": "PropYZ",
+			"sticky": "-Z+Y-Y+X-X",
+			"physicsMaterial": "Fruit",
+			"ratings": {
+				"density": 4,
+				"durability": 3,
+				"friction": 4,
+				"buoyancy": 6
+			},
+			"flammable": false,
+            "showInInventory": false
+		},
+
+        {
+			"uuid": "906f990e-68df-486b-820d-175ef33f6e17",
+			"name": "obj_planter_carrot",
+			"renderable": {
+				"lodList": [
+                    {
+                        "includes": [
+                            "POSITION",
+                            "NORMAL",
+                            "UV0",
+                            "VERTEX_COLOR",
+                            "TANGENT"
+                        ],
+                        "subMeshMap": {
+                            "carrotplant": {
+                                "material": "DifAsgNor",
+                                    "textureList": [
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_carrot_dif.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_carrot_asg.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_carrot_nor.tga"
+                                    ]
+                            },
+                            "carrot": {
+                                "material": "DifAsgNor",
+                                    "textureList": [
+                                                "$SURVIVAL_DATA/Objects/Textures/Plantables/obj_plantables_carrot_dif.tga",
+                                                "$SURVIVAL_DATA/Objects/Textures/Plantables/obj_plantables_carrot_asg.tga",
+                                                "$SURVIVAL_DATA/Objects/Textures/Plantables/obj_plantables_carrot_nor.tga"
+                                    ]
+                            },
+                            "Soil": {
+                                "material": "UVAnimDifAsgNor",
+                                "textureList": [
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_dif.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
+                                ],
+                                "custom":{
+                                              "uv0": { "u": 1, "v": 0.1 }
+                                 }
+                            }
+                        },
+                        "mesh": "$SURVIVAL_DATA/Harvestables/Mesh/Plantables/hvs_plantables_carrot_finished.fbx"
+                    }
+                ]
+			},
+			"color": "a64102",
+			"box": {
+				"x": 6,
+				"y": 8,
+				"z": 1
+			},
+			"rotationSet": "PropYZ",
+			"sticky": "-Z+Y-Y+X-X",
+			"physicsMaterial": "Fruit",
+			"ratings": {
+				"density": 4,
+				"durability": 3,
+				"friction": 4,
+				"buoyancy": 6
+			},
+			"flammable": false,
+            "showInInventory": false
+		},
+
+        {
+			"uuid": "a8a402f4-f3a0-4be5-b76f-8cfc26778702",
+			"name": "obj_planter_redbeet",
+			"renderable": {
+				"lodList": [
+                    {
+                        "subMeshMap": {
+                            "Trunk": {
+                                "material": "DifAsgNor",
+                                    "textureList": [
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_redbeettrunk_dif.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_redbeettrunk_asg.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_redbeettrunk_nor.tga"
+                                    ]
+                            },
+                            "Leaves": {
+                                "material": "DifAsgNor",
+                                    "textureList": [
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_redbeetleaves_dif.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_redbeetleaves_asg.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_redbeetleaves_nor.tga"
+                                    ]
+                            },
+                            "Soil": {
+                                "material": "UVAnimDifAsgNor",
+                                "textureList": [
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_dif.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
+                                ],
+                                "custom":{
+                                              "uv0": { "u": 1, "v": 0.1 }
+                                 }
+                            }
+                        },
+                        "mesh": "$SURVIVAL_DATA/Harvestables/Mesh/Plantables/hvs_plantables_redbeet_finished.fbx"
+                    }
+                ]
+			},
+			"color": "a6274d",
+			"box": {
+				"x": 6,
+				"y": 8,
+				"z": 1
+			},
+			"rotationSet": "PropYZ",
+			"sticky": "-Z+Y-Y+X-X",
+			"physicsMaterial": "Fruit",
+			"ratings": {
+				"density": 4,
+				"durability": 3,
+				"friction": 4,
+				"buoyancy": 6
+			},
+			"flammable": false,
+            "showInInventory": false
+		},
+
+        {
+			"uuid": "496c950a-14fd-4ad7-bfba-bb6509835d9c",
+			"name": "obj_planter_tomato",
+			"renderable": {
+				"lodList": [
+                    {
+                        "subMeshMap": {
+                            "Trunk": {
+                                "material": "DifAsgNor",
+                                    "textureList": [
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_tomato_dif.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_tomato_asg.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_tomato_nor.tga"
+                                    ]
+                            },
+                            "Leaves": {
+                                "material": "DifAsgNor",
+                                    "textureList": [
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_tomato_dif.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_tomato_asg.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_tomato_nor.tga"
+                                    ]
+                            },
+                            "Soil": {
+                                "material": "UVAnimDifAsgNor",
+                                "textureList": [
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_dif.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
+                                ],
+                                "custom":{
+                                              "uv0": { "u": 1, "v": 0.1 }
+                                 }
+                            }
+                        },
+                        "mesh": "$SURVIVAL_DATA/Harvestables/Mesh/Plantables/hvs_plantables_tomato_finished.fbx"
+                    }
+                ]
+			},
+			"color": "c5a100",
+			"box": {
+				"x": 6,
+				"y": 8,
+				"z": 1
+			},
+			"rotationSet": "PropYZ",
+			"sticky": "-Z+Y-Y+X-X",
+			"physicsMaterial": "Fruit",
+			"ratings": {
+				"density": 4,
+				"durability": 3,
+				"friction": 4,
+				"buoyancy": 6
+			},
+			"flammable": false,
+            "showInInventory": false
+		},
+
+        {
+			"uuid": "704c9bb4-747b-4e54-b1f2-d51043929b5b",
+			"name": "obj_planter_broccoli",
+			"renderable": {
+				"lodList": [
+                    {
+                        "subMeshMap": {
+                            "Trunk": {
+                                "material": "DifAsgNor",
+                                    "textureList": [
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_broccoli_dif.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_broccoli_asg.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_broccoli_nor.tga"
+                                    ]
+                            },
+                            "Leaves": {
+                                "material": "DifAsgNor",
+                                    "textureList": [
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_broccoli_dif.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_broccoli_asg.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_broccoli_nor.tga"
+                                    ]
+                            },
+                            "Soil": {
+                                "material": "UVAnimDifAsgNor",
+                                "textureList": [
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_dif.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
+                                ],
+                                "custom":{
+                                              "uv0": { "u": 1, "v": 0.1 }
+                                 }
+                            }
+                        },
+                        "mesh": "$SURVIVAL_DATA/Harvestables/Mesh/Plantables/hvs_plantables_broccoli_finished.fbx"
+                    }
+                ]
+			},
+			"color": "fd4671",
+			"box": {
+				"x": 6,
+				"y": 8,
+				"z": 1
+			},
+			"rotationSet": "PropYZ",
+			"sticky": "-Z+Y-Y+X-X",
+			"physicsMaterial": "Fruit",
+			"ratings": {
+				"density": 4,
+				"durability": 3,
+				"friction": 4,
+				"buoyancy": 6
+			},
+			"flammable": false,
+            "showInInventory": false
+		},
+
+        {
+			"uuid": "56ac7150-65b2-496d-9c65-0197a99ca571",
+			"name": "obj_planter_potato",
+			"renderable": {
+				"lodList": [
+                    {
+                        "subMeshMap": {
+                            "Trunk": {
+                                "material": "DifAsgNor",
+                                    "textureList": [
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_potato_dif.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_potato_asg.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_potato_nor.tga"
+                                    ]
+                            },
+                            "Leaves": {
+                                "material": "DifAsgNor",
+                                    "textureList": [
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_potato_dif.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_potato_asg.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Plantables/hvs_plantables_potato_nor.tga"
+                                    ]
+                            },
+                            "Soil": {
+                                "material": "UVAnimDifAsgNor",
+                                "textureList": [
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_dif.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
+                                ],
+                                "custom":{
+                                              "uv0": { "u": 1, "v": 0.1 }
+                                 }
+                            }
+                        },
+                        "mesh": "$SURVIVAL_DATA/Harvestables/Mesh/Plantables/hvs_plantables_potato_finished.fbx"
+                    }
+                ]
+			},
+			"color": "c5a100",
+			"box": {
+				"x": 6,
+				"y": 8,
+				"z": 1
+			},
+			"rotationSet": "PropYZ",
+			"sticky": "-Z+Y-Y+X-X",
+			"physicsMaterial": "Fruit",
+			"ratings": {
+				"density": 4,
+				"durability": 3,
+				"friction": 4,
+				"buoyancy": 6
+			},
+			"flammable": false,
+            "showInInventory": false
+		},
+
+        {
+			"uuid": "d9dce2fc-b158-464d-b5a6-163c6e65b512",
+			"name": "obj_planter_cotton",
+			"renderable": {
+				"lodList": [
+                    {
+                        "subMeshMap": {
+                            "Leaves": {
+                                "material": "DifAsgNor",
+                                    "textureList": [
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_cottonplant_dif.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_cottonplant_asg.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_cottonplant_nor.tga"
+                                    ]
+                            },
+                            "Soil": {
+                                "material": "UVAnimDifAsgNor",
+                                "textureList": [
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_dif.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
+                                                "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
+                                ],
+                                "custom":{
+                                              "uv0": { "u": 1, "v": 0.1 }
+                                 }
+                            }
+                        },
+                        "mesh": "$SURVIVAL_DATA/Harvestables/Mesh/Plantables/hvs_plantables_cotton_finished.fbx"
+                    }
+                ]
+			},
+			"color": "e9bf04ff",
+			"box": {
+				"x": 6,
+				"y": 8,
+				"z": 1
+			},
+			"rotationSet": "PropYZ",
+			"sticky": "-Z+Y-Y+X-X",
+			"physicsMaterial": "Fruit",
+			"ratings": {
+				"density": 4,
+				"durability": 3,
+				"friction": 4,
+				"buoyancy": 6
+			},
+			"flammable": false,
+            "showInInventory": false
+		}
+	]
+}
