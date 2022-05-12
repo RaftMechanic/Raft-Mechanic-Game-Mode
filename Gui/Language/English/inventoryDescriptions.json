@@ -1,1 +1,183 @@
-{}
+{
+    //Vanila override
+    "b63c6440-dfc2-4da7-acdb-3c385080b2e4": {
+		"description": "The Craftbot will help you craft everything from new blocks to useful interactive parts. You should have on your raft.",
+		"title": "Lightweight Craftbot"
+	},
+    "5cb15c93-4fa9-48da-9974-2e95ca6c9e1c": {
+		"description": "Let the Refinebot help you out and refine all your collected logs. Put them in by hand or by placing a Resource Collector with logs next to it. You should have on your raft.",
+		"title": "Lightweight Refinebot"
+	},
+    "a930a42f-63ed-4fb0-933e-56ce8a889cc5": {
+		"description": "Perfect for collecting and stacking logs. When full, place it next to a refinebot to turn logs in to blocks. You should have on your raft.",
+		"title": "Lightweight Resource Collector"
+	},
+    "2af00456-b22e-4743-b338-a91934aba7c5": {
+		"description": "Cooks delicious food that will fill up your health bar or revive fallen friends. You should have on your raft.",
+		"title": "Lightweight Cookbot"
+	},
+    "767a3121-2c31-473c-a5ab-27e188fdd55a": {
+		"description": "Use the Dressbot to make new clothes for your Mechanic. Just add your garment boxes and the right amount of cotton. You can also customise your look by using the blue wardrobe. You should have on your raft.",
+		"title": "Lightweight Dressbot"
+	},
+
+
+	//Raft
+	//tools
+	"e3bcf8fa-68d7-49a8-b17b-c1e864d53b69": {
+        "description": "Throw the hook into water. Wait for the fish to start nibbling. Pull when the fish bites and the massive splash that follows! The fish will fight and create little splashes, and sounds! Strange things can be fished from the ocean...",
+        "title": "Fishing Rod"
+    },
+    "b5ade3b0-be48-4a61-a8c2-13a4cedf1343": {
+        "description": "Throw the hook to pull some litter out of the ocean and right into your greedy little hands! Press right click to make the hook rear in faster while its coming towards you.",
+        "title": "Pulling Hook"
+    },
+    "1daebe24-4e16-422c-b5e7-c3f45f9296d8": {
+        "description": "Allows you to chop some wood!",
+        "title": "Axe"
+    },
+    "c883b283-ea7a-4bba-af0d-5c13fd73051d": {
+        "description": "Can break the rocks at the bottom of the ocean",
+        "title": "Pickaxe"
+    },
+    "7c440c4a-5919-4baa-a946-0bb89b8c4d5d": {
+        "description": "It’s still really salty...",
+        "title": "Raw Fish"
+    },
+    "7c440c4a-5919-4baa-a946-0bb89b8c4d85": {
+        "description": "That fish is kinda SUS",
+        "title": "Raw Fishus"
+    },
+    "c57fe6d6-03b1-46d4-9104-29cf19f176ab": {
+        "description": "Looks very delicious, but smells.",
+        "title": "Cooked Fish"
+    },
+    "67dd0023-023d-46cb-9839-e4ada2609a9b": {
+        "description": "Grills food, requires wood as fuel.",
+        "title": "Grill"
+    },
+    "0db1ecd5-503d-4dd3-807e-869c243a7c08": {
+        "description": "A sharp stick. Useful to poke and hurt things.",
+        "title": "Spear"
+    },
+    "bb641a4f-e391-441c-bc6d-0ae21a069477": {
+        "description": "A wooden hammer. Useful for all sorts of things, but not really good at them.",
+        "title": "Wooden Hammer"
+    },
+    "e34387d3-fa29-4831-89b8-c94417b6fce6": {
+        "description": "A powerful gun that shoots pointy harpoons! You can collect them after they drop to the ground. (Can be used underwater)",
+        "title": "Harpoon Gun"
+    },
+    "8f460344-ef34-42ab-99e3-d3bed9af4b52": {
+        "description": "Shows you the direction of the wind",
+        "title": "Wind Sock"
+    },
+   
+    //parts
+    "8e75cddb-040e-4813-8dd6-7e72f3288a91": {
+        "description": "Can be used to farm crops on your raft, doesn't trigger raids.",
+        "title": "Scrap Field"
+    },
+    "c80e2932-0d21-48bb-b5a2-dba03d73cfb7": {
+        "description": "Double the soil, double the fun! Grows 2 crops at once, doesn’t trigger raids.",
+        "title": "Big Field"
+    },
+    "4a971f7d-14e6-454d-bce8-0879243c4474": {
+        "description": "This is what your raft is made of. Place down more to expand your raft (or fix it).",
+        "title": "Raft Base"
+    },
+    "7ece8b10-5cc0-4791-b75e-09858ef1b9c4": {
+        "description": "With a pair of fins, you can swim much faster! They also look really cool!",
+        "title": "Fins"
+    },
+    "7ceccadf-010f-4a45-907f-18ccc11c509c": {
+        "description": "Are your lungs too small? This won’t fix your exercise issues, but you’ll last longer underwater. Connect it to a seat to not lose any breath while sitting in it.",
+        "title": "Oxygen Tank"
+    },
+    "03075a5a-92f5-49bd-b132-7d8e0cb80156": {
+        "description": "Use a logic input to turn it on and off. It’s heavy when off, but very light and buoyant when activated.",
+        "title": "Air Tank"
+    },
+    "80c9edb7-0f86-4899-bf60-c3baca3fa841": {
+        "description": "Turns regular bottled water into clean water that you can drink, requires wood as fuel.",
+        "title": "Water Purifier"
+    },
+    "819fb238-a68b-4aab-a6f2-c1037f6bfb5b": {
+        "description": "Grow your own trees wherever you want! Get saplings from real trees! (not like the grown trees are fake)",
+        "title": "Tree Farm"
+    },
+    "f3163e62-e6c3-475c-805e-559f8bb07ad1": {
+        "description": "Used to craft essential items for you and your raft",
+        "title": "Workbench"
+    },
+    "ebabda72-94d8-40c5-ab07-7001d1b67380": {
+        "description": "Oh no, the Bees! If you can catch a queen bee, you can have your own bee hive! Enjoy fresh beeswax (and stings)",
+        "title": "Apiary"
+    },
+    "885513a7-baa3-44ee-aa6e-7546bf0715a7": {
+        "description": "Spin it to make your raft go brrrr. Its force depends on the spin direction and speed. (Much less powerful in the air)",
+        "title": "Propeller"
+    },
+    "509505f1-b772-4acd-9827-f9a605a979ec": {
+        "description": "Press 'E' to switch between keys. Outputs a logic signal when the selected key is pressed.",
+        "title": "WASD Converter"
+    },
+    "6db7aacf-f2b3-4cbb-a6d2-2a01d5ee5562": {
+        "description": "Outputs a logic signal when it touches water.",
+        "title": "Water Sensor"
+    },
+    "71ac7645-57f5-4d49-9574-c8482b431862": {
+        "description": "Rotates your creation based on either your camera direction or A/D input. Press 'E' on to select a mode. First 3 modes - mouse control, Roll - A/D. Outputs a logic signal while in use.",
+        "title": "Creation Rotator"
+    },
+    "eea9794b-bcdf-431e-bdcd-7b2ff6ffa145": {
+        "description": "Capture the force of the wind! Make sure it’s facing the right direction to maximise its thrust. The wind sock will show you the direction of the wind.",
+        "title": "Sail"
+    },
+    "c2418698-7a91-40fa-95a3-3be5ddb3ec1d":{
+        "description": "The mother of all bees. What a catch!",
+        "title": "Queen Bee"
+    },
+    "f95beb80-49c8-4d4c-98e9-5b87225c4570":{
+        "description": "Help?\n...\n\nAnyone out there?\n...",
+        "title": "Makeshift Radio Antenna"
+    },
+    "e9c7d080-ae4b-4fec-b626-34afda6f5114":{
+        "description": "Plant. Grow. Press. Repeat.",
+        "title": "Seed Press"
+    },
+    "4e69beb8-4519-4fff-a382-fdcfffbad6c2":{
+        "description": "More compact but also less powerful.",
+        "title": "Small Propeller"
+    },
+    "4c1aed86-a402-4240-81e7-b67edf433fd5":{
+        "description": "What’s better than chilling in a hammock and enjoying the vastness of the ocean...",
+        "title": "Hammock"
+    },
+	"4a971f7d-14e6-454d-bce8-0879243c4575":{
+        "description": "This *thicc* raft base should be hard to chew for these pesky sharkbots!",
+        "title": "Reinforced Raft Base"
+    },
+ 
+    //saplings
+    "eefb0967-d21c-445e-8120-0a09422e1374": {
+        "description": "Plant it in a tree farm or on ground to grow another tree.",
+        "title": "Birch Tree Sapling"
+    },
+    "b84e5fbb-97f2-4de5-bc39-4adb325a56f1": {
+        "description": "Plant it in a tree farm or on ground to grow another tree.",
+        "title": "Leafy Tree Sapling"
+    },
+    "01a4d4c6-469a-4d28-8c69-b74fff83fbdf": {
+        "description": "Plant it in a tree farm or on ground to grow another tree.",
+        "title": "Spruce Tree Sapling"
+    },
+    "9e815dcf-cfb0-4672-b0f4-34f1e9ecc1a1": {
+        "description": "Plant it in a tree farm or on ground to grow another tree.",
+        "title": "Pine Tree Sapling"
+    },
+    "4a971f7d-14e6-454d-bce8-0879243c4857": {
+        "description": "Spiky and sharp! Used as ammunition for the harpoon gun",
+        "title": "Harpoon"
+    }
+}

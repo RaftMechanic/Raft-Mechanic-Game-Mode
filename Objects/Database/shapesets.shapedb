@@ -1,3 +1,4 @@
 {
-   "shapeSetList" : [ "$CONTENT_DATA/Objects/Database/ShapeSets/saplings.shapeset" ]
+   "shapeSetList" : [   "$CONTENT_DATA/Objects/Database/ShapeSets/saplings.shapeset",
+                        "$CONTENT_DATA/Objects/Database/ShapeSets/survival_bots.shapeset" ]
 }
