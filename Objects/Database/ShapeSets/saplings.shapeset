@@ -70,8 +70,8 @@
             "margin": 0.1,
             "axis": "Y"
         },
-        "rotationSet": "PropYmmZ",
-        "sticky": "-X+X-Y-Z+Z",
+        "rotationSet": "PropY",
+        "sticky": "-Y",
         "physicsMaterial": "Wood",
         "ratings": {
             "density": 2,
@@ -83,16 +83,6 @@
         "scripted": {
             "filename": "$CONTENT_DATA/Scripts/game/interactables/Sapling.lua",
             "classname": "LeafySapling"
-        },
-        "restrictions": {
-            "destructable": true,
-            "erasable": true,
-            "buildable": true,
-            "usable": false,
-            "connectable": false,
-            "liftable": true,
-            "convertibleToDynamic": true,
-            "paintable": false
         }
     },
     {
@@ -123,8 +113,8 @@
             "margin": 0.1,
             "axis": "Y"
         },
-        "rotationSet": "PropYmmZ",
-        "sticky": "-X+X-Y-Z+Z",
+        "rotationSet": "PropY",
+        "sticky": "-Y",
         "physicsMaterial": "Wood",
         "ratings": {
             "density": 2,
