@@ -127,6 +127,9 @@ function SurvivalGame.server_onCreate( self )
 
 	self.sv.syncTimer = Timer()
 	self.sv.syncTimer:start( 0 )
+
+	--RAFT
+	local languageManager = sm.scriptableObject.createScriptableObject( sm.uuid.new( "c46b4d61-9f79-4f1c-b5d4-5ec4fff2c7b0" ) )
 end
 
 function SurvivalGame.server_onRefresh( self )

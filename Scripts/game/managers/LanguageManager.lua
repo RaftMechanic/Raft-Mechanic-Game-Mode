@@ -1,2 +1,15 @@
-local languageFile = "$CONTENT_DATA/Gui/Language/" .. sm.gui.getCurrentLanguage() .. "/tags.json"
-Tags = sm.json.open(languageFile)
+LanguageManager = class()
+
+function LanguageManager.client_onCreate(self)
+    g_languageManager = self
+end
+
+function language_tag(name)
+    if sm.gui.getCurrentLanguage() ~= g_languageManager.language then --when language changed
+        g_languageManager.language = sm.gui.getCurrentLanguage()
+        local languageFile = "$CONTENT_DATA/Gui/Language/" .. g_languageManager.language .. "/tags.json"
+        g_languageManager.tags = sm.json.open(languageFile)
+    end
+    return g_languageManager.tags[name]
+end
+

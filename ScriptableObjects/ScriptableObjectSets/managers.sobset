@@ -1,0 +1,10 @@
+{
+	"scriptableObjectList": [
+		{
+			"filename": "$CONTENT_DATA/Scripts/game/managers/LanguageManager.lua",
+			"classname": "LanguageManager",
+			"name": "mgr_language",
+			"uuid": "c46b4d61-9f79-4f1c-b5d4-5ec4fff2c7b0"
+		}
+	]
+}

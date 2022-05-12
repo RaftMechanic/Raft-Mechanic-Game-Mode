@@ -68,11 +68,11 @@ end
 
 function Sapling.client_canInteract(self)
 	if self.planted then
-		sm.gui.setInteractionText("", Tags["SaplingGrow"], "")
+		sm.gui.setInteractionText("", language_tag("SaplingGrow"), "")
 	elseif self.valid then
-		sm.gui.setInteractionText(Tags["SaplingNeedLiquid1"], Tags["SaplingNeedLiquid2"], "")
+		sm.gui.setInteractionText(language_tag("SaplingNeedLiquid1"), language_tag("SaplingNeedLiquid2"), "")
 	elseif not self.caculating then
-		sm.gui.setInteractionText(Tags["SaplingNeedGround1"], "#ff0000" .. Tags["SaplingNeedGround2"], "")
+		sm.gui.setInteractionText(language_tag("SaplingNeedGround1"), "#ff0000" .. language_tag("SaplingNeedGround2"), "")
 	end
 	return true
 end

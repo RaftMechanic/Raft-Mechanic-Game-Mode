@@ -1,6 +1,6 @@
 {
 	"scriptableObjectSetList": [ 
 	{
-		"scriptableObjectSet": "$CONTENT_DATA/ScriptableObjects/ScriptableObjectSets/example.sobset"
+		"scriptableObjectSet": "$CONTENT_DATA/ScriptableObjects/ScriptableObjectSets/managers.sobset"
 	}
 ]}
