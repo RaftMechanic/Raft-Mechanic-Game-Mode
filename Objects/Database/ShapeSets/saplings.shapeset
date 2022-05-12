@@ -8,14 +8,14 @@
             "subMeshList": [
                 {
                 "textureList": [
-                    "$CONTENT_DATA/Objects/Textures/birch_catkin_dif.png",
+                    "$CONTENT_DATA/Objects/Textures/Saplings/birch_catkin_dif.png",
                     "$GAME_DATA/Textures/Default/default_asg.tga",
-                    "$CONTENT_DATA/Objects/Textures/birch_catkin_nor.png"
+                    "$CONTENT_DATA/Objects/Textures/Saplings/birch_catkin_nor.png"
                 ],
                 "material": "DifAsgNorAlphaFlip"
                 }
             ],
-            "mesh": "$CONTENT_DATA/Objects/Mesh/birch_catkin.obj"
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Saplings/birch_catkin.obj"
             }
         ]
         },
@@ -51,14 +51,14 @@
             "subMeshList": [
                 {
                 "textureList": [
-                    "$CONTENT_DATA/Objects/Textures/acorn_dif.png",
+                    "$CONTENT_DATA/Objects/Textures/Saplings/acorn_dif.png",
                     "$GAME_DATA/Textures/Default/default_asg.tga",
-                    "$CONTENT_DATA/Objects/Textures/acorn_nor.png"
+                    "$CONTENT_DATA/Objects/Textures/Saplings/acorn_nor.png"
                 ],
                 "material": "DifAsgNor"
                 }
             ],
-            "mesh": "$CONTENT_DATA/Objects/Mesh/acorn.obj"
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Saplings/acorn.obj"
             }
         ]
         },
@@ -94,14 +94,14 @@
             "subMeshList": [
                 {
                 "textureList": [
-                    "$CONTENT_DATA/Objects/Textures/spruce_cone_dif.png",
+                    "$CONTENT_DATA/Objects/Textures/Saplings/spruce_cone_dif.png",
                     "$GAME_DATA/Textures/Default/default_asg.tga",
-                    "$CONTENT_DATA/Objects/Textures/spruce_cone_nor.png"
+                    "$CONTENT_DATA/Objects/Textures/Saplings/spruce_cone_nor.png"
                 ],
                 "material": "DifAsgNor"
                 }
             ],
-            "mesh": "$CONTENT_DATA/Objects/Mesh/spruce_cone.obj"
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Saplings/spruce_cone.obj"
             }
         ]
         },
@@ -137,14 +137,14 @@
             "subMeshList": [
                 {
                 "textureList": [
-                    "$CONTENT_DATA/Objects/Textures/pine_cone_dif.png",
+                    "$CONTENT_DATA/Objects/Textures/Saplings/pine_cone_dif.png",
                     "$GAME_DATA/Textures/Default/default_asg.tga",
-                    "$CONTENT_DATA/Objects/Textures/pine_cone_nor.png"
+                    "$CONTENT_DATA/Objects/Textures/Saplings/pine_cone_nor.png"
                 ],
                 "material": "DifAsgNor"
                 }
             ],
-            "mesh": "$CONTENT_DATA/Objects/Mesh/pine_cone.obj"
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Saplings/pine_cone.obj"
             }
         ]
         },
