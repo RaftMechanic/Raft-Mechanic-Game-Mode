@@ -2,7 +2,8 @@
    "harvestableSetList" : [
       {
          "categories" : [],
-         "name" : "$CONTENT_DATA/Harvestables/Database/HarvestableSets/survival.harvestableset"
+         "name" : "$CONTENT_DATA/Harvestables/Database/HarvestableSets/survival.harvestableset",
+         "name" : "$CONTENT_DATA/Harvestables/Database/HarvestableSets/survival_trees.harvestableset"
       }
    ]
 }
