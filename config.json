@@ -6,6 +6,6 @@
    },
    "playerScript" : {
       "class" : "SurvivalPlayer",
-      "file" : "$SURVIVAL_DATA/Scripts/game/SurvivalPlayer.lua"
+      "file" : "$CONTENT_DATA/Scripts/game/SurvivalPlayer.lua"
    }
 }

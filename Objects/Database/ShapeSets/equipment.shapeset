@@ -105,8 +105,8 @@
 			"z": 3
 		},
 		"scripted": {
-			"filename": "$SURVIVAL_DATA/RaftMod/Scripts/seatBreathe.lua",
-			"classname": "Breathe",
+			"filename": "$CONTENT_DATA/Scripts/game/interactables/OxygenTank.lua",
+			"classname": "OxygenTank",
 			"data": {}
 		},
 		"rotationSet": "PropY",
