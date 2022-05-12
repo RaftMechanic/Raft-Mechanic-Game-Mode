@@ -1,0 +1,123 @@
+{"partList":[
+    {
+		"uuid": "7ece8b10-5cc0-4791-b75e-09858ef1b9c4",
+		"name": "obj_fins",
+		"renderable": {
+			"lodList": [
+				{
+					"subMeshMap": {
+						"outfit_farmer_shoes":{
+							"textureList": [
+								"$SURVIVAL_DATA/Character/Char_Male/Outfit/Shoes/Outfit_farmer_shoes/outfit_farmer_shoes_dif.tga",
+								"$SURVIVAL_DATA/Character/Char_Male/Outfit/Shoes/Outfit_farmer_shoes/outfit_farmer_shoes_asg.tga",
+								"$SURVIVAL_DATA/Character/Char_Male/Outfit/Shoes/Outfit_farmer_shoes/outfit_farmer_shoes_nor.tga"
+							],
+							"material": "DifAsgNor"
+						},
+						"FlipperPart":{
+							"textureList": [
+								"$SURVIVAL_DATA/Objects/Textures/Blocks/blk_plastic_dif.tga",
+								"$SURVIVAL_DATA/Objects/Textures/Blocks/blk_plastic_asg.tga",
+								"$SURVIVAL_DATA/Objects/Textures/Blocks/blk_plastic_nor.tga"
+							],
+							"color": "008ae1",
+							"material": "DifAsgNor"
+						},
+						"Shark":{
+							"textureList": [
+							"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_dif.tga",
+							"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_asg.tga",
+							"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_nor.tga"
+							],
+							"material": "DifAsgNor"
+						},
+						"lambert2":{
+							"textureList": [
+								"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+								"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+								"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+							],
+							"material": "DifAsgNor"
+						}
+					},
+					"mesh": "$CONTENT_DATA/Objects/Mesh/Equipment/Flippers.fbx"
+				}
+			]
+		},
+		"color": "008ae1",
+		"cylinder": {
+			"diameter": 1,
+			"depth": 1,
+			"margin": 0.1,
+			"axis": "Y"
+		},
+		"rotationSet": "PropY",
+		"sticky": "-Y",
+		"physicsMaterial": "Plastic",
+		"ratings": {
+			"density": 2,
+			"durability": 4,
+			"friction": 5,
+			"buoyancy": 8
+		},
+		"flammable": true
+	},
+	{
+		"uuid": "7ceccadf-010f-4a45-907f-18ccc11c509c",
+		"name": "obj_oxygen_tank",
+		"renderable": {
+			"lodList": [
+				{
+					"subMeshMap": {
+						"Material": {  
+							"material": "DifAsgNor",
+							"textureList":	[
+								"$CONTENT_DATA/Objects/Textures/Equipment/oxygen_tank_dif.tga",
+								"$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_asg.tga",
+								"$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_nor.tga"
+							]
+							},
+						"blinn1": {  
+							"material": "DifAsgNor",
+							"textureList":	[
+								"$GAME_DATA/Objects/Textures/decor/obj_decor_babyduck_dif.tga",
+								"$GAME_DATA/Objects/Textures/decor/obj_decor_babyduck_asg.tga",
+								"$GAME_DATA/Objects/Textures/decor/obj_decor_babyduck_nor.tga"
+							]
+							},
+						"Tube": { 
+							"material": "DifAsgNor",
+							"textureList":	[
+								"$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_dif.tga",
+								"$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_asg.tga",
+								"$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_nor.tga"
+							]
+						}
+					},
+					"mesh": "$CONTENT_DATA/Objects/Mesh/Equipment/OxygenTank.fbx"
+				}
+			]
+		},
+		"color": "ffcc00",
+		"box": {
+			"x": 2,
+			"y": 1,
+			"z": 3
+		},
+		"scripted": {
+			"filename": "$SURVIVAL_DATA/RaftMod/Scripts/seatBreathe.lua",
+			"classname": "Breathe",
+			"data": {}
+		},
+		"rotationSet": "PropY",
+		"sticky": "-Y",
+		"physicsMaterial": "Plastic",
+		"ratings": {
+			"density": 2,
+			"durability": 4,
+			"friction": 5,
+			"buoyancy": 8
+		},
+		"flammable": true
+	}
+]}

@@ -1,0 +1,189 @@
+{"partList":[
+    {
+		"uuid": "4a971f7d-14e6-454d-bce8-0879243c4474",
+		"name": "obj_raft_base",
+		"renderable": {
+			"lodList": [
+				{
+					"subMeshMap": {
+						"Barrel":{
+							"textureList": [
+								"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_barrel_blueberry_dif.tga",
+								"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_barrel_blueberry_asg.tga",
+								"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_barrel_blueberry_nor.tga"
+							],
+							"material": "DifAsgNor"
+						},
+						"Plastic":{
+						"textureList": [
+							"$SURVIVAL_DATA/Objects/Textures/Blocks/blk_plastic_dif.tga",
+							"$SURVIVAL_DATA/Objects/Textures/Blocks/blk_plastic_asg.tga",
+							"$SURVIVAL_DATA/Objects/Textures/Blocks/blk_plastic_nor.tga"
+						],
+						"color": "0b9ade",
+						"material": "DifAsgNor"
+					},
+						"bark":{
+						"textureList": [
+							"$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_dif.tga",
+							"$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_asg.tga",
+							"$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_nor.tga"
+						],
+						"material": "DifAsgNor"
+					},
+					"lambert2":{
+						"textureList": [
+							"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+							"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+							"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+						],
+						"material": "DifAsgNor"
+					},
+					"innerwood": {
+							"textureList": [
+								"$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
+								"$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
+								"$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
+							],
+							"material": "DifAsgNor"
+						}
+					},
+					"mesh": "$CONTENT_DATA/Objects/Mesh/Parts/RaftBase.fbx"
+				}
+			]
+		},
+		"color": "008ae1",
+		"box": {
+			"x": 4,
+			"y": 4,
+			"z": 2
+		},
+		"rotationSet": "PropYX",
+		"sticky": "+X-X+Y-Y+Z",
+		"physicsMaterial": "Plastic",
+		"stackSize": 10,
+		"ratings": {
+			"density": 1,
+			"durability": 4,
+			"friction": 10,
+			"buoyancy": 10
+		},
+		"flammable": true
+	},
+	{
+		"uuid": "4a971f7d-14e6-454d-bce8-0879243c4575",
+		"name": "obj_reinforcedraft_base",
+		"renderable": {
+			"lodList": [
+				{
+					"subMeshMap": {
+						"lambert7":{
+							"textureList": [
+								"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_stack_dif.tga",
+								"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_stack_asg.tga",
+								"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_stack_nor.tga"
+							],
+							"material": "DifAsgNor"
+						},
+					"lambert3": {
+							"textureList": [
+								"$SURVIVAL_DATA/Objects/Textures/construction/obj_construction_ramp01_dif.tga",
+								"$SURVIVAL_DATA/Objects/Textures/construction/obj_construction_ramp01_asg.tga",
+								"$SURVIVAL_DATA/Objects/Textures/construction/obj_construction_ramp01_nor.tga"
+							],
+							"material": "DifAsgNor"
+						}
+					},
+					"mesh": "$CONTENT_DATA/Objects/Mesh/Parts/ReinforcedRaftBase.fbx"
+				}
+			]
+		},
+		"color": "008ae1",
+		"box": {
+			"x": 4,
+			"y": 4,
+			"z": 2
+		},
+		"rotationSet": "PropYX",
+		"sticky": "+X-X+Y-Y+Z",
+		"physicsMaterial": "Wood",
+		"stackSize": 10,
+		"ratings": {
+			"density": 1,
+			"durability": 7,
+			"friction": 10,
+			"buoyancy": 10
+		},
+		"flammable": true
+	},
+	{
+		"uuid": "c2418698-7a91-40fa-95a3-3be5ddb3ec1d",
+		"name": "obj_bee_queen",
+		"renderable": {
+			"lodList": [
+				{
+					"minViewSize": 12,
+					"subMeshMap": {
+						"Body": {
+							"material": "Dif",
+							"textureList": [
+								"$CONTENT/Objects/Textures/Parts/Bee/Body.jpg",
+								"",
+								""
+							]
+						},
+						"back": {
+							"material": "Dif",
+							"textureList": [
+								"$CONTENT/Objects/Textures/Parts/Bee/Back.png",
+								"",
+								""
+							]
+						},
+						"headlegs": {
+							"material": "Dif",
+							"textureList": [
+								"$CONTENT/Objects/Textures/Parts/Bee/Material1.png",
+								"",
+								""
+							]
+						},
+						"Wings": {
+							"material": "Dif",
+							"textureList": [
+								"$CONTENT/Objects/Textures/Parts/Bee/Wings.png",
+								"",
+								""
+							]
+						},
+						"Material2": {
+							"material": "Dif",
+							"textureList": [
+								"$CONTENT/Objects/Textures/Parts/Bee/Material2.png",
+								"",
+								""
+							]
+						}
+					},
+					"mesh": "$CONTENT_DATA/Objects/Mesh/Parts/BeeQueen.fbx"
+				}
+			]
+		},
+		"color": "000000",
+		"box": {
+			"x": 1,
+			"y": 1,
+			"z": 1
+			},
+		"rotationSet": "PropY",
+		"sticky": "-Y",
+		"physicsMaterial": "Plastic",
+		"ratings": {
+			"density": 2,
+			"durability": 4,
+			"friction": 5,
+			"buoyancy": 8
+		},
+		"flammable": true
+	}
+]}
