@@ -52,6 +52,41 @@
                 "class": "BeeHive",
 				"data": {}
             }
+        },
+        {
+            "uuid": "c591d94b-d7d1-4305-a9dd-76ef06d6fb49",
+            "name": "hvs_farmables_cottonplant",
+            "renderable": {
+                "lodList": [
+                    {
+                        "maxViewDistance": 15,
+                        "mesh": "$SURVIVAL_DATA/Harvestables/Mesh/Farmables/hvs_farmables_cottonplant.fbx",
+                        "subMeshMap": {
+                             "Cotton_plant": {
+                                "material": "Leaves",
+                                "textureList": [
+                                    "$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_cottonplant_dif.tga",
+                                    "$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_cottonplant_asg.tga",
+                                    "$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_cottonplant_nor.tga"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+			"col": "$SURVIVAL_DATA/Harvestables/Collision/Plantables/hvs_plantables_defaultcollision.obj",
+			"collides": {
+				"character": false,
+				"body": false,
+				"projectile": false,
+				"melee": true
+			},
+            "removable": true,
+            "script": { 
+                "file": "$CONTENT_DATA/Scripts/game/harvestable/CottonPlant.lua", 
+                "class": "CottonPlant", 
+                "data": {} 
+            }
         }
 	]
 }
