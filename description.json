@@ -1,8 +1,9 @@
 {
    "custom_icons" : false,
    "description" : "This mod doesn't have a description",
+   "fileId" : 2807590049,
    "localId" : "667b4c22-cc1a-4a2b-bee8-66a6c748d40e",
-   "name" : "Raft Mechanic [Game Mode]",
+   "name" : "Raft Mechanic [Game Mode] DEV VERSION",
    "type" : "Custom Game",
    "version" : 0
 }
