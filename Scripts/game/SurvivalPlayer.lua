@@ -325,7 +325,6 @@ function SurvivalPlayer.server_onFixedUpdate( self, dt )
 	local character = self.player:getCharacter()
 	-- Update breathing
 	if character then
-
 		--RAFT
 		local inv = self.player:getInventory()
 		if self.sv.checkRenderables then
@@ -337,18 +336,9 @@ function SurvivalPlayer.server_onFixedUpdate( self, dt )
 		if character:isDiving() then
 
 
-
 			--RAFT
 			local oxygenTankCount = math.max(sm.container.totalQuantity( inv, obj_oxygen_tank ) + self.sv.raft.oxygenTankCount, 0)
 			self.sv.saved.stats.breath = math.max( self.sv.saved.stats.breath - (BreathLostPerTick/(oxygenTankCount + 1)), 0 )
-			
-			if sm.container.totalQuantity( inv, obj_fins ) and character:getMovementSpeedFraction() ~= 1.5 then
-				character:setMovementSpeedFraction(1.5)
-			elseif character:getMovementSpeedFraction() ~= 1 then
-				character:setMovementSpeedFraction(1)
-			end
-			
-
 			
 			
 			
@@ -365,11 +355,6 @@ function SurvivalPlayer.server_onFixedUpdate( self, dt )
 		else
 			self.sv.saved.stats.breath = self.sv.saved.stats.maxbreath
 			self.sv.drownTimer:start( DrownDamageCooldown )
-
-			--RAFT
-			if character:getMovementSpeedFraction() ~= 1 then
-				character:setMovementSpeedFraction(1)
-			end
 		end
 
 		-- Spend stamina on sprinting
