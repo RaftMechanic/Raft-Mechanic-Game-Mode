@@ -61,6 +61,7 @@
 		"rotationSet": "PropYX",
 		"sticky": "+X-X+Y-Y+Z",
 		"physicsMaterial": "Plastic",
+		"previewRotation": [  1, 0, 0, 0, 0, 1, 0, 1, 0 ],
 		"stackSize": 10,
 		"ratings": {
 			"density": 1,
@@ -107,6 +108,7 @@
 		"rotationSet": "PropYX",
 		"sticky": "+X-X+Y-Y+Z",
 		"physicsMaterial": "Wood",
+		"previewRotation": [  1, 0, 0, 0, 0, 1, 0, 1, 0 ],
 		"stackSize": 10,
 		"ratings": {
 			"density": 1,
