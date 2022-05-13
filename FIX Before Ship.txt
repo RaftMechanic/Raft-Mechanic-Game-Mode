@@ -1,1 +1,2 @@
 CONTENT_DATA not working in SurvivaPlayer.lua for renderables
+CONTENT_DATA not working in EAT.lua for renderables

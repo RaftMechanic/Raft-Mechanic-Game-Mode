@@ -1,0 +1,25 @@
+{
+	"lodList": [
+		{
+			"subMeshMap": {
+				"cleanwater": {
+					"material": "DifAsgNor",
+					"textureList": [
+					  	"$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_dif.tga",
+					  	"$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
+					  	"$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
+					]
+				},
+				"glass_mat": {
+					"material": "Glass",
+					"textureList": [
+					  	"$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_dif.tga",
+					  	"$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
+					  	"$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
+					]
+				}
+			},
+			"mesh": "$CONTENT_DATA/Characters/Char_Tools/Char_eattool/char_eattool_waterclean.dae"
+		}
+	]
+}

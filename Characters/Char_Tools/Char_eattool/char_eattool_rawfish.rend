@@ -1,0 +1,17 @@
+{
+	"lodList": [
+		{
+			"subMeshMap": {
+				"lambert2SG": {
+					"material": "Dif",
+					"textureList": [
+					  	"$CONTENT_DATA/Objects/Textures/Consumables/Fish.png",
+					  	"",
+					  	""
+					]
+				}
+			},
+			"mesh": "$CONTENT_DATA/Characters/Char_Tools/Char_eattool/char_eattool_rawfish.dae"
+		}
+	]
+}

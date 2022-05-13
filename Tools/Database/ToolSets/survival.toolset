@@ -1,0 +1,11 @@
+{
+	"toolList": [
+		{
+			"uuid": "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
+			"previewRenderable": "$GAME_DATA/Character/Char_Tools/char_spudgun_preview.rend",
+			"previewRotation": [ 1, 0, 0, 0, 0, -1, 0, 1, 0 ],
+			"script": { "file": "$CONTENT_DATA/Scripts/game/tools/Eat.lua", "class": "Eat" },
+			"autoTool": true
+		}
+	]
+}
