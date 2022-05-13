@@ -1,0 +1,31 @@
+{"partList":[
+    {
+		"uuid": "f08d772f-9851-400f-a014-d847900458a7",
+		"name": "obj_interactive_fridge",
+		"renderable": "$SURVIVAL_DATA/Objects/Renderable/interactive/obj_interactive_fridge.rend",
+		"color": "3e9ffe",
+		"box": {
+			"x": 3,
+			"y": 3,
+			"z": 2
+		},
+		"scripted": {
+			"filename": "$CONTENT_DATA/Scripts/game/interactables/ConsumableContainer.lua",
+			"classname": "FoodContainer",
+			"data": {}
+		},
+		"rotationSet": "PropY",
+		"sticky": "-X+X-Y+Y-Z",
+		"physicsMaterial": "Mechanical",
+		"ratings": {
+			"density": 4,
+			"durability": 3,
+			"friction": 4,
+			"buoyancy": 6
+		},
+		"flammable": false,
+		"restrictions": {
+			"usable": true
+		}
+	}
+]}

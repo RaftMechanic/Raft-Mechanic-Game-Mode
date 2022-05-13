@@ -6,6 +6,7 @@
                         "$CONTENT_DATA/Objects/Database/ShapeSets/equipment.shapeset",
                         "$CONTENT_DATA/Objects/Database/ShapeSets/parts.shapeset",
                         "$CONTENT_DATA/Objects/Database/ShapeSets/consumables.shapeset",
-                        "$CONTENT_DATA/Objects/Database/ShapeSets/survival_bots.shapeset" 
+                        "$CONTENT_DATA/Objects/Database/ShapeSets/survival_bots.shapeset",
+                        "$CONTENT_DATA/Objects/Database/ShapeSets/survival_interactive.shapeset" 
                      ]
 }
