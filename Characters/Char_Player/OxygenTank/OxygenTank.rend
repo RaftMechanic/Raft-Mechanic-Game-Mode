@@ -1,0 +1,34 @@
+{
+	"lodList": [{
+		"mesh": "$CONTENT_DATA/Characters/Char_Player/OxygenTank/OxygenTank.dae",
+		"includes" : ["POSITION", "UV0", "NORMAL", "TANGENTS", "BLEND_INDICES", "BLEND_WEIGHTS"],
+		"subMeshMap": {
+                    "Material": {  
+                        "material": "DifAsgNor",
+						"textureList":	[
+							"$CONTENT_DATA/Characters/Char_Player/OxygenTank/char_spudgun_tank_basic_dif.tga",
+							"$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_asg.tga",
+							"$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_nor.tga"
+					    ]
+              	  	},
+					"blinn1": {  
+                        "material": "DifAsgNor",
+						"textureList":	[
+							"$GAME_DATA/Objects/Textures/decor/obj_decor_babyduck_dif.tga",
+							"$GAME_DATA/Objects/Textures/decor/obj_decor_babyduck_asg.tga",
+							"$GAME_DATA/Objects/Textures/decor/obj_decor_babyduck_nor.tga"
+					    ]
+              	  	},
+					"Tube": { 
+                        "material": "DifAsgNor",
+						"textureList":	[
+							"$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_dif.tga",
+							"$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_asg.tga",
+							"$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_nor.tga"
+					    ]
+              	  	}
+        },
+		"maxViewDistance": 1000.0
+	}],
+"color": "FFCC00"
+}

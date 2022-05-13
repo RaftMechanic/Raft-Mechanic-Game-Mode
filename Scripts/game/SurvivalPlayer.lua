@@ -48,6 +48,9 @@ local RespawnEndDelay = 1.0 * 40
 
 local BaguetteSteps = 9
 
+--RAFT PLS FIX @AXOLOT
+local CONTENT_DATA = "$CONTENT_667b4c22-cc1a-4a2b-bee8-66a6c748d40e"
+
 function SurvivalPlayer.server_onCreate( self )
 	self.sv = {}
 	self.sv.saved = self.storage:load()
@@ -86,6 +89,11 @@ function SurvivalPlayer.sv_init( self )
 	self.sv.drownTimer:stop()
 
 	self.sv.spawnparams = {}
+
+	--RAFT
+	self.sv.raft = {}
+	self.sv.raft.oxygenTankCount = 0
+	self.sv.checkRenderables = true
 end
 
 function SurvivalPlayer.client_onCreate( self )
@@ -317,8 +325,33 @@ function SurvivalPlayer.server_onFixedUpdate( self, dt )
 	local character = self.player:getCharacter()
 	-- Update breathing
 	if character then
+
+		--RAFT
+		local inv = self.player:getInventory()
+		if self.sv.checkRenderables then
+			self:sv_checkRenderables(inv)
+		end
+
+
+
 		if character:isDiving() then
-			self.sv.saved.stats.breath = math.max( self.sv.saved.stats.breath - BreathLostPerTick, 0 )
+
+
+
+			--RAFT
+			local oxygenTankCount = math.max(sm.container.totalQuantity( inv, obj_oxygen_tank ) + self.sv.raft.oxygenTankCount, 0)
+			self.sv.saved.stats.breath = math.max( self.sv.saved.stats.breath - (BreathLostPerTick/(oxygenTankCount + 1)), 0 )
+			
+			if sm.container.totalQuantity( inv, obj_fins ) and character:getMovementSpeedFraction() ~= 1.5 then
+				character:setMovementSpeedFraction(1.5)
+			elseif character:getMovementSpeedFraction() ~= 1 then
+				character:setMovementSpeedFraction(1)
+			end
+			
+
+			
+			
+			
 			if self.sv.saved.stats.breath == 0 then
 				self.sv.drownTimer:tick()
 				if self.sv.drownTimer:done() then
@@ -332,6 +365,11 @@ function SurvivalPlayer.server_onFixedUpdate( self, dt )
 		else
 			self.sv.saved.stats.breath = self.sv.saved.stats.maxbreath
 			self.sv.drownTimer:start( DrownDamageCooldown )
+
+			--RAFT
+			if character:getMovementSpeedFraction() ~= 1 then
+				character:setMovementSpeedFraction(1)
+			end
 		end
 
 		-- Spend stamina on sprinting
@@ -414,6 +452,9 @@ function SurvivalPlayer.server_onInventoryChanges( self, container, changes )
 		--	QuestManager.Sv_TryActivateQuest( "quest_acquire_test" )
 		--end
 	end
+
+	--RAFT
+	self:sv_checkRenderables(container)
 end
 
 function SurvivalPlayer.sv_e_staminaSpend( self, stamina )
@@ -743,251 +784,52 @@ function SurvivalPlayer.client_onCancel( self )
 	g_effectManager:cl_cancelAllCinematics()
 end
 
---[[
-function SurvivalPlayer.cl_updateCamera( self, dt )
 
-	if self.useCutsceneCamera then
-		local cameraPath = self.currentCutscene.cameraPath
-		local cameraAttached = self.currentCutscene.cameraAttached
-		if #cameraPath > 1 then
-			if cameraPath[self.nodeIndex+1] then
-				local prevNode = cameraPath[self.nodeIndex]
-				local nextNode = cameraPath[self.nodeIndex+1]
 
-				local prevPosition = prevNode.position
-				local nextPosition = nextNode.position
-				local prevDirection = prevNode.direction
-				local nextDirection = nextNode.direction
+--RAFT
+function SurvivalPlayer.sv_e_OxygenTank( self, change )
+	self.sv.raft.oxygenTankCount = self.sv.raft.oxygenTankCount + change
+end
 
-				if prevNode.type == "playerSpace" then
-					prevPosition = sm.camera.getDefaultPosition()
-				end
-				if nextNode.type == "playerSpace" then
-					nextPosition = nextNode.position + sm.camera.getDefaultPosition()
-					-- Set player to look in the same direction as the player node
-					if cameraPath[self.nodeIndex].direction then
-						sm.localPlayer.setDirection( cameraPath[self.nodeIndex+1].direction )
-					end
-				end
+function SurvivalPlayer:sv_checkRenderables( inv )
+	local hasFins = inv:canSpend(obj_fins, 1)
+	local hasTank = inv:canSpend(obj_oxygen_tank, 1)
+	local changes = {}
 
-				if nextNode.lerpTime > 0 then
-					self.progress = self.progress + dt / nextNode.lerpTime
-				else
-					self.progress = 1
-				end
+	if hasFins ~= self.fins then
+		changes.fins = { add = hasFins }
+	end
+	if hasTank ~= self.tank then
+		changes.tank = { add = hasTank }
+	end
 
-				if self.progress >= 1 then
+	if changes then
+		self.network:sendToClients("cl_updateRenderables", {changes = changes, char = self.player:getCharacter()})
+	end
 
-					-- Trigger events in the next node
-					if nextNode.events then
-						for _, eventParams in pairs( nextNode.events ) do
-							if eventParams.type == "character" then
-								eventParams.character = self.player.character
-							end
-							self.network:sendToServer( "sv_onEvent", eventParams )
-						end
-					end
+	self.fins = hasFins
+	self.tank = hasTank
+end
 
-					self.nodeIndex = self.nodeIndex + 1
-					local upcomingNextNode = cameraPath[self.nodeIndex+1]
-					if upcomingNextNode then
-						self.progress = ( self.progress - 1.0 ) * nextNode.lerpTime / upcomingNextNode.lerpTime
-						self.progress = math.max( math.min( self.progress, 1.0 ), 0 )
-						prevPosition = nextNode.position
-						nextPosition = upcomingNextNode.position
-						prevDirection = nextNode.direction
-						nextDirection = upcomingNextNode.direction
-						if nextNode.type == "playerSpace" then
-							prevPosition = sm.camera.getDefaultPosition()
-						end
-						if upcomingNextNode.type == "playerSpace" then
-							nextPosition = nextPosition +  sm.camera.getDefaultPosition()
-							-- Set player to look in the same direction as the player node
-							if cameraPath[self.nodeIndex].direction then
-								sm.localPlayer.setDirection( cameraPath[self.nodeIndex+1].direction )
-							end
-						end
-					else
-						--Finished the cutscene
-						self.progress = 0
-						self.nodeIndex = 1
-						if self.currentCutscene.nextCutscene then
-							self:cl_startCutscene( camera_cutscenes[self.currentCutscene.nextCutscene] )
-						else
-							self.useCutsceneCamera = false
-							sm.gui.hideGui( false )
-							sm.camera.setCameraState( sm.camera.state.default )
-							sm.localPlayer.setLockedControls( false )
-						end
-					end
-				end
-
-				local camPos = sm.vec3.lerp( prevPosition, nextPosition, self.progress )
-				local camDir = sm.vec3.lerp( prevDirection, nextDirection, self.progress )
-
-				sm.camera.setPosition( camPos )
-				sm.camera.setDirection( camDir )
-			end
-		elseif cameraAttached then
-
-			if self.progress >= 1 then
-				--Finished the cutscene
-				self.progress = 0
-				self.nodeIndex = 1
-				if self.currentCutscene.nextCutscene then
-					self:cl_startCutscene( camera_cutscenes[self.currentCutscene.nextCutscene] )
-				else
-					self.useCutsceneCamera = false
-					sm.gui.hideGui( false )
-					sm.camera.setCameraState( sm.camera.state.default )
-					sm.localPlayer.setLockedControls( false )
-				end
-			else
-				local character = self.player:getCharacter()
-				if character then
-					sm.camera.setCameraState( sm.camera.state.cutsceneFP )
-					local camPos = character:getTpBonePos( cameraAttached.jointName )
-					local camDir = character:getTpBoneRot( cameraAttached.jointName ) * cameraAttached.initialDirection
-
-					sm.camera.setPosition( camPos )
-					sm.camera.setDirection( camDir )
-				end
-			end
-			self.progress = self.progress + dt / cameraAttached.attachTime
-
+function SurvivalPlayer:cl_updateRenderables( args )
+	if args.changes.fins then
+		if args.changes.fins.add then
+			args.char:addRenderable( CONTENT_DATA .. "/Characters/Char_Player/Fins/obj_fins.rend" )
 		else
-			self:cl_startCutscene( nil )
-		end
-	end
-
-end
-
-
-function SurvivalPlayer.cl_startCutscene( self, cutsceneInfo )
-	if cutsceneInfo then
-		self.useCutsceneCamera = true
-		sm.gui.hideGui( true )
-		sm.camera.setCameraState( cutsceneInfo.cameraState )
-		if cutsceneInfo.cameraPullback then
-			sm.camera.setCameraPullback( cutsceneInfo.cameraPullback.standing, cutsceneInfo.cameraPullback.seated )
-		end
-
-		sm.localPlayer.setLockedControls( true )
-
-		if self.useCutsceneCamera then
-			-- Set camera nodes to follow
-			self.currentCutscene = {}
-			self.currentCutscene.cameraAttached = cutsceneInfo.attached
-			local cameraPath = {}
-			local characterPosition = sm.vec3.new( 0, 0, 0 )
-			local characterDirection = sm.vec3.new( 0, 1, 0 )
-			local character = self.player.character
-			if character then
-				characterPosition = character.worldPosition + sm.vec3.new( 0, 0, character:getHeight() * 0.5 )
-				characterDirection = character:getDirection()
-			else
-				characterPosition = sm.localPlayer.getRaycastStart()
-				characterDirection = sm.localPlayer.getDirection()
-			end
-
-			-- Get character heading
-			characterDirection.z = 0
-			if characterDirection:length() >= FLT_EPSILON then
-				characterDirection = characterDirection:normalize()
-			else
-				characterDirection = sm.vec3.new( 0, 1, 0 )
-			end
-
-			-- Prepare a world direction and positon for each camera node
-			if cutsceneInfo.nodes then
-				for _, node in pairs( cutsceneInfo.nodes ) do
-					local updatedNode = {}
-					if node.type == "localSpace" then
-						local right = characterDirection:cross( sm.vec3.new( 0, 0, 1 ) )
-						local pitchedDirection = sm.vec3.rotate( characterDirection, math.rad( node.pitch ), right )
-						updatedNode.direction = sm.vec3.rotateZ( pitchedDirection, -math.rad( node.yaw ) )
-						updatedNode.position = characterPosition + sm.vec3.getRotation( sm.vec3.new( 0, 1, 0 ), characterDirection ) * node.position
-					elseif node.type == "playerSpace" then
-						local right = sm.localPlayer.getDirection():cross( sm.vec3.new( 0, 0, 1 ) )
-						local pitchedDirection = sm.vec3.rotate( sm.localPlayer.getDirection(), math.rad( node.pitch ), right )
-						updatedNode.direction = sm.vec3.rotateZ( pitchedDirection, -math.rad( node.yaw ) )
-
-						--updatedNode.position = sm.camera.getDefaultPosition() + sm.vec3.getRotation( sm.vec3.new( 0, 1, 0 ), sm.localPlayer.getDirection() ) * node.position
-						updatedNode.position = sm.vec3.getRotation( sm.vec3.new( 0, 1, 0 ), sm.localPlayer.getDirection() ) * node.position
-					else
-						updatedNode.position = node.position
-						updatedNode.direction = node.direction
-					end
-					updatedNode.type = node.type
-					updatedNode.lerpTime = node.lerpTime
-					updatedNode.events = node.events
-					cameraPath[#cameraPath+1] = updatedNode
-				end
-			end
-
-			if #cameraPath > 0 then
-				-- Trigger events in the first node
-				if cameraPath[1] then
-					if cameraPath[1].events then
-						for _, eventParams in pairs( cameraPath[1].events ) do
-							if eventParams.type == "character" then
-								eventParams.character = self.player.character
-							end
-							self.network:sendToServer( "sv_onEvent", eventParams )
-						end
-					end
-				end
-			elseif self.currentCutscene.cameraAttached then
-				-- Trigger events
-				if self.currentCutscene.cameraAttached.events then
-					for _, eventParams in pairs( self.currentCutscene.cameraAttached.events ) do
-						if eventParams.type == "character" then
-							eventParams.character = self.player.character
-						end
-						self.network:sendToServer( "sv_onEvent", eventParams )
-					end
-				end
-			end
-
-			self.currentCutscene.cameraPath = cameraPath
-			self.currentCutscene.nextCutscene = cutsceneInfo.nextCutscene
-			self.currentCutscene.canSkip = cutsceneInfo.canSkip
-		end
-	else
-		self.useCutsceneCamera = false
-		sm.gui.hideGui( false )
-		sm.camera.setCameraState( sm.camera.state.default )
-		sm.localPlayer.setLockedControls( false )
-		self.progress = 0
-		self.nodeIndex = 1
-	end
-end
-
-function SurvivalPlayer.cl_startLocalCutscene( self, params )
-	if params.player == sm.localPlayer.getPlayer() then
-		self:cl_startCutscene( camera_cutscenes[params.cutsceneInfoName] )
-	end
-end
-
-function SurvivalPlayer.sv_e_startLocalCutscene( self, cutsceneInfoName )
-	local params = { player = self.player, cutsceneInfoName = cutsceneInfoName }
-	self.network:sendToClients( "cl_startLocalCutscene", params )
-end
-
-function SurvivalPlayer.client_onCancel( self )
-
-	if self.useCutsceneCamera and self.currentCutscene.canSkip then
-		if self.currentCutscene.nextCutscene then
-			self:cl_startCutscene( camera_cutscenes[self.currentCutscene.nextCutscene] )
-		else
-			self.useCutsceneCamera = false
-			sm.gui.hideGui( false )
-			sm.camera.setCameraState( sm.camera.state.default )
-			sm.localPlayer.setLockedControls( false )
-			self.progress = 0
-			self.nodeIndex = 1
+			args.char:removeRenderable( CONTENT_DATA .. "/Characters/Char_Player/Fins/obj_fins.rend" )
 		end
 	end
 	
+	if args.changes.tank then
+		if args.changes.tank.add then
+			args.char:addRenderable( CONTENT_DATA .. "/Characters/Char_Player/OxygenTank/OxygenTank.rend" )
+		else
+			args.char:removeRenderable( CONTENT_DATA .. "/Characters/Char_Player/OxygenTank/OxygenTank.rend" )
+		end
+	end
 end
-]]
+
+
+
+
+

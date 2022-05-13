@@ -14,15 +14,17 @@ function OxygenTank:server_onFixedUpdate( dt )
     local parent = self.interactable:getSingleParent()
     if parent then
         local seatedChar = parent:getSeatCharacter()
-        if not seatedChar and self.sv.player then
-            sm.event.sendToPlayer(self.sv.player, "sv_setBlockBreatheDeplete", false)
-            self.sv.player = nil
-        else
+
+        if seatedChar then
             local seatedPlayer = seatedChar:getPlayer()
             if seatedPlayer ~= nil and self.sv.player == nil then
                 self.sv.player = seatedPlayer
-                sm.event.sendToPlayer(self.sv.player, "sv_setBlockBreatheDeplete", true)
+                sm.event.sendToPlayer(self.sv.player, "sv_e_OxygenTank", 1)
             end
+
+        elseif self.sv.player then
+            sm.event.sendToPlayer(self.sv.player, "sv_e_OxygenTank", -1)
+            self.sv.player = nil
         end
     end
 end
