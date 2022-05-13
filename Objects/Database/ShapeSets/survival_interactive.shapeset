@@ -27,5 +27,127 @@
 		"restrictions": {
 			"usable": true
 		}
+	},
+	{
+		"uuid": "8d601982-4608-4d5e-bb9e-e4041486f7c7",
+		"name": "obj_survivalobject_farmerball",
+		"renderable": {
+			"lodList": [
+				{
+					"mesh": "$SURVIVAL_DATA/Character/Char_farmerball/char_farmerball.dae",
+					"subMeshMap": {
+						"skin": {
+							"material": "SkelAnimDifAsgNor",
+							"textureList": [
+								"$SURVIVAL_DATA/Character/Char_Farmer/char_farmer_dif.tga",
+								"$SURVIVAL_DATA/Character/Char_Farmer/char_farmer_asg.tga",
+								"$SURVIVAL_DATA/Character/Char_Farmer/char_farmer_nor.tga"
+							]
+						},
+						"hair": {
+							"material": "SkelAnimDifAsgNor",
+							"textureList": [
+								"$SURVIVAL_DATA/Character/Char_Farmer/char_farmer_dif.tga",
+								"$SURVIVAL_DATA/Character/Char_Farmer/char_farmer_asg.tga",
+								"$SURVIVAL_DATA/Character/Char_Farmer/char_farmer_nor.tga"
+							]
+						},
+						"clothes": {
+							"material": "SkelAnimDifAsgNor",
+							"textureList": [
+								"$SURVIVAL_DATA/Character/Char_Farmer/char_farmer_clothes_dif.tga",
+								"$SURVIVAL_DATA/Character/Char_Farmer/char_farmer_clothes_asg.tga",
+								"$SURVIVAL_DATA/Character/Char_Farmer/char_farmer_clothes_nor.tga"
+							]
+						},
+						"hatgloves": {
+							"material": "SkelAnimDifAsgNor",
+							"textureList": [
+								"$SURVIVAL_DATA/Character/Char_Farmer/char_farmer_hatgloves_dif.tga",
+								"$SURVIVAL_DATA/Character/Char_Farmer/char_farmer_hatgloves_asg.tga",
+								"$SURVIVAL_DATA/Character/Char_Farmer/char_farmer_hatgloves_nor.tga"
+							]
+						},
+						"cage": {
+							"material": "DifAsgNor",
+							"textureList": [
+								"$SURVIVAL_DATA/Character/Char_farmerball/char_farmer_ball_dif.tga",
+								"$SURVIVAL_DATA/Character/Char_farmerball/char_farmer_ball_asg.tga",
+								"$SURVIVAL_DATA/Character/Char_farmerball/char_farmer_ball_nor.tga"
+							]
+						},
+						"hay": {
+							"material": "DifAsgNorAlphaFlip",
+							"textureList": [
+								"$SURVIVAL_DATA/Character/Char_farmerball/char_farmer_ball_hay_dif.tga",
+								"$SURVIVAL_DATA/Character/Char_farmerball/char_farmer_ball_hay_asg.tga",
+								"$SURVIVAL_DATA/Character/Char_farmerball/char_farmer_ball_hay_nor.tga"
+							]
+						}
+					},
+					"animationList": [
+						{
+							"name": "Idle",
+							"file": "$SURVIVAL_DATA/Character/Char_farmerball/Animations/ani_char_famerball_idle.dae",
+							"looping": true
+						},
+						{
+							"name": "Idlescream",
+							"file": "$SURVIVAL_DATA/Character/Char_farmerball/Animations/ani_char_famerball_idlescream.dae",
+							"looping": true
+						},
+						{
+							"name": "Shake",
+							"file": "$SURVIVAL_DATA/Character/Char_farmerball/Animations/ani_char_famerball_shake.dae"
+						},
+						{
+							"name": "Velocity",
+							"file": "$SURVIVAL_DATA/Character/Char_farmerball/Animations/ani_char_famerball_velocity.dae"
+						}
+					],
+					"maxViewDistance": 1000.0
+				}
+			]
+		},
+		"color": "9f2600",
+		"sphere": {
+			"diameter": 8
+		},
+		"scripted": {
+			"filename": "$CONTENT_DATA/Scripts/game/interactables/FarmerBall.lua",
+			"classname": "FarmerBall",
+			"data": {
+				"animationList": [
+					{
+						"name": "Idle"
+					},
+					{
+						"name": "Idlescream",
+						"effect": {
+							"name": "FarmerBall - Struggle",
+							"joint": "root_jnt"
+						}
+					}
+				]
+			}
+		},
+		"rotationSet": "PropZ",
+		"sticky": "-Z",
+		"physicsMaterial": "Metal",
+		"ratings": {
+			"density": 1,
+			"durability": 6,
+			"friction": 3,
+			"buoyancy": 8
+		},
+		"flammable": false,
+		"friction": 0.25,
+		"stackSize": 65535,
+		"restrictions": {
+			"paintable": false,
+			"erasable": false,
+			"buildable": false,
+			"liftable": false
+		}
 	}
 ]}
