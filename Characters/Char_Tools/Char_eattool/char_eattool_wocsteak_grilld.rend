@@ -1,0 +1,17 @@
+{
+   "lodList" : [
+      {
+         "mesh" : "$CONTENT_DATA/Characters/Char_Tools/Char_eattool/char_eattool_wocsteak.dae",
+         "subMeshList" : [
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$CONTENT_DATA/Objects/Textures/Consumables/obj_resource_steak_dif_grilld.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/resource/obj_resource_steak_asg.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/resource/obj_resource_steak_nor.tga"
+               ]
+            }
+         ]
+      }
+   ]
+}

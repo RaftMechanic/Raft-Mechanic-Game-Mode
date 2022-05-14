@@ -232,9 +232,9 @@
             "z" : 3
          },
          "color" : "008ae1",
+         "consumable" : true,
          "flammable" : true,
          "name" : "obj_harpoon",
-		 "consumable" : true,
          "physicsMaterial" : "Meatal",
          "ratings" : {
             "buoyancy" : 10,
@@ -265,16 +265,25 @@
          "uuid" : "4a971f7d-14e6-454d-bce8-0879243c4857"
       },
       {
+         "autoTool" : "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
          "color" : "0a956d",
+         "consumable" : true,
          "cylinder" : {
             "axis" : "Y",
             "depth" : 1,
             "diameter" : 2,
             "margin" : 0.040
          },
+         "edible" : {
+            "foodGain" : 15,
+            "hpGain" : 0,
+            "waterGain" : 1
+         },
+		 "restrictions" : {
+            "erasable" : true
+         },
          "flammable" : true,
          "name" : "obj_wocsteak_raw",
-		 		 "consumable" : true,
          "physicsMaterial" : "Fruit",
          "ratings" : {
             "buoyancy" : 5,
@@ -287,17 +296,26 @@
          "uuid" : "74a3f240-65b2-4f52-9555-666217366a0a"
       },
       {
+         "autoTool" : "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
          "color" : "0a956d",
+         "consumable" : true,
          "cylinder" : {
             "axis" : "Y",
             "depth" : 1,
             "diameter" : 2,
             "margin" : 0.040
          },
+         "edible" : {
+            "foodGain" : 35,
+            "hpGain" : 0,
+            "waterGain" : 20
+         },
          "flammable" : true,
          "name" : "obj_wocsteak_grilld",
-		 		 "consumable" : true,
          "physicsMaterial" : "Potato",
+		 "restrictions" : {
+            "erasable" : true
+         },
          "ratings" : {
             "buoyancy" : 5,
             "density" : 2,

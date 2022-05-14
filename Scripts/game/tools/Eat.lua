@@ -18,6 +18,9 @@ local RawfishusRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eatt
 local CookedfishRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_cookedfish.rend" } 
 local FisheauchocolatRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_fisheauchocolat.rend" } 
 
+local WocSteakRawRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_wocsteak_raw.rend" } 
+local WocSteakGrilldRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_wocsteak_grilld.rend" } 
+
 
 
 local SunshakeRenderables = { "$SURVIVAL_DATA/Character/Char_Tools/Char_eattool/char_eattool_sunshake.rend" }
@@ -60,6 +63,9 @@ sm.tool.preloadRenderables( RawfishusRenderables )
 sm.tool.preloadRenderables( CookedfishRenderables )
 sm.tool.preloadRenderables( FisheauchocolatRenderables )
 
+sm.tool.preloadRenderables( WocSteakRawRenderables )
+sm.tool.preloadRenderables( WocSteakGrilldRenderables )
+
 
 local FoodUuidToRenderable =
 {
@@ -83,7 +89,9 @@ local FoodUuidToRenderable =
 	[tostring( obj_fish )] = RawfishRenderables,
 	[tostring( obj_fishus )] = RawfishusRenderables,
 	[tostring( obj_fish_cooked )] = CookedfishRenderables,
-	[tostring( obj_fish_au_chocolate )] = FisheauchocolatRenderables
+	[tostring( obj_fish_au_chocolate )] = FisheauchocolatRenderables,
+	[tostring( obj_wocsteak_raw )] = WocSteakRawRenderables,
+	[tostring( obj_wocsteak_grilld )] = WocSteakGrilldRenderables
 }
 local Drinks = { obj_consumable_sunshake, obj_consumable_milk, obj_water_clean } --Raft
 
