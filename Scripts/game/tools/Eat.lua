@@ -16,6 +16,7 @@ local WatercleanRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eat
 local RawfishRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_rawfish.rend" }
 local RawfishusRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_rawfishus.rend" }
 local CookedfishRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_cookedfish.rend" } 
+local FisheauchocolatRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_fisheauchocolat.rend" } 
 
 
 
@@ -57,7 +58,7 @@ sm.tool.preloadRenderables( WatercleanRenderables )
 sm.tool.preloadRenderables( RawfishRenderables )
 sm.tool.preloadRenderables( RawfishusRenderables )
 sm.tool.preloadRenderables( CookedfishRenderables )
-
+sm.tool.preloadRenderables( FisheauchocolatRenderables )
 
 
 local FoodUuidToRenderable =
@@ -81,9 +82,9 @@ local FoodUuidToRenderable =
 	[tostring( obj_water_clean )] = WatercleanRenderables,
 	[tostring( obj_fish )] = RawfishRenderables,
 	[tostring( obj_fishus )] = RawfishusRenderables,
-	[tostring( obj_fish_cooked )] = CookedfishRenderables
+	[tostring( obj_fish_cooked )] = CookedfishRenderables,
+	[tostring( obj_fish_au_chocolate )] = FisheauchocolatRenderables
 }
-
 local Drinks = { obj_consumable_sunshake, obj_consumable_milk, obj_water_clean } --Raft
 
 function Eat.client_onCreate( self )

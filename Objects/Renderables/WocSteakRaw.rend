@@ -1,0 +1,18 @@
+{
+   "color" : "696969",
+   "lodList" : [
+      {
+         "mesh" : "$CONTENT_DATA/Objects/Mesh/Consumables/WocSteak.obj",
+         "subMeshList" : [
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$SURVIVAL_DATA/Objects/Textures/resource/obj_resource_steak_dif.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/resource/obj_resource_steak_asg.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/resource/obj_resource_steak_nor.tga"
+               ]
+            }
+         ]
+      }
+   ]
+}

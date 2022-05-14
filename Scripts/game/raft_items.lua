@@ -37,12 +37,10 @@ obj_fish = sm.uuid.new("7c440c4a-5919-4baa-a946-0bb89b8c4d5d")
 obj_fishus = sm.uuid.new("7c440c4a-5919-4baa-a946-0bb89b8c4d85")
 obj_fish_cooked = sm.uuid.new("c57fe6d6-03b1-46d4-9104-29cf19f176ab")
 obj_harpoon = sm.uuid.new("4a971f7d-14e6-454d-bce8-0879243c4857")
+obj_fish_au_chocolate = sm.uuid.new("7c440c4a-5919-4baa-a946-0bb89b8c4d5e")
 
 --interactive.shapeset
 obj_torch = sm.uuid.new("ce986935-5b57-4249-acbb-04ef6666bb03")
-
-
-
 
 
 obj_scrap_field = sm.uuid.new("8e75cddb-040e-4813-8dd6-7e72f3288a91")
