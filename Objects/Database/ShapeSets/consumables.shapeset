@@ -126,7 +126,7 @@
             "durability" : 4,
             "friction" : 5
          },
-         "renderable" : "$CONTENT_DATA/Objects/Renderables/fish_au_chocolate.rend",
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Consumables/fish_au_chocolate.rend",
          "restrictions" : {
             "erasable" : true
          },
@@ -291,7 +291,7 @@
             "durability" : 3,
             "friction" : 5
          },
-         "renderable" : "$CONTENT_DATA/Objects/Renderables/WocSteakRaw.rend",
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Consumables/WocSteakRaw.rend",
          "rotationSet" : "PropYX",
          "uuid" : "74a3f240-65b2-4f52-9555-666217366a0a"
       },
@@ -322,7 +322,7 @@
             "durability" : 3,
             "friction" : 5
          },
-         "renderable" : "$CONTENT_DATA/Objects/Renderables/WocSteakGrilld.rend",
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Consumables/WocSteakGrilld.rend",
          "rotationSet" : "PropYX",
          "uuid" : "74a3f240-65b2-4f52-9555-666217366a0e"
       }
