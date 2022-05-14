@@ -1,0 +1,25 @@
+{
+   "lodList" : [
+      {
+         "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/Torch.obj",
+         "subMeshList" : [
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$SURVIVAL_DATA/Character/Char_Farmbot/char_farmbot_dif.tga",
+                  "$SURVIVAL_DATA/Character/Char_Farmbot/char_farmbot_asg.tga",
+                  "$SURVIVAL_DATA/Character/Char_Farmbot/char_farmbot_nor.tga"
+               ]
+            },
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$SURVIVAL_DATA/Objects/Textures/consumable/Obj_consumable_cotton_dif.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/consumable/Obj_consumable_cotton_asg.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/consumable/Obj_consumable_cotton_nor.tga"
+               ]
+            }
+         ]
+      }
+   ]
+}
