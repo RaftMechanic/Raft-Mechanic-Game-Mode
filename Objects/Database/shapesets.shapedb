@@ -4,7 +4,7 @@
                         "$CONTENT_DATA/Objects/Database/ShapeSets/renders.shapeset",
                         "$CONTENT_DATA/Objects/Database/ShapeSets/plants.shapeset",
                         "$CONTENT_DATA/Objects/Database/ShapeSets/equipment.shapeset",
-                        "$CONTENT_DATA/Objects/Database/ShapesSets/parts.shapeset",
+                        "$CONTENT_DATA/Objects/Database/ShapeSets/parts.shapeset",
                         "$CONTENT_DATA/Objects/Database/ShapeSets/interactive.shapeset",
                         "$CONTENT_DATA/Objects/Database/ShapeSets/consumables.shapeset",
                         "$CONTENT_DATA/Objects/Database/ShapeSets/survival_bots.shapeset",
