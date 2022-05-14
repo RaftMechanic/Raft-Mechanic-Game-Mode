@@ -60,10 +60,6 @@
         "description": "Looks very delicious, but smells.",
         "title": "Cooked Fish"
     },
-    "67dd0023-023d-46cb-9839-e4ada2609a9b": {
-        "description": "Grills food, requires wood as fuel.",
-        "title": "Grill"
-    },
     "0db1ecd5-503d-4dd3-807e-869c243a7c08": {
         "description": "A sharp stick. Useful to poke and hurt things.",
         "title": "Spear"
@@ -75,10 +71,6 @@
     "e34387d3-fa29-4831-89b8-c94417b6fce6": {
         "description": "A powerful gun that shoots pointy harpoons! You can collect them after they drop to the ground. (Can be used underwater)",
         "title": "Harpoon Gun"
-    },
-    "8f460344-ef34-42ab-99e3-d3bed9af4b52": {
-        "description": "Shows you the direction of the wind",
-        "title": "Wind Sock"
     },
    
     //parts
@@ -165,6 +157,18 @@
 	"4a971f7d-14e6-454d-bce8-0879243c4575":{
         "description": "This *thicc* raft base should be hard to chew for these pesky sharkbots!",
         "title": "Reinforced Raft Base"
+    },
+    "67dd0023-023d-46cb-9839-e4ada2609a9b": {
+        "description": "Grills food, requires wood as fuel.",
+        "title": "Grill"
+    },
+    "8f460344-ef34-42ab-99e3-d3bed9af4b52": {
+        "description": "Shows you the direction of the wind",
+        "title": "Wind Sock"
+    },
+    "ce986935-5b57-4249-acbb-04ef6666bb03": {
+        "description": "Decorate your raft with it (and hope the devs won't add fire physics soon).",
+        "title": "Torch"
     },
  
     //saplings
