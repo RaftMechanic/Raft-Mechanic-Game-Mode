@@ -91,7 +91,7 @@
         "title": "Fins"
     },
     "7ceccadf-010f-4a45-907f-18ccc11c509c": {
-        "description": "Are your lungs too small? This won’t fix your exercise issues, but you’ll last longer underwater. Connect it to a seat to not lose any breath while sitting in it.",
+        "description": "Are your lungs too small? This won’t fix your exercise issues, but you’ll last longer underwater. Connect it to a seat to lift some weight of your shoulders.",
         "title": "Oxygen Tank"
     },
     "03075a5a-92f5-49bd-b132-7d8e0cb80156": {
@@ -170,26 +170,26 @@
         "description": "Decorate your raft with it (and hope the devs won't add fire physics soon).",
         "title": "Torch"
     },
- 
-    //saplings
-    "eefb0967-d21c-445e-8120-0a09422e1374": {
-        "description": "Plant it in a tree farm or on ground to grow another tree.",
-        "title": "Birch Tree Sapling"
-    },
-    "b84e5fbb-97f2-4de5-bc39-4adb325a56f1": {
-        "description": "Plant it in a tree farm or on ground to grow another tree.",
-        "title": "Leafy Tree Sapling"
-    },
-    "01a4d4c6-469a-4d28-8c69-b74fff83fbdf": {
-        "description": "Plant it in a tree farm or on ground to grow another tree.",
-        "title": "Spruce Tree Sapling"
-    },
-    "9e815dcf-cfb0-4672-b0f4-34f1e9ecc1a1": {
-        "description": "Plant it in a tree farm or on ground to grow another tree.",
-        "title": "Pine Tree Sapling"
-    },
     "4a971f7d-14e6-454d-bce8-0879243c4857": {
         "description": "Spiky and sharp! Used as ammunition for the harpoon gun",
         "title": "Harpoon"
+    }
+ 
+    //saplings
+    "eefb0967-d21c-445e-8120-0a09422e1374": {
+        "description": "Plant it in a tree farm or on ground to grow another tree. Rumor has it that strange fluids grow strange trees... ",
+        "title": "Birch Tree Sapling"
+    },
+    "b84e5fbb-97f2-4de5-bc39-4adb325a56f1": {
+        "description": "Plant it in a tree farm or on ground to grow another tree. Rumor has it that strange fluids grow strange trees... ",
+        "title": "Leafy Tree Sapling"
+    },
+    "01a4d4c6-469a-4d28-8c69-b74fff83fbdf": {
+        "description": "Plant it in a tree farm or on ground to grow another tree. Rumor has it that strange fluids grow strange trees... ",
+        "title": "Spruce Tree Sapling"
+    },
+    "9e815dcf-cfb0-4672-b0f4-34f1e9ecc1a1": {
+        "description": "Plant it in a tree farm or on ground to grow another tree. Rumor has it that strange fluids grow strange trees... ",
+        "title": "Pine Tree Sapling"
     }
 }
