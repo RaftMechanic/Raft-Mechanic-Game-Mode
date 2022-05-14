@@ -2,7 +2,9 @@
 
 FarmerBall = class()
 
---RAFT
+--RAFT START
+dofile("$CONTENT_DATA/Scripts/game/managers/LanguageManager.lua")
+
 function FarmerBall.server_onCreate( self )
 	self.saved = self.storage:load()
 	if self.saved == nil then
@@ -13,6 +15,29 @@ function FarmerBall.server_onCreate( self )
 		end
 	end
 end
+
+function FarmerBall.client_onInteract( self, character, state )
+	if state == true then
+		local function msg(msg)
+			sm.gui.chatMessage("#0390fcFarmer#ffffff: " .. msg)
+		end
+		
+		if self.shape:getBody():getWorld():isIndoor() then
+			msg(language_tag("FarmerBallHelp"))
+		else
+			msg(language_tag("FarmerBallThanks"))
+		end
+	end
+end
+
+function FarmerBall.client_canInteract(self)
+	local keyBindingText = sm.gui.getKeyBinding( "Use", true )
+    sm.gui.setInteractionText("", keyBindingText, language_tag("FarmerBallTalk"))
+	return true
+end
+--RAFT END
+
+
 
 
 
