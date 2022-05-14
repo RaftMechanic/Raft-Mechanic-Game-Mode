@@ -239,6 +239,7 @@
 			"buoyancy": 10
 		},
 		"stackSize": 5,
+        "consumable": true,
 		"flammable": true
 	}
 ]}
