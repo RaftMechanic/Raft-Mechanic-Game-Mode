@@ -7,6 +7,10 @@
       {
          "categories" : [],
          "name" : "$CONTENT_DATA/Harvestables/Database/HarvestableSets/survival_trees.harvestableset"
+      },
+      {
+         "categories" : [],
+         "name" : "$CONTENT_DATA/Harvestables/Database/HarvestableSets/survival_stones.harvestableset"
       }
    ]
 }
