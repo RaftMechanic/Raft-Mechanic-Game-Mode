@@ -32,7 +32,7 @@ function WoodHarvestable.server_onMelee( self, hitPos, attacker, damage, power, 
 				self.network:sendToClient( attacker, "cl_n_onMessage", "#{ALERT_TREE_TOO_BIG}" )
 			end
 
-			if true then
+			if g_survivalDev then
 				self:sv_onHit( DamagerPerHit, hitPos )
 			end
 		end
@@ -230,5 +230,14 @@ function WoodHarvestable.client_onCollision( self, other, collisionPosition, sel
 		end
 		
 		sm.effect.playEffect( "Tree - LeafRattle", rattlePosition, nil, nil, nil, { Velocity_max_50 = impactVelocity } )
+	end
+end
+
+--RAFT
+function WoodHarvestable.server_onFixedUpdate(self)
+	local data = self.harvestable:getPublicData()
+	if data and data.damage then
+		self:sv_onHit( data.damage, data.position )
+		self.harvestable:setPublicData({})
 	end
 end
