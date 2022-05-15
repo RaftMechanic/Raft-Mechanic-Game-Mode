@@ -43,7 +43,10 @@
 									"$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
 									"$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
 								],
-								"material": "DifAsgNor"
+								"custom":{
+									"uv0": { "u": 1, "v": 0.1 }
+								},
+								"material": "UVAnimDifAsgNor"
 							},
 							"ScrapEngine":{
 								"textureList": [
@@ -100,7 +103,10 @@
 									"$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
 									"$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
 								],
-								"material": "DifAsgNor"
+								"custom":{
+									"uv0": { "u": 1, "v": 0.1 }
+								},
+								"material": "UVAnimDifAsgNor"
 							}
 						},
 						"mesh": "$CONTENT_DATA/Objects/Mesh/Interactables/GrowBox2.fbx"
@@ -352,12 +358,15 @@
 								]
 							},
 							"Soil": {
-								"material": "DifAsgNor",
+								"material": "UVAnimDifAsgNor",
 								"textureList": [
 									"$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_dif.tga",
-									 "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
+									"$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
 									"$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
-								]
+								],
+								"custom":{
+									"uv0": { "u": 1, "v": 0.1 }
+								}
 							},
 							"phongE1": {
 								"material": "DifAsgNor",
