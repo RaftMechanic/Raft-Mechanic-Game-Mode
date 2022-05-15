@@ -97,6 +97,7 @@ function Steer:server_onFixedUpdate( dt )
         forceDir.z = 0
     elseif selectedMode == modes[3] then
         forceDir.y = 0
+        forceDir.x = 0
     elseif selectedMode == modes[4] then
         forceDir.y = 0
         forceDir.z = 0
