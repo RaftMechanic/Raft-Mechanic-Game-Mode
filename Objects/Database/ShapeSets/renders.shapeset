@@ -216,7 +216,7 @@
 		},
 		"rotationSet": "PropZ",
 		"sticky": "-Z",
-		"physicsMaterial": "Meatal",
+		"physicsMaterial": "Metal",
 		"ratings": {
 		   "density": 1,
 		   "durability": 3,

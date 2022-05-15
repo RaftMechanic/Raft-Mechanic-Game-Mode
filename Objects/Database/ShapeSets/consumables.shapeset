@@ -235,7 +235,7 @@
          "consumable" : true,
          "flammable" : true,
          "name" : "obj_harpoon",
-         "physicsMaterial" : "Meatal",
+         "physicsMaterial" : "Metal",
          "ratings" : {
             "buoyancy" : 10,
             "density" : 1,
