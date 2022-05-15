@@ -187,5 +187,43 @@
 		},
 		"flammable": true,
         "showInInventory": false
-	}
+	},
+	{
+		"uuid": "4a971f7d-14e6-454d-bce8-0879243c4857",
+		"name": "obj_arrow_render",
+		"renderable": {
+		   "lodList": [
+			  {
+				 "subMeshMap": {
+					"radar":{
+					   "textureList": [
+						  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_dif.tga",
+						  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_asg.tga",
+						  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_nor.tga"
+					   ],
+					   "material": "DifAsgNor"
+					}
+				 },
+				 "mesh": "$CONTENT_DATA/Objects/Mesh/Consumables/Harpoon.fbx"
+			  }
+		   ]
+		},
+		"color": "008ae1",
+		"box": {
+		   "x": 1,
+		   "y": 1,
+		   "z": 3
+		},
+		"rotationSet": "PropZ",
+		"sticky": "-Z",
+		"physicsMaterial": "Meatal",
+		"ratings": {
+		   "density": 1,
+		   "durability": 3,
+		   "friction": 10,
+		   "buoyancy": 10
+		},
+		"stackSize": 5,
+		"flammable": true
+	 }
 ]}
