@@ -98,7 +98,7 @@
             "erasable" : true
          },
          "rotationSet" : "PropY",
-         "stackSize" : 5,
+         "stackSize" : 10,
          "sticky" : "-Y",
          "uuid" : "7c440c4a-5919-4baa-a946-0bb89b8c4d5d"
       },
@@ -131,7 +131,7 @@
             "erasable" : true
          },
          "rotationSet" : "PropY",
-         "stackSize" : 5,
+         "stackSize" : 3,
          "sticky" : "-Y",
          "uuid" : "7c440c4a-5919-4baa-a946-0bb89b8c4d5e"
       },
@@ -176,7 +176,7 @@
             "erasable" : true
          },
          "rotationSet" : "PropY",
-         "stackSize" : 5,
+         "stackSize" : 10,
          "sticky" : "-Y",
          "uuid" : "7c440c4a-5919-4baa-a946-0bb89b8c4d85"
       },
@@ -221,7 +221,7 @@
             "erasable" : true
          },
          "rotationSet" : "PropY",
-         "stackSize" : 5,
+         "stackSize" : 10,
          "sticky" : "-Y",
          "uuid" : "c57fe6d6-03b1-46d4-9104-29cf19f176ab"
       },
@@ -293,7 +293,7 @@
             "erasable" : true
          },
          "rotationSet" : "PropYX",
-         "stackSize" : 5,
+         "stackSize" : 10,
          "uuid" : "74a3f240-65b2-4f52-9555-666217366a0a"
       },
       {
@@ -325,17 +325,18 @@
             "erasable" : true
          },
          "rotationSet" : "PropYX",
-         "stackSize" : 5,
+         "stackSize" : 10,
          "uuid" : "74a3f240-65b2-4f52-9555-666217366a0e"
       },
       {
-         "box" : {
-            "x" : 1,
-            "y" : 1,
-            "z" : 1
-         },
-         "color" : "495975",
+         "autoTool" : "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
+         "color" : "FFDF71",
          "consumable" : true,
+         "edible" : {
+            "foodGain" : 10,
+            "hpGain" : -20,
+            "waterGain" : 2
+         },
          "flammable" : true,
          "itemStack" : {},
          "name" : "obj_potato",
@@ -343,7 +344,7 @@
          "ratings" : {
             "buoyancy" : 7,
             "density" : 2,
-            "durability" : 2,
+            "durability" : 1,
             "friction" : 4
          },
          "renderable" : "$CONTENT_DATA/Objects/Renderables/Consumables/potato.rend",
@@ -351,7 +352,10 @@
             "erasable" : true
          },
          "rotationSet" : "PropY",
-         "stackSize" : 20,
+         "sphere" : {
+            "diameter" : 1
+         },
+         "stackSize" : 10,
          "sticky" : "-Y+Y",
          "uuid" : "f74c2891-79a9-45e0-982e-4896651c2259"
       }
