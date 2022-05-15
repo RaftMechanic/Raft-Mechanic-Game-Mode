@@ -966,15 +966,17 @@ function Crafter.client_onUpdate( self, deltaTime )
 			end
 		end
 
-		reload = true
-		craftProgress = 1
 		if (crop and self.cl.mainEffects["crop1"]:isPlaying()) or reload then
+			self.interactable:setUvFrameIndex( 9 )
+
 			self.cl.mainEffects["crop1"]:setScale(vec3Num(craftProgress/8))
 			self.cl.mainEffects["crop1"]:setOffsetPosition(self.shape:transformPoint(worldPosition - self.shape.at/1.75 + sm.vec3.new(0,0,craftProgress/4)))
 			if bigFarm then
 				self.cl.mainEffects["crop2"]:setScale(vec3Num(craftProgress/8))
 				self.cl.mainEffects["crop2"]:setOffsetPosition(self.shape:transformPoint(worldPosition1 - self.shape.at/1.75 + sm.vec3.new(0,0,craftProgress/4)))
 			end
+		else
+			self.interactable:setUvFrameIndex( 0 )
 		end
 
 		if craftProgress >= 1 then
@@ -996,7 +998,7 @@ function Crafter.client_onUpdate( self, deltaTime )
 				end
 			end
 		end
-		
+
 	elseif shapeUuid == obj_scrap_tree_grower then
 		local worldPosition = self.shape:getWorldPosition() + self.shape.at*0.6
 
@@ -1021,6 +1023,7 @@ function Crafter.client_onUpdate( self, deltaTime )
 		end
 
 		if growEffect or reload then
+			self.interactable:setUvFrameIndex( 9 )
 			local mult = 0.9
 			if self.tree ~= nil and isAnyOf(self.tree, treeEffects[tostring(obj_sprucetree_sapling)]) then
 				mult = 1.1
@@ -1028,6 +1031,8 @@ function Crafter.client_onUpdate( self, deltaTime )
 
 			self.cl.mainEffects["tree"]:setScale(vec3Num(craftProgress/16))
 			self.cl.mainEffects["tree"]:setOffsetPosition(sm.vec3.new(0,craftProgress * mult,0))
+		else
+			self.interactable:setUvFrameIndex( 0 )
 		end
 
 		if craftProgress >= 1 then
@@ -1055,7 +1060,7 @@ function Crafter.client_onUpdate( self, deltaTime )
 					if uuid ~= blk_scrapwood and type(uuid) ~= "number" then
 						fish = uuid
 					end
-				end		
+				end
 			end
 
 			self.cl.mainEffects["fish"]:setParameter("uuid", fish)
