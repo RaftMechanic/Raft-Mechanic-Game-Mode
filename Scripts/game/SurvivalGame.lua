@@ -18,6 +18,7 @@ dofile( "$SURVIVAL_DATA/Scripts/game/util/Timer.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestEntityManager.lua" )
 dofile( "$GAME_DATA/Scripts/game/managers/EventManager.lua" )
 
+dofile( "$CONTENT_DATA/Scripts/game/versionChecker.lua" ) --Raft
 
 ---@class SurvivalGame : GameClass
 ---@field sv table
@@ -271,6 +272,23 @@ function SurvivalGame.loadCraftingRecipes( self )
 		cookbot = "$SURVIVAL_DATA/CraftingRecipes/cookbot.json",
 		craftbot = "$SURVIVAL_DATA/CraftingRecipes/craftbot.json",
 		dressbot = "$SURVIVAL_DATA/CraftingRecipes/dressbot.json"
+
+		--Raft
+		,farm = "$CONTENT_DATA/CraftingRecipes/farm.json",
+		scrappurifier = "$CONTENT_DATA/CraftingRecipes/scrappurifier.json",
+		scraptrees = "$CONTENT_DATA/CraftingRecipes/scraptrees.json",
+		scrapworkbench = "$CONTENT_DATA/CraftingRecipes/scrapworkbench.json",
+		apiary = "$CONTENT_DATA/CraftingRecipes/apiary.json",
+		quest1 = "$CONTENT_DATA/CraftingRecipes/quest1.json",
+		questsail = "$CONTENT_DATA/CraftingRecipes/questsail.json",
+		questpropeller = "$CONTENT_DATA/CraftingRecipes/questpropeller.json",
+		questveggies = "$CONTENT_DATA/CraftingRecipes/questveggies.json",
+		questharpoon = "$CONTENT_DATA/CraftingRecipes/questharpoon.json",
+		questfinal = "$CONTENT_DATA/CraftingRecipes/questfinal.json",
+		seedpress = "$CONTENT_DATA/CraftingRecipes/seedpress.json",
+		grill = "$CONTENT_DATA/CraftingRecipes/grill.json",
+		scrapdecor = "$CONTENT_DATA/CraftingRecipes/scrapdecor.json",
+		bigfarm = "$CONTENT_DATA/CraftingRecipes/bigfarm.json"
 	})
 end
 

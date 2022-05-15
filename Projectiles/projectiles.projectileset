@@ -1,3 +1,32 @@
 {
-    "projectiles": []
+    "projectiles": [
+        {
+            "uuid": "382c818f-bdf6-41fd-96dd-7a4a1a176d9a",
+            "name": "harpoon",
+			"mass": 3.0,
+			"radius": 0.25,
+			"friction": 0.2,
+			"spin": 0,
+			"mesh": "$CONTENT_DATA/Objects/Renderables/Projectiles/harpoon/harpoon.rend",
+			"effect": "Sledgehammer - Hit",
+			"audiomass": 250.0,
+			"effectmaterial": "Metal",
+			"ammo": 
+			{ 
+				"uuid": "4a971f7d-14e6-454d-bce8-0879243c4857",
+				"cost": 1
+			},
+			"destruction":
+			{
+				"destructionLevels":
+				[
+					{
+						"qualityLevel": 1,
+						"chance": 1.0
+					}
+				]
+			},
+			"enableImpactEffect": true
+		}
+    ]
 }

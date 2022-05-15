@@ -10,6 +10,8 @@ function language_tag(name)
         local languageFile = "$CONTENT_DATA/Gui/Language/" .. g_languageManager.language .. "/tags.json"
         g_languageManager.tags = sm.json.open(languageFile)
     end
-    return g_languageManager.tags[name]
+
+    local textInJson = g_languageManager.tags[name]
+    return textInJson == nil and "null" or textInJson
 end
 

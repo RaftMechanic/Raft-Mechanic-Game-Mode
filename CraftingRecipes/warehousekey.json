@@ -1,0 +1,26 @@
+//Warehousekey
+[
+	{
+		"itemId": "e49b210a-0d46-4f06-bcd8-08862379d156",
+		"quantity": 1,
+		"craftTime": 0,
+		"ingredientList": [
+			{
+				"quantity": 25,
+				"itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
+			},
+			{
+				"quantity": 50,
+				"itemId": "628b2d61-5ceb-43e9-8334-a4135566df7a"
+			},
+			{
+				"quantity": 5,
+				"itemId": "5530e6a0-4748-4926-b134-50ca9ecb9dcf"
+			},
+			{
+				"quantity": 3,
+				"itemId": "f152e4df-bc40-44fb-8d20-3b3ff70cdfe3"
+			}
+		]
+	}
+]

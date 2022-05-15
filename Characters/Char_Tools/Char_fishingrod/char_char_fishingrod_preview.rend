@@ -1,0 +1,34 @@
+{
+	"lodList": [
+		{
+			"subMeshMap": {
+				"bark": {
+					"material": "Dif",
+					"textureList": [
+					  	"$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_brownbark_dif.tga",
+						"$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_brownbark_asg.tga",
+						"$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_brownbark_nor.tga"
+					]
+				},
+				"Shark": {
+					"material": "DifAsgNor",
+					"textureList": [
+					  	"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_dif.tga",
+						"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_asg.tga",
+						"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_nor.tga"
+					]
+				},
+				"initialShadingGroup": {
+					"material": "Dif",
+					"textureList": [
+						"$CONTENT_DATA/Characters/Char_Tools/Char_fishingrod/FishingRod.png",
+						"",
+						""
+					]
+				}
+			},
+			"mesh": "$CONTENT_DATA/Characters/Char_Tools/Char_fishingrod/char_fishingrod.dae",
+			"maxViewDistance": 1000.0
+		}
+	]
+}

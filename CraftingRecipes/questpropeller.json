@@ -1,0 +1,26 @@
+[
+	//Propeller
+	{
+		"itemId": "885513a7-baa3-44ee-aa6e-7546bf0715a7",
+		"quantity": 1,
+		"craftTime": 79,
+		"ingredientList": [
+			{
+				"quantity": 35,
+				"itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
+			}
+		]
+	},
+	//SmallPropeller
+	{
+		"itemId": "4e69beb8-4519-4fff-a382-fdcfffbad6c2",
+		"quantity": 1,
+		"craftTime": 45,
+		"ingredientList": [
+			{
+				"quantity": 20,
+				"itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
+			}
+		]
+	}
+]

@@ -1,0 +1,34 @@
+[
+	//Harpoon
+	{
+		"itemId": "e34387d3-fa29-4831-89b8-c94417b6fce6",
+		"quantity": 1,
+		"craftTime": 35,
+		"ingredientList": [
+			{
+				"quantity": 50,
+				"itemId": "c0dfdea5-a39d-433a-b94a-299345a5df46"
+			},
+			{
+				"quantity": 10,
+				"itemId": "5530e6a0-4748-4926-b134-50ca9ecb9dcf"
+			},
+			{
+				"quantity": 1,
+				"itemId": "c5ea0c2f-185b-48d6-b4df-45c386a575cc"
+			}
+		]
+	},
+	//Projectile
+	{
+		"itemId": "4a971f7d-14e6-454d-bce8-0879243c4857",
+		"quantity": 1,
+		"craftTime": 17,
+		"ingredientList": [
+			{
+				"quantity": 20,
+				"itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
+			}
+		]
+	}
+]

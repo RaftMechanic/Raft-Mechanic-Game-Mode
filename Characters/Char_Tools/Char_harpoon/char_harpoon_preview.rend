@@ -1,0 +1,54 @@
+{
+	"lodList": [
+		{
+			"subMeshMap": {
+				"char_spudgun_base_mat" : {
+				    "textureList": [
+					"$GAME_DATA/Character/Char_Tools/Char_spudgun/Base/char_spudgun_base_dif.tga",
+					"$GAME_DATA/Character/Char_Tools/Char_spudgun/Base/char_spudgun_base_asg.tga",
+					"$GAME_DATA/Character/Char_Tools/Char_spudgun/Base/char_spudgun_base_nor.tga"
+				    ],
+				"color": "ffffff",
+				"material": "DifAsgNor"
+			},
+			"char_spudgun_grip_mat" : {
+				"textureList": [
+					"$GAME_DATA/Character/Char_Tools/Char_spudgun/Base/char_spudgun_grip_dif.tga",
+					"$GAME_DATA/Character/Char_Tools/Char_spudgun/Base/char_spudgun_grip_asg.tga",
+					"$GAME_DATA/Character/Char_Tools/Char_spudgun/Base/char_spudgun_grip_nor.tga"
+				],
+				"color": "ffffff",
+				"material": "DifAsgNor"
+			},
+				"char_weldtool_mat": {
+					"material": "DifAsgNor",
+					"textureList": [
+						"$GAME_DATA/Character/Char_Tools/Char_weldtool/char_weldtool_dif.tga",
+						"$GAME_DATA/Character/Char_Tools/Char_weldtool/char_weldtool_asg.tga",
+						"$GAME_DATA/Character/Char_Tools/Char_weldtool/char_weldtool_nor.tga"
+					]
+				}
+			},
+			"char_barrel_mat" : {
+				"textureList": [
+					"$GAME_DATA/Character/Char_Tools/Char_spudgun/Barrel/Barrel_basic/char_spudgun_barrel_basic_dif.tga",
+					"$GAME_DATA/Character/Char_Tools/Char_spudgun/Barrel/Barrel_basic/char_spudgun_barrel_basic_asg.tga",
+					"$GAME_DATA/Character/Char_Tools/Char_spudgun/Barrel/Barrel_basic/char_spudgun_barrel_basic_nor.tga"
+					],
+				"color": "ffffff",
+				"material": "DifAsgNor"
+			},
+			"char_barrel_mat" : {
+				"textureList": [
+					"$GAME_DATA/Character/Char_Tools/Char_spudgun/Barrel/Barrel_basic/char_spudgun_barrel_basic_dif.tga",
+					"$GAME_DATA/Character/Char_Tools/Char_spudgun/Barrel/Barrel_basic/char_spudgun_barrel_basic_asg.tga",
+					"$GAME_DATA/Character/Char_Tools/Char_spudgun/Barrel/Barrel_basic/char_spudgun_barrel_basic_nor.tga"
+					],
+				"color": "ffffff",
+				"material": "DifAsgNor"
+			},
+			"mesh": "$CONTENT_DATA/Characters/Char_Tools/Char_harpoon/char_harpoon.dae",
+			"maxViewDistance": 1000.0
+		}
+	]
+}

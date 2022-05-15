@@ -11,7 +11,11 @@
 			"uuid": "bb641a4f-e391-441c-bc6d-0ae21a069476",
 			"previewRenderable": "$GAME_DATA/Character/Char_Tools/char_sledgehammer_preview.rend",
 			"previewRotation": [  -1, 0, 0, 0, 0, 1, 0, 1, 0 ],
-			"script": { "file": "$CONTENT_DATA/Scripts/game/tools/Sledgehammer.lua", "class": "Sledgehammer" }
+			"script": {
+				"file": "$CONTENT_DATA/Scripts/game/tools/Sledgehammer.lua",
+				"class": "Sledgehammer",
+                "data" : {}
+			}
 		}
 	]
 }

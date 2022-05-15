@@ -1,0 +1,184 @@
+
+[
+	//ShackParts
+	//Locker
+	{
+		"itemId": "d0afb527-e786-4a22-a907-6da7e7cba8cb",
+		"quantity": 1,
+		"craftTime": 45,
+		"ingredientList": [
+			{
+				"quantity": 40,
+				"itemId": "1f7ac0bb-ad45-4246-9817-59bdf7f7ab39"
+			}
+		]
+	},
+	//ShackLight
+	{
+		"itemId": "ebefa387-fe4a-4839-bdd9-b6b4da39368f",
+		"quantity": 1,
+		"craftTime": 25,
+		"ingredientList": [
+			{
+				"quantity": 5,
+				"itemId": "1f7ac0bb-ad45-4246-9817-59bdf7f7ab39"
+			},
+			{
+				"quantity": 1,
+				"itemId": "f152e4df-bc40-44fb-8d20-3b3ff70cdfe3"
+			},
+			{
+				"quantity": 1,
+				"itemId": "36335664-6e61-4d44-9876-54f9660a8565"
+			}
+		]
+	},
+	//ShackRoof
+	{
+		"itemId": "0c07dba0-be79-40fd-9ed8-5a1c34e2d196",
+		"quantity": 1,
+		"craftTime": 10,
+		"ingredientList": [
+			{
+				"quantity": 20,
+				"itemId": "1f7ac0bb-ad45-4246-9817-59bdf7f7ab39"
+			}
+		]
+	},
+	//ShackWall
+	{
+		"itemId": "2aa8cb2c-2311-440c-8162-829ee394fbc2",
+		"quantity": 1,
+		"craftTime": 10,
+		"ingredientList": [
+			{
+				"quantity": 15,
+				"itemId": "1f7ac0bb-ad45-4246-9817-59bdf7f7ab39"
+			}
+		]
+	},
+	//ShackHalfWall
+	{
+		"itemId": "b94a113d-ddd4-45db-844c-1d97ca0e1d61",
+		"quantity": 1,
+		"craftTime": 7,
+		"ingredientList": [
+			{
+				"quantity": 7,
+				"itemId": "1f7ac0bb-ad45-4246-9817-59bdf7f7ab39"
+			}
+		]
+	},
+	//ShackAwning
+	{
+		"itemId": "c4ec4d33-83f7-4e7e-bb0a-8df52f96aef5",
+		"quantity": 1,
+		"craftTime": 15,
+		"ingredientList": [
+			{
+				"quantity": 15,
+				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+			}
+		]
+	},
+	//ShackAwningOther
+	{
+		"itemId": "c8ca8731-3af2-4554-9019-6b941affcb16",
+		"quantity": 1,
+		"craftTime": 15,
+		"ingredientList": [
+			{
+				"quantity": 20,
+				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+			}
+		]
+	},
+	//HardWorkSign
+	{
+		"itemId": "20bd2885-d184-44ae-b72b-f90b786f8664",
+		"quantity": 1,
+		"craftTime": 15,
+		"ingredientList": [
+			{
+				"quantity": 20,
+				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+			},
+			{
+				"quantity": 1,
+				"itemId": "c7322cd1-3158-41d9-b15a-eff2f2f8d9f7"
+			}
+		]
+	},
+	//SaleSign
+	{
+		"itemId": "2289e96f-f9c6-440c-b7c9-ce9474da8264",
+		"quantity": 1,
+		"craftTime": 10,
+		"ingredientList": [
+			{
+				"quantity": 5,
+				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+			},
+			{
+				"quantity": 1,
+				"itemId": "c7322cd1-3158-41d9-b15a-eff2f2f8d9f7"
+			}
+		]
+	},
+	//CashRegister
+	{
+		"itemId": "31ada55e-7c79-4aee-86b6-809c0e5468df",
+		"quantity": 1,
+		"craftTime": 15,
+		"ingredientList": [
+			{
+				"quantity": 7,
+				"itemId": "1f7ac0bb-ad45-4246-9817-59bdf7f7ab39"
+			},
+			{
+				"quantity": 1,
+				"itemId": "c7322cd1-3158-41d9-b15a-eff2f2f8d9f7"
+			}
+		]
+	},
+	//OpenSign
+	{
+		"itemId": "d4ae8963-40e9-4680-934d-5626a3bfc363",
+		"quantity": 1,
+		"craftTime": 5,
+		"ingredientList": [
+			{
+				"quantity": 2,
+				"itemId": "1f7ac0bb-ad45-4246-9817-59bdf7f7ab39"
+			}
+		]
+	},
+	//Calendar
+	{
+		"itemId": "5b628f22-ec0d-448f-a6be-3453950120a4",
+		"quantity": 1,
+		"craftTime": 15,
+		"ingredientList": [
+			{
+				"quantity": 5,
+				"itemId": "1f7ac0bb-ad45-4246-9817-59bdf7f7ab39"
+			},
+			{
+				"quantity": 1,
+				"itemId": "c7322cd1-3158-41d9-b15a-eff2f2f8d9f7"
+			}
+		]
+	},
+	//Handle
+	{
+		"itemId": "b3761216-dfc4-4679-960b-00f5ae5f8258",
+		"quantity": 1,
+		"craftTime": 5,
+		"ingredientList": [
+			{
+				"quantity": 2,
+				"itemId": "1f7ac0bb-ad45-4246-9817-59bdf7f7ab39"
+			}
+		]
+	}
+]

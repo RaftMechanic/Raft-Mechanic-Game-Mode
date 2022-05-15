@@ -1,0 +1,49 @@
+{
+	"toolList":
+	[
+		{
+			"uuid": "e3bcf8fa-68d7-49a8-b17b-c1e864d53b69",
+			"previewRenderable": "$CONTENT_DATA/Characters/Char_Tools/Char_fishingrod/char_char_fishingrod_preview.rend",
+			"previewRotation": [ 1, 0, 0, 0, 0, -1, 0, 1, 0 ],
+			"script": { "file": "$CONTENT_DATA/Scripts/game/tools/fishingRod.lua", "class": "Rod" }
+		},
+		{
+			"uuid": "b5ade3b0-be48-4a61-a8c2-13a4cedf1343",
+			"previewRenderable": "$CONTENT_DATA/Characters/Char_Tools/Char_pullinghook/char_pullinghook_preview.rend",
+			"previewRotation": [ -1, 0, 0, 0, 0, 1, 0, 1, 0 ],
+			"script": { "file": "$CONTENT_DATA/Scripts/game/tools/resourceHook.lua", "class": "Hook" }
+		},
+		{
+			"uuid": "1daebe24-4e16-422c-b5e7-c3f45f9296d8",
+			"previewRenderable": "$CONTENT_DATA/Characters/Char_Tools/Char_axe/char_axe_preview.rend",
+			"previewRotation": [  -1, 0, 0, 0, 0, 1, 0, 1, 0 ],
+			"script": {
+				"file": "$CONTENT_DATA/Scripts/game/tools/Sledgehammer.lua",
+				"class": "Axe",
+				"data" : {}
+			}
+		},
+		{
+			"uuid": "c883b283-ea7a-4bba-af0d-5c13fd73051d",
+			"previewRenderable": "$CONTENT_DATA/Characters/Char_Tools/Char_pickaxe/char_pickaxe_preview.rend",
+			"previewRotation": [  -1, 0, 0, 0, 0, 1, 0, 1, 0 ],
+			"script": {
+				"file": "$CONTENT_DATA/Scripts/game/tools/Sledgehammer.lua",
+				"class": "Pickaxe",
+                "data" : {}
+			}
+		},
+		{
+			"uuid": "0db1ecd5-503d-4dd3-807e-869c243a7c08",
+			"previewRenderable": "$CONTENT_DATA/Characters/Char_Tools/Char_spear/char_spear_preview.rend",
+			"previewRotation": [  -1, 0, 0, 0, 0, 1, 0, 1, 0 ],
+			"script": { "file": "$CONTENT_DATA/Scripts/game/tools/spear.lua", "class": "Spear" }
+		},
+		{
+			"uuid": "e34387d3-fa29-4831-89b8-c94417b6fce6",
+			"previewRenderable": "$CONTENT_DATA/Characters/Char_Tools/Char_harpoon/char_harpoon_preview.rend",
+			"previewRotation": [ -1, 0, 0, 0, 0, 1, 0, 1, 0 ],
+			"script": { "file": "$CONTENT_DATA/Scripts/game/tools/harpoonGun.lua", "class": "Harpoon" }
+		}
+	]
+}

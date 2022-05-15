@@ -1,1 +1,149 @@
-{}
+{
+    "Fire - purifier":
+	{
+		"parameterList":
+		{
+			"color": "ff7b33ff",
+			"radius": 6.0,
+			"intensity": 2.0,
+			"fire_intensity": 1.0
+		},
+		"effectList":
+		[
+			{
+				"type": "audio",
+				"name": "event:/amb/3D/amb_3D_crashsitefire_small",
+				"parameters":
+				[
+					"fire_intensity"
+				],
+				"delay": 0.075
+			},
+			{
+				"type": "pointLight",
+				"name": "",
+				"offset": { "x": 0.0, "y": -0.65, "z": -0.25 },
+				"parameters":
+				[
+					"color",
+					"radius",
+					"intensity"
+				],
+				"duration": -1.0,
+				"delay": 0.0
+			},
+			{
+				"type": "particle",
+				"name": "p_enviroment_fire_small_01",
+				"offset": { "x": 0.0, "y": -0.45, "z": -0.25 },
+				"attached": true,
+				"delay": 0.0
+			}
+		]
+	},
+	"Craft - scrapworkbench":
+	{
+		"parameterList":
+		{
+			"Material": 7
+		},
+		"effectList":
+		[
+			{
+				"type": "audio",
+				"name": "event:/tools/multitool_refine",
+				"parameters":
+				[
+					"Material"
+				],
+				"delay": 0.0
+			},
+			{
+				"type": "particle",
+				"name": "p_tool_multiknife_refine_hit_wood",
+				"offset": { "x": 0.0, "y": 0.5, "z": 0.0 },
+				"delay": 0.05
+			}
+		]
+	},
+	"Craft - seedpress":
+	{
+		"parameterList":
+		{
+			"Material": 7
+		},
+		"effectList":
+		[
+			{
+				"type": "audio",
+				"name": "event:/char/npc/bots/utility/refinery/refinery_use",
+				"offset": { "x": 0.0, "y": 0.9, "z": 0.8 },
+				"delay": 0.0
+			},
+			{
+				"type": "audio",
+				"name": "event:/tools/glowstick/gs_bounce",
+				"offset": { "x": 0.0, "y": 0.9, "z": 0.8 },
+				"delay": 0.0
+			},
+			{
+				"type": "particle",
+				"name": "p_destruct_fruit",
+				"offset": { "x": 0.0, "y": 0.9, "z": 0.8 },
+				"delay": 0.0
+			}
+		]
+	},
+	"Antenna - Activation":
+	{
+		"effectList":
+		[
+			{
+				"type": "particle",
+				"name": "p_barrier_activation_startup",
+				"offset": { "x": 0.0, "y": 1.25, "z": 0.0 },
+				"direction": { "x": 0.0, "y": 0.0, "z": -1.0 },
+				"attached": true,
+				"delay": 0.0
+			},
+			{
+				"type": "particle",
+				"name": "p_barrier_activation_end",
+				"offset": { "x": 0.0, "y": 1.0, "z": 0.0 },
+				"direction": { "x": 0.0, "y": 0.0, "z": -1.0 },
+				"attached": true,
+				"delay": 0.0
+			},
+			{
+				"type": "particle",
+				"name": "p_barrier_activation_lightning_01",
+				"offset": { "x": 0.0, "y": 1.25, "z": 0.25 },
+				"direction": { "x": 0.0, "y": 0.0, "z": -1.0 },
+				"attached": true,
+				"delay": 0.0
+			},
+			{
+				"type": "audio",
+				"name": "event:/vehicle/triggers/encryptor_on",
+				"delay": 0
+			}
+		]
+	},
+	"WaterSensor - Visualization":
+	{
+		"parameterList":
+		{
+			"minColor":[0.0, 0.0, 1.0, 0.0], 
+			"maxColor":[0.4, 0.4, 1.0, 0.7]
+		},
+		"effectList":
+		[
+			{
+				"type": "renderable",
+				"name": "$CONTENT_DATA/Effects/Rend/cube_hologram.rend",
+				"offset": { "x": 0.0, "y": 0.0, "z": 0.0 },
+				"parameters" : [ "minColor", "maxColor" ]
+			}
+		]
+	}
+}

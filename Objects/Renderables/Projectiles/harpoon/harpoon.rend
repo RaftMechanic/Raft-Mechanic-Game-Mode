@@ -1,0 +1,17 @@
+{
+    "lodList": [
+        {
+            "subMeshMap": {
+                "radar":{
+                    "textureList": [
+                        "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_dif.tga",
+                        "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_asg.tga",
+                        "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_nor.tga"
+                    ],
+                    "material": "DifAsgNor"
+                }
+            },
+            "mesh": "$CONTENT_DATA/Objects/Renderables/Projectiles/harpoon/harpoon.fbx"
+        }
+    ]
+}

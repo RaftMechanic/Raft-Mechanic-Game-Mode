@@ -1,3 +1,6 @@
 {
-   "toolSetList" : [ "$CONTENT_DATA/Tools/Database/ToolSets/survival.toolset" ]
+   "toolSetList" : [
+      "$CONTENT_DATA/Tools/Database/ToolSets/survival.toolset",
+      "$CONTENT_DATA/Tools/Database/ToolSets/raft_tools.toolset"
+   ]
 }

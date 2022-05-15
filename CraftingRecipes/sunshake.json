@@ -1,0 +1,26 @@
+// Sunshake
+[
+	{
+		"itemId": "cb7305b2-d8b5-4302-aff3-6cdd9212ca64",
+		"quantity": 5,
+		"craftTime": 0,
+		"ingredientList": [
+			{
+				"quantity": 1,
+				"itemId": "628fd350-577d-413f-82a8-7f08a83de3d8"
+			},
+			{
+				"quantity": 1,
+				"itemId": "9cd8288c-5a19-479f-af47-9eb55230ade2"
+			},
+			{
+				"quantity": 1,
+				"itemId": "e77d9577-589a-446b-96c1-f6d0d7495489"
+			},
+			{
+				"quantity": 1,
+				"itemId": "0bc74539-df8a-47c7-aad8-d55d809a01e4"
+			}
+		]
+	}
+]

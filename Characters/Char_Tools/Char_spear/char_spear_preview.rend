@@ -1,0 +1,34 @@
+{
+	"lodList": [
+		{
+			"subMeshMap": {
+				"radar": {
+					"material": "DifAsgNor",
+					"textureList": [
+					  	"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_dif.tga",
+						"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_asg.tga",
+						"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_nor.tga"
+					]
+				},
+				"lambert2": {
+					"material": "DifAsgNor",
+					"textureList": [
+						"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+						"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+						"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+					]
+				},
+				"lambert3": {
+					"material": "DifAsgNor",
+					"textureList": [
+					  	"$CONTENT_DATA/Characters/Char_Tools/Char_woodsledgehammer/obj_building_plunger_dif.tga",
+						"$SURVIVAL_DATA/Objects/Textures/building/obj_building_plunger_asg.tga",
+						"$SURVIVAL_DATA/Objects/Textures/building/obj_building_plunger_nor.tga"
+					]
+				}
+			},
+			"mesh": "$CONTENT_DATA/Characters/Char_Tools/Char_spear/char_spear.dae",
+			"maxViewDistance": 1000.0
+		}
+	]
+}

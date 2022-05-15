@@ -1,0 +1,16 @@
+{
+    "lodList": [
+        {
+            "includes" : [ "POSITION", "UV0", "NORMAL" ],
+            "subMeshList": [
+                {
+                    "textureList": [
+                        "$CHALLENGE_DATA/Effects/Textures/t_hologram_goal.tga"
+                    ],
+                    "material": "Hologram"
+                }
+            ],
+            "mesh": "$CONTENT_DATA/Effects/Mesh/cube.fbx"
+        }
+    ]
+}

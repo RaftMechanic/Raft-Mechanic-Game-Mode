@@ -1,0 +1,18 @@
+
+[
+	{
+		"itemId": "fcf0958c-084d-4854-9b1b-b06594b4262a",
+		"quantity": 2,
+		"craftTime": 1260,
+		"ingredientList": [
+			{
+				"quantity": 1,
+				"itemId": "fcf0958c-084d-4854-9b1b-b06594b4262a"
+			},
+			{
+				"quantity": 1,
+				"itemId": "c9396a42-67c3-4fa3-b682-31428ff9eced"
+			}
+		]
+	}
+]

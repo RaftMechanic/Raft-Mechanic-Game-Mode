@@ -1,0 +1,50 @@
+[
+	//AirTank
+	{
+		"itemId": "03075a5a-92f5-49bd-b132-7d8e0cb80156",
+		"quantity": 1,
+		"craftTime": 35,
+		"ingredientList": [
+			{
+				"quantity": 1,
+				"itemId": "f152e4df-bc40-44fb-8d20-3b3ff70cdfe3"
+			},
+			{
+				"quantity": 10,
+				"itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
+			}
+		]
+	},
+	//WASD Converter
+	{
+		"itemId": "509505f1-b772-4acd-9827-f9a605a979ec",
+		"quantity": 1,
+		"craftTime": 45,
+		"ingredientList": [
+			{
+				"quantity": 1,
+				"itemId": "9f0f56e8-2c31-4d83-996c-d00a9b296c3f"
+			},
+			{
+				"quantity": 1,
+				"itemId": "1d4793af-cb66-4628-804a-9d7404712643"
+			}
+		]
+	},
+	//Water Sensor
+	{
+		"itemId": "6db7aacf-f2b3-4cbb-a6d2-2a01d5ee5562",
+		"quantity": 1,
+		"craftTime": 45,
+		"ingredientList": [
+			{
+				"quantity": 1,
+				"itemId": "1d4793af-cb66-4628-804a-9d7404712643"
+			},
+			{
+				"quantity": 1,
+				"itemId": "103fc4e6-7e57-465e-a86d-983343415877"
+			}
+		]
+	}
+]

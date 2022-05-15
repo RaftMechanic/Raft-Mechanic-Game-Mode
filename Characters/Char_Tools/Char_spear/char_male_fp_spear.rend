@@ -1,0 +1,24 @@
+{
+	"lodList": [{
+		"mesh": "$GAME_DATA/Character/Char_Male/Animations/Animationrefs/aniref_char_male_tpose.dae",
+		"includes" : ["POSITION", "UV0", "NORMAL", "TANGENTS", "BLEND_INDICES", "BLEND_WEIGHTS"],
+		"animationList" : [
+			{ "name" : "spear_idle", 				"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/FP/ani_char_male_fp_sledgehammer_idle.dae" },
+			{ "name" : "spear_attack1", 			"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/FP/ani_char_male_fp_sledgehammer_attack1.dae" },
+			{ "name" : "spear_exit1", 				"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/FP/ani_char_male_fp_sledgehammer_attack1_exit.dae" },
+			{ "name" : "spear_attack2", 			"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/FP/ani_char_male_fp_sledgehammer_attack2.dae" },
+			{ "name" : "spear_exit2", 				"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/FP/ani_char_male_fp_sledgehammer_attack2_exit.dae" },
+			{ "name" : "spear_pickup", 				"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/FP/ani_char_male_fp_sledgehammer_pickup.dae" },
+			{ "name" : "spear_putdown", 			"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/FP/ani_char_male_fp_sledgehammer_putdown.dae" },
+			{ "name" : "spear_guard_into", 			"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/FP/ani_char_male_fp_sledgehammer_guard_into.dae" },
+			{ "name" : "spear_guard_exit", 			"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/FP/ani_char_male_fp_sledgehammer_guard_exit.dae" },
+			{ "name" : "spear_guard_idle", 			"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/FP/ani_char_male_fp_sledgehammer_guard_idle.dae" },
+			{ "name" : "spear_guard_hit", 			"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/FP/ani_char_male_fp_sledgehammer_guard_hit.dae" },
+			{ "name" : "spear_guard_break", 		"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/FP/ani_char_male_fp_sledgehammer_guard_break.dae" },
+			{ "name" : "spear_sprint_into", 		"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/FP/ani_char_male_fp_sledgehammer_sprint_into.dae" },
+			{ "name" : "spear_sprint_exit", 		"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/FP/ani_char_male_fp_sledgehammer_sprint_exit.dae" },
+			{ "name" : "spear_sprint_idle", 		"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/FP/ani_char_male_fp_sledgehammer_sprint_idle.dae" }
+		],
+		"maxViewDistance": 1000.0
+	}]
+} 

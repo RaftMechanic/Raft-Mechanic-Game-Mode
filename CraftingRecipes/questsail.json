@@ -1,0 +1,42 @@
+[
+	//Sail
+	{
+		"itemId": "eea9794b-bcdf-431e-bdcd-7b2ff6ffa145",
+		"quantity": 1,
+		"craftTime": 79,
+		"ingredientList": [
+			{
+				"quantity": 2,
+				"itemId": "3440440b-d362-4473-aa03-b7c41e1fe7ad"
+			},
+			{
+				"quantity": 15,
+				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+			},
+			{
+				"quantity": 1,
+				"itemId": "36335664-6e61-4d44-9876-54f9660a8565"
+			}
+		]
+	},
+	//Flag
+	{
+		"itemId": "8f460344-ef34-42ab-99e3-d3bed9af4b52",
+		"quantity": 1,
+		"craftTime": 25,
+		"ingredientList": [
+			{
+				"quantity": 1,
+				"itemId": "3440440b-d362-4473-aa03-b7c41e1fe7ad"
+			},
+			{
+				"quantity": 10,
+				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+			},
+			{
+				"quantity": 1,
+				"itemId": "36335664-6e61-4d44-9876-54f9660a8565"
+			}
+		]
+	}
+]

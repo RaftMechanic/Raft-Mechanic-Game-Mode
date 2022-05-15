@@ -1,0 +1,42 @@
+{
+	"lodList": [
+		{
+			"subMeshMap": {
+				"blinn1": {
+					"material": "DifAsgNor",
+					"textureList": [
+					  	"$CONTENT_DATA/Characters/Char_Tools/Char_pickaxe/obj_building_mopbucket_dif.tga",
+					  	"$CONTENT_DATA/Characters/Char_Tools/Char_axe/obj_building_mopbucket_asg.tga",
+					  	"$CONTENT_DATA/Characters/Char_Tools/Char_axe/obj_building_mopbucket_nor.tga"
+					]
+				},
+				"farmbot": {
+					"material": "DifAsgNor",
+					"textureList": [
+					  	"$CONTENT_DATA/Characters/Char_Tools/Char_pickaxe/Char_Farmbot_dif.tga",
+					  	"$SURVIVAL_DATA/Character/Char_Farmbot/Char_Farmbot_asg.tga",
+						"$SURVIVAL_DATA/Character/Char_Farmbot/Char_Farmbot_nor.tga"
+					]
+				},
+				"lambert2": {
+					"material": "DifAsgNor",
+					"textureList": [
+						"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+						"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+						"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+					]
+				},
+				"sign_atlas": {
+					"material": "DifAsgNor",
+					"textureList": [
+					  	"$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_dif.tga",
+						"$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_asg.tga",
+						"$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_nor.tga"
+					]
+				}
+			},
+			"mesh": "$CONTENT_DATA/Characters/Char_Tools/Char_pickaxe/char_pickaxe.dae",
+			"maxViewDistance": 1000.0
+		}
+	]
+}
