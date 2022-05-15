@@ -2,6 +2,10 @@
 
 SawBlade = class( nil )
 
+--RAFT start
+local radius = 1.0
+--RAFT end
+
 function SawBlade.client_onCreate( self )
 	self.sawEffect = sm.effect.createEffect( "Saw - SawBlade", self.interactable )
 	self.remainingImpactTicks = 0
@@ -55,8 +59,9 @@ function SawBlade.client_onFixedUpdate( self, deltaTime )
 	
 end
 
---Raft
 
+
+--Raft
 function SawBlade:cl_triggerEffects(params)
 	local angularVelocity = params.angularVelocity
 	local mass = 250
@@ -67,21 +72,33 @@ function SawBlade:cl_triggerEffects(params)
 	self:cl_triggerEffect( pos, self.shape.up, params.materialId )
 end
 
+function SawBlade:server_onCreate()
+	self.trigger = sm.areaTrigger.createAttachedBox(self.interactable, sm.vec3.new(0.25,radius,radius), sm.vec3.zero(), sm.quat.identity(), sm.areaTrigger.filter.harvestable)
+end
+
 function SawBlade:server_onFixedUpdate()
 	local angularVelocity = self.shape.body.angularVelocity
 	if angularVelocity:length() > SPINNER_ANGULAR_THRESHOLD then
-		local radius = 1.0
+		local harvestables = {}
+		for _, harvestable in ipairs(self.trigger:getContents()) do
+			table.insert(harvestables, harvestable.id)
+		end
 
 		--break harvestable into tree trunks
 		for _, harvestable in ipairs(sm.physics.getSphereContacts(self.shape:getWorldPosition(), radius).harvestables) do
-			materialId = harvestable.materialId
-			self.network:sendToClients( "cl_triggerEffects", {materialId = materialId, angularVelocity = angularVelocity} )
-
+			local materialId = harvestable.materialId
 			if materialId ~= 7 then return end
+
+			--only if areatrigger and sphere overlap, aka cylinder collision (something like that)
+			for _, id in ipairs(harvestables) do
+				if harvestable.id == id then
+					self.network:sendToClients( "cl_triggerEffects", {materialId = materialId, angularVelocity = angularVelocity} )
 			
-			damage = math.min( 2.5, angularVelocity:length() )
-			position = self.shape:getWorldPosition()
-			harvestable:setPublicData({damage = damage, position = position})
+					damage = math.min( 2.5, angularVelocity:length() )
+					position = self.shape:getWorldPosition()
+					harvestable:setPublicData({damage = damage, position = position})
+				end
+			end
 		end
 	end
 end
