@@ -44,40 +44,28 @@ obj_wocsteak_grilld = sm.uuid.new("74a3f240-65b2-4f52-9555-666217366a0e")
 
 --interactive.shapeset
 obj_torch = sm.uuid.new("ce986935-5b57-4249-acbb-04ef6666bb03")
-
-
 obj_scrap_field = sm.uuid.new("8e75cddb-040e-4813-8dd6-7e72f3288a91")
 obj_large_field = sm.uuid.new("c80e2932-0d21-48bb-b5a2-dba03d73cfb7")
-
 obj_airtank_empty = sm.uuid.new("03075a5a-92f5-49bd-b132-7d8e0cb80156")
 obj_airtank_full = sm.uuid.new("462baf58-6329-4f29-8f9e-c20d06fb6f7d")
 obj_scrap_purifier = sm.uuid.new("80c9edb7-0f86-4899-bf60-c3baca3fa841")
 obj_scrap_tree_grower = sm.uuid.new("819fb238-a68b-4aab-a6f2-c1037f6bfb5b")
-
-
-
 obj_scrap_workbench = sm.uuid.new("f3163e62-e6c3-475c-805e-559f8bb07ad1")
 obj_apiary = sm.uuid.new("ebabda72-94d8-40c5-ab07-7001d1b67380")
 obj_propeller = sm.uuid.new("885513a7-baa3-44ee-aa6e-7546bf0715a7")
 obj_propeller_small = sm.uuid.new("4e69beb8-4519-4fff-a382-fdcfffbad6c2")
-
 obj_wasdConverter = sm.uuid.new("509505f1-b772-4acd-9827-f9a605a979ec")
 obj_waterSensor = sm.uuid.new("6db7aacf-f2b3-4cbb-a6d2-2a01d5ee5562")
 obj_creationSteer = sm.uuid.new("71ac7645-57f5-4d49-9574-c8482b431862")
 obj_sail = sm.uuid.new("eea9794b-bcdf-431e-bdcd-7b2ff6ffa145")
-
 obj_radio_antenna = sm.uuid.new("f95beb80-49c8-4d4c-98e9-5b87225c4570")
 obj_seed_press = sm.uuid.new("e9c7d080-ae4b-4fec-b626-34afda6f5114")
-obj_hammack = sm.uuid.new("4c1aed86-a402-4240-81e7-b67edf433fd5")
-
 obj_grill = sm.uuid.new("67dd0023-023d-46cb-9839-e4ada2609a9b")
-obj_flag = sm.uuid.new("8f460344-ef34-42ab-99e3-d3bed9af4b52")
+obj_windsock = sm.uuid.new("8f460344-ef34-42ab-99e3-d3bed9af4b52")
+obj_hammock = sm.uuid.new("4c1aed86-a402-4240-81e7-b67edf433fd5")
+obj_abandoned_chest = sm.uuid.new("f2522739-07cd-43ad-97e6-c2515b601bad")
 
---RAFT Consumables
-
-
-
---RAFT TOOLS
+--raft_tools.toolset
 tool_fishing_rod = sm.uuid.new("e3bcf8fa-68d7-49a8-b17b-c1e864d53b69")
 tool_hook = sm.uuid.new("b5ade3b0-be48-4a61-a8c2-13a4cedf1343")
 tool_axe = sm.uuid.new("1daebe24-4e16-422c-b5e7-c3f45f9296d8")
@@ -85,5 +73,5 @@ tool_pickaxe = sm.uuid.new("c883b283-ea7a-4bba-af0d-5c13fd73051d")
 tool_spear = sm.uuid.new("0db1ecd5-503d-4dd3-807e-869c243a7c08")
 tool_harpoon = sm.uuid.new("e34387d3-fa29-4831-89b8-c94417b6fce6")
 
---projectiles
+--projectiles.projectileset
 projectile_harpoon =  sm.uuid.new("382c818f-bdf6-41fd-96dd-7a4a1a176d9a")
