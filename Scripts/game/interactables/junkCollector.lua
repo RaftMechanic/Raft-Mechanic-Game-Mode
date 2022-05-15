@@ -77,7 +77,6 @@ function Collector:sv_checkTriggerContents( trigger, results )
                 end
             end
 
-            --this getting the first empty slot
             sm.container.beginTransaction()
             local index = 0
             for i = 1, containerSize do
@@ -87,7 +86,6 @@ function Collector:sv_checkTriggerContents( trigger, results )
                 end
             end
 
-            --sm.container.collect( self.sv.container, shapeUUID, quantity )
             self.sv.container:setItem( index, shapeUUID, quantity )
             sm.container.endTransaction()
 
