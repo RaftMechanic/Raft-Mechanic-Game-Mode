@@ -64,6 +64,7 @@ obj_grill = sm.uuid.new("67dd0023-023d-46cb-9839-e4ada2609a9b")
 obj_windsock = sm.uuid.new("8f460344-ef34-42ab-99e3-d3bed9af4b52")
 obj_hammock = sm.uuid.new("4c1aed86-a402-4240-81e7-b67edf433fd5")
 obj_abandoned_chest = sm.uuid.new("f2522739-07cd-43ad-97e6-c2515b601bad")
+obj_junk_collector = sm.uuid.new("f2382297-44b4-4259-99ce-b11da671ac51")
 
 --raft_tools.toolset
 tool_fishing_rod = sm.uuid.new("e3bcf8fa-68d7-49a8-b17b-c1e864d53b69")

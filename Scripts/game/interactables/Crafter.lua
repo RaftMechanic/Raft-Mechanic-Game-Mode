@@ -969,10 +969,10 @@ function Crafter.client_onUpdate( self, deltaTime )
 		if (crop and self.cl.mainEffects["crop1"]:isPlaying()) or reload then
 			self.interactable:setUvFrameIndex( 9 )
 
-			self.cl.mainEffects["crop1"]:setScale(vec3Num(craftProgress/8))
+			self.cl.mainEffects["crop1"]:setScale(sm.vec3.one() *(craftProgress/8))
 			self.cl.mainEffects["crop1"]:setOffsetPosition(self.shape:transformPoint(worldPosition - self.shape.at/1.75 + sm.vec3.new(0,0,craftProgress/4)))
 			if bigFarm then
-				self.cl.mainEffects["crop2"]:setScale(vec3Num(craftProgress/8))
+				self.cl.mainEffects["crop2"]:setScale(sm.vec3.one() *(craftProgress/8))
 				self.cl.mainEffects["crop2"]:setOffsetPosition(self.shape:transformPoint(worldPosition1 - self.shape.at/1.75 + sm.vec3.new(0,0,craftProgress/4)))
 			end
 		else
@@ -1029,7 +1029,7 @@ function Crafter.client_onUpdate( self, deltaTime )
 				mult = 1.1
 			end
 
-			self.cl.mainEffects["tree"]:setScale(vec3Num(craftProgress/16))
+			self.cl.mainEffects["tree"]:setScale(sm.vec3.one() *(craftProgress/16))
 			self.cl.mainEffects["tree"]:setOffsetPosition(sm.vec3.new(0,craftProgress * mult,0))
 		else
 			self.interactable:setUvFrameIndex( 0 )
@@ -1064,7 +1064,7 @@ function Crafter.client_onUpdate( self, deltaTime )
 			end
 
 			self.cl.mainEffects["fish"]:setParameter("uuid", fish)
-			self.cl.mainEffects["fish"]:setScale(vec3Num(0.5))					
+			self.cl.mainEffects["fish"]:setScale(sm.vec3.one() * 0.5 )
 			self.cl.mainEffects["fish"]:setOffsetPosition(sm.vec3.new(0,0.375,0))
 
 			local rotation = self.shape:getWorldRotation() * sm.vec3.getRotation( self.shape.up, self.shape.right )
@@ -1079,7 +1079,7 @@ function Crafter.client_onUpdate( self, deltaTime )
 			
 		elseif not isCrafting and hasItems then
 			self.cl.mainEffects["fish"]:setParameter("uuid", sm.uuid.new(self.crop))
-			self.cl.mainEffects["fish"]:setScale(vec3Num(0.5))
+			self.cl.mainEffects["fish"]:setScale(sm.vec3.one() * 0.5)
 
 			if not self.cl.mainEffects["fish"]:isPlaying() then
 				self.cl.mainEffects["fish"]:setOffsetPosition(sm.vec3.new(0,0.475,0))
