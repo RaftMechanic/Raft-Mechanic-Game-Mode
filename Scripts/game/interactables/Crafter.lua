@@ -1030,7 +1030,7 @@ function Crafter.client_onUpdate( self, deltaTime )
 		end
 		
 	elseif shapeUuid == obj_scrap_tree_grower then
-		worldPosition = self.shape:getWorldPosition() + self.shape.at*0.6
+		local worldPosition = self.shape:getWorldPosition() + self.shape.at*0.6
 
 		--fertilizer
 		if isFertilized and isCrafting and not self.cl.mainEffects["fertilizer"]:isPlaying() then

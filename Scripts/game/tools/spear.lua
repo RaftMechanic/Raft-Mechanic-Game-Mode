@@ -40,6 +40,7 @@ Spear.swingExits = { "spear_exit1", "spear_exit2" }
 function Spear.client_onCreate( self )
 	self.isLocal = self.tool:isLocal()
 	self:init()
+	self:loadAnimations()
 end
 
 function Spear.client_onRefresh( self )
