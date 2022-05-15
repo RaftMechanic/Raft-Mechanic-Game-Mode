@@ -1,0 +1,20 @@
+{
+   "lodList" : [
+      {
+         "mesh" : "$CONTENT_DATA/Objects/Mesh/Consumables/potat.obj",
+         "subMeshList" : [
+            {
+               "custom" : {
+                  "shadow" : true
+               },
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$GAME_DATA/Projectiles/Textures/obj_plants_potato_dif.TGA",
+                  "$GAME_DATA/Projectiles/Textures/obj_plants_potato_asg.TGA",
+                  "$GAME_DATA/Projectiles/Textures/obj_plants_potato_nor.TGA"
+               ]
+            }
+         ]
+      }
+   ]
+}

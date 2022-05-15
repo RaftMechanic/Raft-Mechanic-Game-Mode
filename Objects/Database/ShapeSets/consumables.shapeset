@@ -279,9 +279,6 @@
             "hpGain" : 0,
             "waterGain" : 1
          },
-		 "restrictions" : {
-            "erasable" : true
-         },
          "flammable" : true,
          "name" : "obj_wocsteak_raw",
          "physicsMaterial" : "Fruit",
@@ -292,6 +289,9 @@
             "friction" : 5
          },
          "renderable" : "$CONTENT_DATA/Objects/Renderables/Consumables/WocSteakRaw.rend",
+         "restrictions" : {
+            "erasable" : true
+         },
          "rotationSet" : "PropYX",
          "uuid" : "74a3f240-65b2-4f52-9555-666217366a0a"
       },
@@ -313,9 +313,6 @@
          "flammable" : true,
          "name" : "obj_wocsteak_grilld",
          "physicsMaterial" : "Potato",
-		 "restrictions" : {
-            "erasable" : true
-         },
          "ratings" : {
             "buoyancy" : 5,
             "density" : 2,
@@ -323,52 +320,38 @@
             "friction" : 5
          },
          "renderable" : "$CONTENT_DATA/Objects/Renderables/Consumables/WocSteakGrilld.rend",
+         "restrictions" : {
+            "erasable" : true
+         },
          "rotationSet" : "PropYX",
          "uuid" : "74a3f240-65b2-4f52-9555-666217366a0e"
       },
       {
-			"uuid": "f74c2891-79a9-45e0-982e-4896651c2259",
-			"name": "obj_potato",
-			"renderable": {
-				"lodList": [
-					{
-						"maxViewDistance": 1500,
-						"mesh": "$CONTENT_DATA/Objects/Mesh/ModifiedPlants/Potato.fbx",
-						"subMeshMap": {
-							"potato": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_ammo_potato_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_ammo_potato_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_ammo_potato_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"color": "495975",
-			"box": {
-				"x": 2,
-				"y": 2,
-				"z": 2
-			},
-			"itemStack": {},
-			"rotationSet": "PropY",
-			"sticky": "-Y+Y",
-			"physicsMaterial": "Fruit",
-			"ratings": {
-				"density": 2,
-				"durability": 2,
-				"friction": 4,
-				"buoyancy": 7
-			},
-			"flammable": true,
-			"consumable": true,
-			"stackSize": 20,
-			"restrictions": {
-				"erasable": true
-			}
-		}
+         "box" : {
+            "x" : 1,
+            "y" : 1,
+            "z" : 1
+         },
+         "color" : "495975",
+         "consumable" : true,
+         "flammable" : true,
+         "itemStack" : {},
+         "name" : "obj_potato",
+         "physicsMaterial" : "Fruit",
+         "ratings" : {
+            "buoyancy" : 7,
+            "density" : 2,
+            "durability" : 2,
+            "friction" : 4
+         },
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Consumables/potato.rend",
+         "restrictions" : {
+            "erasable" : true
+         },
+         "rotationSet" : "PropY",
+         "stackSize" : 20,
+         "sticky" : "-Y+Y",
+         "uuid" : "f74c2891-79a9-45e0-982e-4896651c2259"
+      }
    ]
 }
