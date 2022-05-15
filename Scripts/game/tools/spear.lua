@@ -401,7 +401,8 @@ function Spear.client_onEquip( self, animate )
 	self.tool:setTpRenderables( tpRend )
 
 	self:init()
-	self:loadAnimations()
+	--self:loadAnimations()
+	-- idk why but commenting this out fixed it LMFAOOOO^^
 
 	setTpAnimation( self.tpAnimations, "equip", 0.0001 )
 
