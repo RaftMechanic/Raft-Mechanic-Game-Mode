@@ -64,7 +64,6 @@
 			"flammable": false,
             "showInInventory": false
 		},
-
         {
 			"uuid": "8ea107e0-9ce6-4bfd-8bef-d2339b04f039",
 			"name": "obj_planter_blueberry",
@@ -121,7 +120,6 @@
 			"flammable": false,
             "showInInventory": false
 		},
-
         {
 			"uuid": "11155370-da30-45eb-8545-a60435686d6a",
 			"name": "obj_planter_orange",
@@ -171,7 +169,6 @@
 			"flammable": false,
             "showInInventory": false
 		},
-
         {
 			"uuid": "cff54c25-6772-4424-b3ca-de0df19f1a57",
 			"name": "obj_planter_pipeapple",
@@ -236,7 +233,6 @@
 			"flammable": false,
             "showInInventory": false
 		},
-
         {
 			"uuid": "906f990e-68df-486b-820d-175ef33f6e17",
 			"name": "obj_planter_carrot",
@@ -301,7 +297,6 @@
 			"flammable": false,
             "showInInventory": false
 		},
-
         {
 			"uuid": "a8a402f4-f3a0-4be5-b76f-8cfc26778702",
 			"name": "obj_planter_redbeet",
@@ -359,7 +354,6 @@
 			"flammable": false,
             "showInInventory": false
 		},
-
         {
 			"uuid": "496c950a-14fd-4ad7-bfba-bb6509835d9c",
 			"name": "obj_planter_tomato",
@@ -417,7 +411,6 @@
 			"flammable": false,
             "showInInventory": false
 		},
-
         {
 			"uuid": "704c9bb4-747b-4e54-b1f2-d51043929b5b",
 			"name": "obj_planter_broccoli",
@@ -475,7 +468,6 @@
 			"flammable": false,
             "showInInventory": false
 		},
-
         {
 			"uuid": "56ac7150-65b2-496d-9c65-0197a99ca571",
 			"name": "obj_planter_potato",
@@ -533,7 +525,6 @@
 			"flammable": false,
             "showInInventory": false
 		},
-
         {
 			"uuid": "d9dce2fc-b158-464d-b5a6-163c6e65b512",
 			"name": "obj_planter_cotton",
@@ -566,6 +557,44 @@
                 ]
 			},
 			"color": "e9bf04ff",
+			"box": {
+				"x": 6,
+				"y": 8,
+				"z": 1
+			},
+			"rotationSet": "PropYZ",
+			"sticky": "-Z+Y-Y+X-X",
+			"physicsMaterial": "Fruit",
+			"ratings": {
+				"density": 4,
+				"durability": 3,
+				"friction": 4,
+				"buoyancy": 6
+			},
+			"flammable": false,
+            "showInInventory": false
+		},
+        {
+			"uuid": "57563b55-39fc-4b1f-be52-3bdeeccd2edc",
+			"name": "obj_planter_flower",
+			"renderable": {
+                "lodList": [
+                    {
+                        "subMeshMap": {
+                            "leaves": {
+                                "material": "Leaves",
+                                    "textureList": [
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_pigmentflower_dif.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_pigmentflower_asg.tga",
+                                        "$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_pigmentflower_nor.tga"
+                                    ]
+                            }
+                        },
+                        "mesh": "$SURVIVAL_DATA/Harvestables/Mesh/Farmables/hvs_farmables_pigmentflower.fbx"
+                    }
+                ]
+            },
+			"color": "c5a100",
 			"box": {
 				"x": 6,
 				"y": 8,
