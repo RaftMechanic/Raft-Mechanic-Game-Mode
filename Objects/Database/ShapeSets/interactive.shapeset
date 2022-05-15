@@ -1536,58 +1536,56 @@
 			"showInInventory": false
 		},
 		{
-			"uuid": "f2382297-44b4-4259-99ce-b11da671ac51",
-			"name": "obj_junk_collector",
-			"renderable": {
-				"lodList": [
-					{
-						"subMeshList": [
-							{
-								"textureList": [
-									"$CHALLENGE_DATA/Objects/Textures/interactive/obj_interactive_challengechest_dif.tga",
-									"$CHALLENGE_DATA/Objects/Textures/interactive/obj_interactive_challengechest_asg.tga",
-									"$CHALLENGE_DATA/Objects/Textures/interactive/obj_interactive_challengechest_nor.tga"
-								],
-								"material": "PoseAnimDifAsgNor"
-							}
-						],
-						"mesh": "$CHALLENGE_DATA/Objects/Mesh/interactive/obj_interactive_challengechest_off.fbx",
-						"pose0": "$CHALLENGE_DATA/Objects/Mesh/interactive/obj_interactive_challengechest_on.fbx"
-					}
-				]
+			"box" : {
+				"x" : 4,
+				"y" : 4,
+				"z" : 2
 			},
-			"color": "baa48a",
-			"box": {
-				"x": 4,
-				"y": 3,
-				"z": 4
-			},
+			"color" : "008ae1",
+			"flammable" : true,
+			"name" : "obj_junk_collector",
+			"physicsMaterial" : "Wood",
+			"previewRotation" : [ 1, 0, 0, 0, 0, 1, 0, 1, 0 ],
 			"scripted": {
 				"filename": "$CONTENT_DATA/Scripts/game/interactables/junkCollector.lua",
 				"classname": "Collector",
 				"data": {}
 			},
-			"rotationSet": "PropY",
-			"sticky": "-Z-Y-X+X",
-			"physicsMaterial": "Metal",
-			"ratings": {
-				"density": 1,
-				"durability": 10,
-				"friction": 4,
-				"buoyancy": 8
+			"ratings" : {
+				"buoyancy" : 10,
+				"density" : 1,
+				"durability" : 7,
+				"friction" : 10
 			},
-			"restrictions": {
-				"destructable": false,
-				"erasable": false,
-				"buildable": false,
-				"usable": false,
-				"connectable": false,
-				"liftable": false,
-				"convertibleToDynamic": true,
-				"paintable": false
+			"renderable" : {
+				"lodList" : [
+				{
+					"mesh" : "$CONTENT_DATA/Objects/Mesh/Parts/ReinforcedRaftBase.fbx",
+					"subMeshMap" : {
+						"lambert3" : {
+							"material" : "DifAsgNor",
+							"textureList" : [
+							"$SURVIVAL_DATA/Objects/Textures/construction/obj_construction_ramp01_dif.tga",
+							"$SURVIVAL_DATA/Objects/Textures/construction/obj_construction_ramp01_asg.tga",
+							"$SURVIVAL_DATA/Objects/Textures/construction/obj_construction_ramp01_nor.tga"
+							]
+						},
+						"lambert7" : {
+							"material" : "DifAsgNor",
+							"textureList" : [
+							"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_stack_dif.tga",
+							"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_stack_asg.tga",
+							"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_stack_nor.tga"
+							]
+						}
+					}
+				}
+				]
 			},
-			"flammable": false,
-			"showInInventory": false
+			"rotationSet" : "PropYX",
+			"stackSize" : 10,
+			"sticky" : "+X-X+Y-Y+Z",
+			"uuid" : "f2382297-44b4-4259-99ce-b11da671ac51"
 		}
    ]
 }
