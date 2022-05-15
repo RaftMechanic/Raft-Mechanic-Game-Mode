@@ -1,9 +1,17 @@
 
-dofile "$GAME_DATA/Scripts/game/AnimationUtil.lua"
-dofile "$SURVIVAL_DATA/Scripts/util.lua"
+dofile( "$GAME_DATA/Scripts/game/AnimationUtil.lua" )
+dofile( "$SURVIVAL_DATA/Scripts/util.lua" )
+dofile( "$SURVIVAL_DATA/Scripts/game/survival_meleeattacks.lua" )
 
 local Damage = 30
 
+---@class Spear : ToolClass
+---@field isLocal boolean
+---@field animationsLoaded boolean
+---@field equipped boolean
+---@field swingCooldowns table
+---@field fpAnimations table
+---@field tpAnimations table
 Spear = class()
 
 local CONTENT_DATA = "$CONTENT_667b4c22-cc1a-4a2b-bee8-66a6c748d40e"
@@ -11,7 +19,7 @@ local renderables = {
 	CONTENT_DATA.."/Characters/Char_Tools/Char_spear/char_spear.rend"
 }
 
-local renderablesTp = {CONTENT_DATA.."/Characters/Char_Tools/Char_spear/char_male_tp_spear.rend", "$GAME_DATA/Character/Char_Tools/Char_sledgehammer/char_sledgehammer_tp_animlist.rend"}
+local renderablesTp = {CONTENT_DATA.."/Characters/Char_Tools/Char_spear/char_male_tp_spear.rend", CONTENT_DATA.."/Characters/Char_Tools/Char_spear/char_spear_tp_animlist.rend"}
 local renderablesFp = {CONTENT_DATA.."/Characters/Char_Tools/Char_spear/char_male_fp_spear.rend", CONTENT_DATA.."/Characters/Char_Tools/Char_spear/char_spear_fp_animlist.rend"}
 
 sm.tool.preloadRenderables( renderables )
@@ -19,7 +27,7 @@ sm.tool.preloadRenderables( renderablesTp )
 sm.tool.preloadRenderables( renderablesFp )
 
 local Range = 3.0
-local SwingStaminaSpend = 1.5
+local SwingStaminaSpend = 0.75
 
 Spear.swingCount = 2
 Spear.mayaFrameDuration = 1.0/30.0
@@ -118,13 +126,13 @@ function Spear.loadAnimations( self )
 		crouchBwd = "spear_crouch_bwd"
 		
 	}
-    
+
 	for name, animation in pairs( movementAnimations ) do
 		self.tool:setMovementAnimation( name, animation )
 	end
-    
+
 	setTpAnimation( self.tpAnimations, "idle", 5.0 )
-    
+
 	if self.isLocal then
 		self.fpAnimations = createFpAnimations(
 			self.tool,
@@ -153,6 +161,7 @@ function Spear.loadAnimations( self )
 		)
 		setFpAnimation( self.fpAnimations, "idle", 0.0 )
 	end
+
 	--self.swingCooldowns[1] = self.fpAnimations.animations["spear_attack1"].info.duration
 	self.swingCooldowns[1] = 0.6
 	--self.swingCooldowns[2] = self.fpAnimations.animations["spear_attack2"].info.duration
@@ -163,7 +172,6 @@ function Spear.loadAnimations( self )
 end
 
 function Spear.client_onUpdate( self, dt )
-	
 	if not self.animationsLoaded then
 		return
 	end
@@ -249,7 +257,6 @@ function Spear.client_startLocalEvent( self, params )
 end
 
 function Spear.client_handleEvent( self, params )
-	
 	-- Setup animation data on equip
 	if params.name == "equip" then
 		self.equipped = true
@@ -336,7 +343,7 @@ function Spear.client_onEquippedUpdate( self, primaryState, secondaryState )
 			self.pendingRaycastFlag = false
 			local raycastStart = sm.localPlayer.getRaycastStart()
 			local direction = sm.localPlayer.getDirection()
-			sm.melee.meleeAttack( "Sledgehammer", Damage, raycastStart, direction * Range, self.tool:getOwner() )
+			sm.melee.meleeAttack( melee_sledgehammer, Damage, raycastStart, direction * Range, self.tool:getOwner() )
 			local success, result = sm.localPlayer.getRaycast( Range, raycastStart, direction )
 			if success then
 				self.freezeTimer = self.freezeDuration
@@ -366,30 +373,10 @@ function Spear.client_onEquippedUpdate( self, primaryState, secondaryState )
 				self.pendingRaycastFlag = true
 				self.nextAttackFlag = false
 				self.attackCooldownTimer = self.swingCooldowns[self.currentSwing]
-				--self.network:sendToServer( "sv_updateBlocking", false )
 			end
 		end
 	end
 
-	--Seondary Block
-	--if secondaryState == sm.tool.interactState.start then
-	--	if not isAnyOf( self.fpAnimations.currentAnimation, { "guardInto", "guardIdle" } ) and self.attackCooldownTimer <= 0 then
-	--		local params = { name = "guardInto" }
-	--		self.network:sendToServer( "server_startEvent", params )
-	--		self.network:sendToServer( "sv_updateBlocking", true )
-	--	end
-	--end
-	--
-	--if secondaryState == sm.tool.interactState.stop or secondaryState == sm.tool.interactState.null then
-	--	if isAnyOf( self.fpAnimations.currentAnimation, { "guardInto", "guardIdle" } ) and self.fpAnimations.currentAnimation ~= "guardExit"  then
-	--		local params = { name = "guardExit" }
-	--		self.network:sendToServer( "server_startEvent", params )
-	--		self.network:sendToServer( "sv_updateBlocking", false )
-	--	end
-	--end
-	--
-	--return primaryState ~= sm.tool.interactState.null or secondaryState ~= sm.tool.interactState.null
-	
 	--Secondary destruction
 	return true, false
 	
@@ -403,10 +390,15 @@ function Spear.client_onEquip( self, animate )
 
 	self.equipped = true
 
-	for k,v in pairs( renderables ) do renderablesTp[#renderablesTp+1] = v end
-	for k,v in pairs( renderables ) do renderablesFp[#renderablesFp+1] = v end
-	
-	self.tool:setTpRenderables( renderablesTp )
+	local tpRend = {}
+	local fpRend = {}
+
+	for k,v in pairs( renderablesTp ) do tpRend[#tpRend+1] = v end
+	for k,v in pairs( renderablesFp ) do fpRend[#fpRend+1] = v end
+	for k,v in pairs( renderables ) do tpRend[#tpRend+1] = v end
+	for k,v in pairs( renderables ) do fpRend[#fpRend+1] = v end
+
+	self.tool:setTpRenderables( tpRend )
 
 	self:init()
 	self:loadAnimations()
@@ -414,31 +406,22 @@ function Spear.client_onEquip( self, animate )
 	setTpAnimation( self.tpAnimations, "equip", 0.0001 )
 
 	if self.isLocal then
-		self.tool:setFpRenderables( renderablesFp )
+		self.tool:setFpRenderables( fpRend )
 		swapFpAnimation( self.fpAnimations, "unequip", "equip", 0.2 )
 	end
 	
 	--self.network:sendToServer( "sv_updateBlocking", false )
 end
-
 function Spear.client_onUnequip( self, animate )
-	
-	if animate then
-		sm.audio.play( "Sledgehammer - Unequip", self.tool:getPosition() )
-	end
 
 	self.equipped = false
-	setTpAnimation( self.tpAnimations, "unequip" )
-	if self.isLocal and self.fpAnimations.currentAnimation ~= "unequip" then
-		swapFpAnimation( self.fpAnimations, "equip", "unequip", 0.2 )
+	if sm.exists( self.tool ) then
+		if animate then
+			sm.audio.play( "Sledgehammer - Unequip", self.tool:getPosition() )
+		end
+		setTpAnimation( self.tpAnimations, "unequip" )
+		if self.isLocal and self.fpAnimations.currentAnimation ~= "unequip" then
+			swapFpAnimation( self.fpAnimations, "equip", "unequip", 0.2 )
+		end
 	end
-	
-	--self.network:sendToServer( "sv_updateBlocking", false )
-end
-
-function Spear.sv_updateBlocking( self, isBlocking )
-	if self.isBlocking ~= isBlocking then
-		sm.event.sendToPlayer( self.tool:getOwner(), "sv_updateBlocking", isBlocking )
-	end
-	self.isBlocking = isBlocking
 end

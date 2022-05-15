@@ -13,6 +13,11 @@ local modes = {
     language_tag("CreationRotator_Roll")
 }
 
+local controlModes = {
+    language_tag("CreationRotator_Input_mouse"),
+    language_tag("CreationRotator_Input_wasd")
+}
+
 local maxForceMult = 25
 
 function Steer:server_onCreate()
@@ -22,9 +27,12 @@ function Steer:server_onCreate()
     if self.sv.data == nil then
         self.sv.data = {
             count = 1,
+            controlMethodCount = 1,
             slider = 1
         }
     end
+
+    if self.sv.data.controlMethodCount == nil then self.sv.data.controlMethodCount = 1 end
 
     self.network:sendToClients("cl_updateData", self.sv.data)
     self:sv_updateState( { active = false, power = 0, index = 1  } )
@@ -59,7 +67,7 @@ function Steer:sv_onSliderChange( sliderPos )
 end
 
 function Steer:server_onFixedUpdate( dt )
-    if not self.sv or not self.sv.data then return end
+     if not self.sv or not self.sv.data then return end
 
     local logicParent = self.interactable:getParents( sm.interactable.connectionType.logic )[1]
     local seatParent = self.interactable:getParents( sm.interactable.connectionType.power )[1]
@@ -80,10 +88,20 @@ function Steer:server_onFixedUpdate( dt )
         return
     end
 
-    local charDir = seatedChar:getDirection()
+    local forceDir = sm.vec3.zero()
     local parentShape = seatParent:getShape()
-    local parentDir = parentShape:getRight():cross(parentShape:getAt()) --a seat's getAt is upwards, I want a forward direction
-    local forceDir = parentDir:cross(charDir)
+    local parentRight = parentShape:getRight()
+    local parentAt = parentShape:getAt()
+    local parentDir = parentRight:cross(parentAt) --a seat's getAt is upwards, I want a forward direction
+    if controlModes[self.sv.data.controlMethodCount] == controlModes[1] then
+        local charDir = seatedChar:getDirection()
+        forceDir = parentDir:cross(charDir)
+    else
+        local forward = seatParent:getSteeringPower()
+        local steer = seatParent:getSteeringAngle()
+        forceDir = (parentRight * forward) + (parentAt * -steer)
+    end
+
     --self.network:sendToClients("cl_visualise", { charDir, parentDir, forceDir })
 
     local bodyToRotate = parentShape:getBody()
@@ -149,7 +167,7 @@ end
 function Steer:client_canInteract()
     local o1 = "<p textShadow='false' bg='gui_keybinds_bg_orange' color='#4f4f4f' spacing='9'>"
     local o2 = "</p>"
-	sm.gui.setInteractionText( "", o1..language_tag("CreationRotator_CurrentMode")..modes[self.cl.data.count]..o2 )
+	sm.gui.setInteractionText( "", o1..language_tag("CreationRotator_CurrentMode")..modes[self.cl.data.count]..language_tag("CreationRotator_CurrentInput")..controlModes[self.cl.data.controlMethodCount]..o2 )
     sm.gui.setInteractionText( "", o1.."'"..sm.gui.getKeyBinding( "Use" )..language_tag("CreationRotator_Cycle_fwd")..sm.gui.getKeyBinding( "Tinker" )..language_tag("CreationRotator_Cycle_bwd")..sm.gui.getKeyBinding( "Crawl" ).."' + '"..sm.gui.getKeyBinding( "Use" )..language_tag("CreationRotator_AdjustForce")..o2 )
 
     return true
@@ -169,9 +187,15 @@ end
 
 function Steer:client_onTinker( char, lookAt )
     if lookAt then
-        self.network:sendToServer("sv_changeCount", "subtract")
+        --self.network:sendToServer("sv_changeCount", "subtract")
+        self.network:sendToServer("sv_changeControlMode")
         sm.audio.play("PaintTool - ColorPick")
     end
+end
+
+function Steer:sv_changeControlMode()
+    self.sv.data.controlMethodCount = self.sv.data.controlMethodCount < #controlModes and self.sv.data.controlMethodCount + 1 or 1
+    self:sv_save()
 end
 
 function Steer:sv_changeCount( type )

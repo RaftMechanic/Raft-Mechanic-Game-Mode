@@ -24,7 +24,6 @@
 			{ "name" : "spear_jump_land", 			"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/TP/ani_char_male_spear_jump_land.dae" },
 			{ "name" : "spear_jump_land_fwd", 		"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/TP/ani_char_male_spear_jump_land.dae" },
 			{ "name" : "spear_jump_land_bwd", 		"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/TP/ani_char_male_spear_jump_land.dae" }
-
 		],
 		"maxViewDistance": 1000.0
 	}]

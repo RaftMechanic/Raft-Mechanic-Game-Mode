@@ -3,10 +3,15 @@
 		"mesh": "$GAME_DATA/Character/Char_Tools/Char_sledgehammer/Animations/ani_char_sledgehammer_position.dae",
 		"includes" : ["POSITION", "UV0", "NORMAL", "TANGENTS", "BLEND_INDICES", "BLEND_WEIGHTS"],
 		"animationList" : [
-			{ "name" : "sledgehammer_guard_into", 		"file" : "$GAME_DATA/Character/Char_Tools/Char_sledgehammer/Animations/ani_char_sledgehammer_guard_into.dae" },
-			{ "name" : "sledgehammer_guard_idle", 		"file" : "$GAME_DATA/Character/Char_Tools/Char_sledgehammer/Animations/ani_char_sledgehammer_guard_idle.dae" },
-			{ "name" : "sledgehammer_guard_exit", 		"file" : "$GAME_DATA/Character/Char_Tools/Char_sledgehammer/Animations/ani_char_sledgehammer_guard_exit.dae" },
-			{ "name" : "sledgehammer_guard_break", 		"file" : "$GAME_DATA/Character/Char_Tools/Char_sledgehammer/Animations/ani_char_sledgehammer_guard_break.dae" }
+			//{ "name" : "spear_guard_into", 		"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/TP/ani_char_sledgehammer_guard_into.dae" },
+			//{ "name" : "spear_guard_idle", 		"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/TP/ani_char_sledgehammer_guard_idle.dae" },
+			//{ "name" : "spear_guard_exit", 		"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/TP/ani_char_sledgehammer_guard_exit.dae" },
+			//{ "name" : "spear_guard_break", 		"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_spear/TP/ani_char_sledgehammer_guard_break.dae" }
+
+			{ "name" : "spear_guard_into", 			"file" : "$GAME_DATA/Character/Char_Tools/Char_sledgehammer/Animations/ani_char_sledgehammer_guard_into.dae" },
+			{ "name" : "spear_guard_idle", 			"file" : "$GAME_DATA/Character/Char_Tools/Char_sledgehammer/Animations/ani_char_sledgehammer_guard_idle.dae" },
+			{ "name" : "spear_guard_exit", 			"file" : "$GAME_DATA/Character/Char_Tools/Char_sledgehammer/Animations/ani_char_sledgehammer_guard_exit.dae" },
+			{ "name" : "spear_guard_break", 		"file" : "$GAME_DATA/Character/Char_Tools/Char_sledgehammer/Animations/ani_char_sledgehammer_guard_break.dae" }
 		],
 
 		"maxViewDistance": 1000.0

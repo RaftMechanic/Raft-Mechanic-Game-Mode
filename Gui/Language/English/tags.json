@@ -22,8 +22,11 @@
     "CreationRotator_Mult": "Multiplier:",
     "CreationRotator_CurrentMode": "Current mode: #ffffff",
     "CreationRotator_Cycle_fwd": "' to cycle forwards, '",
-    "CreationRotator_Cycle_bwd": "' to cycle backwards and '",
+    "CreationRotator_Cycle_bwd": "' to switch between input methods and '",
     "CreationRotator_AdjustForce": "' to adjust the force multiplier.",
+    "CreationRotator_CurrentInput": ", #4f4f4fCurrent input method: #ffffff",
+    "CreationRotator_Input_mouse": "Mouse",
+    "CreationRotator_Input_wasd": "WASD",
 
     "WaterSensor_Title": "Water Sensor",
     "WaterSensor_Radius_Title": "Sensing Radius(blocks)",
