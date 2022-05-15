@@ -140,7 +140,7 @@ local crafters = {
 	[tostring( obj_scrap_tree_grower )] = {
 		needsPower = false,
 		slots = 1,
-		speed = 20,
+		speed = 1,
 		recipeSets = {
 			{ name = "scraptrees", locked = false }
 		},
@@ -680,10 +680,6 @@ function Crafter.server_onFixedUpdate( self )
 		self:sv_buildPipesAndContainerGraph()
 	end
 
-	if self.shape:getShapeUuid() == obj_scrap_tree_grower then
-		--self.shape:destroyPart(0)
-	end
-
 	local parent = self:getParent()
 	if not self.crafter.needsPower or ( parent and parent.active ) then
 		-- Update first in array
@@ -709,28 +705,10 @@ function Crafter.server_onFixedUpdate( self )
 										local treeTable = treeEffects[tostring(uuid)]
 										tree = treeTable[math.random(1, #treeTable)]
 									end
-
-									--[[if uuid == obj_sprucetree_sapling then
-										tree = "spruce"
-									elseif uuid == obj_leafytree_sapling then
-										tree = "leafy"
-									elseif uuid == obj_birchtree_sapling then
-										tree = "birch"
-									elseif uuid == obj_pinetree_sapling then
-										tree = "pine"
-									end]]
 								end
 
 
 								if not self.sv.saved.tree and tree then
-									--[[local treeType = tree..tostring(math.random(1,3))
-									if treeType == "leafy1" then
-										treeType = tree..tostring(math.random(2,3))
-									elseif treeType == "spruce3" then
-										treeType = tree..tostring(math.random(1,2))
-									end
-									self.sv.saved.tree = treeType]]
-
 									self.sv.saved.tree = tree
 								end
 							end
@@ -988,6 +966,8 @@ function Crafter.client_onUpdate( self, deltaTime )
 			end
 		end
 
+		reload = true
+		craftProgress = 1
 		if (crop and self.cl.mainEffects["crop1"]:isPlaying()) or reload then
 			self.cl.mainEffects["crop1"]:setScale(vec3Num(craftProgress/8))
 			self.cl.mainEffects["crop1"]:setOffsetPosition(self.shape:transformPoint(worldPosition - self.shape.at/1.75 + sm.vec3.new(0,0,craftProgress/4)))
