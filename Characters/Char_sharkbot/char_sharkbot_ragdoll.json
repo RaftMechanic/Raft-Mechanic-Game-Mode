@@ -1,0 +1,161 @@
+{
+	"settings" : {
+		"linearInfluenceSpeed" : 100.0,
+		"angularInfluenceSpeed" : 25.0,
+
+		"linearThreshold" : 0.1,
+		"angularThreshold" : 0.1,
+
+		"smoothing" : 0.8,
+
+		"colliders" : {
+			"Body" : {
+				"radius" : 0.2, "mass" : 30.0, "friction" : 1.0,
+				"rollingFriction" : 1.0, "spinningFriction" : 1.0, "restitution" : 0.0,
+				"selfCollision": true
+			},
+			"ArmRight" : {
+				"mass" : 20.0, "friction" : 1.0, "rollingFriction" : 1.0, "spinningFriction" : 1.0,
+				"restitution" : 0.0
+			},
+			"ArmLeft" : {
+				"mass" : 20.0, "friction" : 1.0, "rollingFriction" : 1.0, "spinningFriction" : 1.0,
+				"restitution" : 0.0,
+				"selfCollision": true
+			},
+			"Tail" : {
+				"radius" : 0.1,
+				"mass" : 20.0, "friction" : 1.0,
+				"rollingFriction" : 1.0, "spinningFriction" : 1.0,
+				"restitution" : 0.0
+			},
+			"Head" : {
+				"offset" : 1.0,
+				"radius" : 0.2, "mass" : 30.0, "friction" : 1.0, 
+				"rollingFriction" : 1.0, "spinningFriction" : 1.0,
+				"restitution" : 0.0,
+				"selfCollision": true
+			}
+		},
+		"joints" : {
+			"shoulder" : {
+				"angularLowerLimit" : [-60, -60, -60],
+				"angularUpperLimit" : [60, 60, 60],
+
+				"angularBounce" : [0, 0, 0],
+
+				"angularSpring" : [false, false, false],
+
+				"angularEquilibrium" : [0, 0, 0],
+				"angularStiffness" : [1, 1, 1],
+				"angularStiffnessLimit" : [true, true, true],
+
+				"angularDamping" : [1, 1, 1],
+				"angularDampingLimit" : [true, true, true],
+
+				"linearLowerLimit" : [-0.05, 0, -0.05],
+				"linearUpperLimit" : [0.05, 0.02, 0.02],
+
+				"linearBounce" : [0, 0, 0],
+
+				"linearSpring" : [false, false, false],
+
+				"linearEquilibrium" : [0, 0, 0],
+				"linearStiffness" : [10, 10, 10],
+				"linearStiffnessLimit" : [true, true, true],
+
+				"linearDamping" : [1, 1, 1],
+				"linearDampingLimit" : [true, true, true],
+
+				"cfm" : 0.1,
+				"erp" : 0.1
+			},
+			"neck_joint" : {
+				"angularLowerLimit" : [-10, -40, -20],
+				"angularUpperLimit" : [10, 40, 50],
+
+				"linearLowerLimit" : [0, 0, 0],
+				"linearUpperLimit" : [0.05, 0.02, 0.02],
+
+				"cfm" : 0.1,
+				"erp" : 0.1
+			},
+			"spine_joint" : {
+				"angularLowerLimit" : [-10, -30, -40],
+				"angularUpperLimit" : [10, 30, 10],
+
+				"angularBounce" : [0, 0, 0],
+
+				"linearLowerLimit" : [0, 0, 0],
+				"linearUpperLimit" : [0.02, 0.02, 0.02],
+
+				"cfm" : 0.1,
+				"erp" : 0.1
+			},
+			"leg_joint" : {
+				"angularLowerLimit" : [-2, -10, -10],
+				"angularUpperLimit" : [2, 10, 10],
+
+				"angularBounce" : [1, 1, 5],
+				"angularDamping" : [1, 1, 1],
+				"angularDampingLimit" : [true, true, true],
+
+				"angularSpring" : [true, true, true],
+				
+				"angularEquilibrium" : [10, 10, 10],
+
+				"linearLowerLimit" : [0, 0, 0],
+				"linearUpperLimit" : [0.02, 0.02, 0.02],
+
+				"cfm" : 0.1,
+				"erp" : 0.1
+			},			
+			"knee_joint" : {
+				"angularLowerLimit" : [-5, -85, -10],
+				"angularUpperLimit" : [5, 85, 40],
+
+				"angularSpring" : [true, true, true],
+							
+				"angularBounce" : [1, 1, 1],
+				"angularDamping" : [1, 1, 1],
+				"angularDampingLimit" : [true, true, true],
+				
+				"angularEquilibrium" : [10, 10, 10],
+
+
+				"linearLowerLimit" : [0, 0, 0],
+				"linearUpperLimit" : [0.02, 0.02, 0.02],
+
+				"cfm" : 0.1,
+				"erp" : 0.1
+			}
+		},
+		"root" : { "limb" : "body_limb", "colliderIndex" : 0 }
+	},
+	"limbs" : {
+		"body_limb" : {
+			"bones" : ["root_jnt", "spine_mid_2", "spine_mid", "spine_main", "spine_eyes", "jaw_top"],
+			"colliders" : ["body", "chest", "head" ],
+			"joints" : ["spine_joint","spine_joint","spine_joint","spine_joint", "neck_joint"]
+		},
+		"fin_left" : {
+			"root" : { "limb" : "body_limb", "colliderIndex" : 0 },
+			"bones" : ["side_fin_l", "side_fin_l_end"],
+			"colliders" : [ "small_colliderActive", "small_collider"],
+			"joints" : ["leg_joint","leg_joint"]
+		},
+		"fin_right" : {
+			"root" : { "limb" : "body_limb", "colliderIndex" : 0 },
+			"bones" : ["side_fin_r", "side_fin_r_end"],
+			"colliders" : [ "small_colliderActive", "small_collider"],
+			"joints" : ["leg_joint","leg_joint"]
+		},
+		"tail" : {
+			"root" : { "limb" : "body_limb", "colliderIndex" : 0 },
+			"bones" : ["spine"],
+			"colliders" : [ "small_colliderActive", "small_collider"],
+			"joints" : ["knee_joint"]
+		}
+
+	}
+}

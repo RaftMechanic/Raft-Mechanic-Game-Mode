@@ -1,0 +1,43 @@
+{
+    "characters": [
+        // Sharkbot
+        {
+            "uuid": "817c128f-c3c0-4e9e-bfa6-30337bbfb0a4",
+            "renderables":["$CONTENT_DATA/Characters/Char_sharkbot/SharkBot.rend"],
+            "ragdoll": "$CONTENT_DATA/Characters/Char_sharkbot/char_sharkbot_ragdoll.json",
+            "tumble":{
+                "col": "$SURVIVAL_DATA/Character/Char_Totebot/char_totebot_tumble_col.obj",
+                "offset": [0.0, 0.0, 0.883], "mass": 675.0
+            },
+            "hit": 
+            {
+                "stand":{
+                    "col": "$SURVIVAL_DATA/Character/Char_Cow/char_cow_hit_col.obj",
+                    "offset": [0.0, 0.0, 0.848] }
+            },
+            "unit":
+            {
+                "scriptPath": "$CONTENT_DATA/Scripts/game/units/SharkBotUnit.lua",
+                "scriptClass": "SharkBotUnit"
+            },
+            "character": 
+            {
+                "scriptPath": "$CONTENT_DATA/Scripts/game/characters/SharkBotCharacter.lua",
+                "scriptClass": "SharkBotCharacter",
+                "data": {}
+            },
+            "movement":
+            {
+                "moveSpeed": 3.6,
+                "slowDownSpeed": 2.0,
+                "crouchSpeed": 2.0,
+                "sprintSpeed": 8.0,
+                "headingRotationSpeed": 9.4245,
+                "facingRotationSpeed": 9.4245,
+                "canSwim": true
+            },
+            "capsule":{ "radius": 0.7,"height": 1.4 },
+            "mass": 275.0
+        }
+    ]
+}

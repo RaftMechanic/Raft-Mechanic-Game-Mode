@@ -18,8 +18,6 @@ dofile( "$SURVIVAL_DATA/Scripts/game/util/Timer.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestEntityManager.lua" )
 dofile( "$GAME_DATA/Scripts/game/managers/EventManager.lua" )
 
-dofile( "$CONTENT_DATA/Scripts/game/versionChecker.lua" ) --Raft
-
 ---@class SurvivalGame : GameClass
 ---@field sv table
 ---@field cl table

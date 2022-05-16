@@ -1,0 +1,58 @@
+{
+	"color": "304352",
+	"lodList": [{
+		"mesh": "$CONTENT_DATA/Characters/Char_sharkbot/shark.dae",
+		"subMeshMap":{
+				"tapebot_body": {
+					"material": "DifAsgNor",
+					"textureList": [
+						"$SURVIVAL_DATA/Character/Char_Tapebot/char_tapebot_body_dif.tga",
+						"$SURVIVAL_DATA/Character/Char_Tapebot/char_tapebot_body_asg.tga",
+						"$SURVIVAL_DATA/Character/Char_Tapebot/char_tapebot_body_nor.tga"
+					]
+				},
+				"tapebot_head": {
+					"material": "DifAsgNor",
+					"textureList": [
+						"$SURVIVAL_DATA/Character/Char_Tapebot/char_tapebot_head01_dif.tga",
+						"$SURVIVAL_DATA/Character/Char_Tapebot/char_tapebot_head02_asg.tga",
+						"$SURVIVAL_DATA/Character/Char_Tapebot/char_tapebot_head02_nor.tga"
+					]
+				}
+			},
+		"animationList" : [
+			{ "name" : "idle", 						"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_onground.dae", "looping" : true },
+			
+			{ "name" : "ground_a", 					"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_ground_action.dae" },
+			{ "name" : "attack", 					"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_attack.dae" },
+			
+			{ "name" : "swim_idle", 				"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_swim_idle.dae", "looping" : true },
+			{ "name" : "swim_fwd", 					"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_walk.dae", "looping" : true },
+			{ "name" : "swim_sprint", 				"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_walk.dae", "looping" : true },
+			{ "name" : "swim_left", 				"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_swim_left.dae", "looping" : true },
+			{ "name" : "swim_right", 				"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_swim_right.dae", "looping" : true },
+			{ "name" : "swim_bwd", 					"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_walk.dae", "looping" : true },
+			{ "name" : "swim_bwd_left", 			"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_walk.dae", "looping" : true },
+			{ "name" : "swim_bwd_right", 			"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_walk.dae", "looping" : true },
+			{ "name" : "swim_up", 					"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_walk.dae", "looping" : true },
+			{ "name" : "swim_down", 				"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_walk.dae", "looping" : true },
+			{ "name" : "swim_bwd_up", 				"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_walk.dae", "looping" : true },
+			{ "name" : "swim_bwd_down", 			"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_walk.dae", "looping" : true },
+			{ "name" : "swim_shuffle_left", 		"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_swim_left.dae", "looping" : true },
+			{ "name" : "swim_shuffle_right", 		"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_swim_right.dae", "looping" : true },
+			
+			
+			
+			{ "name" : "run", 						"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_walk.dae", "looping" : true },
+			{ "name" : "run_left", 					"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_walk.dae", "looping" : true },
+			{ "name" : "run_right", 				"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_walk.dae", "looping" : true },
+
+			{ "name" : "run_bwd", 					"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_walk.dae", "looping" : true },
+			{ "name" : "run_bwd_left", 				"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_walk.dae", "looping" : true },
+			{ "name" : "run_bwd_right", 			"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_walk.dae", "looping" : true }
+
+		
+		],
+		"maxViewDistance": 1000.0
+	}]
+} 
