@@ -76,3 +76,6 @@ tool_harpoon = sm.uuid.new("e34387d3-fa29-4831-89b8-c94417b6fce6")
 
 --projectiles.projectileset
 projectile_harpoon =  sm.uuid.new("382c818f-bdf6-41fd-96dd-7a4a1a176d9a")
+
+--raft_enemies.characterset
+unit_sharkbot = sm.uuid.new("817c128f-c3c0-4e9e-bfa6-30337bbfb0a4")

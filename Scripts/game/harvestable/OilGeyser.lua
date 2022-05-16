@@ -101,6 +101,18 @@ function OilGeyser.server_spawnJunk(self)
 		sm.harvestable.create( crate, vec, self.harvestable.worldRotation )
 		return
 	elseif random <= 100 then
+		local toYaw = function( rotation )
+			local spawnDirection = rotation * sm.vec3.new( 0, 1, 0 )
+			return math.atan2( spawnDirection.y, spawnDirection.x ) - math.pi / 2
+		end
+
+		local dif = sm.vec3.new( -2336, -2592, 16 ) - vec
+		local safeDistance = 64*4
+
+		if math.abs(dif.x) > safeDistance or math.abs(dif.y) > safeDistance then
+			sm.unit.createUnit( unit_sharkbot, vec + sm.vec3.new(0,0,2.5), toYaw( self.harvestable:getRotation() ), { tetherPoint = vec, deathTick = sm.game.getCurrentTick() + DaysInTicks( 5 ) + 400 } )
+		end
+
 		return
 	elseif random <= 110 then
 		junkIndex = 6
