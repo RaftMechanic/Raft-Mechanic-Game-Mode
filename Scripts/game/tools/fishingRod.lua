@@ -18,46 +18,93 @@ sm.tool.preloadRenderables( renderablesFp )
 local maxThrowForce = 5
 local minThrowForce = 0.25
 local chargeUpTime = 2
+local hookSize = sm.vec3.one()*0.1
 
-function Rod.client_onCreate( self )
-	self.chargeTime = 0
+--SERVER Start
+function Rod.server_onCreate( self )
+	self.sv = {}
+	self.sv.effects = {}
+	self.sv.effects.hooks = {}
 
-	self.useCD = { active = false, timer = 1 }
+	self.hookIDs = 1
 end
 
+function Rod.sv_create_hook( self, params, player )
+	local trigger = sm.areaTrigger.createBox(hookSize, params.pos)
+	local bait = params.bait
+	if not bait then
+		bait = sm.uuid.new("4a971f7d-14e6-454d-bce8-0879243c7642") --SUS
+	end
+
+	self.sv.effects.hooks[#self.sv.effects.hooks + 1] = {pos = params.pos, dir = params.dir, trigger = hookSize, id = self.hookIDs}
+	self.network:sendToClients("cl_create_hook", {pos = params.pos, dir = params.dir, bait = bait, id = self.hookIDs, player = player})
+	self.hookIDs = self.hookIDs + 1
+end
+
+function Rod.server_onRefresh( self )
+	self:server_onCreate()
+end
+--SERVER End
+
+
+
+--CLIENT Start
+function Rod.client_onCreate( self )
+	self.chargeTime = 0
+	self.bait = nil
+
+	self.useCD = { active = false, timer = 1 }
+
+	self.cl = {}
+	self.cl.effects = {}
+	self.cl.effects.hooks = {}
+end
+
+function Rod.cl_create_hook( self, params )
+	local hookEffect = sm.effect.createEffect("ShapeRenderable")
+	hookEffect:setParameter("uuid", params.bait)
+	hookEffect:setParameter("color", sm.color.new(0,0,0))
+	hookEffect:setScale(hookSize)
+	hookEffect:start()
+
+	ropeEffect = sm.effect.createEffect("ShapeRenderable")
+	ropeEffect:setParameter("uuid", sm.uuid.new("628b2d61-5ceb-43e9-8334-a4135566df7a"))
+	ropeEffect:setParameter("color", sm.color.new(1,1,1))
+	ropeEffect:start()
+
+	self.cl.effects.hooks[params.id] = {pos = params.pos, dir = params.dir, hook = hookEffect, rope = ropeEffect, player = params.player}
+end
+
+
 function Rod.cl_onPrimaryUse( self, state )
-	
-	if self:cl_should_stop_fishing() then
-		return
-	end
-
-	--local shouldReturn = self:cl_cancel( state )
-	--if shouldReturn then return end
-
-	if state == 3 then
-		--if self.throwForce < minThrowForce then
-			--self.throwForce = minThrowForce
-		--end
-
-		--self.isThrowing = true
-		--self.hookPos = self:calculateFirePosition() + self.lookDir / 2
-		--self.hookDir = self.lookDir
-		--self.network:sendToServer("sv_manageTrigger", {pos = self.hookPos, state = "create"})
-		sm.audio.play( "Sledgehammer - Swing" )
-	else
-		self:cl_cancel()
-	end
+	print("ON PRIMARY USE")
 end
 
 function Rod.client_onEquippedUpdate( self, primaryState, secondaryState)
+	--print(self.isThrowing)
 	if self.chargeTime > 0 and not self.isThrowing then
 		sm.gui.setProgressFraction(self.chargeTime/chargeUpTime)
 	end
 	self.primaryState = primaryState
 
 	if primaryState ~= self.prevPrimaryState then
-		self:cl_reset()
+		if primaryState ~= 3 and not self.useCD.active then
+			self:cl_reset()
+			print("RESET")
+		end
 		self.prevPrimaryState = primaryState
+	end
+
+	if primaryState == 3 then
+		self.isThrowing = true
+		self.useCD.active = true
+
+		local lookDir = sm.localPlayer.getDirection()
+		local hookPos = self:calculateFirePosition(sm.localPlayer.getPlayer()) + lookDir / 2
+		local hookDir = lookDir * math.max(self.chargeTime/chargeUpTime * maxThrowForce, minThrowForce)
+
+		self.network:sendToServer("sv_create_hook", {pos = hookPos, dir = hookDir, bait = self.bait})
+		sm.audio.play( "Sledgehammer - Swing" )
 	end
 
 	return true, true
@@ -88,15 +135,30 @@ function Rod.client_onUpdate( self, dt )
 	end
 
 	self:client_updateAnimations(dt)
+
+	--self.cl.effects.hooks[params.id] = {pos = params.pos, dir = params.dir, hook = hookEffect, rope = ropeEffect, player = params.player}
+	for id, effect in ipairs(self.cl.effects.hooks) do
+		effect.pos = effect.pos + effect.dir*dt
+
+		local delta = self:calculateFirePosition(effect.player) - effect.pos
+		local rot = sm.vec3.getRotation(sm.vec3.new(0, 0, 1), delta)
+		local scale = sm.vec3.new(0.01, 0.01, delta:length())
+
+		effect.hook:setPosition(effect.pos)
+		effect.hook:setRotation(rot)
+
+		effect.rope:setPosition(effect.pos + delta * 0.5)
+		effect.rope:setScale(scale)
+		effect.rope:setRotation(rot)
+	end
 end
 
 function Rod:client_onFixedUpdate( dt )
 end
 
 function Rod:cl_cancel()
-	--if self.catchTimer > 0 and self.isFishing then
-	--elseif self.isFishing then
-	--end
+	--check if catch here
+	print("cancel")
 
 	if self.isFishing or self.isThrowing then
 		self.useCD.active = true
@@ -112,19 +174,40 @@ function Rod:cl_reset()
 	self.isFishing = false
 end
 
+function Rod.calculateFirePosition( self, player )
+	local character = player:getCharacter()
+
+	local dir = character:getDirection()
+	local pitch = math.asin( dir.z )
+	local right = sm.vec3.cross(dir, sm.vec3.new(0,0,1))
+	right = right:normalize()
+
+	local fireOffset = sm.vec3.new( 1.0, 0.0, 0.75 )
+
+	fireOffset = dir
+	fireOffset.z = 0.0
+	fireOffset = fireOffset:normalize()*1.2
+	fireOffset.z = fireOffset.z + 1
+
+	fireOffset = fireOffset + right * 0.25
+	fireOffset = fireOffset:rotate( math.rad( pitch ), right )
+
+	local firePosition = character:getWorldPosition() + fireOffset
+	return firePosition
+end
+
 function Rod.client_onUnequip( self, animate )
 	self:cl_reset()
 
 	self:client_UnequipAnimation(animate)
 end
 
-
 function Rod.client_onRefresh( self )
 	self:client_onCreate()
 
 	self:loadAnimations()
 end
-
+--CLIENT END
 
 
 
