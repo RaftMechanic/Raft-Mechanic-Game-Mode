@@ -41,6 +41,7 @@ obj_harpoon = sm.uuid.new("4a971f7d-14e6-454d-bce8-0879243c4857")
 obj_fish_au_chocolate = sm.uuid.new("7c440c4a-5919-4baa-a946-0bb89b8c4d5e")
 obj_wocsteak_raw = sm.uuid.new("74a3f240-65b2-4f52-9555-666217366a0a")
 obj_wocsteak_grilld = sm.uuid.new("74a3f240-65b2-4f52-9555-666217366a0e")
+obj_potato = sm.uuid.new("2bff990a-0e74-43c7-b7dc-889b3a086fa3")
 
 --interactive.shapeset
 obj_torch = sm.uuid.new("ce986935-5b57-4249-acbb-04ef6666bb03")

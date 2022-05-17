@@ -1,0 +1,17 @@
+{
+   "lodList" : [
+      {
+         "mesh" : "$CONTENT_DATA/Characters/Char_Tools/Char_eattool/char_eattool_potat.dae",
+         "subMeshList" : [
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$GAME_DATA/Projectiles/Textures/obj_plants_potato_dif.TGA",
+                  "$GAME_DATA/Projectiles/Textures/obj_plants_potato_asg.TGA",
+                  "$GAME_DATA/Projectiles/Textures/obj_plants_potato_nor.TGA"
+               ]
+            }
+         ]
+      }
+   ]
+}
