@@ -187,6 +187,8 @@ function SurvivalGame.bindChatCommands( self )
 	local addCheats = g_survivalDev
 
 	if addCheats then
+		sm.game.bindChatCommand("/togglehelpmessages", {}, "cl_onChatCommand", "Toggle help messages") --Raft
+
 		sm.game.bindChatCommand( "/ammo", { { "int", "quantity", true } }, "cl_onChatCommand", "Give ammo (default 50)" )
 		sm.game.bindChatCommand( "/spudgun", {}, "cl_onChatCommand", "Give the spudgun" )
 		sm.game.bindChatCommand( "/gatling", {}, "cl_onChatCommand", "Give the potato gatling gun" )
