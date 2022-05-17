@@ -157,7 +157,7 @@ function Chest:client_canInteract()
 end
 
 function Chest.client_onDestroy( self )
-	if self.cl.containerGui ~= nil then
+	if self.cl.containerGui ~= nil and sm.exists(self.cl.containerGui) then
 		self.cl.containerGui:close()
 		self.cl.containerGui:destroy()
 	end
