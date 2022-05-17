@@ -42,6 +42,7 @@ function SurvivalGame.server_onCreate( self )
 	if self.sv.saved == nil then
 		self.sv.saved = {}
 		self.sv.saved.data = self.data
+		self.sv.saved.showHelpMessages = true --Raft
 		printf( "Seed: %.0f", self.sv.saved.data.seed )
 		self.sv.saved.overworld = sm.world.createWorld( "$CONTENT_DATA/Scripts/game/worlds/Overworld.lua", "Overworld", { dev = self.sv.saved.data.dev }, self.sv.saved.data.seed )
 		self.storage:save( self.sv.saved )
@@ -291,6 +292,10 @@ function SurvivalGame.loadCraftingRecipes( self )
 end
 
 function SurvivalGame.server_onFixedUpdate( self, timeStep )
+	if self.sv.saved.showHelpMessages and sm.game.getCurrentTick() % (40*60*10) == 0 then
+		self.network:sendToClients("client_showMessage", "Feeling stuck? The logbook can help you out.")
+	end
+
 	-- Update time
 
 	local prevTime = self.sv.time.timeOfDay
@@ -774,6 +779,15 @@ function SurvivalGame.sv_importCreation( self, params )
 end
 
 function SurvivalGame.sv_onChatCommand( self, params, player )
+	--Raft 
+	if params[1] == "/togglehelpmessages" then
+		self.sv.saved.showHelpMessages = not self.sv.saved.showHelpMessages
+
+		self.network:sendToClients( "client_showMessage", "You have toggled help messages: " .. ( self.sv.saved.showHelpMessages and "On" or "Off" ) )
+
+		self.storage:save( self.sv.saved ) -- force save to disk
+	end
+
 	if params[1] == "/tumble" then
 		if params[2] ~= nil then
 			player.character:setTumbling( params[2] )
