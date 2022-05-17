@@ -44,6 +44,14 @@
                            "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
                            "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
                         ]
+                     },
+                     "water" : {
+                        "material" : "Glass",
+                        "textureList" : [
+                           "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_dif.tga",
+                           "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
+                           "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
+                        ]
                      }
                   }
                }
