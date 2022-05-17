@@ -14,7 +14,6 @@ local EdibleReach = 0.75
 local CardboardPerGoop = 15
 
 function GlobUnit.server_onCreate( self )
-
 	self.saved = self.storage:load()
 	if self.saved == nil then
 		self.saved = {}
@@ -83,7 +82,8 @@ function GlobUnit.server_onCreate( self )
 
 
 	--Raft
-	if math.random() < 0.5 then
+	--if glowbug is placed down by player, dont even consider spawning a shark
+	if self.params ~= nil and math.random() < 0.5 then
 		local pos = self.unit.character:getWorldPosition()
 		local dif = sm.vec3.new( -2336, -2592, 16 ) - pos
 		local safeDistance = 64*4
