@@ -78,22 +78,18 @@ function Chest.server_onCreate( self )
 	self.storage:save( self.sv.saved )
 end
 
-function Chest.client_onDestroy( self )
-	if self.cl.containerGui then
-		if sm.exists( self.cl.containerGui ) then
-			self.cl.containerGui:close()
-			self.cl.containerGui:destroy()
-		end
-	end
-end
-
 function Chest.server_onFixedUpdate( self )
-    --[[for v, shape in pairs(self.sv.saved.shapesToSink) do
-        sm.shape.destroyShape(shape, 0)
-    end]]
+    if self.sv.container == nil then return end
 
     local currenTick = sm.game.getServerTick()
-    if self.sv.container == nil or self.sv.saved.sinkStartTick == nil or currenTick < self.sv.saved.sinkStartTick + sinkStartDelay then return
+
+    if self.sv.saved.sink == nil and sm.container.isEmpty( self.sv.container ) and self.sv.saved.sinkStartTick == nil then
+        self.sv.saved.sinkStartTick = currenTick
+        self.sv.saved.shapesToSink = self.shape:getBody():getCreationShapes()
+        self.storage:save( self.sv.saved )
+    end
+
+    if self.sv.saved.sinkStartTick == nil or currenTick < self.sv.saved.sinkStartTick + sinkStartDelay then return
     elseif currenTick == self.sv.saved.sinkStartTick + sinkStartDelay then self.sv.saved.sink = currenTick end
 
     local down = sm.vec3.new(0,0,-1)
@@ -101,7 +97,7 @@ function Chest.server_onFixedUpdate( self )
     for v, shape in pairs(self.sv.saved.shapesToSink) do
         if sm.exists(shape) then
             local body = shape:getBody()
-            sm.physics.applyImpulse(body, down*force*body:getMass() / 12, true)
+            sm.physics.applyImpulse(body, down*force*body:getMass() / 25, true)
         end
     end
 
@@ -109,10 +105,6 @@ function Chest.server_onFixedUpdate( self )
         self.sv.saved.dissolve = currenTick
         self.sv.saved.dissolveStartTick = currenTick
         self.storage:save( self.sv.saved )
-
-        --[[for _, shape in pairs(self.shape:getBody():getCreationShapes()) do
-            sm.shape.destroyShape(shape, 0)
-        end]]
     end
 
     if self.sv.saved.dissolve == nil or currenTick < self.sv.saved.dissolveStartTick + dissolvaStartDelay then return end
@@ -138,15 +130,6 @@ function Chest.server_onFixedUpdate( self )
     end
 end
 
-function Chest:sv_setSink( sink )
-    if self.sv.saved.sink == nil and sm.container.isEmpty( self.sv.container ) then
-        --self.sv.saved.sink = sink
-        self.sv.saved.sinkStartTick = sink
-        self.sv.saved.shapesToSink = self.shape:getBody():getCreationShapes()
-        self.storage:save( self.sv.saved )
-    end
-end
-
 function Chest.client_onCreate( self )
 	if self.cl == nil then
 		self.cl = {}
@@ -166,11 +149,16 @@ function Chest.client_onInteract( self, character, state )
 			self.cl.containerGui:setContainer( "LowerGrid", sm.localPlayer.getInventory() )
 			self.cl.containerGui:open()
 		end
-    else
-        self.network:sendToServer("sv_setSink", sm.game.getCurrentTick())
 	end
 end
 
-function Chest.client_canInteract( self )
-	return true
+function Chest:client_canInteract()
+    return true
+end
+
+function Chest.client_onDestroy( self )
+	if self.cl.containerGui ~= nil then
+		self.cl.containerGui:close()
+		self.cl.containerGui:destroy()
+	end
 end
