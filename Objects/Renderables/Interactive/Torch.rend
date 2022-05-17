@@ -6,7 +6,7 @@
             {
                "material" : "DifAsgNor",
                "textureList" : [
-                  "$SURVIVAL_DATA/Character/Char_Farmbot/char_farmbot_dif.tga",
+                  "$CONTENT_DATA/Objects/Textures/Interactables/Torch/torch_leg_oilsoaked.tga",
                   "$SURVIVAL_DATA/Character/Char_Farmbot/char_farmbot_asg.tga",
                   "$SURVIVAL_DATA/Character/Char_Farmbot/char_farmbot_nor.tga"
                ]
@@ -14,7 +14,7 @@
             {
                "material" : "DifAsgNor",
                "textureList" : [
-                  "$SURVIVAL_DATA/Objects/Textures/consumable/Obj_consumable_cotton_dif.tga",
+                  "$CONTENT_DATA/Objects/Textures/Interactables/Torch/torch_cotton_oilsoaked.tga",
                   "$SURVIVAL_DATA/Objects/Textures/consumable/Obj_consumable_cotton_asg.tga",
                   "$SURVIVAL_DATA/Objects/Textures/consumable/Obj_consumable_cotton_nor.tga"
                ]
