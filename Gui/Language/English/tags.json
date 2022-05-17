@@ -10,7 +10,6 @@
     "FarmerBallThanks": "Thanks, it's the first time I'm seeing sunlight in years! I can't wait to see crazy Bob again!",
 
     "HarpoonPickup": "Picked up Harpoon",
-    "Fished": "Fished item:",
     "LogbookAdd": "Add to logbook",
 
     "CreationRotator_Title": "Creation Rotator",
@@ -50,5 +49,8 @@
     "Trader_dialogue3": "Perfect! Soon it will be min- eh, we will be able to leave this planet. *stares at notes* Ah... YES.. I KNEW IT! Muhahahahaa- Oh, sorry I'm not used to company, at least since the acciden- Anyway, you'll need to bring me 2 more crates each of blueberries and bananas. I've marked a nearby packing station for you.",
     "Trader_dialogue4": "*Slurps* AH, just what I needed! It's been so long without you sunshake... Where are my manners? Why not get yourself some sunshake too? I can make as much as you need, as long as you bring me fresh supplies. Eh, of course this was necessary.. because.. the.. ah.. sunshake contains, ah, coordinates to some ruins. Since my life is saved by sunshake now, you might as well try to free the rest of my crew. I heard rumors about some key hidden in that ruined city. If I could get my hands on such a device, we might be able to start a rescue mission.",
     "Trader_dialogue5": "I can't believe you are aliv- ah, so adventurous! Let me have a look at this key. AH.. YES.. Such a simple circuit… I should be able to recreate its circuitry easily with the right tools. But with this key, you should be able to enter the warehouses where the rest of my crew is held hostage for using the bathrooms instead of.. Just don’t ask why there are so many water bottles in the ocean.. Anyway, reach the top of a warehouse and rescue one of them! Then come over to me and big ol' Bertha will take care of them.",
-    "Trader_dialogue6": "I've missed company for so long *sobs*. Keep rescuing more of my crew! In the meantime I'll think of a plan to get us all off this planet and return home…"
+    "Trader_dialogue6": "I've missed company for so long *sobs*. Keep rescuing more of my crew! In the meantime I'll think of a plan to get us all off this planet and return home…",
+    
+    "FishingBait": "Bait: ",
+    "None": "None"
 }

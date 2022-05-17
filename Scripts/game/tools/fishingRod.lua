@@ -3,6 +3,7 @@ dofile "$SURVIVAL_DATA/Scripts/util.lua"
 dofile "$SURVIVAL_DATA/Scripts/game/survival_shapes.lua"
 dofile "$SURVIVAL_DATA/Scripts/game/survival_loot.lua"
 dofile "$CONTENT_DATA/Scripts/game/raft_items.lua"
+dofile("$CONTENT_DATA/Scripts/game/managers/LanguageManager.lua")
 
 Rod = class()
 
@@ -20,25 +21,34 @@ local minThrowForce = 0.25
 local chargeUpTime = 2
 local hookSize = sm.vec3.one()*0.1
 
+local baits = {
+	obj_hook_render,
+	obj_consumable_sunshake,
+	obj_fish,
+	obj_consumable_longsandwich
+}
+
 --SERVER Start
 function Rod.server_onCreate( self )
 	self.sv = {}
 	self.sv.effects = {}
 	self.sv.effects.hooks = {}
 
-	self.hookIDs = 1
+	self.hookIDs = 2
 end
 
 function Rod.sv_create_hook( self, params, player )
 	local trigger = sm.areaTrigger.createBox(hookSize, params.pos)
 	local bait = params.bait
-	if not bait then
-		bait = sm.uuid.new("4a971f7d-14e6-454d-bce8-0879243c7642") --SUS
-	end
 
-	self.sv.effects.hooks[#self.sv.effects.hooks + 1] = {pos = params.pos, dir = params.dir, trigger = hookSize, id = self.hookIDs}
+	self.sv.effects.hooks[self.hookIDs] = {pos = params.pos, dir = params.dir, trigger = hookSize, id = self.hookIDs}
 	self.network:sendToClients("cl_create_hook", {pos = params.pos, dir = params.dir, bait = bait, id = self.hookIDs, player = player})
 	self.hookIDs = self.hookIDs + 1
+end
+
+function Rod.sv_destroy_hook( self, id )
+	self.sv.effects.hooks[id] = nil
+	self.network:sendToClients("cl_destroy_hook", id)
 end
 
 function Rod.server_onRefresh( self )
@@ -51,7 +61,7 @@ end
 --CLIENT Start
 function Rod.client_onCreate( self )
 	self.chargeTime = 0
-	self.bait = nil
+	self.bait = 1
 
 	self.useCD = { active = false, timer = 1 }
 
@@ -75,36 +85,44 @@ function Rod.cl_create_hook( self, params )
 	self.cl.effects.hooks[params.id] = {pos = params.pos, dir = params.dir, hook = hookEffect, rope = ropeEffect, player = params.player}
 end
 
-
-function Rod.cl_onPrimaryUse( self, state )
-	print("ON PRIMARY USE")
+function Rod.cl_destroy_hook( self, id )
+	local effect = self.cl.effects.hooks[id]
+	if sm.exists(effect.hook) then
+		effect.hook:destroy()
+		effect.rope:destroy() 
+	end
+	self.cl.effects.hooks[id] = nil
 end
 
 function Rod.client_onEquippedUpdate( self, primaryState, secondaryState)
-	--print(self.isThrowing)
 	if self.chargeTime > 0 and not self.isThrowing then
 		sm.gui.setProgressFraction(self.chargeTime/chargeUpTime)
 	end
 	self.primaryState = primaryState
 
 	if primaryState ~= self.prevPrimaryState then
-		if primaryState ~= 3 and not self.useCD.active then
-			self:cl_reset()
-			print("RESET")
-		end
 		self.prevPrimaryState = primaryState
 	end
 
-	if primaryState == 3 then
-		self.isThrowing = true
-		self.useCD.active = true
+	if primaryState == 1 then
+		if self.isThrowing or self.isFishing then
+			self:cl_cancel()
+			self.returned = true
+		end
+	elseif primaryState == 3 then
+		if self.returned then
+			self.returned = false
+		elseif not self.isThrowing and not self.isFishing then
+			self.isThrowing = true
+			self.useCD = { active = true, timer = 1 }
 
-		local lookDir = sm.localPlayer.getDirection()
-		local hookPos = self:calculateFirePosition(sm.localPlayer.getPlayer()) + lookDir / 2
-		local hookDir = lookDir * math.max(self.chargeTime/chargeUpTime * maxThrowForce, minThrowForce)
+			local lookDir = sm.localPlayer.getDirection()
+			local hookPos = self:calculateFirePosition(sm.localPlayer.getPlayer()) + lookDir / 2
+			local hookDir = lookDir * math.max(self.chargeTime/chargeUpTime * maxThrowForce, minThrowForce)
 
-		self.network:sendToServer("sv_create_hook", {pos = hookPos, dir = hookDir, bait = self.bait})
-		sm.audio.play( "Sledgehammer - Swing" )
+			self.network:sendToServer("sv_create_hook", {pos = hookPos, dir = hookDir, bait = baits[self.bait]})
+			sm.audio.play( "Sledgehammer - Swing" )
+		end
 	end
 
 	return true, true
@@ -112,7 +130,7 @@ end
 
 function Rod:cl_should_stop_fishing()
 	local owner = self.tool:getOwner()
-	return self.useCD.active or owner.character:isSwimming() or owner.character:isDiving() or self.tool:isSprinting()
+	return owner.character:isSwimming() or owner.character:isDiving() or self.tool:isSprinting()
 end
 
 function Rod.client_onUpdate( self, dt )
@@ -123,46 +141,47 @@ function Rod.client_onUpdate( self, dt )
 		end
 	end
 
-	if self.tool:isEquipped() and self.primaryState == 1 or self.primaryState == 2 then
+	if self.tool:isEquipped() and not self.returned and (self.primaryState == 1 or self.primaryState == 2) then
 		self.chargeTime = math.min( self.chargeTime + dt, chargeUpTime)
 	end
 
 	if self:cl_should_stop_fishing() then
-		self.chargeTime = 0
-		if self.isFishing or self.isThrowing then
-			self:cl_cancel()
-		end
+		self:cl_cancel()
 	end
 
 	self:client_updateAnimations(dt)
 
 	--self.cl.effects.hooks[params.id] = {pos = params.pos, dir = params.dir, hook = hookEffect, rope = ropeEffect, player = params.player}
-	for id, effect in ipairs(self.cl.effects.hooks) do
-		effect.pos = effect.pos + effect.dir*dt
+	for id, effect in pairs(self.cl.effects.hooks) do
+		if sm.exists(effect.hook) then
+			effect.pos = effect.pos + effect.dir*dt
 
-		local delta = self:calculateFirePosition(effect.player) - effect.pos
-		local rot = sm.vec3.getRotation(sm.vec3.new(0, 0, 1), delta)
-		local scale = sm.vec3.new(0.01, 0.01, delta:length())
+			local delta = self:calculateFirePosition(effect.player) - effect.pos
+			local rot = sm.vec3.getRotation(sm.vec3.new(0, 0, 1), delta)
+			local scale = sm.vec3.new(0.01, 0.01, delta:length())
 
-		effect.hook:setPosition(effect.pos)
-		effect.hook:setRotation(rot)
+			effect.hook:setPosition(effect.pos)
+			effect.hook:setRotation(rot)
 
-		effect.rope:setPosition(effect.pos + delta * 0.5)
-		effect.rope:setScale(scale)
-		effect.rope:setRotation(rot)
-	end
-end
-
-function Rod:client_onFixedUpdate( dt )
+			effect.rope:setPosition(effect.pos + delta * 0.5)
+			effect.rope:setScale(scale)
+			effect.rope:setRotation(rot)
+		end
+	end 
 end
 
 function Rod:cl_cancel()
 	--check if catch here
-	print("cancel")
 
 	if self.isFishing or self.isThrowing then
 		self.useCD.active = true
 		sm.audio.play( "Sledgehammer - Swing" )
+
+		for id, effect in pairs(self.cl.effects.hooks) do
+			if effect.player == sm.localPlayer.getPlayer() then
+				self.network:sendToServer("sv_destroy_hook", id)
+			end
+		end
 	end
 
 	self:cl_reset()
@@ -172,6 +191,23 @@ function Rod:cl_reset()
 	self.chargeTime = 0
 	self.isThrowing = false
 	self.isFishing = false
+	self.primaryState = nil
+	self.returned = false
+end
+
+function Rod:client_onToggle()
+	for i=0, #baits-1 do
+		local index = (self.bait + i) % #baits + 1
+		if index == 1 then
+			self.bait = index
+		elseif sm.localPlayer.getInventory():canSpend(baits[index], 1 ) then
+			self.bait = index
+			sm.gui.displayAlertText(language_tag("FishingBait") .. sm.shape.getShapeTitle(baits[index]))
+			return true
+		end
+	end
+	sm.gui.displayAlertText(language_tag("FishingBait") .. language_tag("None"))
+	return true
 end
 
 function Rod.calculateFirePosition( self, player )
@@ -197,7 +233,7 @@ function Rod.calculateFirePosition( self, player )
 end
 
 function Rod.client_onUnequip( self, animate )
-	self:cl_reset()
+	self:cl_cancel()
 
 	self:client_UnequipAnimation(animate)
 end
