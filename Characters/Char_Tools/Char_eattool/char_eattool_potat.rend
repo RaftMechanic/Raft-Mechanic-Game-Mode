@@ -1,6 +1,7 @@
 {
    "lodList" : [
       {
+		 "color" : "696969",
          "mesh" : "$CONTENT_DATA/Characters/Char_Tools/Char_eattool/char_eattool_potat.dae",
          "subMeshList" : [
             {

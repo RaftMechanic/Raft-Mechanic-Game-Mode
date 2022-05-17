@@ -1,250 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
-  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2022-05-16T16:24:34Z</created><keywords></keywords><modified>2022-05-16T16:24:34Z</modified><revision></revision><subject></subject><title></title><unit meter="0.010000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
-  <library_images>
-    <image id="base_color_texture-image" name="base_color_texture"><init_from>file://C:\Users\The</init_from></image>
-  </library_images>
-  <library_materials>
-    <material id="phong1" name="phong1">
-      <instance_effect url="#phong1-fx"/>
-    </material>
-    <material id="lambert3" name="lambert3">
-      <instance_effect url="#lambert3-fx"/>
-    </material>
-  </library_materials>
-  <library_effects>
-    <effect id="phong1-fx" name="phong1">
-      <profile_COMMON>
-        <technique sid="standard">
-          <phong>
-            <emission>
-              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
-            </emission>
-            <ambient>
-              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
-            </ambient>
-            <diffuse>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-              <texture texture="base_color_texture-image" texcoord="CHANNEL0">
-                <extra>
-                  <technique profile="MAYA">
-                    <wrapU sid="wrapU0">TRUE</wrapU>
-                    <wrapV sid="wrapV0">TRUE</wrapV>
-                    <blend_mode>ADD</blend_mode>
-                  </technique>
-                </extra>
-              </texture>
-            </diffuse>
-            <specular>
-              <color sid="specular">0.400000  0.400000 0.400000 1.000000</color>
-            </specular>
-            <shininess>
-              <float sid="shininess">20.000000</float>
-            </shininess>
-            <reflective>
-              <color sid="reflective">0.800000  0.800000 0.800000 1.000000</color>
-            </reflective>
-            <reflectivity>
-              <float sid="reflectivity">0.500000</float>
-            </reflectivity>
-            <transparent opaque="RGB_ZERO">
-              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
-            </transparent>
-            <transparency>
-              <float sid="transparency">0.000000</float>
-            </transparency>
-          </phong>
-        </technique>
-      </profile_COMMON>
-    </effect>
-    <effect id="lambert3-fx" name="lambert3">
-      <profile_COMMON>
-        <technique sid="standard">
-          <phong>
-            <emission>
-              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
-            </emission>
-            <ambient>
-              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
-            </ambient>
-            <diffuse>
-              <color sid="diffuse">0.800000  0.800000 0.800000 1.000000</color>
-            </diffuse>
-            <specular>
-              <color sid="specular">0.400000  0.400000 0.400000 1.000000</color>
-            </specular>
-            <shininess>
-              <float sid="shininess">25.000000</float>
-            </shininess>
-            <reflective>
-              <color sid="reflective">0.800000  0.800000 0.800000 1.000000</color>
-            </reflective>
-            <reflectivity>
-              <float sid="reflectivity">0.000000</float>
-            </reflectivity>
-            <transparent opaque="RGB_ZERO">
-              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
-            </transparent>
-            <transparency>
-              <float sid="transparency">0.000000</float>
-            </transparency>
-          </phong>
-        </technique>
-      </profile_COMMON>
-    </effect>
-  </library_effects>
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2022-05-17T11:23:53Z</created><keywords></keywords><modified>2022-05-17T11:23:53Z</modified><revision></revision><subject></subject><title></title><unit meter="0.010000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
   <library_geometries>
     <geometry id="char_eattool_sunshake-lib" name="char_eattool_sunshakeMesh">
       <mesh>
@@ -955,8 +711,7 @@
         <vertices id="char_eattool_sunshake-VERTEX">
           <input semantic="POSITION" source="#char_eattool_sunshake-POSITION"/>
         </vertices>
-        <triangles count="18" material="phong1"><input semantic="VERTEX" offset="0" source="#char_eattool_sunshake-VERTEX"/><input semantic="NORMAL" offset="1" source="#char_eattool_sunshake-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#char_eattool_sunshake-UV0"/><p> 0 0 4 1 1 114 7 2 117 0 3 4 7 4 117 6 5 80 7 6 117 2 7 27 8 8 31 2 9 27 7 10 117 1 11 114 8 12 31 2 13 27 9 14 97 2 15 27 3 16 64 9 17 97 4 18 8 9 19 97 3 20 64 9 21 97 4 22 8 10 23 29 5 24 25 10 25 29 4 26 8 10 27 29 5 28 25 11 29 34 6 30 80 5 31 25 0 32 4 5 33 25 6 34 80 11 35 34 6 36 80 7 37 117 12 38 113 7 39 117 8 40 31 12 41 113 8 42 31 9 43 97 12 44 113 9 45 97 10 46 29 12 47 113 10 48 29 11 49 34 12 50 113 11 51 34 6 52 80 12 53 113</p></triangles>
-        <triangles count="131" material="lambert3"><input semantic="VERTEX" offset="0" source="#char_eattool_sunshake-VERTEX"/><input semantic="NORMAL" offset="1" source="#char_eattool_sunshake-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#char_eattool_sunshake-UV0"/><p> 13 54 60 14 55 86 15 56 65 14 57 86 16 58 63 17 59 85 17 60 19 18 61 57 19 62 94 20 63 82 18 64 57 21 65 88 21 66 88 13 67 60 22 68 15 13 69 60 15 70 65 22 71 15 22 72 15 23 73 62 24 74 116 15 75 65 23 76 62 22 77 15 25 78 43 26 79 36 27 80 81 28 81 83 29 82 38 25 83 43 28 84 44 30 85 58 31 86 12 32 87 40 30 88 58 33 89 45 32 90 40 34 91 52 35 92 110 34 93 52 36 94 99 35 95 110 24 96 116 36 97 99 37 98 1 24 99 116 23 100 62 38 101 7 23 102 62 26 103 36 38 104 7 29 105 38 39 106 77 26 107 36 29 108 38 31 109 0 40 110 105 36 111 99 38 112 7 41 113 16 26 114 36 41 115 16 38 116 7 13 117 60 18 118 57 42 119 109 40 120 105 43 121 74 39 122 77 44 123 102 40 124 105 31 125 0 30 126 58 44 127 106 31 128 12 45 129 20 30 130 58 35 131 110 46 132 3 35 133 110 36 134 99 41 135 16 46 136 3 36 137 99 39 138 77 47 139 33 41 140 16 48 141 61 49 142 21 43 143 74 48 144 61 44 145 102 50 146 103 44 147 106 51 148 39 50 149 10 52 150 48 45 151 20 51 152 39 45 153 20 53 154 11 51 155 39 45 156 20 46 157 3 53 158 11 46 159 3 47 160 33 53 161 11 47 162 33 49 163 21 53 164 11 49 165 21 50 166 103 54 167 42 50 168 10 51 169 39 54 170 69 51 171 39 53 172 11 54 173 71 53 174 11 49 175 21 54 176 76 15 177 65 25 178 43 27 179 81 42 180 49 16 181 63 13 182 60 14 183 86 28 184 83 25 185 43 28 186 44 19 187 94 33 188 45 42 189 91 18 190 57 16 191 73 20 192 82 34 193 52 32 194 40 37 195 1 22 196 15 24 197 116 18 198 57 20 199 82 19 200 94 33 201 45 20 202 82 32 203 40 34 204 52 21 205 88 37 206 1 55 207 104 56 208 37 57 209 51 56 210 37 58 211 35 57 212 51 58 213 35 59 214 111 57 215 51 59 216 111 55 217 104 57 218 51 60 219 2 61 220 23 62 221 32 61 222 23 63 223 59 62 224 32 63 225 59 64 226 87 62 227 32 64 228 87 60 229 2 62 230 32 65 231 75 66 232 115 67 233 14 66 234 115 68 235 5 67 236 14 68 237 5 69 238 78 67 239 14 69 240 78 65 241 75 67 242 14 70 243 54 71 244 93 72 245 107 71 246 93 73 247 17 72 248 107 73 249 17 74 250 72 72 251 107 74 252 72 75 253 112 72 254 107 75 255 112 70 256 54 72 257 107 76 258 50 77 259 100 78 260 101 79 261 96 78 262 101 77 263 100 79 264 96 80 265 30 81 266 26 80 267 30 82 268 13 81 269 26 83 270 6 84 271 68 82 272 13 85 273 89 82 274 13 84 275 68 85 276 89 86 277 67 87 278 92 86 279 67 78 280 101 87 281 92 78 282 101 81 283 26 88 284 90 81 285 26 82 286 13 88 287 90 82 288 13 87 289 92 88 290 90 87 291 92 78 292 101 88 293 90 89 294 56 90 295 24 91 296 55 90 297 24 92 298 70 91 299 55 93 300 9 94 301 47 92 302 70 94 303 47 95 304 46 92 305 70 96 306 98 92 307 70 95 308 46 96 309 98 97 310 108 91 311 55 97 312 108 89 313 56 91 314 55 98 315 53 99 316 95 100 317 84 101 318 66 100 319 84 99 320 95 101 321 66 102 322 41 103 323 18 102 324 41 104 325 28 103 326 18 104 327 28 105 328 79 103 329 18 106 330 22 103 331 18 105 332 79 106 333 22 98 334 53 100 335 84 13 336 60 16 337 63 14 338 86 17 339 19 16 340 73 18 341 57 21 342 88 18 343 57 13 344 60 15 345 65 27 346 81 23 347 62 25 348 43 29 349 38 26 350 36 28 351 83 31 352 0 29 353 38 28 354 44 33 355 45 30 356 58 32 357 40 35 358 110 30 359 58 34 360 52 37 361 1 36 362 99 24 363 116 38 364 7 36 365 99 23 366 62 27 367 81 26 368 36 29 369 38 40 370 105 39 371 77 26 372 36 39 373 77 41 374 16 40 375 105 48 376 61 43 377 74 44 378 102 48 379 61 40 380 105 30 381 58 52 382 48 44 383 106 45 384 20 52 385 48 30 386 58 46 387 3 45 388 20 35 389 110 41 390 16 47 391 33 46 392 3 39 393 77 43 394 74 47 395 33 48 396 61 50 397 103 49 398 21 44 399 106 52 400 48 51 401 39 47 402 33 43 403 74 49 404 21 15 405 65 14 406 86 25 407 43 14 408 86 17 409 85 28 410 83 28 411 44 17 412 19 19 413 94 20 414 82 21 415 88 34 416 52 37 417 1 21 418 88 22 419 15 33 420 45 19 421 94 20 422 82 79 423 96 81 424 26 78 425 101 80 426 30 83 427 6 82 428 13 85 429 89 87 430 92 82 431 13 86 432 67 76 433 50 78 434 101 90 435 24 93 436 9 92 437 70 96 438 98 91 439 55 92 440 70 101 441 66 103 442 18 100 443 84 106 444 22 100 445 84 103 446 18</p></triangles>
+        <triangles count="149"><input semantic="VERTEX" offset="0" source="#char_eattool_sunshake-VERTEX"/><input semantic="NORMAL" offset="1" source="#char_eattool_sunshake-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#char_eattool_sunshake-UV0"/><p> 0 0 4 1 1 114 7 2 117 0 3 4 7 4 117 6 5 80 7 6 117 2 7 27 8 8 31 2 9 27 7 10 117 1 11 114 8 12 31 2 13 27 9 14 97 2 15 27 3 16 64 9 17 97 4 18 8 9 19 97 3 20 64 9 21 97 4 22 8 10 23 29 5 24 25 10 25 29 4 26 8 10 27 29 5 28 25 11 29 34 6 30 80 5 31 25 0 32 4 5 33 25 6 34 80 11 35 34 6 36 80 7 37 117 12 38 113 7 39 117 8 40 31 12 41 113 8 42 31 9 43 97 12 44 113 9 45 97 10 46 29 12 47 113 10 48 29 11 49 34 12 50 113 11 51 34 6 52 80 12 53 113 13 54 60 14 55 86 15 56 65 14 57 86 16 58 63 17 59 85 17 60 19 18 61 57 19 62 94 20 63 82 18 64 57 21 65 88 21 66 88 13 67 60 22 68 15 13 69 60 15 70 65 22 71 15 22 72 15 23 73 62 24 74 116 15 75 65 23 76 62 22 77 15 25 78 43 26 79 36 27 80 81 28 81 83 29 82 38 25 83 43 28 84 44 30 85 58 31 86 12 32 87 40 30 88 58 33 89 45 32 90 40 34 91 52 35 92 110 34 93 52 36 94 99 35 95 110 24 96 116 36 97 99 37 98 1 24 99 116 23 100 62 38 101 7 23 102 62 26 103 36 38 104 7 29 105 38 39 106 77 26 107 36 29 108 38 31 109 0 40 110 105 36 111 99 38 112 7 41 113 16 26 114 36 41 115 16 38 116 7 13 117 60 18 118 57 42 119 109 40 120 105 43 121 74 39 122 77 44 123 102 40 124 105 31 125 0 30 126 58 44 127 106 31 128 12 45 129 20 30 130 58 35 131 110 46 132 3 35 133 110 36 134 99 41 135 16 46 136 3 36 137 99 39 138 77 47 139 33 41 140 16 48 141 61 49 142 21 43 143 74 48 144 61 44 145 102 50 146 103 44 147 106 51 148 39 50 149 10 52 150 48 45 151 20 51 152 39 45 153 20 53 154 11 51 155 39 45 156 20 46 157 3 53 158 11 46 159 3 47 160 33 53 161 11 47 162 33 49 163 21 53 164 11 49 165 21 50 166 103 54 167 42 50 168 10 51 169 39 54 170 69 51 171 39 53 172 11 54 173 71 53 174 11 49 175 21 54 176 76 15 177 65 25 178 43 27 179 81 42 180 49 16 181 63 13 182 60 14 183 86 28 184 83 25 185 43 28 186 44 19 187 94 33 188 45 42 189 91 18 190 57 16 191 73 20 192 82 34 193 52 32 194 40 37 195 1 22 196 15 24 197 116 18 198 57 20 199 82 19 200 94 33 201 45 20 202 82 32 203 40 34 204 52 21 205 88 37 206 1 55 207 104 56 208 37 57 209 51 56 210 37 58 211 35 57 212 51 58 213 35 59 214 111 57 215 51 59 216 111 55 217 104 57 218 51 60 219 2 61 220 23 62 221 32 61 222 23 63 223 59 62 224 32 63 225 59 64 226 87 62 227 32 64 228 87 60 229 2 62 230 32 65 231 75 66 232 115 67 233 14 66 234 115 68 235 5 67 236 14 68 237 5 69 238 78 67 239 14 69 240 78 65 241 75 67 242 14 70 243 54 71 244 93 72 245 107 71 246 93 73 247 17 72 248 107 73 249 17 74 250 72 72 251 107 74 252 72 75 253 112 72 254 107 75 255 112 70 256 54 72 257 107 76 258 50 77 259 100 78 260 101 79 261 96 78 262 101 77 263 100 79 264 96 80 265 30 81 266 26 80 267 30 82 268 13 81 269 26 83 270 6 84 271 68 82 272 13 85 273 89 82 274 13 84 275 68 85 276 89 86 277 67 87 278 92 86 279 67 78 280 101 87 281 92 78 282 101 81 283 26 88 284 90 81 285 26 82 286 13 88 287 90 82 288 13 87 289 92 88 290 90 87 291 92 78 292 101 88 293 90 89 294 56 90 295 24 91 296 55 90 297 24 92 298 70 91 299 55 93 300 9 94 301 47 92 302 70 94 303 47 95 304 46 92 305 70 96 306 98 92 307 70 95 308 46 96 309 98 97 310 108 91 311 55 97 312 108 89 313 56 91 314 55 98 315 53 99 316 95 100 317 84 101 318 66 100 319 84 99 320 95 101 321 66 102 322 41 103 323 18 102 324 41 104 325 28 103 326 18 104 327 28 105 328 79 103 329 18 106 330 22 103 331 18 105 332 79 106 333 22 98 334 53 100 335 84 13 336 60 16 337 63 14 338 86 17 339 19 16 340 73 18 341 57 21 342 88 18 343 57 13 344 60 15 345 65 27 346 81 23 347 62 25 348 43 29 349 38 26 350 36 28 351 83 31 352 0 29 353 38 28 354 44 33 355 45 30 356 58 32 357 40 35 358 110 30 359 58 34 360 52 37 361 1 36 362 99 24 363 116 38 364 7 36 365 99 23 366 62 27 367 81 26 368 36 29 369 38 40 370 105 39 371 77 26 372 36 39 373 77 41 374 16 40 375 105 48 376 61 43 377 74 44 378 102 48 379 61 40 380 105 30 381 58 52 382 48 44 383 106 45 384 20 52 385 48 30 386 58 46 387 3 45 388 20 35 389 110 41 390 16 47 391 33 46 392 3 39 393 77 43 394 74 47 395 33 48 396 61 50 397 103 49 398 21 44 399 106 52 400 48 51 401 39 47 402 33 43 403 74 49 404 21 15 405 65 14 406 86 25 407 43 14 408 86 17 409 85 28 410 83 28 411 44 17 412 19 19 413 94 20 414 82 21 415 88 34 416 52 37 417 1 21 418 88 22 419 15 33 420 45 19 421 94 20 422 82 79 423 96 81 424 26 78 425 101 80 426 30 83 427 6 82 428 13 85 429 89 87 430 92 82 431 13 86 432 67 76 433 50 78 434 101 90 435 24 93 436 9 92 437 70 96 438 98 91 439 55 92 440 70 101 441 66 103 442 18 100 443 84 106 444 22 100 445 84 103 446 18</p></triangles>
       </mesh>
     </geometry>
   </library_geometries>
@@ -966,22 +721,23 @@
         <bind_shape_matrix>0.719340 0.000000 -0.694658 0.000000 -0.000000 1.000000 -0.000000 0.000000 0.694658 0.000000 0.719340 0.000000 0.000000 0.000000 0.000000 1.000000
 </bind_shape_matrix>
         <source id="char_eattool_sunshakeController-Joints">
-          <Name_array id="char_eattool_sunshakeController-Joints-array" count="3">
- jnt_right_weapon root_item root_item_end</Name_array>
+          <Name_array id="char_eattool_sunshakeController-Joints-array" count="4">
+ jnt_right_weapon root_item root_item_end root_item_end_end</Name_array>
           <technique_common>
-            <accessor source="#char_eattool_sunshakeController-Joints-array" count="3">
+            <accessor source="#char_eattool_sunshakeController-Joints-array" count="4">
               <param type="name"/>
             </accessor>
           </technique_common>
         </source>
         <source id="char_eattool_sunshakeController-Matrices">
-          <float_array id="char_eattool_sunshakeController-Matrices-array" count="48">
+          <float_array id="char_eattool_sunshakeController-Matrices-array" count="64">
 
 1.000000 0.000000 0.000000 -0.000000 -0.000000 1.000000 0.000000 -0.000000 0.000000 -0.000000 1.000000 -0.000000 0.000000 0.000000 0.000000 1.000000
 1.000000 0.000000 0.000000 -0.000000 -0.000000 1.000000 0.000000 -0.000000 0.000000 -0.000000 1.000000 -0.000000 0.000000 0.000000 0.000000 1.000000
-1.000000 0.000000 0.000000 -0.000000 -0.000000 1.000000 0.000000 -0.010000 0.000000 -0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</float_array>
+1.000000 0.000000 0.000000 -0.000000 -0.000000 1.000000 0.000000 -0.010000 0.000000 -0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000
+1.000000 0.000000 0.000000 -0.000000 -0.000000 1.000000 0.000000 -0.020000 0.000000 -0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</float_array>
           <technique_common>
-            <accessor source="#char_eattool_sunshakeController-Matrices-array" count="3" stride="16">
+            <accessor source="#char_eattool_sunshakeController-Matrices-array" count="4" stride="16">
               <param type="float4x4"/>
             </accessor>
           </technique_common>
@@ -1017,9 +773,9 @@
   </library_controllers>
   <library_visual_scenes>
     <visual_scene id="Scene" name="Scene">
-      <node name="Armature" id="Armature" sid="Armature"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="jnt_right_weapon" id="jnt_right_weapon" sid="jnt_right_weapon" type="JOINT"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="root_item" id="root_item" sid="root_item" type="JOINT"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 -0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="root_item_end" id="root_item_end" sid="root_item_end" type="JOINT"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.010000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="root_item_end_end" id="root_item_end_end" sid="root_item_end_end" type="JOINT"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.000000 0.010000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node></node></node></node></node>
-      <node name="char_eattool_sunshake" id="char_eattool_sunshake" sid="char_eattool_sunshake"><instance_controller url="#char_eattool_sunshakeController"><bind_material><technique_common><instance_material symbol="phong1" target="#phong1"/><instance_material symbol="lambert3" target="#lambert3"/></technique_common></bind_material></instance_controller><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
-      <extra><technique profile="MAX3D"><frame_rate>30.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.000000</start_time><end_time>1.000000</end_time></technique></extra>
+      <node name="Armature" id="Armature" sid="Armature"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="jnt_right_weapon" id="jnt_right_weapon" sid="jnt_right_weapon" type="JOINT"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="root_item" id="root_item" sid="root_item" type="JOINT"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 -0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="root_item_end" id="root_item_end" sid="root_item_end" type="JOINT"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.010000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="root_item_end_end" id="root_item_end_end" sid="root_item_end_end" type="JOINT"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.000000 0.010000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="root_item_end_end_end" id="root_item_end_end_end" sid="root_item_end_end_end" type="JOINT"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.010000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node></node></node></node></node></node>
+      <node name="char_eattool_sunshake" id="char_eattool_sunshake" sid="char_eattool_sunshake"><instance_controller url="#char_eattool_sunshakeController"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <extra><technique profile="MAX3D"><frame_rate>25.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.000000</start_time><end_time>1.000000</end_time></technique></extra>
     </visual_scene>
   </library_visual_scenes>
   <scene>

@@ -95,7 +95,7 @@ local FoodUuidToRenderable =
 	[tostring( obj_fish_au_chocolate )] = FisheauchocolatRenderables,
 	[tostring( obj_wocsteak_raw )] = WocSteakRawRenderables,
 	[tostring( obj_wocsteak_grilld )] = WocSteakGrilldRenderables,
-	[tostring( obj_potato )] = PotatRenderables
+	[tostring( obj_potat )] = PotatRenderables
 }
 local Drinks = { obj_consumable_sunshake, obj_consumable_milk, obj_water_clean } --Raft
 

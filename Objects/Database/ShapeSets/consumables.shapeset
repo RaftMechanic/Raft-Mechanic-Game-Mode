@@ -339,7 +339,7 @@
          },
          "flammable" : true,
          "itemStack" : {},
-         "name" : "obj_potato",
+         "name" : "obj_potat",
          "physicsMaterial" : "Fruit",
          "ratings" : {
             "buoyancy" : 7,
