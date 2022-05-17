@@ -1599,7 +1599,7 @@
          "ratings" : {
             "buoyancy" : 10,
             "density" : 1,
-            "durability" : 7,
+            "durability" : 4,
             "friction" : 10
          },
          "renderable" : {

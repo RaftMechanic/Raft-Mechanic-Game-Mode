@@ -880,8 +880,8 @@ function SurvivalGame.server_onPlayerJoined( self, player, newPlayer )
 
 		--Raft
 		if player.id == 1 then
-			sm.gui.chatMessage("#ff0000Thanks for playing the Raft Mechanic Mod! Check out the logbook to get started!")
-			sm.creation.importFromFile( self.sv.saved.overworld, "$CONTENT_DATA/LocalBlueprints/RAFT.blueprint", spawnPoint )
+			sm.gui.chatMessage("#009999Thanks for playing the Raft Mechanic Mod! Check out the logbook to get started!")
+			sm.creation.importFromFile( self.sv.saved.overworld, "$CONTENT_DATA/LocalBlueprints/RAFT.blueprint", START_AREA_SPAWN_POINT )
 		end
 	else
 		local inventory = player:getInventory()

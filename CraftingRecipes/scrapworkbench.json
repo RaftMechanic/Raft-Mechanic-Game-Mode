@@ -317,6 +317,26 @@
 			}
 		]
 	},
+	//CollectionNet
+	{
+		"itemId": "f2382297-44b4-4259-99ce-b11da671ac51",
+		"quantity": 1,
+		"craftTime": 22,
+		"ingredientList": [
+			{
+				"quantity": 10,
+				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+			},
+			{
+				"quantity": 10,
+				"itemId": "628b2d61-5ceb-43e9-8334-a4135566df7a"
+			},
+			{
+				"quantity": 2,
+				"itemId": "3440440b-d362-4473-aa03-b7c41e1fe7ad"
+			}
+		]
+	},
 	//ScrapFarm
 	{
 		"itemId": "8e75cddb-040e-4813-8dd6-7e72f3288a91",
