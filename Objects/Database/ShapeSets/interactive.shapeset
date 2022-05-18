@@ -319,9 +319,9 @@
       },
       {
          "box" : {
-            "x" : 7,
+            "x" : 4,
             "y" : 6,
-            "z" : 9
+            "z" : 8
          },
          "color" : "0b9ade",
          "flammable" : false,
@@ -338,14 +338,6 @@
                {
                   "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/WaterPurifier.fbx",
                   "subMeshMap" : {
-                     "Shack_Atlas" : {
-                        "material" : "DifAsgNor",
-                        "textureList" : [
-                           "$CONTENT_DATA/Objects/Textures/Interactables/apiary_purifier_shack_dif.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_asg.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_nor.tga"
-                        ]
-                     },
                      "bucket_mat" : {
                         "color" : "0b9ade",
                         "material" : "DifAsgNor",
