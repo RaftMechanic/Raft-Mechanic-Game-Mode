@@ -79,6 +79,8 @@ function SurvivalGame.server_onCreate( self )
 	g_unitManager = UnitManager()
 	g_unitManager:sv_onCreate( self.sv.saved.overworld )
 
+	g_windManager = WindManager()
+
 	self.sv.questEntityManager = sm.scriptableObject.createScriptableObject( sm.uuid.new( "c6988ecb-0fc1-4d45-afde-dc583b8b75ee" ) )
 
 	self.sv.questManager = sm.storage.load( STORAGE_CHANNEL_QUESTMANAGER )
@@ -170,6 +172,11 @@ function SurvivalGame.client_onCreate( self )
 
 	g_effectManager = EffectManager()
 	g_effectManager:cl_onCreate()
+
+	if g_windManager == nil then
+		assert(not sm.isHost)
+		g_windManager = WindManager()
+	end
 
 	-- Music effect
 	g_survivalMusic = sm.effect.createEffect( "SurvivalMusic" )

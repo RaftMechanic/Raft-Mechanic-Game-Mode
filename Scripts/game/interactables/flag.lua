@@ -15,14 +15,9 @@ end
 function Flag.client_onUpdate( self, dt )
     if not self.effect:isPlaying() then self.effect:start() end
 
-    local point = sm.vec3.new(0, 0, 0)
-
-    --Quest helper
-    if not g_questManager.Cl_IsQuestComplete(quest_radio_location) then
-        point = sm.vec3.new(-1820.5, 167.5, -7)
-    elseif not g_questManager.Cl_IsQuestComplete(quest_find_trader) then
-        point = sm.vec3.new(1536, 2048, 20)
-    end
+    local point = g_windManager:getWindCenter(function (quest)
+        return g_questManager:Cl_IsQuestComplete(quest)
+    end)
 
     local direction = self.shape:transformPoint(point)
     direction.y = 0

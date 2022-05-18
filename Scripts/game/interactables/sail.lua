@@ -1,6 +1,7 @@
 dofile( "$CONTENT_DATA/Scripts/game/survival_quests.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestManager.lua" )
 
+---@type Interactable
 Sail = class()
 Sail.maxParentCount = 1
 Sail.maxChildCount = 0
@@ -33,22 +34,9 @@ function Sail.server_onFixedUpdate(self, dt)
     end
 
     if self.sv.active and self.shape:getVelocity():length() < MAX_SPEED and self.shape:getWorldPosition().z > -1.9 then
-        local up = sm.vec3.new(0, 0, 1)
-        local dirMiddle = self.shape:getWorldPosition():normalize()
-        local windDirection = -dirMiddle:cross(up)
-        windDirection.z = 0
-        windDirection = windDirection:normalize()
-
-        --Quest helper
-        if not g_questManager.Sv_IsQuestComplete(quest_radio_location) then
-            windDirection = self.shape:getWorldPosition() - sm.vec3.new(-1820.5, 167.5, -7)
-            windDirection.z = 0
-            windDirection = windDirection:normalize()
-        elseif not g_questManager.Sv_IsQuestComplete(quest_find_trader) then
-            windDirection = self.shape:getWorldPosition() - sm.vec3.new(1536, 2048, 20)
-            windDirection.z = 0
-            windDirection = windDirection:normalize()
-        end
+        local windDirection = g_windManager:getWindDir(self.shape:getWorldPosition(), function (quest)
+            return g_questManager:Sv_isQuestComplete(quest)
+        end)
 
         local sailDirection = -self.shape:getUp()
         sailDirection.z = 0
