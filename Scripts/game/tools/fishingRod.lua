@@ -7,7 +7,8 @@ dofile("$CONTENT_DATA/Scripts/game/managers/LanguageManager.lua")
 
 Rod = class()
 
-local renderables = { "$CONTENT_DATA/Characters/Char_Tools/Char_fishingrod/char_char_fishingrod_preview.rend" }
+local CONTENT_DATA = "$CONTENT_667b4c22-cc1a-4a2b-bee8-66a6c748d40e" --PLS FIX
+local renderables = { CONTENT_DATA.."/Characters/Char_Tools/Char_fishingrod/char_char_fishingrod_preview.rend" }
 local renderablesTp = {"$SURVIVAL_DATA/Character/Char_Male/Animations/char_male_tp_fertilizer.rend", "$SURVIVAL_DATA/Character/Char_Tools/Char_fertilizer/char_fertilizer_tp_animlist.rend"}
 local renderablesFp = {"$SURVIVAL_DATA/Character/Char_Male/Animations/char_male_fp_fertilizer.rend", "$SURVIVAL_DATA/Character/Char_Tools/Char_fertilizer/char_fertilizer_fp_animlist.rend"}
 

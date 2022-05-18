@@ -8,18 +8,20 @@ Eat = class()
 Eat.emptyTpRenderables = {}
 Eat.emptyFpRenderables = {}
 
+--RAFT PLS FIX @AXOLOT
+local CONTENT_DATA = "$CONTENT_667b4c22-cc1a-4a2b-bee8-66a6c748d40e"
 
 --RAFT
-local WatercleanRenderables = {"$CONTENT_DATA/Characters/Char_Tools/Char_eattool/char_eattool_waterclean.rend" }
-local RawfishRenderables = {"$CONTENT_DATA/Characters/Char_Tools/Char_eattool/char_eattool_rawfish.rend" }
-local RawfishusRenderables = { "$CONTENT_DATA/Characters/Char_Tools/Char_eattool/char_eattool_rawfishus.rend" }
-local CookedfishRenderables = {"$CONTENT_DATA/Characters/Char_Tools/Char_eattool/char_eattool_cookedfish.rend" } 
-local FisheauchocolatRenderables = {"$CONTENT_DATA/Characters/Char_Tools/Char_eattool/char_eattool_fisheauchocolat.rend" } 
+local WatercleanRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_waterclean.rend" }
+local RawfishRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_rawfish.rend" }
+local RawfishusRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_rawfishus.rend" }
+local CookedfishRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_cookedfish.rend" } 
+local FisheauchocolatRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_fisheauchocolat.rend" } 
 
-local WocSteakRawRenderables = {"$CONTENT_DATA/Characters/Char_Tools/Char_eattool/char_eattool_wocsteak_raw.rend" } 
-local WocSteakGrilldRenderables = {"$CONTENT_DATA/Characters/Char_Tools/Char_eattool/char_eattool_wocsteak_grilld.rend" } 
+local WocSteakRawRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_wocsteak_raw.rend" } 
+local WocSteakGrilldRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_wocsteak_grilld.rend" } 
 
-local PotatRenderables = { "$CONTENT_DATA/Characters/Char_Tools/Char_eattool/char_eattool_potat.rend" } 
+local PotatRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_potat.rend" } 
 
 
 

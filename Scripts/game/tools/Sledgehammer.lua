@@ -4,10 +4,11 @@ dofile "$SURVIVAL_DATA/Scripts/util.lua"
 
 Sledgehammer = class()
 
+local CONTENT_DATA = "$CONTENT_667b4c22-cc1a-4a2b-bee8-66a6c748d40e"
 local renderables = {
-	"$CONTENT_DATA/Characters/Char_Tools/Char_woodsledgehammer/char_woodsledgehammer.rend",
-	"$CONTENT_DATA/Characters/Char_Tools/Char_axe/char_axe_preview.rend",
-	"$CONTENT_DATA/Characters/Char_Tools/Char_pickaxe/char_pickaxe_preview.rend"
+	CONTENT_DATA.."/Characters/Char_Tools/Char_woodsledgehammer/char_woodsledgehammer.rend",
+	CONTENT_DATA.."/Characters/Char_Tools/Char_axe/char_axe_preview.rend",
+	CONTENT_DATA.."/Characters/Char_Tools/Char_pickaxe/char_pickaxe_preview.rend"
 }
 local renderablesTp = {"$GAME_DATA/Character/Char_Male/Animations/char_male_tp_sledgehammer.rend", "$GAME_DATA/Character/Char_Tools/Char_sledgehammer/char_sledgehammer_tp_animlist.rend"}
 local renderablesFp = {"$GAME_DATA/Character/Char_Tools/Char_sledgehammer/char_sledgehammer_fp_animlist.rend"}

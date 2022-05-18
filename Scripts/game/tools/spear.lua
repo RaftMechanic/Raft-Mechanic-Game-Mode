@@ -14,12 +14,13 @@ local Damage = 30
 ---@field tpAnimations table
 Spear = class()
 
+local CONTENT_DATA = "$CONTENT_667b4c22-cc1a-4a2b-bee8-66a6c748d40e"
 local renderables = {
-	"$CONTENT_DATA/Characters/Char_Tools/Char_spear/char_spear.rend"
+	CONTENT_DATA.."/Characters/Char_Tools/Char_spear/char_spear.rend"
 }
 
-local renderablesTp = {"$CONTENT_DATA/Characters/Char_Tools/Char_spear/char_male_tp_spear.rend", "$CONTENT_DATA/Characters/Char_Tools/Char_spear/char_spear_tp_animlist.rend"}
-local renderablesFp = {"$CONTENT_DATA/Characters/Char_Tools/Char_spear/char_male_fp_spear.rend", "$CONTENT_DATA/Characters/Char_Tools/Char_spear/char_spear_fp_animlist.rend"}
+local renderablesTp = {CONTENT_DATA.."/Characters/Char_Tools/Char_spear/char_male_tp_spear.rend", CONTENT_DATA.."/Characters/Char_Tools/Char_spear/char_spear_tp_animlist.rend"}
+local renderablesFp = {CONTENT_DATA.."/Characters/Char_Tools/Char_spear/char_male_fp_spear.rend", CONTENT_DATA.."/Characters/Char_Tools/Char_spear/char_spear_fp_animlist.rend"}
 
 sm.tool.preloadRenderables( renderables )
 sm.tool.preloadRenderables( renderablesTp )
