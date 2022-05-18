@@ -1083,7 +1083,7 @@ function Crafter.client_onUpdate( self, deltaTime )
 
 			if not self.cl.mainEffects["fish"]:isPlaying() then
 				self.cl.mainEffects["fish"]:setOffsetPosition(sm.vec3.new(0,0.475,0))
-				local rotation = self.shape:getWorldRotation() * sm.vec3.getRotation(sm.vec3.new(1,0,0), sm.vec3.new(0,1,0) )
+				local rotation = self.shape:getWorldRotation() * sm.vec3.getRotation(sm.vec3.new(0,1,0), sm.vec3.new(0,1,0) )
 				rotation = self.shape:transformRotation(rotation)
 				self.cl.mainEffects["fish"]:setOffsetRotation(rotation)
 				self.cl.mainEffects["fish"]:start()
