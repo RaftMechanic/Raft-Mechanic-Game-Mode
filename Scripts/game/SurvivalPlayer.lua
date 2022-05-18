@@ -48,8 +48,6 @@ local RespawnEndDelay = 1.0 * 40
 
 local BaguetteSteps = 9
 
---RAFT PLS FIX @AXOLOT
-local CONTENT_DATA = "$CONTENT_667b4c22-cc1a-4a2b-bee8-66a6c748d40e"
 
 function SurvivalPlayer.server_onCreate( self )
 	self.sv = {}
@@ -799,17 +797,17 @@ end
 function SurvivalPlayer:cl_updateRenderables( args )
 	if args.changes.fins then
 		if args.changes.fins.add then
-			args.char:addRenderable( CONTENT_DATA .. "/Characters/Char_Player/Fins/obj_fins.rend" )
+			args.char:addRenderable( "$CONTENT_DATA/Characters/Char_Player/Fins/obj_fins.rend" )
 		else
-			args.char:removeRenderable( CONTENT_DATA .. "/Characters/Char_Player/Fins/obj_fins.rend" )
+			args.char:removeRenderable( "$CONTENT_DATA/Characters/Char_Player/Fins/obj_fins.rend" )
 		end
 	end
 	
 	if args.changes.tank then
 		if args.changes.tank.add then
-			args.char:addRenderable( CONTENT_DATA .. "/Characters/Char_Player/OxygenTank/OxygenTank.rend" )
+			args.char:addRenderable( "$CONTENT_DATA/Characters/Char_Player/OxygenTank/OxygenTank.rend" )
 		else
-			args.char:removeRenderable( CONTENT_DATA .. "/Characters/Char_Player/OxygenTank/OxygenTank.rend" )
+			args.char:removeRenderable( "$CONTENT_DATA/Characters/Char_Player/OxygenTank/OxygenTank.rend" )
 		end
 	end
 end
