@@ -18,9 +18,29 @@ function TreeLog.server_init( self )
 	self.health = LogHealth
 end
 
-function TreeLog.server_onMelee( self, position, attacker, damage, power, hitDirection )
-	self:sv_onHit( DamagerPerHit )
+function TreeLog.server_onMelee( self, position, attacker, damage )
+	--Raft
+	if type( attacker ) == "Player" then
+		self.network:sendToClient( attacker, "cl_determineValidHit")
+	else
+		self:sv_onHit( DamagerPerHit )
+	end
+	--Raft
 end
+
+--Raft
+function TreeLog:cl_determineValidHit( pos )
+	if sm.localPlayer.getActiveItem() == tool_axe then
+		self.network:sendToServer("sv_onHit", DamagerPerHit)
+	else
+		self:cl_n_onMessage( "#{ALERT_TREE_TOO_BIG}" )
+	end
+end
+
+function TreeLog.cl_n_onMessage( self, msg )
+	sm.gui.displayAlertText( msg, 2 )
+end
+--Raft
 
 function TreeLog.sv_onHit( self, damage )
 	if self.health > 0 then

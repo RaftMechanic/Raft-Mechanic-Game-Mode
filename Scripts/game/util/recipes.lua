@@ -1,4 +1,4 @@
-function LoadCraftingRecipes( recipePaths )
+function raft_LoadCraftingRecipes( recipePaths )
 	-- Preload all crafting recipes
 	if not g_craftingRecipes then
 		g_craftingRecipes = {}

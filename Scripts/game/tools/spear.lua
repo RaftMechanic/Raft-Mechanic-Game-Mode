@@ -40,7 +40,7 @@ Spear.swingExits = { "spear_exit1", "spear_exit2" }
 function Spear.client_onCreate( self )
 	self.isLocal = self.tool:isLocal()
 	self:init()
-	self:loadAnimations()
+
 end
 
 function Spear.client_onRefresh( self )
@@ -402,7 +402,7 @@ function Spear.client_onEquip( self, animate )
 	self.tool:setTpRenderables( tpRend )
 
 	self:init()
-	--self:loadAnimations()
+	self:loadAnimations()
 	-- idk why but commenting this out fixed it LMFAOOOO^^
 
 	setTpAnimation( self.tpAnimations, "equip", 0.0001 )

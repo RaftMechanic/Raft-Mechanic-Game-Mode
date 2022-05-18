@@ -8,6 +8,101 @@ local SelfdestructTickTime = 40 * 22
 local TrunkHealth = 100
 local DamagerPerHit = math.ceil( TrunkHealth / TREE_TRUNK_HITS )
 
+--Raft
+SPRUCE = {
+	obj_harvests_trees_spruce02_p00,
+	obj_harvests_trees_spruce02_p01,
+	obj_harvests_trees_spruce02_p02,
+	obj_harvests_trees_spruce02_p03,
+	obj_harvests_trees_spruce02_p04,
+	obj_harvests_trees_spruce01_p05,
+	obj_harvests_trees_spruce02_p05,
+	obj_harvests_trees_spruce03_p05
+}
+LEAFY = {
+	obj_harvests_trees_leafy01_p00,
+	obj_harvests_trees_leafy01_p01,
+	obj_harvests_trees_leafy01_p02,
+	obj_harvests_trees_leafy01_p03,
+	obj_harvests_trees_leafy01_p04,
+	obj_harvests_trees_leafy02_p00,
+	obj_harvests_trees_leafy02_p01,
+	obj_harvests_trees_leafy02_p02,
+	obj_harvests_trees_leafy02_p03,
+	obj_harvests_trees_leafy02_p04,
+	obj_harvests_trees_leafy02_p05,
+	obj_harvests_trees_leafy02_p06,
+	obj_harvests_trees_leafy02_p07,
+	obj_harvests_trees_leafy03_p00,
+	obj_harvests_trees_leafy03_p01,
+	obj_harvests_trees_leafy03_p02,
+	obj_harvests_trees_leafy03_p03,
+	obj_harvests_trees_leafy03_p04,
+	obj_harvests_trees_leafy03_p05,
+	obj_harvests_trees_leafy03_p06,
+	obj_harvests_trees_leafy03_p07,
+	obj_harvests_trees_leafy03_p08,
+	obj_harvests_trees_leafy03_p09
+}
+BIRCH = {
+	obj_harvests_trees_birch01_p00,
+	obj_harvests_trees_birch01_p01,
+	obj_harvests_trees_birch01_p02,
+	obj_harvests_trees_birch01_p03,
+	obj_harvests_trees_birch01_p04,
+	obj_harvests_trees_birch01_p05,
+	obj_harvests_trees_birch02_p00,
+	obj_harvests_trees_birch02_p01,
+	obj_harvests_trees_birch02_p02,
+	obj_harvests_trees_birch02_p03,
+	obj_harvests_trees_birch02_p04,
+	obj_harvests_trees_birch02_p05,
+	obj_harvests_trees_birch02_p06,
+	obj_harvests_trees_birch03_p00,
+	obj_harvests_trees_birch03_p01,
+	obj_harvests_trees_birch03_p02,
+	obj_harvests_trees_birch03_p03,
+	obj_harvests_trees_birch03_p04,
+	obj_harvests_trees_birch03_p05,
+	obj_harvests_trees_birch03_p06
+}
+PINE = {
+	obj_harvests_trees_pine01_p00,
+	obj_harvests_trees_pine01_p01,
+	obj_harvests_trees_pine01_p02,
+	obj_harvests_trees_pine01_p03,
+	obj_harvests_trees_pine01_p04,
+	obj_harvests_trees_pine01_p05,
+	obj_harvests_trees_pine01_p06,
+	obj_harvests_trees_pine01_p07,
+	obj_harvests_trees_pine01_p08,
+	obj_harvests_trees_pine01_p09,
+	obj_harvests_trees_pine01_p10,
+	obj_harvests_trees_pine01_p11,
+	obj_harvests_trees_pine02_p00,
+	obj_harvests_trees_pine02_p01,
+	obj_harvests_trees_pine02_p02,
+	obj_harvests_trees_pine02_p03,
+	obj_harvests_trees_pine02_p04,
+	obj_harvests_trees_pine02_p05,
+	obj_harvests_trees_pine02_p06,
+	obj_harvests_trees_pine02_p07,
+	obj_harvests_trees_pine02_p08,
+	obj_harvests_trees_pine02_p09,
+	obj_harvests_trees_pine02_p10,
+	obj_harvests_trees_pine03_p00,
+	obj_harvests_trees_pine03_p01,
+	obj_harvests_trees_pine03_p02,
+	obj_harvests_trees_pine03_p03,
+	obj_harvests_trees_pine03_p04,
+	obj_harvests_trees_pine03_p05,
+	obj_harvests_trees_pine03_p06,
+	obj_harvests_trees_pine03_p07,
+	obj_harvests_trees_pine03_p08,
+	obj_harvests_trees_pine03_p09,
+	obj_harvests_trees_pine03_p10
+}
+
 -- Server
 
 function TreeTrunk.server_onCreate( self )
@@ -78,6 +173,38 @@ function TreeTrunk.server_onFixedUpdate( self, timeStep )
 			--self:sv_onHit( 100 )
 			self.sv.fallen = true
 			self.network:setClientData( { fallen = self.sv.fallen } )
+
+			--Raft
+			local loot
+			for _, uuid in ipairs(SPRUCE) do
+				if uuid == self.shape.uuid then
+					loot = obj_sprucetree_sapling
+				end
+			end
+			for _, uuid in ipairs(LEAFY) do
+				if uuid == self.shape.uuid then
+					loot = obj_leafytree_sapling
+				end
+			end
+			for _, uuid in ipairs(BIRCH) do
+				if uuid == self.shape.uuid then
+					loot = obj_birchtree_sapling
+				end
+			end
+			for _, uuid in ipairs(PINE) do
+				if uuid == self.shape.uuid then
+					loot = obj_pinetree_sapling
+				end
+			end
+
+
+			local lootList = {}
+			local quantity = math.random(0,2)
+			if quantity > 0 then
+				lootList[1] = { uuid = loot, quantity = quantity }
+				SpawnLoot( self.shape, lootList, self.shape.worldPosition + sm.vec3.new( 0, 0, 1.0 ) )
+			end
+			--Raft
 		end
 		
 		local crownDir = self.shape.worldRotation * sm.vec3.new( 0 , 1, 0 )
@@ -87,21 +214,25 @@ function TreeTrunk.server_onFixedUpdate( self, timeStep )
 		end
 	end
 end
-
-function TreeTrunk.server_onMelee( self, position, attacker, damage, power, hitDirection )
+function TreeTrunk.server_onMelee( self, position, attacker, damage )
 	if not self.sv.fallen then
 		self.sv.fallen = true
 		self.network:setClientData( { fallen = self.sv.fallen } )
 	end
 	if self.data then
 		if self.data.treeType == "small" or self.data.treeType == "medium" then
-			self:sv_onHit( DamagerPerHit )
-			if self.sv.health > 0 then
-				self:sv_triggerCreak( position )
+			--Raft
+			if type( attacker ) == "Player" then
+				self.network:sendToClient( attacker, "cl_determineValidHit", position )
+			else
+				self:sv_onHit( DamagerPerHit )
 			end
+			--Raft
 		elseif self.data.treeType == "large" then
 			if type( attacker ) == "Player" then
-				self.network:sendToClient( attacker, "cl_n_onMessage", "#{ALERT_TREE_TOO_BIG}" )
+				--Raft
+				self.network:sendToClient( attacker, "cl_determineValidHit", position )
+				--Raft
 			end
 			if g_survivalDev or type( attacker ) == "Unit" then
 				self:sv_onHit( DamagerPerHit )
@@ -109,6 +240,23 @@ function TreeTrunk.server_onMelee( self, position, attacker, damage, power, hitD
 		end
 	end
 end
+
+--Raft
+function TreeTrunk:cl_determineValidHit( pos )
+	if sm.localPlayer.getActiveItem() == tool_axe then
+		self.network:sendToServer("sv_determineValidHit")
+		if self.sv.health > 0 then
+			self.network:sendToServer("sv_triggerCreak", pos )
+		end
+	else
+		self:cl_n_onMessage( "#{ALERT_TREE_TOO_BIG}" )
+	end
+end
+
+function TreeTrunk:sv_determineValidHit()
+	self:sv_onHit( DamagerPerHit )
+end
+--Raft
 
 function TreeTrunk.sv_onHit( self, damage )
 	if self.sv.health > 0 then

@@ -19,14 +19,30 @@ function StoneHarvestable.sv_init( self )
 	self.stoneParts = nil
 end
 
-function StoneHarvestable.server_onMelee( self, hitPos, attacker, damage, power, hitDirection )
+function StoneHarvestable.server_onMelee( self, hitPos, attacker, damage )
 	if type( attacker ) == "Player" then
-		self.network:sendToClient( attacker, "cl_n_onMessage", "#{ALERT_STONE_TOO_BIG}" )
+		--Raft
+		self.network:sendToClient( attacker, "cl_determineValidHit", hitPos )
+		--Raft
 	end
 	if g_survivalDev then
 		self:sv_onHit( self.DamagerPerHit, hitPos )
 	end
 end
+
+--Raft
+function StoneHarvestable:cl_determineValidHit( pos )
+	if sm.localPlayer.getActiveItem() == tool_pickaxe then
+		self.network:sendToServer("sv_determineValidHit", pos )
+	else
+		self:cl_n_onMessage( "#{ALERT_STONE_TOO_BIG}" )
+	end
+end
+
+function StoneHarvestable:sv_determineValidHit( pos )
+	self:sv_onHit( self.DamagerPerHit, pos )
+end
+--Raft
 
 function StoneHarvestable.sv_onHit( self, damage, position )
 	
