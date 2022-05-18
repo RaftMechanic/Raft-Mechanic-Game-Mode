@@ -5,43 +5,56 @@ dofile("$SURVIVAL_DATA/Scripts/game/survival_harvestable.lua")
 
 Sapling = class()
 --hvs_burntforest.json
-Sapling.burned = {	sm.uuid.new("9ef210c0-ea30-4442-a1fe-924b5609b0cc"),
-					sm.uuid.new("2bae67d4-c8ef-4c6e-a1a7-42281d0b7489"),
-					sm.uuid.new("8f7a8108-2712-47b3-bce2-f25315165094"),
-					sm.uuid.new("515aed88-0594-42b6-a352-617e5f5a3e45"),
-					sm.uuid.new("2d5aa53d-eb9c-478c-a70f-c57a43753814"),
-					sm.uuid.new("c08b553a-a917-4e26-bbb6-7b8523789cad"),
-					sm.uuid.new("d3fcfc06-a6b6-4598-99b1-9a6445b976b3"),
-					sm.uuid.new("b5f90719-fbca-4c59-89c3-187cdb5553d4")	}
+Sapling.burned = {
+	sm.uuid.new("9ef210c0-ea30-4442-a1fe-924b5609b0cc"),
+	sm.uuid.new("2bae67d4-c8ef-4c6e-a1a7-42281d0b7489"),
+	sm.uuid.new("8f7a8108-2712-47b3-bce2-f25315165094"),
+	sm.uuid.new("515aed88-0594-42b6-a352-617e5f5a3e45"),
+	sm.uuid.new("2d5aa53d-eb9c-478c-a70f-c57a43753814"),
+	sm.uuid.new("c08b553a-a917-4e26-bbb6-7b8523789cad"),
+	sm.uuid.new("d3fcfc06-a6b6-4598-99b1-9a6445b976b3"),
+	sm.uuid.new("b5f90719-fbca-4c59-89c3-187cdb5553d4")
+}
 
 function Sapling.server_onCreate(self)
-	self.saved = self.storage:load()
-	if self.saved == nil then
-		self.saved = {}
-		self.caculatingBox = true
-		self.saved.burned = false
+	self.sv = {}
+	self.sv.boundingBox = nil
+	self.sv.caculatingBox = true
+
+	self.sv.saved = self.storage:load()
+	if self.sv.saved == nil then
+		self.sv.saved = {}
+		self.sv.saved.grow = -1
+		self.sv.saved.burned = false
+		self.sv.saved.planted = false
+		self.sv.saved.valid = false
 	end
 
 	self:server_clientDataUpdate()
 end
 
 function Sapling.client_onCreate(self)
-	self.caculating = true -- default true!
+	self.cl = {}
+	self.cl.caculating = true -- default true!
+	self.cl.valid = false
+	self.cl.planted = false
 end
 
-function Sapling.check_ground(self)
+function Sapling.sv_checkGround(self)
 	local valid = false
 	local treePos = sm.vec3.zero()
 	local raycast_start = self.shape.worldPosition + sm.vec3.new(0,0,0.125)
 	local raycast_end = self.shape.worldPosition + sm.vec3.new(0,0,-0.3)
 	local body = sm.shape.getBody(self.shape)
 	local success, result = sm.physics.raycast( raycast_start, raycast_end, body)
-	
+
+	local trigger = sm.areaTrigger.createAttachedBox( self.interactable, sm.vec3.one() / 4, sm.vec3.zero(), sm.quat.identity(), sm.areaTrigger.filter.areaTrigger )
+
 	local isInWater = false
-	if sm.exists(self.boundingBox) then
-		for _, result in ipairs( self.boundingBox:getContents() ) do
-			if sm.exists( result ) then
-				local userData = result:getUserData()
+	if sm.exists(trigger) then
+		for _, content in ipairs( trigger:getContents() ) do
+			if sm.exists( content ) then
+				local userData = content:getUserData()
 				if userData and userData.water then
 					isInWater = true
 				end
@@ -49,7 +62,9 @@ function Sapling.check_ground(self)
 		end
 	end
 
-	if success and result.type == "terrainSurface" and not isInWater  then
+	sm.areaTrigger.destroy(trigger)
+
+	if success and result.type == "terrainSurface" and not isInWater then
 		valid = true
 		treePos = result.pointWorld
 	end
@@ -57,49 +72,45 @@ function Sapling.check_ground(self)
 end
 
 function Sapling.server_clientDataUpdate( self )
-	self.network:setClientData( { valid = self.saved.valid or false, planted = self.saved.planted or false, caculating = self.caculatingBox } )
+	self.network:setClientData( { valid = self.sv.saved.valid or false, planted = self.sv.saved.planted or false, caculating = self.sv.caculatingBox } )
 end
 
 function Sapling.client_onClientDataUpdate( self, params )
-	self.caculating = params.caculating
-	self.valid = params.valid
-	self.planted = params.planted
+	self.cl.caculating = params.caculating
+	self.cl.valid = params.valid
+	self.cl.planted = params.planted
 end
 
 function Sapling.client_canInteract(self)
-	if self.planted then
-		sm.gui.setInteractionText("", language_tag("SaplingGrow"), "")
-	elseif self.valid then
-		sm.gui.setInteractionText(language_tag("SaplingNeedLiquid1"), language_tag("SaplingNeedLiquid2"), "")
-	elseif not self.caculating then
-		sm.gui.setInteractionText(language_tag("SaplingNeedGround1"), "#ff0000" .. language_tag("SaplingNeedGround2"), "")
+	local o1 = "<p textShadow='false' bg='gui_keybinds_bg_orange' color='#4f4f4f' spacing='9'>"
+    local o2 = "</p>"
+
+	if self.cl.planted then
+		sm.gui.setInteractionText("", o1..language_tag("SaplingGrow")..o2, "")
+	elseif self.cl.valid then
+		sm.gui.setInteractionText(o1..language_tag("SaplingNeedLiquid")..o2)
+	elseif not self.cl.caculating then
+		sm.gui.setInteractionText(o1..language_tag("SaplingNeedGround")..o2)
 	end
 	return true
 end
 
 function Sapling.server_onProjectile( self, hitPos, hitTime, hitVelocity, projectileName, attacker, damage )
-	
 	local chemical = projectileName == "chemical"
 
-	if projectileName == "water" or chemical and not self.planted then
-		local valid, treePos = Sapling.check_ground(self)
+	if projectileName == "water" or chemical and not self.sv.planted then
+		local valid, treePos = Sapling.sv_checkGround(self)
 
-		if valid then		
+		if valid then
 			sm.effect.playEffect("Cotton - Picked", treePos + sm.vec3.new(0, 0, -0.5))
 			sm.effect.playEffect("Tree - LogAppear", treePos)
-			
-			self.saved.treePos = treePos
-			self.saved.grow = math.random(60, 60*24) --1 to 24 minutes
-			
-			self.saved.planted = true
-			self.saved.burned = chemical
-			self.storage:save( self.saved )
-			self.network:setClientData( { valid = self.saved.valid, planted = self.saved.planted } )
-			
-			-- destroy bounding box
-			if sm.exists(self.boundingBox) then
-				sm.areaTrigger.destroy( self.boundingBox )
-			end
+
+			self.sv.saved.treePos = treePos
+			self.sv.saved.grow = math.random(60, 60*24) --1 to 24 minutes
+			self.sv.saved.planted = true
+			self.sv.saved.burned = chemical
+			self.storage:save( self.sv.saved )
+			self.network:setClientData( { valid = self.sv.saved.valid, planted = self.sv.saved.planted } )
 
 			if chemical then
 				sm.effect.playEffect("Plants - Destroyed", self.shape.worldPosition)
@@ -111,38 +122,41 @@ function Sapling.server_onProjectile( self, hitPos, hitTime, hitVelocity, projec
 end
 
 function Sapling:server_onFixedUpdate()
-	if self.saved and self.planted and sm.game.getCurrentTick() % (40 * 5) == 0 then
-		if self.saved.grow == 0 then
+	if self.sv.saved and self.sv.saved.planted and sm.game.getCurrentTick() % (40 * 5) == 0 then
+		if self.sv.saved.grow == 0 then
 			local offset = sm.vec3.new(0.375, -0.375, 0)
-			if self.saved.burned then --chemicals lead to ember trees
+			if self.sv.saved.burned then --chemicals lead to ember trees
 				self.trees = self.burned
 			end
-			sm.harvestable.create( self.trees[math.random(#self.trees)], self.saved.treePos - offset, sm.quat.new(0.707, 0, 0, 0.707) )
+			sm.harvestable.create( self.trees[math.random(#self.trees)], self.sv.saved.treePos - offset, sm.quat.new(0.707, 0, 0, 0.707) )
 			self.shape:destroyPart(0)
 			return
 		end
-		self.saved.grow = math.max(self.saved.grow - 5, 0) -- five seconds per call
-		self.storage:save( self.saved )
+		self.sv.saved.grow = math.max(self.sv.saved.grow - 5, 0) -- five seconds per call
+		self.storage:save( self.sv.saved )
 	end
 
-	if self.caculatingBox and sm.game.getCurrentTick() % 6 == 0 then 
-		if self.boundingBox == nil then
-			self.boundingBox = sm.areaTrigger.createAttachedBox( self.interactable, sm.vec3.one() / 4, sm.vec3.zero(), sm.quat.identity(), sm.areaTrigger.filter.areaTrigger )
-			return -- return so box can caculate its contents.
-		end
+	if self.sv.caculatingBox and sm.game.getCurrentTick() % 6 == 0 then
+		self.sv.saved.grow = -1
+		self.sv.saved.valid, self.sv.saved.treePos = Sapling.sv_checkGround(self)
 
-		self.saved.grow = -1
-		self.saved.valid, self.saved.treePos = Sapling.check_ground(self)
+		self.storage:save( self.sv.saved )
+		self.network:setClientData( { valid = self.sv.saved.valid, planted = self.sv.saved.planted } )
 
-		self.storage:save( self.saved )
-		self.network:setClientData( { valid = self.saved.valid, planted = self.saved.planted } )
-
-		self.caculatingBox = false
-	end	
+		self.sv.caculatingBox = false
+	end
 end
 
 function Sapling:server_canErase()
-	return not self.planted
+	return not self.sv.saved.planted
+end
+
+function Sapling:client_canErase()
+	if self.cl.planted then
+		sm.gui.displayAlertText(language_tag("SaplingCantErase"), 2.5)
+	end
+
+	return not self.cl.planted
 end
 
 BirchSapling = class( Sapling )
@@ -152,7 +166,7 @@ LeafySapling = class( Sapling )
 LeafySapling.trees = { hvs_tree_leafy01, hvs_tree_leafy02, hvs_tree_leafy03}
 
 SpruceSapling = class( Sapling )
-SpruceSapling.tree = { hvs_tree_spruce01, hvs_tree_spruce02, hvs_tree_spruce03 }
+SpruceSapling.trees = { hvs_tree_spruce01, hvs_tree_spruce02, hvs_tree_spruce03 }
 
 PineSapling = class( Sapling )
-PineSapling.tree = { hvs_tree_pine01, hvs_tree_pine02, hvs_tree_pine03 }
+PineSapling.trees = { hvs_tree_pine01, hvs_tree_pine02, hvs_tree_pine03 }

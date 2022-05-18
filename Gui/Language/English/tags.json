@@ -1,9 +1,8 @@
 {
-    "SaplingGrow": "Growing...",
-    "SaplingNeedLiquid1": "Splash with",
-    "SaplingNeedLiquid2": "liquid",
-    "SaplingNeedGround1": "Place on the",
-    "SaplingNeedGround2": "ground",
+    "SaplingGrow": "#00cc00Growing...",
+    "SaplingNeedLiquid": "Splash with liquid",
+    "SaplingNeedGround": "Place on the #ff0000ground",
+    "SaplingCantErase": "Can't erase sapling while its growing!",
 
     "FarmerBallTalk": "Talk",
     "FarmerBallHelp": "I was just using the bathroom because my bottle was full and now... Well, I sneaked in some explosives here a while ago. I've tried breaking the wall down there to get outside, but maybe you can finish the job now.",
