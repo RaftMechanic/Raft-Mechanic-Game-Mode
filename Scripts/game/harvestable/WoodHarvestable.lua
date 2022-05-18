@@ -23,13 +23,21 @@ function WoodHarvestable.sv_init( self )
 	self.treeParts = nil
 end
 
-function WoodHarvestable.server_onMelee( self, hitPos, attacker, damage, power, hitDirection )
+function WoodHarvestable.server_onMelee( self, hitPos, attacker, damage )
 	if self.data then
 		if self.data.type == "small" or self.data.type == "medium" then
-			self:sv_onHit( DamagerPerHit, hitPos )
+			--Raft
+			if type( attacker ) == "Player" then
+				self.network:sendToClient( attacker, "cl_determineValidHit", hitPos )
+			else
+				self:sv_onHit( DamagerPerHit, hitPos )
+			end
+			--Raft
 		elseif self.data.type == "large" then
 			if type( attacker ) == "Player" then
+				--Raft
 				self.network:sendToClient( attacker, "cl_n_onMessage", "#{ALERT_TREE_TOO_BIG}" )
+				--Raft
 			end
 
 			if g_survivalDev then
@@ -38,6 +46,20 @@ function WoodHarvestable.server_onMelee( self, hitPos, attacker, damage, power, 
 		end
 	end
 end
+
+--Raft
+function WoodHarvestable:cl_determineValidHit( pos )
+	if sm.localPlayer.getActiveItem() == tool_axe then
+		self.network:sendToServer("sv_determineValidHit", pos )
+	else
+		self:cl_n_onMessage( "#{ALERT_TREE_TOO_BIG}" )
+	end
+end
+
+function WoodHarvestable:sv_determineValidHit( pos )
+	self:sv_onHit( DamagerPerHit, pos )
+end
+--Raft
 
 function WoodHarvestable.client_onMelee( self, hitPos, attacker, damage, power, hitDirection, hitNormal )
 	if type( attacker ) == "Player" then

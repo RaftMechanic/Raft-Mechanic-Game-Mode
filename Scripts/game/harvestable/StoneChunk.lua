@@ -23,13 +23,22 @@ function StoneChunk.sv_init( self )
 	self.health = 100
 end
 
-function StoneChunk.server_onMelee( self, position, attacker, damage, power, hitDirection )
+function StoneChunk.server_onMelee( self, position, attacker, damage )
 	if self.data then
 		if self.data.chunkSize <= 2 then
-			self:sv_onHit( self.DamagerPerHit )
+			--Raft
+			if type( attacker ) == "Player" then
+				self.network:sendToClient( attacker, "cl_determineValidHit" )
+			end
+			if g_survivalDev then
+				self:sv_onHit( self.DamagerPerHit )
+			end
+			--Raft
 		else
 			if type( attacker ) == "Player" then
-				self.network:sendToClient( attacker, "cl_n_onMessage", "#{ALERT_STONE_TOO_BIG}" )
+				--Raft
+				self.network:sendToClient( attacker, "cl_determineValidHit" )
+				--Raft
 			end
 			if g_survivalDev then
 				self:sv_onHit( self.DamagerPerHit )
@@ -37,6 +46,16 @@ function StoneChunk.server_onMelee( self, position, attacker, damage, power, hit
 		end
 	end
 end
+
+--Raft
+function StoneChunk:cl_determineValidHit( pos )
+	if sm.localPlayer.getActiveItem() == tool_pickaxe then
+		self.network:sendToServer("sv_onHit", self.DamagerPerHit)
+	else
+		self:cl_n_onMessage( "#{ALERT_STONE_TOO_BIG}" )
+	end
+end
+--Raft
 
 function StoneChunk.cl_n_onMessage( self, msg )
 	sm.gui.displayAlertText( msg, 2 )

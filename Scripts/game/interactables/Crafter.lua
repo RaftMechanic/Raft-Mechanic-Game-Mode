@@ -779,8 +779,12 @@ function Crafter.server_onFixedUpdate( self )
 	end
 
 	self:sv_sendClientData()
-	self:sv_markStorageDirty()
-	self:sv_updateStorage()
+
+	--only save once every second
+	if sm.game.getServerTick() % 40 == 0 then
+		self:sv_markStorageDirty()
+		self:sv_updateStorage()
+	end
 end
 
 --Client

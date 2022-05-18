@@ -13,7 +13,7 @@ dofile( "$SURVIVAL_DATA/Scripts/game/survival_shapes.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/survival_units.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/survival_projectiles.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/survival_meleeattacks.lua" )
-dofile( "$SURVIVAL_DATA/Scripts/game/util/recipes.lua" )
+dofile( "$CONTENT_DATA/Scripts/game/util/recipes.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/util/Timer.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestEntityManager.lua" )
 dofile( "$GAME_DATA/Scripts/game/managers/EventManager.lua" )
@@ -274,7 +274,7 @@ end
 
 
 function SurvivalGame.loadCraftingRecipes( self )
-	LoadCraftingRecipes({
+	raft_LoadCraftingRecipes({
 		workbench = "$SURVIVAL_DATA/CraftingRecipes/workbench.json",
 		dispenser = "$SURVIVAL_DATA/CraftingRecipes/dispenser.json",
 		cookbot = "$SURVIVAL_DATA/CraftingRecipes/cookbot.json",
