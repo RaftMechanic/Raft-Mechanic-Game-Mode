@@ -16,7 +16,7 @@ sm.tool.preloadRenderables( renderables )
 sm.tool.preloadRenderables( renderablesTp )
 sm.tool.preloadRenderables( renderablesFp )
 
-local maxThrowForce = 5
+local maxThrowForce = 2.5
 local minThrowForce = 0.25
 local chargeUpTime = 2
 local hookSize = sm.vec3.one()*0.1
@@ -37,25 +37,87 @@ function Rod.server_onCreate( self )
 	self.hookIDs = 2
 end
 
+function Rod.server_onFixedUpdate( self, timeStep )
+	--self.sv.effects.hooks[self.hookIDs] = {pos = params.pos, dir = params.dir, trigger = hookSize, id = self.hookIDs,  bait = bait, player = player}
+	for id, effect in pairs(self.sv.effects.hooks) do
+		effect.pos, effect.dir = self.calculate_trajectory(effect.pos, effect.dir, timeStep)
+		
+		if effect.trigger then
+			effect.trigger:setWorldPosition(effect.pos)
+			local rot, delta = self:get_hook_rotation(effect.pos, effect.player)
+			effect.trigger:setWorldRotation(rot)
+
+			local success, length = sm.physics.distanceRaycast(effect.pos, effect.dir*timeStep*6)
+			if success then
+				self.network:sendToClients("cl_destroy_hook", id)
+				self.network:sendToClient(effect.player, "cl_reset")
+				self.sv.effects.hooks[id] = nil
+				break
+			end
+
+			for k,v in ipairs(effect.trigger:getContents()) do
+				if sm.exists(v) then
+					local ud = v:getUserData()
+					if ud and (ud.water or ud.chemical or ud.oil) then
+						sm.effect.playEffect("Water - HitWaterTiny", effect.pos, sm.vec3.zero(), sm.quat.identity(), nil, get_effect_data(effect.dir))
+						self.network:sendToClients("cl_update_hook", {dir = sm.vec3.zero(), id = id, offset = -0.25})
+						self.network:sendToClient(effect.player, "cl_set_fishing")
+						effect.dir = sm.vec3.zero()
+						effect.trigger = nil
+						break
+					end
+				end
+			end
+		end
+	end
+end
+
 function Rod.sv_create_hook( self, params, player )
-	local trigger = sm.areaTrigger.createBox(hookSize, params.pos)
+	local trigger = sm.areaTrigger.createBox(hookSize, params.pos, sm.quat.identity(), sm.areaTrigger.filter.areaTrigger)
 	local bait = params.bait
 
-	self.sv.effects.hooks[self.hookIDs] = {pos = params.pos, dir = params.dir, trigger = hookSize, id = self.hookIDs}
+	sm.container.beginTransaction()
+	sm.container.spend(player:getInventory(), baits[self.bait], 1)
+	if not sm.container.endTransaction() and bait ~= baits[1] then
+		bait = baits[1]
+		self.network:sendToClient(player, "cl_reset_bait")
+	end
+
+	self.sv.effects.hooks[self.hookIDs] = {pos = params.pos, dir = params.dir, trigger = trigger, id = self.hookIDs,  bait = bait, player = player}
 	self.network:sendToClients("cl_create_hook", {pos = params.pos, dir = params.dir, bait = bait, id = self.hookIDs, player = player})
 	self.hookIDs = self.hookIDs + 1
 end
 
-function Rod.sv_destroy_hook( self, id )
-	self.sv.effects.hooks[id] = nil
-	self.network:sendToClients("cl_destroy_hook", id)
+function Rod.sv_destroy_hook( self, params, player )
+	if not params.catch then
+		local bait = self.sv.effects.hooks[params.id].bait
+		if bait ~= baits [1] then
+			sm.container.beginTransaction()
+			sm.container.collect(player:getInventory(), bait, 1)
+			sm.container.endTransaction()
+		end
+	end
+	local effect = self.sv.effects.hooks[params.id]
+	sm.effect.playEffect("Water - HitWaterTiny", effect.pos, sm.vec3.zero(), sm.quat.identity(), nil, get_effect_data(sm.vec3.one()))
+
+	self.network:sendToClients("cl_destroy_hook", params.id)
+	self.sv.effects.hooks[params.id] = nil
 end
 
 function Rod.server_onRefresh( self )
 	self:server_onCreate()
 end
---SERVER End
 
+function get_effect_data(dir)
+	local force = dir:length()
+	local params = {
+		["Size"] = min( 1.0, force ),
+		["Velocity_max_50"] = force*10,
+		["Phys_energy"] = force*100
+	}
+	return params
+end
+--SERVER End
 
 
 --CLIENT Start
@@ -77,25 +139,42 @@ function Rod.cl_create_hook( self, params )
 	hookEffect:setScale(hookSize)
 	hookEffect:start()
 
-	ropeEffect = sm.effect.createEffect("ShapeRenderable")
+	local ropeEffect = sm.effect.createEffect("ShapeRenderable")
 	ropeEffect:setParameter("uuid", sm.uuid.new("628b2d61-5ceb-43e9-8334-a4135566df7a"))
 	ropeEffect:setParameter("color", sm.color.new(1,1,1))
 	ropeEffect:start()
 
-	self.cl.effects.hooks[params.id] = {pos = params.pos, dir = params.dir, hook = hookEffect, rope = ropeEffect, player = params.player}
+	self.cl.effects.hooks[params.id] = {pos = params.pos, dir = params.dir, hook = hookEffect, rope = ropeEffect, player = params.player, offset = 0}
 end
 
 function Rod.cl_destroy_hook( self, id )
 	local effect = self.cl.effects.hooks[id]
-	if sm.exists(effect.hook) then
-		effect.hook:destroy()
-		effect.rope:destroy() 
-	end
+	effect.hook:destroy()
+	effect.rope:destroy() 
 	self.cl.effects.hooks[id] = nil
 end
 
+function Rod.cl_update_hook( self, params )
+	local id = params.id
+	local effect = self.cl.effects.hooks[id]
+	effect.dir = params.dir
+	effect.offset = params.offset
+
+	self.cl.effects.hooks[id] = effect
+end
+
+function Rod.cl_set_fishing( self )
+	self.isThrowing = false
+	self.isFishing = true
+end
+
+function Rod.cl_reset_bait( self )
+	self.bait = 1
+	sm.gui.displayAlertText(language_tag("FishingBait") .. language_tag("None"))
+end
+
 function Rod.client_onEquippedUpdate( self, primaryState, secondaryState)
-	if self.chargeTime > 0 and not self.isThrowing then
+	if self.chargeTime > 0 and not (self.isThrowing or self.isFishing) then
 		sm.gui.setProgressFraction(self.chargeTime/chargeUpTime)
 	end
 	self.primaryState = primaryState
@@ -112,7 +191,7 @@ function Rod.client_onEquippedUpdate( self, primaryState, secondaryState)
 	elseif primaryState == 3 then
 		if self.returned then
 			self.returned = false
-		elseif not self.isThrowing and not self.isFishing then
+		elseif not self.isThrowing and not self.isFishing and not self:cl_should_stop_fishing() then
 			self.isThrowing = true
 			self.useCD = { active = true, timer = 1 }
 
@@ -153,20 +232,18 @@ function Rod.client_onUpdate( self, dt )
 
 	--self.cl.effects.hooks[params.id] = {pos = params.pos, dir = params.dir, hook = hookEffect, rope = ropeEffect, player = params.player}
 	for id, effect in pairs(self.cl.effects.hooks) do
-		if sm.exists(effect.hook) then
-			effect.pos = effect.pos + effect.dir*dt
+		effect.pos, effect.dir = self.calculate_trajectory(effect.pos, effect.dir, dt)
+		effect.offset = effect.offset - effect.offset*dt*5
 
-			local delta = self:calculateFirePosition(effect.player) - effect.pos
-			local rot = sm.vec3.getRotation(sm.vec3.new(0, 0, 1), delta)
-			local scale = sm.vec3.new(0.01, 0.01, delta:length())
+		local rot, delta = self:get_hook_rotation(effect.pos, effect.player)
+		local scale = sm.vec3.new(0.01, 0.01, delta:length())
 
-			effect.hook:setPosition(effect.pos)
-			effect.hook:setRotation(rot)
+		effect.hook:setPosition(effect.pos + sm.vec3.new(0,0,1)*effect.offset)
+		effect.hook:setRotation(rot)
 
-			effect.rope:setPosition(effect.pos + delta * 0.5)
-			effect.rope:setScale(scale)
-			effect.rope:setRotation(rot)
-		end
+		effect.rope:setPosition(effect.pos + delta * 0.5)
+		effect.rope:setScale(scale)
+		effect.rope:setRotation(rot)
 	end 
 end
 
@@ -179,7 +256,10 @@ function Rod:cl_cancel()
 
 		for id, effect in pairs(self.cl.effects.hooks) do
 			if effect.player == sm.localPlayer.getPlayer() then
-				self.network:sendToServer("sv_destroy_hook", id)
+				self.network:sendToServer("sv_destroy_hook", {id = id, catch = false})
+				if self.isThrowing then
+					self:cl_reset()
+				end
 			end
 		end
 	end
@@ -200,6 +280,7 @@ function Rod:client_onToggle()
 		local index = (self.bait + i) % #baits + 1
 		if index == 1 then
 			self.bait = index
+			break
 		elseif sm.localPlayer.getInventory():canSpend(baits[index], 1 ) then
 			self.bait = index
 			sm.gui.displayAlertText(language_tag("FishingBait") .. sm.shape.getShapeTitle(baits[index]))
@@ -242,6 +323,21 @@ function Rod.client_onRefresh( self )
 	self:client_onCreate()
 
 	self:loadAnimations()
+end
+
+function Rod.calculate_trajectory(pos, dir, dt)
+	if dir == sm.vec3.zero() then
+		return pos, dir
+	end
+
+	dir = (dir + sm.vec3.new(0, 0, -0.5)*dt):normalize() * dir:length()
+	pos = pos + dir*dt*5
+	return pos, dir
+end
+
+function Rod.get_hook_rotation(self, pos, player)
+	local delta = self:calculateFirePosition(player) - pos
+	return sm.vec3.getRotation(sm.vec3.new(0, 0, 1), delta), delta
 end
 --CLIENT END
 
