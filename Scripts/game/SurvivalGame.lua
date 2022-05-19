@@ -285,11 +285,11 @@ function SurvivalGame.loadCraftingRecipes( self )
 		workbench = "$SURVIVAL_DATA/CraftingRecipes/workbench.json",
 		dispenser = "$SURVIVAL_DATA/CraftingRecipes/dispenser.json",
 		cookbot = "$SURVIVAL_DATA/CraftingRecipes/cookbot.json",
-		craftbot = "$SURVIVAL_DATA/CraftingRecipes/craftbot.json",
-		dressbot = "$SURVIVAL_DATA/CraftingRecipes/dressbot.json"
+		craftbot = "$CONTENT_DATA/CraftingRecipes/craftbot.json",
+		dressbot = "$SURVIVAL_DATA/CraftingRecipes/dressbot.json",
 
 		--Raft
-		,farm = "$CONTENT_DATA/CraftingRecipes/farm.json",
+		farm = "$CONTENT_DATA/CraftingRecipes/farm.json",
 		scrappurifier = "$CONTENT_DATA/CraftingRecipes/scrappurifier.json",
 		scraptrees = "$CONTENT_DATA/CraftingRecipes/scraptrees.json",
 		scrapworkbench = "$CONTENT_DATA/CraftingRecipes/scrapworkbench.json",
