@@ -28,6 +28,19 @@ local baits = {
 	obj_consumable_longsandwich
 }
 
+local baitNames = {
+	none = obj_hook_render,
+	sunshake = obj_consumable_sunshake,
+	sandwich = obj_consumable_longsandwich
+}
+
+local minWait = 5*40 --ticks
+local maxWait = 20*40 --ticks
+local minBites = 1
+local maxBites = 5
+local nibbleTime = 20 --ticks
+local fishDistance = 3
+
 --SERVER Start
 function Rod.server_onCreate( self )
 	self.sv = {}
@@ -35,6 +48,8 @@ function Rod.server_onCreate( self )
 	self.sv.effects.hooks = {}
 
 	self.hookIDs = 2
+
+	self.fishList = sm.json.open("$CONTENT_DATA/Scripts/game/tools/fish.json")
 end
 
 function Rod.server_onFixedUpdate( self, timeStep )
@@ -59,6 +74,8 @@ function Rod.server_onFixedUpdate( self, timeStep )
 				if sm.exists(v) then
 					local ud = v:getUserData()
 					if ud and (ud.water or ud.chemical or ud.oil) then
+						self:sv_create_fish(effect, ud)
+
 						sm.effect.playEffect("Water - HitWaterTiny", effect.pos, sm.vec3.zero(), sm.quat.identity(), nil, get_effect_data(effect.dir))
 						self.network:sendToClients("cl_update_hook", {dir = sm.vec3.zero(), id = id, offset = -0.25})
 						self.network:sendToClient(effect.player, "cl_set_fishing")
@@ -69,8 +86,63 @@ function Rod.server_onFixedUpdate( self, timeStep )
 				end
 			end
 		end
+
+		if effect.fish then
+			local fish = effect.fish
+			if not fish.effect and fish.spawn < sm.game.getCurrentTick() then
+				local pos = effect.pos + sm.vec3.new(math.random()-0.5, math.random()-0.5, 0):normalize()*fishDistance
+				self.network:sendToClients("cl_create_fish", {pos = pos, rot = sm.quat.identity(), bitesLeft = fish.bitesLeft, biteTime = fish.biteTime, uuid = fish.uuid, id = id, direction = 1})
+				print("spawn fish pls")
+				fish.effect = true
+			end
+		end
 	end
 end
+
+function Rod.sv_create_fish( self, effect, ud)
+	local x = math.floor( effect.pos.x / 64 )
+	local y = math.floor( effect.pos.y / 64 )
+	local time = sm.storage.load( STORAGE_CHANNEL_TIME ).timeOfDay
+	
+	local possibleFish = {}
+	for k, fish in ipairs(self.fishList) do
+		if (x >= fish.location.xMin and x <= fish.location.xMax) and (y >= fish.location.yMin and y <= fish.location.yMax) then
+			if time >= fish.time.min and time <= fish.time.max then
+				if (fish.triggers.water and ud.water) or (fish.triggers.chemical and ud.chemical) or (fish.triggers.oil and ud.oil) then
+					for _, bait in ipairs(fish.baits) do
+						if effect.bait == baitNames[bait] then
+							possibleFish[#possibleFish + 1] = fish
+							break
+						end
+					end
+				end
+			end
+		end
+	end
+
+	local sum = 0
+	for _,fish in ipairs( possibleFish ) do
+		sum = sum + fish.rarity
+	end
+
+	local rand = math.random() * sum
+	sum = 0
+	for _,fish in ipairs( possibleFish ) do
+		sum = sum + fish.rarity
+
+		if rand <= sum then
+			local fishEffect = {}
+			fishEffect.uuid = sm.uuid.new(fish.uuid)
+			fishEffect.spawn = sm.game.getCurrentTick() + math.random(minWait, maxWait)
+			fishEffect.bitesLeft = math.random(minBites, maxBites)
+			fishEffect.biteTime = fish.biteTime
+			
+			self.sv.effects.hooks[effect.id].fish = fishEffect
+			break
+		end
+	end
+end
+
 
 function Rod.sv_create_hook( self, params, player )
 	local trigger = sm.areaTrigger.createBox(hookSize, params.pos, sm.quat.identity(), sm.areaTrigger.filter.areaTrigger)
@@ -83,7 +155,7 @@ function Rod.sv_create_hook( self, params, player )
 		self.network:sendToClient(player, "cl_reset_bait")
 	end
 
-	self.sv.effects.hooks[self.hookIDs] = {pos = params.pos, dir = params.dir, trigger = trigger, id = self.hookIDs,  bait = bait, player = player}
+	self.sv.effects.hooks[self.hookIDs] = {pos = params.pos, dir = params.dir, trigger = trigger, id = self.hookIDs, bait = bait, player = player}
 	self.network:sendToClients("cl_create_hook", {pos = params.pos, dir = params.dir, bait = bait, id = self.hookIDs, player = player})
 	self.hookIDs = self.hookIDs + 1
 end
@@ -147,10 +219,24 @@ function Rod.cl_create_hook( self, params )
 	self.cl.effects.hooks[params.id] = {pos = params.pos, dir = params.dir, hook = hookEffect, rope = ropeEffect, player = params.player, offset = 0}
 end
 
+function Rod.cl_create_fish( self, params )
+	local fish = params
+	fish.effect = sm.effect.createEffect("ShapeRenderable")
+	fish.effect:setParameter("uuid", params.uuid)
+	fish.effect:setParameter("color", sm.color.new(0,0,0))
+	fish.effect:setScale(hookSize*2)
+	fish.effect:start()
+
+	self.cl.effects.hooks[params.id].fish = fish
+end
+
 function Rod.cl_destroy_hook( self, id )
 	local effect = self.cl.effects.hooks[id]
 	effect.hook:destroy()
 	effect.rope:destroy() 
+	if effect.fish then
+		effect.fish.effect:destroy()
+	end
 	self.cl.effects.hooks[id] = nil
 end
 
@@ -244,6 +330,13 @@ function Rod.client_onUpdate( self, dt )
 		effect.rope:setPosition(effect.pos + delta * 0.5)
 		effect.rope:setScale(scale)
 		effect.rope:setRotation(rot)
+
+		if effect.fish then
+			rot, effect.fish.pos = self:animate_fish(effect.fish, effect.pos, dt)
+
+			effect.fish.effect:setPosition(effect.fish.pos)
+			effect.fish.effect:setRotation(rot)
+		end
 	end 
 end
 
@@ -339,6 +432,43 @@ function Rod.get_hook_rotation(self, pos, player)
 	local delta = self:calculateFirePosition(player) - pos
 	return sm.vec3.getRotation(sm.vec3.new(0, 0, 1), delta), delta
 end
+
+function Rod.animate_fish(self, fish, hookPos, dt)
+	local dir = hookPos - fish.pos
+	local distance = dir:length()
+	local newPos = fish.pos
+
+	if (fish.direction > 0 and distance < 0.01) or (fish.direction < 0 and distance > 0.99*fishDistance) then
+		if fish.direction < 0 or (fish.nibble and fish.nibble < sm.game.getCurrentTick()) then
+			fish.nibble = nil
+			fish.direction = fish.direction*(-1)
+			if fish.final then
+				print("2 late")
+			end
+		elseif not fish.nibble then
+			if fish.direction > 0 then
+				fish.bitesLeft = fish.bitesLeft - 1
+			end
+
+			if fish.bitesLeft == 0 then
+				fish.final = true
+				fish.nibble = sm.game.getCurrentTick() + fish.biteTime*40
+			else
+				fish.nibble = sm.game.getCurrentTick() + nibbleTime
+			end
+		end
+	else
+		newPos = fish.pos + dir:normalize() * (fishDistance-distance*0.99) * dt * fish.direction
+	end
+
+	if distance > 0 then
+		fish.rot = sm.vec3.getRotation(sm.vec3.new(0,0,1), sm.vec3.new(-1,0,0))
+		fish.rot = fish.rot*sm.vec3.getRotation(sm.vec3.new(0,0,1), dir:normalize())
+	end
+
+	return fish.rot, newPos
+end
+
 --CLIENT END
 
 
