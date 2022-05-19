@@ -40,7 +40,6 @@ Spear.swingExits = { "spear_exit1", "spear_exit2" }
 function Spear.client_onCreate( self )
 	self.isLocal = self.tool:isLocal()
 	self:init()
-
 end
 
 function Spear.client_onRefresh( self )
@@ -162,7 +161,6 @@ function Spear.loadAnimations( self )
 		)
 		setFpAnimation( self.fpAnimations, "idle", 0.0 )
 	end
-
 	--self.swingCooldowns[1] = self.fpAnimations.animations["spear_attack1"].info.duration
 	self.swingCooldowns[1] = 0.6
 	--self.swingCooldowns[2] = self.fpAnimations.animations["spear_attack2"].info.duration
@@ -173,6 +171,7 @@ function Spear.loadAnimations( self )
 end
 
 function Spear.client_onUpdate( self, dt )
+	
 	if not self.animationsLoaded then
 		return
 	end
@@ -258,6 +257,7 @@ function Spear.client_startLocalEvent( self, params )
 end
 
 function Spear.client_handleEvent( self, params )
+	
 	-- Setup animation data on equip
 	if params.name == "equip" then
 		self.equipped = true
@@ -391,29 +391,22 @@ function Spear.client_onEquip( self, animate )
 
 	self.equipped = true
 
-	local tpRend = {}
-	local fpRend = {}
-
-	for k,v in pairs( renderablesTp ) do tpRend[#tpRend+1] = v end
-	for k,v in pairs( renderablesFp ) do fpRend[#fpRend+1] = v end
-	for k,v in pairs( renderables ) do tpRend[#tpRend+1] = v end
-	for k,v in pairs( renderables ) do fpRend[#fpRend+1] = v end
-
-	self.tool:setTpRenderables( tpRend )
+	for k,v in pairs( renderables ) do renderablesTp[#renderablesTp+1] = v end
+	for k,v in pairs( renderables ) do renderablesFp[#renderablesFp+1] = v end
+	
+	self.tool:setTpRenderables( renderablesTp )
 
 	self:init()
 	self:loadAnimations()
-	-- idk why but commenting this out fixed it LMFAOOOO^^
 
 	setTpAnimation( self.tpAnimations, "equip", 0.0001 )
 
 	if self.isLocal then
-		self.tool:setFpRenderables( fpRend )
+		self.tool:setFpRenderables( renderablesFp )
 		swapFpAnimation( self.fpAnimations, "unequip", "equip", 0.2 )
 	end
-	
-	--self.network:sendToServer( "sv_updateBlocking", false )
 end
+
 function Spear.client_onUnequip( self, animate )
 
 	self.equipped = false
