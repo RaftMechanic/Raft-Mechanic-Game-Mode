@@ -36,14 +36,14 @@ end
 
 function Torch:cl_changeState()
     local parent = self.interactable:getSingleParent()
-    local e = self.shape.uuid ~= obj_torch_lit
+    local notBurning = self.shape.uuid ~= obj_torch_lit
     if parent then
-        e = self.shape.uuid == obj_torch_lit
+        notBurning = not notBurning
     end
-    if e then
+    if notBurning then
         self.effect:start()
     else
-        self.effect:stop()
+        self.effect:stopImmediate()
     end
 end
 
@@ -53,6 +53,7 @@ function Torch:server_onFixedUpdate()
     end
     local parent = self.interactable:getSingleParent()
     local isBurining = self.shape.uuid ~= sm.uuid.new("93e8a46a-5c24-42d2-8261-67be84e05ccf")
+    self.interactable:setActive(not isBurining)
     if not parent then return end
     if parent:isActive() == isBurining then
         self:sv_changeState()
