@@ -1,3 +1,4 @@
+---@diagnostic disable: lowercase-global
 --saplings.shapeset
 obj_birchtree_sapling = sm.uuid.new("eefb0967-d21c-445e-8120-0a09422e1374")
 obj_leafytree_sapling = sm.uuid.new("b84e5fbb-97f2-4de5-bc39-4adb325a56f1")
@@ -45,6 +46,8 @@ obj_potat = sm.uuid.new("f74c2891-79a9-45e0-982e-4896651c2259")
 
 --interactive.shapeset
 obj_torch = sm.uuid.new("ce986935-5b57-4249-acbb-04ef6666bb03")
+obj_torch_lit = sm.uuid.new("93e8a46a-5c24-42d2-8261-67be84e05ccf")
+obj_torch_burnt = sm.uuid.new("ca0baeac-1ba7-41b2-9119-2fa09ed6c96a")
 obj_scrap_field = sm.uuid.new("8e75cddb-040e-4813-8dd6-7e72f3288a91")
 obj_large_field = sm.uuid.new("c80e2932-0d21-48bb-b5a2-dba03d73cfb7")
 obj_airtank_empty = sm.uuid.new("03075a5a-92f5-49bd-b132-7d8e0cb80156")
@@ -76,7 +79,7 @@ tool_spear = sm.uuid.new("0db1ecd5-503d-4dd3-807e-869c243a7c08")
 tool_harpoon = sm.uuid.new("e34387d3-fa29-4831-89b8-c94417b6fce6")
 
 --projectiles.projectileset
-projectile_harpoon =  sm.uuid.new("382c818f-bdf6-41fd-96dd-7a4a1a176d9a")
+projectile_harpoon = sm.uuid.new("382c818f-bdf6-41fd-96dd-7a4a1a176d9a")
 
 --raft_enemies.characterset
 unit_sharkbot = sm.uuid.new("817c128f-c3c0-4e9e-bfa6-30337bbfb0a4")

@@ -18,6 +18,10 @@
          },
          "renderable" : "$CONTENT_DATA/Objects/Renderables/Interactive/Torch.rend",
          "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "Torch",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Torch.lua"
+         },
          "stackSize" : 10,
          "sticky" : "-Y",
          "uuid" : "ce986935-5b57-4249-acbb-04ef6666bb03"
@@ -40,6 +44,10 @@
          },
          "renderable" : "$CONTENT_DATA/Objects/Renderables/Interactive/Torch_burning.rend",
          "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "Torch",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Torch.lua"
+         },
          "stackSize" : 10,
          "sticky" : "-Y",
          "uuid" : "93e8a46a-5c24-42d2-8261-67be84e05ccf"
@@ -62,6 +70,10 @@
          },
          "renderable" : "$CONTENT_DATA/Objects/Renderables/Interactive/Torch_burnt.rend",
          "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "Torch",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Torch.lua"
+         },
          "stackSize" : 10,
          "sticky" : "-Y",
          "uuid" : "ca0baeac-1ba7-41b2-9119-2fa09ed6c96a"
@@ -1607,20 +1619,28 @@
                {
                   "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/Collector.fbx",
                   "subMeshMap" : {
-                     "Shack_Atlas": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_nor.tga"
-								]
-							},
+                     "Shack_Atlas" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_nor.tga"
+                        ]
+                     },
                      "bark" : {
                         "material" : "DifAsgNor",
                         "textureList" : [
                            "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_dif.tga",
                            "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_asg.tga",
                            "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_nor.tga"
+                        ]
+                     },
+                     "cloth" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Character/Char_Dropoff/char_dropoffcloth_dif.tga",
+                           "$SURVIVAL_DATA/Character/Char_Dropoff/char_dropoffcloth_asg.tga",
+                           "$SURVIVAL_DATA/Character/Char_Dropoff/char_dropoffcloth_nor.tga"
                         ]
                      },
                      "innerwood" : {
@@ -1638,15 +1658,7 @@
                            "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
                            "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
                         ]
-                     },
-                     "cloth": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Character/Char_Dropoff/char_dropoffcloth_dif.tga",
-									"$SURVIVAL_DATA/Character/Char_Dropoff/char_dropoffcloth_asg.tga",
-									"$SURVIVAL_DATA/Character/Char_Dropoff/char_dropoffcloth_nor.tga"
-								]
-							}
+                     }
                   }
                }
             ]
