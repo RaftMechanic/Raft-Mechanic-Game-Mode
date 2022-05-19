@@ -18,6 +18,9 @@ dofile( "$SURVIVAL_DATA/Scripts/game/util/Timer.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestEntityManager.lua" )
 dofile( "$GAME_DATA/Scripts/game/managers/EventManager.lua" )
 
+--Import the wind manager
+dofile( "$CONTENT_DATA/Scripts/game/managers/WindManager.lua" )
+
 ---@class SurvivalGame : GameClass
 ---@field sv table
 ---@field cl table

@@ -1,3 +1,6 @@
+dofile( "$CONTENT_DATA/Scripts/game/survival_quests.lua" )
+
+--TODO: caching?
 WindManager = class()
 
 -- [quest] = sm.vec.new(x, y, z)
@@ -21,9 +24,9 @@ function WindManager:getWindDir(location, callback)
     local windDirection = -dirMiddle:cross(sm.vec3.new(0,0,1))
 
     -- get the center with our custom callback
-    local windCenter = self.getWindCenter(callback)
+    local windCenter, default = self.getWindCenter(callback)
 
-    if windCenter then
+    if windCenter and not default then
         windDirection = location - windCenter
     end
     
@@ -35,15 +38,15 @@ end
 
 ---Get the wind center point based on active quests
 ---@param callback function
----@return Vec3 | nil
+---@returns Vec3 boolean
 function WindManager.getWindCenter(callback)
     for quest, location in pairs(windMap) do
         local completed = callback(quest)
 
         if not completed then
-            return location -- break the loop
+            return location, false -- break the loop
         end
     end
 
-    return nil
+    return sm.vec3.new(0, 0, 0), true
 end

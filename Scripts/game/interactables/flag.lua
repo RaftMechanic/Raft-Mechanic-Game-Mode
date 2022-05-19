@@ -15,7 +15,7 @@ end
 function Flag.client_onUpdate( self, dt )
     if not self.effect:isPlaying() then self.effect:start() end
 
-    local point = g_windManager:getWindCenter(function (quest)
+    local point, _ = g_windManager:getWindCenter(function (quest)
         return g_questManager:Cl_IsQuestComplete(quest)
     end)
 
