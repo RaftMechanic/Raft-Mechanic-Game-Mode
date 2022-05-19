@@ -18,6 +18,11 @@ dofile( "$SURVIVAL_DATA/Scripts/game/util/Timer.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestEntityManager.lua" )
 dofile( "$GAME_DATA/Scripts/game/managers/EventManager.lua" )
 
+--RAFT
+dofile( "$CONTENT_DATA/Scripts/game/managers/WindManager.lua" )
+
+
+
 ---@class SurvivalGame : GameClass
 ---@field sv table
 ---@field cl table
@@ -28,6 +33,8 @@ SurvivalGame.enableRestrictions = true
 SurvivalGame.enableFuelConsumption = true
 SurvivalGame.enableAmmoConsumption = true
 SurvivalGame.enableUpgrade = true
+
+--SURVIVAL_DEV_SPAWN_POINT = sm.vec3.new(-1682.5, -1722, 2)
 
 local SyncInterval = 400 -- 400 ticks | 10 seconds
 local IntroFadeDuration = 1.1
