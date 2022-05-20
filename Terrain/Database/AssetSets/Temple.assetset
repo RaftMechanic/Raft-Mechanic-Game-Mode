@@ -340,7 +340,7 @@
              ]
          }
       },
-      {
+        {
          "uuid": "3db3cf6d-cfb3-4c8b-9b29-f26c978d1238",
          "col": "$CONTENT_DATA/Terrain/Collision/Temple/Templebrick_col.obj",
          "name": "Temple brick 3",
@@ -385,7 +385,149 @@
                  }
              ]
          }
-     }
-
+    },
+    {
+        "uuid": "784a9aff-80f3-4763-907b-1ea7020c7370",
+        "col": "$SURVIVAL_DATA/Terrain/Collision/Building/env_building_parking_col.obj",
+        "name": "Raft Parking",
+        "physics": {
+             "mass": 100000,
+             "material": "Metal"
+         },
+        "renderable": {
+                "lodList": [
+                    {
+                        "includes": [
+                            "POSITION",
+                            "NORMAL",
+                            "UV0",
+                            "TANGENT"
+                        ],
+                        "maxViewDistance": 225,
+                        "mesh": "$CONTENT_DATA/Terrain/Mesh/Temple/raft_parking.fbx",
+                        "subMeshMap": {
+                            "caution": {
+                                "custom": {
+                                    "color": "606060ff"
+                                },
+                                "material": "DifAsgNor",
+                                "textureList": [
+                                    "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_plastic_dif.tga",
+                                    "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_plastic_asg.tga",
+                                    "$GAME_DATA/Textures/Materialtextures/normal_nor.tga"
+                                ]
+                            },
+                            "caution02": {
+                                "custom": {
+                                    "color": "747474ff"
+                                },
+                                "material": "DifAsgNor",
+                                "textureList": [
+                                    "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_plastic_dif.tga",
+                                    "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_plastic_asg.tga",
+                                    "$GAME_DATA/Textures/Materialtextures/normal_nor.tga"
+                                ]
+                            },
+                            "caution03": {
+                                "custom": {
+                                    "color": "91241cff"
+                                },
+                                "material": "DifAsgNor",
+                                "textureList": [
+                                    "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_plastic_dif.tga",
+                                    "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_plastic_asg.tga",
+                                    "$GAME_DATA/Textures/Materialtextures/normal_nor.tga"
+                                ]
+                            },
+                            "concrete": {
+                                "material": "DifAsgNor",
+                                "textureList": [
+                                    "$CONTENT_DATA/Terrain/Textures/Temple/raft_building_concrete_flat_dif.tga",
+                                    "$GAME_DATA/Textures/Tiled/Concrete/t_tiled_building_concrete_flat_asg.tga",
+                                    "$GAME_DATA/Textures/Tiled/Concrete/t_tiled_building_concrete_flat_nor.tga"
+                                ]
+                            },
+                            "concrete02": {
+                                "custom": {
+                                    "color": "f4f4f4ff"
+                                },
+                                "material": "DifAsgNor",
+                                "textureList": [
+                                    "$GAME_DATA/Textures/Tiled/Concrete/t_tiled_building_concrete_dif.tga",
+                                    "$GAME_DATA/Textures/Tiled/Concrete/t_tiled_building_concrete_asg.tga",
+                                    "$GAME_DATA/Textures/Tiled/Concrete/t_tiled_building_concrete_nor.tga"
+                                ]
+                            },
+                            "light": {
+                                "custom": {
+                                    "color": "light"
+                                },
+                                "material": "DifAsgNor",
+                                "textureList": [
+                                    "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_light_dif.tga",
+                                    "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_light_asg.tga",
+                                    "$GAME_DATA/Textures/Materialtextures/normal_nor.tga"
+                                ]
+                            },
+                            "net": {
+                                "custom": {
+                                    "color": "shinymetal2"
+                                },
+                                "material": "DifAsgNorAlphaFlip",
+                                "textureList": [
+                                    "$GAME_DATA/Textures/Tiled/Metalalpha/t_tiled_building_diamondnet_dif.tga",
+                                    "$GAME_DATA/Textures/Tiled/Metalalpha/t_tiled_building_diamondnet_asg.tga",
+                                    "$GAME_DATA/Textures/Tiled/Metalalpha/t_tiled_building_diamondnet_nor.tga"
+                                ]
+                            },
+                            "parking": {
+                                "custom": {
+                                    "color": "plastic"
+                                },
+                                "material": "DifAsgNor",
+                                "textureList": [
+                                    "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_parking_dif.tga",
+                                    "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_parking_asg.tga",
+                                    "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_parking_nor.tga"
+                                ]
+                            },
+                            "plate": {
+                                "custom": {
+                                    "color": "plate"
+                                },
+                                "material": "DifAsgNor",
+                                "textureList": [
+                                    "$SURVIVAL_DATA/Objects/Textures/blocks/blk_spaceship02_dif.tga",
+                                    "$SURVIVAL_DATA/Objects/Textures/blocks/blk_spaceship02_asg.tga",
+                                    "$SURVIVAL_DATA/Objects/Textures/blocks/blk_spaceship02_nor.tga"
+                                ]
+                            },
+                            "shinymetal": {
+                                "custom": {
+                                    "color": "shinymetal"
+                                },
+                                "material": "DifAsgNor",
+                                "textureList": [
+                                    "$GAME_DATA/Textures/Tiled/Metal/t_tiled_building_shinymetal_dif.tga",
+                                    "$GAME_DATA/Textures/Tiled/Metal/t_tiled_building_shinymetal_asg.tga",
+                                    "$GAME_DATA/Textures/Materialtextures/normal_nor.tga"
+                                ]
+                            },
+                            "shinymetal2": {
+                                "custom": {
+                                    "color": "shinymetal2"
+                                },
+                                "material": "DifAsgNor",
+                                "textureList": [
+                                    "$GAME_DATA/Textures/Tiled/Metal/t_tiled_building_shinymetal_dif.tga",
+                                    "$GAME_DATA/Textures/Tiled/Metal/t_tiled_building_shinymetal_asg.tga",
+                                    "$GAME_DATA/Textures/Materialtextures/normal_nor.tga"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        }
    ]
 }
