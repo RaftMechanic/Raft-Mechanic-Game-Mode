@@ -34,8 +34,8 @@ local baitNames = {
 	sandwich = obj_consumable_longsandwich
 }
 
-local minWait = 5*40 --ticks
-local maxWait = 20*40 --ticks
+local minWait = 10--5*40 --ticks
+local maxWait = 40--20*40 --ticks
 local minBites = 1
 local maxBites = 5
 local nibbleTime = 20 --ticks
@@ -74,7 +74,8 @@ function Rod.server_onFixedUpdate( self, timeStep )
 				if sm.exists(v) then
 					local ud = v:getUserData()
 					if ud and (ud.water or ud.chemical or ud.oil) then
-						self:sv_create_fish(effect, ud)
+						effect.ud = ud
+						self:sv_create_fish(id)
 
 						sm.effect.playEffect("Water - HitWaterTiny", effect.pos, sm.vec3.zero(), sm.quat.identity(), nil, get_effect_data(effect.dir))
 						self.network:sendToClients("cl_update_hook", {dir = sm.vec3.zero(), id = id, offset = -0.25})
@@ -99,10 +100,12 @@ function Rod.server_onFixedUpdate( self, timeStep )
 	end
 end
 
-function Rod.sv_create_fish( self, effect, ud)
+function Rod.sv_create_fish( self, id)
+	local effect = self.sv.effects.hooks[id]
 	local x = math.floor( effect.pos.x / 64 )
 	local y = math.floor( effect.pos.y / 64 )
 	local time = sm.storage.load( STORAGE_CHANNEL_TIME ).timeOfDay
+	local ud = effect.ud
 	
 	local possibleFish = {}
 	for k, fish in ipairs(self.fishList) do
@@ -161,16 +164,24 @@ function Rod.sv_create_hook( self, params, player )
 end
 
 function Rod.sv_destroy_hook( self, params, player )
-	if not params.catch then
-		local bait = self.sv.effects.hooks[params.id].bait
-		if bait ~= baits [1] then
-			sm.container.beginTransaction()
-			sm.container.collect(player:getInventory(), bait, 1)
-			sm.container.endTransaction()
-		end
-	end
 	local effect = self.sv.effects.hooks[params.id]
-	sm.effect.playEffect("Water - HitWaterTiny", effect.pos, sm.vec3.zero(), sm.quat.identity(), nil, get_effect_data(sm.vec3.one()))
+	if effect and not effect.trigger then
+		sm.effect.playEffect("Water - HitWaterTiny", effect.pos, sm.vec3.zero(), sm.quat.identity(), nil, get_effect_data(sm.vec3.one()*0.1))
+	end
+
+	if params.returnBait and effect.bait ~= baits[1] then
+		sm.container.beginTransaction()
+		sm.container.collect(player:getInventory(), effect.bait, 1)
+		sm.container.endTransaction()
+	end
+
+	if params.catch then
+		sm.container.beginTransaction()
+		sm.container.collect( player:getInventory(), params.catch, 1 )
+		sm.container.endTransaction()
+		self.network:sendToClient(player, "cl_on_catch", {uuid = params.catch, quantity = 1} )
+		sm.effect.playEffect("Loot - Pickup", effect.pos)
+	end
 
 	self.network:sendToClients("cl_destroy_hook", params.id)
 	self.sv.effects.hooks[params.id] = nil
@@ -178,6 +189,17 @@ end
 
 function Rod.server_onRefresh( self )
 	self:server_onCreate()
+end
+
+function Rod.sv_spend_bait(self, params, player)
+	if params.bait ~= baits [1] then
+		sm.container.beginTransaction()
+		sm.container.spend(player:getInventory(), params.bait, 1)
+		if not sm.container.endTransaction() then
+			self.network:sendToClient(player, "cl_out_of_bait")
+			self.network:sendToClient(player, "cl_cancel", true)
+		end
+	end
 end
 
 function get_effect_data(dir)
@@ -216,7 +238,7 @@ function Rod.cl_create_hook( self, params )
 	ropeEffect:setParameter("color", sm.color.new(1,1,1))
 	ropeEffect:start()
 
-	self.cl.effects.hooks[params.id] = {pos = params.pos, dir = params.dir, hook = hookEffect, rope = ropeEffect, player = params.player, offset = 0}
+	self.cl.effects.hooks[params.id] = {pos = params.pos, dir = params.dir, hook = hookEffect, rope = ropeEffect, player = params.player, bait = params.bait, offset = 0}
 end
 
 function Rod.cl_create_fish( self, params )
@@ -256,7 +278,7 @@ end
 
 function Rod.cl_reset_bait( self )
 	self.bait = 1
-	sm.gui.displayAlertText(language_tag("FishingBait") .. language_tag("None"))
+	sm.gui.displayAlertText(language_tag("FishingBait") .. language_tag("FishingBaitNone"))
 end
 
 function Rod.client_onEquippedUpdate( self, primaryState, secondaryState)
@@ -316,7 +338,6 @@ function Rod.client_onUpdate( self, dt )
 
 	self:client_updateAnimations(dt)
 
-	--self.cl.effects.hooks[params.id] = {pos = params.pos, dir = params.dir, hook = hookEffect, rope = ropeEffect, player = params.player}
 	for id, effect in pairs(self.cl.effects.hooks) do
 		effect.pos, effect.dir = self.calculate_trajectory(effect.pos, effect.dir, dt)
 		effect.offset = effect.offset - effect.offset*dt*5
@@ -332,15 +353,22 @@ function Rod.client_onUpdate( self, dt )
 		effect.rope:setRotation(rot)
 
 		if effect.fish then
-			rot, effect.fish.pos = self:animate_fish(effect.fish, effect.pos, dt)
+			rot, effect.fish.pos, destroy = self:animate_fish(effect, effect.pos, dt)
 
 			effect.fish.effect:setPosition(effect.fish.pos)
 			effect.fish.effect:setRotation(rot)
+			if destroy then
+				effect.fish.effect:destroy()
+				effect.fish = nil
+				if effect.player == sm.localPlayer.getPlayer() then
+					self.network:sendToServer("sv_create_fish", id)
+				end
+			end
 		end
 	end 
 end
 
-function Rod:cl_cancel()
+function Rod:cl_cancel(noRefund)
 	--check if catch here
 
 	if self.isFishing or self.isThrowing then
@@ -349,7 +377,13 @@ function Rod:cl_cancel()
 
 		for id, effect in pairs(self.cl.effects.hooks) do
 			if effect.player == sm.localPlayer.getPlayer() then
-				self.network:sendToServer("sv_destroy_hook", {id = id, catch = false})
+				local catch = nil
+				if effect.fish and effect.fish.final and not effect.fish.escape then
+					noRefund = true
+					catch = effect.fish.uuid
+				end
+
+				self.network:sendToServer("sv_destroy_hook", {id = id, returnBait = not noRefund, catch = catch})
 				if self.isThrowing then
 					self:cl_reset()
 				end
@@ -380,7 +414,7 @@ function Rod:client_onToggle()
 			return true
 		end
 	end
-	sm.gui.displayAlertText(language_tag("FishingBait") .. language_tag("None"))
+	sm.gui.displayAlertText(language_tag("FishingBait") .. language_tag("FishingBaitNone"))
 	return true
 end
 
@@ -433,16 +467,29 @@ function Rod.get_hook_rotation(self, pos, player)
 	return sm.vec3.getRotation(sm.vec3.new(0, 0, 1), delta), delta
 end
 
-function Rod.animate_fish(self, fish, hookPos, dt)
+function Rod.animate_fish(self, effect, hookPos, dt)
+	local fish = effect.fish
 	local dir = hookPos - fish.pos
 	local distance = dir:length()
 	local newPos = fish.pos
+	
+	local speed = fishDistance-distance*0.99
+	if fish.escape then
+		speed = math.max(distance, fishDistance)
+	end
 
-	if (fish.direction > 0 and distance < 0.01) or (fish.direction < 0 and distance > 0.99*fishDistance) then
+	local nextPos = fish.pos + dir:normalize() * (math.max(speed, 0.5)) * dt * fish.direction
+	local nextDir = hookPos - nextPos
+	local nextDistance = nextDir:length()
+	if (fish.direction > 0 and (nextDistance <= 0.15 or (newPos - nextPos):length() > distance) ) or (fish.direction < 0 and nextDistance >= 0.99*fishDistance and not fish.final) then
 		if fish.direction < 0 or (fish.nibble and fish.nibble < sm.game.getCurrentTick()) then
 			fish.nibble = nil
 			fish.direction = fish.direction*(-1)
 			if fish.final then
+				fish.escape = true
+				if effect.player == sm.localPlayer.getPlayer() then
+					self.network:sendToServer("sv_spend_bait", {bait = effect.bait, id = effect.id})
+				end
 				print("2 late")
 			end
 		elseif not fish.nibble then
@@ -453,20 +500,38 @@ function Rod.animate_fish(self, fish, hookPos, dt)
 			if fish.bitesLeft == 0 then
 				fish.final = true
 				fish.nibble = sm.game.getCurrentTick() + fish.biteTime*40
+				sm.effect.playEffect("Water - HitWaterBig", effect.pos, sm.vec3.zero(), sm.quat.identity(), nil, get_effect_data(sm.vec3.one()))
+				sm.effect.playEffect("Eat - MunchSound", effect.pos)
+				sm.audio.play("Retrofmblip")
+				effect.offset = -1.5
 			else
 				fish.nibble = sm.game.getCurrentTick() + nibbleTime
+				sm.effect.playEffect("Water - HitWaterTiny", effect.pos, sm.vec3.zero(), sm.quat.identity(), nil, get_effect_data(sm.vec3.one()*0.01))
+				sm.effect.playEffect("Eat - MunchSound", effect.pos)
+				effect.offset = -0.5
 			end
 		end
 	else
-		newPos = fish.pos + dir:normalize() * (fishDistance-distance*0.99) * dt * fish.direction
+		newPos = nextPos
 	end
 
-	if distance > 0 then
-		fish.rot = sm.vec3.getRotation(sm.vec3.new(0,0,1), sm.vec3.new(-1,0,0))
-		fish.rot = fish.rot*sm.vec3.getRotation(sm.vec3.new(0,0,1), dir:normalize())
-	end
+		
+	if fish.escape then dir = -dir end
+	--fish.rot = sm.vec3.getRotation(sm.vec3.new(0,0,1), sm.vec3.new(-1,0,0))
+	fish.rot = sm.vec3.getRotation(sm.vec3.new(1,0,0), (dir:normalize() + dir:cross(sm.vec3.new(0,0,1)):normalize()*0.25*math.cos(sm.game.getCurrentTick()/10)):normalize())
+	fish.rot = fish.rot*sm.vec3.getRotation(sm.vec3.new(0,0,1), sm.vec3.new(-1,0,0))
+	fish.rot = fish.rot*sm.vec3.getRotation(sm.vec3.new(0,0,1), sm.vec3.new(0,0,-1))
 
-	return fish.rot, newPos
+	return fish.rot, newPos, distance > fishDistance*3
+end
+
+function Rod.cl_out_of_bait(self)
+	self:cl_reset_bait()
+	sm.gui.displayAlertText(language_tag("FishingOutOfBait"))
+end
+
+function Rod:cl_on_catch( params )
+	sm.gui.displayAlertText( language_tag("FishingGetItem") .. " #ff9d00" .. sm.shape.getShapeTitle(params.uuid) .. " #df7f00x" .. tostring(params.quantity) )
 end
 
 --CLIENT END

@@ -51,5 +51,7 @@
     "Trader_dialogue6": "I've missed company for so long *sobs*. Keep rescuing more of my crew! In the meantime I'll think of a plan to get us all off this planet and return home…",
     
     "FishingBait": "Bait: ",
-    "None": "None"
+    "FishingOutOfBait": "Out of Baits!",
+    "FishingBaitNone": "None",
+    "FishingGetItem": "Fished: "
 }
