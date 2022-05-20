@@ -74,7 +74,7 @@ function initPoiTiles()
 	addPoiTileLegacy( POI_LABYRINTH_MEDIUM, 1, "$SURVIVAL_DATA/Terrain/Tiles/poi/HayBaleLabyrinth_128_01.tile" )
 
 	-- Special (MEADOW)
-	addPoiTileLegacy( POI_MECHANICSTATION_MEDIUM, 1, "$SURVIVAL_DATA/Terrain/Tiles/poi/MechanicStation_128_01.tile" )
+	addPoiTileLegacy( POI_MECHANICSTATION_MEDIUM, 1, "$CONTENT_DATA/Terrain/Tiles/RangerStation.tile" )
 
 	addPoiTileLegacy( POI_PACKINGSTATIONVEG_MEDIUM, 1, "$SURVIVAL_DATA/Terrain/Tiles/poi/PackingStation_Vegetable_128_01.tile" )
 
