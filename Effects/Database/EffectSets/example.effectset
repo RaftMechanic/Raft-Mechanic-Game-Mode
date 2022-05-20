@@ -22,7 +22,7 @@
 			{
 				"type": "pointLight",
 				"name": "",
-				"offset": { "x": 0.0, "y": -0.65, "z": -0.25 },
+				"offset": { "x": 0.0, "y": 0.0, "z": 0.25 },
 				"parameters":
 				[
 					"color",
@@ -35,7 +35,7 @@
 			{
 				"type": "particle",
 				"name": "p_enviroment_fire_small_01",
-				"offset": { "x": 0.0, "y": -0.45, "z": -0.25 },
+				"offset": { "x": 0.0, "y": -0.35, "z": 0.3 },
 				"attached": true,
 				"delay": 0.0
 			}
