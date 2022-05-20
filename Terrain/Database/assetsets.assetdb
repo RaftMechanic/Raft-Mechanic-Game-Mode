@@ -1,8 +1,8 @@
 {
    "assetSetList" : [
       {
-         "assetSet" : "$CONTENT_DATA/Terrain/Database/AssetSets/example.assetset",
-         "categories" : []
+         "assetSet" : "$CONTENT_DATA/Terrain/Database/AssetSets/Temple.assetset",
+         "categories" : ["Raft/Temple"]
       }
    ]
 }

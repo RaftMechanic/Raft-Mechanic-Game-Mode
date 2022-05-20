@@ -1,0 +1,391 @@
+{
+   "assetListRenderable" : [
+   {
+         "uuid": "3db3cf6d-cfb3-4c8b-9b29-f26c978d0001",
+         "col": "$CONTENT_DATA/Terrain/Collision/Temple/Temple_col.obj",
+         "name": "Temple",
+         "physics": {
+             "mass": 100000,
+             "material": "Stone"
+         },
+         "renderable": {
+             "lodList": [
+                 {
+                     "maxViewDistance": 2500,
+                     "mesh": "$CONTENT_DATA/Terrain/Mesh/Temple/Temple.fbx",
+                     "subMeshMap": {
+                         "Wall_01": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wall_01_v.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Stones_01": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Stones_01_2.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Wall_02": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wall_02_v.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Black": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wood_01_2.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Roots_01": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wood_01_2.png",
+                                 "",
+                                 ""
+                             ]
+                         }
+                     }
+                 }
+             ]
+         }
+      },
+      {
+         "uuid": "3db3cf6d-cfb3-4c8b-9b29-f26c978d1233",
+         "col": "$CONTENT_DATA/Terrain/Collision/Temple/TempleHouse_col.obj",
+         "name": "TempleHouse",
+         "physics": {
+             "mass": 100000,
+             "material": "Stone"
+         },
+         "renderable": {
+             "lodList": [
+                 {
+                     "maxViewDistance": 2500,
+                     "mesh": "$CONTENT_DATA/Terrain/Mesh/Temple/Templehouse.fbx",
+                     "subMeshMap": {
+                         "Wall_01": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wall_01_v.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Stones_01": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Stones_01_2.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Wall_02": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wall_02_v.png",
+                                 "",
+                                 ""
+                             ]
+                         }
+                     }
+                 }
+             ]
+         }
+      },
+      {
+         "uuid": "3db3cf6d-cfb3-4c8b-9b29-f26c978d1985",
+         "col": "$CONTENT_DATA/Terrain/Collision/Temple/Pillar_col.obj",
+         "name": "Pilar",
+         "physics": {
+             "mass": 100000,
+             "material": "Stone"
+         },
+         "renderable": {
+             "lodList": [
+                 {
+                     "maxViewDistance": 2500,
+                     "mesh": "$CONTENT_DATA/Terrain/Mesh/Temple/Pillar.fbx",
+                     "subMeshMap": {
+                         "Wall_01": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wall_01_v.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Stones_01": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Stones_01_2.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Wall_02": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wall_02_v.png",
+                                 "",
+                                 ""
+                             ]
+                         }
+                     }
+                 }
+             ]
+         }
+      },
+      {
+         "uuid": "3db3cf6d-cfb3-4c8b-9b29-f26c978d1234",
+         "col": "$CONTENT_DATA/Terrain/Collision/Temple/Pillarshort_col.obj",
+         "name": "Pilar Short",
+         "physics": {
+             "mass": 100000,
+             "material": "Stone"
+         },
+         "renderable": {
+             "lodList": [
+                 {
+                     "maxViewDistance": 2500,
+                     "mesh": "$CONTENT_DATA/Terrain/Mesh/Temple/Pillar(short).fbx",
+                     "subMeshMap": {
+                         "Wall_01": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wall_01_v.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Stones_01": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Stones_01_2.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Wall_02": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wall_02_v.png",
+                                 "",
+                                 ""
+                             ]
+                         }
+                     }
+                 }
+             ]
+         }
+      },
+      {
+         "uuid": "3db3cf6d-cfb3-4c8b-9b29-f26c978d1235",
+         "col": "$CONTENT_DATA/Terrain/Collision/Temple/stairsmall_col.obj",
+         "name": "Stairs Small",
+         "physics": {
+             "mass": 100000,
+             "material": "Stone"
+         },
+         "renderable": {
+             "lodList": [
+                 {
+                     "maxViewDistance": 2500,
+                     "mesh": "$CONTENT_DATA/Terrain/Mesh/Temple/Stair(small).fbx",
+                     "subMeshMap": {
+                         "Wall_01": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wall_01_v.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Stones_01": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Stones_01_2.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Wall_02": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wall_02_v.png",
+                                 "",
+                                 ""
+                             ]
+                         }
+                     }
+                 }
+             ]
+         }
+      },
+      {
+         "uuid": "3db3cf6d-cfb3-4c8b-9b29-f26c978d1236",
+         "col": "$CONTENT_DATA/Terrain/Collision/Temple/Templebrick_col.obj",
+         "name": "Temple brick 1",
+         "physics": {
+             "mass": 100000,
+             "material": "Stone"
+         },
+         "renderable": {
+             "lodList": [
+                 {
+                     "maxViewDistance": 2500,
+                     "mesh": "$CONTENT_DATA/Terrain/Mesh/Temple/templebrick1.fbx",
+                     "subMeshMap": {
+                         "Wall_01": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wall_01_v.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Stones_01": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Stones_01_2.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Wall_02": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wall_02_v.png",
+                                 "",
+                                 ""
+                             ]
+                         }
+                     }
+                 }
+             ]
+         }
+      },
+      {
+         "uuid": "3db3cf6d-cfb3-4c8b-9b29-f26c978d1237",
+         "col": "$CONTENT_DATA/Terrain/Collision/Temple/Templebrick_col.obj",
+         "name": "Temple brick 2",
+         "physics": {
+             "mass": 100000,
+             "material": "Stone"
+         },
+         "renderable": {
+             "lodList": [
+                 {
+                     "maxViewDistance": 85,
+                     "mesh": "$CONTENT_DATA/Terrain/Mesh/Temple/templebrick2.fbx",
+                     "subMeshMap": {
+                         "Wall_01": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wall_01_v.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Stones_01": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Stones_01_2.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Wall_02": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wall_02_v.png",
+                                 "",
+                                 ""
+                             ]
+                         }
+                     }
+                 }
+             ]
+         }
+      },
+      {
+         "uuid": "3db3cf6d-cfb3-4c8b-9b29-f26c978d1238",
+         "col": "$CONTENT_DATA/Terrain/Collision/Temple/Templebrick_col.obj",
+         "name": "Temple brick 3",
+         "physics": {
+             "mass": 100000,
+             "material": "Stone"
+         },
+         "renderable": {
+             "lodList": [
+                 {
+                     "maxViewDistance": 2500,
+                     "mesh": "$CONTENT_DATA/Terrain/Mesh/Temple/templebrick3.fbx",
+                     "subMeshMap": {
+                         "Wall_01": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wall_01_v.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Stones_01": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Stones_01_2.png",
+                                 "",
+                                 ""
+                             ]
+                         },
+                         "Wall_02": {
+                             "custom": {},
+                             "material": "Dif",
+                             "textureList": [
+                                 "$CONTENT_DATA/Terrain/Textures/Temple/Wall_02_v.png",
+                                 "",
+                                 ""
+                             ]
+                         }
+                     }
+                 }
+             ]
+         }
+     }
+
+   ]
+}
