@@ -1,0 +1,113 @@
+{
+   "lodList" : [
+      {
+         "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/obj_waterpurifier_small.obj",
+         "subMeshList" : [
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_smallchest_dif.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_smallchest_asg.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_smallchest_nor.tga"
+               ]
+            },
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_smallchest_extras_dif.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_smallchest_extras_asg.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_smallchest_extras_nor.tga"
+               ]
+            },
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
+               ]
+            },
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$GAME_DATA/Textures/Tiled/Wood/t_tiled_burntwood_dif.tga",
+                  "$GAME_DATA/Textures/Tiled/Wood/t_tiled_burntwood_asg.tga",
+                  "$GAME_DATA/Textures/Tiled/Wood/t_tiled_burntwood_nor.tga"
+               ]
+            },
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
+               ]
+            },
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$GAME_DATA/Textures/Tiled/Wood/t_tiled_burntwood_dif.tga",
+                  "$GAME_DATA/Textures/Tiled/Wood/t_tiled_burntwood_asg.tga",
+                  "$GAME_DATA/Textures/Tiled/Wood/t_tiled_burntwood_nor.tga"
+               ]
+            },
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_makeshiftengine_dif.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_makeshiftengine_asg.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_makeshiftengine_nor.tga"
+               ]
+            },
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_water_dif.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_water_asg.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_water_nor.tga"
+               ]
+            },
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_makeshiftseat_dif.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_makeshiftseat_asg.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_makeshiftseat_nor.tga"
+               ]
+            },
+            {
+               "material" : "Glass",
+               "textureList" : [
+                  "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_dif.tga",
+                  "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
+                  "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
+               ]
+            },
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_dif.tga",
+                  "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
+                  "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
+               ]
+            },
+            {
+               "material" : "Water",
+               "textureList" : [
+                  "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_dif.tga",
+                  "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
+                  "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
+               ]
+            },
+            {
+               "material" : "Glass",
+               "textureList" : [
+                  "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_dif.tga",
+                  "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
+                  "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
+               ]
+            }
+         ]
+      }
+   ]
+}

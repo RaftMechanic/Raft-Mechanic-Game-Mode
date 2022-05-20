@@ -57,6 +57,7 @@
                }
             ]
          },
+		  "consumable" : true,
          "restrictions" : {
             "erasable" : true
          },

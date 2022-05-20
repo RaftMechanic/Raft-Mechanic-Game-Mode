@@ -1672,6 +1672,23 @@
          "stackSize" : 10,
          "sticky" : "+X-X+Y-Y+Z",
          "uuid" : "f2382297-44b4-4259-99ce-b11da671ac51"
+      },
+      {
+         "box" : {
+            "x" : 3,
+            "y" : 7,
+            "z" : 4
+         },
+         "name" : "obj_purifier_small",
+         "physicsMaterial" : "Mechanical",
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Interactive/obj_purifier_small.rend",
+         "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "",
+            "filename" : ""
+         },
+         "sticky" : "Y",
+         "uuid" : "91dd1ec0-cbfc-4b00-8c94-3a89662f2dac"
       }
    ]
 }
