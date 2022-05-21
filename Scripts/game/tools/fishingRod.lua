@@ -327,10 +327,6 @@ function Rod.client_onEquippedUpdate( self, primaryState, secondaryState)
 	end
 	self.primaryState = primaryState
 
-	if primaryState ~= self.prevPrimaryState then
-		self.prevPrimaryState = primaryState
-	end
-
 	if primaryState == 1 then
 		if self.isThrowing or self.isFishing then
 			self:cl_cancel()
