@@ -1674,7 +1674,9 @@
          "uuid" : "f2382297-44b4-4259-99ce-b11da671ac51"
       },
       {
-         "box" : {
+         "color" : "df7f01",
+         "hull" : {
+            "col" : "$CONTENT_DATA/Objects/Collision/water-purifier_col.obj",
             "x" : 3,
             "y" : 7,
             "z" : 4

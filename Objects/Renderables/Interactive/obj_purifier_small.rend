@@ -30,7 +30,7 @@
             {
                "material" : "DifAsgNor",
                "textureList" : [
-                  "$GAME_DATA/Textures/Tiled/Wood/t_tiled_burntwood_dif.tga",
+                  "$CONTENT_DATA/Objects/Textures/Interactables/small_purifier/t_tiled_burntwood_dif.tga",
                   "$GAME_DATA/Textures/Tiled/Wood/t_tiled_burntwood_asg.tga",
                   "$GAME_DATA/Textures/Tiled/Wood/t_tiled_burntwood_nor.tga"
                ]
@@ -46,7 +46,7 @@
             {
                "material" : "DifAsgNor",
                "textureList" : [
-                  "$GAME_DATA/Textures/Tiled/Wood/t_tiled_burntwood_dif.tga",
+                  "$CONTENT_DATA/Objects/Textures/Interactables/small_purifier/t_tiled_burntwood_dif.tga",
                   "$GAME_DATA/Textures/Tiled/Wood/t_tiled_burntwood_asg.tga",
                   "$GAME_DATA/Textures/Tiled/Wood/t_tiled_burntwood_nor.tga"
                ]
@@ -62,7 +62,7 @@
             {
                "material" : "DifAsgNor",
                "textureList" : [
-                  "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_water_dif.tga",
+                  "$CONTENT_DATA/Objects/Textures/Interactables/small_purifier/obj_consumable_water_dif.tga",
                   "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_water_asg.tga",
                   "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_water_nor.tga"
                ]
@@ -78,7 +78,7 @@
             {
                "material" : "Glass",
                "textureList" : [
-                  "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_dif.tga",
+                  "$CONTENT_DATA/Objects/Textures/Interactables/small_purifier/obj_water_clean_dif.tga",
                   "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
                   "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
                ]
@@ -86,7 +86,7 @@
             {
                "material" : "DifAsgNor",
                "textureList" : [
-                  "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_dif.tga",
+                  "$CONTENT_DATA/Objects/Textures/Interactables/small_purifier/obj_water_clean_dif.tga",
                   "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
                   "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
                ]
@@ -94,7 +94,7 @@
             {
                "material" : "Water",
                "textureList" : [
-                  "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_dif.tga",
+                  "$CONTENT_DATA/Objects/Textures/Interactables/small_purifier/obj_water_clean_dif.tga",
                   "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
                   "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
                ]
@@ -102,8 +102,8 @@
             {
                "material" : "Glass",
                "textureList" : [
-                  "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_dif.tga",
-                  "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
+                  "$CONTENT_DATA/Objects/Textures/color_atlas.tga",
+                  "$CONTENT_DATA/Objects/Textures/asg_atlas.tga",
                   "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
                ]
             }
