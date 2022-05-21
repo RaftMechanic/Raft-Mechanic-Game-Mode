@@ -8,25 +8,5 @@
         "triggers": {"water": true, "chemical": false, "oil": false},
         "baits": ["none"],
         "biteTime": 1.0
-    },
-    {
-        //Fishus
-        "uuid": "7c440c4a-5919-4baa-a946-0bb89b8c4d85",
-        "rarity": 1000,
-        "location": { "xMin": -72, "xMax": 71, "yMin": -56, "yMax": 55},
-        "time": {"min": 0, "max": 1},
-        "triggers": {"water": true, "chemical": false, "oil": false},
-        "baits": ["sunshake"],
-        "biteTime": 2.0
-    },
-    {
-        //fish_au_chocolate
-        "uuid": "7c440c4a-5919-4baa-a946-0bb89b8c4d5e",
-        "rarity": 1000,
-        "location": { "xMin": -72, "xMax": 71, "yMin": -56, "yMax": 55},
-        "time": {"min": 0, "max": 1},
-        "triggers": {"water": true, "chemical": false, "oil": false},
-        "baits": ["sandwich"],
-        "biteTime": 3.0
     }
 ]
