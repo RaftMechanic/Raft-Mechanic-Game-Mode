@@ -168,42 +168,6 @@
          "rotationSet" : "PropY",
          "sticky" : "-Y",
          "uuid" : "c2418698-7a91-40fa-95a3-3be5ddb3ec1d"
-      },
-      {
-         "box" : {
-            "x" : 4,
-            "y" : 4,
-            "z" : 2
-         },
-         "color" : "008ae1",
-         "flammable" : true,
-         "name" : "obj_black_fish",
-         "physicsMaterial" : "Plastic",
-         "previewRotation" : [ 1, 0, 0, 0, 0, 1, 0, 1, 0 ],
-         "ratings" : {
-            "buoyancy" : 10,
-            "density" : 1,
-            "durability" : 4,
-            "friction" : 10
-         },
-         "renderable" : {
-            "lodList" : [
-               {
-                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Consumables/Fish.fbx",
-                  "subMeshMap" : {
-                     "lambert2SG" : {
-                        "material" : "Dif",
-                        "textureList" : [ "$CONTENT_DATA/Objects/Textures/Parts/Black_Fish/Fish.png", "", "" ]
-                     }
-                  }
-               }
-            ]
-         },
-         "rotationSet" : "PropY",
-         "stackSize" : 10,
-         "sticky" : "-Y",
-         "showInInventory": false,
-         "uuid" : "8131f4e1-7921-4980-9134-06863aa457f8"
       }
    ]
 }
