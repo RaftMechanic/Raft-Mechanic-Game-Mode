@@ -56,7 +56,11 @@ function SharkBotUnit.server_onCreate( self )
 	if self.saved.stats == nil then
 		self.saved.stats = { hp = 150, maxhp = 150 }
 	end
-	
+
+	if g_eventManager then
+		self.tileStorageKey = g_eventManager:sv_getTileStorageKeyFromObject( self.unit.character )
+	end
+
 	if self.params then
 		if self.params.tetherPoint then
 			self.homePosition = self.params.tetherPoint + sm.vec3.new( 0, 0, self.unit.character:getHeight() * 0.5 )
@@ -80,6 +84,9 @@ function SharkBotUnit.server_onCreate( self )
 		if self.params.color then
 			self.saved.color = self.params.color
 		end
+		if self.params.groupTag then
+			self.saved.groupTag = self.tileStorageKey .. ":" .. self.params.groupTag
+		end
 	end
 	if self.saved.color then
 		self.unit.character:setColor( self.saved.color )
@@ -88,7 +95,8 @@ function SharkBotUnit.server_onCreate( self )
 		self.homePosition = self.unit.character.worldPosition
 	end
 	self.storage:save( self.saved )
-	
+	self.unit.publicData = { groupTag = self.saved.groupTag }
+
 	self.unit.eyeHeight = self.unit.character:getHeight() * 0.75
 	self.unit.visionFrustum = {
 		{ 3.0, math.rad( 80.0 ), math.rad( 80.0 ) },
@@ -211,18 +219,17 @@ function SharkBotUnit.server_onCreate( self )
 end
 
 function SharkBotUnit.sv_flee( self )
-		self.isInCombat = false
-		self.eventTarget = nil
-		if self.fleeFrom then
-			self.currentState:stop()
+	self.isInCombat = false
+	self.eventTarget = nil
+	if self.fleeFrom then
+		self.currentState:stop()
 
-			self.currentState = self.fleeState
-			self.fleeState.fleeFrom = self.fleeFrom
-			self.fleeState.maxFleeTime = math.random( FleeTimeMin, FleeTimeMax ) / 40
-			self.fleeState.maxDeviation = 45 * math.pi / 180
-			self.currentState:start()
-		end
-		
+		self.currentState = self.fleeState
+		self.fleeState.fleeFrom = self.fleeFrom
+		self.fleeState.maxFleeTime = math.random( FleeTimeMin, FleeTimeMax ) / 40
+		self.fleeState.maxDeviation = 45 * math.pi / 180
+		self.currentState:start()
+	end
 end
 
 function SharkBotUnit.server_onRefresh( self )
@@ -263,12 +270,10 @@ function SharkBotUnit.server_onFixedUpdate( self, dt )
 		if self.unit.character.velocity:length() < fleeSpeed*5 then
 			sm.physics.applyImpulse(self.unit.character, self.unit.character.direction*500)
 		end
-
 	elseif self.unit.character:getMovementSpeedFraction() == fleeSpeed then
 		self.unit.character:setMovementSpeedFraction(1)
 	end
 
-	
 	self.stateTicker:tick()
 	
 	if updateCrushing( self ) then
