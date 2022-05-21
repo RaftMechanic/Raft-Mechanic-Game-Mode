@@ -330,72 +330,23 @@
          "uuid" : "462baf58-6329-4f29-8f9e-c20d06fb6f7d"
       },
       {
-         "box" : {
-            "x" : 4,
-            "y" : 6,
-            "z" : 8
+         "hull" : {
+            "col" : "$CONTENT_DATA/Objects/Collision/water-purifier_col.obj",
+            "x" : 3,
+            "y" : 7,
+            "z" : 4
          },
-         "color" : "0b9ade",
+         "color" : "df7f01",
          "flammable" : false,
          "name" : "obj_scrap_purifier",
-         "physicsMaterial" : "Metal",
+         "physicsMaterial" : "Mechanical",
          "ratings" : {
             "buoyancy" : 2,
             "density" : 1,
             "durability" : 3,
             "friction" : 5
          },
-         "renderable" : {
-            "lodList" : [
-               {
-                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/WaterPurifier.fbx",
-                  "subMeshMap" : {
-                     "Shack_Atlas" : {
-                        "material" : "DifAsgNor",
-                        "textureList" : [
-                           "$CONTENT_DATA/Objects/Textures/Interactables/apiary_purifier_shack_dif.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_asg.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_nor.tga"
-                        ]
-                     },
-                     "bucket_mat" : {
-                        "color" : "0b9ade",
-                        "material" : "DifAsgNor",
-                        "textureList" : [
-                           "$SURVIVAL_DATA/Objects/Textures/tool_parts/obj_tool_parts_bucket_full_dif.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/tool_parts/obj_tool_parts_bucket_full_asg.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/tool_parts/obj_tool_parts_bucket_full_nor.tga"
-                        ]
-                     },
-                     "campfire_mat" : {
-                        "material" : "DifAsgNor",
-                        "textureList" : [
-                           "$SURVIVAL_DATA/Terrain/Textures/Camping/env_camping_campfire_dif.tga",
-                           "$SURVIVAL_DATA/Terrain/Textures/Camping/env_camping_campfire_asg.tga",
-                           "$SURVIVAL_DATA/Terrain/Textures/Camping/env_camping_campfire_nor.tga"
-                        ]
-                     },
-                     "lambert11" : {
-                        "color" : "4f2412",
-                        "material" : "DifAsgNor",
-                        "textureList" : [
-                           "$SURVIVAL_DATA/Objects/Textures/industrial/obj_industrial_satellite_dif.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/industrial/obj_industrial_satellite_asg.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/industrial/obj_industrial_satellite_nor.tga"
-                        ]
-                     },
-                     "sign_atlas" : {
-                        "material" : "DifAsgNor",
-                        "textureList" : [
-                           "$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_dif.tga",
-                           "$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_asg.tga",
-                           "$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_nor.tga"
-                        ]
-                     }
-                  }
-               }
-            ]
-         },
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Interactive/obj_purifier_small.rend",
          "rotationSet" : "PropY",
          "scripted" : {
             "classname" : "ScrapPurifier",
@@ -1672,25 +1623,6 @@
          "stackSize" : 10,
          "sticky" : "+X-X+Y-Y+Z",
          "uuid" : "f2382297-44b4-4259-99ce-b11da671ac51"
-      },
-      {
-         "color" : "df7f01",
-         "hull" : {
-            "col" : "$CONTENT_DATA/Objects/Collision/water-purifier_col.obj",
-            "x" : 3,
-            "y" : 7,
-            "z" : 4
-         },
-         "name" : "obj_purifier_small",
-         "physicsMaterial" : "Mechanical",
-         "renderable" : "$CONTENT_DATA/Objects/Renderables/Interactive/obj_purifier_small.rend",
-         "rotationSet" : "PropY",
-         "scripted" : {
-            "classname" : "",
-            "filename" : ""
-         },
-         "sticky" : "Y",
-         "uuid" : "91dd1ec0-cbfc-4b00-8c94-3a89662f2dac"
       }
    ]
 }
