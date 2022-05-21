@@ -1,8 +1,8 @@
 {
-    "projectiles": [
-        {
-            "uuid": "382c818f-bdf6-41fd-96dd-7a4a1a176d9a",
-            "name": "harpoon",
+	"projectiles": [
+		{
+			"uuid": "382c818f-bdf6-41fd-96dd-7a4a1a176d9a",
+			"name": "harpoon",
 			"mass": 3.0,
 			"radius": 0.25,
 			"friction": 0.2,
@@ -11,22 +11,39 @@
 			"effect": "Sledgehammer - Hit",
 			"audiomass": 250.0,
 			"effectmaterial": "Metal",
-			"ammo": 
-			{ 
+			"ammo": {
 				"uuid": "4a971f7d-14e6-454d-bce8-0879243c4857",
 				"cost": 1
 			},
-			"destruction":
-			{
-				"destructionLevels":
-				[
+			"destruction": {
+				"destructionLevels": [
 					{
 						"qualityLevel": 1,
 						"chance": 1.0
+					},
+					{
+						"qualityLevel": 2,
+						"chance": 1.0
+					},
+					{
+						"qualityLevel": 3,
+						"chance": 1.0
+					},
+					{
+						"qualityLevel": 4,
+						"chance": 0.5
+					},
+					{
+						"qualityLevel": 5,
+						"chance": 0.2
+					},
+					{
+						"qualityLevel": 7,
+						"chance": 0.1
 					}
 				]
 			},
 			"enableImpactEffect": true
 		}
-    ]
+	]
 }
