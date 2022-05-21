@@ -1,0 +1,34 @@
+{
+	"lodList": [{
+		"mesh": "$CONTENT_DATA/Characters/Char_Player/NecklaceLamp/NecklaceLamp.dae",
+		"includes" : ["POSITION", "UV0", "NORMAL", "TANGENTS", "BLEND_INDICES", "BLEND_WEIGHTS"],
+		"subMeshMap": {		
+            "String": {  
+                "material": "DifAsgNor",
+				"textureList":	[
+					"$CONTENT_DATA/Characters/Char_Player/NecklaceLamp/string_dif.tga",
+					"$CONTENT_DATA/Characters/Char_Player/NecklaceLamp/string_asg.tga",
+					"$CONTENT_DATA/Characters/Char_Player/NecklaceLamp/string_nor.tga"
+			    ]
+            },
+			"Glowstick_mat": {
+				"material" : "DifAsgNor",
+				"textureList": [	
+					"$SURVIVAL_DATA/Character/Char_Glowstick/char_glowstick_dif.tga",
+					"$SURVIVAL_DATA/Character/Char_Glowstick/char_glowstick_asg.tga",
+					"$SURVIVAL_DATA/Character/Char_Glowstick/char_glowstick_nor.tga"
+				]
+			},
+			"Glass_mat": {
+				"material" : "Glass",
+				"textureList": [
+					"$GAME_DATA/Objects/Textures/Blocks/blk_glass_dif.tga",
+					"$GAME_DATA/Objects/Textures/Blocks/blk_glass_asg.tga",
+					"$GAME_DATA/Textures/Materialtextures/normal_nor.tga"
+				]						
+			}
+        },
+		"maxViewDistance": 1000.0
+	}],
+"color": "FFCC00"
+}
