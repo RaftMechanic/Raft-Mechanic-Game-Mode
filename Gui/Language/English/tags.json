@@ -11,6 +11,8 @@
     "HarpoonPickup": "Picked up Harpoon",
     "LogbookAdd": "Add to logbook",
 
+	"BinocularsZoomFactor": "Zoom Factor: ",
+
     "CreationRotator_Title": "Creation Rotator",
     "CreationRotator_Force": "Force Multiplier",
     "CreationRotator_Ver_Hor": "Vertical + Horizontal",

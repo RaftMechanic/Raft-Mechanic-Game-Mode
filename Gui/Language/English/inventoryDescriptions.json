@@ -159,6 +159,10 @@
       "description" : "Throw the hook into water. Wait for the fish to start nibbling. Pull when the fish bites and the massive splash that follows! The fish will fight and create little splashes, and sounds! Strange things can be fished from the ocean...",
       "title" : "Fishing Rod"
    },
+   "f3aeb880-f103-43c8-947b-d0525eaeb505": {
+	  "title": "Binoculars",
+	  "description": "A tool to help with seeing objects from afar.\nStill waiting for model, smh Corvos."
+   },
    "e9c7d080-ae4b-4fec-b626-34afda6f5114" : {
       "description" : "Plant. Grow. Press. Repeat.",
       "title" : "Seed Press"
