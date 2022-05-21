@@ -80,7 +80,6 @@ function Rod.server_onCreate( self )
 end
 
 function Rod.server_onFixedUpdate( self, timeStep )
-	--self.sv.effects.hooks[self.hookIDs] = {pos = params.pos, dir = params.dir, trigger = hookSize, id = self.hookIDs,  bait = bait, player = player}
 	for id, effect in pairs(self.sv.effects.hooks) do
 		effect.pos, effect.dir = self.calculate_trajectory(effect.pos, effect.dir, timeStep)
 		
@@ -413,7 +412,6 @@ function Rod.client_onUpdate( self, dt )
 end
 
 function Rod:cl_cancel(noRefund)
-	--check if catch here
 
 	if self.isFishing or self.isThrowing then
 		self.useCD.active = true
@@ -428,9 +426,6 @@ function Rod:cl_cancel(noRefund)
 				end
 
 				self.network:sendToServer("sv_destroy_hook", {id = id, returnBait = not noRefund, catch = catch})
-				if self.isThrowing then
-					self:cl_reset()
-				end
 			end
 		end
 	end
@@ -476,12 +471,10 @@ function Rod.calculateFirePosition( self, player )
 		right = sm.vec3.new(0, 1, 0)
 	end
 
-	local fireOffset = sm.vec3.new( 1.0, 0.0, 0.75 )
-
-	fireOffset = dir
+	local fireOffset = dir
 	fireOffset.z = 0.0
 	fireOffset = fireOffset:normalize()*1.2
-	fireOffset.z = fireOffset.z + 1
+	fireOffset.z = 1
 
 	fireOffset = fireOffset + right * 0.25
 	fireOffset = fireOffset:rotate( math.rad( pitch ), right )
