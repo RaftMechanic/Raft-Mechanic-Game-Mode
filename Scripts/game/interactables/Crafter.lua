@@ -10,6 +10,7 @@ Crafter.colorNormal = sm.color.new( 0x84ff32ff )
 Crafter.colorHighlight = sm.color.new( 0xa7ff4fff )
 
 --raft
+local CONTENT_DATA = "$CONTENT_667b4c22-cc1a-4a2b-bee8-66a6c748d40e"
 dofile "$CONTENT_DATA/Scripts/game/survival_quests.lua"
 local raftbots = {
 	obj_scrap_field,
@@ -110,6 +111,7 @@ local crafters = {
 		},
 		subTitle = "Scrap Field",
 		name = "Tiny Field",
+		guiBg = CONTENT_DATA.."/Gui/Crafters/scrapfarm.png",
 		createGuiFunction = sm.gui.createCraftBotGui
 	},
 	-- BigFarm
@@ -122,6 +124,7 @@ local crafters = {
 		},
 		subTitle = "Large Field",
 		name = "Big Field",
+		guiBg = CONTENT_DATA.."/Gui/Crafters/bigfarm.png",
 		createGuiFunction = sm.gui.createCraftBotGui
 	},
 	-- ScrapPurifier
@@ -134,6 +137,7 @@ local crafters = {
 		},
 		subTitle = "Scrap Purifier",
 		name = "Purifier",
+		guiBg = CONTENT_DATA.."/Gui/Crafters/waterpurifier.png",
 		createGuiFunction = sm.gui.createCraftBotGui
 	},
 	-- ScrapTreeGrower
@@ -146,6 +150,7 @@ local crafters = {
 		},
 		subTitle = "Tree Farm",
 		name = "Tree Farm",
+		guiBg = CONTENT_DATA.."/Gui/Crafters/treefarm.png",
 		createGuiFunction = sm.gui.createCraftBotGui
 	},
 	-- ScrapWorkbench
@@ -165,6 +170,7 @@ local crafters = {
 		},
 		subTitle = "Workbench",
 		name = "Workbench",
+		guiBg = CONTENT_DATA.."/Gui/Crafters/workbench.png",
 		createGuiFunction = sm.gui.createCraftBotGui
 	},
 	-- Apiary
@@ -177,6 +183,7 @@ local crafters = {
 		},
 		subTitle = "Apiary",
 		name = "Apiary",
+		guiBg = CONTENT_DATA.."/Gui/Crafters/apiary.png",
 		createGuiFunction = sm.gui.createCraftBotGui
 	},
 	-- Seed Press
@@ -189,6 +196,7 @@ local crafters = {
 		},
 		subTitle = "Seed Press",
 		name = "Seed Press",
+		guiBg = CONTENT_DATA.."/Gui/Crafters/seedpress.png",
 		createGuiFunction = sm.gui.createCraftBotGui
 	},
 	-- Grill
@@ -201,6 +209,7 @@ local crafters = {
 		},
 		subTitle = "Grill",
 		name = "Grill",
+		guiBg = CONTENT_DATA.."/Gui/Crafters/grill.png",
 		createGuiFunction = sm.gui.createCraftBotGui
 	},
 	-- Craftbot 1
@@ -572,7 +581,7 @@ function Crafter.cl_init( self )
 		self.cl.mainEffects["craft"] = sm.effect.createEffect( "Craft - seedpress", self.interactable )
 	end
 
-	self:cl_setupUI( tostring( self.shape:getShapeUuid() ) )
+	self:cl_setupUI( self.shape:getShapeUuid() )
 
 	self.cl.pipeGraphs = { output = { containers = {}, pipes = {} }, input = { containers = {}, pipes = {} } }
 
@@ -580,13 +589,47 @@ function Crafter.cl_init( self )
 	self.cl.pipeEffectPlayer:onCreate()
 end
 
-function Crafter.cl_setupUI( self, stringUuid )
-	self.cl.guiInterface = self.crafter.createGuiFunction()
+function Crafter.cl_setupUI( self, uuid )
 
 	--Raft
-	if isAnyOf(self.shape:getShapeUuid(), raftbots) then
-		self.cl.guiInterface:setText("CraftBot_Title", self.crafter.name)
-	end
+	self.cl.guiInterface = self.crafter.createGuiFunction()
+
+	--[[if isAnyOf(uuid, raftbots) then
+		self.cl.guiInterface = sm.gui.createGuiFromLayout(CONTENT_DATA.."/Gui/Crafters/Interactable_CraftBot.layout")
+
+		if uuid ~= obj_scrap_workbench then
+			self.cl.guiInterface:setVisible("All", false)
+			self.cl.guiInterface:setVisible("tool", false)
+			self.cl.guiInterface:setVisible("block", false)
+			self.cl.guiInterface:setVisible("interactive", false)
+			self.cl.guiInterface:setVisible("part", false)
+			self.cl.guiInterface:setVisible("consumable", false)
+		end
+
+		local matGrid = {
+			type = "materialGrid",
+			layout = "$GAME_DATA/Gui/Layouts/Interactable/Interactable_CraftBot_IngredientItem.layout",
+			itemWidth = 44,
+			itemHeight = 60,
+			itemCount = 4,
+		}
+
+		local procGrid = {
+			type = "processGrid",
+			layout = "$GAME_DATA/Gui/Layouts/Interactable/Interactable_CraftBot_ProcessItem.layout",
+			itemWidth = 98,
+			itemHeight = 116,
+			itemCount = self.crafter.slots,
+		}
+
+		self.cl.guiInterface:createGridFromJson( "ProcessGrid", procGrid )
+		self.cl.guiInterface:createGridFromJson( "MaterialGrid", matGrid )
+
+		self.cl.guiInterface:setImage("Background", self.crafter.guiBg)
+		self.cl.guiInterface:setText("Crafter_Title", self.crafter.name)
+	else
+		self.cl.guiInterface = self.crafter.createGuiFunction()
+	end]]
 	--Raft
 
 	self.cl.guiInterface:setButtonCallback( "Upgrade", "cl_onUpgrade" )
@@ -1458,7 +1501,7 @@ function Crafter.client_onInteract( self, character, state )
 						self.cl.guiInterface:setGridItem( "ProcessGrid", 7, gridItem )
 
 					elseif shapeUuid == obj_craftbot_craftbot3 then
-						
+
 						gridItem.unlockLevel = 4
 
 						self.cl.guiInterface:setGridItem( "ProcessGrid", 6, gridItem )
@@ -1476,9 +1519,9 @@ function Crafter.client_onInteract( self, character, state )
 			self.cl.guiInterface:setVisible( "PipeConnection", pipeConnection )
 
 			if self.crafter.upgradeCost then
-				if not sm.game.getEnableUpgradeCost() then
+				if not sm.game.getEnableUpgrade() then
 					self.cl.guiInterface:setData( "Upgrade", { cost = self.crafter.upgradeCost, available = 1000 } )
-				else		
+				else
 					local upgradeData = {}
 					upgradeData.cost = self.crafter.upgradeCost
 					upgradeData.available = sm.container.totalQuantity( sm.localPlayer.getPlayer():getInventory(), obj_consumable_component )
@@ -1690,7 +1733,7 @@ function Crafter.sv_n_upgrade( self, params, player )
 		self.shape:replaceShape( sm.uuid.new( upgrade ) )
 	end
 
-	if not sm.game.getEnableUpgradeCost() then
+	if not sm.game.getEnableUpgrade() then
 		fnUpgrade()
 	else
 		if self.crafter.upgrade then
@@ -1715,8 +1758,8 @@ function Crafter.cl_n_upgrade( self, upgrade )
 
 	if self.cl.guiInterface:isActive() then
 
-		if self.crafter.upgradeCost then			
-			if not sm.game.getEnableUpgradeCost() then
+		if self.crafter.upgradeCost then
+			if not sm.game.getEnableUpgrade() then
 				self.cl.guiInterface:setData( "Upgrade", { cost = self.crafter.upgradeCost, available = 1000 } )
 			else
 				local upgradeData = {}

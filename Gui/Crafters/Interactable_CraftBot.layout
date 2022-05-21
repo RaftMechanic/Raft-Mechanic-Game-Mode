@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="Widget" skin="PanelEmpty" align="Default" name="BackPanel" position_real="0 0 0.815625 0.847222">
+        <Property key="NeedKey" value="false" />
+        <Property key="NeedMouse" value="false" />
+        <Property key="InheritsPick" value="true" />
+        <Widget type="ImageBox" skin="ImageBox" position_real="0 0 0.795019 1" name="Background">
+            <Property key="NeedKey" value="false" />
+            <Widget type="TextBox" skin="TextBox" position_real="0.407229 0.111475 0.20241 0.042623" name="Crafter_Title">
+                <Property key="FontName" value="SM_HeaderLarge_Wide" />
+                <Property key="Caption" value="#{CRAFTBOT_TITLE}" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="Button" skin="CraftbotTab" name="All" position_real="0.060241 0.24918 0.113253 0.0491803">
+                <Property key="NeedKey" value="false" />
+                <Widget type="TextBox" skin="TextBox" name="Title" position_real="0.212766 0.0666667 0.553191 0.933333">
+                    <Property key="Caption" value="#{ALL_CAPS}" />
+                    <Property key="FontName" value="SM_TabSmall" />
+                    <Property key="NeedKey" value="false" />
+                    <Property key="NeedMouse" value="false" />
+                    <Property key="TextAlign" value="Left VCenter" />
+                </Widget>
+            </Widget>
+            <Widget type="Button" skin="CraftbotTab" name="tool" position_real="0.173494 0.24918 0.137349 0.0491803">
+                <Property key="NeedKey" value="false" />
+                <Widget type="ImageBox" skin="ImageBox" name="TypeIcon" position_real="0.175439 0.4 0.0701754 0.266667">
+                    <Property key="ImageResource" value="ItemTypeSet" />
+                    <Property key="ImageGroup" value="ItemTypeColor" />
+                    <Property key="ImageName" value="tool" />
+                    <Property key="NeedMouse" value="false" />
+                    <Property key="NeedKey" value="false" />
+                    <UserString key="Cmpnd_InheritColor" value="false" />
+                </Widget>
+                <Widget type="TextBox" skin="TextBox" name="Title" position_real="0.263158 0.0666667 0.54386 0.933333">
+                    <Property key="Caption" value="#{PART_FILTER_TOOLS}" />
+                    <Property key="FontName" value="SM_TabSmall" />
+                    <Property key="NeedKey" value="false" />
+                    <Property key="NeedMouse" value="false" />
+                    <Property key="TextAlign" value="Left VCenter" />
+                </Widget>
+            </Widget>
+            <Widget type="Button" skin="CraftbotTab" name="block" position_real="0.310843 0.24918 0.137349 0.0491803">
+                <Property key="NeedKey" value="false" />
+                <Widget type="ImageBox" skin="ImageBox" name="TypeIcon" position_real="0.175439 0.4 0.0701754 0.266667">
+                    <Property key="ImageResource" value="ItemTypeSet" />
+                    <Property key="ImageGroup" value="ItemTypeColor" />
+                    <Property key="ImageName" value="block" />
+                    <Property key="NeedKey" value="false" />
+                    <Property key="NeedMouse" value="false" />
+                    <UserString key="Cmpnd_InheritColor" value="false" />
+                </Widget>
+                <Widget type="TextBox" skin="TextBox" name="Title" position_real="0.263158 0.0666667 0.54386 0.933333">
+                    <Property key="Caption" value="#{PART_FILTER_BLOCKS}" />
+                    <Property key="FontName" value="SM_TabSmall" />
+                    <Property key="NeedKey" value="false" />
+                    <Property key="NeedMouse" value="false" />
+                    <Property key="TextAlign" value="Left VCenter" />
+                </Widget>
+            </Widget>
+            <Widget type="Button" skin="CraftbotTab" name="interactive" position_real="0.448193 0.24918 0.137349 0.0491803">
+                <Property key="NeedKey" value="false" />
+                <Widget type="ImageBox" skin="ImageBox" name="TypeIcon" position_real="0.175439 0.4 0.0701754 0.266667">
+                    <Property key="ImageResource" value="ItemTypeSet" />
+                    <Property key="ImageGroup" value="ItemTypeColor" />
+                    <Property key="ImageName" value="interactive" />
+                    <Property key="NeedKey" value="false" />
+                    <Property key="NeedMouse" value="false" />
+                    <UserString key="Cmpnd_InheritColor" value="false" />
+                </Widget>
+                <Widget type="TextBox" skin="TextBox" name="Title" position_real="0.263158 0.0666667 0.54386 0.933333">
+                    <Property key="Caption" value="#{PART_FILTER_INTERACTIVE}" />
+                    <Property key="FontName" value="SM_TabSmall" />
+                    <Property key="NeedKey" value="false" />
+                    <Property key="NeedMouse" value="false" />
+                    <Property key="TextAlign" value="Left VCenter" />
+                </Widget>
+            </Widget>
+            <Widget type="Button" skin="CraftbotTab" name="part" position_real="0.585542 0.24918 0.137349 0.0491803">
+                <Property key="NeedKey" value="false" />
+                <Widget type="ImageBox" skin="ImageBox" name="TypeIcon" position_real="0.175439 0.4 0.0701754 0.266667">
+                    <Property key="ImageResource" value="ItemTypeSet" />
+                    <Property key="ImageGroup" value="ItemTypeColor" />
+                    <Property key="ImageName" value="part" />
+                    <Property key="NeedKey" value="false" />
+                    <Property key="NeedMouse" value="false" />
+                    <UserString key="Cmpnd_InheritColor" value="false" />
+                </Widget>
+                <Widget type="TextBox" skin="TextBox" name="Title" position_real="0.263158 0.0666667 0.54386 0.933333">
+                    <Property key="Caption" value="#{PART_FILTER_PARTS}" />
+                    <Property key="FontName" value="SM_TabSmall" />
+                    <Property key="NeedKey" value="false" />
+                    <Property key="NeedMouse" value="false" />
+                    <Property key="TextAlign" value="Left VCenter" />
+                </Widget>
+            </Widget>
+            <Widget type="Button" skin="CraftbotTab" name="consumable" position_real="0.722892 0.24918 0.137349 0.0491803">
+                <Property key="NeedKey" value="false" />
+                <Widget type="ImageBox" skin="ImageBox" name="TypeIcon" position_real="0.175439 0.4 0.0701754 0.266667">
+                    <Property key="ImageResource" value="ItemTypeSet" />
+                    <Property key="ImageGroup" value="ItemTypeColor" />
+                    <Property key="ImageName" value="consumable" />
+                    <Property key="NeedKey" value="false" />
+                    <Property key="NeedMouse" value="false" />
+                    <UserString key="Cmpnd_InheritColor" value="false" />
+                </Widget>
+                <Widget type="TextBox" skin="TextBox" name="Title" position_real="0.263158 0.0666667 0.54386 0.933333">
+                    <Property key="Caption" value="#{PART_FILTER_CONSUMABLE}" />
+                    <Property key="FontName" value="SM_TabSmall" />
+                    <Property key="NeedKey" value="false" />
+                    <Property key="NeedMouse" value="false" />
+                    <Property key="TextAlign" value="Left VCenter" />
+                </Widget>
+            </Widget>
+            <Widget type="Button" skin="UpgradeButton" name="Upgrade" position_real="0.850602 0.118033 0.108434 0.0754098">
+                <Property key="FontName" value="Default" />
+                <Widget type="TextBox" skin="TextBox" position_real="0.111111 0.195652 0.777778 0.26087">
+                    <Property key="Caption" value="#{CONTROLLER_UPGRADE}" />
+                    <Property key="TextAlign" value="Center" />
+                    <Property key="FontName" value="SM_ButtonTiny" />
+                    <Property key="NeedMouse" value="false" />
+                </Widget>
+                <Widget type="TextBox" skin="TextBox" name="UpgradeCost" position_real="0.444444 0.456522 0.444444 0.26087">
+                    <Property key="FontName" value="SM_NumberMini" />
+                    <Property key="TextAlign" value="Left VCenter" />
+                    <Property key="Caption" value="00 / 00" />
+                    <Property key="NeedMouse" value="false" />
+                </Widget>
+                <Widget type="ImageBox" skin="ImageBox" position_real="0.277778 0.456522 0.144444 0.282609">
+                    <Property key="ImageTexture" value="gui_icon_components.png" />
+                    <Property key="NeedMouse" value="false" />
+                </Widget>
+            </Widget>
+            <Widget type="ItemBox" skin="InventoryItemBox2" name="RecipeGrid" position_real="0.0626506 0.340984 0.891566 0.42623">
+                <Property key="NeedKey" value="false" />
+                <Property key="NeedToolTip" value="true" />
+            </Widget>
+            <Widget type="ItemBox" skin="InventoryItemBox2" name="SearchResultGrid" position_real="0.0626506 0.340984 0.891566 0.42623">
+                <Property key="NeedKey" value="false" />
+                <Property key="NeedToolTip" value="true" />
+            </Widget>
+            <Widget type="ScrollBar" skin="CraftbotVSlider" name="Slider" position_real="0.966265 0.344262 0.0216867 0.419672">
+                <Property key="Range" value="100" />
+                <Property key="RangePosition" value="5" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" name="SubTitle" position_real="0.407229 0.155738 0.20241 0.0327869">
+                <Property key="Caption" value="#{LEVEL} 12345" />
+                <Property key="FontName" value="SM_SubHeader" />
+                <Property key="TextAlign" value="Center" />
+                <Property key="TextColour" value="1 0.803922 0.247059" />
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" name="UnlockedSlots" position_real="0 0.803279 1 0.196721">
+                <Property key="ImageResource" value="CraftbotQueueUnlocked" />
+                <Property key="ImageGroup" value="Count" />
+                <Property key="ImageIndex" value="0" />
+                <Property key="ImageName" value="4" />
+                <Widget type="ImageBox" skin="ImageBox" name="CompletedSlots" position_real="0 0 1 1">
+                    <Property key="ImageResource" value="CraftbotQueueActive" />
+                    <Property key="ImageGroup" value="Count" />
+                    <Property key="ImageName" value="2" />
+                </Widget>
+            </Widget>
+            <Widget type="ItemBox" skin="InventoryItemBox2" name="ProcessGrid" position_real="0.0313253 0.806557 0.944578 0.190164">
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" name="PipeConnection" position_real="0.963855 0.855738 0.0361446 0.095082">
+                <Property key="ImageTexture" value="gui_icon_craftbot_pipe.png" />
+                <Property key="NeedKey" value="false" />
+                <Property key="NeedMouse" value="false" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" name="UpgradeInfo" position_real="0.681928 0.111475 0.168675 0.0852459">
+                <Property key="FontName" value="SM_LabelTiny" />
+                <Property key="TextAlign" value="Right VCenter" />
+                <Property key="TextColour" value="0.623529 0.619608 0.619608" />
+            </Widget>
+        </Widget>
+        <Widget type="Widget" skin="BackgroundCraftbotTooltip" name="SideMainPanel" position_real="0.808429 0.0655738 0.191571 0.934426">
+            <Widget type="Canvas" skin="Canvas" name="Preview" position_real="0 0 1 0.245614" />
+            <Widget type="EditBox" skin="EditBoxEmpty" name="ItemName" position_real="0.07 0.224561 0.86 0.0666667">
+                <Property key="Caption" value="This is a very long title on two rows" />
+                <Property key="FontName" value="SM_ItemTitle" />
+                <Property key="WordWrap" value="true" />
+                <Property key="ReadOnly" value="true" />
+                <Property key="Static" value="true" />
+                <Property key="TextAlign" value="Left Bottom" />
+            </Widget>
+            <Widget type="EditBox" skin="EditBoxEmpty" name="ItemDescription" position_real="0.07 0.564912 0.81 0.140351">
+                <Property key="Static" value="true" />
+                <Property key="ReadOnly" value="true" />
+                <Property key="WordWrap" value="true" />
+                <Property key="TextShadowColour" value="0 0 0" />
+                <Property key="FontName" value="SM_TextTiny" />
+                <Property key="TextColour" value="0.564706 0.572549 0.572549" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.07 0.522807 0.86 0.0245614">
+                <Property key="FontName" value="SM_LabelTiny" />
+                <Property key="Caption" value="#{DESCRIPTION_CAPS}" />
+                <Property key="TextAlign" value="Left VCenter" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Weight_1" position_real="0.635 0.336842 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Weight_2" position_real="0.665 0.336842 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Weight_3" position_real="0.695 0.336842 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Weight_4" position_real="0.725 0.336842 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Weight_5" position_real="0.755 0.336842 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Weight_6" position_real="0.785 0.336842 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Weight_7" position_real="0.815 0.336842 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Weight_8" position_real="0.845 0.336842 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Weight_9" position_real="0.875 0.336842 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Weight_10" position_real="0.905 0.336842 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Durability_1" position_real="0.635 0.37193 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Durability_2" position_real="0.665 0.37193 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Durability_3" position_real="0.695 0.37193 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Durability_4" position_real="0.725 0.37193 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Durability_5" position_real="0.755 0.37193 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Durability_6" position_real="0.785 0.37193 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Durability_7" position_real="0.815 0.37193 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Durability_8" position_real="0.845 0.37193 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Durability_9" position_real="0.875 0.37193 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Durability_10" position_real="0.905 0.37193 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Friction_1" position_real="0.635 0.407018 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Friction_2" position_real="0.665 0.407018 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Friction_3" position_real="0.695 0.407018 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Friction_4" position_real="0.725 0.407018 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Friction_5" position_real="0.755 0.407018 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Friction_6" position_real="0.785 0.407018 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Friction_7" position_real="0.815 0.407018 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Friction_8" position_real="0.845 0.407018 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Friction_9" position_real="0.875 0.407018 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Friction_10" position_real="0.905 0.407018 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Buoyancy_1" position_real="0.635 0.442105 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Buoyancy_2" position_real="0.665 0.442105 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Buoyancy_3" position_real="0.695 0.442105 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Buoyancy_4" position_real="0.725 0.442105 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Buoyancy_5" position_real="0.755 0.442105 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Buoyancy_6" position_real="0.785 0.442105 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Buoyancy_7" position_real="0.815 0.442105 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Buoyancy_8" position_real="0.845 0.442105 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Buoyancy_9" position_real="0.875 0.442105 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="Button" skin="PropertyIndicator" name="Buoyancy_10" position_real="0.905 0.442105 0.025 0.0175439">
+                <Property key="NeedMouse" value="false" />
+                <Property key="NeedKey" value="false" />
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position_real="0.07 0.336842 0.05 0.0175439">
+                <Property key="ImageTexture" value="gui_inventory_icon_weight.png" />
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position_real="0.07 0.37193 0.05 0.0175439">
+                <Property key="ImageTexture" value="gui_inventory_icon_durability.png" />
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position_real="0.07 0.407018 0.05 0.0175439">
+                <Property key="ImageTexture" value="gui_inventory_icon_friction.png" />
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position_real="0.07 0.442105 0.05 0.0175439">
+                <Property key="ImageTexture" value="gui_inventory_icon_buoyancy.png" />
+            </Widget>
+            <Widget type="ImageBox" skin="ImageBox" position_real="0.07 0.477193 0.05 0.0175439">
+                <Property key="ImageTexture" value="gui_inventory_icon_flammable.png" />
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" name="Line" position_real="0.07 0.361404 0.86 0.00175439">
+                <Property key="Colour" value="1 1 1" />
+                <Property key="Alpha" value="0.2" />
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" name="Line" position_real="0.07 0.396491 0.86 0.00175439">
+                <Property key="Colour" value="1 1 1" />
+                <Property key="Alpha" value="0.2" />
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" name="Line" position_real="0.07 0.431579 0.86 0.00175439">
+                <Property key="Colour" value="1 1 1" />
+                <Property key="Alpha" value="0.2" />
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" name="Line" position_real="0.07 0.466667 0.86 0.00175439">
+                <Property key="Colour" value="1 1 1" />
+                <Property key="Alpha" value="0.2" />
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" name="Line" position_real="0.07 0.557895 0.86 0.00175439">
+                <Property key="Colour" value="1 1 1" />
+                <Property key="Alpha" value="0.2" />
+            </Widget>
+            <Widget type="Widget" skin="WhiteSkin" name="Line" position_real="0.07 0.768421 0.86 0.00175439">
+                <Property key="Colour" value="1 1 1" />
+                <Property key="Alpha" value="0.2" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.14 0.333333 0.4 0.0245614">
+                <Property key="Caption" value="#{PROPERTY_WEIGHT}" />
+                <Property key="FontName" value="SM_LabelTiny" />
+                <Property key="Alpha" value="0.5" />
+                <Property key="TextAlign" value="Left VCenter" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.14 0.368421 0.4 0.0245614">
+                <Property key="Caption" value="#{PROPERTY_DURABILITY}" />
+                <Property key="FontName" value="SM_LabelTiny" />
+                <Property key="Alpha" value="0.5" />
+                <Property key="TextAlign" value="Left VCenter" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.14 0.403509 0.4 0.0245614">
+                <Property key="Caption" value="#{PROPERTY_FRICTION}" />
+                <Property key="FontName" value="SM_LabelTiny" />
+                <Property key="Alpha" value="0.5" />
+                <Property key="TextAlign" value="Left VCenter" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.14 0.438596 0.4 0.0245614">
+                <Property key="Caption" value="#{PROPERTY_BUOYANCY}" />
+                <Property key="FontName" value="SM_LabelTiny" />
+                <Property key="Alpha" value="0.5" />
+                <Property key="TextAlign" value="Left VCenter" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.14 0.473684 0.4 0.0245614">
+                <Property key="Caption" value="#{PROPERTY_FLAMMABLE}" />
+                <Property key="FontName" value="SM_LabelTiny" />
+                <Property key="Alpha" value="0.5" />
+                <Property key="TextAlign" value="Left VCenter" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" name="FlammableText" position_real="0.74 0.473684 0.2 0.0245614">
+                <Property key="FontName" value="SM_HeaderTiny" />
+                <Property key="Caption" value="#{MENU_YN_YES}#{MENU_YN_NO}" />
+                <Property key="TextAlign" value="Right VCenter" />
+                <Property key="TextColour" value="1 0.815686 0.27451" />
+            </Widget>
+            <Widget type="Button" skin="StyledButtonLarge" name="Craft" position_real="0.06 0.887719 0.88 0.0807018">
+                <Property key="Caption" value="#{CRAFT}" />
+                <Property key="FontName" value="SM_Button" />
+                <Property key="TextAlign" value="Center" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.07 0.733333 0.32 0.0280702">
+                <Property key="Caption" value="#{MATERIAL}" />
+                <Property key="FontName" value="SM_HeaderTiny" />
+                <Property key="TextAlign" value="Left VCenter" />
+            </Widget>
+            <Widget type="ItemBox" skin="InventoryItemBox2" name="MaterialGrid" position_real="0.06 0.77193 0.88 0.105263">
+                <Property key="NeedKey" value="false" />
+                <Property key="NeedToolTip" value="true" />
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" name="Time" position_real="0.6 0.733333 0.33 0.0280702">
+                <Property key="Caption" value="04:20" />
+                <Property key="FontName" value="SM_HeaderTiny" />
+                <Property key="TextAlign" value="Right VCenter" />
+                <Property key="TextColour" value="1 0.815686 0.27451" />
+            </Widget>
+            <Widget type="ScrollBar" skin="InventoryVSliderSmall" name="DescriptionSlider" position_real="0.88 0.557895 0.09 0.15614">
+                <Property key="Range" value="100" />
+            </Widget>
+        </Widget>
+    </Widget>
+    <CodeGeneratorSettings />
+</MyGUI>
