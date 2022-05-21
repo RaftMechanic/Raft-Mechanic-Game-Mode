@@ -15,13 +15,13 @@ local CONTENT_DATA = "$CONTENT_667b4c22-cc1a-4a2b-bee8-66a6c748d40e"
 local WatercleanRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_waterclean.rend" }
 local RawfishRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_rawfish.rend" }
 local RawfishusRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_rawfishus.rend" }
-local CookedfishRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_cookedfish.rend" } 
-local FisheauchocolatRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_fisheauchocolat.rend" } 
+local CookedfishRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_cookedfish.rend" }
+local FisheauchocolatRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_fisheauchocolat.rend" }
 
-local WocSteakRawRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_wocsteak_raw.rend" } 
-local WocSteakGrilldRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_wocsteak_grilld.rend" } 
+local WocSteakRawRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_wocsteak_raw.rend" }
+local WocSteakGrilldRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_wocsteak_grilld.rend" }
 
-local PotatRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_potat.rend" } 
+local PotatRenderables = { CONTENT_DATA .. "/Characters/Char_Tools/Char_eattool/char_eattool_potat.rend" }
 
 
 
@@ -42,67 +42,67 @@ local CornRenderables = { "$SURVIVAL_DATA/Character/Char_Tools/Char_eattool/char
 local RenderablesEattoolTp = { "$SURVIVAL_DATA/Character/Char_Male/Animations/char_male_tp_eattool.rend", "$SURVIVAL_DATA/Character/Char_Tools/Char_eattool/char_eattool_tp.rend" }
 local RenderablesEattoolFp = { "$SURVIVAL_DATA/Character/Char_Male/Animations/char_male_fp_eattool.rend", "$SURVIVAL_DATA/Character/Char_Tools/Char_eattool/char_eattool_fp.rend" }
 
-sm.tool.preloadRenderables( BlueberryRenderables )
-sm.tool.preloadRenderables( OrangeRenderables )
-sm.tool.preloadRenderables( MilkRenderables )
-sm.tool.preloadRenderables( BroccoliRenderables )
-sm.tool.preloadRenderables( TomatoRenderables )
-sm.tool.preloadRenderables( BananaRenderables )
-sm.tool.preloadRenderables( CarrotBurgerRenderables )
-sm.tool.preloadRenderables( SunshakeRenderables )
-sm.tool.preloadRenderables( CarrotRenderables )
-sm.tool.preloadRenderables( PizzaBurgerRenderables )
-sm.tool.preloadRenderables( PineappleRenderables )
-sm.tool.preloadRenderables( CornRenderables )
-sm.tool.preloadRenderables( RedbeetRenderables )
-sm.tool.preloadRenderables( RenderablesEattoolTp )
-sm.tool.preloadRenderables( RenderablesEattoolFp )
+sm.tool.preloadRenderables(BlueberryRenderables)
+sm.tool.preloadRenderables(OrangeRenderables)
+sm.tool.preloadRenderables(MilkRenderables)
+sm.tool.preloadRenderables(BroccoliRenderables)
+sm.tool.preloadRenderables(TomatoRenderables)
+sm.tool.preloadRenderables(BananaRenderables)
+sm.tool.preloadRenderables(CarrotBurgerRenderables)
+sm.tool.preloadRenderables(SunshakeRenderables)
+sm.tool.preloadRenderables(CarrotRenderables)
+sm.tool.preloadRenderables(PizzaBurgerRenderables)
+sm.tool.preloadRenderables(PineappleRenderables)
+sm.tool.preloadRenderables(CornRenderables)
+sm.tool.preloadRenderables(RedbeetRenderables)
+sm.tool.preloadRenderables(RenderablesEattoolTp)
+sm.tool.preloadRenderables(RenderablesEattoolFp)
 
 --RAFT
-sm.tool.preloadRenderables( WatercleanRenderables )
-sm.tool.preloadRenderables( RawfishRenderables )
-sm.tool.preloadRenderables( RawfishusRenderables )
-sm.tool.preloadRenderables( CookedfishRenderables )
-sm.tool.preloadRenderables( FisheauchocolatRenderables )
+sm.tool.preloadRenderables(WatercleanRenderables)
+sm.tool.preloadRenderables(RawfishRenderables)
+sm.tool.preloadRenderables(RawfishusRenderables)
+sm.tool.preloadRenderables(CookedfishRenderables)
+sm.tool.preloadRenderables(FisheauchocolatRenderables)
 
-sm.tool.preloadRenderables( WocSteakRawRenderables )
-sm.tool.preloadRenderables( WocSteakGrilldRenderables )
+sm.tool.preloadRenderables(WocSteakRawRenderables)
+sm.tool.preloadRenderables(WocSteakGrilldRenderables)
 
-sm.tool.preloadRenderables( PotatRenderables )
+sm.tool.preloadRenderables(PotatRenderables)
 
 local FoodUuidToRenderable =
 {
-	[tostring( obj_consumable_sunshake )] = SunshakeRenderables,
-	[tostring( obj_consumable_milk )] = MilkRenderables,
-	[tostring( obj_consumable_carrotburger )] = CarrotBurgerRenderables,
-	[tostring( obj_consumable_pizzaburger )] = PizzaBurgerRenderables,
-	[tostring( obj_plantables_banana )] = BananaRenderables,
-	[tostring( obj_plantables_blueberry )] = BlueberryRenderables,
-	[tostring( obj_plantables_orange )] = OrangeRenderables,
-	[tostring( obj_plantables_pineapple )] = PineappleRenderables,
-	[tostring( obj_plantables_carrot )] = CarrotRenderables,
-	[tostring( obj_plantables_redbeet )] = RedbeetRenderables,
-	[tostring( obj_plantables_tomato )] = TomatoRenderables,
-	[tostring( obj_plantables_broccoli )] = BroccoliRenderables,
-	[tostring( obj_resource_corn )] = CornRenderables,
+	[tostring(obj_consumable_sunshake)] = SunshakeRenderables,
+	[tostring(obj_consumable_milk)] = MilkRenderables,
+	[tostring(obj_consumable_carrotburger)] = CarrotBurgerRenderables,
+	[tostring(obj_consumable_pizzaburger)] = PizzaBurgerRenderables,
+	[tostring(obj_plantables_banana)] = BananaRenderables,
+	[tostring(obj_plantables_blueberry)] = BlueberryRenderables,
+	[tostring(obj_plantables_orange)] = OrangeRenderables,
+	[tostring(obj_plantables_pineapple)] = PineappleRenderables,
+	[tostring(obj_plantables_carrot)] = CarrotRenderables,
+	[tostring(obj_plantables_redbeet)] = RedbeetRenderables,
+	[tostring(obj_plantables_tomato)] = TomatoRenderables,
+	[tostring(obj_plantables_broccoli)] = BroccoliRenderables,
+	[tostring(obj_resource_corn)] = CornRenderables,
 
 
 	--RAFT
-	[tostring( obj_water_clean )] = WatercleanRenderables,
-	[tostring( obj_fish )] = RawfishRenderables,
-	[tostring( obj_fishus )] = RawfishusRenderables,
-	[tostring( obj_fish_cooked )] = CookedfishRenderables,
-	[tostring( obj_fish_au_chocolate )] = FisheauchocolatRenderables,
-	[tostring( obj_wocsteak_raw )] = WocSteakRawRenderables,
-	[tostring( obj_wocsteak_grilld )] = WocSteakGrilldRenderables,
-	[tostring( obj_potat )] = PotatRenderables
+	[tostring(obj_water_clean)] = WatercleanRenderables,
+	[tostring(obj_fish)] = RawfishRenderables,
+	[tostring(obj_fishus)] = RawfishusRenderables,
+	[tostring(obj_fish_cooked)] = CookedfishRenderables,
+	[tostring(obj_fish_au_chocolate)] = FisheauchocolatRenderables,
+	[tostring(obj_wocsteak_raw)] = WocSteakRawRenderables,
+	[tostring(obj_wocsteak_grilld)] = WocSteakGrilldRenderables,
+	[tostring(obj_potat)] = PotatRenderables
 }
 local Drinks = { obj_consumable_sunshake, obj_consumable_milk, obj_water_clean } --Raft
 
-function Eat.client_onCreate( self )
-	self.tpAnimations = createTpAnimations( self.tool, {} )
+function Eat.client_onCreate(self)
+	self.tpAnimations = createTpAnimations(self.tool, {})
 	if self.tool:isLocal() then
-		self.fpAnimations = createFpAnimations( self.tool, {} )
+		self.fpAnimations = createFpAnimations(self.tool, {})
 	end
 
 	self.activeItem = sm.uuid.getNil()
@@ -110,115 +110,114 @@ function Eat.client_onCreate( self )
 		self.wasOnGround = true
 		self.eatProgress = 0
 		self.eatTime = 2.1
-		self.munchEffectFp = sm.effect.createEffect( "Eat - MunchFP" )
+		self.munchEffectFp = sm.effect.createEffect("Eat - MunchFP")
 	else
 		self.desiredActiveItem = sm.uuid.getNil()
 	end
 
 	self.eating = false
-	self.munchEffectTp = sm.effect.createEffect( "Eat - Munch" )
-	self.drinkEffectTp = sm.effect.createEffect( "Eat - Drink" )
-	self.munchEffectAudio = sm.effect.createEffect( "Eat - MunchSound" )
-	self.drinkEffectAudio = sm.effect.createEffect( "Eat - DrinkSound" )
+	self.munchEffectTp = sm.effect.createEffect("Eat - Munch")
+	self.drinkEffectTp = sm.effect.createEffect("Eat - Drink")
+	self.munchEffectAudio = sm.effect.createEffect("Eat - MunchSound")
+	self.drinkEffectAudio = sm.effect.createEffect("Eat - DrinkSound")
 end
 
-function Eat.client_onRefresh( self )
+function Eat.client_onRefresh(self)
 	self:cl_updateActiveFood()
 end
 
-function Eat.client_onClientDataUpdate( self, clientData )
+function Eat.client_onClientDataUpdate(self, clientData)
 	if not self.tool:isLocal() then
 		self.desiredActiveItem = clientData.activeUid
 	end
 end
 
-function Eat.cl_loadAnimations( self )
+function Eat.cl_loadAnimations(self)
 
 	self.tpAnimations = createTpAnimations(
+		self.tool,
+		{
+			idle = { "Idle" },
+			eat = { "Eat" },
+			drink = { "Drink" },
+			sprint = { "Sprint_fwd" },
+			pickup = { "Pickup", { nextAnimation = "idle" } },
+			putdown = { "Putdown" }
+
+		}
+	)
+	local movementAnimations = {
+
+		idle = "Idle",
+
+		runFwd = "Run_fwd",
+		runBwd = "Run_bwd",
+
+		sprint = "Sprint_fwd",
+
+		jump = "Jump",
+		jumpUp = "Jump_up",
+		jumpDown = "Jump_down",
+
+		land = "Jump_land",
+		landFwd = "Jump_land_fwd",
+		landBwd = "Jump_land_bwd",
+
+		crouchIdle = "Crouch_idle",
+		crouchFwd = "Crouch_fwd",
+		crouchBwd = "Crouch_bwd"
+	}
+
+	for name, animation in pairs(movementAnimations) do
+		self.tool:setMovementAnimation(name, animation)
+	end
+
+	if self.tool:isLocal() then
+		self.fpAnimations = createFpAnimations(
 			self.tool,
 			{
-				idle = { "Idle" },
+				idle = { "Idle", { looping = true } },
+
 				eat = { "Eat" },
 				drink = { "Drink" },
-				sprint = { "Sprint_fwd" },
-				pickup = { "Pickup", { nextAnimation = "idle" } },
-				putdown = { "Putdown" }
-			
+
+				sprintInto = { "Sprint_into", { nextAnimation = "sprintIdle", blendNext = 0.2 } },
+				sprintIdle = { "Sprint_idle", { looping = true } },
+				sprintExit = { "Sprint_exit", { nextAnimation = "idle", blendNext = 0 } },
+
+				jump = { "Jump", { nextAnimation = "idle" } },
+				land = { "Jump_land", { nextAnimation = "idle" } },
+
+				equip = { "Pickup", { nextAnimation = "idle" } },
+				unequip = { "Putdown" }
 			}
 		)
-		local movementAnimations = {
+	end
+	setTpAnimation(self.tpAnimations, "idle", 5.0)
+	self.blendTime = 0.2
 
-			idle = "Idle",
-			
-			runFwd = "Run_fwd",
-			runBwd = "Run_bwd",
-			
-			sprint = "Sprint_fwd",
-			
-			jump = "Jump",
-			jumpUp = "Jump_up",
-			jumpDown = "Jump_down",
-
-			land = "Jump_land",
-			landFwd = "Jump_land_fwd",
-			landBwd = "Jump_land_bwd",
-
-			crouchIdle = "Crouch_idle",
-			crouchFwd = "Crouch_fwd",
-			crouchBwd = "Crouch_bwd"
-		}
-		
-		for name, animation in pairs( movementAnimations ) do
-			self.tool:setMovementAnimation( name, animation )
-		end
-		
-		if self.tool:isLocal() then
-			self.fpAnimations = createFpAnimations(
-				self.tool,
-				{
-					idle = { "Idle", { looping = true } },
-					
-					eat = { "Eat" },
-					drink = { "Drink" },
-					
-					sprintInto = { "Sprint_into", { nextAnimation = "sprintIdle",  blendNext = 0.2 } },
-					sprintIdle = { "Sprint_idle", { looping = true } },
-					sprintExit = { "Sprint_exit", { nextAnimation = "idle",  blendNext = 0 } },
-					
-					jump = { "Jump", { nextAnimation = "idle" } },
-					land = { "Jump_land", { nextAnimation = "idle" } },
-					
-					equip = { "Pickup", { nextAnimation = "idle" } },
-					unequip = { "Putdown" }
-				}
-			)
-		end
-		setTpAnimation( self.tpAnimations, "idle", 5.0 )
-		self.blendTime = 0.2
-		
 end
 
-
-function Eat.client_onUpdate( self, dt )
+function Eat.client_onUpdate(self, dt)
 	-- First person animation
-	local isSprinting =  self.tool:isSprinting()
-	local isCrouching =  self.tool:isCrouching()
-	local isOnGround =  self.tool:isOnGround()
-	
+	local isSprinting = self.tool:isSprinting()
+	local isCrouching = self.tool:isCrouching()
+	local isOnGround = self.tool:isOnGround()
+
 	if self.tool:isLocal() then
 		if self.equipped and self.eating == false then
 			if isSprinting and self.fpAnimations.currentAnimation ~= "sprintInto" and self.fpAnimations.currentAnimation ~= "sprintIdle" then
-				swapFpAnimation( self.fpAnimations, "sprintExit", "sprintInto", 0.0 )
-			elseif not self.tool:isSprinting() and ( self.fpAnimations.currentAnimation == "sprintIdle" or self.fpAnimations.currentAnimation == "sprintInto" ) then
-				swapFpAnimation( self.fpAnimations, "sprintInto", "sprintExit", 0.0 )
+				swapFpAnimation(self.fpAnimations, "sprintExit", "sprintInto", 0.0)
+			elseif not self.tool:isSprinting() and (self.fpAnimations.currentAnimation == "sprintIdle" or self.fpAnimations.currentAnimation == "sprintInto") then
+				swapFpAnimation(self.fpAnimations, "sprintInto", "sprintExit", 0.0)
 			end
 			if not isOnGround and self.wasOnGround and self.fpAnimations.currentAnimation ~= "jump" then
-				swapFpAnimation( self.fpAnimations, "land", "jump", 0.02 )
+				swapFpAnimation(self.fpAnimations, "land", "jump", 0.02)
 			elseif isOnGround and not self.wasOnGround and self.fpAnimations.currentAnimation ~= "land" then
-				swapFpAnimation( self.fpAnimations, "jump", "land", 0.02 )
+				swapFpAnimation(self.fpAnimations, "jump", "land", 0.02)
 			end
 		end
-		updateFpAnimations( self.fpAnimations, self.equipped, dt )
+		updateFpAnimations(self.fpAnimations, self.equipped, dt)
 
 		self.wasOnGround = isOnGround
 	end
@@ -236,57 +235,57 @@ function Eat.client_onUpdate( self, dt )
 		end
 		return
 	end
-	
+
 	if self.tool:isLocal() then
 		local activeItem = sm.localPlayer.getActiveItem()
 		if self.activeItem ~= activeItem then
-			if sm.item.getEdible( activeItem ) then
+			if sm.item.getEdible(activeItem) then
 				-- Simulate a new equip
 				self.activeItem = activeItem
 				self:cl_updateEatRenderables()
 				self:cl_loadAnimations()
-				self.network:sendToServer( "sv_n_updateEatRenderables", self.activeItem )
+				self.network:sendToServer("sv_n_updateEatRenderables", self.activeItem)
 				self:stopEat()
-				self.network:sendToServer( "sv_n_stopEat" )
+				self.network:sendToServer("sv_n_stopEat")
 			end
 		end
 	end
-	
+
 	-- Eat progress
 	local character = self.tool:getOwner().character
 	local firstPerson = false
 	if self.tool:isLocal() then
-		self.tool:setBlockSprint( self.eating )
+		self.tool:setBlockSprint(self.eating)
 		if self.eating then
 			self.eatProgress = self.eatProgress + dt
 			if self.eatProgress >= self.eatTime then
 				self:stopEat()
 				local activeItem = sm.localPlayer.getActiveItem()
-				self.network:sendToServer( "sv_n_stopEat", { itemId = activeItem, selectedSlot = sm.localPlayer.getSelectedHotbarSlot() } )
+				self.network:sendToServer("sv_n_stopEat", { itemId = activeItem, selectedSlot = sm.localPlayer.getSelectedHotbarSlot() })
 			end
 			firstPerson = self.tool:isInFirstPersonView()
 			if character then
-				local characterRotation = sm.vec3.getRotation( sm.vec3.new( 0, 1, 0 ), character.direction )
-				self.munchEffectFp:setPosition( self.tool:getFpBonePos( "jnt_right_weapon" ) )
-				self.munchEffectFp:setRotation( characterRotation )
+				local characterRotation = sm.vec3.getRotation(sm.vec3.new(0, 1, 0), character.direction)
+				self.munchEffectFp:setPosition(self.tool:getFpBonePos("jnt_right_weapon"))
+				self.munchEffectFp:setRotation(characterRotation)
 			end
 		else
 			self.eatProgress = 0
 		end
-		sm.gui.setProgressFraction( self.eatProgress / self.eatTime )
+		sm.gui.setProgressFraction(self.eatProgress / self.eatTime)
 	end
 	-- Eat effects
 	if self.eating and character then
-		self.munchEffectTp:setPosition( self.tool:getTpBonePos( "jnt_head" ) )
-		self.munchEffectTp:setRotation( sm.vec3.getRotation( sm.vec3.new( 0, 1, 0 ), self.tool:getTpBoneDir( "jnt_head" ) ) )
-		self.drinkEffectTp:setPosition( self.tool:getTpBonePos( "jnt_head" ) )
-		self.drinkEffectTp:setRotation( sm.vec3.getRotation( sm.vec3.new( 0, 1, 0 ), self.tool:getTpBoneDir( "jnt_head" ) ) )
-		self.munchEffectAudio:setPosition( self.tool:getTpBonePos( "jnt_head" ) )
-		self.drinkEffectAudio:setPosition( self.tool:getTpBonePos( "jnt_head" ) )
+		self.munchEffectTp:setPosition(self.tool:getTpBonePos("jnt_head"))
+		self.munchEffectTp:setRotation(sm.vec3.getRotation(sm.vec3.new(0, 1, 0), self.tool:getTpBoneDir("jnt_head")))
+		self.drinkEffectTp:setPosition(self.tool:getTpBonePos("jnt_head"))
+		self.drinkEffectTp:setRotation(sm.vec3.getRotation(sm.vec3.new(0, 1, 0), self.tool:getTpBoneDir("jnt_head")))
+		self.munchEffectAudio:setPosition(self.tool:getTpBonePos("jnt_head"))
+		self.drinkEffectAudio:setPosition(self.tool:getTpBonePos("jnt_head"))
 
 		if firstPerson then
 			-- Enable first-person effects
-			if not isAnyOf( self.activeItem, Drinks ) then
+			if not isAnyOf(self.activeItem, Drinks) then
 				if not self.munchEffectFp:isPlaying() then
 					self.munchEffectFp:start()
 				end
@@ -300,7 +299,7 @@ function Eat.client_onUpdate( self, dt )
 			end
 		else
 			-- Enable third-person effects ( drink or munch )
-			if isAnyOf( self.activeItem, Drinks ) then
+			if isAnyOf(self.activeItem, Drinks) then
 				if not self.drinkEffectTp:isPlaying() then
 					self.drinkEffectTp:start()
 				end
@@ -322,7 +321,7 @@ function Eat.client_onUpdate( self, dt )
 				end
 			end
 		end
-		
+
 	else
 		-- Disable all effects
 		if self.munchEffectTp:isPlaying() then
@@ -337,61 +336,61 @@ function Eat.client_onUpdate( self, dt )
 			end
 		end
 	end
-	
+
 	local crouchWeight = self.tool:isCrouching() and 1.0 or 0.0
-	local normalWeight = 1.0 - crouchWeight 
+	local normalWeight = 1.0 - crouchWeight
 	local totalWeight = 0.0
-	
-	for name, animation in pairs( self.tpAnimations.animations ) do
+
+	for name, animation in pairs(self.tpAnimations.animations) do
 		animation.time = animation.time + dt
-	
+
 		if name == self.tpAnimations.currentAnimation then
-			animation.weight = math.min( animation.weight + ( self.tpAnimations.blendSpeed * dt ), 1.0 )
-			
+			animation.weight = math.min(animation.weight + (self.tpAnimations.blendSpeed * dt), 1.0)
+
 			if animation.time >= animation.info.duration - self.blendTime then
-				if ( name == "eat" ) then
-					setTpAnimation( self.tpAnimations, "pickup",  10.05 )
+				if (name == "eat") then
+					setTpAnimation(self.tpAnimations, "pickup", 10.05)
 				elseif name == "drink" then
-						setTpAnimation( self.tpAnimations, "pickup", 10.05 )
+					setTpAnimation(self.tpAnimations, "pickup", 10.05)
 				elseif name == "pickup" then
-					setTpAnimation( self.tpAnimations, "idle", 0.001 )
+					setTpAnimation(self.tpAnimations, "idle", 0.001)
 				elseif animation.nextAnimation ~= "" then
-					setTpAnimation( self.tpAnimations, animation.nextAnimation, 0.001 )
-				end 
-				
+					setTpAnimation(self.tpAnimations, animation.nextAnimation, 0.001)
+				end
+
 			end
 		else
-			animation.weight = math.max( animation.weight - ( self.tpAnimations.blendSpeed * dt ), 0.0 )
+			animation.weight = math.max(animation.weight - (self.tpAnimations.blendSpeed * dt), 0.0)
 		end
-	
+
 		totalWeight = totalWeight + animation.weight
 	end
-	
+
 	totalWeight = totalWeight == 0 and 1.0 or totalWeight
-	for name, animation in pairs( self.tpAnimations.animations ) do
-		
+	for name, animation in pairs(self.tpAnimations.animations) do
+
 		local weight = animation.weight / totalWeight
 		if name == "idle" then
-			self.tool:updateMovementAnimation( animation.time, weight )
+			self.tool:updateMovementAnimation(animation.time, weight)
 		elseif animation.crouch then
-			self.tool:updateAnimation( animation.info.name, animation.time, weight * normalWeight )
-			self.tool:updateAnimation( animation.crouch.name, animation.time, weight * crouchWeight )
+			self.tool:updateAnimation(animation.info.name, animation.time, weight * normalWeight)
+			self.tool:updateAnimation(animation.crouch.name, animation.time, weight * crouchWeight)
 		else
-			self.tool:updateAnimation( animation.info.name, animation.time, weight )
+			self.tool:updateAnimation(animation.info.name, animation.time, weight)
 		end
 	end
-	
+
 end
 
-function Eat.client_onToggle( self )
+function Eat.client_onToggle(self)
 	return false
 end
 
-function Eat.client_onEquip( self, animate )
+function Eat.client_onEquip(self, animate)
 	if self.tool:isLocal() then
 		self.activeItem = sm.localPlayer.getActiveItem()
 		self:cl_updateActiveFood()
-		self.network:sendToServer( "sv_n_updateEatRenderables", self.activeItem )
+		self.network:sendToServer("sv_n_updateEatRenderables", self.activeItem)
 	else
 		if not animate then
 			-- reload renderable
@@ -402,34 +401,34 @@ function Eat.client_onEquip( self, animate )
 	self.wantEquipped = true
 end
 
-function Eat.sv_n_updateEatRenderables( self, activeUid, player )
-	self.network:setClientData( { activeUid = activeUid } )
+function Eat.sv_n_updateEatRenderables(self, activeUid, player)
+	self.network:setClientData({ activeUid = activeUid })
 end
 
-function Eat.cl_updateActiveFood( self )
+function Eat.cl_updateActiveFood(self)
 	self:cl_updateEatRenderables()
 	self:cl_loadAnimations()
 	if self.activeItem == nil or self.activeItem == sm.uuid.getNil() then
-		setTpAnimation( self.tpAnimations, "putdown" )
+		setTpAnimation(self.tpAnimations, "putdown")
 		if self.tool:isLocal() and self.fpAnimations.currentAnimation ~= "unequip" then
-			swapFpAnimation( self.fpAnimations, "equip", "unequip", 0.2 )
+			swapFpAnimation(self.fpAnimations, "equip", "unequip", 0.2)
 		end
 	else
-		setTpAnimation( self.tpAnimations, "pickup", 0.0001 )
+		setTpAnimation(self.tpAnimations, "pickup", 0.0001)
 		if self.tool:isLocal() then
-			swapFpAnimation( self.fpAnimations, "unequip", "equip", 0.2 )
+			swapFpAnimation(self.fpAnimations, "unequip", "equip", 0.2)
 		end
 	end
 end
 
-function Eat.cl_updateEatRenderables( self )
-	
+function Eat.cl_updateEatRenderables(self)
+
 	local eatRenderables = {}
 	local animationRenderablesTp = RenderablesEattoolTp
 	local animationRenderablesFp = RenderablesEattoolFp
-	
-	if FoodUuidToRenderable[tostring( self.activeItem )] then
-		eatRenderables = FoodUuidToRenderable[tostring( self.activeItem )]
+
+	if FoodUuidToRenderable[tostring(self.activeItem)] then
+		eatRenderables = FoodUuidToRenderable[tostring(self.activeItem)]
 	else
 		animationRenderablesTp = self.emptyTpRenderables
 		animationRenderablesFp = self.emptyFpRenderables
@@ -439,30 +438,30 @@ function Eat.cl_updateEatRenderables( self )
 
 	local currentRenderablesTp = {}
 	local currentRenderablesFp = {}
-	
-	for k,v in pairs( animationRenderablesTp ) do currentRenderablesTp[#currentRenderablesTp+1] = v end
-	for k,v in pairs( animationRenderablesFp ) do currentRenderablesFp[#currentRenderablesFp+1] = v end
 
-	self.emptyTpRenderables = shallowcopy( animationRenderablesTp )
-	self.emptyFpRenderables = shallowcopy( animationRenderablesFp )
+	for k, v in pairs(animationRenderablesTp) do currentRenderablesTp[#currentRenderablesTp + 1] = v end
+	for k, v in pairs(animationRenderablesFp) do currentRenderablesFp[#currentRenderablesFp + 1] = v end
 
-	for k,v in pairs( eatRenderables ) do currentRenderablesTp[#currentRenderablesTp+1] = v end
-	for k,v in pairs( eatRenderables ) do currentRenderablesFp[#currentRenderablesFp+1] = v end
-	
-	self.tool:setTpRenderables( currentRenderablesTp )
+	self.emptyTpRenderables = shallowcopy(animationRenderablesTp)
+	self.emptyFpRenderables = shallowcopy(animationRenderablesFp)
+
+	for k, v in pairs(eatRenderables) do currentRenderablesTp[#currentRenderablesTp + 1] = v end
+	for k, v in pairs(eatRenderables) do currentRenderablesFp[#currentRenderablesFp + 1] = v end
+
+	self.tool:setTpRenderables(currentRenderablesTp)
 	if self.tool:isLocal() then
-		self.tool:setFpRenderables( currentRenderablesFp )
+		self.tool:setFpRenderables(currentRenderablesFp)
 	end
 end
 
-function Eat.client_onUnequip( self )
+function Eat.client_onUnequip(self)
 	self.eating = false
 	self.activeItem = sm.uuid.getNil()
-	if sm.exists( self.tool ) then
+	if sm.exists(self.tool) then
 		self:cl_updateActiveFood()
 		if self.tool:isLocal() then
 			self.eatProgress = 0
-			self.network:sendToServer( "sv_n_updateEatRenderables", self.activeItem )
+			self.network:sendToServer("sv_n_updateEatRenderables", self.activeItem)
 		end
 	end
 
@@ -471,73 +470,88 @@ function Eat.client_onUnequip( self )
 end
 
 -- Start
-function Eat.sv_n_startEat( self, params )
-	self.network:sendToClients( "cl_n_startEat" )
+function Eat.sv_n_startEat(self, params)
+	self.network:sendToClients("cl_n_startEat")
 end
 
-function Eat.cl_n_startEat( self )
+function Eat.cl_n_startEat(self)
 	if not self.tool:isLocal() and self.tool:isEquipped() then
 		self:startEat()
 	end
 end
 
-function Eat.startEat( self )
+function Eat.startEat(self)
 	self.eating = true
 	if self.tool:isLocal() then
 		self.eatProgress = 0
-		if isAnyOf( self.activeItem, Drinks )  then
-			setFpAnimation( self.fpAnimations, "drink", 0.25 )
+		if isAnyOf(self.activeItem, Drinks) then
+			setFpAnimation(self.fpAnimations, "drink", 0.25)
 		else
-			setFpAnimation( self.fpAnimations, "eat", 0.25 )
+			setFpAnimation(self.fpAnimations, "eat", 0.25)
 		end
 	end
 
-	if isAnyOf( self.activeItem, Drinks )  then
+	if isAnyOf(self.activeItem, Drinks) then
 		if not self.drinkEffectAudio:isPlaying() then
 			self.drinkEffectAudio:start()
 		end
-		setTpAnimation( self.tpAnimations, "drink", 10.0 )
+		setTpAnimation(self.tpAnimations, "drink", 10.0)
 	else
 		if not self.munchEffectAudio:isPlaying() then
 			self.munchEffectAudio:start()
 		end
-		setTpAnimation( self.tpAnimations, "eat", 10.0 )
+		setTpAnimation(self.tpAnimations, "eat", 10.0)
 	end
 end
 
 -- Stop
-function Eat.sv_n_stopEat( self, params, player )
+function Eat.sv_n_stopEat(self, params, player)
 	if params then
-		local edible = sm.item.getEdible( params.itemId )
-		assert( edible )
+		local edible = sm.item.getEdible(params.itemId)
+		assert(edible)
 		sm.container.beginTransaction()
-		sm.container.spendFromSlot( player:getInventory(), params.selectedSlot, params.itemId, 1 )
+		sm.container.spendFromSlot(player:getInventory(), params.selectedSlot, params.itemId, 1)
 		if sm.container.endTransaction() then
-			sm.event.sendToPlayer( self.tool:getOwner(), "sv_e_eat", edible )
+			sm.event.sendToPlayer(self.tool:getOwner(), "sv_e_eat", edible)
 		end
 	end
-	self.network:sendToClients( "cl_n_stopEat", params )
+	self.network:sendToClients("cl_n_stopEat", params)
 end
 
-function Eat.cl_n_stopEat( self, params )
+function Eat.cl_n_stopEat(self, params)
 	if self.tool:isLocal() then
 		if params and params.itemId then
 			self.activeItem = sm.localPlayer.getActiveItem()
 			self:cl_updateEatRenderables()
+			if params.itemId == obj_consumable_sunshake then
+				local messages = {
+					"Free the woc inside you!",
+					"How about UDDrink?",
+					"It's always a bright day with Sunshake!",
+					"Pure as Sunlight!",
+					"Whenever you think of dehydration, think Sunshake!",
+					"Sunshake gives you udders!",
+					"Your one and only friend!",
+					"Untamed Energy for all Humans!",
+					"Straight from the udder to your mouth!",
+					"Don’t be depressed just drink"
+				}
+				sm.gui.chatMessage("#ff88ff" .. messages[math.random(1, #messages)])
+			end
 		end
 	else
 		self:stopEat()
 	end
 end
 
-function Eat.stopEat( self )
+function Eat.stopEat(self)
 	self.eating = false
 	if self.tool:isLocal() then
 		self.eatProgress = 0
-		setFpAnimation( self.fpAnimations, "idle", 0.25 )
+		setFpAnimation(self.fpAnimations, "idle", 0.25)
 	end
-	setTpAnimation( self.tpAnimations, "idle", 10.0 )
-	
+	setTpAnimation(self.tpAnimations, "idle", 10.0)
+
 	if self.drinkEffectAudio:isPlaying() then
 		self.drinkEffectAudio:stop()
 	end
@@ -547,24 +561,24 @@ function Eat.stopEat( self )
 end
 
 -- Interact
-function Eat.client_onEquippedUpdate( self, primaryState, secondaryState, forceBuildActive )
+function Eat.client_onEquippedUpdate(self, primaryState, secondaryState, forceBuildActive)
 
 	if primaryState == sm.tool.interactState.start and not forceBuildActive then
-		if sm.container.canSpend( sm.localPlayer.getInventory(), self.activeItem, 1 ) then
+		if sm.container.canSpend(sm.localPlayer.getInventory(), self.activeItem, 1) then
 			self:startEat()
-			self.network:sendToServer( "sv_n_startEat" )
+			self.network:sendToServer("sv_n_startEat")
 		end
 	elseif primaryState == sm.tool.interactState.stop then
 		self:stopEat()
-		self.network:sendToServer( "sv_n_stopEat" )
+		self.network:sendToServer("sv_n_stopEat")
 	end
-	
+
 	if forceBuildActive and not self.eating then
 		return false, false
 	else
-		local keyBindingText =  sm.gui.getKeyBinding( "Create", true )
-		sm.gui.setInteractionText( "", keyBindingText, "#{INTERACTION_EAT}" )
+		local keyBindingText = sm.gui.getKeyBinding("Create", true)
+		sm.gui.setInteractionText("", keyBindingText, "#{INTERACTION_EAT}")
 	end
 	return true, false
-	
+
 end
