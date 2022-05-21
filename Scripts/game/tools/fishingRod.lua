@@ -16,6 +16,8 @@ sm.tool.preloadRenderables( renderables )
 sm.tool.preloadRenderables( renderablesTp )
 sm.tool.preloadRenderables( renderablesFp )
 
+local CHAPTER2 = false
+
 local maxThrowForce = 2.5
 local minThrowForce = 0.25
 local chargeUpTime = 2
@@ -34,12 +36,38 @@ local baitNames = {
 	sandwich = obj_consumable_longsandwich
 }
 
-local minWait = 10--5*40 --ticks
-local maxWait = 40--20*40 --ticks
+local minWait = 5*40 --ticks
+local maxWait = 20*40 --ticks
 local minBites = 1
 local maxBites = 5
-local nibbleTime = 20 --ticks
+local nibbleTime = 5 --ticks
 local fishDistance = 3
+local junkLootChance = 0.2 --only if no bait
+local epicLootChance = 0.05 --for all baits
+
+local junkLoot = {
+	{ uuid = blk_plastic, 					chance = 35,			quantity = function() return math.random(8, 16) end },
+	{ uuid = blk_scrapwood, 				chance = 30,			quantity = function() return math.random(5, 10) end },
+	{ uuid = blk_scrapmetal, 				chance = 15,			quantity = function() return math.random(2, 5) end },
+	{ uuid = obj_consumable_chemical, 		chance = 1,				quantity = function() return math.random(1, 10) end },
+	{ uuid = obj_decor_boot, 				chance = 5,				quantity = 1 },
+	{ uuid = obj_decor_toiletroll, 			chance = 1,				quantity = 1 },
+	{ uuid = obj_scrap_smallwheel, 			chance = 1,				quantity = 1 },
+	{ uuid = obj_resources_slimyclam, 		chance = 5,				quantity = function() return math.random(8, 16) end },
+	{ uuid = obj_resource_ember, 			chance = 5,				quantity = 1 },
+	{ uuid = obj_consumable_water, 			chance = 1,				quantity = 1 },
+	{ uuid = obj_spaceship_microwave, 		chance = 1,				quantity = 1 }
+}
+
+local epicLoot = {
+	{ uuid = obj_consumable_component,		chance = 1,				quantity = function() return math.random(1, 3) end },
+	{ uuid = obj_consumable_fertilizer, 	chance = 1,				quantity = function() return math.random(2, 4) end },
+	{ uuid = obj_consumable_soilbag, 		chance = 1,				quantity = function() return math.random(1, 3) end },
+	{ uuid = obj_resource_cotton, 			chance = 5,				quantity = function() return math.random(1, 3) end },
+	{ uuid = obj_decor_babyduck, 			chance = 5,				quantity = 1 },
+	{ uuid = obj_consumable_battery, 		chance = 5,				quantity = function() return math.random(2, 4) end },
+	{ uuid = obj_consumable_sunshake, 		chance = 5,				quantity = 1 }
+}
 
 --SERVER Start
 function Rod.server_onCreate( self )
@@ -93,7 +121,6 @@ function Rod.server_onFixedUpdate( self, timeStep )
 			if not fish.effect and fish.spawn < sm.game.getCurrentTick() then
 				local pos = effect.pos + sm.vec3.new(math.random()-0.5, math.random()-0.5, 0):normalize()*fishDistance
 				self.network:sendToClients("cl_create_fish", {pos = pos, rot = sm.quat.identity(), bitesLeft = fish.bitesLeft, biteTime = fish.biteTime, uuid = fish.uuid, id = id, direction = 1})
-				print("spawn fish pls")
 				fish.effect = true
 			end
 		end
@@ -152,7 +179,7 @@ function Rod.sv_create_hook( self, params, player )
 	local bait = params.bait
 
 	sm.container.beginTransaction()
-	sm.container.spend(player:getInventory(), baits[self.bait], 1)
+	sm.container.spend(player:getInventory(), bait, 1)
 	if not sm.container.endTransaction() and bait ~= baits[1] then
 		bait = baits[1]
 		self.network:sendToClient(player, "cl_reset_bait")
@@ -176,10 +203,24 @@ function Rod.sv_destroy_hook( self, params, player )
 	end
 
 	if params.catch then
+		local catch = {uuid = params.catch, quantity = 1}
+
+		local junkChance = 0
+		if effect.bait == baits[1] then
+			junkChance = junkLootChance + epicLootChance
+		end
+		local rand = math.random()
+		if rand < epicLootChance then
+			catch = SelectOne(epicLoot)
+		elseif rand < junkChance then
+			catch = SelectOne(junkLoot)
+		end
+
+
 		sm.container.beginTransaction()
-		sm.container.collect( player:getInventory(), params.catch, 1 )
+		sm.container.collect( player:getInventory(), catch.uuid, catch.quantity )
 		sm.container.endTransaction()
-		self.network:sendToClient(player, "cl_on_catch", {uuid = params.catch, quantity = 1} )
+		self.network:sendToClient(player, "cl_on_catch", catch )
 		sm.effect.playEffect("Loot - Pickup", effect.pos)
 	end
 
@@ -244,7 +285,7 @@ end
 function Rod.cl_create_fish( self, params )
 	local fish = params
 	fish.effect = sm.effect.createEffect("ShapeRenderable")
-	fish.effect:setParameter("uuid", params.uuid)
+	fish.effect:setParameter("uuid", obj_black_fish)
 	fish.effect:setParameter("color", sm.color.new(0,0,0))
 	fish.effect:setScale(hookSize*2)
 	fish.effect:start()
@@ -304,6 +345,14 @@ function Rod.client_onEquippedUpdate( self, primaryState, secondaryState)
 			self.useCD = { active = true, timer = 1 }
 
 			local lookDir = sm.localPlayer.getDirection()
+			if lookDir.z > 0.5 then
+				lookDir.z = 0
+				lookDir = lookDir:normalize()
+				lookDir.z = 0.333
+				lookDir = lookDir:normalize()
+			end
+
+
 			local hookPos = self:calculateFirePosition(sm.localPlayer.getPlayer()) + lookDir / 2
 			local hookDir = lookDir * math.max(self.chargeTime/chargeUpTime * maxThrowForce, minThrowForce)
 
@@ -403,18 +452,20 @@ function Rod:cl_reset()
 end
 
 function Rod:client_onToggle()
-	for i=0, #baits-1 do
-		local index = (self.bait + i) % #baits + 1
-		if index == 1 then
-			self.bait = index
-			break
-		elseif sm.localPlayer.getInventory():canSpend(baits[index], 1 ) then
-			self.bait = index
-			sm.gui.displayAlertText(language_tag("FishingBait") .. sm.shape.getShapeTitle(baits[index]))
-			return true
+	if CHAPTER2 then
+		for i=0, #baits-1 do
+			local index = (self.bait + i) % #baits + 1
+			if index == 1 then
+				self.bait = index
+				break
+			elseif sm.localPlayer.getInventory():canSpend(baits[index], 1 ) then
+				self.bait = index
+				sm.gui.displayAlertText(language_tag("FishingBait") .. sm.shape.getShapeTitle(baits[index]))
+				return true
+			end
 		end
+		sm.gui.displayAlertText(language_tag("FishingBait") .. language_tag("FishingBaitNone"))
 	end
-	sm.gui.displayAlertText(language_tag("FishingBait") .. language_tag("FishingBaitNone"))
 	return true
 end
 
@@ -424,7 +475,11 @@ function Rod.calculateFirePosition( self, player )
 	local dir = character:getDirection()
 	local pitch = math.asin( dir.z )
 	local right = sm.vec3.cross(dir, sm.vec3.new(0,0,1))
-	right = right:normalize()
+	if right:length() > 0 then
+		right = right:normalize()
+	else
+		right = sm.vec3.new(0, 1, 0)
+	end
 
 	local fireOffset = sm.vec3.new( 1.0, 0.0, 0.75 )
 
@@ -457,7 +512,7 @@ function Rod.calculate_trajectory(pos, dir, dt)
 		return pos, dir
 	end
 
-	dir = (dir + sm.vec3.new(0, 0, -0.5)*dt):normalize() * dir:length()
+	dir = (dir - sm.vec3.new(0,0,1)*dt):normalize() * dir:length()
 	pos = pos + dir*dt*5
 	return pos, dir
 end
@@ -490,7 +545,6 @@ function Rod.animate_fish(self, effect, hookPos, dt)
 				if effect.player == sm.localPlayer.getPlayer() then
 					self.network:sendToServer("sv_spend_bait", {bait = effect.bait, id = effect.id})
 				end
-				print("2 late")
 			end
 		elseif not fish.nibble then
 			if fish.direction > 0 then
