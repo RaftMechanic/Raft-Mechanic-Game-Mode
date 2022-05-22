@@ -227,34 +227,11 @@ function Binoculars.client_onUpdate( self, dt )
 
 
 	if self.tool:isLocal() then
-		local dispersion = 0.0
-		local fireMode = self.aiming and self.aimFireMode or self.normalFireMode
-		local recoilDispersion = 1.0 - ( math.max( fireMode.minDispersionCrouching, fireMode.minDispersionStanding ) + fireMode.maxMovementDispersion )
-
-		if isCrouching then
-			dispersion = fireMode.minDispersionCrouching
-		else
-			dispersion = fireMode.minDispersionStanding
-		end
-
-		if self.tool:getRelativeMoveDirection():length() > 0 then
-			dispersion = dispersion + fireMode.maxMovementDispersion * self.tool:getMovementSpeedFraction()
-		end
-
-		if not self.tool:isOnGround() then
-			dispersion = dispersion * fireMode.jumpDispersionMultiplier
-		end
-
-		self.movementDispersion = dispersion
-
-		self.spreadCooldownTimer = clamp( self.spreadCooldownTimer, 0.0, fireMode.spreadCooldown )
-		local spreadFactor = fireMode.spreadCooldown > 0.0 and clamp( self.spreadCooldownTimer / fireMode.spreadCooldown, 0.0, 1.0 ) or 0.0
-
-		self.tool:setDispersionFraction( clamp( self.movementDispersion + spreadFactor * recoilDispersion, 0.0, 1.0 ) )
+		self.tool:setDispersionFraction(0)
 
 		if self.aiming then
 			if self.tool:isInFirstPersonView() then
-				self.tool:setCrossHairAlpha( 0.0 )
+				self.tool:setCrossHairAlpha( 1.0 )
 			else
 				self.tool:setCrossHairAlpha( 1.0 )
 			end
