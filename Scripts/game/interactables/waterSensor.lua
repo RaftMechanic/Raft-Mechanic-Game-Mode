@@ -49,7 +49,7 @@ end
 
 function Sensor:cl_refreshGUI()
     self.cl.gui:setSliderData( "Setting", maxTriggerSize + 1, self.cl.data.slider )
-    self.cl.gui:setText( "SubTitle", language_tag("WaterSensor_Radius_radius").. tostring( self.cl.data.slider )..language_tag("WaterSensor_Radius_blocks") )
+    self.cl.gui:setText( "SubTitle", string.format(language_tag("WaterSensor_Radius"), self.cl.data.slider) )
 end
 
 function Sensor:cl_onSliderChange( sliderName, sliderPos )
@@ -116,7 +116,7 @@ function Sensor:client_canInteract()
     local o2 = "</p>"
     local txt = self.cl.data.visualize and language_tag("WaterSensor_Visualization_on") or language_tag("WaterSensor_Visualization_off")
 	sm.gui.setInteractionText( "", o1..language_tag("WaterSensor_CurrentRadius")..tostring(self.cl.data.slider)..language_tag("WaterSensor_CurrentRadius_blocks")..txt..o2 )
-    sm.gui.setInteractionText( "", o1.."'"..sm.gui.getKeyBinding( "Use" )..language_tag("WaterSensor_Adjust_tip1")..sm.gui.getKeyBinding( "Tinker" )..language_tag("WaterSensor_Adjust_tip2")..o2 )
+    sm.gui.setInteractionText( "", o1..string.format(language_tag("WaterSensor_Adjust_tip"), sm.gui.getKeyBinding( "Use" ), sm.gui.getKeyBinding( "Tinker" ))..o2 )
 
     return true
 end
