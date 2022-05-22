@@ -344,14 +344,15 @@ function Binoculars.client_onEquip( self, animate )
 	self.defaultFov = sm.camera.getFov()
 	local cameraWeight, cameraFPWeight = self.tool:getCameraWeights()
 	self.aimWeight = math.max( cameraWeight, cameraFPWeight )
-	self.vignette = sm.gui.createGuiFromLayout("$CONTENT_DATA/Gui/Overlays/BinocularsOverlay.layout",false,{
+	-- TODO blur!
+--[[ 	self.vignette = sm.gui.createGuiFromLayout("$CONTENT_DATA/Gui/Overlays/BinocularsOverlay.layout",false,{
 		isHud = true,
 		isInteractive = false,
 		needsCursor = false,
 		hidesHotbar = true,
 		isOverlapped = false
-	})
-	self.vignette:setText("ZoomFactorDisplay", language_tag("BinocularsZoomFactor") .. self.zoomFactor .. "x")
+	}) ]]
+	-- self.vignette:setText("ZoomFactorDisplay", language_tag("BinocularsZoomFactor") .. self.zoomFactor .. "x")
 	self.jointWeight = 0.0
 
 	currentRenderablesTp = {}
@@ -379,7 +380,7 @@ function Binoculars.client_onUnequip( self, animate )
 	self.wantEquipped = false
 	self.equipped = false
 	self.aiming = false
-	self.vignette:close()
+	--self.vignette:close() TODO blur!
 	sm.camera.setCameraState(sm.camera.state.default)
 	sm.camera.setFov(self.defaultFov)
 	if sm.exists( self.tool ) then
@@ -423,7 +424,7 @@ function Binoculars.cl_onPrimaryUse( self, state )
 
 	if state == sm.tool.interactState.start and not self.aiming then
 		self.aiming = true
-		self.vignette:open()
+		--self.vignette:open() TODO blur!
 		self:onAim(self.aiming)
 		self.network:sendToServer("sv_n_onAim", self.aiming)
 		-- self.tool:updateCamera( 2.8, 110.0, sm.vec3.new( 0.65, 0.0, 0.05 ), self.aimWeight )
@@ -435,7 +436,7 @@ function Binoculars.cl_onPrimaryUse( self, state )
 		-- sm.camera.setFov(2)
 	elseif self.aiming and (state == sm.tool.interactState.stop or state == sm.tool.interactState.null) then
 		self.aiming = false
-		self.vignette:close()
+		--self.vignette:close() TODO blur!
 		self:onAim(self.aiming)
 		self.network:sendToServer("sv_n_onAim", self.aiming)
 		-- sm.camera.setCameraState(sm.camera.state.default)
