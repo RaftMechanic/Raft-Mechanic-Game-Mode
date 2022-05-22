@@ -80,7 +80,7 @@
 		{
          "name" : "",
          "previewRenderable" : "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/char_binocular_preview.rend",
-         "previewRotation" : [ 1, 0, 0, 0, 0, -1, 0, 1, 0 ],
+         "previewRotation" : [ 1, 2, 0, 0, 0, -1, 0, 1, 0 ],
          "script" :	{
             "class" : "Binoculars",
             "data" : {},
