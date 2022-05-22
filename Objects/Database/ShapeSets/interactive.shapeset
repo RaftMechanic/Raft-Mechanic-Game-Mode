@@ -1,1633 +1,1631 @@
 {
-	"partList": [
-		{
-			"box": {
-				"x": 1,
-				"y": 4,
-				"z": 1
-			},
-			"color": "ff0000",
-			"flammable": true,
-			"name": "obj_torch",
-			"physicsMaterial": "Mechanical",
-			"ratings": {
-				"buoyancy": 8,
-				"density": 2,
-				"durability": 4,
-				"friction": 5
-			},
-			"renderable": "$CONTENT_DATA/Objects/Renderables/Interactive/Torch.rend",
-			"rotationSet": "PropY",
-			"scripted": {
-				"classname": "Torch",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/Torch.lua"
-			},
-			"stackSize": 10,
-			"sticky": "-Y",
-			"uuid": "ce986935-5b57-4249-acbb-04ef6666bb03",
-			"autoTool": "09a952e0-24fe-451a-abe8-b912d1c5bbac"
-		},
-		{
-			"box": {
-				"x": 1,
-				"y": 4,
-				"z": 1
-			},
-			"color": "ff0000",
-			"flammable": true,
-			"name": "obj_torch_lit",
-			"physicsMaterial": "Mechanical",
-			"ratings": {
-				"buoyancy": 8,
-				"density": 2,
-				"durability": 4,
-				"friction": 5
-			},
-			"renderable": "$CONTENT_DATA/Objects/Renderables/Interactive/Torch_burning.rend",
-			"rotationSet": "PropY",
-			"scripted": {
-				"classname": "Torch",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/Torch.lua"
-			},
-			"stackSize": 10,
-			"sticky": "-Y",
-			"uuid": "93e8a46a-5c24-42d2-8261-67be84e05ccf",
-			"autoTool": "09a952e0-24fe-451a-abe8-b912d1c5bbac"
-		},
-		{
-			"box": {
-				"x": 1,
-				"y": 4,
-				"z": 1
-			},
-			"color": "ff0000",
-			"flammable": true,
-			"name": "obj_torch_burnt",
-			"physicsMaterial": "Mechanical",
-			"ratings": {
-				"buoyancy": 8,
-				"density": 2,
-				"durability": 4,
-				"friction": 5
-			},
-			"renderable": "$CONTENT_DATA/Objects/Renderables/Interactive/Torch_burnt.rend",
-			"rotationSet": "PropY",
-			"scripted": {
-				"classname": "Torch",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/Torch.lua"
-			},
-			"stackSize": 10,
-			"sticky": "-Y",
-			"uuid": "ca0baeac-1ba7-41b2-9119-2fa09ed6c96a",
-			"autoTool": "09a952e0-24fe-451a-abe8-b912d1c5bbac"
-		},
-		{
-			"box": {
-				"x": 4,
-				"y": 3,
-				"z": 4
-			},
-			"color": "4f2412",
-			"flammable": true,
-			"name": "obj_scrap_field",
-			"physicsMaterial": "Wood",
-			"ratings": {
-				"buoyancy": 4,
-				"density": 2,
-				"durability": 3,
-				"friction": 5
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Interactables/ScrapField.fbx",
-						"subMeshMap": {
-							"ScrapDriverSeat": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_driverseat_worn_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_driverseat_worn_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_driverseat_worn_nor.tga"
-								]
-							},
-							"ScrapEngine": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_makeshiftengine_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_makeshiftengine_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_makeshiftengine_nor.tga"
-								]
-							},
-							"Soil": {
-								"custom": {
-									"uv0": {
-										"u": 1,
-										"v": 0.1
-									}
-								},
-								"material": "UVAnimDifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_dif.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropY",
-			"scripted": {
-				"classname": "ScrapField",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
-			},
-			"sticky": "-Y",
-			"uuid": "8e75cddb-040e-4813-8dd6-7e72f3288a91"
-		},
-		{
-			"box": {
-				"x": 6,
-				"y": 2,
-				"z": 4
-			},
-			"color": "9b683a",
-			"flammable": true,
-			"name": "obj_large_field",
-			"physicsMaterial": "Grass",
-			"ratings": {
-				"buoyancy": 3,
-				"density": 3,
-				"durability": 4,
-				"friction": 5
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Interactables/GrowBox2.fbx",
-						"subMeshMap": {
-							"Soil": {
-								"custom": {
-									"uv0": {
-										"u": 1,
-										"v": 0.1
-									}
-								},
-								"material": "UVAnimDifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_dif.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
-								]
-							},
-							"lambert2": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropY",
-			"scripted": {
-				"classname": "BigFarm",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
-			},
-			"sticky": "+X-X-Y+Z-Z",
-			"uuid": "c80e2932-0d21-48bb-b5a2-dba03d73cfb7"
-		},
-		{
-			"box": {
-				"x": 4,
-				"y": 2,
-				"z": 2
-			},
-			"color": "ff0000",
-			"flammable": true,
-			"name": "obj_airtank_empty",
-			"physicsMaterial": "Metal",
-			"ratings": {
-				"buoyancy": 1,
-				"density": 10,
-				"durability": 4,
-				"friction": 4
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"maxViewDistance": 1500,
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Interactables/AirTank.fbx",
-						"subMeshMap": {
-							"DefaultMaterial": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
-									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
-									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
-								]
-							},
-							"Material": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_dif.tga",
-									"$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_asg.tga",
-									"$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_nor.tga"
-								]
-							},
-							"barrack_support:blinn3": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_nor.tga"
-								]
-							},
-							"radar": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$CONTENT_DATA/Objects/Textures/Interactables/obj_interactive_airtankempty_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropZ",
-			"scripted": {
-				"classname": "AirTank",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/AirTank.lua"
-			},
-			"sticky": "-Z",
-			"uuid": "03075a5a-92f5-49bd-b132-7d8e0cb80156"
-		},
-		{
-			"box": {
-				"x": 4,
-				"y": 2,
-				"z": 2
-			},
-			"color": "00ff00",
-			"flammable": true,
-			"name": "obj_airtank_full",
-			"physicsMaterial": "Metal",
-			"ratings": {
-				"buoyancy": 10,
-				"density": 1,
-				"durability": 4,
-				"friction": 4
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"maxViewDistance": 1500,
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Interactables/AirTank.fbx",
-						"subMeshMap": {
-							"DefaultMaterial": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
-									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
-									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
-								]
-							},
-							"Material": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_dif.tga",
-									"$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_asg.tga",
-									"$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_nor.tga"
-								]
-							},
-							"barrack_support:blinn3": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_nor.tga"
-								]
-							},
-							"radar": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$CONTENT_DATA/Objects/Textures/Interactables/obj_interactive_airtankfull_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropZ",
-			"scripted": {
-				"classname": "AirTank",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/AirTank.lua"
-			},
-			"showInInventory": false,
-			"sticky": "-Z",
-			"uuid": "462baf58-6329-4f29-8f9e-c20d06fb6f7d"
-		},
-		{
-			"hull": {
-				"col": "$CONTENT_DATA/Objects/Collision/water-purifier_col.obj",
-				"x": 3,
-				"y": 7,
-				"z": 4
-			},
-			"color": "df7f01",
-			"flammable": false,
-			"name": "obj_scrap_purifier",
-			"physicsMaterial": "Mechanical",
-			"ratings": {
-				"buoyancy": 2,
-				"density": 1,
-				"durability": 3,
-				"friction": 5
-			},
-			"renderable": "$CONTENT_DATA/Objects/Renderables/Interactive/obj_purifier_small.rend",
-			"rotationSet": "PropY",
-			"scripted": {
-				"classname": "ScrapPurifier",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
-			},
-			"sticky": "-Y",
-			"uuid": "80c9edb7-0f86-4899-bf60-c3baca3fa841"
-		},
-		{
-			"box": {
-				"x": 7,
-				"y": 5,
-				"z": 7
-			},
-			"color": "4f2412",
-			"flammable": true,
-			"name": "obj_scrap_tree_grower",
-			"physicsMaterial": "Metal",
-			"ratings": {
-				"buoyancy": 4,
-				"density": 1,
-				"durability": 4,
-				"friction": 3
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Interactables/TreeCrate.fbx",
-						"subMeshMap": {
-							"Soil": {
-								"custom": {
-									"uv0": {
-										"u": 1,
-										"v": 0.1
-									}
-								},
-								"material": "UVAnimDifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_dif.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
-								]
-							},
-							"lambert2": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
-								]
-							},
-							"phongE1": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_crate_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_crate_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_crate_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropY",
-			"scripted": {
-				"classname": "ScrapTreeGrower",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
-			},
-			"sticky": "-Y",
-			"uuid": "819fb238-a68b-4aab-a6f2-c1037f6bfb5b"
-		},
-		{
-			"box": {
-				"x": 4,
-				"y": 3,
-				"z": 3
-			},
-			"color": "0a956d",
-			"flammable": true,
-			"name": "obj_scrap_workbench",
-			"physicsMaterial": "Wood",
-			"ratings": {
-				"buoyancy": 5,
-				"density": 2,
-				"durability": 3,
-				"friction": 5
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Interactables/Workbench.fbx",
-						"subMeshMap": {
-							"Notepad": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_dif.tga",
-									"$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_asg.tga",
-									"$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_nor.tga"
-								]
-							},
-							"SmallHammer": {
-								"color": "ffffff",
-								"material": "DifAsgNor",
-								"textureList": [
-									"$GAME_DATA/Character/Char_Tools/Char_smallhammer/char_smallhammer_dif.tga",
-									"$GAME_DATA/Character/Char_Tools/Char_smallhammer/char_smallhammer_asg.tga",
-									"$GAME_DATA/Character/Char_Tools/Char_smallhammer/char_smallhammer_nor.tga"
-								]
-							},
-							"Wood": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_dif.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_asg.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_nor.tga"
-								]
-							},
-							"book": {
-								"color": "fc949d",
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Character/Char_Tools/Char_logbook/char_logbook_dif.tga",
-									"$SURVIVAL_DATA/Character/Char_Tools/Char_logbook/char_logbook_asg.tga",
-									"$SURVIVAL_DATA/Character/Char_Tools/Char_logbook/char_logbook_nor.tga"
-								]
-							},
-							"lambert2": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
-								]
-							},
-							"phong1": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropY",
-			"scripted": {
-				"classname": "ScrapWorkbench",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
-			},
-			"sticky": "-Y",
-			"uuid": "f3163e62-e6c3-475c-805e-559f8bb07ad1"
-		},
-		{
-			"box": {
-				"x": 2,
-				"y": 3,
-				"z": 3
-			},
-			"color": "ffffff",
-			"flammable": true,
-			"name": "obj_apiary",
-			"physicsMaterial": "Wood",
-			"ratings": {
-				"buoyancy": 4,
-				"density": 3,
-				"durability": 4,
-				"friction": 5
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Interactables/Apiary.fbx",
-						"subMeshMap": {
-							"DefaultMaterial": {
-								"color": "fc949d",
-								"material": "DifAsgNor",
-								"textureList": [
-									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
-									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
-									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
-								]
-							},
-							"Shack_Atlas": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$CONTENT_DATA/Objects/Textures/Interactables/apiary_purifier_shack_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_nor.tga"
-								]
-							},
-							"beehive_mat": {
-								"color": "ffffff",
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_beehive_dif.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_beehive_asg.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_beehive_nor.tga"
-								]
-							},
-							"bowl": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/consumable/Obj_consumable_chemical_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/consumable/Obj_consumable_chemical_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/consumable/Obj_consumable_chemical_nor.tga"
-								]
-							},
-							"glass": {
-								"material": "Glass",
-								"textureList": [
-									"$CONTENT_DATA/Objects/Textures/Interactables/apiary_glass.tga"
-								]
-							},
-							"lambert2": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
-								]
-							},
-							"sign_atlas": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_dif.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_asg.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropY",
-			"scripted": {
-				"classname": "Apiary",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
-			},
-			"sticky": "-Y",
-			"uuid": "ebabda72-94d8-40c5-ab07-7001d1b67380"
-		},
-		{
-			"color": "d8b589",
-			"cylinder": {
-				"axis": "Y",
-				"depth": 1,
-				"diameter": 5,
-				"margin": 0.5
-			},
-			"flammable": true,
-			"name": "obj_propeller",
-			"physicsMaterial": "Mechanical",
-			"ratings": {
-				"buoyancy": 1,
-				"density": 3,
-				"durability": 5,
-				"friction": 3
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"maxViewDistance": 1500,
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Interactables/Propeller.fbx",
-						"subMeshMap": {
-							"hideout_atlas": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Terrain/Textures/Hideout/env_hideout_atlas_dif.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Hideout/env_hideout_atlas_asg.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Hideout/env_hideout_atlas_nor.tga"
-								]
-							},
-							"sign_atlas": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_dif.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_asg.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropYNegY",
-			"scripted": {
-				"classname": "Propeller",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/Propeller.lua"
-			},
-			"sticky": "-Y+Y",
-			"uuid": "885513a7-baa3-44ee-aa6e-7546bf0715a7"
-		},
-		{
-			"color": "ff0000",
-			"cylinder": {
-				"axis": "Y",
-				"depth": 1,
-				"diameter": 3,
-				"margin": 0.5
-			},
-			"flammable": true,
-			"name": "obj_propeller_small",
-			"physicsMaterial": "Mechanical",
-			"ratings": {
-				"buoyancy": 1,
-				"density": 3,
-				"durability": 5,
-				"friction": 3
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Interactables/PropellerSmall.fbx",
-						"subMeshMap": {
-							"hideout_atlas": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Terrain/Textures/Hideout/env_hideout_atlas_dif.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Hideout/env_hideout_atlas_asg.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Hideout/env_hideout_atlas_nor.tga"
-								]
-							},
-							"sign_atlas": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_dif.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_asg.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropYNegY",
-			"scripted": {
-				"classname": "SmallPropeller",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/Propeller.lua"
-			},
-			"sticky": "-Y+Y",
-			"uuid": "4e69beb8-4519-4fff-a382-fdcfffbad6c2"
-		},
-		{
-			"box": {
-				"x": 1,
-				"y": 1,
-				"z": 1
-			},
-			"color": "ff3200",
-			"flammable": false,
-			"name": "obj_wasdConverter",
-			"physicsMaterial": "Mechanical",
-			"ratings": {
-				"buoyancy": 2,
-				"density": 2,
-				"durability": 3,
-				"friction": 5
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"includes": [
-							"POSITION",
-							"UV0",
-							"UV1",
-							"NORMAL",
-							"TANGENTS",
-							"BLEND_INDICES",
-							"BLEND_WEIGHTS"
-						],
-						"mesh": "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_off.fbx",
-						"minViewSize": 20,
-						"pose0": "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_on.fbx",
-						"subMeshMap": {
-							"logicgate": {
-								"material": "PoseAnimDifAsgNorAo",
-								"textureList": [
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_dif.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_nor.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_ao.tga"
-								]
-							},
-							"screen": {
-								"custom": {
-									"uv0": {
-										"u": 0.16666667,
-										"v": 0.1645
-									}
-								},
-								"material": "UVAnimDifAsgNor",
-								"textureList": [
-									"$CONTENT_DATA/Objects/Textures/Interactables/obj_wasConverter_dif.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_nor.tga"
-								]
-							}
-						}
-					},
-					{
-						"mesh": "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_lod1.fbx",
-						"subMeshMap": {
-							"logicgate": {
-								"material": "DifAsg",
-								"textureList": [
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_dif.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
-									""
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropYZ",
-			"scripted": {
-				"classname": "Converter",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/wasdConverter.lua"
-			},
-			"uuid": "509505f1-b772-4acd-9827-f9a605a979ec"
-		},
-		{
-			"box": {
-				"x": 1,
-				"y": 1,
-				"z": 1
-			},
-			"color": "0033ff",
-			"flammable": false,
-			"name": "obj_waterSensor",
-			"physicsMaterial": "Mechanical",
-			"ratings": {
-				"buoyancy": 2,
-				"density": 2,
-				"durability": 3,
-				"friction": 5
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"includes": [
-							"POSITION",
-							"UV0",
-							"UV1",
-							"NORMAL",
-							"TANGENTS",
-							"BLEND_INDICES",
-							"BLEND_WEIGHTS"
-						],
-						"mesh": "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_off.fbx",
-						"minViewSize": 20,
-						"pose0": "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_on.fbx",
-						"subMeshMap": {
-							"logicgate": {
-								"material": "PoseAnimDifAsgNorAo",
-								"textureList": [
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_dif.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_nor.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_ao.tga"
-								]
-							},
-							"screen": {
-								"custom": {
-									"uv0": {
-										"u": 0.16666667,
-										"v": 0.1645
-									}
-								},
-								"material": "UVAnimDifAsgNor",
-								"textureList": [
-									"$CONTENT_DATA/Objects/Textures/Interactables/obj_new_logic_dif.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_nor.tga"
-								]
-							}
-						}
-					},
-					{
-						"mesh": "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_lod1.fbx",
-						"subMeshMap": {
-							"logicgate": {
-								"material": "DifAsg",
-								"textureList": [
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_dif.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
-									""
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropYZ",
-			"scripted": {
-				"classname": "Sensor",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/waterSensor.lua"
-			},
-			"uuid": "6db7aacf-f2b3-4cbb-a6d2-2a01d5ee5562"
-		},
-		{
-			"box": {
-				"x": 1,
-				"y": 1,
-				"z": 1
-			},
-			"color": "#00ff33",
-			"flammable": false,
-			"name": "obj_creationSteer",
-			"physicsMaterial": "Mechanical",
-			"ratings": {
-				"buoyancy": 2,
-				"density": 2,
-				"durability": 3,
-				"friction": 5
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"includes": [
-							"POSITION",
-							"UV0",
-							"UV1",
-							"NORMAL",
-							"TANGENTS",
-							"BLEND_INDICES",
-							"BLEND_WEIGHTS"
-						],
-						"mesh": "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_off.fbx",
-						"minViewSize": 20,
-						"pose0": "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_on.fbx",
-						"subMeshMap": {
-							"logicgate": {
-								"material": "PoseAnimDifAsgNorAo",
-								"textureList": [
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_dif.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_nor.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_ao.tga"
-								]
-							},
-							"screen": {
-								"custom": {
-									"uv0": {
-										"u": 0.16666667,
-										"v": 0.1645
-									}
-								},
-								"material": "UVAnimDifAsgNor",
-								"textureList": [
-									"$CONTENT_DATA/Objects/Textures/Interactables/obj_new_logic_dif.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_nor.tga"
-								]
-							}
-						}
-					},
-					{
-						"mesh": "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_lod1.fbx",
-						"subMeshMap": {
-							"logicgate": {
-								"material": "DifAsg",
-								"textureList": [
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_dif.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
-									""
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropYZ",
-			"scripted": {
-				"classname": "Steer",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/creationSteer.lua"
-			},
-			"uuid": "71ac7645-57f5-4d49-9574-c8482b431862"
-		},
-		{
-			"box": {
-				"x": 5,
-				"y": 1,
-				"z": 1
-			},
-			"color": "00ff00",
-			"flammable": true,
-			"name": "obj_sail",
-			"physicsMaterial": "Wood",
-			"ratings": {
-				"buoyancy": 2,
-				"density": 6,
-				"durability": 4,
-				"friction": 5
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Interactables/SailSupport.fbx",
-						"subMeshMap": {
-							"Shack_Atlas1": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_nor.tga"
-								]
-							},
-							"blinds1": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_blinds_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_blinds_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_blinds_nor.tga"
-								]
-							},
-							"lambert2": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropY",
-			"scripted": {
-				"classname": "Sail",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/sail.lua"
-			},
-			"sticky": "-Y",
-			"uuid": "eea9794b-bcdf-431e-bdcd-7b2ff6ffa145"
-		},
-		{
-			"box": {
-				"x": 4,
-				"y": 3,
-				"z": 3
-			},
-			"color": "FF6600",
-			"flammable": false,
-			"name": "obj_radio_antenna",
-			"physicsMaterial": "Mechanical",
-			"ratings": {
-				"buoyancy": 2,
-				"density": 3,
-				"durability": 6,
-				"friction": 3
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Interactables/antenna.fbx",
-						"minViewSize": 55,
-						"pose0": "$CONTENT_DATA/Objects/Mesh/Interactables/antenna.fbx",
-						"subMeshMap": {
-							"Notepad": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_dif.tga",
-									"$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_asg.tga",
-									"$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_nor.tga"
-								]
-							},
-							"connectionpoint": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_interactive_container_connectorpoint_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_interactive_container_connectorpoint_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_interactive_container_connectorpoint_nor.tga"
-								]
-							},
-							"containerbattery": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_battery_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_battery_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_battery_nor.tga"
-								]
-							},
-							"lambert11": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/industrial/obj_industrial_antennatower_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/industrial/obj_industrial_antennatower_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/industrial/obj_industrial_antennatower_nor.tga"
-								]
-							},
-							"lambert2": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
-								]
-							},
-							"outfit_engineer_backpack": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Character/Char_Male/Outfit/Backpack/Outfit_engineer_backpack/outfit_engineer_backpack_dif.tga",
-									"$SURVIVAL_DATA/Character/Char_Male/Outfit/Backpack/Outfit_engineer_backpack/outfit_engineer_backpack_asg.tga",
-									"$SURVIVAL_DATA/Character/Char_Male/Outfit/Backpack/Outfit_engineer_backpack/outfit_engineer_backpack_nor.tga"
-								]
-							},
-							"panels": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_solarpanel_dif.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_solarpanel_asg.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_solarpanel_nor.tga"
-								]
-							},
-							"phong1": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_nor.tga"
-								]
-							},
-							"radar": {
-								"material": "PoseAnimDifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_nor.tga"
-								]
-							},
-							"radar_uvanim": {
-								"custom": {
-									"uv0": {
-										"u": 1,
-										"v": 0.25
-									}
-								},
-								"material": "PoseUVAnimDifAsg",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beaconuvanim_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beaconuvanim_asg.tga",
-									""
-								]
-							},
-							"rubber": {
-								"custom": {
-									"color": "rubber"
-								},
-								"material": "DifAsgNor",
-								"textureList": [
-									"$CONTENT_DATA/Objects/Textures/Interactables/Back.png",
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_asg.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_nor.tga"
-								]
-							},
-							"screen": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_screen_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_screen_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_screen_nor.tga"
-								]
-							},
-							"shinymetal": {
-								"custom": {
-									"color": "5a5a5a"
-								},
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_dif.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_asg.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_nor.tga"
-								]
-							},
-							"shinymetal2": {
-								"custom": {
-									"color": "a8a8a8"
-								},
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_dif.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_asg.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropY",
-			"scripted": {
-				"classname": "Antenna",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/antenna.lua"
-			},
-			"sticky": "-Y",
-			"uuid": "f95beb80-49c8-4d4c-98e9-5b87225c4570"
-		},
-		{
-			"box": {
-				"x": 4,
-				"y": 4,
-				"z": 6
-			},
-			"color": "FF6600",
-			"flammable": false,
-			"name": "obj_seed_press",
-			"physicsMaterial": "Metal",
-			"ratings": {
-				"buoyancy": 4,
-				"density": 2,
-				"durability": 4,
-				"friction": 3
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Interactables/SeedPress.fbx",
-						"subMeshMap": {
-							"DefaultMaterial": {
-								"color": "fc949d",
-								"material": "DifAsgNor",
-								"textureList": [
-									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
-									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
-									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
-								]
-							},
-							"lambert2": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
-								]
-							},
-							"panels": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_solarpanel_dif.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_solarpanel_asg.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_solarpanel_nor.tga"
-								]
-							},
-							"radar": {
-								"color": "ffffff",
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_nor.tga"
-								]
-							},
-							"seed_tag": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/consumable/obj_seed_tag_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/consumable/obj_seed_tag_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/consumable/obj_seed_tag_nor.tga"
-								]
-							},
-							"seed_texture": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$CONTENT_DATA/Objects/Textures/Interactables/seedpress_potato.tga",
-									"$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_seedbag_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_seedbag_nor.tga"
-								]
-							},
-							"seed_texture.001": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$CONTENT_DATA/Objects/Textures/Interactables/seedpress_tomato.tga",
-									"$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_seedbag_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_seedbag_nor.tga"
-								]
-							},
-							"shinymetal": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_dif.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_asg.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_nor.tga"
-								]
-							},
-							"shinymetal2": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_dif.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_asg.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_nor.tga"
-								]
-							},
-							"sign_atlas": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_dif.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_asg.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropY",
-			"scripted": {
-				"classname": "SeedPress",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
-			},
-			"sticky": "-Y",
-			"uuid": "e9c7d080-ae4b-4fec-b626-34afda6f5114"
-		},
-		{
-			"box": {
-				"x": 6,
-				"y": 3,
-				"z": 4
-			},
-			"color": "4f2412",
-			"flammable": true,
-			"name": "obj_grill",
-			"physicsMaterial": "Wood",
-			"ratings": {
-				"buoyancy": 10,
-				"density": 1,
-				"durability": 3,
-				"friction": 5
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Interactables/Grill.fbx",
-						"subMeshMap": {
-							"Bark": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_brownbark_dif.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_brownbark_asg.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_brownbark_nor.tga"
-								]
-							},
-							"Notepad": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_dif.tga",
-									"$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_asg.tga",
-									"$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_nor.tga"
-								]
-							},
-							"Wood": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_dif.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_asg.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_nor.tga"
-								]
-							},
-							"bathtub": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_bathtub_dif.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_bathtub_asg.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_bathtub_nor.tga"
-								]
-							},
-							"campfire_mat": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Terrain/Textures/Camping/env_camping_campfire_dif.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Camping/env_camping_campfire_asg.tga",
-									"$SURVIVAL_DATA/Terrain/Textures/Camping/env_camping_campfire_nor.tga"
-								]
-							},
-							"lambert11": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/industrial/obj_industrial_antennatower_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/industrial/obj_industrial_antennatower_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/industrial/obj_industrial_antennatower_nor.tga"
-								]
-							},
-							"lambert2": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
-								]
-							},
-							"submesh0_innerwood": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropY",
-			"scripted": {
-				"classname": "Grill",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
-			},
-			"sticky": "-Y",
-			"uuid": "67dd0023-023d-46cb-9839-e4ada2609a9b"
-		},
-		{
-			"color": "ff0000",
-			"cylinder": {
-				"axis": "Y",
-				"depth": 7,
-				"diameter": 1,
-				"margin": 0.1
-			},
-			"flammable": true,
-			"name": "obj_windsock",
-			"physicsMaterial": "Plastic",
-			"ratings": {
-				"buoyancy": 8,
-				"density": 2,
-				"durability": 4,
-				"friction": 5
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Interactables/FlagSupport.fbx",
-						"subMeshMap": {
-							"lambert2": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropY",
-			"scripted": {
-				"classname": "Flag",
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/flag.lua"
-			},
-			"sticky": "-Y",
-			"uuid": "8f460344-ef34-42ab-99e3-d3bed9af4b52"
-		},
-		{
-			"box": {
-				"x": 5,
-				"y": 2,
-				"z": 12
-			},
-			"color": "3e9ffe",
-			"flammable": true,
-			"name": "obj_hammock",
-			"physicsMaterial": "Wood",
-			"ratings": {
-				"buoyancy": 6,
-				"density": 1,
-				"durability": 5,
-				"friction": 4
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Interactables/Hammock.fbx",
-						"minViewSize": 55,
-						"subMeshMap": {
-							"bed": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_comfybed_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_comfybed_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_comfybed_nor.tga"
-								]
-							},
-							"lambert2": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
-								]
-							},
-							"shark": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_dif.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_asg.tga",
-									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"restrictions": {
-				"usable": true
-			},
-			"rotationSet": "PropFullMinusNegY",
-			"scripted": {
-				"classname": "Bed",
-				"data": {},
-				"filename": "$SURVIVAL_DATA/Scripts/game/interactables/Bed.lua",
-				"seat": {
-					"bones": [
-						{
-							"name": "root_jnt",
-							"offset": {
-								"x": 0.0,
-								"y": 1.0,
-								"z": 0.3
-							}
-						},
-						{
-							"freeRotation": true,
-							"name": "LeftForeArm",
-							"offset": {
-								"x": 1.5,
-								"y": 1.1,
-								"z": 1.1
-							}
-						},
-						{
-							"freeRotation": true,
-							"name": "RightForeArm",
-							"offset": {
-								"x": -1.5,
-								"y": 1.1,
-								"z": 1.1
-							}
-						}
-					],
-					"enterAudio": "Seat seated",
-					"exitAudio": "Seat unseated",
-					"ragdollFile": "$SURVIVAL_DATA/Character/bed_ragdoll.json"
-				}
-			},
-			"sticky": "-Z+Z-Y-X+X",
-			"uuid": "4c1aed86-a402-4240-81e7-b67edf433fd5"
-		},
-		{
-			"box": {
-				"x": 4,
-				"y": 3,
-				"z": 4
-			},
-			"color": "baa48a",
-			"flammable": false,
-			"name": "obj_abandoned_chest",
-			"physicsMaterial": "Metal",
-			"ratings": {
-				"buoyancy": 8,
-				"density": 1,
-				"durability": 10,
-				"friction": 4
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CHALLENGE_DATA/Objects/Mesh/interactive/obj_interactive_challengechest_off.fbx",
-						"pose0": "$CHALLENGE_DATA/Objects/Mesh/interactive/obj_interactive_challengechest_on.fbx",
-						"subMeshList": [
-							{
-								"material": "PoseAnimDifAsgNor",
-								"textureList": [
-									"$CHALLENGE_DATA/Objects/Textures/interactive/obj_interactive_challengechest_dif.tga",
-									"$CHALLENGE_DATA/Objects/Textures/interactive/obj_interactive_challengechest_asg.tga",
-									"$CHALLENGE_DATA/Objects/Textures/interactive/obj_interactive_challengechest_nor.tga"
-								]
-							}
-						]
-					}
-				]
-			},
-			"restrictions": {
-				"buildable": false,
-				"connectable": false,
-				"convertibleToDynamic": true,
-				"destructable": false,
-				"erasable": false,
-				"liftable": false,
-				"paintable": false,
-				"usable": false
-			},
-			"rotationSet": "PropY",
-			"scripted": {
-				"classname": "Chest",
-				"data": {},
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/chest.lua"
-			},
-			"showInInventory": false,
-			"sticky": "-Z-Y-X+X",
-			"uuid": "f2522739-07cd-43ad-97e6-c2515b601bad"
-		},
-		{
-			"box": {
-				"x": 4,
-				"y": 4,
-				"z": 2
-			},
-			"color": "008ae1",
-			"flammable": true,
-			"name": "obj_junk_collector",
-			"physicsMaterial": "Wood",
-			"previewRotation": [1, 0, 0, 0, 0, 1, 0, 1, 0],
-			"ratings": {
-				"buoyancy": 10,
-				"density": 1,
-				"durability": 4,
-				"friction": 10
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Interactables/Collector.fbx",
-						"subMeshMap": {
-							"Shack_Atlas": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_nor.tga"
-								]
-							},
-							"bark": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_dif.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_asg.tga",
-									"$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_nor.tga"
-								]
-							},
-							"cloth": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Character/Char_Dropoff/char_dropoffcloth_dif.tga",
-									"$SURVIVAL_DATA/Character/Char_Dropoff/char_dropoffcloth_asg.tga",
-									"$SURVIVAL_DATA/Character/Char_Dropoff/char_dropoffcloth_nor.tga"
-								]
-							},
-							"innerwood": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
-								]
-							},
-							"lambert2": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropYX",
-			"scripted": {
-				"classname": "Collector",
-				"data": {},
-				"filename": "$CONTENT_DATA/Scripts/game/interactables/junkCollector.lua"
-			},
-			"stackSize": 10,
-			"sticky": "+X-X+Y-Y+Z",
-			"uuid": "f2382297-44b4-4259-99ce-b11da671ac51"
-		}
-	]
+   "partList" : [
+      {
+         "autoTool" : "09a952e0-24fe-451a-abe8-b912d1c5bbac",
+         "box" : {
+            "x" : 1,
+            "y" : 4,
+            "z" : 1
+         },
+         "color" : "ff0000",
+         "flammable" : true,
+         "name" : "obj_torch",
+         "physicsMaterial" : "Mechanical",
+         "ratings" : {
+            "buoyancy" : 8,
+            "density" : 2,
+            "durability" : 4,
+            "friction" : 5
+         },
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Interactive/Torch.rend",
+         "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "Torch",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Torch.lua"
+         },
+         "stackSize" : 10,
+         "sticky" : "-Y",
+         "uuid" : "ce986935-5b57-4249-acbb-04ef6666bb03"
+      },
+      {
+         "autoTool" : "09a952e0-24fe-451a-abe8-b912d1c5bbac",
+         "box" : {
+            "x" : 1,
+            "y" : 4,
+            "z" : 1
+         },
+         "color" : "ff0000",
+         "flammable" : true,
+         "name" : "obj_torch_lit",
+         "physicsMaterial" : "Mechanical",
+         "ratings" : {
+            "buoyancy" : 8,
+            "density" : 2,
+            "durability" : 4,
+            "friction" : 5
+         },
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Interactive/Torch_burning.rend",
+         "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "Torch",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Torch.lua"
+         },
+         "stackSize" : 10,
+         "sticky" : "-Y",
+         "uuid" : "93e8a46a-5c24-42d2-8261-67be84e05ccf"
+      },
+      {
+         "autoTool" : "09a952e0-24fe-451a-abe8-b912d1c5bbac",
+         "box" : {
+            "x" : 1,
+            "y" : 4,
+            "z" : 1
+         },
+         "color" : "ff0000",
+         "flammable" : true,
+         "name" : "obj_torch_burnt",
+         "physicsMaterial" : "Mechanical",
+         "ratings" : {
+            "buoyancy" : 8,
+            "density" : 2,
+            "durability" : 4,
+            "friction" : 5
+         },
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Interactive/Torch_burnt.rend",
+         "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "Torch",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Torch.lua"
+         },
+         "stackSize" : 10,
+         "sticky" : "-Y",
+         "uuid" : "ca0baeac-1ba7-41b2-9119-2fa09ed6c96a"
+      },
+      {
+         "box" : {
+            "x" : 4,
+            "y" : 3,
+            "z" : 4
+         },
+         "color" : "4f2412",
+         "flammable" : true,
+         "name" : "obj_scrap_field",
+         "physicsMaterial" : "Wood",
+         "ratings" : {
+            "buoyancy" : 4,
+            "density" : 2,
+            "durability" : 3,
+            "friction" : 5
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/ScrapField.fbx",
+                  "subMeshMap" : {
+                     "ScrapDriverSeat" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_driverseat_worn_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_driverseat_worn_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_driverseat_worn_nor.tga"
+                        ]
+                     },
+                     "ScrapEngine" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_makeshiftengine_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_makeshiftengine_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_makeshiftengine_nor.tga"
+                        ]
+                     },
+                     "Soil" : {
+                        "custom" : {
+                           "uv0" : {
+                              "u" : 1,
+                              "v" : 0.10
+                           }
+                        },
+                        "material" : "UVAnimDifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_dif.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "ScrapField",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
+         },
+         "sticky" : "-Y",
+         "uuid" : "8e75cddb-040e-4813-8dd6-7e72f3288a91"
+      },
+      {
+         "box" : {
+            "x" : 6,
+            "y" : 2,
+            "z" : 4
+         },
+         "color" : "9b683a",
+         "flammable" : true,
+         "name" : "obj_large_field",
+         "physicsMaterial" : "Grass",
+         "ratings" : {
+            "buoyancy" : 3,
+            "density" : 3,
+            "durability" : 4,
+            "friction" : 5
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/GrowBox2.fbx",
+                  "subMeshMap" : {
+                     "Soil" : {
+                        "custom" : {
+                           "uv0" : {
+                              "u" : 1,
+                              "v" : 0.10
+                           }
+                        },
+                        "material" : "UVAnimDifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_dif.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
+                        ]
+                     },
+                     "lambert2" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "BigFarm",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
+         },
+         "sticky" : "+X-X-Y+Z-Z",
+         "uuid" : "c80e2932-0d21-48bb-b5a2-dba03d73cfb7"
+      },
+      {
+         "box" : {
+            "x" : 4,
+            "y" : 2,
+            "z" : 2
+         },
+         "color" : "ff0000",
+         "flammable" : true,
+         "name" : "obj_airtank_empty",
+         "physicsMaterial" : "Metal",
+         "ratings" : {
+            "buoyancy" : 1,
+            "density" : 10,
+            "durability" : 4,
+            "friction" : 4
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "maxViewDistance" : 1500,
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/AirTank.fbx",
+                  "subMeshMap" : {
+                     "DefaultMaterial" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
+                           "$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
+                           "$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
+                        ]
+                     },
+                     "Material" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_dif.tga",
+                           "$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_asg.tga",
+                           "$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_nor.tga"
+                        ]
+                     },
+                     "barrack_support:blinn3" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_nor.tga"
+                        ]
+                     },
+                     "radar" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$CONTENT_DATA/Objects/Textures/Interactables/obj_interactive_airtankempty_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_nor.tga"
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropZ",
+         "scripted" : {
+            "classname" : "AirTank",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/AirTank.lua"
+         },
+         "sticky" : "-Z",
+         "uuid" : "03075a5a-92f5-49bd-b132-7d8e0cb80156"
+      },
+      {
+         "box" : {
+            "x" : 4,
+            "y" : 2,
+            "z" : 2
+         },
+         "color" : "00ff00",
+         "flammable" : true,
+         "name" : "obj_airtank_full",
+         "physicsMaterial" : "Metal",
+         "ratings" : {
+            "buoyancy" : 10,
+            "density" : 1,
+            "durability" : 4,
+            "friction" : 4
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "maxViewDistance" : 1500,
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/AirTank.fbx",
+                  "subMeshMap" : {
+                     "DefaultMaterial" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
+                           "$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
+                           "$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
+                        ]
+                     },
+                     "Material" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_dif.tga",
+                           "$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_asg.tga",
+                           "$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_nor.tga"
+                        ]
+                     },
+                     "barrack_support:blinn3" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/building/obj_building_barracksupport_nor.tga"
+                        ]
+                     },
+                     "radar" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$CONTENT_DATA/Objects/Textures/Interactables/obj_interactive_airtankfull_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_nor.tga"
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropZ",
+         "scripted" : {
+            "classname" : "AirTank",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/AirTank.lua"
+         },
+         "showInInventory" : false,
+         "sticky" : "-Z",
+         "uuid" : "462baf58-6329-4f29-8f9e-c20d06fb6f7d"
+      },
+      {
+         "color" : "df7f01",
+         "flammable" : false,
+         "hull" : {
+            "col" : "$CONTENT_DATA/Objects/Collision/interactable/water-purifier_col.obj",
+            "x" : 3,
+            "y" : 7,
+            "z" : 4
+         },
+         "name" : "obj_scrap_purifier",
+         "physicsMaterial" : "Mechanical",
+         "ratings" : {
+            "buoyancy" : 2,
+            "density" : 1,
+            "durability" : 3,
+            "friction" : 5
+         },
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Interactive/obj_purifier_small.rend",
+         "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "ScrapPurifier",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
+         },
+         "sticky" : "-Y",
+         "uuid" : "80c9edb7-0f86-4899-bf60-c3baca3fa841"
+      },
+      {
+         "box" : {
+            "x" : 7,
+            "y" : 5,
+            "z" : 7
+         },
+         "color" : "4f2412",
+         "flammable" : true,
+         "name" : "obj_scrap_tree_grower",
+         "physicsMaterial" : "Metal",
+         "ratings" : {
+            "buoyancy" : 4,
+            "density" : 1,
+            "durability" : 4,
+            "friction" : 3
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/TreeCrate.fbx",
+                  "subMeshMap" : {
+                     "Soil" : {
+                        "custom" : {
+                           "uv0" : {
+                              "u" : 1,
+                              "v" : 0.10
+                           }
+                        },
+                        "material" : "UVAnimDifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_dif.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_asg.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Farming/hvs_farming_soil_nor.tga"
+                        ]
+                     },
+                     "lambert2" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+                        ]
+                     },
+                     "phongE1" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_crate_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_crate_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_crate_nor.tga"
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "ScrapTreeGrower",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
+         },
+         "sticky" : "-Y",
+         "uuid" : "819fb238-a68b-4aab-a6f2-c1037f6bfb5b"
+      },
+      {
+         "box" : {
+            "x" : 4,
+            "y" : 3,
+            "z" : 3
+         },
+         "color" : "0a956d",
+         "flammable" : true,
+         "name" : "obj_scrap_workbench",
+         "physicsMaterial" : "Wood",
+         "ratings" : {
+            "buoyancy" : 5,
+            "density" : 2,
+            "durability" : 3,
+            "friction" : 5
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/Workbench.fbx",
+                  "subMeshMap" : {
+                     "Notepad" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_dif.tga",
+                           "$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_asg.tga",
+                           "$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_nor.tga"
+                        ]
+                     },
+                     "SmallHammer" : {
+                        "color" : "ffffff",
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$GAME_DATA/Character/Char_Tools/Char_smallhammer/char_smallhammer_dif.tga",
+                           "$GAME_DATA/Character/Char_Tools/Char_smallhammer/char_smallhammer_asg.tga",
+                           "$GAME_DATA/Character/Char_Tools/Char_smallhammer/char_smallhammer_nor.tga"
+                        ]
+                     },
+                     "Wood" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_dif.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_asg.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_nor.tga"
+                        ]
+                     },
+                     "book" : {
+                        "color" : "fc949d",
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Character/Char_Tools/Char_logbook/char_logbook_dif.tga",
+                           "$SURVIVAL_DATA/Character/Char_Tools/Char_logbook/char_logbook_asg.tga",
+                           "$SURVIVAL_DATA/Character/Char_Tools/Char_logbook/char_logbook_nor.tga"
+                        ]
+                     },
+                     "lambert2" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+                        ]
+                     },
+                     "phong1" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_nor.tga"
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "ScrapWorkbench",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
+         },
+         "sticky" : "-Y",
+         "uuid" : "f3163e62-e6c3-475c-805e-559f8bb07ad1"
+      },
+      {
+         "box" : {
+            "x" : 2,
+            "y" : 3,
+            "z" : 3
+         },
+         "color" : "ffffff",
+         "flammable" : true,
+         "name" : "obj_apiary",
+         "physicsMaterial" : "Wood",
+         "ratings" : {
+            "buoyancy" : 4,
+            "density" : 3,
+            "durability" : 4,
+            "friction" : 5
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/Apiary.fbx",
+                  "subMeshMap" : {
+                     "DefaultMaterial" : {
+                        "color" : "fc949d",
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
+                           "$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
+                           "$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
+                        ]
+                     },
+                     "Shack_Atlas" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$CONTENT_DATA/Objects/Textures/Interactables/apiary_purifier_shack_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_nor.tga"
+                        ]
+                     },
+                     "beehive_mat" : {
+                        "color" : "ffffff",
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_beehive_dif.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_beehive_asg.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_beehive_nor.tga"
+                        ]
+                     },
+                     "bowl" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/consumable/Obj_consumable_chemical_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/consumable/Obj_consumable_chemical_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/consumable/Obj_consumable_chemical_nor.tga"
+                        ]
+                     },
+                     "glass" : {
+                        "material" : "Glass",
+                        "textureList" : [ "$CONTENT_DATA/Objects/Textures/Interactables/apiary_glass.tga" ]
+                     },
+                     "lambert2" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+                        ]
+                     },
+                     "sign_atlas" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_dif.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_asg.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_nor.tga"
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "Apiary",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
+         },
+         "sticky" : "-Y",
+         "uuid" : "ebabda72-94d8-40c5-ab07-7001d1b67380"
+      },
+      {
+         "color" : "d8b589",
+         "cylinder" : {
+            "axis" : "Y",
+            "depth" : 1,
+            "diameter" : 5,
+            "margin" : 0.50
+         },
+         "flammable" : true,
+         "name" : "obj_propeller",
+         "physicsMaterial" : "Mechanical",
+         "ratings" : {
+            "buoyancy" : 1,
+            "density" : 3,
+            "durability" : 5,
+            "friction" : 3
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "maxViewDistance" : 1500,
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/Propeller.fbx",
+                  "subMeshMap" : {
+                     "hideout_atlas" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Terrain/Textures/Hideout/env_hideout_atlas_dif.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Hideout/env_hideout_atlas_asg.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Hideout/env_hideout_atlas_nor.tga"
+                        ]
+                     },
+                     "sign_atlas" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_dif.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_asg.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_nor.tga"
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropYNegY",
+         "scripted" : {
+            "classname" : "Propeller",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Propeller.lua"
+         },
+         "sticky" : "-Y+Y",
+         "uuid" : "885513a7-baa3-44ee-aa6e-7546bf0715a7"
+      },
+      {
+         "color" : "ff0000",
+         "cylinder" : {
+            "axis" : "Y",
+            "depth" : 1,
+            "diameter" : 3,
+            "margin" : 0.50
+         },
+         "flammable" : true,
+         "name" : "obj_propeller_small",
+         "physicsMaterial" : "Mechanical",
+         "ratings" : {
+            "buoyancy" : 1,
+            "density" : 3,
+            "durability" : 5,
+            "friction" : 3
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/PropellerSmall.fbx",
+                  "subMeshMap" : {
+                     "hideout_atlas" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Terrain/Textures/Hideout/env_hideout_atlas_dif.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Hideout/env_hideout_atlas_asg.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Hideout/env_hideout_atlas_nor.tga"
+                        ]
+                     },
+                     "sign_atlas" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_dif.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_asg.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_nor.tga"
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropYNegY",
+         "scripted" : {
+            "classname" : "SmallPropeller",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Propeller.lua"
+         },
+         "sticky" : "-Y+Y",
+         "uuid" : "4e69beb8-4519-4fff-a382-fdcfffbad6c2"
+      },
+      {
+         "box" : {
+            "x" : 1,
+            "y" : 1,
+            "z" : 1
+         },
+         "color" : "ff3200",
+         "flammable" : false,
+         "name" : "obj_wasdConverter",
+         "physicsMaterial" : "Mechanical",
+         "ratings" : {
+            "buoyancy" : 2,
+            "density" : 2,
+            "durability" : 3,
+            "friction" : 5
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "includes" : [
+                     "POSITION",
+                     "UV0",
+                     "UV1",
+                     "NORMAL",
+                     "TANGENTS",
+                     "BLEND_INDICES",
+                     "BLEND_WEIGHTS"
+                  ],
+                  "mesh" : "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_off.fbx",
+                  "minViewSize" : 20,
+                  "pose0" : "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_on.fbx",
+                  "subMeshMap" : {
+                     "logicgate" : {
+                        "material" : "PoseAnimDifAsgNorAo",
+                        "textureList" : [
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_dif.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_nor.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_ao.tga"
+                        ]
+                     },
+                     "screen" : {
+                        "custom" : {
+                           "uv0" : {
+                              "u" : 0.166666670,
+                              "v" : 0.16450
+                           }
+                        },
+                        "material" : "UVAnimDifAsgNor",
+                        "textureList" : [
+                           "$CONTENT_DATA/Objects/Textures/Interactables/obj_wasConverter_dif.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_nor.tga"
+                        ]
+                     }
+                  }
+               },
+               {
+                  "mesh" : "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_lod1.fbx",
+                  "subMeshMap" : {
+                     "logicgate" : {
+                        "material" : "DifAsg",
+                        "textureList" : [
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_dif.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
+                           ""
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropYZ",
+         "scripted" : {
+            "classname" : "Converter",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/wasdConverter.lua"
+         },
+         "uuid" : "509505f1-b772-4acd-9827-f9a605a979ec"
+      },
+      {
+         "box" : {
+            "x" : 1,
+            "y" : 1,
+            "z" : 1
+         },
+         "color" : "0033ff",
+         "flammable" : false,
+         "name" : "obj_waterSensor",
+         "physicsMaterial" : "Mechanical",
+         "ratings" : {
+            "buoyancy" : 2,
+            "density" : 2,
+            "durability" : 3,
+            "friction" : 5
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "includes" : [
+                     "POSITION",
+                     "UV0",
+                     "UV1",
+                     "NORMAL",
+                     "TANGENTS",
+                     "BLEND_INDICES",
+                     "BLEND_WEIGHTS"
+                  ],
+                  "mesh" : "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_off.fbx",
+                  "minViewSize" : 20,
+                  "pose0" : "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_on.fbx",
+                  "subMeshMap" : {
+                     "logicgate" : {
+                        "material" : "PoseAnimDifAsgNorAo",
+                        "textureList" : [
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_dif.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_nor.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_ao.tga"
+                        ]
+                     },
+                     "screen" : {
+                        "custom" : {
+                           "uv0" : {
+                              "u" : 0.166666670,
+                              "v" : 0.16450
+                           }
+                        },
+                        "material" : "UVAnimDifAsgNor",
+                        "textureList" : [
+                           "$CONTENT_DATA/Objects/Textures/Interactables/obj_new_logic_dif.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_nor.tga"
+                        ]
+                     }
+                  }
+               },
+               {
+                  "mesh" : "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_lod1.fbx",
+                  "subMeshMap" : {
+                     "logicgate" : {
+                        "material" : "DifAsg",
+                        "textureList" : [
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_dif.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
+                           ""
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropYZ",
+         "scripted" : {
+            "classname" : "Sensor",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/waterSensor.lua"
+         },
+         "uuid" : "6db7aacf-f2b3-4cbb-a6d2-2a01d5ee5562"
+      },
+      {
+         "box" : {
+            "x" : 1,
+            "y" : 1,
+            "z" : 1
+         },
+         "color" : "#00ff33",
+         "flammable" : false,
+         "name" : "obj_creationSteer",
+         "physicsMaterial" : "Mechanical",
+         "ratings" : {
+            "buoyancy" : 2,
+            "density" : 2,
+            "durability" : 3,
+            "friction" : 5
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "includes" : [
+                     "POSITION",
+                     "UV0",
+                     "UV1",
+                     "NORMAL",
+                     "TANGENTS",
+                     "BLEND_INDICES",
+                     "BLEND_WEIGHTS"
+                  ],
+                  "mesh" : "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_off.fbx",
+                  "minViewSize" : 20,
+                  "pose0" : "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_on.fbx",
+                  "subMeshMap" : {
+                     "logicgate" : {
+                        "material" : "PoseAnimDifAsgNorAo",
+                        "textureList" : [
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_dif.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_nor.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_ao.tga"
+                        ]
+                     },
+                     "screen" : {
+                        "custom" : {
+                           "uv0" : {
+                              "u" : 0.166666670,
+                              "v" : 0.16450
+                           }
+                        },
+                        "material" : "UVAnimDifAsgNor",
+                        "textureList" : [
+                           "$CONTENT_DATA/Objects/Textures/Interactables/obj_new_logic_dif.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_nor.tga"
+                        ]
+                     }
+                  }
+               },
+               {
+                  "mesh" : "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_lod1.fbx",
+                  "subMeshMap" : {
+                     "logicgate" : {
+                        "material" : "DifAsg",
+                        "textureList" : [
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_dif.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
+                           ""
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropYZ",
+         "scripted" : {
+            "classname" : "Steer",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/creationSteer.lua"
+         },
+         "uuid" : "71ac7645-57f5-4d49-9574-c8482b431862"
+      },
+      {
+         "box" : {
+            "x" : 5,
+            "y" : 1,
+            "z" : 1
+         },
+         "color" : "00ff00",
+         "flammable" : true,
+         "name" : "obj_sail",
+         "physicsMaterial" : "Wood",
+         "ratings" : {
+            "buoyancy" : 2,
+            "density" : 6,
+            "durability" : 4,
+            "friction" : 5
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/SailSupport.fbx",
+                  "subMeshMap" : {
+                     "Shack_Atlas1" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_nor.tga"
+                        ]
+                     },
+                     "blinds1" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_blinds_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_blinds_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_blinds_nor.tga"
+                        ]
+                     },
+                     "lambert2" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "Sail",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/sail.lua"
+         },
+         "sticky" : "-Y",
+         "uuid" : "eea9794b-bcdf-431e-bdcd-7b2ff6ffa145"
+      },
+      {
+         "box" : {
+            "x" : 4,
+            "y" : 3,
+            "z" : 3
+         },
+         "color" : "FF6600",
+         "flammable" : false,
+         "name" : "obj_radio_antenna",
+         "physicsMaterial" : "Mechanical",
+         "ratings" : {
+            "buoyancy" : 2,
+            "density" : 3,
+            "durability" : 6,
+            "friction" : 3
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/antenna.fbx",
+                  "minViewSize" : 55,
+                  "pose0" : "$CONTENT_DATA/Objects/Mesh/Interactables/antenna.fbx",
+                  "subMeshMap" : {
+                     "Notepad" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_dif.tga",
+                           "$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_asg.tga",
+                           "$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_nor.tga"
+                        ]
+                     },
+                     "connectionpoint" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_interactive_container_connectorpoint_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_interactive_container_connectorpoint_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_interactive_container_connectorpoint_nor.tga"
+                        ]
+                     },
+                     "containerbattery" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_battery_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_battery_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_battery_nor.tga"
+                        ]
+                     },
+                     "lambert11" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/industrial/obj_industrial_antennatower_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/industrial/obj_industrial_antennatower_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/industrial/obj_industrial_antennatower_nor.tga"
+                        ]
+                     },
+                     "lambert2" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+                        ]
+                     },
+                     "outfit_engineer_backpack" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Character/Char_Male/Outfit/Backpack/Outfit_engineer_backpack/outfit_engineer_backpack_dif.tga",
+                           "$SURVIVAL_DATA/Character/Char_Male/Outfit/Backpack/Outfit_engineer_backpack/outfit_engineer_backpack_asg.tga",
+                           "$SURVIVAL_DATA/Character/Char_Male/Outfit/Backpack/Outfit_engineer_backpack/outfit_engineer_backpack_nor.tga"
+                        ]
+                     },
+                     "panels" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_solarpanel_dif.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_solarpanel_asg.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_solarpanel_nor.tga"
+                        ]
+                     },
+                     "phong1" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_nor.tga"
+                        ]
+                     },
+                     "radar" : {
+                        "material" : "PoseAnimDifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_nor.tga"
+                        ]
+                     },
+                     "radar_uvanim" : {
+                        "custom" : {
+                           "uv0" : {
+                              "u" : 1,
+                              "v" : 0.250
+                           }
+                        },
+                        "material" : "PoseUVAnimDifAsg",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beaconuvanim_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beaconuvanim_asg.tga",
+                           ""
+                        ]
+                     },
+                     "rubber" : {
+                        "custom" : {
+                           "color" : "rubber"
+                        },
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$CONTENT_DATA/Objects/Textures/Interactables/Back.png",
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_asg.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_nor.tga"
+                        ]
+                     },
+                     "screen" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_screen_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_screen_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_screen_nor.tga"
+                        ]
+                     },
+                     "shinymetal" : {
+                        "custom" : {
+                           "color" : "5a5a5a"
+                        },
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_dif.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_asg.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_nor.tga"
+                        ]
+                     },
+                     "shinymetal2" : {
+                        "custom" : {
+                           "color" : "a8a8a8"
+                        },
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_dif.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_asg.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_nor.tga"
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "Antenna",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/antenna.lua"
+         },
+         "sticky" : "-Y",
+         "uuid" : "f95beb80-49c8-4d4c-98e9-5b87225c4570"
+      },
+      {
+         "box" : {
+            "x" : 4,
+            "y" : 4,
+            "z" : 6
+         },
+         "color" : "FF6600",
+         "flammable" : false,
+         "name" : "obj_seed_press",
+         "physicsMaterial" : "Metal",
+         "ratings" : {
+            "buoyancy" : 4,
+            "density" : 2,
+            "durability" : 4,
+            "friction" : 3
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/SeedPress.fbx",
+                  "subMeshMap" : {
+                     "DefaultMaterial" : {
+                        "color" : "fc949d",
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
+                           "$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
+                           "$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
+                        ]
+                     },
+                     "lambert2" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+                        ]
+                     },
+                     "panels" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_solarpanel_dif.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_solarpanel_asg.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_solarpanel_nor.tga"
+                        ]
+                     },
+                     "radar" : {
+                        "color" : "ffffff",
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_nor.tga"
+                        ]
+                     },
+                     "seed_tag" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/consumable/obj_seed_tag_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/consumable/obj_seed_tag_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/consumable/obj_seed_tag_nor.tga"
+                        ]
+                     },
+                     "seed_texture" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$CONTENT_DATA/Objects/Textures/Interactables/seedpress_potato.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_seedbag_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_seedbag_nor.tga"
+                        ]
+                     },
+                     "seed_texture.001" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$CONTENT_DATA/Objects/Textures/Interactables/seedpress_tomato.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_seedbag_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_seedbag_nor.tga"
+                        ]
+                     },
+                     "shinymetal" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_dif.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_asg.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_nor.tga"
+                        ]
+                     },
+                     "shinymetal2" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_dif.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_asg.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Building/env_building_shinymetal_nor.tga"
+                        ]
+                     },
+                     "sign_atlas" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_dif.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_asg.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Fillers/hvs_fillers_hideoutsigns_nor.tga"
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "SeedPress",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
+         },
+         "sticky" : "-Y",
+         "uuid" : "e9c7d080-ae4b-4fec-b626-34afda6f5114"
+      },
+      {
+         "box" : {
+            "x" : 6,
+            "y" : 3,
+            "z" : 4
+         },
+         "color" : "4f2412",
+         "flammable" : true,
+         "name" : "obj_grill",
+         "physicsMaterial" : "Wood",
+         "ratings" : {
+            "buoyancy" : 10,
+            "density" : 1,
+            "durability" : 3,
+            "friction" : 5
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/Grill.fbx",
+                  "subMeshMap" : {
+                     "Bark" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_brownbark_dif.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_brownbark_asg.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_brownbark_nor.tga"
+                        ]
+                     },
+                     "Notepad" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_dif.tga",
+                           "$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_asg.tga",
+                           "$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_nor.tga"
+                        ]
+                     },
+                     "Wood" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_dif.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_asg.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_nor.tga"
+                        ]
+                     },
+                     "bathtub" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_bathtub_dif.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_bathtub_asg.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_bathtub_nor.tga"
+                        ]
+                     },
+                     "campfire_mat" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Terrain/Textures/Camping/env_camping_campfire_dif.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Camping/env_camping_campfire_asg.tga",
+                           "$SURVIVAL_DATA/Terrain/Textures/Camping/env_camping_campfire_nor.tga"
+                        ]
+                     },
+                     "lambert11" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/industrial/obj_industrial_antennatower_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/industrial/obj_industrial_antennatower_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/industrial/obj_industrial_antennatower_nor.tga"
+                        ]
+                     },
+                     "lambert2" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+                        ]
+                     },
+                     "submesh0_innerwood" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "Grill",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
+         },
+         "sticky" : "-Y",
+         "uuid" : "67dd0023-023d-46cb-9839-e4ada2609a9b"
+      },
+      {
+         "color" : "ff0000",
+         "cylinder" : {
+            "axis" : "Y",
+            "depth" : 7,
+            "diameter" : 1,
+            "margin" : 0.10
+         },
+         "flammable" : true,
+         "name" : "obj_windsock",
+         "physicsMaterial" : "Plastic",
+         "ratings" : {
+            "buoyancy" : 8,
+            "density" : 2,
+            "durability" : 4,
+            "friction" : 5
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/FlagSupport.fbx",
+                  "subMeshMap" : {
+                     "lambert2" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "Flag",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/flag.lua"
+         },
+         "sticky" : "-Y",
+         "uuid" : "8f460344-ef34-42ab-99e3-d3bed9af4b52"
+      },
+      {
+         "box" : {
+            "x" : 5,
+            "y" : 2,
+            "z" : 12
+         },
+         "color" : "3e9ffe",
+         "flammable" : true,
+         "name" : "obj_hammock",
+         "physicsMaterial" : "Wood",
+         "ratings" : {
+            "buoyancy" : 6,
+            "density" : 1,
+            "durability" : 5,
+            "friction" : 4
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/Hammock.fbx",
+                  "minViewSize" : 55,
+                  "subMeshMap" : {
+                     "bed" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_comfybed_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_comfybed_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_comfybed_nor.tga"
+                        ]
+                     },
+                     "lambert2" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+                        ]
+                     },
+                     "shark" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_dif.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_asg.tga",
+                           "$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_nor.tga"
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "restrictions" : {
+            "usable" : true
+         },
+         "rotationSet" : "PropFullMinusNegY",
+         "scripted" : {
+            "classname" : "Bed",
+            "data" : {},
+            "filename" : "$SURVIVAL_DATA/Scripts/game/interactables/Bed.lua",
+            "seat" : {
+               "bones" : [
+                  {
+                     "name" : "root_jnt",
+                     "offset" : {
+                        "x" : 0.0,
+                        "y" : 1.0,
+                        "z" : 0.30
+                     }
+                  },
+                  {
+                     "freeRotation" : true,
+                     "name" : "LeftForeArm",
+                     "offset" : {
+                        "x" : 1.50,
+                        "y" : 1.10,
+                        "z" : 1.10
+                     }
+                  },
+                  {
+                     "freeRotation" : true,
+                     "name" : "RightForeArm",
+                     "offset" : {
+                        "x" : -1.50,
+                        "y" : 1.10,
+                        "z" : 1.10
+                     }
+                  }
+               ],
+               "enterAudio" : "Seat seated",
+               "exitAudio" : "Seat unseated",
+               "ragdollFile" : "$SURVIVAL_DATA/Character/bed_ragdoll.json"
+            }
+         },
+         "sticky" : "-Z+Z-Y-X+X",
+         "uuid" : "4c1aed86-a402-4240-81e7-b67edf433fd5"
+      },
+      {
+         "box" : {
+            "x" : 4,
+            "y" : 3,
+            "z" : 4
+         },
+         "color" : "baa48a",
+         "flammable" : false,
+         "name" : "obj_abandoned_chest",
+         "physicsMaterial" : "Metal",
+         "ratings" : {
+            "buoyancy" : 8,
+            "density" : 1,
+            "durability" : 10,
+            "friction" : 4
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CHALLENGE_DATA/Objects/Mesh/interactive/obj_interactive_challengechest_off.fbx",
+                  "pose0" : "$CHALLENGE_DATA/Objects/Mesh/interactive/obj_interactive_challengechest_on.fbx",
+                  "subMeshList" : [
+                     {
+                        "material" : "PoseAnimDifAsgNor",
+                        "textureList" : [
+                           "$CHALLENGE_DATA/Objects/Textures/interactive/obj_interactive_challengechest_dif.tga",
+                           "$CHALLENGE_DATA/Objects/Textures/interactive/obj_interactive_challengechest_asg.tga",
+                           "$CHALLENGE_DATA/Objects/Textures/interactive/obj_interactive_challengechest_nor.tga"
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         "restrictions" : {
+            "buildable" : false,
+            "connectable" : false,
+            "convertibleToDynamic" : true,
+            "destructable" : false,
+            "erasable" : false,
+            "liftable" : false,
+            "paintable" : false,
+            "usable" : false
+         },
+         "rotationSet" : "PropY",
+         "scripted" : {
+            "classname" : "Chest",
+            "data" : {},
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/chest.lua"
+         },
+         "showInInventory" : false,
+         "sticky" : "-Z-Y-X+X",
+         "uuid" : "f2522739-07cd-43ad-97e6-c2515b601bad"
+      },
+      {
+         "box" : {
+            "x" : 4,
+            "y" : 4,
+            "z" : 2
+         },
+         "color" : "008ae1",
+         "flammable" : true,
+         "name" : "obj_junk_collector",
+         "physicsMaterial" : "Wood",
+         "previewRotation" : [ 1, 0, 0, 0, 0, 1, 0, 1, 0 ],
+         "ratings" : {
+            "buoyancy" : 10,
+            "density" : 1,
+            "durability" : 4,
+            "friction" : 10
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/Collector.fbx",
+                  "subMeshMap" : {
+                     "Shack_Atlas" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_nor.tga"
+                        ]
+                     },
+                     "bark" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_dif.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_asg.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_nor.tga"
+                        ]
+                     },
+                     "cloth" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Character/Char_Dropoff/char_dropoffcloth_dif.tga",
+                           "$SURVIVAL_DATA/Character/Char_Dropoff/char_dropoffcloth_asg.tga",
+                           "$SURVIVAL_DATA/Character/Char_Dropoff/char_dropoffcloth_nor.tga"
+                        ]
+                     },
+                     "innerwood" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
+                        ]
+                     },
+                     "lambert2" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "rotationSet" : "PropYX",
+         "scripted" : {
+            "classname" : "Collector",
+            "data" : {},
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/junkCollector.lua"
+         },
+         "stackSize" : 10,
+         "sticky" : "+X-X+Y-Y+Z",
+         "uuid" : "f2382297-44b4-4259-99ce-b11da671ac51"
+      }
+   ]
 }
