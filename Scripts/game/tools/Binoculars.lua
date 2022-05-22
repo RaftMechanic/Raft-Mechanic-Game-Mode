@@ -7,15 +7,9 @@ local Damage = 28
 
 Binoculars = class()
 
-local renderables = {
-	"$GAME_DATA/Character/Char_Tools/Char_spudgun/Base/char_spudgun_base_basic.rend",
-	"$GAME_DATA/Character/Char_Tools/Char_spudgun/Barrel/Barrel_basic/char_spudgun_barrel_basic.rend",
-	"$GAME_DATA/Character/Char_Tools/Char_spudgun/Sight/Sight_basic/char_spudgun_sight_basic.rend",
-	"$GAME_DATA/Character/Char_Tools/Char_spudgun/Stock/Stock_broom/char_spudgun_stock_broom.rend",
-	"$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic.rend"
-}
 
-local renderablesTp = {"$GAME_DATA/Character/Char_Male/Animations/char_male_tp_spudgun.rend", "$GAME_DATA/Character/Char_Tools/Char_spudgun/char_spudgun_tp_animlist.rend"}
+local renderables = { "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/char_binocular_preview.rend" }
+local renderablesTp = {"$GAME_DATA/Character/Char_Male/Animations/char_male_tp_spudgun.rend", "$GAME_DATA/Character/Char_Tools/Char_spudgun/char_spudgun_tp_animlist.rend", "$SURVIVAL_DATA/Character/Char_Male/Animations/char_male_tp_fertilizer.rend", "$SURVIVAL_DATA/Character/Char_Tools/Char_fertilizer/char_fertilizer_tp_animlist.rend", "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/char_male_tp_binocular.rend" }
 local renderablesFp = {"$GAME_DATA/Character/Char_Tools/Char_spudgun/char_spudgun_fp_animlist.rend"}
 
 sm.tool.preloadRenderables( renderables )
@@ -41,32 +35,32 @@ function Binoculars.loadAnimations( self )
 		self.tool,
 		{
 			shoot = { "spudgun_shoot", { crouch = "spudgun_crouch_shoot" } },
-			aim = { "spudgun_aim", { crouch = "spudgun_crouch_aim" } },
+			aim = { "binocular_zoom", { crouch = "spudgun_crouch_aim" } },
 			aimShoot = { "spudgun_aim_shoot", { crouch = "spudgun_crouch_aim_shoot" } },
-			idle = { "spudgun_idle" },
-			pickup = { "spudgun_pickup", { nextAnimation = "idle" } },
-			putdown = { "spudgun_putdown" }
+			idle = { "fertilizer_idle" },
+			pickup = { "fertilizer_pickup", { nextAnimation = "idle" } },
+			putdown = { "fertilizer_putdown" }
 		}
 	)
 	local movementAnimations = {
-		idle = "spudgun_idle",
-		idleRelaxed = "spudgun_relax",
+		idle = "fertilizer_idle",
+		idleRelaxed = "fertilizer_idle_relaxed",
 
-		sprint = "spudgun_sprint",
-		runFwd = "spudgun_run_fwd",
-		runBwd = "spudgun_run_bwd",
+		runFwd = "fertilizer_run_fwd",
+		runBwd = "fertilizer_run_bwd",
+		sprint = "fertilizer_sprint",
 
-		jump = "spudgun_jump",
-		jumpUp = "spudgun_jump_up",
-		jumpDown = "spudgun_jump_down",
+		jump = "fertilizer_jump",
+		jumpUp = "fertilizer_jump_up",
+		jumpDown = "fertilizer_jump_down",
 
-		land = "spudgun_jump_land",
-		landFwd = "spudgun_jump_land_fwd",
-		landBwd = "spudgun_jump_land_bwd",
+		land = "fertilizer_jump_land",
+		landFwd = "fertilizer_jump_land_fwd",
+		landBwd = "fertilizer_jump_land_bwd",
 
-		crouchIdle = "spudgun_crouch_idle",
-		crouchFwd = "spudgun_crouch_fwd",
-		crouchBwd = "spudgun_crouch_bwd"
+		crouchIdle = "fertilizer_crouch_idle",
+		crouchFwd = "fertilizer_crouch_fwd",
+		crouchBwd = "fertilizer_crouch_bwd"
 	}
 
 	for name, animation in pairs( movementAnimations ) do
@@ -79,10 +73,10 @@ function Binoculars.loadAnimations( self )
 		self.fpAnimations = createFpAnimations(
 			self.tool,
 			{
-				equip = { "spudgun_pickup", { nextAnimation = "idle" } },
-				unequip = { "spudgun_putdown" },
+				equip = { "fertilizer_pickup", { nextAnimation = "idle" } },
+				unequip = { "fertilizer_putdown" },
 
-				idle = { "spudgun_idle", { looping = true } },
+				idle = { "fertilizer_idle", { looping = true } },
 				shoot = { "spudgun_shoot", { nextAnimation = "idle" } },
 
 				aimInto = { "spudgun_aim_into", { nextAnimation = "aimIdle" } },
@@ -90,9 +84,9 @@ function Binoculars.loadAnimations( self )
 				aimIdle = { "spudgun_aim_idle", { looping = true} },
 				aimShoot = { "spudgun_aim_shoot", { nextAnimation = "aimIdle"} },
 
-				sprintInto = { "spudgun_sprint_into", { nextAnimation = "sprintIdle",  blendNext = 0.2 } },
-				sprintExit = { "spudgun_sprint_exit", { nextAnimation = "idle",  blendNext = 0 } },
-				sprintIdle = { "spudgun_sprint_idle", { looping = true } },
+				sprintInto = { "fertilizer_sprint_into", { nextAnimation = "sprintIdle",  blendNext = 0.2 } },
+				sprintExit = { "fertilizer_sprint_exit", { nextAnimation = "idle",  blendNext = 0 } },
+				sprintIdle = { "fertilizer_sprint_idle", { looping = true } },
 			}
 		)
 	end
@@ -199,7 +193,7 @@ function Binoculars.client_onUpdate( self, dt )
 		end
 
 		local dir = sm.localPlayer.getDirection()
-		local firePos = self.tool:getFpBonePos( "pejnt_barrel" )
+		local firePos = self.tool:getFpBonePos( "jnt_binocular" )
 
 		if not self.aiming then
 			effectPos = firePos + dir * 0.2
@@ -214,8 +208,8 @@ function Binoculars.client_onUpdate( self, dt )
 		self.shootEffectFP:setVelocity( self.tool:getMovementVelocity() )
 		self.shootEffectFP:setRotation( rot )
 	end
-	local pos = self.tool:getTpBonePos( "pejnt_barrel" )
-	local dir = self.tool:getTpBoneDir( "pejnt_barrel" )
+	local pos = self.tool:getTpBonePos( "jnt_binocular" )
+	local dir = self.tool:getTpBoneDir( "jnt_binocular" )
 
 	effectPos = pos + dir * 0.2
 
