@@ -1,0 +1,213 @@
+{
+	"e3bcf8fa-68d7-49a8-b17b-c1e864d53b69": {
+        "description": "Jetez l'hameçon dans l'eau. Attendez que le poisson commence à grignoter. Tirez lorsque qu'un énorme plouf s'ensuit ! Le poisson va se battre et créer de petites éclaboussures et des bruits ! On peut pêcher tout un tas de choses dans l'océan...",
+        "title": "Canne à pêche"
+    },
+    "b5ade3b0-be48-4a61-a8c2-13a4cedf1343": {
+        "description": "Tirez le crochet pour tirer les déchets de l'océan et les mettre dans vos vilaines petites mains avides ! Appuyez sur le clic droit pour ramener le crochet plus rapidement",
+        "title": "Fusil à crochet"
+    },
+    "1daebe24-4e16-422c-b5e7-c3f45f9296d8": {
+        "description": "Permet de couper du bois !",
+        "title": "Hache"
+    },
+    "c883b283-ea7a-4bba-af0d-5c13fd73051d": {
+        "description": "Peut briser les rochers au fond de l'océan.",
+        "title": "Pioche"
+    },
+    "67dd0023-023d-46cb-9839-e4ada2609a9b": {
+        "description": "Permet de cuir la nourriture, a besoin de bois pour fonctionner.",
+        "title": "Barbecue"
+    },
+    "0db1ecd5-503d-4dd3-807e-869c243a7c08": {
+        "description": "Un bâton pointu. Utile pour piquer et blesser des trucs.",
+        "title": "Lance"
+    },
+    "bb641a4f-e391-441c-bc6d-0ae21a069477": {
+        "description": "Un marteau en bois. Utile pour toutes sortes de choses, mais pas vraiment bon pour quoi que ce soit.",
+        "title": "Marteau en bois"
+    },
+    "e34387d3-fa29-4831-89b8-c94417b6fce6": {
+        "description": "Un fusil puissant qui tire des flêches ! Vous pouvez les collecter après qu'elles soient tombés au sol. (Peut être utilisé sous l'eau)",
+        "title": "Fusil à harpons"
+    },
+    "8f460344-ef34-42ab-99e3-d3bed9af4b52": {
+        "description": "Indique la direction du vent.",
+        "title": "Manche à air"
+    },
+    "f3aeb880-f103-43c8-947b-d0525eaeb505": {
+        "title": "Longue-vue",
+        "description": "Permet de voir au loin."
+    },
+   
+    //parts
+    "8e75cddb-040e-4813-8dd6-7e72f3288a91": {
+        "description": "Peut être utilisé pour cultiver sur le radeau, ne déclenche pas de raids.",
+        "title": "Petit bac de terre"
+    },
+    "c80e2932-0d21-48bb-b5a2-dba03d73cfb7": {
+        "description": "Doublez la taille, doublez le plaisir ! Faites pousser 2 cultures à la fois, ne déclenche pas de raids.",
+        "title": "Grand bac de terre"
+    },
+    "4a971f7d-14e6-454d-bce8-0879243c4474": {
+        "description": "C'est la base de votre radeau. Posez-en d'autres pour agrandir votre radeau (ou le réparer).",
+        "title": "Base de radeau"
+    },
+    "7ece8b10-5cc0-4791-b75e-09858ef1b9c4": {
+        "description": "Avec une paire de palmes, vous pouvez nager beaucoup plus vite ! Elles sont aussi très stylé !",
+        "title": "Palmes"
+    },
+    "7ceccadf-010f-4a45-907f-18ccc11c509c": {
+        "description": "Pas assez de souffle ? Cela ne résoudra pas vos problèmes d'exercice, mais vous pourrez rester plus longtemps sous l'eau. Connectez-le à un siège pour ne pas perdre de souffle lorsque vous êtes assis.",
+        "title": "Bouteille de plongée"
+    },
+    "03075a5a-92f5-49bd-b132-7d8e0cb80156": {
+        "description": "Utilisez une entrée logique pour l'allumer et l'éteindre. Il est lourd lorsqu'il est éteint, mais très léger et flottant lorsqu'il est activé.",
+        "title": "Réservoir d'air"
+    },
+    "80c9edb7-0f86-4899-bf60-c3baca3fa841": {
+        "description": "Transforme l'eau ordinaire en bouteille en eau propre que vous pouvez boire, nécessite du bois comme combustible.",
+        "title": "Purificateur d'eau"
+    },
+    "819fb238-a68b-4aab-a6f2-c1037f6bfb5b": {
+        "description": "Faites pousser vos arbres où vous voulez ! Obtenez des jeunes pousses sur les abres des îles !",
+        "title": "Ferme à arbre"
+    },
+    "f3163e62-e6c3-475c-805e-559f8bb07ad1": {
+        "description": "Utilisé pour fabriquer des objets essentiels pour vous et votre radeau.",
+        "title": "Établi"
+    },
+    "ebabda72-94d8-40c5-ab07-7001d1b67380": {
+        "description": "Oh non, des abeilles ! Si vous réussissez à attraper une reine des abeilles, vous pourrez avoir votre propre ruche ! Profitez de cire d'abeille fraîche (et de piqûres).",
+        "title": "Ruche"
+    },
+    "885513a7-baa3-44ee-aa6e-7546bf0715a7": {
+        "description": "Faites-le tourner pour que votre radeau avance. Sa force dépend de la direction et de la vitesse de la rotation. (Beaucoup moins puissant dans l'air)",
+        "title": "Hélice"
+    },
+    "509505f1-b772-4acd-9827-f9a605a979ec": {
+        "description": "Appuyez sur 'E' pour passer d'une touche à l'autre. Délivre un signal logique lorsque la touche sélectionnée est enfoncée.",
+        "title": "Convertisseur ZQSD (WASD)"
+    },
+    "6db7aacf-f2b3-4cbb-a6d2-2a01d5ee5562": {
+        "description": "Emet un signal logique lorsqu'il touche l'eau.",
+        "title": "Capteur d'eau"
+    },
+    "71ac7645-57f5-4d49-9574-c8482b431862": {
+        "description": "Fait pivoter votre création en fonction de la direction de votre caméra ou de l'entrée A/D. Appuyez sur 'E' pour sélectionner un mode. Les 3 premiers modes - contrôle de la souris, Roll - A/D. Produit un signal pendant l'utilisation.",
+        "title": "Rotateur de création"
+    },
+    "eea9794b-bcdf-431e-bdcd-7b2ff6ffa145": {
+        "description": "Capturez la force du vent ! Assurez-vous qu'elle est orientée dans la bonne direction pour maximiser sa poussée. La manche à air vous indiquera la direction du vent.",
+        "title": "Voile"
+    },
+    "c2418698-7a91-40fa-95a3-3be5ddb3ec1d":{
+        "description": "La mère de toutes les abeilles. Quelle prise !",
+        "title": "Reine des abeilles"
+    },
+    "f95beb80-49c8-4d4c-98e9-5b87225c4570":{
+        "description": "De l'aide ?\n...\n\nQuelqu'un ?\n...",
+        "title": "Antenne radio de fortune"
+    },
+    "e9c7d080-ae4b-4fec-b626-34afda6f5114":{
+        "description": "Plantez. Cultivez. Pressez. Répétez.",
+        "title": "Presse à graines"
+    },
+    "4e69beb8-4519-4fff-a382-fdcfffbad6c2":{
+        "description": "Plus compact mais aussi moins efficace.",
+        "title": "Petite hélice"
+    },
+    "4c1aed86-a402-4240-81e7-b67edf433fd5":{
+        "description": "Quoi de mieux que de se détendre dans un hamac et de profiter de l'immensité de l'océan...",
+        "title": "Hamac"
+    },
+	"4a971f7d-14e6-454d-bce8-0879243c4575":{
+        "description": "Cette base de radeau devrait être difficile à briser par les sharkbots !",
+        "title": "Base de radeau renforcée"
+    },
+    "ce986935-5b57-4249-acbb-04ef6666bb03" : {
+        "description" : "Décorez votre radeau avec ça.",
+        "title" : "Torche"
+    },
+    "f2382297-44b4-4259-99ce-b11da671ac51" : {
+       "description" : "Ramasse tous les déchets de l'océan pour toi ! Espèce de fainéant accro au sunshake...",
+       "title": "Filet"
+    },
+ 
+    //saplings
+    "eefb0967-d21c-445e-8120-0a09422e1374": {
+        "description": "Plantez-le dans une ferme à arbres ou sur le sol pour faire le faire pousser",
+        "title": "Pousse de bouleau"
+    },
+    "b84e5fbb-97f2-4de5-bc39-4adb325a56f1": {
+        "description": "Plantez-le dans une ferme à arbres ou sur le sol pour faire le faire pousser",
+        "title": "Pousse de chêne"
+    },
+    "01a4d4c6-469a-4d28-8c69-b74fff83fbdf": {
+        "description": "Plantez-le dans une ferme à arbres ou sur le sol pour faire le faire pousser",
+        "title": "Pousse d'épicéa"
+    },
+    "9e815dcf-cfb0-4672-b0f4-34f1e9ecc1a1": {
+        "description": "Plantez-le dans une ferme à arbres ou sur le sol pour faire le faire pousser",
+        "title": "Pousse de sapin"
+    },
+    "4a971f7d-14e6-454d-bce8-0879243c4857": {
+        "description": "Pointu et solide ! Utilisés comme munitions pour le fusil à harpon.",
+        "title": "Flêche de harpon"
+    },
+ 
+    //consumable
+    "4bd05d7d-898c-4947-8788-e34b84b5d386": {
+        "description": "De l'eau purifiée ! Très rafraîchissante ! Permet d'arroser les plantes.",
+        "title": "Eau purifiée"
+    },
+    "869d4736-289a-4952-96cd-8a40117a2d28" : {
+        "description" : "Encore un peu salée...",
+        "title" : "Eau"
+    },
+    "7c440c4a-5919-4baa-a946-0bb89b8c4d5d": {
+        "description": "Il est toujours très salé...",
+        "title": "Poisson cru"
+    },
+    "7c440c4a-5919-4baa-a946-0bb89b8c4d85": {
+        "description": "Ce poisson est un peu SUS",
+        "title": "Fishus cru"
+    },
+    "c57fe6d6-03b1-46d4-9104-29cf19f176ab": {
+        "description": "Ça a l'air très délicieux, mais ça sent.",
+        "title": "Poisson cuit"
+    },
+    "7c440c4a-5919-4baa-a946-0bb89b8c4d5e" : {
+        "description" : "Un excellent mélange ! Ou pas..",
+        "title" : "Le Fishe Au Chocolat"
+    },
+    "74a3f240-65b2-4f52-9555-666217366a0a" : {
+        "description" : "Pas la meilleur nourriture, mais au moins c'est mangeable.",
+        "title" : "Viande de Woc cru"
+    },
+    "74a3f240-65b2-4f52-9555-666217366a0e" : {
+       "description" : "The perfect medium-rare!",
+       "title" : "Viande de Woc grillée"
+    },
+
+    "2af00456-b22e-4743-b338-a91934aba7c5" : {
+        "description" : "Cuisine de délicieux plats qui rempliront votre barre de santé ou réanimeront vos amis.",
+        "title" : "Cuisibot alléger"
+    },
+    "5cb15c93-4fa9-48da-9974-2e95ca6c9e1c" : {
+        "description" : "Le Raffinebot vous aide à raffiner les rondins que vous collectez. Mettez-les à la main ou placez un collecteur de ressources rempli de rondins à côté.",
+        "title" : "Raffinebot alléger"
+    },
+    "767a3121-2c31-473c-a5ab-27e188fdd55a" : {
+        "description" : "Utilisez le Tenuebot afin de créer des tenues pour votre mécano. Ajoutez vos boîtes à vêtements et la quantité requise de coton. Vous pouvez également personnaliser votre look grâce à la garde-robe bleue.",
+        "title" : "Tenuebot alléger"
+    },
+    "a930a42f-63ed-4fb0-933e-56ce8a889cc5" : {
+        "description" : "L'outil parfait pour collecter et empiler les rondins. Lorsqu'il est plein, placez-le près d'un Raffinebot pour transformer les rondins en blocs.",
+        "title" : "Collecteur de ressources alléger"
+    },
+    "b63c6440-dfc2-4da7-acdb-3c385080b2e4" : {
+        "description" : "Le Fabribot vous aidera à tout fabriquer, des nouveaux blocs aux pièces interactives. Vous devriez avoir sur votre radeau.",
+        "title" : "Fabribot alléger"
+    }
+}

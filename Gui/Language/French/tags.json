@@ -1,0 +1,59 @@
+{
+    "SaplingGrow": "#00cc00En train de pousser...",
+    "SaplingNeedLiquid": "Arroser avec de l'eau",
+    "SaplingNeedGround": "Placer au #ff0000sol",
+    "SaplingCantErase": "On ne peut pas enlever une pousse d'arbre pendant qu'elle grandit !",
+
+    "FarmerBallTalk": "Parler",
+    "FarmerBallHelp": "J'étais juste en train d'utiliser les toilettes parce que ma bouteille était pleine et maintenant... Eh bien, j'ai introduit en douce des explosifs ici il y a un petit moment. J'ai essayé de casser le mur en bas pour sortir, mais peut-être que tu peux finir le travail.",
+    "FarmerBallThanks": "Merci, c'est la première fois que je vois le soleil depuis des années ! J'ai hâte de revoir Bob le fou !",
+
+    "HarpoonPickup": "Harpon ramassé",
+    "LogbookAdd": "Ajouté au carnet de bord",
+
+	"BinocularsZoomFactor": "Force du zoom : ",
+
+    "CreationRotator_Title": "Rotateur de création",
+    "CreationRotator_Force": "Multiplicateur de force",
+    "CreationRotator_Ver_Hor": "Vertical + Horizontal",
+    "CreationRotator_Ver": "Vertical",
+    "CreationRotator_Hor": "Horizontal",
+    "CreationRotator_Roll": "Roll",
+    "CreationRotator_Mult": "Multiplicateur : ",
+    "CreationRotator_CurrentMode": "Mode actuel : #ffffff",
+    "CreationRotator_Cycle_fwd": "' pour cylcler en avant, '",
+    "CreationRotator_Cycle_bwd": "' to switch between input methods and '",
+    "CreationRotator_AdjustForce": "' pour ajuster le multiplicateur de force.",
+    "CreationRotator_CurrentInput": ", #4f4f4fMéthode d'entrée actuelle : #ffffff",
+    "CreationRotator_Input_mouse": "Souris",
+    "CreationRotator_Input_wasd": "ZQSD(WASD)",
+
+    "WaterSensor_Title": "Capteur d'eau",
+    "WaterSensor_Radius_Title": "Rayon de détection (blocs)",
+    "WaterSensor_Radius_radius": "Rayon : ", 
+    "WaterSensor_Radius_blocks": " blocs",
+    "WaterSensor_CurrentRadius": "Rayon actuel de détection : #ffffff",
+    "WaterSensor_CurrentRadius_blocks": " bloc(s)#4f4f4f, Visualisation : ",
+    "WaterSensor_Adjust_tip1": "' pour ajuster le rayon de détection et '",
+    "WaterSensor_Adjust_tip2": "' pour activer la visualisation de la zone.",
+    "WaterSensor_Visualization_on": "#269e44ON",
+    "WaterSensor_Visualization_off": "#9e2626OFF",
+
+    "General_Cycle_bwd": "' pour cyler en arrière.",
+
+    "Sail_Tie": "Remonter la voile",
+    "Sail_Lower": "Abaisser la voile",
+    "Sail_Controlled": "Contrôlé par logique",
+
+    "Trader_dialogue1": "Mhh.. Bertha.. J'vais… OH ! Tu.. Tu es en vie ?! Je suis heureux de voir quelqu'un d'autre ! Hm… Oh.. Je pense que je connais un moyen de euh- s'échapper. Si tu pouvais ramener à Berth- euh, me ramener quelques caisses de légumes, ça serait bien ! Hehe.. J't'ai noté une station pour l'emballage des légumes à proximité. Emballe 2 caisses de carottes et 2 caisses de betteraves.. Ensuite apporte les a cette bonne vieille Bertha- eh, la grande pompe là-bas... Hehe.",
+    "Trader_dialogue2": "Quelle bonne surprise de te revoir ! Non pas que j'm'attendais te revoir en morceaux sur le rivage .. Ahah !... Ehm. Enfin bref, malheureusement les légumes ne sont qu'une partie de la rece - euh du plan ! Du plan. Les autres ressources ont été gardées secrètes. Par contre j'ai détecté une activité Woc... anormale sur une île proche. Tu devrais aller voir.",
+    "Trader_dialogue3": "Parfait ! Bientôt il sera a m- euh eheh, enfin j'veux dire qu'on pourra quitter cette planète. *regarde ses notes* Ah... OUAIS.. MAIS VOILA ! MAIS C'ÉTAIT SÛR EN FAIT ! C'ÉTAIT SÛR ! Oh, désolé j'suis pas habitué a avoir de la compagnie, au moins depuit l'acciden- Enfin bref, faudrait que tu me ramènes 2 caisses de myrtilles 2 caisses de bananes. J't'ai noté une station pour l'emballage des fruits à proximité.",
+    "Trader_dialogue4": "*Slurps* AH, juste ce dont j'avais besoin ! Le temps etait long sans toi mon petit sunshake... Où sont mes manière ? eheh. Pourquoi tu te prendrais pas un petit sushake toi aussi ? J'peux t'en faire autant que tu veux, enfin si tu me ramènes de quoi les faires. Bah, bien sûr que c'etait nécessaire.. parce que.. le.. euh.. le sunshake contient, euh, les coordonées vers des ruines. Puisque ma vie a était sauvé par le sunshake..., tu pourrais aussi bien essayer de libérer le reste de mon équipe. J'ai entendu des rumeurs sur une clé cachée dans cette ville en ruines. Si je pouvais mettre la main sur un tel dispositif, on pourrait peut-être lancer une mission de sauvetage.",
+    "Trader_dialogue5": "J'en reviens pas que tu sois en vi- euh, tellement courageux ! Laisse moi voir cette clé. AH.. OUAIS.. Un circuit aussi simple… J'devrais pouvoir recréer le même circuit facilement avec les bons outils.. Mais cette clé, tu devrais pouvoir entrer dans les entrepôts(warehouse) où le reste de mon équipage est retenu en otage pour avoir utilisé les toilettes au lieu de..... Demande pas pourquoi y'a autant de bouteilles d'eau dans l'océan.. Enfin bref, atteint le sommet d'un entrepôt et sauve l'un d'entre eux ! Ensuite reviens me voir moi et cette bonne vieille Bertha s'en occupera.",
+    "Trader_dialogue6": "Ça fait tellement longtemps que j'n'avais pas eu de compagnie *pleure*. Continue à sauver d'autres membres de mon équipe ! En attendant, j'vais réfléchir à un plan pour nous faire quitter cette planète et rentrer chez nous…",
+    
+    "FishingBait": "Appât : ",
+    "FishingOutOfBait": "Plus d'appâts!",
+    "FishingBaitNone": "Aucun",
+    "FishingGetItem": "Pêché : "
+}
