@@ -379,6 +379,7 @@ function Binoculars.client_onUnequip( self, animate )
 	self.wantEquipped = false
 	self.equipped = false
 	self.aiming = false
+	self.vignette:close()
 	sm.camera.setCameraState(sm.camera.state.default)
 	sm.camera.setFov(self.defaultFov)
 	if sm.exists( self.tool ) then
