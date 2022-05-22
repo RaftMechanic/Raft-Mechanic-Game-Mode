@@ -154,7 +154,7 @@ function Binoculars.client_onUpdate( self, dt )
 	local isCrouching =  self.tool:isCrouching()
 
 	self.camdir = sm.localPlayer.getPlayer().character:getDirection()
-	self.campos = sm.localPlayer.getPlayer().character.worldPosition
+	self.campos = sm.localPlayer.getPlayer().character.worldPosition + sm.vec3.new(0,0,0.575)
 	self.camrot = sm.camera.getDefaultRotation()
 
 	if self.tool:isLocal() then
@@ -252,9 +252,9 @@ function Binoculars.client_onUpdate( self, dt )
 
 	local linareAngleDown = clamp( -linareAngle, 0.0, 1.0 )
 
-	down = clamp( -angle, 0.0, 1.0 )
-	fwd = ( 1.0 - math.abs( angle ) )
-	up = clamp( angle, 0.0, 1.0 )
+	local down = clamp( -angle, 0.0, 1.0 )
+	local fwd = ( 1.0 - math.abs( angle ) )
+	local up = clamp( angle, 0.0, 1.0 )
 
 	local crouchWeight = self.tool:isCrouching() and 1.0 or 0.0
 	local normalWeight = 1.0 - crouchWeight
@@ -354,8 +354,8 @@ function Binoculars.client_onEquip( self, animate )
 	self.vignette:setText("ZoomFactorDisplay", language_tag("BinocularsZoomFactor") .. self.zoomFactor .. "x")
 	self.jointWeight = 0.0
 
-	currentRenderablesTp = {}
-	currentRenderablesFp = {}
+	local currentRenderablesTp = {}
+	local currentRenderablesFp = {}
 
 	for k,v in pairs( renderablesTp ) do currentRenderablesTp[#currentRenderablesTp+1] = v end
 	for k,v in pairs( renderablesFp ) do currentRenderablesFp[#currentRenderablesFp+1] = v end
