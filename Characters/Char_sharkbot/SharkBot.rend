@@ -18,12 +18,28 @@
 						"$SURVIVAL_DATA/Character/Char_Tapebot/char_tapebot_head02_asg.tga",
 						"$SURVIVAL_DATA/Character/Char_Tapebot/char_tapebot_head02_nor.tga"
 					]
+				},
+				"farmbot": {
+					"material": "DifAsgNor",
+					"textureList": [
+						"$SURVIVAL_DATA/Character/Char_Farmbot/Char_Farmbot_dif.tga",
+						"$SURVIVAL_DATA/Character/Char_Farmbot/Char_Farmbot_asg.tga",
+						"$SURVIVAL_DATA/Character/Char_Farmbot/Char_Farmbot_nor.tga"
+					]
+				},
+				"observerbot": {
+					"material": "DifAsgNor",
+					"textureList": [
+						"$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_dif.tga",
+						"$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_asg.tga",
+						"$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_nor.tga"
+					]
 				}
 			},
 		"animationList" : [
 			{ "name" : "idle", 						"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_onground.dae", "looping" : true },
 			
-			{ "name" : "ground_a", 					"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_ground_action.dae" },
+			{ "name" : "ground_a", 					"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_swim_idle.dae.dae" },
 			{ "name" : "attack", 					"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_attack.dae" },
 			
 			{ "name" : "swim_idle", 				"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_swim_idle.dae", "looping" : true },
