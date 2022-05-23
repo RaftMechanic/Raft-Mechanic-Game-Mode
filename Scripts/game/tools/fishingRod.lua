@@ -465,7 +465,7 @@ function Rod.calculateFirePosition( self, player )
 	local dir = character:getDirection()
 	local pitch = math.asin( dir.z )
 	local right = sm.vec3.cross(dir, sm.vec3.new(0,0,1))
-	if right:length() > 0 then
+	if right:length() > 0.0001 then
 		right = right:normalize()
 	else
 		right = sm.vec3.new(0, 1, 0)
