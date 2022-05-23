@@ -46,7 +46,6 @@ function SurvivalGame.server_onCreate( self )
 	if self.sv.saved == nil then
 		self.sv.saved = {}
 		self.sv.saved.data = self.data
-		self.sv.saved.showHelpMessages = true --Raft
 		printf( "Seed: %.0f", self.sv.saved.data.seed )
 		self.sv.saved.overworld = sm.world.createWorld( "$CONTENT_DATA/Scripts/game/worlds/Overworld.lua", "Overworld", { dev = self.sv.saved.data.dev }, self.sv.saved.data.seed )
 		self.storage:save( self.sv.saved )
@@ -198,8 +197,6 @@ function SurvivalGame.bindChatCommands( self )
 	local addCheats = g_survivalDev
 
 	if addCheats then
-		sm.game.bindChatCommand("/togglehelpmessages", {}, "cl_onChatCommand", "Toggle help messages") --Raft
-
 		sm.game.bindChatCommand( "/ammo", { { "int", "quantity", true } }, "cl_onChatCommand", "Give ammo (default 50)" )
 		sm.game.bindChatCommand( "/spudgun", {}, "cl_onChatCommand", "Give the spudgun" )
 		sm.game.bindChatCommand( "/gatling", {}, "cl_onChatCommand", "Give the potato gatling gun" )
@@ -305,10 +302,6 @@ function SurvivalGame.loadCraftingRecipes( self )
 end
 
 function SurvivalGame.server_onFixedUpdate( self, timeStep )
-	if self.sv.saved.showHelpMessages and sm.game.getCurrentTick() % (40*60*10) == 0 then
-		self.network:sendToClients("client_showMessage", "Feeling stuck? The logbook can help you out.")
-	end
-
 	-- Update time
 
 	local prevTime = self.sv.time.timeOfDay
@@ -792,15 +785,6 @@ function SurvivalGame.sv_importCreation( self, params )
 end
 
 function SurvivalGame.sv_onChatCommand( self, params, player )
-	--Raft 
-	if params[1] == "/togglehelpmessages" then
-		self.sv.saved.showHelpMessages = not self.sv.saved.showHelpMessages
-
-		self.network:sendToClients( "client_showMessage", "You have toggled help messages: " .. ( self.sv.saved.showHelpMessages and "On" or "Off" ) )
-
-		self.storage:save( self.sv.saved ) -- force save to disk
-	end
-
 	if params[1] == "/tumble" then
 		if params[2] ~= nil then
 			player.character:setTumbling( params[2] )
@@ -892,7 +876,7 @@ function SurvivalGame.server_onPlayerJoined( self, player, newPlayer )
 			sm.container.setItem( inventory, 10, tool_paint, 1 )
 			sm.container.setItem( inventory, 11, tool_weld, 1 )
 		else
-			sm.container.setItem( inventory, 0, tool_sledgehammer, 1 )
+			--sm.container.setItem( inventory, 0, tool_sledgehammer, 1 ) --RAFT
 			sm.container.setItem( inventory, 1, tool_lift, 1 )
 		end
 
@@ -907,13 +891,13 @@ function SurvivalGame.server_onPlayerJoined( self, player, newPlayer )
 
 		--Raft
 		if player.id == 1 then
-			sm.gui.chatMessage("#009999Thanks for playing the Raft Mechanic Mod! Check out the logbook to get started!")
+			sm.gui.chatMessage("#ff00ffThanks for playing the Raft Mechanic Mod! Check out the logbook to get started!")
 			sm.creation.importFromFile( self.sv.saved.overworld, "$CONTENT_DATA/LocalBlueprints/RAFT.blueprint", START_AREA_SPAWN_POINT )
 		end
 	else
 		local inventory = player:getInventory()
 
-		local sledgehammerCount = sm.container.totalQuantity( inventory, tool_sledgehammer )
+		--[[local sledgehammerCount = sm.container.totalQuantity( inventory, tool_sledgehammer )
 		if sledgehammerCount == 0 then
 			sm.container.beginTransaction()
 			sm.container.collect( inventory, tool_sledgehammer, 1 )
@@ -922,7 +906,7 @@ function SurvivalGame.server_onPlayerJoined( self, player, newPlayer )
 			sm.container.beginTransaction()
 			sm.container.spend( inventory, tool_sledgehammer, sledgehammerCount - 1 )
 			sm.container.endTransaction()
-		end
+		end]] --RAFT
 
 		local tool_lift_creative = sm.uuid.new( "5cc12f03-275e-4c8e-b013-79fc0f913e1b" )
 		local creativeLiftCount = sm.container.totalQuantity( inventory, tool_lift_creative )
