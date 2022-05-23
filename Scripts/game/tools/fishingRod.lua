@@ -20,7 +20,7 @@ local CHAPTER2 = false
 local maxThrowForce = 2.5
 local minThrowForce = 0.25
 local chargeUpTime = 2
-local hookSize = sm.vec3.one()*0.1
+local hookSize = sm.vec3.one()*0.2
 
 local baits = {
 	obj_hook_render,
@@ -173,7 +173,7 @@ end
 
 
 function Rod.sv_create_hook( self, params, player )
-	local trigger = sm.areaTrigger.createBox(hookSize, params.pos, sm.quat.identity(), sm.areaTrigger.filter.areaTrigger)
+	local trigger = sm.areaTrigger.createBox(hookSize/2, params.pos, sm.quat.identity(), sm.areaTrigger.filter.areaTrigger)
 	local bait = params.bait
 
 	sm.container.beginTransaction()
