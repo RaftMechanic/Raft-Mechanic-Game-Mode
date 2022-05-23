@@ -18,7 +18,11 @@ dofile( "$SURVIVAL_DATA/Scripts/game/util/Timer.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestEntityManager.lua" )
 dofile( "$GAME_DATA/Scripts/game/managers/EventManager.lua" )
 
+--RAFT
 dofile( "$CONTENT_DATA/Scripts/game/managers/WindManager.lua" )
+dofile( "$CONTENT_DATA/Scripts/game/scripts/raft_items.lua" )
+
+
 
 ---@class SurvivalGame : GameClass
 ---@field sv table
@@ -876,8 +880,11 @@ function SurvivalGame.server_onPlayerJoined( self, player, newPlayer )
 			sm.container.setItem( inventory, 10, tool_paint, 1 )
 			sm.container.setItem( inventory, 11, tool_weld, 1 )
 		else
-			--sm.container.setItem( inventory, 0, tool_sledgehammer, 1 ) --RAFT
-			sm.container.setItem( inventory, 1, tool_lift, 1 )
+			--RAFT
+			sm.container.setItem( inventory, 0, tool_lift, 1 )
+			if player.id ~= 1 then
+				sm.container.setItem( inventory, 1, obj_hammock, 1 )
+			end
 		end
 
 		sm.container.endTransaction()
