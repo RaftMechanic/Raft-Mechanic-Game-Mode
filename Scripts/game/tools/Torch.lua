@@ -55,7 +55,7 @@ end
 function TorchTool:client_onFixedUpdate()
 	if not self.equipped then return end
 	---@diagnostic disable-next-line: missing-parameter
-	if self.tool:getOwner():getCharacter() then
+	if self.tool:getOwner():getCharacter():isSwimming() then
 		self.network:sendToServer("sv_stopEffect")
 	else
 		self.network:sendToServer("sv_startEffect")
