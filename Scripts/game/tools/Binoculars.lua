@@ -10,7 +10,7 @@ Binoculars = class()
 
 local renderables = { "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/char_binocular_preview.rend" }
 local renderablesTp = {"$GAME_DATA/Character/Char_Male/Animations/char_male_tp_spudgun.rend", "$GAME_DATA/Character/Char_Tools/Char_spudgun/char_spudgun_tp_animlist.rend", "$SURVIVAL_DATA/Character/Char_Male/Animations/char_male_tp_fertilizer.rend", "$SURVIVAL_DATA/Character/Char_Tools/Char_fertilizer/char_fertilizer_tp_animlist.rend", "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/char_male_tp_binocular.rend" }
-local renderablesFp = {"$GAME_DATA/Character/Char_Tools/Char_spudgun/char_spudgun_fp_animlist.rend"}
+local renderablesFp = {"$SURVIVAL_DATA/Character/Char_Male/Animations/char_male_fp_fertilizer.rend", "$SURVIVAL_DATA/Character/Char_Tools/Char_fertilizer/char_fertilizer_fp_animlist.rend", "$GAME_DATA/Character/Char_Tools/Char_spudgun/char_spudgun_fp_animlist.rend", "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/char_male_fp_binocular.rend"}
 
 sm.tool.preloadRenderables( renderables )
 sm.tool.preloadRenderables( renderablesTp )
@@ -73,20 +73,20 @@ function Binoculars.loadAnimations( self )
 		self.fpAnimations = createFpAnimations(
 			self.tool,
 			{
-				equip = { "fertilizer_pickup", { nextAnimation = "idle" } },
-				unequip = { "fertilizer_putdown" },
+				equip = { "binocular_pickup", { nextAnimation = "idle" } },
+				unequip = { "binocular_putdown" },
 
-				idle = { "fertilizer_idle", { looping = true } },
-				shoot = { "spudgun_shoot", { nextAnimation = "idle" } },
+				idle = { "binocular_idle", { looping = true } },
+				shoot = { "binocular_shoot", { nextAnimation = "idle" } },
 
-				aimInto = { "spudgun_aim_into", { nextAnimation = "aimIdle" } },
-				aimExit = { "spudgun_aim_exit", { nextAnimation = "idle", blendNext = 0 } },
-				aimIdle = { "spudgun_aim_idle", { looping = true} },
-				aimShoot = { "spudgun_aim_shoot", { nextAnimation = "aimIdle"} },
+				aimInto = { "binocular_aim_into", { nextAnimation = "aimIdle" } },
+				aimExit = { "binocular_aim_exit", { nextAnimation = "idle", blendNext = 0 } },
+				aimIdle = { "binocular_aim_idle", { looping = true} },
+				aimShoot = { "binocular_aim_shoot", { nextAnimation = "aimIdle"} },
 
-				sprintInto = { "fertilizer_sprint_into", { nextAnimation = "sprintIdle",  blendNext = 0.2 } },
-				sprintExit = { "fertilizer_sprint_exit", { nextAnimation = "idle",  blendNext = 0 } },
-				sprintIdle = { "fertilizer_sprint_idle", { looping = true } },
+				sprintInto = { "binocular_sprint_into", { nextAnimation = "sprintIdle",  blendNext = 0.2 } },
+				sprintExit = { "binocular_sprint_exit", { nextAnimation = "idle",  blendNext = 0 } },
+				sprintIdle = { "binocular_sprint_idle", { looping = true } },
 			}
 		)
 	end
