@@ -193,7 +193,7 @@ function Binoculars.client_onUpdate( self, dt )
 		end
 
 		local dir = sm.localPlayer.getDirection()
-		local firePos = self.tool:getFpBonePos( "jnt_binocular" )
+		local firePos = self.tool:getFpBonePos( "jnt_fertilizer" )
 
 		if not self.aiming then
 			effectPos = firePos + dir * 0.2
@@ -208,8 +208,8 @@ function Binoculars.client_onUpdate( self, dt )
 		self.shootEffectFP:setVelocity( self.tool:getMovementVelocity() )
 		self.shootEffectFP:setRotation( rot )
 	end
-	local pos = self.tool:getTpBonePos( "jnt_binocular" )
-	local dir = self.tool:getTpBoneDir( "jnt_binocular" )
+	local pos = self.tool:getTpBonePos( "jnt_fertilizer" )
+	local dir = self.tool:getTpBoneDir( "jnt_fertilizer" )
 
 	effectPos = pos + dir * 0.2
 
