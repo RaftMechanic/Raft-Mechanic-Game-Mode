@@ -5,7 +5,7 @@ dofile( "$SURVIVAL_DATA/Scripts/game/managers/BeaconManager.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/EffectManager.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/ElevatorManager.lua"  )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestManager.lua" )
-dofile( "$SURVIVAL_DATA/Scripts/game/managers/RespawnManager.lua" )
+dofile( "$CONTENT_DATA/Scripts/game/managers/RespawnManager.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/UnitManager.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/survival_constants.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/survival_harvestable.lua" )
@@ -315,6 +315,7 @@ function SurvivalGame.server_onFixedUpdate( self, timeStep )
 	local newDay = self.sv.time.timeOfDay >= 1.0
 	if newDay then
 		self.sv.time.timeOfDay = math.fmod( self.sv.time.timeOfDay, 1 )
+		g_windManager:sv_randomizeWind()
 	end
 
 	if self.sv.time.timeOfDay >= DAYCYCLE_DAWN and prevTime < DAYCYCLE_DAWN then
@@ -1192,11 +1193,13 @@ function SurvivalGame.sv_e_unloadBeacon( self, params )
 	end
 end
 
+function SurvivalGame.sv_e_onWindUpdate( self, params )
+	self.network:sendToClients("cl_onWindUpdate", params)
+end
 
-
-
-
-
+function SurvivalGame.cl_onWindUpdate( self, params )
+	g_windManager:cl_onWindUpdate(params)
+end
 
 
 
