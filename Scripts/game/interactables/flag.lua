@@ -16,7 +16,7 @@ function Flag.client_onUpdate( self, dt )
     if not self.effect:isPlaying() then self.effect:start() end
 
     local point = g_windManager:getWindCenter(function (quest)
-        return true
+        return true -- TODO: FIXME:
     end)
 
     local direction = self.shape:transformPoint(point)

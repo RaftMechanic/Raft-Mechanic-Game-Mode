@@ -35,7 +35,7 @@ function Sail.server_onFixedUpdate(self, dt)
 
     if self.sv.active and self.shape:getVelocity():length() < MAX_SPEED and self.shape:getWorldPosition().z > -1.9 then
         local windDirection = g_windManager:getWindDir(self.shape:getWorldPosition(), function (quest)
-            return true
+            return true -- TODO: FIXME:
         end)
 
         local sailDirection = -self.shape:getUp()

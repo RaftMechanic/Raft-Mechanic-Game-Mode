@@ -1,10 +1,9 @@
 dofile( "$CONTENT_DATA/Scripts/game/survival_quests.lua" )
 
---TODO: caching?
 WindManager = class()
 
 -- [quest] = sm.vec.new(x, y, z)
-local windMap = { --TODO: add more (order matters)
+local windMap = { --TODO: add more (order matters) and use callbacks
     [quest_radio_location] = sm.vec3.new(-1820.5, 167.5, 0),
     [quest_find_trader] = sm.vec3.new(1536, 2048, 0),
     [quest_return_to_trader1] = sm.vec3.new(1536, 2048, 0),
@@ -14,7 +13,7 @@ local windMap = { --TODO: add more (order matters)
     [quest_return_to_trader5] = sm.vec3.new(1536, 2048, 0)
 }
 
-local defaultWindMap = { --TODO 4 corners of the map
+local defaultWindMap = {
     sm.vec3.new(-4096, -3072, 0),
     sm.vec3.new(-4096, 3072, 0),
     sm.vec3.new(4096, -3072, 0),
@@ -61,7 +60,7 @@ function WindManager:sv_randomizeWind()
     local random = math.floor(math.random(0, 3)) + 1 -- random d4
     local windCenter = defaultWindMap[random]
 
-    --maybe use setClientData
+    --FIXME maybe use setClientData
 	sm.event.sendToGame( "sv_e_onWindUpdate", windCenter )
 end
 
