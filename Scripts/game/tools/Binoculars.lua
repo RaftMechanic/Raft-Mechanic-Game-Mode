@@ -453,7 +453,7 @@ function Binoculars.cl_onSecondaryUse( self, state )
 	elseif (state == sm.tool.interactState.start) then
 		self.zoomFactor = self.zoomFactor + 1
 	end
-	self.vignette:setText("ZoomFactorDisplay", language_tag("BinocularsZoomFactor") .. self.zoomFactor .. "x")
+	--self.vignette:setText("ZoomFactorDisplay", language_tag("BinocularsZoomFactor") .. self.zoomFactor .. "x")
 	sm.gui.displayAlertText(language_tag("BinocularsZoomFactor") .. self.zoomFactor .. "x",5)
 end
 
