@@ -15,7 +15,7 @@ function language_tag(name)
     end
 
     local textInJson = g_languageManager.tags[name]
-    --try to find tag in the fall back language
+    --try to find tag in the fallback language
     if textInJson == nil then
         textInJson = fallbackLanguage[name]
     end

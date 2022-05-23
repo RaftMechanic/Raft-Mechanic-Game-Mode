@@ -10,7 +10,7 @@ local dissolveFrequency = 10
 local dissolveChance = 0.9
 
 local function addToTable(t1,t2)
-    for _,v in ipairs(t2) do 
+    for _,v in ipairs(t2) do
         table.insert(t1, v)
     end
 end
@@ -49,6 +49,7 @@ function Chest.server_onCreate( self )
             body:setConnectable(false)
             body:setLiftable(false)
             body:setErasable(false)
+            body:setBuildable(false)
 
             --self.sv.saved.mass = self.sv.saved.mass + body:getMass()
         end

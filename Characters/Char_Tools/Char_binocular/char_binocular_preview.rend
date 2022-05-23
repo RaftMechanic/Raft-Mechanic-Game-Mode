@@ -1,0 +1,26 @@
+{
+	"lodList": [
+		{
+			"subMeshMap": {
+				"Body": {
+					"material": "Dif",
+					"textureList": [
+					  	"$SURVIVAL_DATA/Character/Char_Cookbot/char_cookbot_dif.tga",
+						"$SURVIVAL_DATA/Character/Char_Cookbot/char_cookbot_asg.tga",
+						"$SURVIVAL_DATA/Character/Char_Cookbot/char_cookbot_nor.tga"
+					]
+				},
+				"pump": {
+					"material": "DifAsgNor",
+					"textureList": [
+					  	"$SURVIVAL_DATA/Character/Char_Dropoff/char_dropoff_dif.tga",
+						"$SURVIVAL_DATA/Character/Char_Dropoff/char_dropoff_asg.tga",
+						"$SURVIVAL_DATA/Character/Char_Dropoff/char_dropoff_nor.tga"
+					]
+				}
+			},
+			"mesh": "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/char_binocular.dae",
+			"maxViewDistance": 1000.0
+		}
+	]
+}

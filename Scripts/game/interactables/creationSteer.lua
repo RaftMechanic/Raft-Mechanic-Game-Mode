@@ -168,7 +168,7 @@ function Steer:client_canInteract()
     local o1 = "<p textShadow='false' bg='gui_keybinds_bg_orange' color='#4f4f4f' spacing='9'>"
     local o2 = "</p>"
 	sm.gui.setInteractionText( "", o1..language_tag("CreationRotator_CurrentMode")..modes[self.cl.data.count]..language_tag("CreationRotator_CurrentInput")..controlModes[self.cl.data.controlMethodCount]..o2 )
-    sm.gui.setInteractionText( "", o1.."'"..sm.gui.getKeyBinding( "Use" )..language_tag("CreationRotator_Cycle_fwd")..sm.gui.getKeyBinding( "Tinker" )..language_tag("CreationRotator_Cycle_bwd")..sm.gui.getKeyBinding( "Crawl" ).."' + '"..sm.gui.getKeyBinding( "Use" )..language_tag("CreationRotator_AdjustForce")..o2 )
+    sm.gui.setInteractionText( "", o1..string.format(language_tag("CreationRotator_Cycle"), sm.gui.getKeyBinding( "Use" ), sm.gui.getKeyBinding( "Tinker" ), sm.gui.getKeyBinding( "Crawl" ), sm.gui.getKeyBinding( "Use" ))..o2 )
 
     return true
 end

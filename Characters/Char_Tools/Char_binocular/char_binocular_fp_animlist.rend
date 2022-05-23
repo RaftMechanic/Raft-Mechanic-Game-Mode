@@ -1,0 +1,12 @@
+{
+	"lodList": [{
+		"animationList" : [
+		
+			{ "name" : "binocular_idle", 			"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/Animations/ani_char_binocular_fp_position.dae"}
+
+
+		],
+
+		"maxViewDistance": 1000.0
+	}]
+}

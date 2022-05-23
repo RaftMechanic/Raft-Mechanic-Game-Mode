@@ -1,0 +1,35 @@
+{
+	"lodList": [{
+		"animationList" : [
+
+			// Binocular
+
+			{ "name" : "binocular_idle", 				"file" : "$GAME_DATA/Character/Char_Male/Animations/Thirdperson/Painttool/ani_char_male_painttool_idle.dae", "looping" : true },
+			{ "name" : "binocular_idle_select", 		"file" : "$GAME_DATA/Character/Char_Male/Animations/Thirdperson/Painttool/ani_char_male_painttool_use_idle.dae", "looping" : true },
+			{ "name" : "binocular_idle_relaxed", 		"file" : "$GAME_DATA/Character/Char_Male/Animations/Thirdperson/Painttool/ani_char_male_painttool_idle.dae", "looping" : true },
+			
+			{ "name" : "binocular_pickup", 			"file" : "$GAME_DATA/Character/Char_Male/Animations/Thirdperson/Painttool/ani_char_male_painttool_pickup.dae" },
+			{ "name" : "binocular_putdown",		 	"file" : "$GAME_DATA/Character/Char_Male/Animations/Thirdperson/Painttool/ani_char_male_painttool_putdown.dae" },
+			
+			{ "name" : "binocular_sprint", 			"file" : "$GAME_DATA/Character/Char_Male/Animations/Thirdperson/Painttool/ani_char_male_painttool_sprint.dae", "looping" : true },
+			{ "name" : "binocular_run_fwd", 			"file" : "$GAME_DATA/Character/Char_Male/Animations/Thirdperson/Painttool/ani_char_male_painttool_run.dae", "looping" : true },
+			{ "name" : "binocular_run_bwd", 			"file" : "$GAME_DATA/Character/Char_Male/Animations/Thirdperson/Painttool/ani_char_male_painttool_run_bwd.dae", "looping" : true },
+			
+			{ "name" : "binocular_crouch_idle", 		"file" : "$GAME_DATA/Character/Char_Male/Animations/Thirdperson/Painttool/ani_char_male_painttool_crouch_idle.dae", "looping" : true },
+			{ "name" : "binocular_crouch_fwd", 		"file" : "$GAME_DATA/Character/Char_Male/Animations/Thirdperson/Painttool/ani_char_male_painttool_crouch_fwd.dae", "looping" : true },
+			{ "name" : "binocular_crouch_bwd", 		"file" : "$GAME_DATA/Character/Char_Male/Animations/Thirdperson/Painttool/ani_char_male_painttool_crouch_bwd.dae", "looping" : true },
+			
+			{ "name" : "binocular_jump", 				"file" : "$GAME_DATA/Character/Char_Male/Animations/Thirdperson/Painttool/ani_char_male_painttool_jump.dae" },
+			{ "name" : "binocular_jump_up", 			"file" : "$GAME_DATA/Character/Char_Male/Animations/Thirdperson/Painttool/ani_char_male_painttool_jump_up.dae", "looping" : true  },
+			{ "name" : "binocular_jump_down", 			"file" : "$GAME_DATA/Character/Char_Male/Animations/Thirdperson/Painttool/ani_char_male_painttool_jump_down.dae", "looping" : true  },
+			{ "name" : "binocular_jump_land", 			"file" : "$GAME_DATA/Character/Char_Male/Animations/Thirdperson/Painttool/ani_char_male_painttool_jump_land.dae" },
+			{ "name" : "binocular_jump_land_fwd", 		"file" : "$GAME_DATA/Character/Char_Male/Animations/Thirdperson/Painttool/ani_char_male_painttool_jump_land.dae" },
+			{ "name" : "binocular_jump_land_bwd", 		"file" : "$GAME_DATA/Character/Char_Male/Animations/Thirdperson/Painttool/ani_char_male_painttool_jump_land.dae" },
+
+			{ "name" : "binocular_zoom", 				"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/TP/char_male_tp_zoom.dae" }
+
+
+		],
+		"maxViewDistance": 1000.0
+	}]
+}

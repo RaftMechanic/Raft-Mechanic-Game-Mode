@@ -9,27 +9,27 @@
 		"smoothing" : 0.8,
 
 		"colliders" : {
-			"Body" : {
+			"jnt_spine" : {
 				"radius" : 0.2, "mass" : 30.0, "friction" : 1.0,
 				"rollingFriction" : 1.0, "spinningFriction" : 1.0, "restitution" : 0.0,
 				"selfCollision": true
 			},
-			"ArmRight" : {
+			"jnt_right" : {
 				"mass" : 20.0, "friction" : 1.0, "rollingFriction" : 1.0, "spinningFriction" : 1.0,
 				"restitution" : 0.0
 			},
-			"ArmLeft" : {
+			"jnt_left" : {
 				"mass" : 20.0, "friction" : 1.0, "rollingFriction" : 1.0, "spinningFriction" : 1.0,
 				"restitution" : 0.0,
 				"selfCollision": true
 			},
-			"Tail" : {
+			"jnt_tail" : {
 				"radius" : 0.1,
 				"mass" : 20.0, "friction" : 1.0,
 				"rollingFriction" : 1.0, "spinningFriction" : 1.0,
 				"restitution" : 0.0
 			},
-			"Head" : {
+			"jnt_head" : {
 				"offset" : 1.0,
 				"radius" : 0.2, "mass" : 30.0, "friction" : 1.0, 
 				"rollingFriction" : 1.0, "spinningFriction" : 1.0,
@@ -134,13 +134,13 @@
 	},
 	"limbs" : {
 		"body_limb" : {
-			"bones" : ["root_jnt", "spine_mid_2", "spine_mid", "spine_main", "spine_eyes", "jaw_top"],
+			"bones" : ["jnt_root", "jnt_spine", "jnt_jaw"],
 			"colliders" : ["body", "chest", "head" ],
 			"joints" : ["spine_joint","spine_joint","spine_joint","spine_joint", "neck_joint"]
 		},
 		"fin_left" : {
 			"root" : { "limb" : "body_limb", "colliderIndex" : 0 },
-			"bones" : ["side_fin_l", "side_fin_l_end"],
+			"bones" : ["jnt_left"],
 			"colliders" : [ "small_colliderActive", "small_collider"],
 			"joints" : ["leg_joint","leg_joint"]
 		},

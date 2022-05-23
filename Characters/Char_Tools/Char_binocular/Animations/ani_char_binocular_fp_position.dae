@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2020-01-31T15:42:18Z</created><keywords></keywords><modified>2020-01-31T15:42:18Z</modified><revision></revision><subject></subject><title></title><unit meter="0.010000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
+  <library_animations>
+    <animation id="jnt_fertilizer-anim" name="jnt_fertilizer"><animation><source id="jnt_fertilizer-Matrix-animation-input"><float_array id="jnt_fertilizer-Matrix-animation-input-array" count="2">
+
+0.000000 0.033333</float_array><technique_common><accessor source="#jnt_fertilizer-Matrix-animation-input-array" count="2"><param name="TIME" type="float"/></accessor></technique_common></source><source id="jnt_fertilizer-Matrix-animation-output-transform"><float_array id="jnt_fertilizer-Matrix-animation-output-transform-array" count="32">
+
+0.907286 -0.398016 -0.135703 -0.048078 0.418939 0.883428 0.209870 0.196350 0.036352 -0.247264 0.968266 0.048578 0.000000 0.000000 0.000000 1.000000
+0.907286 -0.398016 -0.135703 -0.048078 0.418939 0.883428 0.209870 0.196350 0.036352 -0.247264 0.968266 0.048578 0.000000 0.000000 0.000000 1.000000</float_array><technique_common><accessor source="#jnt_fertilizer-Matrix-animation-output-transform-array" count="2" stride="16"><param type="float4x4"/></accessor></technique_common></source><source id="jnt_fertilizer-Interpolations"><Name_array id="jnt_fertilizer-Interpolations-array" count="2">
+ LINEAR LINEAR</Name_array><technique_common><accessor source="#jnt_fertilizer-Interpolations-array" count="2"><param type="name"/></accessor></technique_common></source><sampler id="jnt_fertilizer-Matrix-animation-transform"><input semantic="INPUT" source="#jnt_fertilizer-Matrix-animation-input"/><input semantic="OUTPUT" source="#jnt_fertilizer-Matrix-animation-output-transform"/><input semantic="INTERPOLATION" source="#jnt_fertilizer-Interpolations"/></sampler><channel source="#jnt_fertilizer-Matrix-animation-transform" target="jnt_fertilizer/matrix"/></animation></animation>
+  </library_animations>
+  <library_visual_scenes>
+    <visual_scene id="ani_char_fertilizer_fp_position" name="ani_char_fertilizer_fp_position">
+      <node name="jnt_right_weapon" id="jnt_right_weapon" sid="jnt_right_weapon" type="JOINT"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>0.000000</visibility></technique></extra><node name="jnt_fertilizer" id="jnt_fertilizer" sid="jnt_fertilizer" type="JOINT"><matrix sid="matrix">0.907286 -0.398016 -0.135703 -0.048078 0.418939 0.883428 0.209870 0.196350 0.036352 -0.247264 0.968266 0.048578 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="jnt_pipe" id="jnt_pipe" sid="jnt_pipe" type="JOINT"><matrix sid="matrix">1.000000 -0.000000 0.000000 -0.000000 -0.000000 0.000000 -1.000000 0.147474 0.000000 1.000000 0.000000 1.077253 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node></node></node>
+      <extra><technique profile="MAX3D"><frame_rate>30.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.000000</start_time><end_time>8.000000</end_time></technique></extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#ani_char_fertilizer_fp_position"></instance_visual_scene>
+  </scene>
+</COLLADA>

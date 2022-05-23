@@ -1,0 +1,31 @@
+{
+	"lodList": [{
+		"mesh": "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/Animations/ani_char_binocular_fp_position.dae",
+		"includes" : ["POSITION", "UV0", "NORMAL", "TANGENTS", "BLEND_INDICES", "BLEND_WEIGHTS"],
+		"animationList" : [
+	
+			// Binocular
+			
+			{ "name" : "binocular_idle", 					"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/FP/ani_char_male_fp_painttool_idle.dae" },
+
+			{ "name" : "binocular_pickup", 				"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/FP/ani_char_male_fp_painttool_pickup.dae" },
+			{ "name" : "binocular_putdown", 				"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/FP/ani_char_male_fp_painttool_putdown.dae" },
+
+			{ "name" : "binocular_sprint_into", 			"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/FP/ani_char_male_fp_painttool_sprint_into.dae" },
+			{ "name" : "binocular_sprint_exit", 			"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/FP/ani_char_male_fp_painttool_sprint_exit.dae" },
+			{ "name" : "binocular_sprint_idle", 			"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/FP/ani_char_male_fp_painttool_sprint_idle.dae" },
+
+			
+			
+			{ "name" : "binocular_aim_into", 				"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/FP/ani_char_male_fp_binocular_aim_into.dae" },
+			{ "name" : "binocular_aim_exit", 				"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/FP/ani_char_male_fp_binocular_aim_exit.dae" },
+			{ "name" : "binocular_aim_shoot", 			"file" : "$GAME_DATA/Character/Char_Male/Animations/Firstperson/Spudgun/ani_char_male_fp_spudgun_aim_shoot.dae" },
+			{ "name" : "binocular_aim_idle", 				"file" : "$GAME_DATA/Character/Char_Male/Animations/Firstperson/Spudgun/ani_char_male_fp_spudgun_aim_idle.dae" },
+
+			{ "name" : "binocular_shoot", 				"file" : "$GAME_DATA/Character/Char_Male/Animations/Firstperson/Spudgun/ani_char_male_fp_spudgun_normal_shoot.dae" }
+
+
+		],
+		"maxViewDistance": 1000.0
+	}]
+}

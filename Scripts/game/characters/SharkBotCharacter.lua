@@ -29,11 +29,11 @@ function SharkBotCharacter.client_onEvent( self, event )
 		if event == "attack" then
 			self.currentAnimation = "attack"
 			self.animations.attack.time = 0
-			sm.effect.playHostedEffect( "Watercannon - Impact",self.character, "Head")
+			sm.effect.playHostedEffect( "Watercannon - Impact",self.character, "jnt_head")
 		elseif event == "ground_a" and self.currentAnimation ~= "ground_a" then
 			self.currentAnimation = "ground_a"
 			self.animations.ground_a.time = 0
-			sm.effect.playHostedEffect( "Water - WaterProjectileTrail",self.character, "Tail")
+			sm.effect.playHostedEffect( "Water - WaterProjectileTrail",self.character, "jnt_tailtop")
 		elseif event == "raft" then
 			sm.audio.play( "RaftShark", self.character:getWorldPosition() )
 		end

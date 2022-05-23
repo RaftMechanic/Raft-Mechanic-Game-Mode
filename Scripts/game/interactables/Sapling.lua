@@ -86,7 +86,7 @@ function Sapling.client_canInteract(self)
     local o2 = "</p>"
 
 	if self.cl.planted then
-		sm.gui.setInteractionText("", o1..language_tag("SaplingGrow")..o2, "")
+		sm.gui.setInteractionText(o1..language_tag("SaplingGrow")..o2)
 	elseif self.cl.valid then
 		sm.gui.setInteractionText(o1..language_tag("SaplingNeedLiquid")..o2)
 	elseif not self.cl.caculating then

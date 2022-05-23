@@ -1,383 +1,356 @@
 {
-	"partList": [
-		{
-			"autoTool": "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
-			"box": {
-				"x": 2,
-				"y": 2,
-				"z": 2
-			},
-			"color": "00ffff",
-			"edible": {
-				"foodGain": 0,
-				"hpGain": 0,
-				"waterGain": 25
-			},
-			"flammable": false,
-			"itemStack": {},
-			"name": "obj_water_clean",
-			"physicsMaterial": "Fruit",
-			"ratings": {
-				"buoyancy": 7,
-				"density": 2,
-				"durability": 2,
-				"friction": 4
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Consumables/CleanWater.fbx",
-						"subMeshMap": {
-							"cleanwater": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_dif.tga",
-									"$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
-									"$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
-								]
-							},
-							"glass_mat": {
-								"material": "Glass",
-								"textureList": [
-									"$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_dif.tga",
-									"$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
-									"$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
-								]
-							},
-							"water": {
-								"material": "Liquid",
-								"textureList": [
-									"$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_dif.tga",
-									"$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
-									"$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"consumable": true,
-			"restrictions": {
-				"erasable": true
-			},
-			"rotationSet": "PropY",
-			"stackSize": 20,
-			"sticky": "-Y+Y",
-			"uuid": "4bd05d7d-898c-4947-8788-e34b84b5d386"
-		},
-		{
-			"autoTool": "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
-			"color": "696969",
-			"consumable": true,
-			"cylinder": {
-				"axis": "Y",
-				"depth": 1,
-				"diameter": 1,
-				"margin": 0.1
-			},
-			"edible": {
-				"foodGain": 15,
-				"hpGain": 0,
-				"waterGain": -10
-			},
-			"flammable": true,
-			"name": "obj_fish",
-			"physicsMaterial": "Plastic",
-			"ratings": {
-				"buoyancy": 8,
-				"density": 2,
-				"durability": 1,
-				"friction": 5
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Consumables/Fish.fbx",
-						"subMeshMap": {
-							"lambert2SG": {
-								"material": "Dif",
-								"textureList": [
-									"$CONTENT_DATA/Objects/Textures/Consumables/Fish.png",
-									"",
-									""
-								]
-							}
-						}
-					}
-				]
-			},
-			"restrictions": {
-				"erasable": true
-			},
-			"rotationSet": "PropY",
-			"stackSize": 10,
-			"sticky": "-Y",
-			"uuid": "7c440c4a-5919-4baa-a946-0bb89b8c4d5d"
-		},
-		{
-			"autoTool": "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
-			"color": "696969",
-			"consumable": true,
-			"cylinder": {
-				"axis": "Y",
-				"depth": 1,
-				"diameter": 1,
-				"margin": 0.1
-			},
-			"edible": {
-				"foodGain": 80,
-				"hpGain": 50,
-				"waterGain": 20
-			},
-			"flammable": true,
-			"name": "obj_fish_au_chocolate",
-			"physicsMaterial": "Fruit",
-			"ratings": {
-				"buoyancy": 8,
-				"density": 2,
-				"durability": 1,
-				"friction": 5
-			},
-			"renderable": "$CONTENT_DATA/Objects/Renderables/Consumables/fish_au_chocolate.rend",
-			"restrictions": {
-				"erasable": true
-			},
-			"rotationSet": "PropY",
-			"stackSize": 3,
-			"sticky": "-Y",
-			"uuid": "7c440c4a-5919-4baa-a946-0bb89b8c4d5e"
-		},
-		{
-			"autoTool": "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
-			"color": "696969",
-			"consumable": true,
-			"cylinder": {
-				"axis": "Y",
-				"depth": 1,
-				"diameter": 1,
-				"margin": 0.1
-			},
-			"edible": {
-				"foodGain": 15,
-				"hpGain": 0,
-				"waterGain": -10
-			},
-			"flammable": true,
-			"name": "obj_fishus",
-			"physicsMaterial": "Plastic",
-			"ratings": {
-				"buoyancy": 8,
-				"density": 2,
-				"durability": 1,
-				"friction": 5
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Consumables/Fishus.fbx",
-						"subMeshMap": {
-							"lambert2SG": {
-								"material": "Dif",
-								"textureList": [
-									"$CONTENT_DATA/Objects/Textures/Consumables/Fishus.png",
-									"",
-									""
-								]
-							}
-						}
-					}
-				]
-			},
-			"restrictions": {
-				"erasable": true
-			},
-			"rotationSet": "PropY",
-			"stackSize": 10,
-			"sticky": "-Y",
-			"uuid": "7c440c4a-5919-4baa-a946-0bb89b8c4d85"
-		},
-		{
-			"autoTool": "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
-			"color": "693737",
-			"consumable": true,
-			"cylinder": {
-				"axis": "Y",
-				"depth": 1,
-				"diameter": 1,
-				"margin": 0.1
-			},
-			"edible": {
-				"foodGain": 25,
-				"hpGain": 0,
-				"waterGain": 0
-			},
-			"flammable": true,
-			"name": "obj_fish_cooked",
-			"physicsMaterial": "Plastic",
-			"ratings": {
-				"buoyancy": 8,
-				"density": 2,
-				"durability": 1,
-				"friction": 5
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Consumables/FishCooked.fbx",
-						"subMeshMap": {
-							"lambert2SG": {
-								"material": "Dif",
-								"textureList": [
-									"$CONTENT_DATA/Objects/Textures/Consumables/Fish.png",
-									"",
-									""
-								]
-							}
-						}
-					}
-				]
-			},
-			"restrictions": {
-				"erasable": true
-			},
-			"rotationSet": "PropY",
-			"stackSize": 10,
-			"sticky": "-Y",
-			"uuid": "c57fe6d6-03b1-46d4-9104-29cf19f176ab"
-		},
-		{
-			"box": {
-				"x": 1,
-				"y": 1,
-				"z": 3
-			},
-			"color": "008ae1",
-			"consumable": true,
-			"flammable": true,
-			"name": "obj_harpoon",
-			"physicsMaterial": "Metal",
-			"ratings": {
-				"buoyancy": 10,
-				"density": 1,
-				"durability": 3,
-				"friction": 10
-			},
-			"renderable": {
-				"lodList": [
-					{
-						"mesh": "$CONTENT_DATA/Objects/Mesh/Consumables/Harpoon.fbx",
-						"subMeshMap": {
-							"radar": {
-								"material": "DifAsgNor",
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_nor.tga"
-								]
-							}
-						}
-					}
-				]
-			},
-			"rotationSet": "PropZ",
-			"stackSize": 5,
-			"sticky": "-Z",
-			"uuid": "4a971f7d-14e6-454d-bce8-0879243c4857"
-		},
-		{
-			"autoTool": "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
-			"color": "0a956d",
-			"consumable": true,
-			"cylinder": {
-				"axis": "Y",
-				"depth": 1,
-				"diameter": 2,
-				"margin": 0.04
-			},
-			"edible": {
-				"foodGain": 15,
-				"hpGain": 0,
-				"waterGain": 1
-			},
-			"flammable": true,
-			"name": "obj_wocsteak_raw",
-			"physicsMaterial": "Fruit",
-			"ratings": {
-				"buoyancy": 5,
-				"density": 2,
-				"durability": 3,
-				"friction": 5
-			},
-			"renderable": "$CONTENT_DATA/Objects/Renderables/Consumables/WocSteakRaw.rend",
-			"restrictions": {
-				"erasable": true
-			},
-			"rotationSet": "PropYX",
-			"stackSize": 10,
-			"uuid": "74a3f240-65b2-4f52-9555-666217366a0a"
-		},
-		{
-			"autoTool": "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
-			"color": "0a956d",
-			"consumable": true,
-			"cylinder": {
-				"axis": "Y",
-				"depth": 1,
-				"diameter": 2,
-				"margin": 0.04
-			},
-			"edible": {
-				"foodGain": 35,
-				"hpGain": 0,
-				"waterGain": 20
-			},
-			"flammable": true,
-			"name": "obj_wocsteak_grilld",
-			"physicsMaterial": "Potato",
-			"ratings": {
-				"buoyancy": 5,
-				"density": 2,
-				"durability": 3,
-				"friction": 5
-			},
-			"renderable": "$CONTENT_DATA/Objects/Renderables/Consumables/WocSteakGrilld.rend",
-			"restrictions": {
-				"erasable": true
-			},
-			"rotationSet": "PropYX",
-			"stackSize": 10,
-			"uuid": "74a3f240-65b2-4f52-9555-666217366a0e"
-		},
-		{
-			"autoTool": "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
-			"color": "FFDF71",
-			"consumable": true,
-			"edible": {
-				"foodGain": 10,
-				"hpGain": -20,
-				"waterGain": 2
-			},
-			"flammable": true,
-			"itemStack": {},
-			"name": "obj_potat",
-			"physicsMaterial": "Fruit",
-			"ratings": {
-				"buoyancy": 7,
-				"density": 2,
-				"durability": 1,
-				"friction": 4
-			},
-			"renderable": "$CONTENT_DATA/Objects/Renderables/Consumables/potato.rend",
-			"restrictions": {
-				"erasable": true
-			},
-			"rotationSet": "PropY",
-			"sphere": {
-				"diameter": 1
-			},
-			"stackSize": 10,
-			"sticky": "-Y+Y",
-			"uuid": "f74c2891-79a9-45e0-982e-4896651c2259"
-		}
-	]
+   "partList" : [
+      {
+         "autoTool" : "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
+         "box" : {
+            "x" : 2,
+            "y" : 2,
+            "z" : 2
+         },
+         "color" : "00ffff",
+         "consumable" : true,
+         "edible" : {
+            "foodGain" : 0,
+            "hpGain" : 0,
+            "waterGain" : 25
+         },
+         "flammable" : false,
+         "itemStack" : {},
+         "name" : "obj_water_clean",
+         "physicsMaterial" : "Glass",
+         "ratings" : {
+            "buoyancy" : 7,
+            "density" : 2,
+            "durability" : 2,
+            "friction" : 4
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Consumables/CleanWater.fbx",
+                  "subMeshMap" : {
+                     "cleanwater" : {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_dif.tga",
+                           "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
+                           "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
+                        ]
+                     },
+                     "glass_mat" : {
+                        "material" : "Glass",
+                        "textureList" : [
+                           "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_dif.tga",
+                           "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
+                           "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
+                        ]
+                     },
+                     "water" : {
+                        "material" : "Liquid",
+                        "textureList" : [
+                           "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_dif.tga",
+                           "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_asg.tga",
+                           "$CONTENT_DATA/Objects/Textures/Consumables/CleanWater/obj_water_clean_nor.tga"
+                        ]
+                     }
+                  }
+               }
+            ]
+         },
+         "restrictions" : {
+            "erasable" : true
+         },
+         "rotationSet" : "PropY",
+         "stackSize" : 20,
+         "sticky" : "-Y+Y",
+         "uuid" : "4bd05d7d-898c-4947-8788-e34b84b5d386"
+      },
+      {
+         "autoTool" : "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
+         "color" : "696969",
+         "consumable" : true,
+         "cylinder" : {
+            "axis" : "Y",
+            "depth" : 1,
+            "diameter" : 1,
+            "margin" : 0.10
+         },
+         "edible" : {
+            "foodGain" : 15,
+            "hpGain" : 0,
+            "waterGain" : -10
+         },
+         "flammable" : true,
+         "name" : "obj_fish",
+         "physicsMaterial" : "Plastic",
+         "ratings" : {
+            "buoyancy" : 8,
+            "density" : 2,
+            "durability" : 1,
+            "friction" : 5
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Consumables/Fish.fbx",
+                  "subMeshMap" : {
+                     "lambert2SG" : {
+                        "material" : "Dif",
+                        "textureList" : [ "$CONTENT_DATA/Objects/Textures/Consumables/Fish.png", "", "" ]
+                     }
+                  }
+               }
+            ]
+         },
+         "restrictions" : {
+            "erasable" : true
+         },
+         "rotationSet" : "PropY",
+         "stackSize" : 10,
+         "sticky" : "-Y",
+         "uuid" : "7c440c4a-5919-4baa-a946-0bb89b8c4d5d"
+      },
+      {
+         "autoTool" : "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
+         "color" : "696969",
+         "consumable" : true,
+         "cylinder" : {
+            "axis" : "Y",
+            "depth" : 1,
+            "diameter" : 1,
+            "margin" : 0.10
+         },
+         "edible" : {
+            "foodGain" : 80,
+            "hpGain" : 50,
+            "waterGain" : 20
+         },
+         "flammable" : true,
+         "name" : "obj_fish_au_chocolate",
+         "physicsMaterial" : "Fruit",
+         "ratings" : {
+            "buoyancy" : 8,
+            "density" : 2,
+            "durability" : 1,
+            "friction" : 5
+         },
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Consumables/fish_au_chocolate.rend",
+         "restrictions" : {
+            "erasable" : true
+         },
+         "rotationSet" : "PropY",
+         "stackSize" : 3,
+         "sticky" : "-Y",
+         "uuid" : "7c440c4a-5919-4baa-a946-0bb89b8c4d5e"
+      },
+      {
+         "autoTool" : "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
+         "color" : "696969",
+         "consumable" : true,
+         "cylinder" : {
+            "axis" : "Y",
+            "depth" : 1,
+            "diameter" : 1,
+            "margin" : 0.10
+         },
+         "edible" : {
+            "foodGain" : 15,
+            "hpGain" : 0,
+            "waterGain" : -10
+         },
+         "flammable" : true,
+         "name" : "obj_fishus",
+         "physicsMaterial" : "Plastic",
+         "ratings" : {
+            "buoyancy" : 8,
+            "density" : 2,
+            "durability" : 1,
+            "friction" : 5
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Consumables/Fishus.fbx",
+                  "subMeshMap" : {
+                     "lambert2SG" : {
+                        "material" : "Dif",
+                        "textureList" : [ "$CONTENT_DATA/Objects/Textures/Consumables/Fishus.png", "", "" ]
+                     }
+                  }
+               }
+            ]
+         },
+         "restrictions" : {
+            "erasable" : true
+         },
+         "rotationSet" : "PropY",
+         "stackSize" : 10,
+         "sticky" : "-Y",
+         "uuid" : "7c440c4a-5919-4baa-a946-0bb89b8c4d85"
+      },
+      {
+         "autoTool" : "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
+         "color" : "693737",
+         "consumable" : true,
+         "cylinder" : {
+            "axis" : "Y",
+            "depth" : 1,
+            "diameter" : 1,
+            "margin" : 0.10
+         },
+         "edible" : {
+            "foodGain" : 25,
+            "hpGain" : 0,
+            "waterGain" : 0
+         },
+         "flammable" : true,
+         "name" : "obj_fish_cooked",
+         "physicsMaterial" : "Plastic",
+         "ratings" : {
+            "buoyancy" : 8,
+            "density" : 2,
+            "durability" : 1,
+            "friction" : 5
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Consumables/FishCooked.fbx",
+                  "subMeshMap" : {
+                     "lambert2SG" : {
+                        "material" : "Dif",
+                        "textureList" : [ "$CONTENT_DATA/Objects/Textures/Consumables/Fish.png", "", "" ]
+                     }
+                  }
+               }
+            ]
+         },
+         "restrictions" : {
+            "erasable" : true
+         },
+         "rotationSet" : "PropY",
+         "stackSize" : 10,
+         "sticky" : "-Y",
+         "uuid" : "c57fe6d6-03b1-46d4-9104-29cf19f176ab"
+      },
+      {
+         "color" : "008ae1",
+         "consumable" : true,
+         "flammable" : true,
+         "hull" : {
+            "col" : "$CONTENT_DATA/Objects/Collision/consumable/harpoon_ammo_col.obj",
+            "x" : 1,
+            "y" : 3,
+            "z" : 1
+         },
+         "name" : "obj_harpoon",
+         "physicsMaterial" : "Metal",
+         "ratings" : {
+            "buoyancy" : 10,
+            "density" : 1,
+            "durability" : 3,
+            "friction" : 10
+         },
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Consumables/harpoon_ammo.rend",
+         "rotationSet" : "PropY",
+         "stackSize" : 5,
+         "sticky" : "-Y",
+         "uuid" : "4a971f7d-14e6-454d-bce8-0879243c4857"
+      },
+      {
+         "autoTool" : "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
+         "color" : "0a956d",
+         "consumable" : true,
+         "cylinder" : {
+            "axis" : "Y",
+            "depth" : 1,
+            "diameter" : 2,
+            "margin" : 0.040
+         },
+         "edible" : {
+            "foodGain" : 15,
+            "hpGain" : 0,
+            "waterGain" : 1
+         },
+         "flammable" : true,
+         "name" : "obj_wocsteak_raw",
+         "physicsMaterial" : "Fruit",
+         "ratings" : {
+            "buoyancy" : 5,
+            "density" : 2,
+            "durability" : 3,
+            "friction" : 5
+         },
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Consumables/WocSteakRaw.rend",
+         "restrictions" : {
+            "erasable" : true
+         },
+         "rotationSet" : "PropYX",
+         "stackSize" : 10,
+         "uuid" : "74a3f240-65b2-4f52-9555-666217366a0a"
+      },
+      {
+         "autoTool" : "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
+         "color" : "0a956d",
+         "consumable" : true,
+         "cylinder" : {
+            "axis" : "Y",
+            "depth" : 1,
+            "diameter" : 2,
+            "margin" : 0.040
+         },
+         "edible" : {
+            "foodGain" : 35,
+            "hpGain" : 0,
+            "waterGain" : 20
+         },
+         "flammable" : true,
+         "name" : "obj_wocsteak_grilld",
+         "physicsMaterial" : "Potato",
+         "ratings" : {
+            "buoyancy" : 5,
+            "density" : 2,
+            "durability" : 3,
+            "friction" : 5
+         },
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Consumables/WocSteakGrilld.rend",
+         "restrictions" : {
+            "erasable" : true
+         },
+         "rotationSet" : "PropYX",
+         "stackSize" : 10,
+         "uuid" : "74a3f240-65b2-4f52-9555-666217366a0e"
+      },
+      {
+         "autoTool" : "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
+         "color" : "FFDF71",
+         "consumable" : true,
+         "edible" : {
+            "foodGain" : 10,
+            "hpGain" : -20,
+            "waterGain" : 2
+         },
+         "flammable" : true,
+         "itemStack" : {},
+         "name" : "obj_potat",
+         "physicsMaterial" : "Fruit",
+         "ratings" : {
+            "buoyancy" : 7,
+            "density" : 2,
+            "durability" : 1,
+            "friction" : 4
+         },
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Consumables/potato.rend",
+         "restrictions" : {
+            "erasable" : true
+         },
+         "rotationSet" : "PropY",
+         "sphere" : {
+            "diameter" : 1
+         },
+         "stackSize" : 10,
+         "sticky" : "-Y+Y",
+         "uuid" : "f74c2891-79a9-45e0-982e-4896651c2259"
+      }
+   ]
 }

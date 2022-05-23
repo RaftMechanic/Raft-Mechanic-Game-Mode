@@ -35,7 +35,7 @@ function Sail.server_onFixedUpdate(self, dt)
 
     if self.sv.active and self.shape:getVelocity():length() < MAX_SPEED and self.shape:getWorldPosition().z > -1.9 then
         local windDirection = g_windManager:getWindDir(self.shape:getWorldPosition(), function (quest)
-            return g_questManager:Sv_isQuestComplete(quest)
+            return true -- TODO: FIXME:
         end)
 
         local sailDirection = -self.shape:getUp()
@@ -81,7 +81,7 @@ function Sail.client_canInteract( self, character, state )
     local o1 = "<p textShadow='false' bg='gui_keybinds_bg_orange' color='#4f4f4f' spacing='9'>"
     local o2 = "</p>"
     if parent then
-        sm.gui.setInteractionText("", o1.."#c60000X "..language_tag("Sail_Controlled")..o2 )
+        sm.gui.setInteractionText("", o1.."#c60000"..language_tag("Sail_Controlled")..o2 )
         return false
     end
 

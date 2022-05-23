@@ -1,17 +1,25 @@
 {
-    "lodList": [
-        {
-            "subMeshMap": {
-                "radar":{
-                    "textureList": [
-                        "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_dif.tga",
-                        "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_asg.tga",
-                        "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_beacon_nor.tga"
-                    ],
-                    "material": "DifAsgNor"
-                }
+   "lodList" : [
+      {
+         "mesh" : "$CONTENT_DATA/Objects/Mesh/Projectiles/harpoon_ammo_proj.obj",
+         "subMeshList" : [
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_dif.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_asg.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/manmade/obj_manmade_atlas01_nor.tga"
+               ]
             },
-            "mesh": "$CONTENT_DATA/Objects/Renderables/Projectiles/harpoon/harpoon.fbx"
-        }
-    ]
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$CONTENT_DATA/Objects/Textures/color_atlas.tga",
+                  "$CONTENT_DATA/Objects/Textures/asg_atlas.tga",
+                  "$CONTENT_DATA/Objects/Textures/nor_atlas.tga"
+               ]
+            }
+         ]
+      }
+   ]
 }

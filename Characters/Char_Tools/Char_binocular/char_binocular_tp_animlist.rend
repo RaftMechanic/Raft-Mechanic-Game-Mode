@@ -1,0 +1,12 @@
+{
+	"lodList": [{
+		"mesh": "$SURVIVAL_DATA/Character/Char_Tools/Char_fertilizer/Animations/ani_char_fertilizer_position.dae",
+		"includes" : ["POSITION", "UV0", "NORMAL", "TANGENTS", "BLEND_INDICES", "BLEND_WEIGHTS"],
+		"animationList" : [
+			{ "name" : "fertilizer_idle", 			"file" : "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/Animations/ani_char_binocular_position.dae" }
+	
+		],
+
+		"maxViewDistance": 1000.0
+	}]
+}
