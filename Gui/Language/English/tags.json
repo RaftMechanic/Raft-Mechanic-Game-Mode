@@ -41,12 +41,12 @@
     "Sail_Lower": "Lower Sail",
     "Sail_Controlled": "Controlled by logic",
 
-    "Trader_dialogue1": "Mhh.. Bertha.. I’ll… OH! You.. are alive?! I'm glad to see another soul! Hm… Oh.. I think I know of a way we can eh- escape this planet. If you could bring Berth- eh, me some packed veggies, that would be great! Hehe.. I marked a nearby packing station for you. Pack 2 crates each of carrots and redbeets. Then you can bring them to big ol’ Bertha- eh, the big pump over there.. Hehe.",
+    "Trader_dialogue1": "Mhh.. Bertha.. I'll... OH! You.. are alive?! I'm glad to see another soul! Hm... Oh.. I think I know of a way we can eh- escape this planet. If you could bring Berth- eh, me some packed veggies, that would be great! Hehe.. I marked a nearby packing station for you. Pack 2 crates each of carrots and redbeets. Then you can bring them to big ol' Bertha- eh, the big pump over there.. Hehe.",
     "Trader_dialogue2": "What a pleasant surprise to see you again! I mean, not that I expected your limbs to show up on the shores.. Ehm. Anyway, sadly the veggies are only part of the recip- eh plan. The other resources have been kept a secret. I did however detect abnormal Woc.. activity on a strange island nearby. You should investigate this.",
     "Trader_dialogue3": "Perfect! Soon it will be min- eh, we will be able to leave this planet. *stares at notes* Ah... YES.. I KNEW IT! Muhahahahaa- Oh, sorry I'm not used to company, at least since the acciden- Anyway, you'll need to bring me 2 more crates each of blueberries and bananas. I've marked a nearby packing station for you.",
     "Trader_dialogue4": "*Slurps* AH, just what I needed! It's been so long without you sunshake... Where are my manners? Why not get yourself some sunshake too? I can make as much as you need, as long as you bring me fresh supplies. Eh, of course this was necessary.. because.. the.. ah.. sunshake contains, ah, coordinates to some ruins. Since my life is saved by sunshake now, you might as well try to free the rest of my crew. I heard rumors about some key hidden in that ruined city. If I could get my hands on such a device, we might be able to start a rescue mission.",
-    "Trader_dialogue5": "I can't believe you are aliv- ah, so adventurous! Let me have a look at this key. AH.. YES.. Such a simple circuit… I should be able to recreate its circuitry easily with the right tools. But with this key, you should be able to enter the warehouses where the rest of my crew is held hostage for using the bathrooms instead of.. Just don’t ask why there are so many water bottles in the ocean.. Anyway, reach the top of a warehouse and rescue one of them! Then come over to me and big ol' Bertha will take care of them.",
-    "Trader_dialogue6": "I've missed company for so long *sobs*. Keep rescuing more of my crew! In the meantime I'll think of a plan to get us all off this planet and return home…",
+    "Trader_dialogue5": "I can't believe you are aliv- ah, so adventurous! Let me have a look at this key. AH.. YES.. Such a simple circuit... I should be able to recreate its circuitry easily with the right tools. But with this key, you should be able to enter the warehouses where the rest of my crew is held hostage for using the bathrooms instead of.. Just don't ask why there are so many water bottles in the ocean.. Anyway, reach the top of a warehouse and rescue one of them! Then come over to me and big ol' Bertha will take care of them.",
+    "Trader_dialogue6": "I've missed company for so long *sobs*. Keep rescuing more of my crew! In the meantime I'll think of a plan to get us all off this planet and return home...",
     
     "FishingBait": "Bait: ",
     "FishingOutOfBait": "Out of Baits!",
@@ -54,5 +54,8 @@
     "FishingGetItem": "Fished: ",
 
     "JunkCollector_Full": "#ff0000Collector full",
-    "JunkCollector_SlotsOpen": "Remaining capacity:#ffffff %.0f slots"
+    "JunkCollector_SlotsOpen": "Remaining capacity:#ffffff %.0f slots",
+
+    "HammockAllPlayers": "All players need to sleep to skip night",
+    "HammockNight": "You can only sleep at night"
 }

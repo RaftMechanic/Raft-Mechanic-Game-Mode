@@ -1457,9 +1457,9 @@
          },
          "rotationSet" : "PropFullMinusNegY",
          "scripted" : {
-            "classname" : "Bed",
+            "classname" : "Hammock",
             "data" : {},
-            "filename" : "$SURVIVAL_DATA/Scripts/game/interactables/Bed.lua",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Bed.lua",
             "seat" : {
                "bones" : [
                   {
