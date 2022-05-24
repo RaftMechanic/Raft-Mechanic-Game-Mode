@@ -135,7 +135,7 @@
 	"limbs" : {
 		"body_limb" : {
 			"bones" : ["jnt_root", "jnt_spine", "jnt_jaw"],
-			"colliders" : ["body", "chest", "head" ],
+			"colliders" : ["jnt_spine", "jnt_head" ],
 			"joints" : ["spine_joint","spine_joint","spine_joint","spine_joint", "neck_joint"]
 		},
 		"fin_left" : {
@@ -146,13 +146,13 @@
 		},
 		"fin_right" : {
 			"root" : { "limb" : "body_limb", "colliderIndex" : 0 },
-			"bones" : ["side_fin_r", "side_fin_r_end"],
+			"bones" : ["jnt_right"],
 			"colliders" : [ "small_colliderActive", "small_collider"],
 			"joints" : ["leg_joint","leg_joint"]
 		},
 		"tail" : {
 			"root" : { "limb" : "body_limb", "colliderIndex" : 0 },
-			"bones" : ["spine"],
+			"bones" : ["jnt_tail", "jnt_tailtop", "jnt_tailbot"],
 			"colliders" : [ "small_colliderActive", "small_collider"],
 			"joints" : ["knee_joint"]
 		}
