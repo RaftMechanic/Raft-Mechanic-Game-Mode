@@ -10,7 +10,7 @@
          "flammable" : true,
          "name" : "obj_raft_base",
          "physicsMaterial" : "Plastic",
-         "previewRotation" : [ 1, 0, 0, 0, 0, 1, 0, 1, 0 ],
+         "previewRotation" : [ 1, 0, 0, 0, 1, 0, 0, 0, 1 ],
          "ratings" : {
             "buoyancy" : 10,
             "density" : 1,
@@ -82,7 +82,7 @@
          "flammable" : true,
          "name" : "obj_reinforcedraft_base",
          "physicsMaterial" : "Wood",
-         "previewRotation" : [ 1, 0, 0, 0, 0, 1, 0, 1, 0 ],
+         "previewRotation" : [ 1, 0, 0, 0, 1, 0, 0, 0, 1 ],
          "ratings" : {
             "buoyancy" : 10,
             "density" : 1,
