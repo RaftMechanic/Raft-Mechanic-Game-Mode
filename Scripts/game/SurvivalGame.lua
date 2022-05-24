@@ -20,7 +20,7 @@ dofile( "$GAME_DATA/Scripts/game/managers/EventManager.lua" )
 
 --RAFT
 dofile( "$CONTENT_DATA/Scripts/game/managers/WindManager.lua" )
-dofile( "$CONTENT_DATA/Scripts/game/scripts/raft_items.lua" )
+dofile( "$CONTENT_DATA/Scripts/game/raft_items.lua" )
 
 
 

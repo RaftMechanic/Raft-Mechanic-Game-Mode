@@ -391,6 +391,13 @@ function RespawnManager.sv_respawnCharacter( self, player, world )
 end
 
 -- Player environment helper function
+
+--Raft
+local ignoreItems = {
+	obj_fins,
+	obj_oxygen_tank
+}
+
 function RespawnManager.sv_performItemLoss( self, player )
 	local shape = nil
 	if player then
@@ -399,7 +406,7 @@ function RespawnManager.sv_performItemLoss( self, player )
 		local lostItems = {}
 		for i = 0, size do
 			local item = inventory:getItem( i )
-			if not sm.item.isTool( item.uuid ) and item.uuid ~= sm.uuid.getNil() then
+			if not sm.item.isTool( item.uuid ) and not isAnyOf(item.uuid, ignoreItems) and item.uuid ~= sm.uuid.getNil() then --Raft
 				item.slot = i
 				lostItems[#lostItems+1] = item
 			end
