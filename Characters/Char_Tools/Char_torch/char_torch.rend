@@ -1,0 +1,26 @@
+{
+    "lodList" : [
+       {
+            "mesh" : "$CONTENT_DATA/Characters/Char_Tools/Char_torch/char_torch.dae",
+			"maxViewDistance": 1000.0,
+            "subMeshList" : [
+            {
+                "material" : "DifAsgNor",
+                "textureList" : [
+                   "$CONTENT_DATA/Objects/Textures/Interactables/Torch/torch_leg_oilsoaked.tga",
+                   "$SURVIVAL_DATA/Character/Char_Farmbot/char_farmbot_asg.tga",
+                   "$SURVIVAL_DATA/Character/Char_Farmbot/char_farmbot_nor.tga"
+                ]
+            },
+            {
+                "material" : "DifAsgNor",
+                "textureList" : [
+                   "$CONTENT_DATA/Objects/Textures/Interactables/Torch/torch_cotton_oilsoaked.tga",
+                   "$SURVIVAL_DATA/Objects/Textures/consumable/Obj_consumable_cotton_asg.tga",
+                   "$SURVIVAL_DATA/Objects/Textures/consumable/Obj_consumable_cotton_nor.tga"
+                ]
+            }
+          ]
+       }
+    ]
+} 
