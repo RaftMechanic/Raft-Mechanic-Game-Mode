@@ -12,7 +12,7 @@
             "hit": 
             {
                 "stand":{
-                    "col": "$SURVIVAL_DATA/Character/Char_Cow/char_cow_hit_col.obj",
+                    "col": "$CONTENT_DATA/Characters/Char_sharkbot/shark_col.obj",
                     "offset": [0.0, 0.0, 0.848] }
             },
             "unit":

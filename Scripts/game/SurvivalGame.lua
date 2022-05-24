@@ -404,7 +404,8 @@ function SurvivalGame.cl_onChatCommand( self, params )
 		worm = unit_worm,
 		farmbot = unit_farmbot,
 		f = unit_farmbot,
-
+		shark = unit_sharkbot,
+		s = unit_sharkbot,
 
 
 
