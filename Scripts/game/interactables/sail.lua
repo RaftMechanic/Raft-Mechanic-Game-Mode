@@ -1,5 +1,6 @@
 dofile( "$CONTENT_DATA/Scripts/game/survival_quests.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestManager.lua" )
+dofile( "$CONTENT_DATA/Scripts/game/managers/LanguageManager.lua" )
 
 ---@type Interactable
 Sail = class()
@@ -34,9 +35,7 @@ function Sail.server_onFixedUpdate(self, dt)
     end
 
     if self.sv.active and self.shape:getVelocity():length() < MAX_SPEED and self.shape:getWorldPosition().z > -1.9 then
-        local windDirection = g_windManager:getWindDir(self.shape:getWorldPosition(), function (quest)
-            return true -- TODO: FIXME:
-        end)
+        local windDirection = g_windManager:getWindDir(self.shape:getWorldPosition())
 
         local sailDirection = -self.shape:getUp()
         sailDirection.z = 0
