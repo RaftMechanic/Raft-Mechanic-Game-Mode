@@ -4,7 +4,6 @@ Collector = class()
 
 local containerSize = 20
 local containerStackSize = 256
-local collectorSize = sm.vec3.new(4,4,4) / 4
 local bodyMassThreshold = 100
 
 local collectables = {
@@ -57,11 +56,13 @@ function Collector.server_onCollision( self, shape, position, selfPointVelocity,
 
     self.sv.ignoreIds[#self.sv.ignoreIds+1] = shapeId
     local quantity = 0
-    local effectData = {}
     local box = shape:getBoundingBox()
+    local effectData = {}
     effectData.uuid = shapeUUID
     effectData.dir = sm.vec3.new(math.random(-100, 100), math.random(-100, 100), math.random(-100, 100)) / 100
     effectData.colour = shape:getColor()
+    effectData.pos = shape:getWorldPosition()
+    effectData.rot = shape:getWorldRotation()
 
     self.sv.data.effectData[#self.sv.data.effectData+1] = effectData
 
@@ -142,7 +143,7 @@ function Collector:client_canInteract()
     local o1 = "<p textShadow='false' bg='gui_keybinds_bg_orange' color='#4f4f4f' spacing='9'>"
     local o2 = "</p>"
     local junkCount = getRealLength(self.cl.junk)
-    local text = junkCount == containerSize and language_tag("JunkCollector_Full") or string.format(language_tag("JunkCollector_SlotsOpen"), tostring(containerSize - junkCount))
+    local text = junkCount == containerSize and language_tag("JunkCollector_Full") or string.format(language_tag("JunkCollector_SlotsOpen"), containerSize - junkCount)
     sm.gui.setInteractionText(o1..text..o2)
 
     return true
@@ -171,10 +172,22 @@ function Collector:cl_addJunk_onCreate( data )
 end
 
 function Collector:cl_addJunk( data )
-    local junk = { effect = sm.effect.createEffect("ShapeRenderable", self.interactable), dir = data.dir }
+    local junk = {
+        effect = sm.effect.createEffect("ShapeRenderable"),
+        uuid = data.uuid,
+        colour = data.colour,
+        size = data.size,
+        pos = data.pos,
+        rot = data.rot,
+        dir = sm.vec3.getRotation(sm.vec3.new(0,0,1), data.dir ),
+        progress = 0
+    }
+
     junk.effect:setParameter("uuid", data.uuid)
     junk.effect:setParameter("color", data.colour)
     junk.effect:setScale(data.size)
+    junk.effect:setPosition(data.pos)
+    junk.effect:setRotation(data.rot)
 
     junk.effect:start()
     self.cl.junk[#self.cl.junk+1] = junk
@@ -187,8 +200,30 @@ function Collector:cl_removeJunk( index )
     end
 end
 
-function Collector:client_onUpdate()
+function Collector:client_onUpdate( dt )
     for v, k in pairs(self.cl.junk) do
-        k.effect:setOffsetRotation( sm.vec3.getRotation(sm.vec3.new(0,0,1), k.dir) )
+        if not k.attached then
+            k.progress = k.progress + dt
+            local windup = 0.4
+			local progress = math.min( k.progress / 0.3, 1.0 )
+			local windupProgress = ( ( progress - windup )/( 1 - windup ) )
+
+            k.effect:setPosition( sm.vec3.lerp(k.pos, self.shape:getWorldPosition(), windupProgress))
+            k.effect:setRotation( sm.quat.slerp(k.rot, k.dir, windupProgress) )
+
+            --replace with attached effect if the pull animation is done
+            if windupProgress == 1 then
+                k.attached = true
+                k.effect:stopImmediate()
+                k.effect = sm.effect.createEffect("ShapeRenderable", self.interactable)
+                k.effect:setParameter("uuid", k.uuid)
+                k.effect:setParameter("color", k.colour)
+                k.effect:setScale(k.size)
+                k.effect:setOffsetRotation( k.dir )
+                k.effect:start()
+            end
+        else
+            k.effect:setOffsetRotation( k.dir )
+        end
     end
 end

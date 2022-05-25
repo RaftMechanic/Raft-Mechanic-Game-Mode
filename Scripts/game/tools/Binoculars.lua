@@ -165,10 +165,12 @@ function Binoculars.client_onUpdate( self, dt )
 			self.camTransitionProgress = sm.util.clamp(self.camTransitionProgress + dt * 5, 0, 1)
 			local currentZoom = self.defaultFov / self.zoomFactor
 
-			sm.camera.setPosition(self.campos)
-			sm.camera.setRotation(self.camrot)
-			--sm.camera.setDirection(sm.vec3.lerp(sm.camera.getDirection(), self.camdir, dt / (self.zoomFactor / maxZoom)))
-			sm.camera.setDirection(self.camdir)
+			if self.aiming or self.fovRightNow ~= self.defaultFov then
+				sm.camera.setPosition(self.campos)
+				sm.camera.setRotation(self.camrot)
+				--sm.camera.setDirection(sm.vec3.lerp(sm.camera.getDirection(), self.camdir, dt / (self.zoomFactor / maxZoom)))
+				sm.camera.setDirection(self.camdir)
+			end
 
 			if self.aiming then
 				self.tool:updateCamera( 2.8, 110.0, sm.vec3.new( 0.65, 0.0, 0.05 ), self.aimWeight )
@@ -176,7 +178,7 @@ function Binoculars.client_onUpdate( self, dt )
 				sm.camera.setCameraState(sm.camera.state.cutsceneFP)
 
 				sm.camera.setFov(sm.util.lerp(self.prevZoom, currentZoom, self.camTransitionProgress))
-			elseif not self.aiming then
+			elseif not self.aiming and self.fovRightNow ~= self.defaultFov then
 				self.tool:updateFpCamera( self.defaultFov, sm.vec3.new( 0.0, 0.0, 0.0 ), self.aimWeight, 1)
 				sm.camera.setFov(sm.util.lerp(self.fovRightNow, self.defaultFov, self.camTransitionProgress))
 

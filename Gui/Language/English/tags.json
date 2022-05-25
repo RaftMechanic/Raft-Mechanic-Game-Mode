@@ -54,7 +54,7 @@
     "FishingGetItem": "Fished: ",
 
     "JunkCollector_Full": "#ff0000Collector full",
-    "JunkCollector_SlotsOpen": "Remaining capacity:#ffffff %.0f slots",
+    "JunkCollector_SlotsOpen": "Remaining capacity:#ffffff %d slots",
 
     "HammockAllPlayers": "All players need to sleep to skip night",
     "HammockNight": "You can only sleep at night"
