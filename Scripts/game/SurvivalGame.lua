@@ -86,7 +86,7 @@ function SurvivalGame.server_onCreate( self )
 	g_unitManager = UnitManager()
 	g_unitManager:sv_onCreate( self.sv.saved.overworld )
 
-	g_windManager = WindManager()
+	g_windManager = sm.scriptableObject.createScriptableObject( sm.uuid.new( "2b3e5483-341c-49fe-a2ef-9deb79d080b9" ) )
 
 	self.sv.questEntityManager = sm.scriptableObject.createScriptableObject( sm.uuid.new( "c6988ecb-0fc1-4d45-afde-dc583b8b75ee" ) )
 
@@ -179,11 +179,6 @@ function SurvivalGame.client_onCreate( self )
 
 	g_effectManager = EffectManager()
 	g_effectManager:cl_onCreate()
-
-	if g_windManager == nil then
-		assert(not sm.isHost)
-		g_windManager = WindManager()
-	end
 
 	-- Music effect
 	g_survivalMusic = sm.effect.createEffect( "SurvivalMusic" )
@@ -315,7 +310,7 @@ function SurvivalGame.server_onFixedUpdate( self, timeStep )
 	local newDay = self.sv.time.timeOfDay >= 1.0
 	if newDay then
 		self.sv.time.timeOfDay = math.fmod( self.sv.time.timeOfDay, 1 )
-		g_windManager:sv_randomizeWind()
+		sm.event.sendToScriptableObject(g_windManager, "sv_e_randomizeWind", true)
 	end
 
 	if self.sv.time.timeOfDay >= DAYCYCLE_DAWN and prevTime < DAYCYCLE_DAWN then
@@ -1193,41 +1188,4 @@ function SurvivalGame.sv_e_unloadBeacon( self, params )
 		sm.log.warning( "SurvivalGame.sv_e_unloadBeacon in a world that doesn't exist" )
 	end
 end
-
-function SurvivalGame.sv_e_onWindUpdate( self, params )
-	self.network:sendToClients("cl_onWindUpdate", params)
-end
-
-function SurvivalGame.cl_onWindUpdate( self, params )
-	g_windManager:cl_onWindUpdate(params)
-end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

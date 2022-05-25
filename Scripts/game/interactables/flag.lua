@@ -15,11 +15,9 @@ end
 function Flag.client_onUpdate( self, dt )
     if not self.effect:isPlaying() then self.effect:start() end
 
-    local point = g_windManager:getWindCenter(function (quest)
-        return true -- TODO: FIXME:
-    end)
+    local center = g_windManager:getWindCenter()
 
-    local direction = self.shape:transformPoint(point)
+    local direction = self.shape:transformPoint(center)
     direction.y = 0
     self.effect:setOffsetRotation(sm.vec3.getRotation(sm.vec3.new(0, 0, 1), -direction))
 end
