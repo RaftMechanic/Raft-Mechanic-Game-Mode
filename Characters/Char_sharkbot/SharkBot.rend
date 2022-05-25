@@ -39,7 +39,7 @@
 		"animationList" : [
 			{ "name" : "idle", 						"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_onground.dae", "looping" : true },
 			
-			{ "name" : "ground_a", 					"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_swim_idle.dae.dae" },
+			{ "name" : "ground_a", 					"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_swim_idle.dae" },
 			{ "name" : "attack", 					"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_attack.dae" },
 			
 			{ "name" : "swim_idle", 				"file" : "$CONTENT_DATA/Characters/Char_sharkbot/Animations/shark_swim_idle.dae", "looping" : true },

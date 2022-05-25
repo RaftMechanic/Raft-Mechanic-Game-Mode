@@ -268,7 +268,7 @@ local function UpdateCharacterInWater(trigger, character)
 		waterMovementSpeedFraction = 1.5
 	end
 	if player and player:getCarry():getItem(0).uuid == sm.uuid.new("f2aa1e44-aea8-4431-9b7e-f7e35163dd7c") then
-		waterMovementSpeedFraction = 1.5
+		waterMovementSpeedFraction = 2.0
 	end
 	if not character:isSwimming() then
 		local depthScale = 1 - math.max(math.min(((character.worldPosition.z + characterDiveOffset) - waterHeightPos) / (characterDiveOffset * 2), 1.0), 0.0)

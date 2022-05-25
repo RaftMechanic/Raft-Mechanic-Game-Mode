@@ -1,12 +1,10 @@
 dofile( "$GAME_DATA/Scripts/game/AnimationUtil.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/util.lua" )
-dofile( "$SURVIVAL_DATA/Scripts/game/survival_shapes.lua" )
-dofile( "$SURVIVAL_DATA/Scripts/game/survival_projectiles.lua" )
-
-local Damage = 28
 
 Binoculars = class()
 
+local minZoom = 2
+local maxZoom = 10
 
 local renderables = { "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/char_binocular_preview.rend" }
 local renderablesTp = {"$GAME_DATA/Character/Char_Male/Animations/char_male_tp_spudgun.rend", "$GAME_DATA/Character/Char_Tools/Char_spudgun/char_spudgun_tp_animlist.rend", "$SURVIVAL_DATA/Character/Char_Male/Animations/char_male_tp_fertilizer.rend", "$SURVIVAL_DATA/Character/Char_Tools/Char_fertilizer/char_fertilizer_tp_animlist.rend", "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/char_male_tp_binocular.rend" }
@@ -19,6 +17,21 @@ sm.tool.preloadRenderables( renderablesFp )
 function Binoculars.client_onCreate( self )
 	self.shootEffect = sm.effect.createEffect( "SpudgunBasic - BasicMuzzel" )
 	self.shootEffectFP = sm.effect.createEffect( "SpudgunBasic - FPBasicMuzzel" )
+
+	if self.tool:isLocal() then
+		self.camTransitionProgress = 0
+		self.prevZoom = 0
+		self.zoomFactor = minZoom
+		self.vignette = sm.gui.createGuiFromLayout("$CONTENT_DATA/Gui/Overlays/BinocularsOverlay.layout", false,
+			{
+				isHud = true,
+				isInteractive = false,
+				needsCursor = false,
+				hidesHotbar = true,
+				isOverlapped = true
+			}
+		)
+	end
 end
 
 
@@ -26,8 +39,6 @@ end
 function Binoculars.client_onRefresh( self )
 	self:loadAnimations()
 end
-
-Binoculars.zoomFactor = 2.0
 
 function Binoculars.loadAnimations( self )
 
@@ -106,14 +117,6 @@ function Binoculars.loadAnimations( self )
 		jumpDispersionMultiplier = 2
 	}
 
-	self.zoomAmounts = {
-	}
-	self.zoomAmounts[2] = 20
-	self.zoomAmounts[3] = 15
-	self.zoomAmounts[4] = 10
-	self.zoomAmounts[5] = 5
-	self.zoomAmounts[6] = 2
-
 	self.aimFireMode = {
 		fireCooldown = 0.20,
 		spreadCooldown = 0.18,
@@ -148,16 +151,39 @@ function Binoculars.loadAnimations( self )
 end
 
 function Binoculars.client_onUpdate( self, dt )
-
 	-- First person animation
 	local isSprinting =  self.tool:isSprinting()
 	local isCrouching =  self.tool:isCrouching()
 
-	self.camdir = sm.localPlayer.getPlayer().character:getDirection()
-	self.campos = sm.localPlayer.getPlayer().character.worldPosition + sm.vec3.new(0,0,0.575)
-	self.camrot = sm.camera.getDefaultRotation()
-
 	if self.tool:isLocal() then
+		self.camdir = sm.localPlayer.getPlayer().character:getDirection()
+		self.campos = sm.localPlayer.getPlayer().character.worldPosition + sm.vec3.new(0,0,0.575)
+		self.camrot = sm.camera.getDefaultRotation()
+
+		if self.defaultFov ~= nil then
+			self.camTransitionProgress = sm.util.clamp(self.camTransitionProgress + dt * 2, 0, 1)
+			local currentZoom = self.defaultFov / self.zoomFactor
+
+			sm.camera.setPosition(self.campos)
+			sm.camera.setRotation(self.camrot)
+			sm.camera.setDirection(sm.vec3.lerp(sm.camera.getDirection(), self.camdir, dt / (self.zoomFactor / maxZoom)))
+
+			if self.aiming then
+				self.tool:updateCamera( 2.8, 110.0, sm.vec3.new( 0.65, 0.0, 0.05 ), self.aimWeight )
+				self.tool:updateFpCamera( self.defaultFov, sm.vec3.new( 0.0, 0.0, 0.0 ), self.aimWeight, 0.12 )
+				sm.camera.setCameraState(sm.camera.state.cutsceneFP)
+
+				sm.camera.setFov(sm.util.lerp(self.prevZoom, currentZoom, self.camTransitionProgress))
+			elseif not self.aiming then
+				self.tool:updateFpCamera( self.defaultFov, sm.vec3.new( 0.0, 0.0, 0.0 ), self.aimWeight, 1)
+				sm.camera.setFov(sm.util.lerp(self.prevZoom, self.defaultFov, self.camTransitionProgress))
+
+				if self.camTransitionProgress >= 1 then
+					sm.camera.setCameraState(sm.camera.state.default)
+				end
+			end
+		end
+
 		if self.equipped then
 			if isSprinting and self.fpAnimations.currentAnimation ~= "sprintInto" and self.fpAnimations.currentAnimation ~= "sprintIdle" then
 				swapFpAnimation( self.fpAnimations, "sprintExit", "sprintInto", 0.0 )
@@ -342,17 +368,10 @@ function Binoculars.client_onEquip( self, animate )
 	self.wantEquipped = true
 	self.aiming = false
 	self.defaultFov = sm.camera.getFov()
+	self.prevZoom = self.defaultFov
 	local cameraWeight, cameraFPWeight = self.tool:getCameraWeights()
 	self.aimWeight = math.max( cameraWeight, cameraFPWeight )
-	-- TODO blur!
---[[ 	self.vignette = sm.gui.createGuiFromLayout("$CONTENT_DATA/Gui/Overlays/BinocularsOverlay.layout",false,{
-		isHud = true,
-		isInteractive = false,
-		needsCursor = false,
-		hidesHotbar = true,
-		isOverlapped = false
-	}) ]]
-	-- self.vignette:setText("ZoomFactorDisplay", language_tag("BinocularsZoomFactor") .. self.zoomFactor .. "x")
+	self.vignette:setText("ZoomFactorDisplay", language_tag("BinocularsZoomFactor") .."#df7f00" .. self.zoomFactor .. "x")
 	self.jointWeight = 0.0
 
 	local currentRenderablesTp = {}
@@ -422,39 +441,35 @@ function Binoculars.cl_onPrimaryUse( self, state )
 		return
 	end
 
+	self.camTransitionProgress = 0
 	if state == sm.tool.interactState.start and not self.aiming then
 		self.aiming = true
-		--self.vignette:open() TODO blur!
+		self.vignette:open()
 		self:onAim(self.aiming)
 		self.network:sendToServer("sv_n_onAim", self.aiming)
-		-- self.tool:updateCamera( 2.8, 110.0, sm.vec3.new( 0.65, 0.0, 0.05 ), self.aimWeight )
-		-- self.tool:updateFpCamera( 110.0, sm.vec3.new( 0.0, 0.0, 0.0 ), self.aimWeight, 0.12 )
-		-- sm.camera.setCameraState(sm.camera.state.cutsceneFP)
-		-- sm.camera.setPosition(self.campos)
-		-- sm.camera.setRotation(self.camrot)
-		-- sm.camera.setDirection(self.camdir)
-		-- sm.camera.setFov(2)
+
+		self.prevZoom = self.defaultFov
 	elseif self.aiming and (state == sm.tool.interactState.stop or state == sm.tool.interactState.null) then
 		self.aiming = false
-		--self.vignette:close() TODO blur!
+		self.vignette:close()
 		self:onAim(self.aiming)
 		self.network:sendToServer("sv_n_onAim", self.aiming)
-		-- sm.camera.setCameraState(sm.camera.state.default)
-		-- sm.camera.setFov(90)
+
+		self.prevZoom = self.defaultFov / self.zoomFactor
 	end
 end
 
 function Binoculars.cl_onSecondaryUse( self, state )
-	if self.tool:getOwner().character == nil then
+	if self.tool:getOwner().character == nil or not self.aiming  or state ~= sm.tool.interactState.start then
 		return
 	end
-	if self.zoomFactor == 6 and (state == sm.tool.interactState.start) then
-		self.zoomFactor = 2
-	elseif (state == sm.tool.interactState.start) then
-		self.zoomFactor = self.zoomFactor + 1
-	end
-	--self.vignette:setText("ZoomFactorDisplay", language_tag("BinocularsZoomFactor") .. self.zoomFactor .. "x")
-	sm.gui.displayAlertText(language_tag("BinocularsZoomFactor") .. self.zoomFactor .. "x",5)
+
+	self.prevZoom = self.defaultFov / self.zoomFactor
+	self.zoomFactor = self.zoomFactor == maxZoom and minZoom or self.zoomFactor + 1
+	self.camTransitionProgress = 0
+	local zoomText = language_tag("BinocularsZoomFactor") .."#df7f00" .. self.zoomFactor .. "x"
+	self.vignette:setText("ZoomFactorDisplay", zoomText)
+	--sm.gui.displayAlertText(zoomText,5)
 end
 
 function Binoculars.client_onEquippedUpdate( self, primaryState, secondaryState )
@@ -466,20 +481,6 @@ function Binoculars.client_onEquippedUpdate( self, primaryState, secondaryState 
 	if secondaryState ~= self.prevSecondaryState then
 		self:cl_onSecondaryUse( secondaryState )
 		self.prevSecondaryState = secondaryState
-	end
-
-	if self.aiming then
-		self.tool:updateCamera( 2.8, 110.0, sm.vec3.new( 0.65, 0.0, 0.05 ), self.aimWeight )
-		self.tool:updateFpCamera( self.defaultFov, sm.vec3.new( 0.0, 0.0, 0.0 ), self.aimWeight, 0.12 )
-		sm.camera.setCameraState(sm.camera.state.cutsceneFP)
-		sm.camera.setPosition(self.campos)
-		sm.camera.setRotation(self.camrot)
-		sm.camera.setDirection(self.camdir)
-		sm.camera.setFov(sm.util.lerp(self.zoomAmounts[self.zoomFactor],self.defaultFov,0.1))
-	elseif not self.aiming then
-		self.tool:updateFpCamera( self.defaultFov, sm.vec3.new( 0.0, 0.0, 0.0 ), self.aimWeight, 1)
-		sm.camera.setCameraState(sm.camera.state.default)
-		sm.camera.setFov(self.defaultFov)
 	end
 
 	return true, true
