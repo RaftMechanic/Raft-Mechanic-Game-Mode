@@ -7,6 +7,7 @@ Propeller.speed = 1
 
 function Propeller:server_onCreate()
     self.trigger = sm.areaTrigger.createAttachedBox( self.interactable, sm.vec3.one() / 6, sm.vec3.zero(), sm.quat.identity(), 8 )
+	self.effectTimer = math.random(200, 400) --5 to 10 seconds
 end
 
 function Propeller:server_onFixedUpdate(dt)
@@ -36,8 +37,10 @@ function Propeller:server_onFixedUpdate(dt)
 		sm.physics.applyImpulse( self.shape:getBody(), sm.vec3.new(10,10,10) * speed * self.shape:getAt(), true )
 
 		--effects
-		if sm.game.getCurrentTick() % 5 == 0 then
+		if sm.game.getCurrentTick() % self.effectTimer == 0 then
 			if isInWater then
+				self.effectTimer = math.random(200, 400)
+
 				local effect = "Water - HitWaterTiny"
 				speed = math.abs(speed)
 
@@ -49,7 +52,7 @@ function Propeller:server_onFixedUpdate(dt)
 					effect = "Water - HitWaterSmall"
 				end
 
-				self.network:sendToClients("cl_playEffect", effect)
+				sm.effect.playEffect( effect, self.shape:getWorldPosition(), sm.vec3.zero(), sm.vec3.getRotation(self.shape.at, self.shape.right), sm.vec3.one())
 			end
 		end
 	end
@@ -57,10 +60,6 @@ end
 
 function Propeller:client_canInteract()
 	return false
-end
-
-function Propeller:cl_playEffect( effect )
-	sm.effect.playEffect( effect, self.shape:getWorldPosition(), sm.vec3.zero(), sm.vec3.getRotation(self.shape.at, self.shape.right), sm.vec3.one())
 end
 
 SmallPropeller = class(Propeller)
