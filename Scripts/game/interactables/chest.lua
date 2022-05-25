@@ -24,6 +24,24 @@ local function getRealLength( table )
     return length
 end
 
+local function getOverlappingShapes( table )
+    local overlapping = {}
+    for v, shape in pairs(table) do
+        local shapes = { shape }
+        for k, overlap in pairs(table) do
+            if overlap ~= shape and overlap:getWorldPosition() == shape:getWorldPosition() then
+                shapes[#shapes+1] = overlap
+            end
+        end
+
+        if #shapes > 1 then
+            overlapping[#overlapping+1] = shapes
+        end
+    end
+
+    return overlapping
+end
+
 function Chest.server_onCreate( self )
     self.sv = {}
 
@@ -42,6 +60,7 @@ function Chest.server_onCreate( self )
         self.sv.saved.shapesToSink = {}
         self.sv.saved.sinkStartTick = nil
         self.sv.saved.dissolveStartTick = 0
+        self.sv.saved.deletedOverlapping = false
 
         for _, body in pairs(self.shape:getBody():getCreationBodies()) do
             body:setDestructable(false)
@@ -102,7 +121,7 @@ function Chest.server_onFixedUpdate( self )
         end
     end
 
-    if self.shape:getBody():getCenterOfMassPosition().z < -5 and self.shape:getBody():getVelocity() < sm.vec3.new(0.001,0.01,0.001) and not self.sv.saved.dissolve then
+    if self.shape:getBody():getCenterOfMassPosition().z < -5 and self.shape:getBody():getVelocity() < sm.vec3.new(0.001,0.001,0.001) and not self.sv.saved.dissolve then
         self.sv.saved.dissolve = currenTick
         self.sv.saved.dissolveStartTick = currenTick
         self.storage:save( self.sv.saved )
@@ -112,21 +131,40 @@ function Chest.server_onFixedUpdate( self )
 
     if currenTick >= self.sv.saved.dissolve + dissolveFrequency then
         self.sv.saved.dissolve = currenTick
-        for v, shape in pairs(self.sv.saved.shapesToSink) do
-            local oneManStanding = getRealLength(self.sv.saved.shapesToSink) == 1
-            if sm.exists(shape) then
-                if shape ~= self.shape and math.random() < dissolveChance or oneManStanding then
-                    if oneManStanding then
-                        sm.effect.playEffect( "Part - Upgrade", self.shape:getWorldPosition(), sm.vec3.zero(), sm.vec3.getRotation( sm.vec3.new(0,1,0), sm.vec3.new(0,0,1) ) )
-                    end
 
-                    sm.shape.destroyShape(shape, 0)
-                    self.sv.saved.shapesToSink[v] = nil
-                    break
-                end
-            else
-                self.sv.saved.shapesToSink[v] = nil
+        if not self.sv.saved.deletedOverlapping then
+            local overlapping = getOverlappingShapes( self.sv.saved.shapesToSink )
+            if #overlapping == 0 then
+                self.sv.saved.deletedOverlapping = true
+                self.storage:save( self.sv.saved )
+
+                return
             end
+
+            for i, shape in pairs(overlapping[math.random(#overlapping)]) do
+                sm.shape.destroyShape(shape, 0)
+            end
+        else
+            for v, shape in pairs(self.sv.saved.shapesToSink) do
+                local oneManStanding = getRealLength(self.sv.saved.shapesToSink) == 1
+                if sm.exists(shape) then
+                    if shape ~= self.shape and math.random() < dissolveChance or oneManStanding then
+                        local shapePos = shape:getWorldPosition()
+                        if oneManStanding then
+                            sm.effect.playEffect( "Part - Upgrade", shapePos, sm.vec3.zero(), sm.vec3.getRotation( sm.vec3.new(0,1,0), sm.vec3.new(0,0,1) ) )
+                        end
+
+                        sm.shape.destroyShape(shape, 0)
+                        break
+                    end
+                end
+            end
+        end
+    end
+
+    for v, shape in pairs(self.sv.saved.shapesToSink) do
+        if not sm.exists(shape) then
+            self.sv.saved.shapesToSink[v] = nil
         end
     end
 end
