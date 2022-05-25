@@ -159,6 +159,7 @@ function Binoculars.client_onUpdate( self, dt )
 		self.camdir = sm.localPlayer.getPlayer().character:getDirection()
 		self.campos = sm.localPlayer.getPlayer().character.worldPosition + sm.vec3.new(0,0,0.575)
 		self.camrot = sm.camera.getDefaultRotation()
+		self.fovRightNow = sm.camera.getFov()
 
 		if self.defaultFov ~= nil then
 			self.camTransitionProgress = sm.util.clamp(self.camTransitionProgress + dt * 5, 0, 1)
@@ -177,7 +178,7 @@ function Binoculars.client_onUpdate( self, dt )
 				sm.camera.setFov(sm.util.lerp(self.prevZoom, currentZoom, self.camTransitionProgress))
 			elseif not self.aiming then
 				self.tool:updateFpCamera( self.defaultFov, sm.vec3.new( 0.0, 0.0, 0.0 ), self.aimWeight, 1)
-				sm.camera.setFov(sm.util.lerp(self.prevZoom, self.defaultFov, self.camTransitionProgress))
+				sm.camera.setFov(sm.util.lerp(self.fovRightNow, self.defaultFov, self.camTransitionProgress))
 
 				if self.camTransitionProgress >= 1 then
 					sm.camera.setCameraState(sm.camera.state.default)
@@ -391,6 +392,7 @@ function Binoculars.client_onEquip( self, animate )
 	if self.tool:isLocal() then
 		-- Sets Binoculars renderable, change this to change the mesh
 		self.tool:setFpRenderables( currentRenderablesFp )
+			self:loadAnimations()
 		swapFpAnimation( self.fpAnimations, "unequip", "equip", 0.2 )
 	end
 end

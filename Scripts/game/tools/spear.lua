@@ -403,6 +403,7 @@ function Spear.client_onEquip( self, animate )
 
 	if self.isLocal then
 		self.tool:setFpRenderables( renderablesFp )
+		self:loadAnimations()
 		swapFpAnimation( self.fpAnimations, "unequip", "equip", 0.2 )
 	end
 end
