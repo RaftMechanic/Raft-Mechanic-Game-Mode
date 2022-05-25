@@ -82,7 +82,7 @@ end
 function Rod.server_onFixedUpdate( self, timeStep )
 	for id, effect in pairs(self.sv.effects.hooks) do
 		effect.pos, effect.dir = self.calculate_trajectory(effect.pos, effect.dir, timeStep)
-		
+
 		if effect.trigger then
 			effect.trigger:setWorldPosition(effect.pos)
 			local rot, delta = self:get_hook_rotation(effect.pos, effect.player)
@@ -131,7 +131,7 @@ function Rod.sv_create_fish( self, id)
 	local y = math.floor( effect.pos.y / 64 )
 	local time = sm.storage.load( STORAGE_CHANNEL_TIME ).timeOfDay
 	local ud = effect.ud
-	
+
 	local possibleFish = {}
 	for k, fish in ipairs(self.fishList) do
 		if (x >= fish.location.xMin and x <= fish.location.xMax) and (y >= fish.location.yMin and y <= fish.location.yMax) then
@@ -164,7 +164,7 @@ function Rod.sv_create_fish( self, id)
 			fishEffect.spawn = sm.game.getCurrentTick() + math.random(minWait, maxWait)
 			fishEffect.bitesLeft = math.random(minBites, maxBites)
 			fishEffect.biteTime = fish.biteTime
-			
+
 			self.sv.effects.hooks[effect.id].fish = fishEffect
 			break
 		end
@@ -283,7 +283,7 @@ end
 function Rod.cl_create_fish( self, params )
 	local fish = params
 	fish.effect = sm.effect.createEffect("ShapeRenderable")
-	fish.effect:setParameter("uuid", obj_black_fish)
+	fish.effect:setParameter("uuid", obj_fish) --why was this using obj_black_fish?
 	fish.effect:setParameter("color", sm.color.new(0,0,0))
 	fish.effect:setScale(hookSize*2)
 	fish.effect:start()
@@ -294,7 +294,7 @@ end
 function Rod.cl_destroy_hook( self, id )
 	local effect = self.cl.effects.hooks[id]
 	effect.hook:destroy()
-	effect.rope:destroy() 
+	effect.rope:destroy()
 	if effect.fish then
 		effect.fish.effect:destroy()
 	end

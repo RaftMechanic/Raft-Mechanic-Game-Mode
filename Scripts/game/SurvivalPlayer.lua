@@ -772,6 +772,10 @@ end
 
 
 --RAFT
+function SurvivalPlayer:client_onReload()
+	return true
+end
+
 function SurvivalPlayer.sv_e_OxygenTank( self, change )
 	self.sv.raft.oxygenTankCount = self.sv.raft.oxygenTankCount + change
 end
