@@ -161,12 +161,13 @@ function Binoculars.client_onUpdate( self, dt )
 		self.camrot = sm.camera.getDefaultRotation()
 
 		if self.defaultFov ~= nil then
-			self.camTransitionProgress = sm.util.clamp(self.camTransitionProgress + dt * 2, 0, 1)
+			self.camTransitionProgress = sm.util.clamp(self.camTransitionProgress + dt * 5, 0, 1)
 			local currentZoom = self.defaultFov / self.zoomFactor
 
 			sm.camera.setPosition(self.campos)
 			sm.camera.setRotation(self.camrot)
-			sm.camera.setDirection(sm.vec3.lerp(sm.camera.getDirection(), self.camdir, dt / (self.zoomFactor / maxZoom)))
+			--sm.camera.setDirection(sm.vec3.lerp(sm.camera.getDirection(), self.camdir, dt / (self.zoomFactor / maxZoom)))
+			sm.camera.setDirection(self.camdir)
 
 			if self.aiming then
 				self.tool:updateCamera( 2.8, 110.0, sm.vec3.new( 0.65, 0.0, 0.05 ), self.aimWeight )
@@ -399,15 +400,16 @@ function Binoculars.client_onUnequip( self, animate )
 	self.wantEquipped = false
 	self.equipped = false
 	self.aiming = false
-	--self.vignette:close() TODO blur!
-	sm.camera.setCameraState(sm.camera.state.default)
-	sm.camera.setFov(self.defaultFov)
 	if sm.exists( self.tool ) then
 		if animate then
 			sm.audio.play( "PotatoRifle - Unequip", self.tool:getPosition() )
 		end
 		setTpAnimation( self.tpAnimations, "putdown" )
 		if self.tool:isLocal() then
+			self.vignette:close()
+			sm.camera.setCameraState(sm.camera.state.default)
+			sm.camera.setFov(self.defaultFov)
+
 			self.tool:setMovementSlowDown( false )
 			self.tool:setBlockSprint( false )
 			self.tool:setCrossHairAlpha( 1.0 )
