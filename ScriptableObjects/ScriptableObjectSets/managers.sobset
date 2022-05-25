@@ -7,7 +7,7 @@
 			"uuid": "c46b4d61-9f79-4f1c-b5d4-5ec4fff2c7b0"
 		},
 		{
-			"filename": "$CONTENT_DATA/Scripts/game/managers/WindManager.lua"
+			"filename": "$CONTENT_DATA/Scripts/game/managers/WindManager.lua",
 			"classname": "WindManager",
 			"name": "wind_manager",
 			"uuid": "2b3e5483-341c-49fe-a2ef-9deb79d080b9"

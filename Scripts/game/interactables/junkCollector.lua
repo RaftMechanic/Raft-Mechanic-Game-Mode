@@ -35,9 +35,15 @@ function Collector:server_onCreate()
     self.sv.container.allowCollect = false
 
     self.sv.trigger = sm.areaTrigger.createAttachedBox( self.interactable, collectorSize, -sm.vec3.new(0,0,3)/4, sm.quat.identity(), sm.areaTrigger.filter.dynamicBody )
-    self.sv.trigger:bindOnEnter("sv_checkTriggerContents")
+    --self.sv.trigger:bindOnEnter("sv_checkTriggerContents")
 
     self.network:sendToClients("cl_addJunk_onCreate", self.sv.data.effectData)
+end
+
+function Collector.server_onCollision( self, other, position, selfPointVelocity, otherPointVelocity, normal )
+    if type(other) ~= "Shape" then return end
+
+
 end
 
 function Collector:sv_checkTriggerContents( trigger, results )
@@ -59,7 +65,7 @@ function Collector:sv_checkTriggerContents( trigger, results )
                     local effectData = {}
                     local box = shape:getBoundingBox()
                     effectData.uuid = shapeUUID
-                    effectData.dir = sm.vec3.new(math.random(-100, 100) / 100, math.random(-100, 100) / 100, math.random(-100, 100) / 100)
+                    effectData.dir = sm.vec3.new(math.random(-100, 100), math.random(-100, 100), math.random(-100, 100)) / 100
                     effectData.colour = shape:getColor()
 
                     self.sv.data.effectData[#self.sv.data.effectData+1] = effectData
