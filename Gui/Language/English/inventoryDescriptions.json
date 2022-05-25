@@ -1,7 +1,7 @@
 {
    "01a4d4c6-469a-4d28-8c69-b74fff83fbdf" : {
       "description" : "Plant it in a tree farm or on ground to grow another tree. Rumor has it that strange fluids grow strange trees... ",
-      "title" : "Spruce Tree Sapling"
+      "title" : "Spruce Tree Cone"
    },
    "03075a5a-92f5-49bd-b132-7d8e0cb80156" : {
       "description" : "Use a logic input to turn it on and off. It’s heavy when off, but very light and buoyant when activated.",
@@ -109,7 +109,7 @@
    },
    "9e815dcf-cfb0-4672-b0f4-34f1e9ecc1a1" : {
       "description" : "Plant it in a tree farm or on ground to grow another tree. Rumor has it that strange fluids grow strange trees... ",
-      "title" : "Pine Tree Sapling"
+      "title" : "Pine Tree Cone"
    },
    "a930a42f-63ed-4fb0-933e-56ce8a889cc5" : {
       "description" : "Perfect for collecting and stacking logs. When full, place it next to a refinebot to turn logs in to blocks. You should have on your raft.",
@@ -125,7 +125,7 @@
    },
    "b84e5fbb-97f2-4de5-bc39-4adb325a56f1" : {
       "description" : "Plant it in a tree farm or on ground to grow another tree. Rumor has it that strange fluids grow strange trees... ",
-      "title" : "Leafy Tree Sapling"
+      "title" : "Leafy Tree Acorn"
    },
    "bb641a4f-e391-441c-bc6d-0ae21a069477" : {
       "description" : "A wooden hammer. Useful for all sorts of things, but not really good at them.",
@@ -177,7 +177,7 @@
    },
    "eefb0967-d21c-445e-8120-0a09422e1374" : {
       "description" : "Plant it in a tree farm or on ground to grow another tree. Rumor has it that strange fluids grow strange trees... ",
-      "title" : "Birch Tree Sapling"
+      "title" : "Birch Tree Cone"
    },
    "f3163e62-e6c3-475c-805e-559f8bb07ad1" : {
       "description" : "Used to craft essential items for you and your raft",
