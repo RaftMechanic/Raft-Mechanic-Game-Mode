@@ -112,7 +112,7 @@
 		"rotationSet": "PropY",
 		"sticky": "-Y",
 		"physicsMaterial": "Plastic",
-		"previewRotation": [ 1, 0, 0, 0, 0, -1, 0, -1, 0 ],
+		"previewRotation": [ 1, 0, 0, 0, 1, 0, 0, 0, 1 ],
 		"ratings": {
 			"density": 2,
 			"durability": 4,
