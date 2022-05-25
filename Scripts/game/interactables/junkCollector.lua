@@ -40,6 +40,15 @@ function Collector:server_onCreate()
 end
 
 function Collector.server_onCollision( self, shape, position, selfPointVelocity, otherPointVelocity, normal )
+    local couldCollect = false
+    for i = 1, containerSize do
+        if self.sv.container:getItem(i-1).uuid == sm.uuid.getNil() then
+            couldCollect = true
+            break
+        end
+    end
+    if not couldCollect then return end
+
     if not sm.exists(shape) or type(shape) ~= "Shape" then return end
 
     local shapeUUID = shape:getShapeUuid()
