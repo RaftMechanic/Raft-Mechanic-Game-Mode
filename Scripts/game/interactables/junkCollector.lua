@@ -34,86 +34,68 @@ function Collector:server_onCreate()
     self.sv.container.allowSpend = true
     self.sv.container.allowCollect = false
 
-    self.sv.trigger = sm.areaTrigger.createAttachedBox( self.interactable, collectorSize, -sm.vec3.new(0,0,3)/4, sm.quat.identity(), sm.areaTrigger.filter.dynamicBody )
-    --self.sv.trigger:bindOnEnter("sv_checkTriggerContents")
-
     self.network:sendToClients("cl_addJunk_onCreate", self.sv.data.effectData)
+
+    self.sv.ignoreIds = {}
 end
 
-function Collector.server_onCollision( self, other, position, selfPointVelocity, otherPointVelocity, normal )
-    if type(other) ~= "Shape" then return end
+function Collector.server_onCollision( self, shape, position, selfPointVelocity, otherPointVelocity, normal )
+    if not sm.exists(shape) or type(shape) ~= "Shape" then return end
 
+    local shapeUUID = shape:getShapeUuid()
+    local shapeId = shape:getId()
+    if not isAnyOf(shapeUUID, collectables) or shape:getBody():getMass() > bodyMassThreshold or isAnyOf(shapeId, self.sv.ignoreIds) then return end
 
-end
+    self.sv.ignoreIds[#self.sv.ignoreIds+1] = shapeId
+    local quantity = 0
+    local effectData = {}
+    local box = shape:getBoundingBox()
+    effectData.uuid = shapeUUID
+    effectData.dir = sm.vec3.new(math.random(-100, 100), math.random(-100, 100), math.random(-100, 100)) / 100
+    effectData.colour = shape:getColor()
 
-function Collector:sv_checkTriggerContents( trigger, results )
-    local couldCollect = false
+    self.sv.data.effectData[#self.sv.data.effectData+1] = effectData
+
+    if sm.item.isBlock( shapeUUID ) then
+        effectData.size = box
+
+        box = box * 4
+        quantity = box.x * box.y * box.z
+    else
+        --bruh sunshake
+        if sm.shape.getIsStackable(shapeUUID) then
+            effectData.size = box / 2
+            quantity = shape.stackedAmount
+        else
+            effectData.size = box
+            box = box * 4
+            quantity = box.x * box.y * box.z
+        end
+    end
+
+    sm.container.beginTransaction()
+    local index = 0
     for i = 1, containerSize do
         if self.sv.container:getItem(i-1).uuid == sm.uuid.getNil() then
-            couldCollect = true
+            index = i - 1
             break
         end
     end
-    if not couldCollect then return end
 
-    for v, body in pairs(results) do
-        if sm.exists(body) then
-            for j, shape in pairs(body:getShapes()) do
-                local shapeUUID = shape:getShapeUuid()
-                if isAnyOf(shapeUUID, collectables) and body:getMass() < bodyMassThreshold then
-                    local quantity = 0
-                    local effectData = {}
-                    local box = shape:getBoundingBox()
-                    effectData.uuid = shapeUUID
-                    effectData.dir = sm.vec3.new(math.random(-100, 100), math.random(-100, 100), math.random(-100, 100)) / 100
-                    effectData.colour = shape:getColor()
+    self.sv.container:setItem( index, shapeUUID, quantity )
+    sm.container.endTransaction()
 
-                    self.sv.data.effectData[#self.sv.data.effectData+1] = effectData
-
-                    if sm.item.isBlock( shapeUUID ) then
-                        effectData.size = box
-
-                        box = box * 4
-                        quantity = box.x * box.y * box.z
-                    else
-                        --bruh sunshake
-                        if sm.shape.getIsStackable(shapeUUID) then
-                            effectData.size = box / 2
-                            quantity = shape.stackedAmount
-                        else
-                            effectData.size = box
-                            box = box * 4
-                            quantity = box.x * box.y * box.z
-                        end
-                    end
-
-                    sm.container.beginTransaction()
-                    local index = 0
-                    for i = 1, containerSize do
-                        if self.sv.container:getItem(i-1).uuid == sm.uuid.getNil() then
-                            index = i - 1
-                            break
-                        end
-                    end
-
-                    self.sv.container:setItem( index, shapeUUID, quantity )
-                    sm.container.endTransaction()
-
-                    self.sv.data.items = {}
-                    for i = 1, containerSize do
-                        self.sv.data.items[#self.sv.data.items+1] = self.sv.container:getItem( i-1 )
-                    end
-                    self.storage:save(self.sv.data)
-
-                    self.network:sendToClients("cl_addJunk", effectData)
-                    local selfPos = self.shape:getWorldPosition()
-                    sm.effect.playEffect("Resourcecollector - PutIn", selfPos)
-                    --sm.effect.playEffect("Vacuumpipe - Suction", selfPos, sm.vec3.zero(), sm.vec3.getRotation(shape:getWorldPosition() - selfPos, self.shape:getAt()))
-                    shape:destroyShape()
-                end
-            end
-        end
+    self.sv.data.items = {}
+    for i = 1, containerSize do
+        self.sv.data.items[#self.sv.data.items+1] = self.sv.container:getItem( i-1 )
     end
+    self.storage:save(self.sv.data)
+
+    self.network:sendToClients("cl_addJunk", effectData)
+    local selfPos = self.shape:getWorldPosition()
+    sm.effect.playEffect("Resourcecollector - PutIn", selfPos)
+    --sm.effect.playEffect("Vacuumpipe - Suction", selfPos, sm.vec3.zero(), sm.vec3.getRotation(shape:getWorldPosition() - selfPos, self.shape:getAt()))
+    shape:destroyShape()
 end
 
 function Collector:server_onFixedUpdate()
@@ -130,13 +112,6 @@ function Collector:server_onFixedUpdate()
     end
 end
 
-function Collector:server_onDestroy()
-    --[[for v, item in pairs(self.sv.data.items) do
-        if item.uuid ~= sm.uuid.getNil() then
-            raft_SpawnLoot( self.shape, { { uuid = item.uuid, quantity = item.quantity } } )
-        end
-    end]]
-end
 
 
 function Collector:client_onCreate()
