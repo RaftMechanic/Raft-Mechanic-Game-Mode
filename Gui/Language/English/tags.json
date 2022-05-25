@@ -57,5 +57,7 @@
     "JunkCollector_SlotsOpen": "Remaining capacity:#ffffff %d slots",
 
     "HammockAllPlayers": "All players need to sleep to skip night",
-    "HammockNight": "You can only sleep at night"
+    "HammockNight": "You can only sleep at night",
+
+    "ClamDivingSucks": "#ff88ffDid I already mention that I hate clam diving?"
 }

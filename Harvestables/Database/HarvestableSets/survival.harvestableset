@@ -54,6 +54,18 @@
             }
         },
         {
+            "name": "hvs_farmables_slimyclam",
+            "uuid": "046a8ac8-300b-4e52-91f7-0912d53b2955",
+            "renderable": "$SURVIVAL_DATA/Harvestables/Renderable/Farmables/hvs_farmables_slimyclam.rend",
+            "col": "$SURVIVAL_DATA/Harvestables/Collision/Farmables/hvs_farmables_slimyclam_col.obj",
+            "color":"a0253e",
+            "script": { 
+                "file": "$CONTENT_DATA/Scripts/game/harvestable/SlimyClam.lua",
+                "class": "SlimyClam",
+                "data": {}
+            }
+        },
+        {
             "uuid": "c591d94b-d7d1-4305-a9dd-76ef06d6fb49",
             "name": "hvs_farmables_cottonplant",
             "renderable": {
