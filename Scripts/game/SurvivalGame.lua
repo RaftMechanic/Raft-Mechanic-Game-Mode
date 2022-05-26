@@ -87,13 +87,6 @@ function SurvivalGame.server_onCreate( self )
 	g_unitManager = UnitManager()
 	g_unitManager:sv_onCreate( self.sv.saved.overworld )
 
-	self.sv.windManager = sm.storage.load(STORAGE_CHANNEL_WINDMANAGER)
-
-	if not self.sv.windManager then
-		self.sv.windManager = sm.scriptableObject.createScriptableObject( sm.uuid.new( "2b3e5483-341c-49fe-a2ef-9deb79d080b9" ) )
-		sm.storage.save( STORAGE_CHANNEL_WINDMANAGER, self.sv.windManager )
-	end
-
 	self.sv.questEntityManager = sm.scriptableObject.createScriptableObject( sm.uuid.new( "c6988ecb-0fc1-4d45-afde-dc583b8b75ee" ) )
 
 	self.sv.questManager = sm.storage.load( STORAGE_CHANNEL_QUESTMANAGER )
@@ -102,8 +95,12 @@ function SurvivalGame.server_onCreate( self )
 		sm.storage.save( STORAGE_CHANNEL_QUESTMANAGER, self.sv.questManager )
 	end
 
+	self.sv.windManager = sm.storage.load(STORAGE_CHANNEL_WINDMANAGER)
 
-
+	if not self.sv.windManager then
+		self.sv.windManager = sm.scriptableObject.createScriptableObject( sm.uuid.new( "2b3e5483-341c-49fe-a2ef-9deb79d080b9" ) )
+		sm.storage.save( STORAGE_CHANNEL_WINDMANAGER, self.sv.windManager )
+	end
 
 
 	-- Game script managed global warehouse table
