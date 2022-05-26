@@ -21,25 +21,21 @@
     "CreationRotator_Roll": "Roll",
     "CreationRotator_Mult": "Multiplicateur : ",
     "CreationRotator_CurrentMode": "Mode actuel : #ffffff",
-    "CreationRotator_Cycle_fwd": "' pour cylcler en avant, '",
-    "CreationRotator_Cycle_bwd": "' to switch between input methods and '",
-    "CreationRotator_AdjustForce": "' pour ajuster le multiplicateur de force.",
+    "CreationRotator_Cycle": "'%s' pour cycler vers l'avant, '%s' pour passer d'une méthode à une autre et '%s' + '%s' pour ajuster le multiplicateur de force.",
     "CreationRotator_CurrentInput": ", #4f4f4fMéthode d'entrée actuelle : #ffffff",
     "CreationRotator_Input_mouse": "Souris",
     "CreationRotator_Input_wasd": "ZQSD(WASD)",
 
     "WaterSensor_Title": "Capteur d'eau",
     "WaterSensor_Radius_Title": "Rayon de détection (blocs)",
-    "WaterSensor_Radius_radius": "Rayon : ", 
-    "WaterSensor_Radius_blocks": " blocs",
+    "WaterSensor_Radius": "Rayon : %d blocs", 
     "WaterSensor_CurrentRadius": "Rayon actuel de détection : #ffffff",
     "WaterSensor_CurrentRadius_blocks": " bloc(s)#4f4f4f, Visualisation : ",
-    "WaterSensor_Adjust_tip1": "' pour ajuster le rayon de détection et '",
-    "WaterSensor_Adjust_tip2": "' pour activer la visualisation de la zone.",
+    "WaterSensor_Adjust_tip": "'%s' pour ajuster le rayon de détection et '%s' pour activer la visualisation du rayon.",
     "WaterSensor_Visualization_on": "#269e44ON",
     "WaterSensor_Visualization_off": "#9e2626OFF",
 
-    "General_Cycle_bwd": "' pour cyler en arrière.",
+    "Converter_Cycle": "'%s' pour cycler vers l'avant et '%s' pour cycler vers l'arrière.",
 
     "Sail_Tie": "Remonter la voile",
     "Sail_Lower": "Abaisser la voile",
@@ -55,5 +51,13 @@
     "FishingBait": "Appât : ",
     "FishingOutOfBait": "Plus d'appâts!",
     "FishingBaitNone": "Aucun",
-    "FishingGetItem": "Pêché : "
+    "FishingGetItem": "Pêché : ",
+
+    "JunkCollector_Full": "#ff0000Filet plein",
+    "JunkCollector_SlotsOpen": "Capacité restante:#ffffff %d place(s)",
+
+    "HammockAllPlayers": "Tous les joueurs ont besoin de dormir pour passer la nuit",
+    "HammockNight": "Vous ne pouvez dormir que la nuit",
+
+    "ClamDivingSucks": "#ff88ffAi-je déjà dit que je déteste plonger pour aller ramasser les palourdes ?"
 }

@@ -1,10 +1,10 @@
 {
 	"e3bcf8fa-68d7-49a8-b17b-c1e864d53b69": {
-        "description": "Jetez l'hameçon dans l'eau. Attendez que le poisson commence à grignoter. Tirez lorsque qu'un énorme plouf s'ensuit ! Le poisson va se battre et créer de petites éclaboussures et des bruits ! On peut pêcher tout un tas de choses dans l'océan...",
+        "description": "Jetez l'hameçon dans l'eau. Attendez que le poisson commence à grignoter. Tirez lorsque qu'un énorme plouf s'ensuit ! Le poisson va se battre et créer de petites éclaboussures et des bruits ! On peut toutefois pêcher tas de choses dans l'océan...",
         "title": "Canne à pêche"
     },
     "b5ade3b0-be48-4a61-a8c2-13a4cedf1343": {
-        "description": "Tirez le crochet pour tirer les déchets de l'océan et les mettre dans vos vilaines petites mains avides ! Appuyez sur le clic droit pour ramener le crochet plus rapidement",
+        "description": "Utile pour ramener les déchets flottants, un outil pour les personnes avides ? Ou bien est-ce pour le bien de l'océan que vous faites ça ? On ne vous jugera pas ... Appuyez sur le clic droit pour ramener le crochet plus rapidement",
         "title": "Fusil à crochet"
     },
     "1daebe24-4e16-422c-b5e7-c3f45f9296d8": {
@@ -12,7 +12,7 @@
         "title": "Hache"
     },
     "c883b283-ea7a-4bba-af0d-5c13fd73051d": {
-        "description": "Peut briser les rochers au fond de l'océan.",
+        "description": "Pratique pour miner les rochers au fond de l'océan.",
         "title": "Pioche"
     },
     "67dd0023-023d-46cb-9839-e4ada2609a9b": {
@@ -20,7 +20,7 @@
         "title": "Barbecue"
     },
     "0db1ecd5-503d-4dd3-807e-869c243a7c08": {
-        "description": "Un bâton pointu. Utile pour piquer et blesser des trucs.",
+        "description": "Un bâton avec un pic au bout. Pratique pour se défendre contre les bots.",
         "title": "Lance"
     },
     "bb641a4f-e391-441c-bc6d-0ae21a069477": {
@@ -58,7 +58,7 @@
         "title": "Palmes"
     },
     "7ceccadf-010f-4a45-907f-18ccc11c509c": {
-        "description": "Pas assez de souffle ? Cela ne résoudra pas vos problèmes d'exercice, mais vous pourrez rester plus longtemps sous l'eau. Connectez-le à un siège pour ne pas perdre de souffle lorsque vous êtes assis.",
+        "description": "Pas assez de souffle ? Cela ne résoudra pas vos problèmes d'exercice, mais vous pourrez rester plus longtemps sous l'eau. Connectez-le à un siège pour ne pas perdre de souffle lorsque vous êtes assis(utile pour faire un sous-marin).",
         "title": "Bouteille de plongée"
     },
     "03075a5a-92f5-49bd-b132-7d8e0cb80156": {
@@ -141,7 +141,7 @@
     },
     "b84e5fbb-97f2-4de5-bc39-4adb325a56f1": {
         "description": "Plantez-le dans une ferme à arbres ou sur le sol pour faire le faire pousser",
-        "title": "Pousse de chêne"
+        "title": "Gland de chêne"
     },
     "01a4d4c6-469a-4d28-8c69-b74fff83fbdf": {
         "description": "Plantez-le dans une ferme à arbres ou sur le sol pour faire le faire pousser",
@@ -149,7 +149,7 @@
     },
     "9e815dcf-cfb0-4672-b0f4-34f1e9ecc1a1": {
         "description": "Plantez-le dans une ferme à arbres ou sur le sol pour faire le faire pousser",
-        "title": "Pousse de sapin"
+        "title": "Pive(Pomme de pin)"
     },
     "4a971f7d-14e6-454d-bce8-0879243c4857": {
         "description": "Pointu et solide ! Utilisés comme munitions pour le fusil à harpon.",
@@ -158,7 +158,7 @@
  
     //consumable
     "4bd05d7d-898c-4947-8788-e34b84b5d386": {
-        "description": "De l'eau purifiée ! Très rafraîchissante ! Permet d'arroser les plantes.",
+        "description": "Monoxyde de dihydrogène (aussi appelé eau). Excellent pour faire pousser les arbres, plantes ou ou pour étancher votre soif !",
         "title": "Eau purifiée"
     },
     "869d4736-289a-4952-96cd-8a40117a2d28" : {
@@ -166,7 +166,7 @@
         "title" : "Eau"
     },
     "7c440c4a-5919-4baa-a946-0bb89b8c4d5d": {
-        "description": "Il est toujours très salé...",
+        "description": "Il est toujours très salé...Pas vraiment très bon...",
         "title": "Poisson cru"
     },
     "7c440c4a-5919-4baa-a946-0bb89b8c4d85": {
@@ -186,7 +186,7 @@
         "title" : "Viande de Woc cru"
     },
     "74a3f240-65b2-4f52-9555-666217366a0e" : {
-       "description" : "The perfect medium-rare!",
+       "description" : "Un morceau parfaitement cuit !",
        "title" : "Viande de Woc grillée"
     },
 
