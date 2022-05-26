@@ -202,5 +202,9 @@
    "f2382297-44b4-4259-99ce-b11da671ac51" : {
       "description" : "Collects all of the ocean junk for you! You lazy sunshake addict...",
       "title": "Collection Net"
+   },
+   "56dc8c15-ccc5-46c8-bd56-46bb6bfc85c9" : {
+      "description" : "Fake hammock for the abandoned rafts so that people cant sleep in them and loose their respawn point.",
+      "title": "Abandoned Hammock"
    }
 }

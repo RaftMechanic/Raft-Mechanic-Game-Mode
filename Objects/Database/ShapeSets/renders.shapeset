@@ -261,5 +261,63 @@
 		"sticky" : "-Y",
 		"showInInventory": false,
 		"uuid" : "8131f4e1-7921-4980-9134-06863aa457f8"
+	 },
+	 {
+		"box" : {
+		   "x" : 5,
+		   "y" : 2,
+		   "z" : 12
+		},
+		"color" : "3e9ffe",
+		"flammable" : true,
+		"name" : "obj_abandoned_raft_hammock",
+		"physicsMaterial" : "Wood",
+		"ratings" : {
+		   "buoyancy" : 6,
+		   "density" : 1,
+		   "durability" : 5,
+		   "friction" : 4
+		},
+		"renderable" : {
+		   "lodList" : [
+			  {
+				 "mesh" : "$CONTENT_DATA/Objects/Mesh/Interactables/Hammock.fbx",
+				 "minViewSize" : 55,
+				 "subMeshMap" : {
+					"bed" : {
+					   "material" : "DifAsgNor",
+					   "textureList" : [
+						  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_comfybed_dif.tga",
+						  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_comfybed_asg.tga",
+						  "$SURVIVAL_DATA/Objects/Textures/interactive/obj_interactive_comfybed_nor.tga"
+					   ]
+					},
+					"lambert2" : {
+					   "material" : "DifAsgNor",
+					   "textureList" : [
+						  "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+						  "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+						  "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+					   ]
+					},
+					"shark" : {
+					   "material" : "DifAsgNor",
+					   "textureList" : [
+						  "$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_dif.tga",
+						  "$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_asg.tga",
+						  "$GAME_DATA/Objects/Textures/interactive/obj_interactive_sharkwood_nor.tga"
+					   ]
+					}
+				 }
+			  }
+		   ]
+		},
+		"restrictions" : {
+		   "usable" : true
+		},
+		"rotationSet" : "PropFullMinusNegY",
+		"sticky" : "-Z+Z-Y-X+X",
+		"uuid" : "56dc8c15-ccc5-46c8-bd56-46bb6bfc85c9",
+		"showInInventory": false
 	 }
 ]}

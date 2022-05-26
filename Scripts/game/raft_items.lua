@@ -10,6 +10,7 @@ obj_sail_render = sm.uuid.new("4a971f7d-14e6-454d-bce8-0879243c4934")
 obj_hook_render = sm.uuid.new("4a971f7d-14e6-454d-bce8-0879243c8735")
 obj_windsock_render = sm.uuid.new("4a971f7d-14e6-454d-bce8-0879243c4859")
 obj_fishingfloat_render = sm.uuid.new("4a971f7d-14e6-454d-bce8-0879243c7642")
+obj_abandoned_raft_hammock = sm.uuid.new("56dc8c15-ccc5-46c8-bd56-46bb6bfc85c9")
 
 --plants.shapeset
 obj_planter_bananna = sm.uuid.new("9fe45a4e-55a0-4275-88f9-6511f8211fad")
