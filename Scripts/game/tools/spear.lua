@@ -395,6 +395,10 @@ function Spear.client_onEquip( self, animate )
 	for k,v in pairs( renderables ) do renderablesFp[#renderablesFp+1] = v end
 	
 	self.tool:setTpRenderables( renderablesTp )
+	
+	if self.isLocal then
+		self.tool:setFpRenderables( renderablesFp )
+	end
 
 	self:init()
 	self:loadAnimations()
@@ -402,8 +406,6 @@ function Spear.client_onEquip( self, animate )
 	setTpAnimation( self.tpAnimations, "equip", 0.0001 )
 
 	if self.isLocal then
-		self.tool:setFpRenderables( renderablesFp )
-		self:loadAnimations()
 		swapFpAnimation( self.fpAnimations, "unequip", "equip", 0.2 )
 	end
 end

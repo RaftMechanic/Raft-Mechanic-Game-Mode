@@ -385,6 +385,11 @@ function Binoculars.client_onEquip( self, animate )
 	for k,v in pairs( renderablesFp ) do currentRenderablesFp[#currentRenderablesFp+1] = v end
 	for k,v in pairs( renderables ) do currentRenderablesTp[#currentRenderablesTp+1] = v end
 	for k,v in pairs( renderables ) do currentRenderablesFp[#currentRenderablesFp+1] = v end
+	
+		if self.tool:isLocal() then
+			self.tool:setFpRenderables( currentRenderablesFp )
+		end
+		
 	self.tool:setTpRenderables( currentRenderablesTp )
 
 	self:loadAnimations()
@@ -393,8 +398,6 @@ function Binoculars.client_onEquip( self, animate )
 
 	if self.tool:isLocal() then
 		-- Sets Binoculars renderable, change this to change the mesh
-		self.tool:setFpRenderables( currentRenderablesFp )
-			self:loadAnimations()
 		swapFpAnimation( self.fpAnimations, "unequip", "equip", 0.2 )
 	end
 end
