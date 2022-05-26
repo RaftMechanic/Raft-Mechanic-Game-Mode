@@ -165,7 +165,7 @@ function Binoculars.client_onUpdate( self, dt )
 			self.camTransitionProgress = sm.util.clamp(self.camTransitionProgress + dt * 5, 0, 1)
 			local currentZoom = self.defaultFov / self.zoomFactor
 
-			if self.aiming or self.fovRightNow ~= self.defaultFov then
+			if sm.camera.getCameraState() == sm.camera.state.cutsceneFP then
 				sm.camera.setPosition(self.campos)
 				sm.camera.setRotation(self.camrot)
 				--sm.camera.setDirection(sm.vec3.lerp(sm.camera.getDirection(), self.camdir, dt / (self.zoomFactor / maxZoom)))
