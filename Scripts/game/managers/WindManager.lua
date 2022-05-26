@@ -1,4 +1,5 @@
 dofile( "$CONTENT_DATA/Scripts/game/survival_quests.lua" )
+dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestManager.lua" )
 
 ---@class WindManager : ScriptableObjectClass
 WindManager = class()
@@ -35,9 +36,11 @@ function WindManager.server_onCreate(self)
 
     self.network:setClientData(self.sv)
     
-    g_questManager:sv_subscribeEvent("event.generic.quest_activated", self, "sv_e_onQuestChanged")
-    g_questManager:sv_subscribeEvent("event.generic.quest_completed", self, "sv_e_onQuestChanged")
-    g_questManager:sv_subscribeEvent("event.generic.quest_abandoned", self, "sv_e_onQuestChanged")
+    g_questManager.sv_subscribeEvent(g_questManager, "event.generic.quest_activated", self, "sv_e_onQuestChanged")
+    g_questManager.sv_subscribeEvent(g_questManager, "event.generic.quest_completed", self, "sv_e_onQuestChanged")
+    g_questManager.sv_subscribeEvent(g_questManager, "event.generic.quest_abandoned", self, "sv_e_onQuestChanged")
+
+    g_windManager = self
 end
 
 function WindManager:sv_e_onQuestChanged(params)
@@ -50,35 +53,14 @@ function WindManager.client_onCreate(self)
     self.cl = {}
     self.cl.cachedWind = sm.vec3.new(0,0,0)
     self.cl.defaultCenter = sm.vec3.new(0,0,0)
+
+    if not sm.isHost then
+        g_windManager = self
+    end
 end
 
 function WindManager.client_onClientDataUpdate( self, data )
 	self.cl = data
-end
-
----@param location Vec3
----@return Vec3 windDirection
-function WindManager:getWindDir(location)
-
-    -- get the center with our custom callback
-    local windCenter = self:getWindCenter()
-
-    local windDirection = location - windCenter
-    
-    windDirection = windDirection:normalize()
-    windDirection.z = 0
-
-    return windDirection
-end
-
----Get the wind center point cached
----@return Vec3
-function WindManager:getWindCenter()
-    if sm.isServerMode() then
-        return self.sv.cachedWind or self.sv.defaultCenter
-    end
-
-    return self.cl.cachedWind or self.cl.defaultCenter
 end
 
 ---Get the wind center point based on active quests
@@ -97,7 +79,7 @@ end
 
 ---Set default wind
 function WindManager:sv_e_randomizeWind(set)
-    local random = math.floor(math.random(0, 3)) + 1 -- random d4
+    local random = randomStackAmount(1, 2, 4)
     local windCenter = defaultWindMap[random]
 
     if set then
@@ -106,4 +88,30 @@ function WindManager:sv_e_randomizeWind(set)
     end
 
     return windCenter
+end
+
+---GLOBAL functions
+
+---@param location Vec3
+---@return Vec3 windDirection
+function getWindDir(location)
+
+    -- get the center with our custom callback
+    local windCenter = getWindCenter()
+
+    local windDirection = location - windCenter
+    
+    windDirection = windDirection:normalize()
+    windDirection.z = 0
+
+    return windDirection
+end
+
+---Get the wind center point cached
+---@return Vec3
+function getWindCenter()
+    if sm.isServerMode() then
+        return g_windManager.sv.cachedWind or g_windManager.sv.defaultCenter
+    end
+    return g_windManager.cl.cachedWind or g_windManager.cl.defaultCenter
 end

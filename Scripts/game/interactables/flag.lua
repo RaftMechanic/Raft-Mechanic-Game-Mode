@@ -1,5 +1,5 @@
 dofile( "$CONTENT_DATA/Scripts/game/survival_quests.lua" )
-dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestManager.lua" )
+dofile( "$CONTENT_DATA/Scripts/game/managers/WindManager.lua" )
 
 Flag = class()
 
@@ -15,7 +15,7 @@ end
 function Flag.client_onUpdate( self, dt )
     if not self.effect:isPlaying() then self.effect:start() end
 
-    local center = g_windManager:getWindCenter()
+    local center = getWindCenter()
 
     local direction = self.shape:transformPoint(center)
     direction.y = 0

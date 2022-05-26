@@ -19,6 +19,7 @@ dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestEntityManager.lua" )
 dofile( "$GAME_DATA/Scripts/game/managers/EventManager.lua" )
 
 --RAFT
+dofile( "$CONTENT_DATA/Scripts/game/raft_constants.lua")
 dofile( "$CONTENT_DATA/Scripts/game/managers/WindManager.lua" )
 dofile( "$CONTENT_DATA/Scripts/game/raft_items.lua" )
 
@@ -86,7 +87,12 @@ function SurvivalGame.server_onCreate( self )
 	g_unitManager = UnitManager()
 	g_unitManager:sv_onCreate( self.sv.saved.overworld )
 
-	g_windManager = sm.scriptableObject.createScriptableObject( sm.uuid.new( "2b3e5483-341c-49fe-a2ef-9deb79d080b9" ) )
+	self.sv.windManager = sm.storage.load(STORAGE_CHANNEL_WINDMANAGER)
+
+	if not self.sv.windManager then
+		self.sv.windManager = sm.scriptableObject.createScriptableObject( sm.uuid.new( "2b3e5483-341c-49fe-a2ef-9deb79d080b9" ) )
+		sm.storage.save( STORAGE_CHANNEL_WINDMANAGER, self.sv.windManager )
+	end
 
 	self.sv.questEntityManager = sm.scriptableObject.createScriptableObject( sm.uuid.new( "c6988ecb-0fc1-4d45-afde-dc583b8b75ee" ) )
 
@@ -310,7 +316,7 @@ function SurvivalGame.server_onFixedUpdate( self, timeStep )
 	local newDay = self.sv.time.timeOfDay >= 1.0
 	if newDay then
 		self.sv.time.timeOfDay = math.fmod( self.sv.time.timeOfDay, 1 )
-		sm.event.sendToScriptableObject(g_windManager, "sv_e_randomizeWind", true)
+		sm.event.sendToScriptableObject(self.sv.windManager, "sv_e_randomizeWind", true)
 	end
 
 	if self.sv.time.timeOfDay >= DAYCYCLE_DAWN and prevTime < DAYCYCLE_DAWN then

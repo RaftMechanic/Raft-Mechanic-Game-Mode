@@ -1,0 +1,1 @@
+STORAGE_CHANNEL_WINDMANAGER = 256 -- stupidly high to not mess with chapter2
