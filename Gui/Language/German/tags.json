@@ -1,7 +1,63 @@
 {
-    "SaplingGrow": "Am wachsen...",
-    "SaplingNeedLiquid1": "Besprühe mit ",
-    "SaplingNeedLiquid2": "Flüssigkeit",
-    "SaplingNeedGround1": "Platziere auf den",
-    "SaplingNeedGround2": "Boden"
+    "SaplingGrow": "#00cc00Wächst...",
+    "SaplingNeedLiquid": "Mit Flüssigkeit bewässern",
+    "SaplingNeedGround": "Platziere es auf den #ff0000Boden",
+    "SaplingCantErase": "Setzling kann während des Wachsens nicht entfernt werden!",
+
+    "FarmerBallTalk": "Sprich",
+    "FarmerBallHelp": "Ich war auf der Toilette, weil meine Flasche voll war, und jetzt... Ich habe vor einiger Zeit ein paar Sprengsätze eingeschmuggelt. Ich habe versucht die Wand da unten zu durchbrechen, aber vielleicht kannst du diese Arbeit erledigen.",
+    "FarmerBallThanks": "Danke, das ist das erste Mal seit Jahren, dass ich Sonnenlicht sehe! Ich kann es nicht abwarten den verrückten Bob wiederzusehen!",
+
+    "HarpoonPickup": "Harpune aufgehoben",
+    "LogbookAdd": "Zu Logbuch hinzufügen",
+
+	"BinocularsZoomFactor": "Vergrößerungsfaktor: ",
+
+    "CreationRotator_Title": "Kreations-Dreher",
+    "CreationRotator_Force": "Kraftmultiplikator",
+    "CreationRotator_Ver_Hor": "Vertikal + Horizontal",
+    "CreationRotator_Ver": "Vertikal",
+    "CreationRotator_Hor": "Horizontal",
+    "CreationRotator_Roll": "Rollen",
+    "CreationRotator_Mult": "Multiplikator:",
+    "CreationRotator_CurrentMode": "Gewählter Modus: #ffffff",
+    "CreationRotator_Cycle": "'%s' um den nächsten Modus zu wählen, '%s' um zwischen Eingabemethoden zu wechseln unf '%s' + '%s' um den Kraftmultiplikator einzustellen.",
+    "CreationRotator_CurrentInput": ", #4f4f4fGewählte Eingabemethode: #ffffff",
+    "CreationRotator_Input_mouse": "Maus",
+    "CreationRotator_Input_wasd": "WASD",
+
+    "WaterSensor_Title": "Wassersensor",
+    "WaterSensor_Radius_Title": "Sensorradius(Blöcke)",
+    "WaterSensor_Radius": "Radius: %d Blöcke", 
+    "WaterSensor_CurrentRadius": "Momentaner Sensorradius: #ffffff",
+    "WaterSensor_CurrentRadius_blocks": " Blöcke#4f4f4f, Visualisierung: ",
+    "WaterSensor_Adjust_tip": "'%s' um den Sensorradius einzustellen und '%s' um die Radius Visualisierung ein und aus zu schalten.",
+    "WaterSensor_Visualization_on": "#269e44ON",
+    "WaterSensor_Visualization_off": "#9e2626OFF",
+
+    "Converter_Cycle": "'%s' um auf den nachgehenden Modus und '%s' um auf den vorhergehenden Modus zu wechseln.",
+
+    "Sail_Tie": "Tie up Sail",
+    "Sail_Lower": "Lower Sail",
+    "Sail_Controlled": "Controlled by logic",
+
+    "Trader_dialogue1": "Mhh.. Berta.. Ich werde… OH! Du... bist am Leben?! Ich bin froh jemanden zu sehen! Hm… Oh.. Ich glaube ich weiß wie wir eh- von diesem Planeten flüchten können. Wenn du Bert- eh mir ein paar Kisten Gemüse bringen könntest, das wäre toll! Hehe.. Ich hab dir die nächste Verpackungsanlage markiert. Verpacke je 2 Kisten Karotten und Rote Beete. Dann kannst du sie zur guten alten Berta- eh, das große Saugrohr dort drüben bringen.. Hehe.,"
+    "Trader_dialogue2": "Was für eine schöne Überraschung dich wiederzusehen! Ich meine, nicht dass ich erwartet hätte, deine Gliedmaßen an der Küste anzutreffen.  .. Ehm. Wie auch immer, leider ist das Gemüse nicht die einzige Zutat für das Rezep- ich meine den Plan. Die anderen Ressources wurden geheim gehalten. Aber ich habe abnormale Woc... Aktivitäten gesichtet. Untersuche das mal.",
+    "Trader_dialogue3": "Perfekt! Bald wird es mei- eh möglich sein, diesen Planeten zu verlassen. *Starrt Notizen an* Ah... JA.. ICH WUSSTE ES! Muhahahahaa- Oh, tut mir leid, ich bin Gesellschaft nicht gewohnt, zumindest sein dem Zwischenfa- Wie auch immer, du musst mir noch 2 Kisten Blaubeeren und Bananen bringen. Ich habe eine Verpackungsanlage in der Nähe markiert.",
+    "Trader_dialogue4": "*schlürft* AH, genau was ich brauchte! Es war so lange seit meinem letzten Sunshake... Wo sind meine Manieren? Warum nimmst du dir keinen Sunshake? Ich kann so viel machen wie du brauchst, wenn du mir frisches Material bringst. Eh, das war natürlich notwendig,... weil... der... ähm... Sunshake wichtige Koordinaten zu, äh, ein paar Ruinen enthält. Weil mein Leben quasi durch Sunshake gerettet wurde, kannst du versuchen den Rest meiner Kollegen zu befreien. Anscheinend gibt es einen Schlüssel in der verfallenen Stadt. Wenn so ein Gerät in meine Hände kommt, können wir eventuell eine Rettungsmission starten.",
+    "Trader_dialogue5": "Ich kann es nicht glauben, dass du noch... so abenteuerlich! Lass mich den Schlüssel sehen. AH.. JA.. So ein einfacher Schaltkreis… Mit den richtigen Werkzeugs sollte ich den Schlüssel ohne Probleme kopieren können. Aber mit diesem Schlüssel kannst du das Lagerhaus betreten, wo meine Kollegen Geißel genommen werden, weil sie die Toiletten anstatt... frag nicht warum so viele Wasserflaschen im Wasser sind... Wie auch immer, erreiche das Dach des Lagerhauses und rette einen meiner Kollegen! Dann komm her und die gute alte Berta wird sich um sie kümmern.",
+    "Trader_dialogue6": "Ich habe Gesellschaft so lange vermisst *schluchzt*. Rette mehr meiner Kollegen! Währenddessen arbeite ich an einen Plan um von diesem Planeten zu flüchten und nach Hause zurückzukehren...",
+    
+    "FishingBait": "Köder: ",
+    "FishingOutOfBait": "Keine Köder!",
+    "FishingBaitNone": "Kein",
+    "FishingGetItem": "Geangelt: ",
+
+    "JunkCollector_Full": "#ff0000Sammler voll",
+    "JunkCollector_SlotsOpen": "Freier Raum:#ffffff %d Slots",
+
+    "HammockAllPlayers": "Alle Spieler müssen schlafen um die Nacht zu überspringen",
+    "HammockNight": "Du kannst nur Nachts schlafen",
+
+    "ClamDivingSucks": "#ff88ffHabe ich schon gesagt dass ich Muscheltauchen hasse?"
 }
