@@ -179,6 +179,12 @@ function TorchTool.client_onEquip( self )
 	for k,v in pairs( renderables ) do currentRenderablesTp[#currentRenderablesTp+1] = v end
 	for k,v in pairs( renderables ) do currentRenderablesFp[#currentRenderablesFp+1] = v end
 
+		if self.tool:isLocal() then
+			self.tool:setFpRenderables( currentRenderablesFp )
+		end
+	
+	self.tool:setTpRenderables( currentRenderablesTp )
+	
 	self:cl_loadAnimations()
 
 	self.tool:setTpRenderables( currentRenderablesTp )
