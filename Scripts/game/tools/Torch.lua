@@ -11,6 +11,11 @@ local renderables = {
 	[tostring(obj_torch_lit)] = "$CONTENT_DATA/Characters/Char_Tools/Char_torch/char_torch_lit.rend",
 	[tostring(obj_torch_burnt)] = "$CONTENT_DATA/Characters/Char_Tools/Char_torch/char_torch_burnt.rend"
 }
+local torches = {
+	obj_torch,
+	obj_torch_lit,
+	obj_torch_burnt
+}
 local renderablesTp = {"$SURVIVAL_DATA/Character/Char_Male/Animations/char_male_tp_fertilizer.rend", "$SURVIVAL_DATA/Character/Char_Tools/Char_fertilizer/char_fertilizer_tp_animlist.rend"}
 local renderablesFp = {"$SURVIVAL_DATA/Character/Char_Male/Animations/char_male_fp_fertilizer.rend", "$SURVIVAL_DATA/Character/Char_Tools/Char_fertilizer/char_fertilizer_fp_animlist.rend"}
 
@@ -33,6 +38,8 @@ function TorchTool.cl_init( self )
 	self.cl = {}
 	self.cl.effect = sm.effect.createEffect( "Fire - small01", self.tool:getOwner().character, "jnt_fertilizer" )
 	self.cl.effect:setOffsetPosition(sm.vec3.new(0, 0.35, -0.35))
+	self.cl.equippedItem = sm.uuid.getNil()
+	self.renderable = nil
 
 	if self.tool:isLocal() then
 		self.cl.lit = false
@@ -42,62 +49,61 @@ end
 function TorchTool.cl_loadAnimations( self )
 
 	self.tpAnimations = createTpAnimations(
+		self.tool,
+		{
+			idle = { "fertilizer_idle", { looping = true } },
+			use = { "fertilizer_paint", { nextAnimation = "idle" } },
+			sprint = { "fertilizer_sprint" },
+			pickup = { "fertilizer_pickup", { nextAnimation = "idle" } },
+			putdown = { "fertilizer_putdown" }
+
+		}
+	)
+	local movementAnimations = {
+
+		idle = "fertilizer_idle",
+		idleRelaxed = "fertilizer_idle_relaxed",
+
+		runFwd = "fertilizer_run_fwd",
+		runBwd = "fertilizer_run_bwd",
+		sprint = "fertilizer_sprint",
+
+		jump = "fertilizer_jump",
+		jumpUp = "fertilizer_jump_up",
+		jumpDown = "fertilizer_jump_down",
+
+		land = "fertilizer_jump_land",
+		landFwd = "fertilizer_jump_land_fwd",
+		landBwd = "fertilizer_jump_land_bwd",
+
+		crouchIdle = "fertilizer_crouch_idle",
+		crouchFwd = "fertilizer_crouch_fwd",
+		crouchBwd = "fertilizer_crouch_bwd"
+	}
+
+	for name, animation in pairs( movementAnimations ) do
+		self.tool:setMovementAnimation( name, animation )
+	end
+
+	if self.tool:isLocal() then
+		self.fpAnimations = createFpAnimations(
 			self.tool,
 			{
 				idle = { "fertilizer_idle", { looping = true } },
-				use = { "fertilizer_paint", { nextAnimation = "idle" } },
-				sprint = { "fertilizer_sprint" },
-				pickup = { "fertilizer_pickup", { nextAnimation = "idle" } },
-				putdown = { "fertilizer_putdown" }
 
+				sprintInto = { "fertilizer_sprint_into", { nextAnimation = "sprintIdle",  blendNext = 0.2 } },
+				sprintIdle = { "fertilizer_sprint_idle", { looping = true } },
+				sprintExit = { "fertilizer_sprint_exit", { nextAnimation = "idle",  blendNext = 0 } },
+
+				use = { "fertilizer_paint", { nextAnimation = "idle" } },
+
+				equip = { "fertilizer_pickup", { nextAnimation = "idle" } },
+				unequip = { "fertilizer_putdown" }
 			}
 		)
-		local movementAnimations = {
-
-			idle = "fertilizer_idle",
-			idleRelaxed = "fertilizer_idle_relaxed",
-
-			runFwd = "fertilizer_run_fwd",
-			runBwd = "fertilizer_run_bwd",
-			sprint = "fertilizer_sprint",
-
-			jump = "fertilizer_jump",
-			jumpUp = "fertilizer_jump_up",
-			jumpDown = "fertilizer_jump_down",
-
-			land = "fertilizer_jump_land",
-			landFwd = "fertilizer_jump_land_fwd",
-			landBwd = "fertilizer_jump_land_bwd",
-
-			crouchIdle = "fertilizer_crouch_idle",
-			crouchFwd = "fertilizer_crouch_fwd",
-			crouchBwd = "fertilizer_crouch_bwd"
-		}
-
-		for name, animation in pairs( movementAnimations ) do
-			self.tool:setMovementAnimation( name, animation )
-		end
-
-		if self.tool:isLocal() then
-			self.fpAnimations = createFpAnimations(
-				self.tool,
-				{
-					idle = { "fertilizer_idle", { looping = true } },
-
-					sprintInto = { "fertilizer_sprint_into", { nextAnimation = "sprintIdle",  blendNext = 0.2 } },
-					sprintIdle = { "fertilizer_sprint_idle", { looping = true } },
-					sprintExit = { "fertilizer_sprint_exit", { nextAnimation = "idle",  blendNext = 0 } },
-
-					use = { "fertilizer_paint", { nextAnimation = "idle" } },
-
-					equip = { "fertilizer_pickup", { nextAnimation = "idle" } },
-					unequip = { "fertilizer_putdown" }
-				}
-			)
-		end
-		setTpAnimation( self.tpAnimations, "idle", 5.0 )
-		self.blendTime = 0.2
-
+	end
+	setTpAnimation( self.tpAnimations, "idle", 5.0 )
+	self.blendTime = 0.2
 end
 
 function TorchTool.client_onUpdate( self, dt )
@@ -108,6 +114,14 @@ function TorchTool.client_onUpdate( self, dt )
 
 	if self.tool:isLocal() then
 		if self.equipped then
+			local item = sm.localPlayer.getActiveItem()
+			if item ~= self.cl.equippedItem and isAnyOf(item, torches) then
+				self.cl.lit = item == obj_torch_lit
+
+				self.network:sendToServer("sv_updateFire", item == obj_torch_lit)
+				self.network:sendToServer("sv_equip", item)
+			end
+
 			if isSprinting and self.fpAnimations.currentAnimation ~= "sprintInto" and self.fpAnimations.currentAnimation ~= "sprintIdle" then
 				swapFpAnimation( self.fpAnimations, "sprintExit", "sprintInto", 0.0 )
 			elseif not self.tool:isSprinting() and ( self.fpAnimations.currentAnimation == "sprintIdle" or self.fpAnimations.currentAnimation == "sprintInto" ) then
@@ -173,21 +187,33 @@ function TorchTool.client_onUpdate( self, dt )
 end
 
 function TorchTool.client_onEquip( self )
-	print("client_onEquip")
 	if self.tool:isLocal() then
-		self.network:sendToServer("sv_equip", sm.localPlayer.getActiveItem())
+		local item = sm.localPlayer.getActiveItem()
+		self.network:sendToServer("sv_equip", item)
 	end
 end
 
 function TorchTool:sv_equip( item )
-	print("sv_equip")
+	if item == obj_torch_lit then
+		self:sv_updateFire(true)
+	end
+
 	self.network:sendToClients("cl_equip", item)
 end
 
 function TorchTool:cl_equip( item )
-	print("cl_equip")
 	self.wantEquipped = true
+	self.cl.equippedItem = item
 
+	self:cl_updateRenderables( item, false )
+
+	setTpAnimation( self.tpAnimations, "pickup", 0.0001 )
+	if self.tool:isLocal() then
+		swapFpAnimation( self.fpAnimations, "unequip", "equip", 0.2 )
+	end
+end
+
+function TorchTool:cl_updateRenderables( item, loadAnim )
 	local currentRenderablesTp = {}
 	local currentRenderablesFp = {}
 
@@ -205,24 +231,29 @@ function TorchTool:cl_equip( item )
 
 	self:cl_loadAnimations()
 
-	setTpAnimation( self.tpAnimations, "pickup", 0.0001 )
-	if self.tool:isLocal() then
-		swapFpAnimation( self.fpAnimations, "unequip", "equip", 0.2 )
+	if loadAnim == nil then
+		setTpAnimation( self.tpAnimations, "idle", 0.0001 )
+		if self.tool:isLocal() then
+			setFpAnimation( self.fpAnimations, "idle", 0.0001 )
+		end
 	end
 end
 
 function TorchTool.client_onUnequip( self )
+	self.cl.equippedItem = sm.uuid.getNil()
 	self.wantEquipped = false
 	self.equipped = false
 	if sm.exists( self.tool ) then
 		setTpAnimation( self.tpAnimations, "putdown" )
-		if self.tool:isLocal() and self.fpAnimations.currentAnimation ~= "unequip" then
+		if self.tool:isLocal() then
 			if self.cl.lit then
 				self.cl.lit = false
-				self.network:sendToServer("sv_updateFire", self.cl.lit)
+				self.network:sendToServer("sv_updateFire", false)
 			end
 
-			swapFpAnimation( self.fpAnimations, "equip", "unequip", 0.2 )
+			if self.fpAnimations.currentAnimation ~= "unequip" then
+				swapFpAnimation( self.fpAnimations, "equip", "unequip", 0.2 )
+			end
 		end
 	end
 end
@@ -255,13 +286,16 @@ function TorchTool.client_onEquippedUpdate( self, primaryState, secondaryState, 
 end
 
 function TorchTool:sv_updateFire( toggle )
-	self.network:sendToClients("cl_updateFire", toggle)
+	local item = toggle and obj_torch_lit or obj_torch_burnt
+	self.network:sendToClients("cl_updateFire", { toggle = toggle, item = item })
 end
 
-function TorchTool:cl_updateFire( toggle )
-	if toggle then
+function TorchTool:cl_updateFire( args )
+	if args.toggle then
 		self.cl.effect:start()
 	else
 		self.cl.effect:stop()
 	end
+
+	self:cl_updateRenderables( args.item )
 end
