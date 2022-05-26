@@ -6,11 +6,11 @@
 		"craftTime": 35,
 		"ingredientList": [
 			{
-				"quantity": 50,
+				"quantity": 10,
 				"itemId": "c0dfdea5-a39d-433a-b94a-299345a5df46"
 			},
 			{
-				"quantity": 10,
+				"quantity": 5,
 				"itemId": "5530e6a0-4748-4926-b134-50ca9ecb9dcf"
 			},
 			{
@@ -26,7 +26,7 @@
 		"craftTime": 17,
 		"ingredientList": [
 			{
-				"quantity": 20,
+				"quantity": 5,
 				"itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
 			}
 		]
