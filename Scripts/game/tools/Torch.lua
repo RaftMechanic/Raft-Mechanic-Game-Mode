@@ -6,7 +6,11 @@ dofile "$SURVIVAL_DATA/Scripts/game/survival_shapes.lua"
 
 TorchTool = class()
 
-local renderables =   {"$CONTENT_DATA/Characters/Char_Tools/Char_torch/char_torch.rend" }
+local renderables = {
+	[tostring(obj_torch)] = "$CONTENT_DATA/Characters/Char_Tools/Char_torch/char_torch.rend",
+	[tostring(obj_torch_lit)] = "$CONTENT_DATA/Characters/Char_Tools/Char_torch/char_torch_lit.rend",
+	[tostring(obj_torch_burnt)] = "$CONTENT_DATA/Characters/Char_Tools/Char_torch/char_torch_burnt.rend"
+}
 local renderablesTp = {"$SURVIVAL_DATA/Character/Char_Male/Animations/char_male_tp_fertilizer.rend", "$SURVIVAL_DATA/Character/Char_Tools/Char_fertilizer/char_fertilizer_tp_animlist.rend"}
 local renderablesFp = {"$SURVIVAL_DATA/Character/Char_Male/Animations/char_male_fp_fertilizer.rend", "$SURVIVAL_DATA/Character/Char_Tools/Char_fertilizer/char_fertilizer_fp_animlist.rend"}
 
@@ -28,6 +32,7 @@ function TorchTool.cl_init( self )
 
 	self.cl = {}
 	self.cl.effect = sm.effect.createEffect( "Fire - small01", self.tool:getOwner().character, "jnt_fertilizer" )
+	self.cl.effect:setOffsetPosition(sm.vec3.new(0, 0.35, -0.35))
 
 	if self.tool:isLocal() then
 		self.cl.lit = false
@@ -168,29 +173,40 @@ function TorchTool.client_onUpdate( self, dt )
 end
 
 function TorchTool.client_onEquip( self )
+	print("client_onEquip")
+	if self.tool:isLocal() then
+		self.network:sendToServer("sv_equip", sm.localPlayer.getActiveItem())
+	end
+end
 
+function TorchTool:sv_equip( item )
+	print("sv_equip")
+	self.network:sendToClients("cl_equip", item)
+end
+
+function TorchTool:cl_equip( item )
+	print("cl_equip")
 	self.wantEquipped = true
 
 	local currentRenderablesTp = {}
 	local currentRenderablesFp = {}
 
+	self.renderable = { renderables[tostring(item)] }
+
 	for k,v in pairs( renderablesTp ) do currentRenderablesTp[#currentRenderablesTp+1] = v end
 	for k,v in pairs( renderablesFp ) do currentRenderablesFp[#currentRenderablesFp+1] = v end
-	for k,v in pairs( renderables ) do currentRenderablesTp[#currentRenderablesTp+1] = v end
-	for k,v in pairs( renderables ) do currentRenderablesFp[#currentRenderablesFp+1] = v end
+	for k,v in pairs( self.renderable ) do currentRenderablesTp[#currentRenderablesTp+1] = v end
+	for k,v in pairs( self.renderable ) do currentRenderablesFp[#currentRenderablesFp+1] = v end
 
-		if self.tool:isLocal() then
-			self.tool:setFpRenderables( currentRenderablesFp )
-		end
-	
-	self.tool:setTpRenderables( currentRenderablesTp )
-	
-	self:cl_loadAnimations()
-
-	self.tool:setTpRenderables( currentRenderablesTp )
-	setTpAnimation( self.tpAnimations, "pickup", 0.0001 )
 	if self.tool:isLocal() then
 		self.tool:setFpRenderables( currentRenderablesFp )
+	end
+	self.tool:setTpRenderables( currentRenderablesTp )
+
+	self:cl_loadAnimations()
+
+	setTpAnimation( self.tpAnimations, "pickup", 0.0001 )
+	if self.tool:isLocal() then
 		swapFpAnimation( self.fpAnimations, "unequip", "equip", 0.2 )
 	end
 end
@@ -201,6 +217,11 @@ function TorchTool.client_onUnequip( self )
 	if sm.exists( self.tool ) then
 		setTpAnimation( self.tpAnimations, "putdown" )
 		if self.tool:isLocal() and self.fpAnimations.currentAnimation ~= "unequip" then
+			if self.cl.lit then
+				self.cl.lit = false
+				self.network:sendToServer("sv_updateFire", self.cl.lit)
+			end
+
 			swapFpAnimation( self.fpAnimations, "equip", "unequip", 0.2 )
 		end
 	end

@@ -1,0 +1,27 @@
+{
+	"lodList": [{
+		"mesh": "$CONTENT_DATA/Characters/Char_Tools/Char_torch/char_torch.dae",
+		"includes" : ["POSITION", "UV0", "NORMAL", "TANGENTS", "BLEND_INDICES", "BLEND_WEIGHTS"],
+
+		"subMeshMap": {
+				"farmbot" : {
+				"textureList": [
+					"$CONTENT_DATA/Objects/Textures/Interactables/Torch/torch_leg_burnt.tga",
+					"$GAME_DATA/Character/Char_Tools/Char_spudgun/Base/char_spudgun_grip_asg.tga",
+					"$GAME_DATA/Character/Char_Tools/Char_spudgun/Base/char_spudgun_grip_nor.tga"
+				],
+				"color": "ffffff",
+				"material": "DifAsgNor"
+			},
+				"cotton": {
+					"material": "DifAsgNor",
+					"textureList": [
+						"$CONTENT_DATA/Objects/Textures/Interactables/Torch/torch_cotton_burnt.tga",
+                        "$SURVIVAL_DATA/Objects/Textures/consumable/Obj_consumable_cotton_asg.tga",
+                        "$SURVIVAL_DATA/Objects/Textures/consumable/Obj_consumable_cotton_nor.tga"
+					]
+				}
+			},
+		"maxViewDistance": 1000.0
+	}]
+}

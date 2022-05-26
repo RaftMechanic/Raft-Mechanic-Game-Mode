@@ -1,0 +1,63 @@
+{
+    "SaplingGrow": "#00cc00Crescendo...",
+    "SaplingNeedLiquid": "Annaffia",
+    "SaplingNeedGround": "Piazza nel #ff0000terreno",
+    "SaplingCantErase": "Non puoi cancellare l'alberello mentre cresce!",
+
+    "FarmerBallTalk": "Parla",
+    "FarmerBallHelp": "Stavo usando il bagno perchè la mia bottiglia era piena e ora... Beh, sono riuscito a portare qui qualche esplosivo un po' di tempo fa. Ho provato a rompere il muro per andare fuori, ma forse tu puoi finire quello che ho iniziato.",
+    "FarmerBallThanks": "Grazie, è la prima volta che vedo la luce del sole in anni! Non vedo l'ore di vedere Bob il pazzo di nuovo",
+
+    "HarpoonPickup": "Raccolto arpione",
+    "LogbookAdd": "Aggiungi al logbook",
+
+	"BinocularsZoomFactor": "Fattore zoom: ",
+
+    "CreationRotator_Title": "Ruotatore di creazione",
+    "CreationRotator_Force": "Moltiplicatore di forza",
+    "CreationRotator_Ver_Hor": "Verticale + Orizzontale",
+    "CreationRotator_Ver": "Verticale",
+    "CreationRotator_Hor": "Orizzontale",
+    "CreationRotator_Roll": "Rotola",
+    "CreationRotator_Mult": "Moltiplicatore:",
+    "CreationRotator_CurrentMode": "Modalità corrente: #ffffff",
+    "CreationRotator_Cycle": "'%s' per scorrere avanti, '%s' per cambiare metodo di input e '%s' + '%s' per cambiare il moltiplicatore di forza.",
+    "CreationRotator_CurrentInput": ", #4f4f4fCurrent input#4f4f4fMetodo di input corrente: #ffffff",
+    "CreationRotator_Input_mouse": "Mouse",
+    "CreationRotator_Input_wasd": "WASD",
+
+    "WaterSensor_Title": "Sensore d'acqua",
+    "WaterSensor_Radius_Title": "Raggio di rilevamento(blocchi)",
+    "WaterSensor_Radius": "Raggio: %d blocchi", 
+    "WaterSensor_CurrentRadius": "Raggio di rilevamento corrente: #ffffff",
+    "WaterSensor_CurrentRadius_blocks": " blocco(i)#4f4f4f, Visualizzazione: ",
+    "WaterSensor_Adjust_tip": "'%s' per modificare il raggio di rilevamento e '%s' per alternare la visualizzazione del raggio.",
+    "WaterSensor_Visualization_on": "#269e44ON",
+    "WaterSensor_Visualization_off": "#9e2626OFF",
+
+    "Converter_Cycle": "'%s' per scorrere avanti e '%s' per scorrere indietro.",
+
+    "Sail_Tie": "Lega la vela",
+    "Sail_Lower": "Abbassa la vela",
+    "Sail_Controlled": "Controllato da un'altro input",
+
+    "Trader_dialogue1": "Mhh.. Bertha.. Io farò… OH! Tu.. Sei vivo?! Sono felice di vedere un'altra anima! Hm… Oh.. Penso di sapere un modo per eh- fuggire dal pianeta. Se potresti portare a Berth- eh, a me della verdura impacchettata, sarebbe grandioso! Hehe.. Ti ho segnato la posizione di una stazione di impacchettamento. Impacchetta 2 contenitori di carote e 2 di barbabietole rosse. Poi puoi portarli alla grande vecchia Bertha- eh, la grande pompa di là.. Hehe.",
+    "Trader_dialogue2": "Che bella sorpresa vederti qui di nuovo! Cioè, non che mi aspettavo di trovare i tuoi arti sulle sponde.. Ehm. Comuqnue, sfortunatamente le verdure sono solo parte della ricett- eh piano. Le altre risorse sono state tenute segrete. Però ho rilevato attività anormale di.. Woc su un'isola strana qui vicino. Dovresti investigare.",
+    "Trader_dialogue3": "Perfetto! Presto sarà mi- eh, potremmo abbandonare questo pianeta. *fissa le note* Ah... SI.. LO SAPEVO! Muhahahahaa- Oh, scusa Non sono abituato ad avere compagnia, almeno dopo l'incident- Comunque, mi devi portare altri 2 pacchi di mirtilli e 2 di banane. Ti ho segnato la posizione di un'altra stazione di impacchettamento vicina.",
+    "Trader_dialogue4": "*Beve* AH, proprio quello che mi serve! Mi sei mancato così tanto sunshake... Dov'è la mia educazione? Perché non offro un sunshake pure a te? Posso crearne quanti ne vuoi, se mi porti ingredienti freschi. Eh, certo che questo era necessario.. perché.. il.. ah.. sunshake contiene, ah, coordinate di alcune rovine. Visto che la mia vita è ora salvata dal sunshake, potresti anche cercare di liberare il resto del mio equipaggio. Ho sentito dire che potrebbe esserci una chiave nella città in rovine. Se riuscissi a mettere le mie mani su questo dispositivo, potremmo iniziare una missione di salvataggio.",
+    "Trader_dialogue5": "Non riesco a crederci che sei viv- ah, così avventuroso! Fammi vedere questa chiave. AH.. SI.. Un circuito così semplice… Dovrei riuscire a ricrearlo facilmente con gli attrezzi giusti. Ma con questa chiave, dovresti riuscire ad entrare nei magazzini dove il resto del mio equipaggio è tenuto in ostaggio per aver usato i bagni al posto del.. Beh, non chiedere perché ci sono così tante bottiglie d'acqua nell'oceano.. Comunque, raggiungi il tetto di un magazzino e salva uno di loro! Poi torna da ma e la grande vecchia Bertha se ne occuperà.",
+    "Trader_dialogue6": "Mi è mancato avere compagnia per così tanto tempo *singhiozza*. Continua a salvare il resto del mio equipaggio! Nel frattempo penserò ad un piano per portarci via dal pianeta e tornare a casa...",
+    
+    "FishingBait": "Esca: ",
+    "FishingOutOfBait": "Finite le esche!",
+    "FishingBaitNone": "Niente",
+    "FishingGetItem": "Pescato: ",
+
+    "JunkCollector_Full": "#ff0000Collect#ff0000Raccoglitore pieno",
+    "JunkCollector_SlotsOpen": "Spazio rimasto:#ffffff %d slot",
+
+    "HammockAllPlayers": "Tutti i giocatori devono dormire per saltare la notte",
+    "HammockNight": "Puoi solo dormire di notte",
+
+    "ClamDivingSucks": "#ff88ffL'ho già detto che odio fare clam diving?"
+}

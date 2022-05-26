@@ -1,0 +1,206 @@
+{
+   "01a4d4c6-469a-4d28-8c69-b74fff83fbdf": {
+        "description": "Pflanze ihn in eine Baumschule oder auf den Boden, um einen weiteren Baum zu pflanzen. Anscheined verursachen seltsame Flüssigkeiten seltsames Baumwachstum.",
+        "title": "Fichten-Setzling"
+   },
+   "03075a5a-92f5-49bd-b132-7d8e0cb80156": {
+        "description": "Verwende ein Logisches Eingangssignal um ihn ein- und auszuschalten. Er ist schwer wenn er ausgeschaltet ist. Aber sehr leicht und schwimmfähig wenn er aktiviert ist.",
+        "title": "Luftbehälter"
+   },
+   "0db1ecd5-503d-4dd3-807e-869c243a7c08": {
+        "description": "Ein spitzer Stock. Nützlich um Dinge zu stechen und zu verletzen.",
+        "title": "Speer"
+   },
+   "1daebe24-4e16-422c-b5e7-c3f45f9296d8": {
+        "description": "Erlaubt dir Holz zu hacken!",
+        "title": "Axt"
+   },
+   "2af00456-b22e-4743-b338-a91934aba7c5" : {
+      "description" : "Kocht leckeres Essen, was deine Lebensleiste füllt oder deine gefallen Freunde wiederbelebt. Du solltest einen auf deinem Floß haben",
+      "title" : "Leichter Kockbot"
+   },
+   "4a971f7d-14e6-454d-bce8-0879243c4474": {
+        "description": "Das ist das Zeug aus dem dein Floß gemacht ist. Platziere mehr um dein Floß zu vergrößern (oder zu reparieren).",
+        "title": "Floßboden"
+   },
+   "4a971f7d-14e6-454d-bce8-0879243c4575":{
+        "description": "Diese *fette* Floßbasis sollte für diese lästigen Haifischbots schwer zu knabbern sein!",
+        "title": "Verstärkter Floßboden"
+   },
+   "4a971f7d-14e6-454d-bce8-0879243c4857" : {
+      "description" : "Spitz und Scharf! Munition für das Harpunengewehr",
+      "title" : "Harpune"
+   },
+   "4bd05d7d-898c-4947-8788-e34b84b5d386" : {
+      "description" : "Diwasserstoffmonoxid (oder auch Wassah). Perfekt zum gießen von Pflanzen, Bäumen oder deinen Rachen!",
+      "title" : "Sauberes Wasser"
+   },
+   "4c1aed86-a402-4240-81e7-b67edf433fd5" : {
+      "description": "Was gibt es Schöneres als in einer Hängematte zu entspannen und die Weite des Ozeans zu genießen...",
+        "title": "Hängematte"
+   },
+   "4e69beb8-4519-4fff-a382-fdcfffbad6c2" : {
+      "description": "Er ist kompakt aber nicht nicht so leistungsstark.",
+        "title": "Kleiner Propeller"
+   },
+   "509505f1-b772-4acd-9827-f9a605a979ec" : {
+      "description": "Drücke 'E' um zwischen den Tasten zu wechseln. Gibt ein logisches Signal aus wenn die ausgewählte Taste gedrückt wird.",
+        "title": "WASD Konvertierer""
+   },
+   "5cb15c93-4fa9-48da-9974-2e95ca6c9e1c" : {
+      "description" : "Der Raffeneriebot verarbeited deine gesammelten Stämme. Schmeiß sie per Hand ein oder stelle einen Ressourcensammler mit Ressourcen vor ihn. Du solltest ihn auf deinem Floß haben.",
+      "title" : "Leichter Raffeneriebot"
+   },
+   "67dd0023-023d-46cb-9839-e4ada2609a9b" : {
+      "description" : "Grillt Essen, benötigt Holz als Treibstoff.",
+      "title" : "Grill"
+   },
+   "6db7aacf-f2b3-4cbb-a6d2-2a01d5ee5562" : {
+      "description": "Gibt ein logisches Signal aus wenn er Wasser berührt.",
+        "title": "Wassersensor"
+   },
+   "71ac7645-57f5-4d49-9574-c8482b431862" : {
+      "description": "Dreht deine Kreation basierend auf der Kamerarichtung oder dem A/D-Eingang. Drücke 'E' um einen Modus auszuwählen. Die ersten 3 Modis sind Maussteuerung und Rollen - A/D. Gibt während des Betriebs ein Logiksignal aus.",
+        "title": "Kreations-Dreher"
+   },
+   "767a3121-2c31-473c-a5ab-27e188fdd55a" : {
+      "description" : "Benutze den Kleidungsbot um neue Kleidung für deinen Mechaniker herzustellen. Gib ihn einfach deine Gewandsboxen und die Richtige Menge Baumwolle. Du kannst dein Aussehen mit der blauen Umkleide verändern. Du solltest es auf deinem Floß haben.",
+      "title" : "Leichter Kleidungsbot"
+   },
+   "7c440c4a-5919-4baa-a946-0bb89b8c4d5d" : {
+      "description" : "Ist noch sehr salzig... Nicht wirklich essbar...",
+      "title" : "Roher Fisch"
+   },
+   "7c440c4a-5919-4baa-a946-0bb89b8c4d85" : {
+      "description" : "Dieser Fisch ist ein bisschen SUS",
+      "title" : "Roher Fischus"
+   },
+   "7ceccadf-010f-4a45-907f-18ccc11c509c" : {
+      "description": "Ist deine Lunge zu klein? Das wird dir nicht bei deinen Ausdauerproblemen helfen, aber du kannst länger im Wasser bleiben.",
+        "title": "Atemlufttank"
+   },
+   "7ece8b10-5cc0-4791-b75e-09858ef1b9c4" : {
+      "description": "Mit den Flossen kannst du schneller schwimmen. Und sie sehen auch gut aus!",
+        "title": "Flossen"
+   },
+   "80c9edb7-0f86-4899-bf60-c3baca3fa841" : {
+      "description": "Reinigt Wasser zu Trinkwasser. Benötigt Holz als Treibstoff.",
+        "title": "Wasserreiniger"
+   },
+   "819fb238-a68b-4aab-a6f2-c1037f6bfb5b" : {
+      "description": "Pflanze deine Bäume wo du willst! Du bekommt Setzlinge von echten Bäumen! (nicht wie die kultivierten, die sind gefälscht)",
+        "title": "Baumschule"
+   },
+   "869d4736-289a-4952-96cd-8a40117a2d28" : {
+      "description" : "Noch etwas salzig...",
+      "title" : "Wasser"
+   },
+   "885513a7-baa3-44ee-aa6e-7546bf0715a7" : {
+      "description": "Lasse ihn drehen damit dein Floß brrrr geht. Seine Kraft hängt von der Drehrichtung und der Geschwindigkeit ab. (In der Luft deutlich schwächer).",
+        "title": "Propeller"
+   },
+   "8e75cddb-040e-4813-8dd6-7e72f3288a91" : {
+      "description": "Kann zum Anbau von Feldfrüchten auf dem Floß verwendet werden und löst keine Raubzüge aus.",
+        "title": "Schrott-Feld""
+   },
+   "8f460344-ef34-42ab-99e3-d3bed9af4b52" : {
+      "description": "Zeigt Windrichtung",
+        "title": "Windsocke"
+   },
+   "9e815dcf-cfb0-4672-b0f4-34f1e9ecc1a1" : {
+      "description": "Pflanze ihn in eine Baumschule oder auf den Boden, um einen weiteren Baum zu pflanzen. Anscheined verursachen seltsame Flüssigkeiten seltsames Baumwachstum.",
+        "title": "Kiefern-Setzling"
+   },
+   "a930a42f-63ed-4fb0-933e-56ce8a889cc5" : {
+      "description" : "Perfekt um Stämme zu sammeln und zu stapeln. Platziere es neben einen Raffeneriebot um sie in Blöcke umzuwandeln. Du solltest es auf deinem Floß haben.",
+      "title" : "Leichter Ressourcensammeler"
+   },
+   "b5ade3b0-be48-4a61-a8c2-13a4cedf1343" : {
+      ""description": "Wirf den Hacken um Müll direkt in deine gierigen Hände zu ziehen! Drücke Rechtsklick um ihn schneller einzufahren",
+        "title": "Wurfhacken"
+   },
+   "b63c6440-dfc2-4da7-acdb-3c385080b2e4" : {
+      "description" : "Der Handwerkerbot hilft dir beim Herstellen von allen Möglichen Dingen. Du sollst ihn auf deinem Floß haben.",
+      "title" : "Leichter Handwerkerbot"
+   },
+   "b84e5fbb-97f2-4de5-bc39-4adb325a56f1" : {
+      "description": "Pflanze ihn in eine Baumschule oder auf den Boden, um einen weiteren Baum zu pflanzen. Pflanze ihn in eine Baumschule oder auf den Boden, um einen weiteren Baum zu pflanzen. Anscheined verursachen seltsame Flüssigkeiten seltsames Baumwachstum.",
+        "title": "Laubbaum-Setzling"
+   },
+   "bb641a4f-e391-441c-bc6d-0ae21a069477" : {
+      "description": "Ein Holzhammer. Kann für vieles verwendet werden, ist aber nicht gut bei diesen.",
+        "title": "Holzhammer"
+   },
+   "c2418698-7a91-40fa-95a3-3be5ddb3ec1d" : {
+      "description": "Die Mutter aller Bienen. Was für ein Fang!",
+        "title": "Bienenkönigin"
+   },
+   "c57fe6d6-03b1-46d4-9104-29cf19f176ab" : {
+      "description": "Schaut gut aus, stinkt aber.",
+        "title": "Gegrillter Fisch"
+   },
+   "c80e2932-0d21-48bb-b5a2-dba03d73cfb7" : {
+      "description": "Doppelt so viel Boden bringt doppelt so viel Spaß! Lässt 2 Pflanzen auf einmal wachsen und löst keine Raids aus.",
+        "title": "Großes Feld"
+   },
+   "c883b283-ea7a-4bba-af0d-5c13fd73051d" : {
+      "description": "Kann die Steine am Meeresgrund brechen",
+        "title": "Spitzhacke"
+   },
+   "ce986935-5b57-4249-acbb-04ef6666bb03" : {
+      "description" : "Dekoriere dein Floß (und hoffe dass keiner Feuerphysik hinzufügt).",
+      "title" : "Fackel"
+   },
+   "e34387d3-fa29-4831-89b8-c94417b6fce6" : {
+      "description": "Ein mächtiges Gewehr das spitze Harpunenpfeile verschießt! Du kannst sie einsammeln nachdem sie auf den Boden gefallen sind. (Kann unter Wasser verwendet werden)",
+        "title": "Harpunengewehr"
+   },
+   "e3bcf8fa-68d7-49a8-b17b-c1e864d53b69" : {
+      "description": "Wirf den Haken aus und warte bis der Fisch zu knabbern beginnt. Ziehe den Haken ein wenn der Fisch anbeißt und ein gewaltiges Platschen folgt! Der Fisch wird kämpfen und kleine Spritzer und Geräusche erzeugen! Aus dem Meer lassen sich seltsame Dinge fischen...",
+        "title": "Angelrute"
+   },
+   "f3aeb880-f103-43c8-947b-d0525eaeb505": {
+	  "title": "Fernrohr",
+	  "description": "Ein Weikzeug um Sachen von der Ferne zu sehen."
+   },
+   "e9c7d080-ae4b-4fec-b626-34afda6f5114" : {
+      "description": "Pflanzen. Wachsen. Auspressen. Wiederholen.",
+        "title": "Saatpresse"
+   },
+   "ebabda72-94d8-40c5-ab07-7001d1b67380" : {
+      "description": "Nicht die Bienen! Wenn du eine Königin fängst kannst du dein eigenes Bienenest haben! Genieße frisches Bienenwachs (und Stiche)",
+        "title": "Bienenstock"
+   },
+   "eea9794b-bcdf-431e-bdcd-7b2ff6ffa145" : {
+      "description": "Fange die Kraft des Windes! Stell sicher, dass es für maximalen Schub in die richtige Richtung zeigt. Die Windsocke zeigt die Windrichtung.",
+        "title": "Segel"
+   },
+   "eefb0967-d21c-445e-8120-0a09422e1374" : {
+      "description" : "Pflanze ihn in eine Baumschule oder auf den Boden, um einen weiteren Baum zu pflanzen. Anscheined verursachen seltsame Flüssigkeiten seltsames Baumwachstum.",
+      "title" : "Birkensetzling"
+   },
+   "f3163e62-e6c3-475c-805e-559f8bb07ad1" : {
+      "description": "Mit der Werkbank kannst du wichtige Gegenstände für dich und dein Floß herstellen.",
+        "title": "Werkbank"
+   },
+   "f95beb80-49c8-4d4c-98e9-5b87225c4570" : {
+      "description": "Hilfe?\n...\n\nIst irgendwer hier draußen?\n...",
+        "title": "Behilfsmäßige Radio Antenne"
+   },
+   "7c440c4a-5919-4baa-a946-0bb89b8c4d5e" : {
+      "description" : "I know what mate in one is, you just blundered En Passant! (Ganz ehrlich ich hab keine Ahnung was das heißen soll. -Der Übersetzer)",
+      "title" : "Le Fishe Au Chocolat"
+   },
+   "74a3f240-65b2-4f52-9555-666217366a0a" : {
+      "description" : "Nicht das Beste Essen, aber es ist essbar.",
+      "title" : "Rohes Woc Fleisch"
+   },
+   "74a3f240-65b2-4f52-9555-666217366a0e" : {
+      "description" : "Das perfekte medium-rare!",
+      "title" : "Gegrilltes Woc Fleisch"
+   },
+   "f2382297-44b4-4259-99ce-b11da671ac51" : {
+      "description" : "Sammelt den ganzen Ozeanmüll für dich! Du fauler Sunshake-Suchti...",
+      "title": "Sammelnetz"
+   }
+}

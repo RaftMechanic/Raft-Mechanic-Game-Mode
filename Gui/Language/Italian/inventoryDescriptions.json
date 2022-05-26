@@ -1,0 +1,206 @@
+{
+   "01a4d4c6-469a-4d28-8c69-b74fff83fbdf" : {
+      "description" : "Piantalo in un appezzamento di terra o nel terreno per fare crescere un'altro albero. Si dice che strani fluidi fanno crescere strani alberi... ",
+      "title" : "Seme di abete"
+   },
+   "03075a5a-92f5-49bd-b132-7d8e0cb80156" : {
+      "description" : "Usa un segnale di lugica per attivarlo e disattivarlo. È pesante quando disattivato, ma molto leggero e galleggiante quando attivato.",
+      "title" : "Bombola d'aria"
+   },
+   "0db1ecd5-503d-4dd3-807e-869c243a7c08" : {
+      "description" : "Un bastone appuntito. Utile per pungere e fare male.",
+      "title" : "Lancia"
+   },
+   "1daebe24-4e16-422c-b5e7-c3f45f9296d8" : {
+      "description" : "Ti permette di tagliare un po' di legna!",
+      "title" : "Ascia"
+   },
+   "2af00456-b22e-4743-b338-a91934aba7c5" : {
+      "description" : "Cuoce cibo che ti curerà e rianimerà i tuoi amici. Dovresti averne uno sulla tua zattera.",
+      "title" : "Cookbot leggero"
+   },
+   "4a971f7d-14e6-454d-bce8-0879243c4474" : {
+      "description" : "Questo è ciò di cui è fatta la tua zattera. Piazzane altri per espandere la tua zattera (o sistemarla).",
+      "title" : "Base della zattera"
+   },
+   "4a971f7d-14e6-454d-bce8-0879243c4575" : {
+      "description" : "Questa base della zattera *spessa* dovrebbe essere difficile da moredere per quei puzzolenti Sharkbot!",
+      "title" : "Base della zattera rinforzata"
+   },
+   "4a971f7d-14e6-454d-bce8-0879243c4857" : {
+      "description" : "Spinoso e appuntito! Usato come munizione per la pistola ad arpioni",
+      "title" : "Arpione"
+   },
+   "4bd05d7d-898c-4947-8788-e34b84b5d386" : {
+      "description" : "Monossido di diidrogeno (cioè acquah). Eccellente per fare crescere alberi, piante, o dissetarti!",
+      "title" : "Acqua pulita"
+   },
+   "4c1aed86-a402-4240-81e7-b67edf433fd5" : {
+      "description" : "Cosa c'è di meglio di rilassarsi su un'amaca e godersi la vastezza dell'oceano...",
+      "title" : "Amaca"
+   },
+   "4e69beb8-4519-4fff-a382-fdcfffbad6c2" : {
+      "description" : "Più compatto ma meno potente.",
+      "title" : "Elica piccola"
+   },
+   "509505f1-b772-4acd-9827-f9a605a979ec" : {
+      "description" : "Interagisci per cambiare tasti. Rilascia un segnale di logica quando il tasto selezionato è permuto.",
+      "title" : "Convertitore WASD"
+   },
+   "5cb15c93-4fa9-48da-9974-2e95ca6c9e1c" : {
+      "description" : "Lascia che il Refinebot ti aiuti a raffinare le tue risorse. Mettile a mano o piazzando un Raccoglitore di risorse. Dovresti averne uno sulla tua zattera.",
+      "title" : "Refinebot leggero"
+   },
+   "67dd0023-023d-46cb-9839-e4ada2609a9b" : {
+      "description" : "Griglia cibo, Necessita legno come combustibile.",
+      "title" : "Griglia"
+   },
+   "6db7aacf-f2b3-4cbb-a6d2-2a01d5ee5562" : {
+      "description" : "Rilascia un segnale di logica quando tocca l'acqua.",
+      "title" : "Sensore d'acqua"
+   },
+   "71ac7645-57f5-4d49-9574-c8482b431862" : {
+      "description" : "Ruota la tua zattera nella direzione della tua visuale o in base all'input A/D. Premi 'E' per selezionare una modalità. Le prime 3 modalità - controllo mouse, Rotola - A/D. Rilascia un segnale quando in uso.",
+      "title" : "Rotazione della creazione"
+   },
+   "767a3121-2c31-473c-a5ab-27e188fdd55a" : {
+      "description" : "Usa il Dressbot per creare nuovi vestiti per il tuo meccanico. Aggiungi le tue scatole di vestiti e la quantità giusta di cotone. Puoi anche cambiare il tuo aspetto usando l'armadio blu. Dovresti averne uno sulla tua zattera.",
+      "title" : "Dressbot leggero"
+   },
+   "7c440c4a-5919-4baa-a946-0bb89b8c4d5d" : {
+      "description" : "È ancora molto salato... Non molto commestibile..",
+      "title" : "Pesce crudo"
+   },
+   "7c440c4a-5919-4baa-a946-0bb89b8c4d85" : {
+      "description" : "Quel pesce è un SUS",
+      "title" : "Pescesus crudo"
+   },
+   "7ceccadf-010f-4a45-907f-18ccc11c509c" : {
+      "description" : "I tuoi polmoni sono troppo piccoli? Questo non sistemerà i tuoi problemi di esercizio, ma sopravviverai più tempo sott'acqua. Connetti a un sedile per togliere un po' di peso dalle tue spalle.",
+      "title" : "Bombola di ossigeno"
+   },
+   "7ece8b10-5cc0-4791-b75e-09858ef1b9c4" : {
+      "description" : "Con un paio di pinne, puoi nuotare molto più velocemente!",
+      "title" : "Pinne"
+   },
+   "80c9edb7-0f86-4899-bf60-c3baca3fa841" : {
+      "description" : "Trasforma acqua invottigliata normale in acqua pulita che puoi bere, ha bisogno di legno come carburante.",
+      "title" : "Purificatore d'acqua"
+   },
+   "819fb238-a68b-4aab-a6f2-c1037f6bfb5b" : {
+      "description" : "Fai crescere gli alberi dove vuoi! Ottieni semi dai veri alberi! (non che gli alberi crescuti siano finti)",
+      "title" : "Appezzamento di terra"
+   },
+   "869d4736-289a-4952-96cd-8a40117a2d28" : {
+      "description" : "Ancora un po' salata...",
+      "title" : "Acqua"
+   },
+   "885513a7-baa3-44ee-aa6e-7546bf0715a7" : {
+      "description" : "Fallo girare per far fare brrrr alla tua zattera. La sua spinta dipende dalla direzione e velocità. (Molto meno potente in aria)",
+      "title" : "Elica"
+   },
+   "8e75cddb-040e-4813-8dd6-7e72f3288a91" : {
+      "description" : "Può essere usato per far crescere piante sulla zattera, non attira robot.",
+      "title" : "Campo rottamato"
+   },
+   "8f460344-ef34-42ab-99e3-d3bed9af4b52" : {
+      "description" : "Mostra la direzione del vento",
+      "title" : "Calza a vento"
+   },
+   "9e815dcf-cfb0-4672-b0f4-34f1e9ecc1a1" : {
+      "description" : "Piantalo in un appezzamento di terra o nel terreno per fare crescere un'altro albero. Si dice che strani fluidi fanno crescere strani alberi...",
+      "title" : "Seme di pino"
+   },
+   "a930a42f-63ed-4fb0-933e-56ce8a889cc5" : {
+      "description" : "Perfetto per raccogliere risorse. Quando pieno, piazzalo vicino a un Refinebot e trasformerà le risorse in blocchi. Dovresti averne uno sulla zattera.",
+      "title" : "Raccoglitore di risorse leggero"
+   },
+   "b5ade3b0-be48-4a61-a8c2-13a4cedf1343" : {
+      "description" : "Lancia l'uncino per tirare la spazzatura dall'oceano alle tue avide mani! Premi il tasto destro del mouse per far ritornare più velocemente l'uncino.",
+      "title" : "Uncino da tiro"
+   },
+   "b63c6440-dfc2-4da7-acdb-3c385080b2e4" : {
+      "description" : "Il Craftbot ti aiuterà a fabbricare tutto ciò che ti serve. Dovresti averne uno sulla zattera.",
+      "title" : "Craftbot leggero"
+   },
+   "b84e5fbb-97f2-4de5-bc39-4adb325a56f1" : {
+      "description" : "Piantalo in un appezzamento di terra o nel terreno per fare crescere un'altro albero. Si dice che strani fluidi fanno crescere strani alberi...",
+      "title" : "Ghianda di albero foglioso"
+   },
+   "bb641a4f-e391-441c-bc6d-0ae21a069477" : {
+      "description" : "Un martello di legno. Utile per tutto, ma non molto potente.",
+      "title" : "Martello di legno"
+   },
+   "c2418698-7a91-40fa-95a3-3be5ddb3ec1d" : {
+      "description" : "La madre di tutte le api. Che cattura!",
+      "title" : "Ape regina"
+   },
+   "c57fe6d6-03b1-46d4-9104-29cf19f176ab" : {
+      "description" : "È delizioso, ma puzza.",
+      "title" : "Pesce cotto"
+   },
+   "c80e2932-0d21-48bb-b5a2-dba03d73cfb7" : {
+      "description" : "Doppio il campo, doppio il divertimento! Fa crescere 2 piante alla volta, non attira robot.",
+      "title" : "Campo grande"
+   },
+   "c883b283-ea7a-4bba-af0d-5c13fd73051d" : {
+      "description" : "Può rompere le rocce nel fondo dell'oceano",
+      "title" : "Piccone"
+   },
+   "ce986935-5b57-4249-acbb-04ef6666bb03" : {
+      "description" : "Decora la tua zattera usandola (e spera che non venga aggiunta la fisica del fuoco).",
+      "title" : "Torcia"
+   },
+   "e34387d3-fa29-4831-89b8-c94417b6fce6" : {
+      "description" : "Una pistola potente che spara arpioni! Puoi riprenderli dopo che cadono a terra. (Può essere usata sott'acqua)",
+      "title" : "Pistola ad arpioni"
+   },
+   "e3bcf8fa-68d7-49a8-b17b-c1e864d53b69" : {
+      "description" : "Lancia l'amo nell'acqua. Aspetta che il pesce inizi a mordicchiare. Tira quando il pesfe abbocca e vedi la grande schizzata! Il pesce combatterà e schizzerà! Strane cose possono essere pescate...",
+      "title" : "Canna da pesca"
+   },
+   "f3aeb880-f103-43c8-947b-d0525eaeb505": {
+	  "title": "Cannocchiale",
+	  "description": "Un attrezzo per vedere cose da lontano. Saluti dall'isola che osserverai tra poco con questo oggetto."
+   },
+   "e9c7d080-ae4b-4fec-b626-34afda6f5114" : {
+      "description" : "Pianta. Fai crescere. Pressa. Ripeti.",
+      "title" : "Pressa di semi"
+   },
+   "ebabda72-94d8-40c5-ab07-7001d1b67380" : {
+      "description" : "Oh no, le api! Se catturi un'ape regina, puoi avere il tuo alveare! Goditi la cera di miele (e stringhe)",
+      "title" : "Alveare"
+   },
+   "eea9794b-bcdf-431e-bdcd-7b2ff6ffa145" : {
+      "description" : "Cattura la forza del vento! Cerca di puntarla nella direzione del vento per massimizzare la sua spinta. La calza a vento ti nostra la direzione del vento.",
+      "title" : "Vela"
+   },
+   "eefb0967-d21c-445e-8120-0a09422e1374" : {
+      "description" : "Piantalo in un appezzamento di terra o nel terreno per fare crescere un'altro albero. Si dice che strani fluidi fanno crescere strani alberi...",
+      "title" : "Seme di betulla"
+   },
+   "f3163e62-e6c3-475c-805e-559f8bb07ad1" : {
+      "description" : "Usato per fabbricare oggetti essenziali per la zattera",
+      "title" : "Banco da lavoro"
+   },
+   "f95beb80-49c8-4d4c-98e9-5b87225c4570" : {
+      "description" : "Aiuto?\n...\n\C'è qualcuno?\n...",
+      "title" : "Antenna radio improvvisata"
+   },
+   "7c440c4a-5919-4baa-a946-0bb89b8c4d5e" : {
+      "description" : "(Il pesce al cioccolato)\nSo cos'è matto in 1 ma l'hai fatto En Passant!",
+      "title" : "Le Fishe Au Chocolat"
+   },
+   "74a3f240-65b2-4f52-9555-666217366a0a" : {
+      "description" : "Non il migliore tra i cibi, ma almeno è mangiabile.",
+      "title" : "Cotoletta di Woc cruda"
+   },
+   "74a3f240-65b2-4f52-9555-666217366a0e" : {
+      "description" : "Il perfetto medio-raro!",
+      "title" : "Cotoletta di Woc cotta"
+   },
+   "f2382297-44b4-4259-99ce-b11da671ac51" : {
+      "description" : "Raccoglie tutta la spazzature dell'oceano al posto tuo! Dipendente da Sunshake pigro...",
+      "title": "Rete di raccolta"
+   }
+}
