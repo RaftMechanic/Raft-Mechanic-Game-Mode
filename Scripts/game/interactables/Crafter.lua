@@ -239,7 +239,8 @@ local cropEffects = {
 	[tostring(obj_plantables_orange)] = obj_planter_orange,
 	[tostring(obj_plantables_broccoli)] = obj_planter_broccoli,
 	[tostring(obj_plantables_pineapple)] = obj_planter_pipeapple,
-	[tostring(obj_resource_flower)] = obj_planter_flower
+	[tostring(obj_resource_flower)] = obj_planter_flower,
+	[tostring(obj_resource_corn)] = obj_planter_corn
 }
 
 local saplings = {

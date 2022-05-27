@@ -611,6 +611,43 @@
 			},
 			"flammable": false,
             "showInInventory": false
+		},
+        {
+			"uuid": "d4ebdbbe-0f1c-4b3e-93b0-2bfe79436178",
+			"name": "obj_planter_corn",
+            "renderable": {
+                "lodList": [
+                    {
+                        "mesh": "$SURVIVAL_DATA/Harvestables/Mesh/Farmables/hvs_farmables_cornplant.fbx",
+                        "subMeshMap": {
+                             "corn_plant": {
+                                "material": "Leaves",
+                                "textureList": [
+                                    "$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_cornplant_dif.tga",
+                                    "$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_cornplant_asg.tga",
+                                    "$SURVIVAL_DATA/Harvestables/Textures/Farmables/hvs_farmables_cornplant_nor.tga"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+			"box": {
+				"x": 6,
+				"y": 8,
+				"z": 1
+			},
+			"rotationSet": "PropYZ",
+			"sticky": "-Z+Y-Y+X-X",
+			"physicsMaterial": "Fruit",
+			"ratings": {
+				"density": 4,
+				"durability": 3,
+				"friction": 4,
+				"buoyancy": 6
+			},
+			"flammable": false,
+            "showInInventory": false
 		}
 	]
 }

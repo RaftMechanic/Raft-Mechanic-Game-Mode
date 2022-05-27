@@ -24,6 +24,7 @@ obj_planter_broccoli = sm.uuid.new("704c9bb4-747b-4e54-b1f2-d51043929b5b")
 obj_planter_potato = sm.uuid.new("56ac7150-65b2-496d-9c65-0197a99ca571")
 obj_planter_cotton = sm.uuid.new("d9dce2fc-b158-464d-b5a6-163c6e65b512")
 obj_planter_flower = sm.uuid.new("57563b55-39fc-4b1f-be52-3bdeeccd2edc")
+obj_planter_corn = sm.uuid.new("d4ebdbbe-0f1c-4b3e-93b0-2bfe79436178")
 
 --equipment.shapeset
 obj_fins = sm.uuid.new("7ece8b10-5cc0-4791-b75e-09858ef1b9c4")

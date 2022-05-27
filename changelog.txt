@@ -20,3 +20,5 @@
 - You won't loose equipment when dying
 - Added some easter eggs
 - Added raft floor pieces for building
+- Added plantable corn
+- Improved sailing
