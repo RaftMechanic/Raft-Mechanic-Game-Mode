@@ -32,3 +32,4 @@
 - fins and oxygen tanks stay in your inventory when you die
 - hopefully fixed the windsock bug in multiplayer
 - improved and optimised propellers
+- major improvement to crafter code
