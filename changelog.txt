@@ -14,7 +14,7 @@
 - New and smaller purifier model
 - Added wedge to craftbot #wedgegang
 - Glowbugs help you swim faster
-- Added binoculars
+- Added spyglass
 - Sleeping in a hammock skips night!
 - New shark model (and fixed ai?)
 - You won't loose equipment when dying
