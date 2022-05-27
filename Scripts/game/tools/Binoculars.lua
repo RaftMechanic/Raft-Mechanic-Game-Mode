@@ -452,6 +452,7 @@ function Binoculars.cl_onPrimaryUse( self, state )
 
 	self.camTransitionProgress = 0
 	if state == sm.tool.interactState.start and not self.aiming then
+		sm.gui.startFadeToBlack( 0.25, 0.60 )
 		self.aiming = true
 		self.vignette:open()
 		self:onAim(self.aiming)
@@ -459,6 +460,7 @@ function Binoculars.cl_onPrimaryUse( self, state )
 
 		self.prevZoom = self.defaultFov
 	elseif self.aiming and (state == sm.tool.interactState.stop or state == sm.tool.interactState.null) then
+		sm.gui.startFadeToBlack( 0.15, 0.25 )
 		self.aiming = false
 		self.vignette:close()
 		self:onAim(self.aiming)
