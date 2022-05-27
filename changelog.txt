@@ -1,40 +1,3 @@
-<<<<<<< Updated upstream
-- Changed shark model
-- slight changes to propeller models
-- water purifier model changed
-- added woc steak and cooked woc steak
-- added le fishe au chocolat
-- added spyglass
-- major improvements to fishing system
-- major improvement to pulling hook
-- added torch and handheld torch
-- changed roads in tiles to grassy paths
-- changes to abandoned rafts so that you cannot sleep in the hammock anymore
-- added a few easter eggs
-- added collection nets
-- changed collision for saw blade and drill
-- added potato as a consumable
-- added ability to grow burnt trees with chemicals
-- added translations for German
-- added translations for Italian
-- added translations for French
-- added wedges to craftbot
-- holding glowbugs when in water will give you a slight speed boost
-- harpoons can break parts with durability upto 7
-- changed harpoon renderable
-- added ability to sleep to pass the night
-- new players spawn with a hammock
-- changed names of tree saplings
-- fixed bug with spear not loading the animation
-- added raft floor pieces for building second floors on your raft
-- removed beeswax from the beeswax crafting recipe in the apiary
-- changes to abandoned shacks that spawn on land
-- changed the grow boxes to show actual plant models instead of rogue fruits
-- fins and oxygen tanks stay in your inventory when you die
-- hopefully fixed the windsock bug in multiplayer
-- improved and optimised propellers
-- major improvement to crafter code
-=======
 [[[----------------RELEASE----------------]]]
 
 
@@ -57,4 +20,3 @@
 - You won't loose equipment when dying
 - Added some easter eggs
 - Added raft floor pieces for building
->>>>>>> Stashed changes
