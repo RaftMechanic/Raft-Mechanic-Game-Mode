@@ -324,11 +324,11 @@
 		"craftTime": 16,
 		"ingredientList": [
 			{
-				"quantity": 5,
+				"quantity": 10,
 				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
 			},
 			{
-				"quantity": 5,
+				"quantity": 10,
 				"itemId": "628b2d61-5ceb-43e9-8334-a4135566df7a"
 			}
 		]
@@ -344,11 +344,11 @@
 				"itemId": "795da2f8-ce95-4b34-9d89-1ef84f74e36a"
 			},
 			{
-				"quantity": 5,
+				"quantity": 10,
 				"itemId": "df953d9c-234f-4ac2-af5e-f0490b223e71"
 			},
 			{
-				"quantity": 3,
+				"quantity": 5,
 				"itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
 			}
 		]
