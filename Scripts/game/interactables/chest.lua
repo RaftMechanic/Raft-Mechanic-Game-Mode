@@ -75,11 +75,11 @@ function Chest.server_onCreate( self )
 
         local loot = {}
         addToTable(loot, SelectLoot("loot_ruinchest", 20))
-        addToTable(loot, SelectLoot("loot_ruinchest", 20))
-        addToTable(loot, SelectLoot("loot_ruinchest", 20))
+        --addToTable(loot, SelectLoot("loot_ruinchest", 20))
+        --addToTable(loot, SelectLoot("loot_ruinchest", 20))
         addToTable(loot, SelectLoot("loot_ruinchest_startarea", 20))
         addToTable(loot, SelectLoot("loot_crate_standard", 20))
-        addToTable(loot, SelectLoot("loot_crate_standard", 20))
+        --addToTable(loot, SelectLoot("loot_crate_standard", 20))
         addToTable(loot, SelectLoot("loot_crate_epic", 20))
 
         if sm.container.beginTransaction() then
