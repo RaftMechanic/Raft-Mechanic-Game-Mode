@@ -27,7 +27,7 @@
 - changed names of tree saplings
 - fixed bug with spear not loading the animation
 - added raft floor pieces for building second floors on your raft
-- removed beeswax from the apiary's crafting recipe
+- removed beeswax from the beeswax crafting recipe in the apiary
 - changes to abandoned shacks that spawn on land
 - changed the grow boxes to show actual plant models instead of rogue fruits
 - fins and oxygen tanks stay in your inventory when you die
