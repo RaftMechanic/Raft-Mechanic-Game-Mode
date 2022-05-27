@@ -1,0 +1,3 @@
+Please use CONTENT_DATA/Blueprints instead of LocalBlueprints
+
+tile editor only like /Blueprints/
