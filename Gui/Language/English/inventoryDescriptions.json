@@ -206,5 +206,13 @@
    "56dc8c15-ccc5-46c8-bd56-46bb6bfc85c9" : {
       "description" : "Fake hammock for the abandoned rafts so that people cant sleep in them and loose their respawn point.",
       "title": "Abandoned Hammock"
+   },
+   "795da2f8-ce95-4b34-9d89-1ef84f74e36a" : {
+      "description" : "Looks like Raft Base, but just doesn't float much. Can be used as Floor on higher decks.",
+      "title" : "Raft Floor"
+   },
+   "4d0dce2f-7bee-4c38-be21-c8a5ce083f1a" : {
+      "description" : "Looks like Reinforced Raft Base, tho unfloaty. Can be used as Floor on higher decks.",
+      "title" : "Reinforced Raft Floor"
    }
 }
