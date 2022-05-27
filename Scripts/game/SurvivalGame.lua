@@ -224,8 +224,8 @@ function SurvivalGame.bindChatCommands( self )
 		sm.game.bindChatCommand( "/spawn", { { "string", "unitName", true }, { "int", "amount", true } }, "cl_onChatCommand", "Spawn a unit: 'woc', 'tapebot', 'totebot', 'haybot'" )
 		sm.game.bindChatCommand( "/harvestable", { { "string", "harvestableName", true } }, "cl_onChatCommand", "Create a harvestable: 'tree', 'stone'" )
 		sm.game.bindChatCommand( "/cleardebug", {}, "cl_onChatCommand", "Clear debug draw objects" )
-		sm.game.bindChatCommand( "/export", { { "string", "name", false } }, "cl_onChatCommand", "Exports blueprint $SURVIVAL_DATA/LocalBlueprints/<name>.blueprint" )
-		sm.game.bindChatCommand( "/import", { { "string", "name", false } }, "cl_onChatCommand", "Imports blueprint $SURVIVAL_DATA/LocalBlueprints/<name>.blueprint" )
+		sm.game.bindChatCommand( "/export", { { "string", "name", false } }, "cl_onChatCommand", "Exports blueprint $CONTENT_DATA/LocalBlueprints/<name>.blueprint" )
+		sm.game.bindChatCommand( "/import", { { "string", "name", false } }, "cl_onChatCommand", "Imports blueprint $CONTENT_DATA/LocalBlueprints/<name>.blueprint" )
 		sm.game.bindChatCommand( "/starterkit", {}, "cl_onChatCommand", "Spawn a starter kit" )
 		sm.game.bindChatCommand( "/mechanicstartkit", {}, "cl_onChatCommand", "Spawn a starter kit for starting at mechanic station" )
 		sm.game.bindChatCommand( "/pipekit", {}, "cl_onChatCommand", "Spawn a pipe kit" )
@@ -781,11 +781,11 @@ end
 
 function SurvivalGame.sv_exportCreation( self, params )
 	local obj = sm.json.parseJsonString( sm.creation.exportToString( params.body ) )
-	sm.json.save( obj, "$SURVIVAL_DATA/LocalBlueprints/"..params.name..".blueprint" )
+	sm.json.save( obj, "$CONTENT_DATA/LocalBlueprints/"..params.name..".blueprint" )
 end
 
 function SurvivalGame.sv_importCreation( self, params )
-	sm.creation.importFromFile( params.world, "$SURVIVAL_DATA/LocalBlueprints/"..params.name..".blueprint", params.position )
+	sm.creation.importFromFile( params.world, "$CONTENT_DATA/LocalBlueprints/"..params.name..".blueprint", params.position )
 end
 
 function SurvivalGame.sv_onChatCommand( self, params, player )
