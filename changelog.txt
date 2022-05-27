@@ -31,4 +31,4 @@
 - changed the grow boxes to show actual plant models instead of rogue fruits
 - fins and oxygen tanks stay in your inventory when you die
 - hopefully fixed the windsock bug in multiplayer
-- improvet and optimised propellers
+- improved and optimised propellers
