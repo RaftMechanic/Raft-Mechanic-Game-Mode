@@ -1,5 +1,5 @@
-dofile( "$CONTENT_DATA/Scripts/game/survival_quests.lua" )
-dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestManager.lua" )
+dofile( "$CONTENT_DATA/Scripts/game/raft_quests.lua" )
+dofile( "$CONTENT_DATA/Scripts/game/managers/QuestManager.lua" )
 
 ---@class WindManager : ScriptableObjectClass
 WindManager = class()
@@ -36,9 +36,10 @@ function WindManager.server_onCreate(self)
 
     self.network:setClientData(self.sv)
     
-    g_questManager.sv_subscribeEvent(g_questManager, "event.generic.quest_activated", self, "sv_e_onQuestChanged")
-    g_questManager.sv_subscribeEvent(g_questManager, "event.generic.quest_completed", self, "sv_e_onQuestChanged")
-    g_questManager.sv_subscribeEvent(g_questManager, "event.generic.quest_abandoned", self, "sv_e_onQuestChanged")
+    --FIX quests at some point I guess
+    --g_questManager.sv_subscribeEvent(g_questManager, "event.generic.quest_activated", self, "sv_e_onQuestChanged")
+    --g_questManager.sv_subscribeEvent(g_questManager, "event.generic.quest_completed", self, "sv_e_onQuestChanged")
+    --g_questManager.sv_subscribeEvent(g_questManager, "event.generic.quest_abandoned", self, "sv_e_onQuestChanged")
 
     g_windManager = self
 end

@@ -4,6 +4,8 @@ dofile "$SURVIVAL_DATA/Scripts/game/survival_items.lua"
 dofile "$SURVIVAL_DATA/Scripts/game/survival_survivalobjects.lua"
 dofile "$SURVIVAL_DATA/Scripts/game/util/pipes.lua"
 
+dofile( "$CONTENT_DATA/Scripts/game/managers/QuestManager.lua" ) --RAFT
+
 Crafter = class( nil )
 Crafter.colorNormal = sm.color.new( 0x84ff32ff )
 Crafter.colorHighlight = sm.color.new( 0xa7ff4fff )
@@ -616,17 +618,17 @@ function Crafter.cl_updateRecipeGrid( self )
 		--RAFT --TODO make quest system work
 		local locked = recipeSet.locked
 		if recipeSet.name == "quest1" then
-			locked = not g_questManager:cl_isQuestComplete(quest_mechanic_station)
+			locked = not g_questManager:Cl_IsQuestComplete(quest_ranger_station)
 		elseif recipeSet.name == "questsail" then
-			locked = not g_questManager:cl_isQuestComplete(quest_radio_interactive)
+			locked = not g_questManager:Cl_IsQuestComplete(quest_radio_interactive)
 		elseif recipeSet.name == "questpropeller" then
-			locked = not g_questManager:cl_isQuestComplete(quest_find_trader)
+			locked = not g_questManager:Cl_IsQuestComplete(quest_find_trader)
 		elseif recipeSet.name == "questveggies" then
-			locked = not g_questManager:cl_isQuestComplete(quest_return_to_trader1)
+			locked = not g_questManager:Cl_IsQuestComplete(quest_return_to_trader1)
 		elseif recipeSet.name == "questharpoon" then
-			locked = not g_questManager:cl_isQuestComplete(quest_return_to_trader3)
+			locked = not g_questManager:Cl_IsQuestComplete(quest_return_to_trader3)
 		elseif recipeSet.name == "questfinal" then
-			locked = not g_questManager:cl_isQuestComplete(quest_return_to_trader4)
+			locked = not g_questManager:Cl_IsQuestComplete(quest_return_to_trader4)
 		end
 		--RAFT
 
@@ -823,6 +825,23 @@ function Crafter.client_onFixedUpdate( self )
 
 				break
 			end
+		end
+	end
+
+	--RAFT Quest beacon
+	if self.shape:getShapeUuid() == obj_scrap_workbench then
+		if g_questManager:cl_getQuestProgressString("quest_raft_tutorial") == language_tag("Quest_Tutorial_Workbench") then 
+			if not self.questMarkerGui then
+				self.questMarkerGui = sm.gui.createWorldIconGui( 60, 60, "$GAME_DATA/Gui/Layouts/Hud/Hud_WorldIcon.layout", false )
+				self.questMarkerGui:setImage( "Icon", "icon_questmarker.png" )
+				self.questMarkerGui:setRequireLineOfSight( false )
+				self.questMarkerGui:setMaxRenderDistance( 10000 )
+				self.questMarkerGui:setHost(self.shape)
+				self.questMarkerGui:open()
+			end
+		elseif self.questMarkerGui then
+			self.questMarkerGui:close()
+			self.questMarkerGui = nil
 		end
 	end
 end
@@ -1485,6 +1504,11 @@ function Crafter.client_onInteract( self, character, state )
 			else
 				self.cl.guiInterface:setVisible( "Upgrade", false )
 			end
+
+			--RAFT
+			if self.shape:getShapeUuid() == obj_scrap_workbench then
+				self.network:sendToServer("sv_open_workbench")
+			end
 		end
 	end
 end
@@ -1773,6 +1797,10 @@ Craftbot = class( Crafter )
 
 
 --RAFT
+function Crafter.sv_open_workbench(self)
+	g_questManager.Sv_OnEvent(QuestEvent.Workbench)
+end
+
 RaftCrafter = class(Crafter)
 RaftCrafter.raft = true
 

@@ -80,6 +80,7 @@ tool_axe = sm.uuid.new("1daebe24-4e16-422c-b5e7-c3f45f9296d8")
 tool_pickaxe = sm.uuid.new("c883b283-ea7a-4bba-af0d-5c13fd73051d")
 tool_spear = sm.uuid.new("0db1ecd5-503d-4dd3-807e-869c243a7c08")
 tool_harpoon = sm.uuid.new("e34387d3-fa29-4831-89b8-c94417b6fce6")
+tool_wood_hammer = sm.uuid.new("bb641a4f-e391-441c-bc6d-0ae21a069477")
 
 --projectiles.projectileset
 projectile_harpoon = sm.uuid.new("382c818f-bdf6-41fd-96dd-7a4a1a176d9a")

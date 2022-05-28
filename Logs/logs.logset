@@ -1,0 +1,92 @@
+{
+   "logList" : [
+      {
+         "icon" : "",
+         "location" : "none",
+         "name" : "log_crashedship",
+         "photo" : "gui_logbook_photoframe_crashedship.png",
+         "type" : "photo",
+         "uuid" : "1e4ab0d3-027a-4969-9436-5b23c26e5eeb"
+      },
+      {
+         "icon" : "mechanicstation",
+         "location" : "rangerstation",
+         "name" : "log_rangerstation",
+         "photo" : "$CONTENT_DATA/Gui/LogPhotos/gui_logbook_rangerstation.png",
+         "type" : "photo",
+         "uuid" : "39d72e47-8eac-4fb9-95b1-ecccc06ff84f"
+      },
+      {
+         "icon" : "",
+         "location" : "none",
+         "name" : "log_radio",
+         "photo" : "$CONTENT_DATA/Gui/LogPhotos/gui_logbook_antenna.png",
+         "type" : "photo",
+         "uuid" : "b7ebd326-60c5-4ee7-a35f-1bd3ef408ded"
+      },
+      {
+         "icon" : "crashedship",
+         "location" : "radio quest",
+         "name" : "log_radio_signal",
+         "photo" : "$CONTENT_DATA/Gui/LogPhotos/gui_logbook_crashedship.png",
+         "type" : "photo",
+         "uuid" : "0ccc96c2-97dd-47d9-af8b-0ae2343a939e"
+      },
+      {
+         "icon" : "crashedship",
+         "location" : "trader",
+         "name" : "log_find_trader",
+         "photo" : "$CONTENT_DATA/Gui/LogPhotos/gui_logbook_trader.png",
+         "type" : "photo",
+         "uuid" : "826a19db-2d2e-46fa-9ade-7bcdd8514572"
+      },
+      {
+         "icon" : "crashedship",
+         "location" : "veggies",
+         "name" : "log_deliver_vegetables",
+         "photo" : "$CONTENT_DATA/Gui/LogPhotos/gui_logbook_vegetable.png",
+         "type" : "photo",
+         "uuid" : "9ff5727d-f8d7-4bfd-8c39-04ff194f61bc"
+      },
+      {
+         "icon" : "crashedship",
+         "location" : "wocTemple",
+         "name" : "log_sunshake",
+         "photo" : "$CONTENT_DATA/Gui/LogPhotos/gui_logbook_photoframe_woc_temple.png",
+         "type" : "photo",
+         "uuid" : "6160a79b-08c6-4546-872c-48730b53118b"
+      },
+      {
+         "icon" : "crashedship",
+         "location" : "fruits",
+         "name" : "log_deliver_fruits",
+         "photo" : "$CONTENT_DATA/Gui/LogPhotos/gui_logbook_fruits.png",
+         "type" : "photo",
+         "uuid" : "51c6d229-15a2-4834-a164-e37634fe5b9d"
+      },
+      {
+         "icon" : "crashedship",
+         "location" : "scrapcity",
+         "name" : "log_scrap_city",
+         "photo" : "$CONTENT_DATA/Gui/LogPhotos/gui_logbook_photoframe_scrap_city.png",
+         "type" : "photo",
+         "uuid" : "310434f1-84ca-41d1-a60d-ab91dea2aa04"
+      },
+      {
+         "icon" : "",
+         "location" : "none",
+         "name" : "log_warehouse",
+         "photo" : "$CONTENT_DATA/Gui/LogPhotos/gui_logbook_warehouse.png",
+         "type" : "photo",
+         "uuid" : "cad33bbf-5fc6-433a-b2f5-ae65ca3b43c6"
+      },
+      {
+         "icon" : "",
+         "location" : "none",
+         "name" : "log_chpater2",
+         "photo" : "$CONTENT_DATA/Gui/LogPhotos/gui_logbook_welcome.png",
+         "type" : "photo",
+         "uuid" : "cfee3c4f-e70d-4017-a963-177c4a19ecd2"
+      }
+   ]
+}

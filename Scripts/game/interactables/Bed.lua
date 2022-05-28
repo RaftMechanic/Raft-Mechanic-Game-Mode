@@ -68,6 +68,8 @@ end
 
 --RAFT
 dofile("$CONTENT_DATA/Scripts/game/managers/LanguageManager.lua")
+dofile("$CONTENT_DATA/Scripts/game/raft_quests.lua")
+dofile( "$CONTENT_DATA/Scripts/game/managers/QuestManager.lua" )
 
 Hammock = class(Bed)
 
@@ -81,6 +83,11 @@ function Hammock:server_onCreate()
 		g_sleepers.update = sm.game.getCurrentTick()
 	end
 end
+function Hammock:sv_activateBed( character )
+	Bed.sv_activateBed(self, character)
+	QuestManager.Sv_OnEvent(QuestEvent.Sleep, {character = character})
+end
+
 
 function Hammock:server_onFixedUpdate( dt )
 	Bed.server_onFixedUpdate(self)
@@ -133,4 +140,20 @@ end
 
 function Hammock:cl_sleep()
 	sm.event.sendToPlayer( sm.localPlayer.getPlayer(), "cl_e_startFadeToBlack", { duration = 1.0, timeout = 3.0 } )
+end
+
+function Hammock:client_onFixedUpdate(dt)
+	if g_questManager:cl_getQuestProgressString("quest_raft_tutorial") == language_tag("Quest_Tutorial_Sleep") then 
+		if not self.questMarkerGui then
+			self.questMarkerGui = sm.gui.createWorldIconGui( 60, 60, "$GAME_DATA/Gui/Layouts/Hud/Hud_WorldIcon.layout", false )
+			self.questMarkerGui:setImage( "Icon", "icon_questmarker.png" )
+			self.questMarkerGui:setRequireLineOfSight( false )
+			self.questMarkerGui:setMaxRenderDistance( 10000 )
+			self.questMarkerGui:setHost(self.shape)
+			self.questMarkerGui:open()
+		end
+	elseif self.questMarkerGui then
+		self.questMarkerGui:close()
+		self.questMarkerGui = nil
+	end
 end

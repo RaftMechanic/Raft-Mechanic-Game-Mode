@@ -87,6 +87,17 @@
             "file" : "$CONTENT_DATA/Scripts/game/tools/Binoculars.lua"
 		 },
 		 "uuid" : "f3aeb880-f103-43c8-947b-d0525eaeb505"
+		},
+		{
+			"name" : "",
+			"uuid": "bb641a4f-e391-441c-bc6d-0ae21a069477",
+			"previewRenderable": "$CONTENT_DATA/Characters/Char_Tools/Char_woodsledgehammer/char_woodsledgehammer_preview.rend",
+			"previewRotation": [  -1, 0, 0, 0, 0, 1, 0, 1, 0 ],
+			"script": {
+				"file": "$CONTENT_DATA/Scripts/game/tools/Sledgehammer.lua",
+				"class": "Sledgehammer",
+                "data" : {}
+			}
 		}
 	]
 }

@@ -8,6 +8,10 @@ function LanguageManager.client_onCreate(self)
 end
 
 function language_tag(name)
+    if not g_languageManager then --STupid fix because quests load befor this.
+        g_languageManager = {language = "yo mama"}
+    end
+
     local currentLang = sm.gui.getCurrentLanguage()
     if currentLang ~= g_languageManager.language then --when language changed
         g_languageManager.language = currentLang

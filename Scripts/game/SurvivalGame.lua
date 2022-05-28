@@ -4,7 +4,7 @@ dofile( "$SURVIVAL_DATA/Scripts/game/managers/BeaconManager.lua" )
 
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/EffectManager.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/ElevatorManager.lua"  )
-dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestManager.lua" )
+--dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestManager.lua" )
 dofile( "$CONTENT_DATA/Scripts/game/managers/RespawnManager.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/UnitManager.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/survival_constants.lua" )
@@ -15,13 +15,15 @@ dofile( "$SURVIVAL_DATA/Scripts/game/survival_projectiles.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/survival_meleeattacks.lua" )
 dofile( "$CONTENT_DATA/Scripts/game/util/recipes.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/util/Timer.lua" )
-dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestEntityManager.lua" )
+--dofile( "$SURVIVAL_DATA/Scripts/game/managers/QuestEntityManager.lua" )
 dofile( "$GAME_DATA/Scripts/game/managers/EventManager.lua" )
 
 --RAFT
 dofile( "$CONTENT_DATA/Scripts/game/raft_constants.lua")
 dofile( "$CONTENT_DATA/Scripts/game/managers/WindManager.lua" )
 dofile( "$CONTENT_DATA/Scripts/game/raft_items.lua" )
+dofile( "$CONTENT_DATA/Scripts/game/managers/QuestManager.lua" )
+dofile( "$CONTENT_DATA/Scripts/game/managers/QuestEntityManager.lua" )
 
 
 
@@ -671,8 +673,8 @@ function SurvivalGame.client_onLoadingScreenLifted( self )
 end
 
 function SurvivalGame.sv_n_loadingScreenLifted( self, _, player )
-	if not g_survivalDev then
-		QuestManager.Sv_TryActivateQuest( "quest_tutorial" )
+	if not g_survivalDev or not yomama then--RAFT fuck dev shit
+		QuestManager.Sv_TryActivateQuest( "quest_raft_tutorial" )
 	end
 end
 

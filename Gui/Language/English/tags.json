@@ -64,5 +64,10 @@
     "HammockAllPlayers": "All players need to sleep to skip night",
     "HammockNight": "You can only sleep at night",
 
-    "ClamDivingSucks": "#ff88ffDid I already mention that I hate clam diving?"
+    "ClamDivingSucks": "#ff88ffDid I already mention that I hate clam diving?",
+
+    "Quest_Tutorial_Sleep": "Sleep in the hammock",
+    "Quest_Tutorial_Workbench": "Open the workbench",
+    "Quest_Tutorial_Hammer": "Craft a wooden hammer",
+    "Quest_Tutorial_Logbook": "Read \"Space Ranger's Outpost\" log"
 }
