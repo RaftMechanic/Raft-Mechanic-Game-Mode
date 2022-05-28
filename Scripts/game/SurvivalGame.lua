@@ -899,7 +899,14 @@ function SurvivalGame.server_onPlayerJoined( self, player, newPlayer )
 		--Raft
 		if player.id == 1 then
 			sm.gui.chatMessage("#ff00ffThanks for playing the Raft Mechanic Mod! Check out the logbook to get started!")
-			sm.creation.importFromFile( self.sv.saved.overworld, "$CONTENT_DATA/LocalBlueprints/RAFT.blueprint", START_AREA_SPAWN_POINT )
+
+			local success, error = pcall(sm.creation.importFromFile, self.sv.saved.overworld, "$SURVIVAL_DATA/LocalBlueprints/carried_raft.blueprint", START_AREA_SPAWN_POINT )
+			if not success then
+				sm.creation.importFromFile( self.sv.saved.overworld, "$CONTENT_DATA/LocalBlueprints/RAFT.blueprint", START_AREA_SPAWN_POINT )
+				sm.log.info("[Raft Mechanic] No user made raft found, spawned default raft!")
+			else
+				sm.log.info("[Raft Mechanic] Successfully imported user made raft!")
+			end
 		end
 	else
 		local inventory = player:getInventory()
