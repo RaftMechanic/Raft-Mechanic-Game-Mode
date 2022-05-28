@@ -5,7 +5,6 @@ Collector = class()
 local containerSize = 20
 local containerStackSize = 256
 local bodyMassThreshold = 100
-
 local collectables = {
 	blk_scrapwood,
 	blk_plastic,
@@ -122,6 +121,20 @@ function Collector:server_onFixedUpdate()
     end
 end
 
+function Collector:sv_takeAllJunk( inv )
+    sm.container.beginTransaction()
+    for i = 1, containerSize do
+        local slot = i - 1
+        local item = self.sv.container:getItem( slot )
+        local itemId = item.uuid
+        local itemQuant = item.quantity
+        if inv:canCollect( itemId, itemQuant ) then
+            sm.container.collect( inv, itemId, itemQuant )
+            sm.container.spendFromSlot( self.sv.container, slot, itemId, itemQuant )
+        end
+    end
+    sm.container.endTransaction()
+end
 
 
 function Collector:client_onCreate()
@@ -145,24 +158,36 @@ function Collector:client_canInteract()
     local junkCount = getRealLength(self.cl.junk)
     local text = junkCount == containerSize and language_tag("JunkCollector_Full") or string.format(language_tag("JunkCollector_SlotsOpen"), containerSize - junkCount)
     sm.gui.setInteractionText(o1..text..o2)
+    sm.gui.setInteractionText("", sm.gui.getKeyBinding("Tinker", true), language_tag("JunkCollector_TakeAll"))
 
     return true
 end
 
 function Collector.client_onInteract( self, character, state )
-	if state == true then
-		local container = self.shape.interactable:getContainer( 0 )
-		if container then
-			self.cl.containerGui = sm.gui.createContainerGui( true )
-			self.cl.containerGui:setText( "UpperName", "#{CHEST_TITLE_CHEST}" )
-			self.cl.containerGui:setVisible( "ChestIcon", true )
-            self.cl.containerGui:setVisible( "TakeAll", true )
-			self.cl.containerGui:setContainer( "UpperGrid", container );
-			self.cl.containerGui:setText( "LowerName", "#{INVENTORY_TITLE}" )
-			self.cl.containerGui:setContainer( "LowerGrid", sm.localPlayer.getInventory() )
-			self.cl.containerGui:open()
-		end
-	end
+    if not state then return end
+
+    local container = self.shape.interactable:getContainer( 0 )
+    if container then
+        self.cl.containerGui = sm.gui.createContainerGui( true )
+        self.cl.containerGui:setText( "UpperName", language_tag("JunkCollector_Title") )
+        self.cl.containerGui:setVisible( "ChestIcon", true )
+        self.cl.containerGui:setVisible( "TakeAll", true )
+        self.cl.containerGui:setContainer( "UpperGrid", container );
+        self.cl.containerGui:setText( "LowerName", "#{INVENTORY_TITLE}" )
+        self.cl.containerGui:setContainer( "LowerGrid", sm.localPlayer.getInventory() )
+        self.cl.containerGui:open()
+    end
+end
+
+function Collector:client_onTinker( character, state )
+    if not state then return end
+
+    if getRealLength(self.cl.junk) == 0 then
+        sm.gui.displayAlertText(language_tag("JunkCollector_TakeAll_Empty"), 2.5)
+        return
+    end
+
+    self.network:sendToServer("sv_takeAllJunk", sm.localPlayer.getInventory())
 end
 
 function Collector:cl_addJunk_onCreate( data )

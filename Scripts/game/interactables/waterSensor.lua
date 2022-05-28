@@ -115,8 +115,12 @@ function Sensor:client_canInteract()
     local o1 = "<p textShadow='false' bg='gui_keybinds_bg_orange' color='#4f4f4f' spacing='9'>"
     local o2 = "</p>"
     local txt = self.cl.data.visualize and language_tag("WaterSensor_Visualization_on") or language_tag("WaterSensor_Visualization_off")
-	sm.gui.setInteractionText( "", o1..language_tag("WaterSensor_CurrentRadius")..tostring(self.cl.data.slider)..language_tag("WaterSensor_CurrentRadius_blocks")..txt..o2 )
-    sm.gui.setInteractionText( "", o1..string.format(language_tag("WaterSensor_Adjust_tip"), sm.gui.getKeyBinding( "Use" ), sm.gui.getKeyBinding( "Tinker" ))..o2 )
+	sm.gui.setInteractionText(o1..language_tag("WaterSensor_CurrentRadius"):format(tostring(self.cl.data.slider))..language_tag("WaterSensor_Visualization")..txt..o2 )
+    sm.gui.setInteractionText(
+        "",
+        sm.gui.getKeyBinding( "Use", true )..language_tag("WaterSensor_Adjust_Radius"),
+        sm.gui.getKeyBinding( "Tinker", true )..language_tag("WaterSensor_Adjust_Vis")
+    )
 
     return true
 end

@@ -20,22 +20,24 @@
     "CreationRotator_Hor": "Horizontal",
     "CreationRotator_Roll": "Roll",
     "CreationRotator_Mult": "Multiplier:",
-    "CreationRotator_CurrentMode": "Current mode: #ffffff",
-    "CreationRotator_Cycle": "'%s' to cycle forwards, '%s' to switch between input methods and '%s' + '%s' to adjust the force multiplier.",
-    "CreationRotator_CurrentInput": ", #4f4f4fCurrent input method: #ffffff",
+    "CreationRotator_CurrentMode": "Mode: #ffffff",
+    "CreationRotator_CurrentInput": "#4f4f4f Input method: #ffffff",
     "CreationRotator_Input_mouse": "Mouse",
     "CreationRotator_Input_wasd": "WASD",
+    "CreationRotator_SwitchInput": "switch input methods", 
+    "CreationRotator_AdjustForce": "adjust force multiplier",
+
+    "Switch_mode": "switch modes",
 
     "WaterSensor_Title": "Water Sensor",
     "WaterSensor_Radius_Title": "Sensing Radius(blocks)",
     "WaterSensor_Radius": "Radius: %d blocks", 
-    "WaterSensor_CurrentRadius": "Current sensing radius: #ffffff",
-    "WaterSensor_CurrentRadius_blocks": " block(s)#4f4f4f, Visualization: ",
-    "WaterSensor_Adjust_tip": "'%s' to adjust the sensing radius and '%s' to toggle the radius visualisation.",
+    "WaterSensor_CurrentRadius": "Sensing radius:#ffffff %d block(s)",
+    "WaterSensor_Visualization": " #4f4f4fVisualization: ",
     "WaterSensor_Visualization_on": "#269e44ON",
     "WaterSensor_Visualization_off": "#9e2626OFF",
-
-    "Converter_Cycle": "'%s' to cycle forwards and '%s' to cycle backwards.",
+    "WaterSensor_Adjust_Radius": "adjust sensing radius",
+    "WaterSensor_Adjust_Vis": "toggle radius visualisation",
 
     "Sail_Tie": "Tie up Sail",
     "Sail_Lower": "Lower Sail",
@@ -55,6 +57,9 @@
 
     "JunkCollector_Full": "#ff0000Collector full",
     "JunkCollector_SlotsOpen": "Remaining capacity:#ffffff %d slots",
+    "JunkCollector_Title": "Collection Net",
+    "JunkCollector_TakeAll": "Take all items",
+    "JunkCollector_TakeAll_Empty": "No items to collect!", 
 
     "HammockAllPlayers": "All players need to sleep to skip night",
     "HammockNight": "You can only sleep at night",

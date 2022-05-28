@@ -116,7 +116,10 @@ function Converter:client_canInteract()
     local o1 = "<p textShadow='false' bg='gui_keybinds_bg_orange' color='#4f4f4f' spacing='9'>"
     local o2 = "</p>"
 	sm.gui.setInteractionText( "", o1..language_tag("CreationRotator_CurrentMode")..modes[self.cl.data.count]:upper()..o2 )
-    sm.gui.setInteractionText( "", o1..string.format(language_tag("Converter_Cycle"), sm.gui.getKeyBinding( "Use" ), sm.gui.getKeyBinding( "Tinker" ))..o2 )
+    sm.gui.setInteractionText(
+        "",
+        sm.gui.getKeyBinding( "Use", true ).. "/"..sm.gui.getKeyBinding( "Tinker", true ),
+        language_tag("Switch_mode"))
 
     return true
 end
