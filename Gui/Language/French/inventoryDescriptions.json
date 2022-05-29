@@ -133,6 +133,18 @@
        "description" : "Ramasse tous les déchets de l'océan pour toi ! Espèce de fainéant accro au sunshake...",
        "title": "Filet"
     },
+    "56dc8c15-ccc5-46c8-bd56-46bb6bfc85c9" : {
+       "description" : "Faux hamac pour les radeaux abandonnés(pour que les gens ne puissent pas y dormir et perdre leur point de respawn).",
+       "title": "Hamac abandonné"
+    },
+    "795da2f8-ce95-4b34-9d89-1ef84f74e36a" : {
+       "description" : "Ressemble à une base de radeau, mais ne flotte pas beaucoup. Peut être utilisé comme plancher pour les ponts supérieurs.",
+       "title" : "Plancher de radeau"
+    },
+    "4d0dce2f-7bee-4c38-be21-c8a5ce083f1a" : {
+       "description" : "Ressemble à une base de radeau renforcée, mais ne flotte pas beaucoup. Peut être utilisé comme plancher sur les ponts supérieurs.",
+       "title" : "Plancher de radeau renforcé"
+    },
  
     //saplings
     "eefb0967-d21c-445e-8120-0a09422e1374": {

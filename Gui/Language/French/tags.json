@@ -21,21 +21,23 @@
     "CreationRotator_Roll": "Roll",
     "CreationRotator_Mult": "Multiplicateur : ",
     "CreationRotator_CurrentMode": "Mode actuel : #ffffff",
-    "CreationRotator_Cycle": "'%s' pour cycler vers l'avant, '%s' pour passer d'une méthode à une autre et '%s' + '%s' pour ajuster le multiplicateur de force.",
     "CreationRotator_CurrentInput": ", #4f4f4fMéthode d'entrée actuelle : #ffffff",
     "CreationRotator_Input_mouse": "Souris",
     "CreationRotator_Input_wasd": "ZQSD(WASD)",
+    "CreationRotator_SwitchInput": "changer de méthodes d'entrée", 
+    "CreationRotator_AdjustForce": "ajuster le multiplicateur de force",
+
+    "Switch_mode": "Changer de mode",
 
     "WaterSensor_Title": "Capteur d'eau",
     "WaterSensor_Radius_Title": "Rayon de détection (blocs)",
     "WaterSensor_Radius": "Rayon : %d blocs", 
     "WaterSensor_CurrentRadius": "Rayon actuel de détection : #ffffff",
-    "WaterSensor_CurrentRadius_blocks": " bloc(s)#4f4f4f, Visualisation : ",
-    "WaterSensor_Adjust_tip": "'%s' pour ajuster le rayon de détection et '%s' pour activer la visualisation du rayon.",
+    "WaterSensor_Visualization": " #4f4f4fVisualisation : ",
     "WaterSensor_Visualization_on": "#269e44ON",
     "WaterSensor_Visualization_off": "#9e2626OFF",
-
-    "Converter_Cycle": "'%s' pour cycler vers l'avant et '%s' pour cycler vers l'arrière.",
+    "WaterSensor_Adjust_Radius": "ajuster le rayon de détection",
+    "WaterSensor_Adjust_Vis": "activer la visualisation du rayon",
 
     "Sail_Tie": "Remonter la voile",
     "Sail_Lower": "Abaisser la voile",
@@ -55,9 +57,17 @@
 
     "JunkCollector_Full": "#ff0000Filet plein",
     "JunkCollector_SlotsOpen": "Capacité restante:#ffffff %d place(s)",
+    "JunkCollector_Title": "Filet",
+    "JunkCollector_TakeAll": "Prendre tout les objets",
+    "JunkCollector_TakeAll_Empty": "Pas d'objets à récupérer !", 
 
     "HammockAllPlayers": "Tous les joueurs ont besoin de dormir pour passer la nuit",
     "HammockNight": "Vous ne pouvez dormir que la nuit",
 
-    "ClamDivingSucks": "#ff88ffAi-je déjà dit que je déteste plonger pour aller ramasser les palourdes ?"
+    "ClamDivingSucks": "#ff88ffAi-je déjà dit que je déteste plonger pour aller ramasser les palourdes ?",
+
+    "Quest_Tutorial_Sleep": "Dormez dans le hamac",
+    "Quest_Tutorial_Workbench": "Ouvrir l'atelier",
+    "Quest_Tutorial_Hammer": "Fabriquer un marteau en bois",
+    "Quest_Tutorial_Logbook": "Lire \"Space Ranger's Outpost\" log"
 }

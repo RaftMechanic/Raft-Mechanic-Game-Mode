@@ -1,1 +1,50 @@
-{}
+{
+    "ecf82a9f-26a1-4cac-b7de-ad69f4aba635": {
+        "title": "Bienvenue sur Raft Mechanic",
+        "description": "Merci de jouer avec NOTRE mod ! Comment commencer :\n\n • Tout d'abord, récupérez du bois et du plastique qui flottent sur l'océan et fabriquez quelques outils comme le marteau.\n\n • La puissance du marteau a été reduite, il ne peut plus couper les arbres. Il fait également moins de dégâts. Il est préférable d'utiliser des outils comme la hache ou la lance pour ces tâches.\n\n • La meilleure façon d'obtenir de la nourriture est de pêcher. La description de l'outil contient plus d'informations\n\n • Pour rester hydraté, vous aurez besoin d'un purificateur d'eau qui vous fournira de l'eau fraîche.\n\n • N'oubliez pas non plus les menaces ! Comme les sharkbots et autres créatures marines pas si sympathique."
+    },
+    "ee4ab0d3-027a-4969-9436-5b23c26e5eeb": {
+        "title": "Échoué",
+        "description": "Starlog 2469: Alors que mon vaisseau traversait le système stellaire 5U5 pour une mission de transport, quelque chose a heurté mon vaisseau. Heureusement, j'ai pu faire un atterrissage d'urgence. Je ne sais pas où est mon vaisseau, mais au moins j'ai pu déployer le radeau de secours à temps.."
+    },  
+    "39d72e47-8eac-4fb9-95b1-ecccc06ff84f": {
+        "title": "L'avant-poste des rangers",
+        "description": "Selon le module de navigation du vaisseau, il devrait y avoir un avant-poste quelque part. Bizarrement, il n'a pas envoyé de signaux depuis plus de dix ans. Je peux peut-être réparer la station et envoyer un signal de détresse ? En regardant la photo, elle semble beaucoup trop délabrée. Je me demande ce qui s'y est passé... Je devrais peut-être improviser une arme."
+    },
+    "b7ebd326-60c5-4ee7-a35f-1bd3ef408ded": {
+        "title": "État de l'antenne",
+        "description": "L'antenne de communication de l'avant-poste a été endommagée par des 'Haybots'. Une analyse plus poussée de la planète révèle qu'elle a été prise en charge par une méga-corporation. Mais quelque chose a dû mal se passer... Cependant, je devrais être capable de construire une petite radio de fortnune pour envoyer et recevoir des signaux de détresse locaux. Mais pour améliorer le bois abîmé je vais avoir besoin d'un meilleur établi."
+    },
+    "0ccc96c2-97dd-47d9-af8b-0ae2343a939e": {
+        "title": "Mission de sauvetage",
+        "description": "J'ai capté un signal étrange pas loin d'ici, apparemment il est marqué comme 'URGENT'. Si je peux construire une voile, je devrais être capable d'y aller."
+    },
+    "826a19db-2d2e-46fa-9ade-7bcdd8514572": {
+        "title": "Notes du trader",
+        "description": "Les pages sont jaunies. Cependant, elles sont faites d'un matériau imperméable et restent étonnamment lisibles :\n\nJour 3\n Je volais près d'une planète, quand quelque chose a heurté mon vaisseau. C'était gros et 'vivant', mais pas comme un animal, plutôt comme un robot. Je ne pourrai probablement pas livrer mes caisses de fruits, mais je dois vite boucher les trous dans le vaisseau, sinon je vais me noyer.\n\n Jour 4\n L'eau commence à rentrer, je devrais sortir d'ici.\n\n Jour 12\nLes rations de Sunshake sont presque vides. Je vais devoir trouver quelque chose à boire. Je laisse ces notes derrière moi, au cas où il y aurait d'autres survivants. J'ai installé une base sur une île voisine. Si vous avez de la chance je serais peut être encore en vie"
+    },
+    "9ff5727d-f8d7-4bfd-8c39-04ff194f61bc": {
+        "title": "Des légumes pour 'Trader'",
+        "description": "On dirait qu'il est là depuis bien trop longtemps. Si je ne veux pas finir comme lui, je devrais l'aider. Et puis je n'ai pas de meilleures options pour l'instant. Il a besoin de 2 caisses de carottes et 2 caisses betteraves. Il m'a aussi donné un point de repère vers une station d'emballage. Je devrais commencer à faire pousser."
+    },
+    "6160a79b-08c6-4546-872c-48730b53118b": {
+        "title": "Le mystère des Wocs",
+        "description": "Il semble qu'il y ait une sorte de secret à propos des Wocs. Je ne comprends pas comment cela va m'aider à quitter la planète, mais je n'ai pas le choix. J'espère que je pourrai trouver la 'recette' qu'il cherche..."
+    },
+    "51c6d229-15a2-4834-a164-e37634fe5b9d": {
+        "title": "Des fruits pour 'Trader'",
+        "description": "Et maintenant il veut des fruits ! Pour être exact 2 caisses de myrtilles et 2 caisses de bananes. J'espère que ce sera la dernière course que je devrai faire pour lui..."
+    },
+    "310434f1-84ca-41d1-a60d-ab91dea2aa04": {
+        "title": "Scrap City",
+        "description": "Cette planète est beaucoup plus abandonnée que je ne le pensais. Une ville entière qui tombe en ruine... Je me demande ce qui a poussé les gens à l'abandonner si rapidement... Peut-être que je devrais apporter une arme plus puissante avec moi. Je pense que je pourrais modifier mon lance patates."
+    },
+    "cad33bbf-5fc6-433a-b2f5-ae65ca3b43c6": {
+        "title": "Raid d'un entrepôt",
+        "description": "Apparemment, 'Trader' n'est pas seul. Il veut que je sauve un membre de son équipe qui est retenu en otage dans un entrepôt. Peut-être que ses compagnons pourraient s'avérer plus utiles qu'un accro au Sunshake. Je pense surtout que c'est la bonne chose à faire. Si je veux avoir une chance de rentrer chez moi, alors c'est ma seule chance.\n\nBezos ne sera pas content..."
+    },
+    "cfee3c4f-e70d-4017-a963-177c4a19ecd2": {
+        "title": "Chapitre 2",
+        "description": "Merci de jouer ! Le chapitre 2 de l'histoire arrive soon™(bientôt)  :) Et n'oubliez pas d'aller voir Dr Pixel Plays sur YouTube !"
+    }
+}
