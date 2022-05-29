@@ -280,8 +280,8 @@ end
 
 function SurvivalGame.loadCraftingRecipes( self )
 	raft_LoadCraftingRecipes({
-		workbench = "$SURVIVAL_DATA/CraftingRecipes/workbench.json",
-		dispenser = "$SURVIVAL_DATA/CraftingRecipes/dispenser.json",
+		workbench = "$CONTENT_DATA/CraftingRecipes/workbench.json",
+		dispenser = "$CONTENT_DATA/CraftingRecipes/dispenser.json",
 		cookbot = "$SURVIVAL_DATA/CraftingRecipes/cookbot.json",
 		craftbot = "$CONTENT_DATA/CraftingRecipes/craftbot.json",
 		dressbot = "$SURVIVAL_DATA/CraftingRecipes/dressbot.json",
