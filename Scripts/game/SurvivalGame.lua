@@ -818,6 +818,8 @@ function SurvivalGame.sv_onChatCommand( self, params, player )
 			pos = player.character:getWorldPosition()
 		elseif params[2] == "start" then
 			pos = START_AREA_SPAWN_POINT
+		elseif params[2] == "station" then
+			pos = sm.vec3.new(-1682.5, -1722, 2)
 
 
 
