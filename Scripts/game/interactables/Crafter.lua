@@ -6,6 +6,8 @@ dofile "$SURVIVAL_DATA/Scripts/game/util/pipes.lua"
 
 dofile( "$CONTENT_DATA/Scripts/game/managers/QuestManager.lua" ) --RAFT
 
+print("0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
+
 Crafter = class( nil )
 Crafter.colorNormal = sm.color.new( 0x84ff32ff )
 Crafter.colorHighlight = sm.color.new( 0xa7ff4fff )
@@ -612,23 +614,24 @@ end
 function Crafter.cl_updateRecipeGrid( self )
 	self.cl.guiInterface:clearGrid( "RecipeGrid" )
 	for _, recipeSet in ipairs( self.crafter.recipeSets ) do
-		print( "Adding", g_craftingRecipes[recipeSet.name].path )
+		print( "Adding", g_craftingRecipes[recipeSet.name].path ) 
+		print("custom clusterfuck")
 
 
 		--RAFT --TODO make quest system work
 		local locked = recipeSet.locked
 		if recipeSet.name == "quest1" then
-			locked = not g_questManager:Cl_IsQuestComplete(quest_ranger_station)
+			locked = not QuestManager.Cl_IsQuestComplete("quest_rangerstation")
 		elseif recipeSet.name == "questsail" then
-			locked = not g_questManager:Cl_IsQuestComplete(quest_radio_interactive)
+			locked = not QuestManager.Cl_IsQuestComplete("quest_radio_interactive")
 		elseif recipeSet.name == "questpropeller" then
-			locked = not g_questManager:Cl_IsQuestComplete(quest_find_trader)
+			locked = not QuestManager.Cl_IsQuestComplete("quest_find_trader")
 		elseif recipeSet.name == "questveggies" then
-			locked = not g_questManager:Cl_IsQuestComplete(quest_return_to_trader1)
+			locked = not QuestManager.Cl_IsQuestComplete("quest_return_to_trader1")
 		elseif recipeSet.name == "questharpoon" then
-			locked = not g_questManager:Cl_IsQuestComplete(quest_return_to_trader3)
+			locked = not QuestManager.Cl_IsQuestComplete("quest_return_to_trader3")
 		elseif recipeSet.name == "questfinal" then
-			locked = not g_questManager:Cl_IsQuestComplete(quest_return_to_trader4)
+			locked = not QuestManager.Cl_IsQuestComplete("quest_return_to_trader4")
 		end
 		--RAFT
 
@@ -830,21 +833,56 @@ function Crafter.client_onFixedUpdate( self )
 
 	--RAFT Quest beacon
 	if self.shape:getShapeUuid() == obj_scrap_workbench then
-		if g_questManager:cl_getQuestProgressString("quest_raft_tutorial") == language_tag("Quest_Tutorial_Workbench") then 
+		if 	get_progress("quest_raft_tutorial") == language_tag("Quest_Tutorial_Workbench") or
+			get_progress("quest_radio_interactive") == language_tag("Quest_BuildRadio_Craft_Antenna") or
+			get_progress("quest_radio_location") == language_tag("Quest_RadioSignal_Windsock") or
+			get_progress("quest_radio_location") == language_tag("Quest_RadioSignal_Sail") then
 			if not self.questMarkerGui then
-				self.questMarkerGui = sm.gui.createWorldIconGui( 60, 60, "$GAME_DATA/Gui/Layouts/Hud/Hud_WorldIcon.layout", false )
-				self.questMarkerGui:setImage( "Icon", "icon_questmarker.png" )
-				self.questMarkerGui:setRequireLineOfSight( false )
-				self.questMarkerGui:setMaxRenderDistance( 10000 )
-				self.questMarkerGui:setHost(self.shape)
-				self.questMarkerGui:open()
+				create_quest_marker(self)
 			end
 		elseif self.questMarkerGui then
-			self.questMarkerGui:close()
-			self.questMarkerGui = nil
+			destroy_quest_marker(self)
+		end
+
+	elseif self.shape:getShapeUuid() == obj_craftbot_craftbot1 then
+		local progressString = get_progress("quest_radio_interactive")
+		if progressString == language_tag("Quest_BuildRadio_Craftbot") then
+			self.network:sendToServer("sv_send_event")
+		elseif progressString == language_tag("Quest_BuildRadio_Wood") then
+			if not self.questMarkerGui then
+				create_quest_marker(self)
+			end
+		elseif self.questMarkerGui then
+			destroy_quest_marker(self)
 		end
 	end
 end
+
+--RAFT jank code bc I don't care anymore
+function Crafter:sv_send_event()
+	QuestManager.Sv_OnEvent(QuestEvent.Craftbot)
+end
+
+function get_progress(questName)--this code is so fucking bad. Like why the fuck is the questmanger not OURS? I'm never gonna touch this jank again
+	return QuestManager.cl_getQuestProgressString(g_questManager, questName)
+end
+
+function create_quest_marker(self, image)
+	self.questMarkerGui = sm.gui.createWorldIconGui( 60, 60, "$GAME_DATA/Gui/Layouts/Hud/Hud_WorldIcon.layout", false )
+	self.questMarkerGui:setImage( "Icon", image or "icon_questmarker.png" )
+	self.questMarkerGui:setRequireLineOfSight( false )
+	self.questMarkerGui:setMaxRenderDistance( 10000 )
+	self.questMarkerGui:setHost(self.shape)
+	self.questMarkerGui:open()
+end
+
+function destroy_quest_marker(self)
+	self.questMarkerGui:close()
+	self.questMarkerGui = nil
+end
+
+
+
 
 function Crafter.client_onUpdate( self, deltaTime )
 

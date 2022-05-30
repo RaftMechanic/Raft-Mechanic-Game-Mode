@@ -1,5 +1,5 @@
-quest_raft_tutorial = "8be0279e-28b6-4aab-b620-586f50162c6e"
-quest_rangerstation = "bf68d177-878c-4017-b146-39354d44d888"
+quest_raft_tutorial = "210bc13d-367a-457f-af4c-a433d162518f"
+quest_rangerstation = "aaf5dda8-18dd-4a90-a85f-501023da347f"
 quest_radio_interactive = "26ca3794-71f2-4648-a97c-997802680c95"
 quest_radio_location = "45fe7b9c-4895-44a3-82aa-ed8da730de83"
 

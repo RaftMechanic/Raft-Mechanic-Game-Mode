@@ -315,7 +315,7 @@ function SurvivalGame.server_onFixedUpdate( self, timeStep )
 	local newDay = self.sv.time.timeOfDay >= 1.0
 	if newDay then
 		self.sv.time.timeOfDay = math.fmod( self.sv.time.timeOfDay, 1 )
-		sm.event.sendToScriptableObject(self.sv.windManager, "sv_e_randomizeWind", true)
+		--sm.event.sendToScriptableObject(self.sv.windManager, "sv_e_randomizeWind", true)
 	end
 
 	if self.sv.time.timeOfDay >= DAYCYCLE_DAWN and prevTime < DAYCYCLE_DAWN then
@@ -820,6 +820,8 @@ function SurvivalGame.sv_onChatCommand( self, params, player )
 			pos = START_AREA_SPAWN_POINT
 		elseif params[2] == "station" then
 			pos = sm.vec3.new(-1682.5, -1722, 2)
+		elseif params[2] == "wreck" then
+			pos = sm.vec3.new(-29*64, 2*64, 2)
 
 
 
@@ -902,8 +904,6 @@ function SurvivalGame.server_onPlayerJoined( self, player, newPlayer )
 
 		--Raft
 		if player.id == 1 then
-			sm.gui.chatMessage("#ff00ffThanks for playing the Raft Mechanic Mod! Check out the logbook to get started!")
-
 			if sm.json.fileExists("$SURVIVAL_DATA/LocalBlueprints/carried_raft.blueprint") then
 				sm.creation.importFromFile( self.sv.saved.overworld, "$SURVIVAL_DATA/LocalBlueprints/carried_raft.blueprint", START_AREA_SPAWN_POINT )
 				sm.log.info("[Raft Mechanic] No user made raft found, spawned default raft!")

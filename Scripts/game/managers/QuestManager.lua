@@ -17,6 +17,9 @@ QuestEvent = {
 	--RAFT
 	Sleep = "event.raft.sleep",
 	Workbench = "event.raft.workbench",
+	ReadLog = "event.raft.log_read",
+	Craftbot = "event.raft.craftbot",
+	Antenna = "event.raft.antenna"
 }
 
 local function LoadQuestSet( path, questTable )
@@ -352,7 +355,7 @@ end
 
 --RAFT
 function QuestManager.cl_getQuestProgressString( self, questName )
-	if self.cl.activeQuests[questName] then
+	if self.cl.activeQuests[questName] and sm.exists(self.cl.activeQuests[questName]) then
 		local data = self.cl.activeQuests[questName]:getClientPublicData()
 		if data and data.progressString then
 			return data.progressString
