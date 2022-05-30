@@ -21,7 +21,7 @@
 				"lambert2": {
 					"material": "DifAsgNor",
 					"textureList": [
-						"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+						"$CONTENT_DATA/Characters/Char_Tools/Char_axe/obj_containers_seed_dif.tga",
 						"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
 						"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
 					]
