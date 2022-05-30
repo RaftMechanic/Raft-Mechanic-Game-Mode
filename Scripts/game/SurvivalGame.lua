@@ -60,7 +60,8 @@ function SurvivalGame.server_onCreate( self )
 	self.data = nil
 
 	print( self.sv.saved.data )
-	if self.sv.saved.data and self.sv.saved.data.dev then
+	--force disable dev mode while having dev console
+	if false then --self.sv.saved.data and self.sv.saved.data.dev then
 		g_godMode = true
 		g_survivalDev = true
 		sm.log.info( "Starting SurvivalGame in DEV mode" )
@@ -153,7 +154,7 @@ function SurvivalGame.server_onRefresh( self )
 end
 
 function SurvivalGame.client_onCreate( self )
-	
+
 	self.cl = {}
 	self.cl.time = {}
 	self.cl.time.timeOfDay = 0.0
@@ -162,6 +163,8 @@ function SurvivalGame.client_onCreate( self )
 	if not sm.isHost then
 		self:loadCraftingRecipes()
 		g_enableCollisionTumble = true
+	else
+		self:bindChatCommands() --Raft
 	end
 
 	if g_respawnManager == nil then
@@ -198,7 +201,7 @@ function SurvivalGame.bindChatCommands( self )
 
 
 
-	local addCheats = g_survivalDev
+	local addCheats = sm.isHost or g_survivalDev --Raft
 
 	if addCheats then
 		sm.game.bindChatCommand( "/ammo", { { "int", "quantity", true } }, "cl_onChatCommand", "Give ammo (default 50)" )
