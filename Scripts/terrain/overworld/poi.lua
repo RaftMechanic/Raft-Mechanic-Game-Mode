@@ -96,16 +96,7 @@ function initPoiTiles()
 
 	-- Small Random
 	-- Road
-	addPoiTileLegacy( POI_ROAD, 1, "$SURVIVAL_DATA/Terrain/Tiles/poi/Kiosk_64_01.tile" )
-	addPoiTileLegacy( POI_ROAD, 1, "$SURVIVAL_DATA/Terrain/Tiles/poi/Kiosk_64_01.tile" ) -- Added twice (to f_poiTiles[POI_ROAD]) for increased chance
-	addPoiTileLegacy( POI_ROAD, 2, "$SURVIVAL_DATA/Terrain/Tiles/poi/Kiosk_64_02.tile" )
-	addPoiTileLegacy( POI_ROAD, 2, "$SURVIVAL_DATA/Terrain/Tiles/poi/Kiosk_64_02.tile" ) -- Added twice (to f_poiTiles[POI_ROAD]) for increased chance
-	addPoiTileLegacy( POI_ROAD, 3, "$SURVIVAL_DATA/Terrain/Tiles/poi/Kiosk_64_03.tile" )
-	addPoiTileLegacy( POI_ROAD, 3, "$SURVIVAL_DATA/Terrain/Tiles/poi/Kiosk_64_03.tile" ) -- Added twice (to f_poiTiles[POI_ROAD]) for increased chance
-	addPoiTileLegacy( POI_ROAD, 4, "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Road_64_01.tile" )
-	addPoiTileLegacy( POI_ROAD, 5, "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Road_64_02.tile" )
-	addPoiTileLegacy( POI_ROAD, 6, "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Road_64_03.tile" )
-	addPoiTileLegacy( POI_ROAD, 7, "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Road_64_04.tile" )
+	addPoiTileLegacy( POI_ROAD, 1, "$CONTENT_DATA/Terrain/Tiles/kiosk01_replacement.tile" )
 
 	-- Meadow
 	addPoiTileLegacy( POI_CAMP, 1, "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Meadow_64_01.tile" )
