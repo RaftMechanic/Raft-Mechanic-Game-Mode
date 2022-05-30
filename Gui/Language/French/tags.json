@@ -67,8 +67,12 @@
     "ClamDivingSucks": "#ff88ffAi-je déjà dit que je déteste plonger pour aller ramasser les palourdes ?",
 
     "Quest_Tutorial_Sleep": "Dormir dans le hamac",
-    "Quest_Tutorial_Workbench": "Ouvrir l'atelier",
+    "Quest_Tutorial_Workbench": "Ouvrir l'établi",
     "Quest_Tutorial_Hammer": "Fabriquer un marteau en bois",
+
+    "Quest_RangerStation_Logbook": "Lire la note \"L'avant-poste des rangers\"",
+    "Quest_RangerStation_Go_To": "Atteindre l'avant-poste",
+    "Quest_RangerStation_Activate": "Trouver un moyen d'activer l'avant-poste",
 
     "Quest_BuildRadio_Logbook": "Lire la note \"État de l'antenne\" ",
     "Quest_BuildRadio_Craftbot": "Construire un Fabribot",
