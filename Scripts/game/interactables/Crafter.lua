@@ -849,7 +849,7 @@ function Crafter.client_onFixedUpdate( self )
 			if not self.questMarkerGui then
 				create_quest_marker(self)
 			end
-			self.questMarkerGui:open()
+			create_quest_marker(self)
 		elseif self.questMarkerGui then
 			destroy_quest_marker(self)
 		end

@@ -1,0 +1,28 @@
+{
+	"harvestableList": [
+        {
+			"name": "hvs_loot_logbook",
+			"showInEditor": true,
+            "uuid": "3b7054d0-9ca7-4efa-8b4a-e8658eda3181",
+            "color": "",
+            "renderable": "$SURVIVAL_DATA/Harvestables/Renderable/Farmables/hvs_farmables_beehive.rend",
+			"col": "$CONTENT_DATA/Harvestables/Collision/hvs_loot_bigger_col.obj", 
+			"collides": {
+				"character": false,
+				"body": false,
+				"projectile": false,
+				"melee": false
+			},
+			"removable": true,
+		    "size": 1,
+			"type": "logfiles",
+			"material": "Wood",
+			"mass": 15000,		
+			"script": { 
+				"file": "$CONTENT_DATA/Scripts/game/harvestable/LogbookLoot.lua", 
+				"class": "LogbookLoot", 
+				"data": {} 
+			}
+		}
+	]
+}

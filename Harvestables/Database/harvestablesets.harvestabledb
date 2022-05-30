@@ -11,6 +11,10 @@
       {
          "categories" : [],
          "name" : "$CONTENT_DATA/Harvestables/Database/HarvestableSets/survival_stones.harvestableset"
+      },
+      {
+         "categories" : [],
+         "name" : "$CONTENT_DATA/Harvestables/Database/HarvestableSets/raft.harvestableset"
       }
    ]
 }
