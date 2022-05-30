@@ -1,0 +1,17 @@
+{
+   "lodList" : [
+      {
+         "mesh" : "$CONTENT_DATA/Objects/Mesh/Renders/woctemplerecipe.fbx",
+         "subMeshMap" : {
+            "Notepad" : {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$CONTENT_DATA/Objects/Textures/Renders/char_woctemplerecipe_tools_dif.tga",
+                  "$CONTENT_DATA/Objects/Textures/Renders/char_woctemplerecipe_tools_asg.tga",
+                  "$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_nor.tga"
+               ]
+            }
+         }
+      }
+   ]
+}
