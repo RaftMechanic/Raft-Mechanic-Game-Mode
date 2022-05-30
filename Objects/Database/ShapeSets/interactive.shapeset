@@ -1012,8 +1012,8 @@
                      "Notepad" : {
                         "material" : "DifAsgNor",
                         "textureList" : [
-                           "$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_dif.tga",
-                           "$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_asg.tga",
+                           "$CONTENT_DATA/Objects/Textures/Interactables/char_observerbot_tools_dif.tga",
+                           "$CONTENT_DATA/Objects/Textures/Interactables/char_observerbot_tools_asg.tga",
                            "$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_nor.tga"
                         ]
                      },
