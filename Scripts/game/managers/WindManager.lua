@@ -7,13 +7,9 @@ WindManager.isSaveObject = true
 
 -- [quest] = sm.vec.new(x, y, z)
 local windMap = { --TODO: add more (order matters) and use callbacks
-    { quest = quest_radio_location, location = sm.vec3.new(-1820.5, 167.5, 0)},
-    { quest = quest_find_trader, location = sm.vec3.new(1536, 2048, 0)},
-    { quest = quest_return_to_trader1, location = sm.vec3.new(1536, 2048, 0)},
-    { quest = quest_return_to_trader2, location = sm.vec3.new(1536, 2048, 0)},
-    { quest = quest_return_to_trader3, location = sm.vec3.new(1536, 2048, 0)},
-    { quest = quest_return_to_trader4, location = sm.vec3.new(1536, 2048, 0)},
-    { quest = quest_return_to_trader5, location = sm.vec3.new(1536, 2048, 0)}
+    { quest = "quest_radio_location", location = sm.vec3.new(-1820.5, 167.5, 0)},
+    { quest = "quest_find_trader", location = sm.vec3.new(1536, 2048, 0)},
+    { quest = "quest_deliver_vegetables", location = sm.vec3.new(1536, 2048, 0)}
 }
 
 local defaultWindMap = {
@@ -35,11 +31,10 @@ function WindManager.server_onCreate(self)
     end 
 
     self.network:setClientData(self.sv)
-    
-    --FIX quests at some point I guess
-    --g_questManager.sv_subscribeEvent(g_questManager, "event.generic.quest_activated", self, "sv_e_onQuestChanged")
-    --g_questManager.sv_subscribeEvent(g_questManager, "event.generic.quest_completed", self, "sv_e_onQuestChanged")
-    --g_questManager.sv_subscribeEvent(g_questManager, "event.generic.quest_abandoned", self, "sv_e_onQuestChanged")
+
+    g_questManager.Sv_SubscribeEvent(QuestEvent.QuestActivated, self.scriptableObject, "sv_e_onQuestChanged")
+    g_questManager.Sv_SubscribeEvent(QuestEvent.QuestCompleted, self.scriptableObject, "sv_e_onQuestChanged")
+    g_questManager.Sv_SubscribeEvent(QuestEvent.QuestAbandoned, self.scriptableObject, "sv_e_onQuestChanged")
 
     g_windManager = self
 end
@@ -68,9 +63,9 @@ end
 ---@return Vec3
 function WindManager:sv_caculateWindCenter()
     for _, data in ipairs(windMap) do
-        local completed = g_questManager.Sv_IsQuestComplete(data.quest)
+        local success, completed = pcall(g_questManager.Sv_IsQuestComplete, data.quest)
 
-        if not completed then
+        if success and not completed then -- failed then assume completed
             return data.location -- break the loop
         end
     end
