@@ -767,7 +767,7 @@
          "rotationSet" : "PropYZ",
          "scripted" : {
             "classname" : "Converter",
-            "filename" : "$CONTENT_DATA/Scripts/game/interactables/wasdConverter.lua"
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/WASDConverter.lua"
          },
          "uuid" : "509505f1-b772-4acd-9827-f9a605a979ec"
       },
@@ -846,7 +846,7 @@
          "rotationSet" : "PropYZ",
          "scripted" : {
             "classname" : "Sensor",
-            "filename" : "$CONTENT_DATA/Scripts/game/interactables/waterSensor.lua"
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/WaterSensor.lua"
          },
          "uuid" : "6db7aacf-f2b3-4cbb-a6d2-2a01d5ee5562"
       },
@@ -925,7 +925,7 @@
          "rotationSet" : "PropYZ",
          "scripted" : {
             "classname" : "Steer",
-            "filename" : "$CONTENT_DATA/Scripts/game/interactables/creationSteer.lua"
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/CreationSteer.lua"
          },
          "uuid" : "71ac7645-57f5-4d49-9574-c8482b431862"
       },
@@ -981,7 +981,7 @@
          "rotationSet" : "PropY",
          "scripted" : {
             "classname" : "Sail",
-            "filename" : "$CONTENT_DATA/Scripts/game/interactables/sail.lua"
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Sail.lua"
          },
          "sticky" : "-Y",
          "uuid" : "eea9794b-bcdf-431e-bdcd-7b2ff6ffa145"
@@ -1143,7 +1143,7 @@
          "rotationSet" : "PropY",
          "scripted" : {
             "classname" : "Antenna",
-            "filename" : "$CONTENT_DATA/Scripts/game/interactables/antenna.lua"
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Antenna.lua"
          },
          "sticky" : "-Y",
          "uuid" : "f95beb80-49c8-4d4c-98e9-5b87225c4570"
@@ -1397,7 +1397,7 @@
          "rotationSet" : "PropY",
          "scripted" : {
             "classname" : "Flag",
-            "filename" : "$CONTENT_DATA/Scripts/game/interactables/flag.lua"
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Flag.lua"
          },
          "sticky" : "-Y",
          "uuid" : "8f460344-ef34-42ab-99e3-d3bed9af4b52"
@@ -1545,7 +1545,7 @@
          "scripted" : {
             "classname" : "Chest",
             "data" : {},
-            "filename" : "$CONTENT_DATA/Scripts/game/interactables/chest.lua"
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Chest.lua"
          },
          "showInInventory" : false,
          "sticky" : "-Z-Y-X+X",
@@ -1621,7 +1621,7 @@
          "scripted" : {
             "classname" : "Collector",
             "data" : {},
-            "filename" : "$CONTENT_DATA/Scripts/game/interactables/junkCollector.lua"
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/JunkCollector.lua"
          },
          "stackSize" : 10,
          "sticky" : "+X-X+Y-Y+Z",

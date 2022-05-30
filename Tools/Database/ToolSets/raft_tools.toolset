@@ -7,7 +7,7 @@
 			"script": {
 				"class": "Rod",
 				"data": {},
-				"file": "$CONTENT_DATA/Scripts/game/tools/fishingRod.lua"
+				"file": "$CONTENT_DATA/Scripts/game/tools/FishingRod.lua"
 			},
 			"uuid": "e3bcf8fa-68d7-49a8-b17b-c1e864d53b69"
 		},
@@ -18,7 +18,7 @@
 			"script": {
 				"class": "Hook",
 				"data": {},
-				"file": "$CONTENT_DATA/Scripts/game/tools/resourceHook.lua"
+				"file": "$CONTENT_DATA/Scripts/game/tools/ResourceHook.lua"
 			},
 			"uuid": "b5ade3b0-be48-4a61-a8c2-13a4cedf1343"
 		},
@@ -51,7 +51,7 @@
 			"script": {
 				"class": "Spear",
 				"data": {},
-				"file": "$CONTENT_DATA/Scripts/game/tools/spear.lua"
+				"file": "$CONTENT_DATA/Scripts/game/tools/Spear.lua"
 			},
 			"uuid": "0db1ecd5-503d-4dd3-807e-869c243a7c08"
 		},
@@ -62,7 +62,7 @@
 			"script": {
 				"class": "Harpoon",
 				"data": {},
-				"file": "$CONTENT_DATA/Scripts/game/tools/harpoonGun.lua"
+				"file": "$CONTENT_DATA/Scripts/game/tools/HarpoonGun.lua"
 			},
 			"uuid": "e34387d3-fa29-4831-89b8-c94417b6fce6"
 		},
