@@ -23,6 +23,24 @@
 			"classname": "RadioLocationQuest",
 			"name": "quest_radio_location",
 			"uuid": "45fe7b9c-4895-44a3-82aa-ed8da730de83"
+		},
+		{
+			"filename": "$CONTENT_DATA/Scripts/game/quests/FindTraderQuest.lua",
+			"classname": "FindTraderQuest",
+			"name": "quest_find_trader",
+			"uuid": "4ea21139-8366-445c-8a7c-fe08f745c7db"
+		},
+		{
+			"filename": "$CONTENT_DATA/Scripts/game/quests/DeliverVegetablesQuest.lua",
+			"classname": "DeliverVegetablesQuest",
+			"name": "quest_deliver_vegetables",
+			"uuid": "00fb3de6-6dff-4cea-801c-d3e2d6d48890"
+		},
+		{
+			"filename": "$CONTENT_DATA/Scripts/game/quests/WocTempleQuest.lua",
+			"classname": "WocTempleQuest",
+			"name": "quest_woc_temple",
+			"uuid": "6a729c2c-f37c-4c9d-a1ad-b8f8e8dc49a0"
 		}
 	]
 }

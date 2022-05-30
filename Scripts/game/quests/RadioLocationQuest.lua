@@ -29,6 +29,7 @@ function RadioLocationQuest.server_onCreate( self )
 	QuestManager.Sv_SubscribeEvent( QuestEvent.ReadLog, self.scriptableObject, "sv_e_onQuestEvent" )
 	QuestManager.Sv_SubscribeEvent( QuestEvent.InventoryChanges, self.scriptableObject, "sv_e_onQuestEvent" )
 	QuestManager.Sv_SubscribeEvent( QuestEvent.AreaTriggerEnter, self.scriptableObject, "sv_e_onQuestEvent" )
+	QuestManager.Sv_SubscribeEvent( QuestEvent.TraderNotes, self.scriptableObject, "sv_e_onQuestEvent" )
 
 	sm.event.sendToScriptableObject( self.scriptableObject, "sv_e_onQuestEvent", {} )
 	self:sv_saveAndSync()
@@ -56,6 +57,9 @@ function RadioLocationQuest.sv_e_onQuestEvent( self, data )
 		if FindInventoryChange( data.params.changes, obj_sail ) > 0 then
 			self.sv.saved.completedStages[Stages.craft_sail] = true
 		end
+
+	elseif data.event ==QuestEvent.TraderNotes then
+		self.sv.saved.completedStages[Stages.explore_wreck] = true
 	end
 
 	-- Detect player at the wreck for the first time

@@ -19,7 +19,14 @@ QuestEvent = {
 	Workbench = "event.raft.workbench",
 	ReadLog = "event.raft.log_read",
 	Craftbot = "event.raft.craftbot",
-	Antenna = "event.raft.antenna"
+	Antenna = "event.raft.antenna",
+	TraderNotes = "event.raft.trader_notes",
+	TraderTalk = "event.raft.trader_talk",
+	Vegetables = "event.raft.vegetables",
+	SunshakeRecipe = "event.raft.sunshake_recipes",
+
+	Fruits = "event.raft.fruits",
+	FarmerSuck = "event.raft.farmer_suck",
 }
 
 local function LoadQuestSet( path, questTable )
@@ -355,6 +362,10 @@ end
 
 --RAFT
 function QuestManager.cl_getQuestProgressString( self, questName )
+	if not self then
+		self = g_questManager
+	end
+
 	if self.cl.activeQuests[questName] and sm.exists(self.cl.activeQuests[questName]) then
 		local data = self.cl.activeQuests[questName]:getClientPublicData()
 		if data and data.progressString then

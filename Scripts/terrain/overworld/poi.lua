@@ -59,11 +59,11 @@ function initPoiTiles()
 	addPoiTileLegacy( POI_CRASHSITE_AREA, 8, "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_SmallRuin_D_01.tile" )
 
 	-- Unique (MEADOW)
-	addPoiTileLegacy( POI_HIDEOUT_XL, 1, "$SURVIVAL_DATA/Terrain/Tiles/poi/Hideout_512_01.tile" )
+	addPoiTileLegacy( POI_HIDEOUT_XL, 1, "$CONTENT_DATA/Terrain/Tiles/Hideout_512_01.tile" ) --RAFT
 
 	addPoiTileLegacy( POI_SILODISTRICT_XL, 1, "$SURVIVAL_DATA/Terrain/Tiles/poi/SiloDistrict_512_01.tile" )
 
-	addPoiTileLegacy( POI_RUINCITY_XL, 1, "$SURVIVAL_DATA/Terrain/Tiles/poi/RuinCity_512_01.tile" )
+	addPoiTileLegacy( POI_RUINCITY_XL, 1, "$CONTENT_DATA/Terrain/Tiles/RuinCity_512_01.tile" ) --RAFT
 
 	addPoiTileLegacy( POI_CRASHEDSHIP_LARGE, 1, "$SURVIVAL_DATA/Terrain/Tiles/poi/CrashedShip_256_01.tile" )
 
@@ -76,9 +76,9 @@ function initPoiTiles()
 	-- Special (MEADOW)
 	addPoiTileLegacy( POI_MECHANICSTATION_MEDIUM, 1, "$CONTENT_DATA/Terrain/Tiles/RangerStation.tile" )
 
-	addPoiTileLegacy( POI_PACKINGSTATIONVEG_MEDIUM, 1, "$SURVIVAL_DATA/Terrain/Tiles/poi/PackingStation_Vegetable_128_01.tile" )
+	addPoiTileLegacy( POI_PACKINGSTATIONVEG_MEDIUM, 1, "$CONTENT_DATA/Terrain/Tiles/PackingStation_Vegetable_128_01.tile" ) --RAFT
 
-	addPoiTileLegacy( POI_PACKINGSTATIONFRUIT_MEDIUM, 2, "$SURVIVAL_DATA/Terrain/Tiles/poi/PackingStation_Fruit_128_01.tile" ) -- Issue: index starts at 2
+	addPoiTileLegacy( POI_PACKINGSTATIONFRUIT_MEDIUM, 2, "$CONTENT_DATA/Terrain/Tiles/PackingStation_Fruit_128_01.tile" ) -- Issue: index starts at 2 --RAFT
 
 
 	-- Large Random

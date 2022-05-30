@@ -37,6 +37,12 @@ function LogBook:sv_e_onQuestEvent( data )
 			self.network:sendToClient( self.tool:getOwner(), "cl_n_addLog", log_radio )
 		elseif data.params.questName == "quest_radio_interactive" then
 			self.network:sendToClient( self.tool:getOwner(), "cl_n_addLog", log_radio_signal )
+		elseif data.params.questName == "quest_radio_location" then
+			self.network:sendToClient( self.tool:getOwner(), "cl_n_addLog", log_find_trader )
+		elseif data.params.questName == "quest_find_trader" then
+			self.network:sendToClient( self.tool:getOwner(), "cl_n_addLog", log_deliver_vegetables )
+		elseif data.params.questName == "quest_deliver_vegetables" then
+			self.network:sendToClient( self.tool:getOwner(), "cl_n_addLog", log_woc_temple )
 		end
 	end
 end
@@ -70,6 +76,16 @@ function LogBook.sv_n_requestInitData( self, _, player )
 	if QuestManager.Sv_IsQuestComplete( "quest_radio_interactive" ) then
 		clientData.logs[#clientData.logs + 1] = log_radio_signal
 	end
+	if QuestManager.Sv_IsQuestComplete( "quest_radio_location" ) then
+		clientData.logs[#clientData.logs + 1] = log_find_trader
+	end
+	if QuestManager.Sv_IsQuestComplete( "quest_find_trader" ) then
+		clientData.logs[#clientData.logs + 1] = log_deliver_vegetables
+	end
+	if QuestManager.Sv_IsQuestComplete( "quest_deliver_vegetables" ) then
+		clientData.logs[#clientData.logs + 1] = log_woc_temple
+	end
+	
 
 	self.network:sendToClient( player, "cl_n_initData", clientData )
 end

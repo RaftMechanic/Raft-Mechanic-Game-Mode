@@ -25,11 +25,10 @@ end
 function LogbookLoot.sv_n_pickup( self, params, player )
 	if self.sv.state == STATE_OPEN and params.state == STATE_OPEN then
 		if not self.sv.removed then
-			if Server_isQuestActive( quest_pickup_logbook ) then
-				sm.event.sendToPlayer( player, "sv_e_onLoot", { name = "#{MENU_OPTIONS_CONTROLS_LOGBOOK}", pos = self.harvestable:getPosition(), effectName = "Loot - LogfilesPickup" } )
-				self.sv.removed = true
-				sm.harvestable.destroy( self.harvestable )
-			end
+			sm.event.sendToPlayer( player, "sv_e_onLoot", { name = "#{MENU_OPTIONS_CONTROLS_LOGBOOK}", pos = self.harvestable:getPosition(), effectName = "Loot - LogfilesPickup" } )
+			self.sv.removed = true
+			QuestManager.Sv_OnEvent(QuestEvent.TraderNotes)
+			sm.harvestable.destroy( self.harvestable )
 		end
 	elseif self.sv.state == STATE_CLOSED then
 		self.sv.openingTicks = OpeningTickTime
@@ -126,15 +125,20 @@ function LogbookLoot.client_onInteract( self, character, state )
 	end
 end
 
-function LogbookLoot.client_canInteract( self )
+function LogbookLoot.client_canInteract( self ) 
+	if not (QuestManager.cl_getQuestProgressString(g_questManager, "quest_radio_location") == language_tag("Quest_RadioSignal_ExploreWreck")) then
+		sm.gui.setInteractionText("", "", language_tag("QuestItemTooEarly"))
+		return false
+	end
+
 	if self.cl.state == STATE_CLOSED then
-		local keyBindingText =  sm.gui.getKeyBinding( "Use" )
-		sm.gui.setInteractionText( "", keyBindingText, "#{INTERACTION_USE}" )
+		local keyBindingText = sm.gui.getKeyBinding( "Use", true )
+    	sm.gui.setInteractionText("", keyBindingText, "#{INTERACTION_USE}")
 	elseif self.cl.state == STATE_OPENING then
 		return false
 	elseif self.cl.state == STATE_OPEN then
 		sm.gui.setCenterIcon( "Use" )
-		local keyBindingText =  sm.gui.getKeyBinding( "Attack" )
+		local keyBindingText =  sm.gui.getKeyBinding( "Attack", true )
 		sm.gui.setInteractionText( "", keyBindingText, "#{INTERACTION_PICK_UP} [" .. "#{MENU_OPTIONS_CONTROLS_LOGBOOK}" .. "]" )
 	end
 	return true

@@ -204,5 +204,86 @@
 		},
 		"flammable": false,
 		"friction": 0.1
+	},
+	{
+		"uuid": "614c3193-13da-40f4-9b03-37f26e760fd6",
+		"name": "obj_hideout_questgiver",
+		"renderable": "$SURVIVAL_DATA/Character/Char_Hideoutfarmer/char_hideoutfarmer.rend",
+		"color": "ffffff",
+		"box": {
+			"x": 20,
+			"y": 17,
+			"z": 12
+		},
+		"scripted": {
+			"filename": "$CONTENT_DATA/Scripts/game/interactables/HideoutTrader.lua",
+			"classname": "HideoutTrader",
+			"data": {
+				"animationList": [
+					{
+						"name": "Idle",
+						"looping": true
+					},
+					{
+						"name": "Close",
+						"effect": {
+							"name": "Farmerhideout - Close",
+							"joint": "root_jnt"
+						}
+					},
+					{
+						"name": "Open",
+						"effect": {
+							"name": "Farmerhideout - Open",
+							"joint": "root_jnt"
+						},
+						"nextAnimation": "Idle"
+					},
+					{
+						"name": "Confirm01",
+						"effect": {
+							"name": "Farmerhideout - Accept",
+							"joint": "root_jnt"
+						},
+						"nextAnimation": "Idle"
+					},
+					{
+						"name": "Confirm02",
+						"effect": {
+							"name": "Farmerhideout - Accept",
+							"joint": "root_jnt"
+						},
+						"nextAnimation": "Idle"
+					},
+					{
+						"name": "Confirm03",
+						"effect": {
+							"name": "Farmerhideout - Accept",
+							"joint": "root_jnt"
+						},
+						"nextAnimation": "Idle"
+					}
+				]
+			}
+		},
+		"rotationSet": "PropY",
+		"physicsMaterial": "Metal",
+		"ratings": {
+			"density": 5,
+			"durability": 10,
+			"friction": 5,
+			"buoyancy": 5
+		},
+		"flammable": false,
+		"restrictions": {
+			"destructable": false,
+			"erasable": false,
+			"buildable": false,
+			"usable": true,
+			"connectable": false,
+			"liftable": false,
+			"convertibleToDynamic": false,
+			"paintable": false
+		}
 	}
 ]}

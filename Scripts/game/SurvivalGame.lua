@@ -822,6 +822,12 @@ function SurvivalGame.sv_onChatCommand( self, params, player )
 			pos = sm.vec3.new(-1682.5, -1722, 2)
 		elseif params[2] == "wreck" then
 			pos = sm.vec3.new(-29*64, 2*64, 2)
+		elseif params[2] == "trader" then
+			pos = sm.vec3.new(26*64, 34*64, 20)
+		elseif params[2] == "veggie" then
+			pos = sm.vec3.new(-768, 1280, 2)
+		elseif params[2] == "temple" then
+			pos = sm.vec3.new(3108.874511718750, 2785.419433593750, 9.309272766113281)
 
 
 

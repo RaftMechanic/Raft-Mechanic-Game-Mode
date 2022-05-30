@@ -2,10 +2,9 @@
 	"harvestableList": [
         {
 			"name": "hvs_loot_logbook",
-			"showInEditor": true,
+			"showInEditor": false,
             "uuid": "3b7054d0-9ca7-4efa-8b4a-e8658eda3181",
             "color": "",
-            "renderable": "$SURVIVAL_DATA/Harvestables/Renderable/Farmables/hvs_farmables_beehive.rend",
 			"col": "$CONTENT_DATA/Harvestables/Collision/hvs_loot_bigger_col.obj", 
 			"collides": {
 				"character": false,
