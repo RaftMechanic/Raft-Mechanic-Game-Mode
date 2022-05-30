@@ -5,9 +5,7 @@ dofile "$SURVIVAL_DATA/Scripts/game/survival_survivalobjects.lua"
 dofile "$SURVIVAL_DATA/Scripts/game/util/pipes.lua"
 
 dofile( "$CONTENT_DATA/Scripts/game/managers/QuestManager.lua" ) --RAFT
-
-print("0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
-
+ 
 Crafter = class( nil )
 Crafter.colorNormal = sm.color.new( 0x84ff32ff )
 Crafter.colorHighlight = sm.color.new( 0xa7ff4fff )
@@ -615,7 +613,6 @@ function Crafter.cl_updateRecipeGrid( self )
 	self.cl.guiInterface:clearGrid( "RecipeGrid" )
 	for _, recipeSet in ipairs( self.crafter.recipeSets ) do
 		print( "Adding", g_craftingRecipes[recipeSet.name].path ) 
-		print("custom clusterfuck")
 
 
 		--RAFT --TODO make quest system work
@@ -844,14 +841,15 @@ function Crafter.client_onFixedUpdate( self )
 			destroy_quest_marker(self)
 		end
 
-	elseif self.shape:getShapeUuid() == obj_craftbot_craftbot1 then
+	elseif self.shape:getShapeUuid() == obj_craftbot_craftbot1 and sm.localPlayer.getPlayer():getCharacter() then
 		local progressString = get_progress("quest_radio_interactive")
-		if progressString == language_tag("Quest_BuildRadio_Craftbot") then
+		if progressString == language_tag("Quest_BuildRadio_Craftbot") then 
 			self.network:sendToServer("sv_send_event")
 		elseif progressString == language_tag("Quest_BuildRadio_Wood") then
 			if not self.questMarkerGui then
 				create_quest_marker(self)
 			end
+			self.questMarkerGui:open()
 		elseif self.questMarkerGui then
 			destroy_quest_marker(self)
 		end
@@ -971,7 +969,7 @@ function Crafter.client_onUpdate( self, deltaTime )
 
 	local prevAnimName = self.cl.animName
 
-	if self.cl.animName and self.interactable:hasAnim(self.cl.animName) then--RAFT
+	if self.cl.animName and self.interactable:hasAnim(self.cl.animName) or not self.raft then--RAFT
 
 		if self.cl.animState == "offline" then
 			assert( self.crafter.needsPower )

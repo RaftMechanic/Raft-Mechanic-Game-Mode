@@ -12,7 +12,6 @@ local Stages = {
 }
 
 function TutorialQuest.server_onCreate( self )
-	print("fuck you so goddman much ")
 	self.sv = {}
 	self.sv.saved = self.storage:load()
 	if self.sv.saved == nil then
