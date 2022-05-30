@@ -113,7 +113,7 @@ function OilGeyser.server_spawnJunk(self)
 	elseif random <= 600 then
 		junkIndex = 2
 	elseif random <= 602 then
-		junkIndex = 100 + math.random(1,3) --Abandoned raft
+		junkIndex = 100 + math.random(1,4) --Abandoned raft and suspension mug
 	else
 		junkIndex = 1
 	end
