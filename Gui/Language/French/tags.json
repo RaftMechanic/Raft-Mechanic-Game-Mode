@@ -66,8 +66,20 @@
 
     "ClamDivingSucks": "#ff88ffAi-je déjà dit que je déteste plonger pour aller ramasser les palourdes ?",
 
-    "Quest_Tutorial_Sleep": "Dormez dans le hamac",
+    "Quest_Tutorial_Sleep": "Dormir dans le hamac",
     "Quest_Tutorial_Workbench": "Ouvrir l'atelier",
     "Quest_Tutorial_Hammer": "Fabriquer un marteau en bois",
-    "Quest_Tutorial_Logbook": "Lire \"Space Ranger's Outpost\" log"
+
+    "Quest_BuildRadio_Logbook": "Lire la note \"État de l'antenne\" ",
+    "Quest_BuildRadio_Craftbot": "Construire un Fabribot",
+    "Quest_BuildRadio_Wood": "Fabriquer 20 Blocs de bois 1",
+    "Quest_BuildRadio_Craft_Antenna": "Fabriquer une antenne radio de fortune",
+    "Quest_BuildRadio_Use_Antenna": "Envoyer un signal de détresse",
+
+    "Quest_RadioSignal_Logbook": "Lire la note \"Mission de sauvetage\" ",
+    "Quest_RadioSignal_Cotton": "Trouver du coton",
+    "Quest_RadioSignal_Windsock": "Fabriquer une manche à air",
+    "Quest_RadioSignal_Sail": "Fabriquer une voile",
+    "Quest_RadioSignal_FindWreck": "Atteindre la source du signal de détresse",
+    "Quest_RadioSignal_ExploreWreck": "Explorer l'épave à la recherche d'indices"
 }
