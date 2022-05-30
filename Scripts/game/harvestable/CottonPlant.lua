@@ -119,7 +119,9 @@ function create_quest_marker(self, image)
 	self.questMarkerGui:setImage( "Icon", image or "icon_questmarker.png" )
 	self.questMarkerGui:setRequireLineOfSight( false )
 	self.questMarkerGui:setMaxRenderDistance( 10000 )
-	self.questMarkerGui:setWorldPosition(self.harvestable.worldPosition + sm.vec3.new(0,0,1.25))
+	if self.harvestable then
+		self.questMarkerGui:setWorldPosition(self.harvestable.worldPosition + sm.vec3.new(0,0,1.25))
+	end
 	self.questMarkerGui:open()
 end
 
