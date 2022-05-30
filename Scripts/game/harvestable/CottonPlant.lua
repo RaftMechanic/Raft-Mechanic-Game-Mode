@@ -95,3 +95,35 @@ function CottonPlant.client_onDestroy( self )
 	self.cl.cottonfluff:stop()
 	self.cl.cottonfluff:destroy()
 end
+
+--RAFT
+dofile( "$CONTENT_DATA/Scripts/game/managers/QuestManager.lua" )
+
+function CottonPlant:client_onFixedUpdate(dt)
+	if self.harvestable then
+		--WHAT IN THE ACTUAL CURSED FUCK IS HAPPENING HERE? JUST DO NOT TOUCH THIS CODE. IT IS CURSED AS FUCK
+		if QuestManager.cl_getQuestProgressString(g_questManager, "quest_radio_location") == language_tag("Quest_RadioSignal_Cotton") then
+			if not self.questMarkerGui then
+				create_quest_marker(self)
+			else
+				self.questMarkerGui:setWorldPosition(self.harvestable.worldPosition + sm.vec3.new(0,0,1.25) )
+			end
+		elseif self.questMarkerGui then
+			destroy_quest_marker(self)
+		end
+	end
+end
+
+function create_quest_marker(self, image)
+	self.questMarkerGui = sm.gui.createWorldIconGui( 60, 60, "$GAME_DATA/Gui/Layouts/Hud/Hud_WorldIcon.layout", false )
+	self.questMarkerGui:setImage( "Icon", image or "icon_questmarker.png" )
+	self.questMarkerGui:setRequireLineOfSight( false )
+	self.questMarkerGui:setMaxRenderDistance( 10000 )
+	self.questMarkerGui:setWorldPosition(self.harvestable.worldPosition + sm.vec3.new(0,0,1.25))
+	self.questMarkerGui:open()
+end
+
+function destroy_quest_marker(self)
+	self.questMarkerGui:close()
+	self.questMarkerGui = nil
+end

@@ -64,10 +64,28 @@
     "HammockAllPlayers": "All players need to sleep to skip night",
     "HammockNight": "You can only sleep at night",
 
+    "AntennaInteract": "Send distress signal",
+
     "ClamDivingSucks": "#ff88ffDid I already mention that I hate clam diving?",
 
     "Quest_Tutorial_Sleep": "Sleep in the hammock",
     "Quest_Tutorial_Workbench": "Open the workbench",
     "Quest_Tutorial_Hammer": "Craft a wooden hammer",
-    "Quest_Tutorial_Logbook": "Read \"Space Ranger's Outpost\" log"
+
+    "Quest_RangerStation_Logbook": "Read \"Space Ranger's Outpost\" log",
+    "Quest_RangerStation_Go_To": "Reach the outpost",
+    "Quest_RangerStation_Activate": "Find a way to activate the outpost",
+
+    "Quest_BuildRadio_Logbook": "Read \"Antenna Status\" log",
+    "Quest_BuildRadio_Craftbot": "Build a Craftbot",
+    "Quest_BuildRadio_Wood": "Craft 20 Wood Block 1",
+    "Quest_BuildRadio_Craft_Antenna": "Craft a Makeshift Radio Antenna",
+    "Quest_BuildRadio_Use_Antenna": "Send a distress signal",
+
+    "Quest_RadioSignal_Logbook": "Read \"Rescue Mission\" log",
+    "Quest_RadioSignal_Cotton": "Find cotton",
+    "Quest_RadioSignal_Windsock": "Craft a wind sock",
+    "Quest_RadioSignal_Sail": "Craft a sail",
+    "Quest_RadioSignal_FindWreck": "Reach the source of the distress signal",
+    "Quest_RadioSignal_ExploreWreck": "Explore the wreck for clues"
 }

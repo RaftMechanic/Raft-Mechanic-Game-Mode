@@ -12,6 +12,7 @@ local Stages = {
 }
 
 function TutorialQuest.server_onCreate( self )
+	print("fuck you so goddman much ")
 	self.sv = {}
 	self.sv.saved = self.storage:load()
 	if self.sv.saved == nil then
@@ -90,8 +91,6 @@ function TutorialQuest.cl_updateProgress( self, stage, stageData )
 		self.scriptableObject.clientPublicData.progressString = language_tag("Quest_Tutorial_Workbench")
 	elseif stage == Stages.craft_hammer then
 		self.scriptableObject.clientPublicData.progressString = language_tag("Quest_Tutorial_Hammer")
-	elseif stage == Stages.open_logbook then
-		self.scriptableObject.clientPublicData.progressString = language_tag("Quest_Tutorial_Logbook")
 	else
 		self.scriptableObject.clientPublicData.progressString = ""
 	end

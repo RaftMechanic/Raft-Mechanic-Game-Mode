@@ -1,5 +1,5 @@
-log_rangerstation = "39d72e47-8eac-4fb9-95b1-ecccc06ff84f"
 log_crashedship = "1e4ab0d3-027a-4969-9436-5b23c26e5eeb"
+log_rangerstation = "39d72e47-8eac-4fb9-95b1-ecccc06ff84f"
 log_radio = "b7ebd326-60c5-4ee7-a35f-1bd3ef408ded"
 log_radio_signal = "0ccc96c2-97dd-47d9-af8b-0ae2343a939e"
 log_find_trader = "826a19db-2d2e-46fa-9ade-7bcdd8514572"

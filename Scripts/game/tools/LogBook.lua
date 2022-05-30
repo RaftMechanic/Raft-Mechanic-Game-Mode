@@ -32,6 +32,12 @@ function LogBook:sv_e_onQuestEvent( data )
 		if FindInventoryChange( data.params.changes, tool_wood_hammer ) > 0 then
 			self.network:sendToClient( self.tool:getOwner(), "cl_n_addLog", log_rangerstation )
 		end
+	elseif data.event == QuestEvent.QuestCompleted then
+		if data.params.questName == "quest_rangerstation" then
+			self.network:sendToClient( self.tool:getOwner(), "cl_n_addLog", log_radio )
+		elseif data.params.questName == "quest_radio_interactive" then
+			self.network:sendToClient( self.tool:getOwner(), "cl_n_addLog", log_radio_signal )
+		end
 	end
 end
 
@@ -58,6 +64,12 @@ function LogBook.sv_n_requestInitData( self, _, player )
 	if QuestManager.Sv_IsQuestComplete( "quest_raft_tutorial" ) then
 		clientData.logs[#clientData.logs + 1] = log_rangerstation
 	end
+	if QuestManager.Sv_IsQuestComplete( "quest_rangerstation" ) then
+		clientData.logs[#clientData.logs + 1] = log_radio
+	end
+	if QuestManager.Sv_IsQuestComplete( "quest_radio_interactive" ) then
+		clientData.logs[#clientData.logs + 1] = log_radio_signal
+	end
 
 	self.network:sendToClient( player, "cl_n_initData", clientData )
 end
@@ -72,6 +84,9 @@ function LogBook.sv_n_readLog( self, uuid )
 	local saved = self:sv_getSaved()
 	saved.mapReadLogs[uuid] = true
 	self.storage:save( saved )
+
+	--RAFT
+	QuestManager.Sv_OnEvent(QuestEvent.ReadLog, {uuid = uuid})
 end
 
 --------------------------------------------------------------------------------

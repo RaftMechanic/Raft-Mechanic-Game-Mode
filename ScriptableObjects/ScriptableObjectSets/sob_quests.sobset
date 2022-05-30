@@ -4,7 +4,25 @@
 			"filename": "$CONTENT_DATA/Scripts/game/quests/TutorialQuest.lua",
 			"classname": "TutorialQuest",
 			"name": "quest_raft_tutorial",
-			"uuid": "8be0279e-28b6-4aab-b620-586f50162c6e"
+			"uuid": "210bc13d-367a-457f-af4c-a433d162518f"
+		},
+		{
+			"filename": "$CONTENT_DATA/Scripts/game/quests/RangerStationQuest.lua",
+			"classname": "RangerStationQuest",
+			"name": "quest_rangerstation",
+			"uuid": "aaf5dda8-18dd-4a90-a85f-501023da347f"
+		},
+		{
+			"filename": "$CONTENT_DATA/Scripts/game/quests/BuildRadioQuest.lua",
+			"classname": "BuildRadioQuest",
+			"name": "quest_radio_interactive",
+			"uuid": "26ca3794-71f2-4648-a97c-997802680c95"
+		},
+		{
+			"filename": "$CONTENT_DATA/Scripts/game/quests/RadioLocationQuest.lua",
+			"classname": "RadioLocationQuest",
+			"name": "quest_radio_location",
+			"uuid": "45fe7b9c-4895-44a3-82aa-ed8da730de83"
 		}
 	]
 }

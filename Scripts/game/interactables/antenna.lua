@@ -1,4 +1,4 @@
-dofile("$SURVIVAL_DATA/Scripts/game/survival_quests.lua")
+dofile("$CONTENT_DATA/Scripts/game/managers/QuestManager.lua")
 
 Antenna = class()
 Antenna.maxParentCount = 0
@@ -43,11 +43,6 @@ function Antenna.server_onUnload( self )
 	end
 end
 
-function Antenna.server_completeQuest( self, character, state )
-	g_questManager:sv_completeQuest(quest_radio_interactive)
-    self.network:sendToClients("cl_playEffect")
-end
-
 function Antenna.client_onCreate( self )
     self.cl = {}
 	self.cl.iconData = {
@@ -79,12 +74,22 @@ end
 
 function Antenna.client_onInteract( self, character, state )
 	if state == true then
-        self.network:sendToServer("server_completeQuest")
+        self.network:sendToServer("sv_send_event")
 	end
 end
 
+function Antenna:sv_send_event()
+	self.network:sendToClients("cl_playEffect")
+	QuestManager.Sv_OnEvent(QuestEvent.Antenna)
+end
+
 function Antenna.client_canInteract(self)
-    return not g_questManager:cl_isQuestComplete(quest_radio_interactive)
+	if not QuestManager.Cl_IsQuestComplete("quest_radio_interactive") then
+    	local keyBindingText = sm.gui.getKeyBinding( "Use", true )
+    	sm.gui.setInteractionText("", keyBindingText, language_tag("AntennaInteract"))
+		return true
+	end
+	return false
 end
 
 function Antenna.cl_playEffect(self)
