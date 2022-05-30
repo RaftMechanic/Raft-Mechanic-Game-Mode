@@ -1,0 +1,41 @@
+{
+   "lodList" : [
+      {
+         "mesh" : "$CONTENT_DATA/Objects/Mesh/Parts/obj_frozenant.obj",
+         "subMeshList" : [
+            {
+               "material" : "GlassWave",
+               "textureList" : [
+                  "$CONTENT_DATA/Objects/Textures/color_atlas.tga",
+                  "$CONTENT_DATA/Objects/Textures/asg_atlas.tga",
+                  "$CONTENT_DATA/Objects/Textures/nor_atlas.tga"
+               ]
+            },
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$CONTENT_DATA/Objects/Textures/color_atlas.tga",
+                  "$CONTENT_DATA/Objects/Textures/asg_atlas.tga",
+                  "$CONTENT_DATA/Objects/Textures/nor_atlas.tga"
+               ]
+            },
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$CONTENT_DATA/Objects/Textures/color_atlas.tga",
+                  "$CONTENT_DATA/Objects/Textures/asg_atlas.tga",
+                  "$CONTENT_DATA/Objects/Textures/nor_atlas.tga"
+               ]
+            },
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$CONTENT_DATA/Objects/Textures/color_atlas.tga",
+                  "$CONTENT_DATA/Objects/Textures/asg_atlas.tga",
+                  "$CONTENT_DATA/Objects/Textures/nor_atlas.tga"
+               ]
+            }
+         ]
+      }
+   ]
+}

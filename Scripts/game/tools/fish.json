@@ -8,5 +8,15 @@
         "triggers": {"water": true, "chemical": false, "oil": false},
         "baits": ["none"],
         "biteTime": 1.0
+    },
+	{
+        //Frozen Ant
+        "uuid": "4a1888f7-7376-49aa-97a0-1aaf1ae75e2a",
+        "rarity": 10,
+        "location": { "xMin": -72, "xMax": 71, "yMin": -56, "yMax": 55},
+        "time": {"min": 0, "max": 1},
+        "triggers": {"water": true, "chemical": false, "oil": false},
+        "baits": ["none"],
+        "biteTime": 1.0
     }
 ]

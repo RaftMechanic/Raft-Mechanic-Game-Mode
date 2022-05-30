@@ -1,55 +1,48 @@
 {
    "partList" : [
-   //Wedgefix
-		{
-			"uuid": "e02620a5-371b-4d63-be35-fd8a0552eba9",
-			"name": "obj_industrial_stairwedge",
-			"legacyId": 413,
-			"renderable": {
-				"lodList": [
-					{
-						"subMeshList": [
-							{
-								"textureList": [
-									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_dif.tga",
-									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_asg.tga",
-									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_nor.tga",
-									"$GAME_DATA/Objects/Textures/industrial/obj_industrial_stairwedge_ao.tga"
-								],
-								"material": "DifAsgNorAo"
-							}
-						],
-						"mesh": "$GAME_DATA/Objects/Mesh/industrial/obj_industrial_stairwedge.fbx",
-						"includes": [
-							"POSITION",
-							"UV0",
-							"UV1",
-							"NORMAL",
-							"TANGENTS"
-						]
-					}
-				]
-			},
-			"color": "df7f00",
-			"slant": {
-				"x": 1,
-				"y": 1,
-				"z": 1,
-				"back": "-Z",
-				"bottom": "-Y"
-			},
-			"rotationSet": "PropYX",
-			"sticky": "-X+X-Y-Z",
-			"physicsMaterial": "Metal",
-			"stackSize" : 255,
-			"ratings": {
-				"density": 4,
-				"durability": 4,
-				"friction": 5,
-				"buoyancy": 2
-			},
-			"flammable": false
-		},
+      {
+         "color" : "df7f00",
+         "flammable" : false,
+         "legacyId" : 413,
+         "name" : "obj_industrial_stairwedge",
+         "physicsMaterial" : "Metal",
+         "ratings" : {
+            "buoyancy" : 2,
+            "density" : 4,
+            "durability" : 4,
+            "friction" : 5
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "includes" : [ "POSITION", "UV0", "UV1", "NORMAL", "TANGENTS" ],
+                  "mesh" : "$GAME_DATA/Objects/Mesh/industrial/obj_industrial_stairwedge.fbx",
+                  "subMeshList" : [
+                     {
+                        "material" : "DifAsgNorAo",
+                        "textureList" : [
+                           "$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_dif.tga",
+                           "$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_asg.tga",
+                           "$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_nor.tga",
+                           "$GAME_DATA/Objects/Textures/industrial/obj_industrial_stairwedge_ao.tga"
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         "rotationSet" : "PropYX",
+         "slant" : {
+            "back" : "-Z",
+            "bottom" : "-Y",
+            "x" : 1,
+            "y" : 1,
+            "z" : 1
+         },
+         "stackSize" : 255,
+         "sticky" : "-X+X-Y-Z",
+         "uuid" : "e02620a5-371b-4d63-be35-fd8a0552eba9"
+      },
       {
          "box" : {
             "x" : 4,
@@ -169,7 +162,7 @@
          "sticky" : "+X-X+Y-Y+Z",
          "uuid" : "4a971f7d-14e6-454d-bce8-0879243c4575"
       },
-	  {
+      {
          "box" : {
             "x" : 4,
             "y" : 4,
@@ -241,7 +234,7 @@
          "sticky" : "+X-X+Y-Y+Z",
          "uuid" : "795da2f8-ce95-4b34-9d89-1ef84f74e36a"
       },
-	        {
+      {
          "box" : {
             "x" : 4,
             "y" : 4,
@@ -337,6 +330,21 @@
          "rotationSet" : "PropY",
          "sticky" : "-Y",
          "uuid" : "c2418698-7a91-40fa-95a3-3be5ddb3ec1d"
+      },
+      {
+         "box" : {
+            "x" : 2,
+            "y" : 2,
+            "z" : 2
+         },
+         "name" : "obj_frozenant",
+         "physicsMaterial" : "Glass",
+         "ratings" : {
+            "buoyancy" : 7
+         },
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Parts/obj_frozenant.rend",
+         "rotationSet" : "PropY",
+         "uuid" : "4a1888f7-7376-49aa-97a0-1aaf1ae75e2a"
       }
    ]
 }
