@@ -1,0 +1,99 @@
+
+{
+	"bodies" : 
+	[
+		
+		{
+			"childs" : 
+			[
+				
+				{
+					"color" : "3E9FFE",
+					"joints" : 
+					[
+						
+						{
+							"id" : 2.0
+						}
+					],
+					"pos" : 
+					{
+						"x" : -7.0,
+						"y" : 11.0,
+						"z" : -1.0
+					},
+					"shapeId" : "a6ec1dcc-07e9-418a-819e-904e28a32f63",
+					"xaxis" : 2.0,
+					"zaxis" : 1.0
+				}
+			],
+			"type" : 0.0
+		},
+		
+		{
+			"childs" : 
+			[
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 1.0,
+						"z" : 1.0
+					},
+					"color" : "CD9D71",
+					"joints" : 
+					[
+						
+						{
+							"id" : 2.0
+						}
+					],
+					"pos" : 
+					{
+						"x" : -7.0,
+						"y" : 11.0,
+						"z" : -4.0
+					},
+					"shapeId" : "1fc74a28-addb-451a-878d-c3c605d63811",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				}
+			],
+			"type" : 0.0
+		}
+	],
+	"joints" : 
+	[
+		
+		{
+			"childA" : 1.0,
+			"childB" : 0.0,
+			"color" : "DF7F01",
+			"controller" : 
+			{
+				"id" : 410.0,
+				"stiffnessLevel" : 1.0
+			},
+			"id" : 2.0,
+			"posA" : 
+			{
+				"x" : -7.0,
+				"y" : 11.0,
+				"z" : -3.0
+			},
+			"posB" : 
+			{
+				"x" : -7.0,
+				"y" : 11.0,
+				"z" : -1.0
+			},
+			"shapeId" : "67da25c9-3825-41f6-9724-4546a11cb2a5",
+			"xaxisA" : 1.0,
+			"xaxisB" : 1.0,
+			"zaxisA" : 3.0,
+			"zaxisB" : 3.0
+		}
+	],
+	"version" : 4.0
+}
