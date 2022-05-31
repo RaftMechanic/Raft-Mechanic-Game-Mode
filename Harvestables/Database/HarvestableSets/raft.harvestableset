@@ -28,7 +28,7 @@
 			"showInEditor": true,
 			"type": "filler",
 			"uuid": "38226bbb-1985-4b21-9f2b-ea625b95b3b7",
-			//"renderable": "$SURVIVAL_DATA/Harvestables/Renderable/Farmables/hvs_farmables_beehive.rend",
+			"renderable": "$SURVIVAL_DATA/Harvestables/Renderable/Farmables/hvs_farmables_beehive.rend",
 			"col": "$CONTENT_DATA/Harvestables/Collision/hvs_loot_bigger_col.obj",
 			"color":"ffffffff",
 			"collides": {
