@@ -167,7 +167,7 @@ local crafters = {
 		slots = 8,
 		speed = 1,
 		recipeSets = {
-			{ name = "workbench", locked = false },
+			{ name = "workbench", locked = true },
 			{ name = "scrapworkbench", locked = false },
 			{ name = "quest1", locked = true },
 			{ name = "questsail", locked = true },
@@ -617,7 +617,9 @@ function Crafter.cl_updateRecipeGrid( self )
 
 		--RAFT --TODO make quest system work
 		local locked = recipeSet.locked
-		if recipeSet.name == "quest1" then
+		if recipeSet.name == "workbench" then
+			locked = not QuestManager.Cl_IsQuestComplete("quest_raft_tutorial")
+		elseif recipeSet.name == "quest1" then
 			locked = not QuestManager.Cl_IsQuestComplete("quest_rangerstation")
 		elseif recipeSet.name == "questsail" then
 			locked = not QuestManager.Cl_IsQuestComplete("quest_radio_interactive")

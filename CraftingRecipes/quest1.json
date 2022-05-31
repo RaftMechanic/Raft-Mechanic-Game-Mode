@@ -1,5 +1,178 @@
 
 [
+	//ArmoredRaftFoundation
+	{
+		"itemId": "4a971f7d-14e6-454d-bce8-0879243c4575",
+		"quantity": 2,
+		"craftTime": 22,
+		"ingredientList": [
+			{
+				"quantity": 2,
+				"itemId": "4a971f7d-14e6-454d-bce8-0879243c4474"
+			},
+			{
+				"quantity": 10,
+				"itemId": "df953d9c-234f-4ac2-af5e-f0490b223e71"
+			},
+			{
+				"quantity": 5,
+				"itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
+			}
+		]
+	},
+	//ArmoredRaftFloor
+	{
+		"itemId": "4d0dce2f-7bee-4c38-be21-c8a5ce083f1a",
+		"quantity": 2,
+		"craftTime": 16,
+		"ingredientList": [
+			{
+				"quantity": 2,
+				"itemId": "795da2f8-ce95-4b34-9d89-1ef84f74e36a"
+			},
+			{
+				"quantity": 10,
+				"itemId": "df953d9c-234f-4ac2-af5e-f0490b223e71"
+			},
+			{
+				"quantity": 5,
+				"itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
+			}
+		]
+	},
+	//CollectionNet
+	{
+		"itemId": "f2382297-44b4-4259-99ce-b11da671ac51",
+		"quantity": 1,
+		"craftTime": 22,
+		"ingredientList": [
+			{
+				"quantity": 10,
+				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+			},
+			{
+				"quantity": 10,
+				"itemId": "628b2d61-5ceb-43e9-8334-a4135566df7a"
+			},
+			{
+				"quantity": 10,
+				"itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
+			}
+		]
+	},
+	//ScrapFarm
+	{
+		"itemId": "8e75cddb-040e-4813-8dd6-7e72f3288a91",
+		"quantity": 1,
+		"craftTime": 25,
+		"ingredientList": [
+			{
+				"quantity": 1,
+				"itemId": "9a3e478c-2224-44fa-887c-239965bd05ad"
+			},
+			{
+				"quantity": 20,
+				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+			},
+			{
+				"quantity": 1,
+				"itemId": "36335664-6e61-4d44-9876-54f9660a8565"
+			}
+		]
+	},
+	//BigFarm
+	{
+		"itemId": "c80e2932-0d21-48bb-b5a2-dba03d73cfb7",
+		"quantity": 1,
+		"craftTime": 40,
+		"ingredientList": [
+			{
+				"quantity": 2,
+				"itemId": "9a3e478c-2224-44fa-887c-239965bd05ad"
+			},
+			{
+				"quantity": 40,
+				"itemId": "df953d9c-234f-4ac2-af5e-f0490b223e71"
+			},
+			{
+				"quantity": 10,
+				"itemId": "1f7ac0bb-ad45-4246-9817-59bdf7f7ab39"
+			},
+			{
+				"quantity": 1,
+				"itemId": "36335664-6e61-4d44-9876-54f9660a8565"
+			}
+		]
+	},
+	//SeedPress
+	{
+		"itemId": "e9c7d080-ae4b-4fec-b626-34afda6f5114",
+		"quantity": 1,
+		"craftTime": 49,
+		"ingredientList": [
+			{
+				"quantity": 20,
+				"itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
+			},
+			{
+				"quantity": 1,
+				"itemId": "f152e4df-bc40-44fb-8d20-3b3ff70cdfe3"
+			},
+			{
+				"quantity": 1,
+				"itemId": "5530e6a0-4748-4926-b134-50ca9ecb9dcf"
+			},
+			{
+				"quantity": 10,
+				"itemId": "df953d9c-234f-4ac2-af5e-f0490b223e71"
+			}
+		]
+	},
+	//TreeFarm
+	{
+		"itemId": "819fb238-a68b-4aab-a6f2-c1037f6bfb5b",
+		"quantity": 1,
+		"craftTime": 52,
+		"ingredientList": [
+			{
+				"quantity": 3,
+				"itemId": "9a3e478c-2224-44fa-887c-239965bd05ad"
+			},
+			{
+				"quantity": 25,
+				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+			},
+			{
+				"quantity": 50,
+				"itemId": "1f7ac0bb-ad45-4246-9817-59bdf7f7ab39"
+			}
+		]
+	},
+	//Apiary
+	{
+		"itemId": "ebabda72-94d8-40c5-ab07-7001d1b67380",
+		"quantity": 1,
+		"craftTime": 49,
+		"ingredientList": [
+			{
+				"quantity": 1,
+				"itemId": "c2418698-7a91-40fa-95a3-3be5ddb3ec1d"
+			},
+			{
+				"quantity": 30,
+				"itemId": "df953d9c-234f-4ac2-af5e-f0490b223e71"
+			},
+			{
+				"quantity": 20,
+				"itemId": "1f7ac0bb-ad45-4246-9817-59bdf7f7ab39"
+			},
+			{
+				"quantity": 1,
+				"itemId": "36335664-6e61-4d44-9876-54f9660a8565"
+			}
+		]
+	},
+	//Antenna
 	{
 		"itemId": "f95beb80-49c8-4d4c-98e9-5b87225c4570",
 		"quantity": 1,

@@ -38,5 +38,53 @@
 				"itemId": "36335664-6e61-4d44-9876-54f9660a8565"
 			}
 		]
-	}
+	},
+	//Fins
+    {
+        "itemId": "7ece8b10-5cc0-4791-b75e-09858ef1b9c4",
+        "quantity": 1,
+        "craftTime": 32,
+        "ingredientList": [
+            {
+                "quantity": 15,
+                "itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+            },
+            {
+                "quantity": 15,
+                "itemId": "628b2d61-5ceb-43e9-8334-a4135566df7a"
+            },
+            {
+                "quantity": 5,
+                "itemId": "1f7ac0bb-ad45-4246-9817-59bdf7f7ab39"
+            },
+            {
+                "quantity": 1,
+                "itemId": "36335664-6e61-4d44-9876-54f9660a8565"
+            }
+        ]
+    },
+    //Oxygen tank
+    {
+        "itemId": "7ceccadf-010f-4a45-907f-18ccc11c509c",
+        "quantity": 1,
+        "craftTime": 32,
+        "ingredientList": [
+            {
+                "quantity": 15,
+                "itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
+            },
+            {
+                "quantity": 10,
+                "itemId": "628b2d61-5ceb-43e9-8334-a4135566df7a"
+            },
+            {
+                "quantity": 2,
+                "itemId": "fcf0958c-084d-4854-9b1b-b06594b4262a"
+            },
+            {
+                "quantity": 1,
+                "itemId": "36335664-6e61-4d44-9876-54f9660a8565"
+            }
+        ]
+    }
 ]

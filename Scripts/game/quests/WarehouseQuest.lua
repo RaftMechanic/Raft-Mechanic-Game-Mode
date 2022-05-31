@@ -85,6 +85,7 @@ function WarehouseQuest.sv_e_onQuestEvent( self, data )
 		self.sv.saved.stage = nil
 		QuestManager.Sv_UnsubscribeAllEvents( self.scriptableObject )
 		QuestManager.Sv_CompleteQuest( "quest_warehouse" )
+		QuestManager.Sv_UnlockRecipes( "questfinal" )
 		QuestManager.Sv_TryActivateQuest( "quest_chapter2" )
 	end
 

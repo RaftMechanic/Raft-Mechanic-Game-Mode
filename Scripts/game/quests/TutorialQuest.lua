@@ -63,6 +63,7 @@ function TutorialQuest.sv_e_onQuestEvent( self, data )
 		self.sv.saved.stage = nil
 		QuestManager.Sv_UnsubscribeAllEvents( self.scriptableObject )
 		QuestManager.Sv_CompleteQuest( "quest_raft_tutorial" )
+		QuestManager.Sv_UnlockRecipes( "workbench" )
 		QuestManager.Sv_TryActivateQuest( "quest_rangerstation" )
 	end
 

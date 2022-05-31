@@ -1,3 +1,5 @@
+dofile( "$CONTENT_DATA/Scripts/game/managers/LanguageManager.lua" ) --RAFT
+
 QuestManager = class( nil )
 QuestManager.isSaveObject = true
 
@@ -387,5 +389,30 @@ function QuestManager.Sv_GotQuestLog(questName)
 		return quest
 	else
 		return quest:getPublicData().log
+	end
+end
+
+function QuestManager.Sv_UnlockRecipes( name )
+	if g_questManager then
+		sm.event.sendToScriptableObject( g_questManager.scriptableObject, "sv_unlockRecipes", name )
+	end
+end
+
+function QuestManager.sv_unlockRecipes(self, name)
+	local data = sm.json.open("$CONTENT_DATA/CraftingRecipes/" .. name .. ".json")
+	local items = {}
+	if data then
+		for k, recipe in ipairs(data) do
+			items[#items+1] = sm.uuid.new(recipe.itemId)
+		end
+	end
+	if items then
+		self.network:sendToClients("cl_unlock_recipes", items)
+	end
+end
+
+function QuestManager.cl_unlock_recipes(self, items)
+	for k, item in ipairs(items) do
+		sm.gui.chatMessage(language_tag("Quest_ItemUnlock") .. sm.shape.getShapeTitle(item))
 	end
 end
