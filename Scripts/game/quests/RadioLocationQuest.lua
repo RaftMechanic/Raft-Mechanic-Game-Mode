@@ -109,15 +109,7 @@ function RadioLocationQuest.client_onRefresh( self )
 end
 
 function RadioLocationQuest.client_onClientDataUpdate( self, data )
-	if data.stage ~= self.cl.stage then
-		QuestEntityManager.Cl_SetNamedQuestMarkerVisible( "quest_radio_interactive.marker_crafter", false )
-	end
-
 	self.cl.stage = data.stage
-
-	if data.stage == Stages.get_craftbot then
-		QuestEntityManager.Cl_SetNamedQuestMarkerVisible( "quest_radio_interactive.marker_crafter", true )
-	end
 
 	self:cl_updateProgress( data.stage )
 end
