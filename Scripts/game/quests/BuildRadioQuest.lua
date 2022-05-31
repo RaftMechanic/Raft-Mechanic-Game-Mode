@@ -12,8 +12,10 @@ local Stages = {
 	read_log = 1,
 	get_craftbot = 2,
 	get_wood = 3,
-	craft_antenna = 4,
-	use_antenna = 5
+	get_metal = 4,
+	get_component = 5,
+	craft_antenna = 6,
+	use_antenna = 7
 }
 
 function BuildRadioQuest.server_onCreate( self )
@@ -54,6 +56,15 @@ function BuildRadioQuest.sv_e_onQuestEvent( self, data )
 		if data.params.container:canSpend(blk_wood1, 20) then
 			self.sv.saved.completedStages[Stages.get_wood] = true
 		end
+		-- check metal
+		if data.params.container:canSpend(blk_metal1, 15) then
+			self.sv.saved.completedStages[Stages.get_metal] = true
+		end
+		-- check componets
+		if data.params.container:canSpend(obj_consumable_component, 2) then
+			self.sv.saved.completedStages[Stages.get_component] = true
+		end
+
 		if FindInventoryChange( data.params.changes, obj_radio_antenna ) > 0 then
 			self.sv.saved.completedStages[Stages.craft_antenna] = true
 		end
@@ -70,6 +81,10 @@ function BuildRadioQuest.sv_e_onQuestEvent( self, data )
 		self.sv.saved.stage = Stages.get_craftbot
 	elseif not self.sv.saved.completedStages[Stages.get_wood] then
 		self.sv.saved.stage = Stages.get_wood
+	elseif not self.sv.saved.completedStages[Stages.get_metal] then
+		self.sv.saved.stage = Stages.get_metal
+	elseif not self.sv.saved.completedStages[Stages.get_component] then
+		self.sv.saved.stage = Stages.get_component
 	elseif not self.sv.saved.completedStages[Stages.craft_antenna] then
 		self.sv.saved.stage = Stages.craft_antenna
 	elseif not self.sv.saved.completedStages[Stages.use_antenna] then
@@ -118,6 +133,10 @@ function BuildRadioQuest.cl_updateProgress( self, stage )
 		self.scriptableObject.clientPublicData.progressString = language_tag("Quest_BuildRadio_Craftbot")
 	elseif stage == Stages.get_wood then
 		self.scriptableObject.clientPublicData.progressString = language_tag("Quest_BuildRadio_Wood")
+	elseif stage == Stages.get_metal then
+		self.scriptableObject.clientPublicData.progressString = language_tag("Quest_BuildRadio_Metal")
+	elseif stage == Stages.get_component then
+		self.scriptableObject.clientPublicData.progressString = language_tag("Quest_BuildRadio_Components")
 	elseif stage == Stages.craft_antenna then
 		self.scriptableObject.clientPublicData.progressString = language_tag("Quest_BuildRadio_Craft_Antenna")
 	elseif stage == Stages.use_antenna then

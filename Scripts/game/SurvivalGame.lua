@@ -318,7 +318,9 @@ function SurvivalGame.server_onFixedUpdate( self, timeStep )
 	local newDay = self.sv.time.timeOfDay >= 1.0
 	if newDay then
 		self.sv.time.timeOfDay = math.fmod( self.sv.time.timeOfDay, 1 )
-		--sm.event.sendToScriptableObject(self.sv.windManager, "sv_e_randomizeWind", true)
+
+		-- randomize what corner each day.
+		sm.event.sendToScriptableObject(self.sv.windManager, "sv_e_randomizeWind", true)
 	end
 
 	if self.sv.time.timeOfDay >= DAYCYCLE_DAWN and prevTime < DAYCYCLE_DAWN then

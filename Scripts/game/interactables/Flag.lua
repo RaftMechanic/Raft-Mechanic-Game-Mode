@@ -1,4 +1,4 @@
-dofile( "$CONTENT_DATA/Scripts/game/survival_quests.lua" )
+dofile( "$CONTENT_DATA/Scripts/game/raft_quests.lua" )
 dofile( "$CONTENT_DATA/Scripts/game/managers/WindManager.lua" )
 
 Flag = class()
