@@ -22,4 +22,4 @@
 - Added raft floor pieces for building
 - Added plantable corn
 - Improved sailing
-- Added totorials
+- Added tutorials
