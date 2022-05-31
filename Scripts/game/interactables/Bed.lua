@@ -157,3 +157,10 @@ function Hammock:client_onFixedUpdate(dt)
 		self.questMarkerGui = nil
 	end
 end
+
+function Hammock:client_onInteract(character, state )
+	Bed.client_onInteract(self, character, state)
+	if state == true then
+		sm.event.sendToPlayer(sm.localPlayer.getPlayer(), "cl_e_tutorial", "sleep")
+	end
+end

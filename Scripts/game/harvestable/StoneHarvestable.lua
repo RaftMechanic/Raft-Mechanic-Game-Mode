@@ -2,6 +2,7 @@
 dofile("$SURVIVAL_DATA/Scripts/game/survival_constants.lua")
 dofile("$SURVIVAL_DATA/Scripts/game/survival_shapes.lua")
 dofile("$SURVIVAL_DATA/Scripts/util.lua")
+dofile("$CONTENT_DATA/Scripts/game/managers/LanguageManager.lua") --RAFT
 
 StoneHarvestable = class( nil )
 StoneHarvestable.ChunkHealth = 100
@@ -35,7 +36,7 @@ function StoneHarvestable:cl_determineValidHit( pos )
 	if sm.localPlayer.getActiveItem() == tool_pickaxe then
 		self.network:sendToServer("sv_determineValidHit", pos )
 	else
-		self:cl_n_onMessage( "#{ALERT_STONE_TOO_BIG}" )
+		self:cl_n_onMessage( language_tag("WrongTool") ) --RAFT
 	end
 end
 

@@ -69,6 +69,24 @@
 
     "ClamDivingSucks": "#ff88ffDid I already mention that I hate clam diving?",
 
+    "WrongTool": "You need better tools to break this harvestable",
+
+    "Tutorial_Dismiss": "Press %s to dismiss",
+    "Tutorial_Food": "Hunger",
+    "Tutorial_FoodText": "To survive in the ocean, you need to adapt your survival strategy. Luckily, fish are a great source of nutrients. Once you found enough soil, you could also try growing your own crops.",
+    "Tutorial_Water": "Thirst",
+    "Tutorial_WaterText": "Since the ocean is full of salt water, you need to find a way to make it drinkable. Perhaps it could be purified.",
+    "Tutorial_Fish": "Fishing",
+    "Tutorial_FishText": "1. Throw the hook into the water and wait.\n2. Let the fish nibble on the bait. (you will see a SMALL splash)\n3. Pull when you see a BIG SPLASH (you will also hear a sound)",
+    "Tutorial_Workbench": "Recipes",
+    "Tutorial_WorkbenchText": "Completing quests will unlock more items for you to craft!",
+    "Tutorial_Sail": "Sailing",
+    "Tutorial_SailText": "The wind sock shows you the current direction of the wind. Make sure your sails are catching the wind. Enjoy the ride!",
+    "Tutorial_Sleep": "Sleeping",
+    "Tutorial_SleepText": "After a hard day's work, relax in the hammock and dream. If all players are sleeping in a hammock you can skip the dark night time and wake up to the rising sun!",
+    "Tutorial_Shark": "SHARKS",
+    "Tutorial_SharkText": "Dangerous sharkbots roam the sea. They will attack you and your raft. Better get some defences for yourself and your raft before they do too much damage.",
+
     "Quest_ItemUnlock": "New Recipe Unlocked: #00f000",
 
     "Quest_Tutorial": "Stranded",

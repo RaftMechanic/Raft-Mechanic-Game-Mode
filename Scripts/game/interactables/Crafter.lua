@@ -1436,7 +1436,15 @@ function Crafter.cl_setGuiContainers( self )
 end
 
 function Crafter.client_onInteract( self, character, state )
-	self:cl_updateRecipeGrid()--RAFT
+	--RAFT
+	self:cl_updateRecipeGrid()
+
+	if self.interactable.shape.uuid == obj_scrap_workbench then
+		sm.event.sendToPlayer(sm.localPlayer.getPlayer(), "cl_e_tutorial", "workbench")
+	end
+	--RAFT
+
+	
 
 	if state == true then
 		local parent = self:getParent()

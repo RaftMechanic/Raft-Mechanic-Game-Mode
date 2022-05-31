@@ -6,6 +6,8 @@ dofile( "$SURVIVAL_DATA/Scripts/game/util/Timer.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/util.lua" )
 dofile( "$SURVIVAL_DATA/scripts/game/quest_util.lua" )
 
+dofile( "$CONTENT_DATA/scripts/game/raft_items.lua" )--RAFT
+
 
 SurvivalPlayer = class( BasePlayer )
 
@@ -197,19 +199,34 @@ function SurvivalPlayer.client_onClientDataUpdate( self, data )
 			self.cl.tutorialsWatched[tutorialKey] = true
 		end
 		if not g_disableTutorialHints then
-			if not self.cl.tutorialsWatched["hunger"] then
-				if data.stats.water < 60 or data.stats.food < 60 then
-					if not self.cl.tutorialGui then
-						self.cl.tutorialGui = sm.gui.createGuiFromLayout( "$GAME_DATA/Gui/Layouts/Tutorial/PopUp_Tutorial.layout", true, { isHud = true, isInteractive = false, needsCursor = false } )
-						self.cl.tutorialGui:setText( "TextTitle", "#{TUTORIAL_HUNGER_AND_THIRST_TITLE}" )
-						self.cl.tutorialGui:setText( "TextMessage", "#{TUTORIAL_HUNGER_AND_THIRST_MESSAGE}" )
-						self.cl.tutorialGui:setText( "TextDismiss", "#{TUTORIAL_DISMISS}" )
-						self.cl.tutorialGui:setImage( "ImageTutorial", "gui_tutorial_image_hunger.png" )
-						self.cl.tutorialGui:setOnCloseCallback( "cl_onCloseTutorialHungerGui" )
-						self.cl.tutorialGui:open()
-					end
+			
+
+			--RAFT
+			if not self.cl.tutorialsWatched["hunger"] and data.stats.food < 60 then
+				if not self.cl.tutorialGui then
+					self.cl.tutorialGui = sm.gui.createGuiFromLayout( "$GAME_DATA/Gui/Layouts/Tutorial/PopUp_Tutorial.layout", true, { isHud = true, isInteractive = false, needsCursor = false } )
+					self.cl.tutorialGui:setText( "TextTitle", language_tag("Tutorial_Food") )
+					self.cl.tutorialGui:setText( "TextMessage", language_tag("Tutorial_FoodText") )
+					local keyBindingText = sm.gui.getKeyBinding( "Use", false )
+					self.cl.tutorialGui:setText( "TextDismiss", string.format(language_tag("Tutorial_Dismiss"), keyBindingText) )
+					self.cl.tutorialGui:setImage( "ImageTutorial", "$CONTENT_DATA/Gui/Tutorial/gui_tutorial_image_food.png" )
+					self.cl.tutorialGui:setOnCloseCallback( "cl_onCloseTutorialHungerGui" )
+					self.cl.tutorialGui:open()
+				end
+			elseif not self.cl.tutorialsWatched["thirst"] and data.stats.water < 60 then
+				if not self.cl.tutorialGui then
+					self.cl.tutorialGui = sm.gui.createGuiFromLayout( "$GAME_DATA/Gui/Layouts/Tutorial/PopUp_Tutorial.layout", true, { isHud = true, isInteractive = false, needsCursor = false } )
+					self.cl.tutorialGui:setText( "TextTitle", language_tag("Tutorial_Water") )
+					self.cl.tutorialGui:setText( "TextMessage", language_tag("Tutorial_WaterText") )
+					local keyBindingText = sm.gui.getKeyBinding( "Use", false )
+					self.cl.tutorialGui:setText( "TextDismiss", string.format(language_tag("Tutorial_Dismiss"), keyBindingText) )
+					self.cl.tutorialGui:setImage( "ImageTutorial", "$CONTENT_DATA/Gui/Tutorial/gui_tutorial_image_water.png" )
+					self.cl.tutorialGui:setOnCloseCallback( "cl_onCloseTutorialWaterGui" )
+					self.cl.tutorialGui:open()
 				end
 			end
+
+
 		end
 	end
 end
@@ -433,9 +450,12 @@ function SurvivalPlayer.server_onInventoryChanges( self, container, changes )
 			self.network:sendToClient( self.player, "cl_n_onMessage", { message = "#{ALERT_BUILDERGUIDE_NOT_ON_LIFT}", displayTime = 3 } )
 			QuestManager.Sv_TryActivateQuest( "quest_builder_guide" )
 		end
-		--if FindInventoryChange( changes, blk_scrapwood ) > 0 then
-		--	QuestManager.Sv_TryActivateQuest( "quest_acquire_test" )
-		--end
+
+		--RAFT
+		if FindInventoryChange( changes, obj_sail ) > 0 or FindInventoryChange( changes, obj_windsock ) > 0 then
+			self.network:sendToClient( self.player, "cl_e_tutorial", "sail" )
+		end
+		--RAFT
 	end
 
 	--RAFT
@@ -817,4 +837,103 @@ end
 
 
 
+--RAFT
+function SurvivalPlayer.sv_e_tutorial( self, event )
+	self.network:sendToClient(self.player, "cl_e_tutorial", event)
+end
 
+
+function SurvivalPlayer.cl_e_tutorial( self, event )
+	if event == "fishing" and not self.cl.tutorialsWatched["fishing"] then
+		if not self.cl.tutorialGui then
+			local params = {
+				closeCallback = "cl_onCloseTutorialFishGui",
+				image = "$CONTENT_DATA/Gui/Tutorial/gui_tutorial_image_fish.png",
+				text = "Tutorial_Fish"}
+			setup_tutorial_gui(self, params)
+		end
+
+	elseif event == "workbench" and not self.cl.tutorialsWatched["workbench"] then
+		if not self.cl.tutorialGui then
+			local params = {
+				closeCallback = "cl_onCloseTutorialWorkbenchGui",
+				image = "$CONTENT_DATA/Gui/Tutorial/gui_tutorial_image_workbench.png",
+				text = "Tutorial_Workbench"}
+			setup_tutorial_gui(self, params)
+		end
+	
+	elseif event == "sail" and not self.cl.tutorialsWatched["sail"] then
+		if not self.cl.tutorialGui then
+			local params = {
+				closeCallback = "cl_onCloseTutorialSailGui",
+				image = "$CONTENT_DATA/Gui/Tutorial/gui_tutorial_image_sail.png",
+				text = "Tutorial_Sail"}
+			setup_tutorial_gui(self, params)
+		end
+
+	elseif event == "sleep" and not self.cl.tutorialsWatched["sleep"] then
+		if not self.cl.tutorialGui then
+			local params = {
+				closeCallback = "cl_onCloseTutorialSleepGui",
+				image = "$CONTENT_DATA/Gui/Tutorial/gui_tutorial_image_sleep.png",
+				text = "Tutorial_Sleep"}
+			setup_tutorial_gui(self, params)
+		end
+	
+	elseif event == "shark" and not self.cl.tutorialsWatched["shark"] then
+		if not self.cl.tutorialGui then
+			local params = {
+				closeCallback = "cl_onCloseTutorialSharkGui",
+				image = "$CONTENT_DATA/Gui/Tutorial/gui_tutorial_image_shark.png",
+				text = "Tutorial_Shark"}
+			setup_tutorial_gui(self, params)
+		end
+	end
+end
+
+function setup_tutorial_gui(self, params)
+	self.cl.tutorialGui = sm.gui.createGuiFromLayout( "$GAME_DATA/Gui/Layouts/Tutorial/PopUp_Tutorial.layout", true, { isHud = true, isInteractive = false, needsCursor = false } )
+	self.cl.tutorialGui:setText( "TextTitle", language_tag(params.text) )
+	self.cl.tutorialGui:setText( "TextMessage", language_tag(params.text .. "Text") )
+	local keyBindingText = sm.gui.getKeyBinding( "Use", false )
+	self.cl.tutorialGui:setText( "TextDismiss", string.format(language_tag("Tutorial_Dismiss"), keyBindingText) )
+	self.cl.tutorialGui:setImage( "ImageTutorial", params.image )
+	self.cl.tutorialGui:setOnCloseCallback(params.closeCallback)
+	self.cl.tutorialGui:open()
+end
+
+function SurvivalPlayer.cl_onCloseTutorialWaterGui( self )
+	self.cl.tutorialsWatched["thirst"] = true
+	self.network:sendToServer( "sv_e_watchedTutorial", { tutorialKey = "thirst" } )
+	self.cl.tutorialGui = nil
+end
+
+function SurvivalPlayer.cl_onCloseTutorialFishGui( self )
+	self.cl.tutorialsWatched["fishing"] = true
+	self.network:sendToServer( "sv_e_watchedTutorial", { tutorialKey = "fishing" } )
+	self.cl.tutorialGui = nil
+end
+
+function SurvivalPlayer.cl_onCloseTutorialWorkbenchGui( self )
+	self.cl.tutorialsWatched["workbench"] = true
+	self.network:sendToServer( "sv_e_watchedTutorial", { tutorialKey = "workbench" } )
+	self.cl.tutorialGui = nil
+end
+
+function SurvivalPlayer.cl_onCloseTutorialSailGui( self )
+	self.cl.tutorialsWatched["sail"] = true
+	self.network:sendToServer( "sv_e_watchedTutorial", { tutorialKey = "sail" } )
+	self.cl.tutorialGui = nil
+end
+
+function SurvivalPlayer.cl_onCloseTutorialSleepGui( self )
+	self.cl.tutorialsWatched["sleep"] = true
+	self.network:sendToServer( "sv_e_watchedTutorial", { tutorialKey = "sleep" } )
+	self.cl.tutorialGui = nil
+end
+
+function SurvivalPlayer.cl_onCloseTutorialSharkGui( self )
+	self.cl.tutorialsWatched["shark"] = true
+	self.network:sendToServer( "sv_e_watchedTutorial", { tutorialKey = "shark" } )
+	self.cl.tutorialGui = nil
+end

@@ -1,6 +1,7 @@
 --Raft
 dofile("$CONTENT_DATA/Scripts/game/raft_items.lua")
 dofile("$SURVIVAL_DATA/Scripts/game/survival_loot.lua")
+dofile("$CONTENT_DATA/Scripts/game/managers/LanguageManager.lua")
 
 -- WoodHarvestable.lua --
 dofile("$SURVIVAL_DATA/Scripts/game/survival_constants.lua")
@@ -36,7 +37,7 @@ function WoodHarvestable.server_onMelee( self, hitPos, attacker, damage )
 		elseif self.data.type == "large" then
 			if type( attacker ) == "Player" then
 				--Raft
-				self.network:sendToClient( attacker, "cl_n_onMessage", "#{ALERT_TREE_TOO_BIG}" )
+				self.network:sendToClient( attacker, "cl_n_onMessage", language_tag("WrongTool") )
 				--Raft
 			end
 
@@ -52,7 +53,7 @@ function WoodHarvestable:cl_determineValidHit( pos )
 	if sm.localPlayer.getActiveItem() == tool_axe then
 		self.network:sendToServer("sv_determineValidHit", pos )
 	else
-		self:cl_n_onMessage( "#{ALERT_TREE_TOO_BIG}" )
+		self:cl_n_onMessage( language_tag("WrongTool") ) --RAFT
 	end
 end
 

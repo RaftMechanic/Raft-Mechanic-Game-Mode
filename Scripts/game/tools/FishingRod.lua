@@ -352,6 +352,8 @@ function Rod.client_onEquippedUpdate( self, primaryState, secondaryState)
 
 			self.network:sendToServer("sv_create_hook", {pos = hookPos, dir = hookDir, bait = baits[self.bait]})
 			sm.audio.play( "Sledgehammer - Swing" )
+
+			sm.event.sendToPlayer(sm.localPlayer.getPlayer(), "cl_e_tutorial", "fishing")
 		end
 	end
 

@@ -429,11 +429,13 @@ function SharkBotUnit.server_onUnitUpdate( self, dt )
 		end
 	elseif attackResult == "finished" then
 		self.fleeFrom = self.target:getPlayer()
+		sm.event.sendToPlayer(self.target:getPlayer(), "sv_e_tutorial", "shark")
 	end
 	
 	if self.currentState == self.breachState then
 		if self.BreachTimer < sm.game.getCurrentTick() then
 			self.fleeFrom = self.target:getPlayer()
+			sm.event.sendToPlayer(self.target:getPlayer(), "sv_e_tutorial", "shark")
 			self:sv_flee( self.fleeFrom )
 			prevState = self.currentState
 			self.fleeFrom = nil
@@ -445,6 +447,7 @@ function SharkBotUnit.server_onUnitUpdate( self, dt )
 	_, attackResult = self.breachState:isDone()
 	if attackResult == "fail" or attackResult == "timeout" then
 		self.fleeFrom = self.target:getPlayer()
+		sm.event.sendToPlayer(self.target:getPlayer(), "sv_e_tutorial", "shark")
 	end
 	
 	local inCombatApproachRange = false
