@@ -43,6 +43,7 @@
     "Sail_Lower": "Abaisser la voile",
     "Sail_Controlled": "Contrôlé par logique",
 
+    "Trader": "#00bf00Trader#ffffff:",
     "Trader_dialogue1": "Mhh.. Bertha.. J'vais… OH ! Tu.. Tu es en vie ?! Je suis heureux de voir quelqu'un d'autre ! Hm… Oh.. Je pense que je connais un moyen de euh- s'échapper. Si tu pouvais ramener à Berth- euh, me ramener quelques caisses de légumes, ça serait bien ! Hehe.. J't'ai noté une station pour l'emballage des légumes à proximité. Emballe 2 caisses de carottes et 2 caisses de betteraves.. Ensuite apporte les a cette bonne vieille Bertha- eh, la grande pompe là-bas... Hehe.",
     "Trader_dialogue2": "Quelle bonne surprise de te revoir ! Non pas que j'm'attendais te revoir en morceaux sur le rivage .. Ahah !... Ehm. Enfin bref, malheureusement les légumes ne sont qu'une partie de la rece - euh du plan ! Du plan. Les autres ressources ont été gardées secrètes. Par contre j'ai détecté une activité Woc... anormale sur une île proche. Tu devrais aller voir.",
     "Trader_dialogue3": "Parfait ! Bientôt il sera a m- euh eheh, enfin j'veux dire qu'on pourra quitter cette planète. *regarde ses notes* Ah... OUAIS.. MAIS VOILA ! MAIS C'ÉTAIT SÛR EN FAIT ! C'ÉTAIT SÛR ! Oh, désolé j'suis pas habitué a avoir de la compagnie, au moins depuit l'acciden- Enfin bref, faudrait que tu me ramènes 2 caisses de myrtilles 2 caisses de bananes. J't'ai noté une station pour l'emballage des fruits à proximité.",
@@ -64,26 +65,70 @@
     "HammockAllPlayers": "Tous les joueurs ont besoin de dormir pour passer la nuit",
     "HammockNight": "Vous ne pouvez dormir que la nuit",
 
+    "AntennaInteract": "Envoyer un signal de détresse",
+
     "ClamDivingSucks": "#ff88ffAi-je déjà dit que je déteste plonger pour aller ramasser les palourdes ?",
 
+    "Quest_Tutorial": "Échoué",
     "Quest_Tutorial_Sleep": "Dormir dans le hamac",
     "Quest_Tutorial_Workbench": "Ouvrir l'établi",
     "Quest_Tutorial_Hammer": "Fabriquer un marteau en bois",
 
+    "Quest_RangerStation": "L'avant-poste des rangers",
     "Quest_RangerStation_Logbook": "Lire la note \"L'avant-poste des rangers\"",
     "Quest_RangerStation_Go_To": "Atteindre l'avant-poste",
     "Quest_RangerStation_Activate": "Trouver un moyen d'activer l'avant-poste",
 
+    "Quest_BuildRadio": "Il y a quelqu'un ?",
     "Quest_BuildRadio_Logbook": "Lire la note \"État de l'antenne\" ",
     "Quest_BuildRadio_Craftbot": "Construire un Fabribot",
     "Quest_BuildRadio_Wood": "Fabriquer 20 Blocs de bois 1",
     "Quest_BuildRadio_Craft_Antenna": "Fabriquer une antenne radio de fortune",
     "Quest_BuildRadio_Use_Antenna": "Envoyer un signal de détresse",
 
+    "Quest_RadioSignal": "Mission de sauvetage",
     "Quest_RadioSignal_Logbook": "Lire la note \"Mission de sauvetage\" ",
     "Quest_RadioSignal_Cotton": "Trouver du coton",
     "Quest_RadioSignal_Windsock": "Fabriquer une manche à air",
     "Quest_RadioSignal_Sail": "Fabriquer une voile",
     "Quest_RadioSignal_FindWreck": "Atteindre la source du signal de détresse",
-    "Quest_RadioSignal_ExploreWreck": "Explorer l'épave à la recherche d'indices"
+    "Quest_RadioSignal_ExploreWreck": "Explorer l'épave à la recherche d'indices",
+
+    "QuestItemTooEarly": "Je devrais enquêter sur ce sujet plus tard",
+
+    "Quest_FindTrader": "Sur les traces de Trader",
+    "Quest_FindTrader_Logbook": "Lire la note \"Notes du trader\" ",
+    "Quest_FindTrader_ReachTrader": "Atteindre l'île mentionnée dans les notes",
+    "Quest_FindTrader_TalkTrader": "Parler à 'Trader'",
+
+    "Quest_Vegetables": "Mécanicien de livraison",
+    "Quest_Vegetables_Logbook": "Lire la note \"Des légumes pour 'Trader'\" ",
+    "Quest_Vegetables_ReachStation": "Trouver la station d'emballage",
+    "Quest_Vegetables_SuckCrates": "Livrer les caisses à \"Bertha\"",
+
+    "Quest_WocTemple": "Le mystère des Wocs",
+    "Quest_WocTemple_Logbook": "Lire la note \"Le mystère des Wocs\" ",
+    "Quest_WocTemple_ReachTemple": "Atteindre l'île avec une activité woc anormale",
+    "Quest_WocTemple_FindTemple": "Trouver la source de l'activité woc anormale",
+    "Quest_WocTemple_GetRecipe": "Explorer le temple",
+
+    "SunshakeRecipe": "Recette du Sunshake",
+
+    "Quest_Fruits": "Mécanicien de livraison (une fois de plus)",
+    "Quest_Fruits_Logbook": "Lire la note \"Des fruits pour 'Trader'\" ",
+
+    "Quest_ScrapCity": "Civilisation disparu",
+    "Quest_ScrapCity_Logbook": "Lire la note \"Scrap City\" ",
+    "Quest_ScrapCity_ReachCity": "Atteindre la ville abandonnée",
+    "Quest_ScrapCity_FindRuin": "Trouver la ruine la plus haute",
+    "Quest_ScrapCity_GetKey": "Examiner le bâtiment à la recherche d'objets inhabituels",
+
+    "Quest_Warehouse": "L'entrepôt",
+    "Quest_Warehouse_Logbook": "Lire la note \"Raid d'un entrepôt\" ",
+    "Quest_Warehouse_Enter": "Entrer dans un entrepôt",
+    "Quest_Warehouse_FindFarmer": "Trouver le fermier en cage piégé au dernier étage.",
+    "Quest_Warehouse_SuckFarmer": "Fuir de l'entrepôt et laisser Bertha \"sauver\" le fermier",
+
+    "Quest_Chapter2": "Chapitre 2",
+    "Quest_Chapter2_Logbook": "Lire la note \"Chapitre 2\" "
 }
