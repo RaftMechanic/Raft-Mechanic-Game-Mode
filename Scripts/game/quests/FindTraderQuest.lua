@@ -69,6 +69,7 @@ function FindTraderQuest.sv_e_onQuestEvent( self, data )
 		self.sv.saved.stage = nil
 		QuestManager.Sv_UnsubscribeAllEvents( self.scriptableObject )
 		QuestManager.Sv_TryActivateQuest( "quest_deliver_vegetables" )
+		QuestManager.Sv_CompleteQuest( "quest_find_trader" )
 	end
 
 	self:sv_saveAndSync()
