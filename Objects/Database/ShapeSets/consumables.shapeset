@@ -141,6 +141,7 @@
          "rotationSet" : "PropY",
          "stackSize" : 3,
          "sticky" : "-Y",
+         "showInInventory": false,
          "uuid" : "7c440c4a-5919-4baa-a946-0bb89b8c4d5e"
       },
       {
@@ -186,6 +187,7 @@
          "rotationSet" : "PropY",
          "stackSize" : 10,
          "sticky" : "-Y",
+         "showInInventory": false,
          "uuid" : "7c440c4a-5919-4baa-a946-0bb89b8c4d85"
       },
       {
@@ -287,6 +289,7 @@
          },
          "rotationSet" : "PropYX",
          "stackSize" : 10,
+         "showInInventory": false,
          "uuid" : "74a3f240-65b2-4f52-9555-666217366a0a"
       },
       {
@@ -319,6 +322,7 @@
          },
          "rotationSet" : "PropYX",
          "stackSize" : 10,
+         "showInInventory": false,
          "uuid" : "74a3f240-65b2-4f52-9555-666217366a0e"
       },
       {
@@ -350,6 +354,7 @@
          },
          "stackSize" : 10,
          "sticky" : "-Y+Y",
+         "showInInventory": false,
          "uuid" : "f74c2891-79a9-45e0-982e-4896651c2259"
       }
    ]
