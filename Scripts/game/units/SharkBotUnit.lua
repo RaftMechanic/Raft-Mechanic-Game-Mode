@@ -289,8 +289,6 @@ function SharkBotUnit.server_onFixedUpdate( self, dt )
 	updateAirTumble( self, self.idleState )
 	
 	self.griefTimer:tick()
-	if self.griefTimer:done() then
-	end
 	
 	if self.avoidCount > 0 then
 		self.avoidResetTimer:tick()
