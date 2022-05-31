@@ -60,11 +60,12 @@ function SurvivalGame.server_onCreate( self )
 	self.data = nil
 
 	print( self.sv.saved.data )
-	--force disable dev mode while having dev console
-	if false then --self.sv.saved.data and self.sv.saved.data.dev then
-		g_godMode = true
-		g_survivalDev = true
-		sm.log.info( "Starting SurvivalGame in DEV mode" )
+	--RAFT force disable dev mode while having dev console
+	if self.sv.saved.data and self.sv.saved.data.dev then
+		self.sv.saved.data.dev = false
+		--g_godMode = true
+		--g_survivalDev = true
+		--sm.log.info( "Starting SurvivalGame in DEV mode" )
 	end
 
 	self:loadCraftingRecipes()
@@ -163,8 +164,6 @@ function SurvivalGame.client_onCreate( self )
 	if not sm.isHost then
 		self:loadCraftingRecipes()
 		g_enableCollisionTumble = true
-	else
-		self:bindChatCommands() --Raft
 	end
 
 	if g_respawnManager == nil then
