@@ -80,8 +80,6 @@
     "Quest_BuildRadio_Logbook": "Read \"Antenna Status\" log",
     "Quest_BuildRadio_Craftbot": "Build a Craftbot",
     "Quest_BuildRadio_Wood": "Craft 20 Wood Block 1",
-    "Quest_BuildRadio_Metal": "Craft 15 Metal Block 1",
-    "Quest_BuildRadio_Component": "Gather 2 Component Kits",
     "Quest_BuildRadio_Craft_Antenna": "Craft a Makeshift Radio Antenna",
     "Quest_BuildRadio_Use_Antenna": "Send a distress signal",
 
