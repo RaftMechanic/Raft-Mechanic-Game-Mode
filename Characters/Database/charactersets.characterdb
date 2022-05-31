@@ -1,3 +1,4 @@
 {
-   "characterSetList" : [ "$CONTENT_DATA/Characters/Database/CharacterSets/raft.characterset" ]
+   "characterSetList" : [ "$CONTENT_DATA/Characters/Database/CharacterSets/raft.characterset",
+                          "$CONTENT_DATA/Characters/Database/CharacterSets/survival.characterset" ]
 }

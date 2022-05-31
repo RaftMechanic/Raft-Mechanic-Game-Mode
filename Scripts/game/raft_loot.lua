@@ -15,8 +15,35 @@ local loot_sharkbot = {
 	}
 }
 
+local loot_totebot_green = {
+	slots = function() return randomStackAmount( 1, 1.5, 2 ) end,
+	randomLoot = {
+		{ uuid = obj_resource_circuitboard,		chance = 1 },
+	}
+}
+
+local loot_haybot = {
+	slots = function() return randomStackAmount( 1, 1.5, 2 ) end,
+	randomLoot = {
+		{ uuid = obj_consumable_component,		chance = 2 },
+		{ uuid = obj_resource_circuitboard,		chance = 3 },
+	}
+}
+
+
+local loot_farmbot = {
+	slots = function() return randomStackAmount( 2, 2, 3 ) end,
+	randomLoot = {
+		{ uuid = obj_consumable_component,		chance = 2,		quantity = randomStackAmountAvg2 },
+		{ uuid = obj_resource_circuitboard,		chance = 1,		quantity = randomStackAmountAvg2 },
+	}
+}
+
 local lootTables = {
-	["loot_sharkbot"] = loot_sharkbot
+	["loot_sharkbot"] = loot_sharkbot,
+	["loot_farmbot"] = loot_farmbot,
+	["loot_haybot"] = loot_haybot,
+	["loot_totebot_green"] = loot_totebot_green
 }
 
 function raft_SelectOne( list )

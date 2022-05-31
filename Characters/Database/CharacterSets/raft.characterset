@@ -38,55 +38,6 @@
             },
             "capsule":{ "radius": 0.7,"height": 1.4 },
             "mass": 275.0
-        },
-        {
-			// Glow Worm
-			"uuid": "48c03f69-3ec8-454c-8d1a-fa09083363b1",
-			"renderables":
-			[
-				"$SURVIVAL_DATA/Character/Char_Glowgorp/char_glowgorp.rend"
-			],
-			"hit":
-			{
-				"stand":
-				{
-					"col": "$SURVIVAL_DATA/Character/Char_Glowgorp/char_glowgorp_col.obj",
-					"offset": [0.0, 0.0, 0.0]
-				}
-			},
-			"tumble": {
-				"col": "$SURVIVAL_DATA/Character/Char_Glowgorp/char_glowgorp_col.obj",
-				"offset": [0.0, 0.0, 0.0]
-			},
-			"unit":
-			{
-				"scriptPath": "$CONTENT_DATA/Scripts/game/units/GlobUnit.lua",
-				"scriptClass": "GlobUnit",
-				"data": {}
-			},
-			"character": 
-			{
-				"scriptPath": "$SURVIVAL_DATA/Scripts/game/characters/GlobCharacter.lua",
-				"scriptClass": "GlobCharacter",
-				"data": {}
-			},
-			"movement":
-			{
-				"moveSpeed": 0.2,
-				"slowDownSpeed": 0.1,
-				"crouchSpeed": 0.1,
-				"sprintSpeed": 1.8,
-				"headingRotationSpeed": 3.1415,
-				"facingRotationSpeed": 3.1415,
-				"canSwim": false
-			},
-			"capsule":
-			{
-				"radius": 0.2,
-				"height": 0.45
-			},
-			"mass": 60.0,
-			"characterShapeUuid": "f2aa1e44-aea8-4431-9b7e-f7e35163dd7c"
-		}
+        }
     ]
 }
