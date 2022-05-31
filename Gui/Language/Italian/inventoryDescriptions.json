@@ -202,5 +202,21 @@
    "f2382297-44b4-4259-99ce-b11da671ac51" : {
       "description" : "Raccoglie tutta la spazzature dell'oceano al posto tuo! Dipendente da Sunshake pigro...",
       "title": "Rete di raccolta"
+   },
+   "56dc8c15-ccc5-46c8-bd56-46bb6bfc85c9" : {
+      "description" : "Amaca finta per le zattere abbandonate in modo che le persone non possono dormirci e perdere lo spawnpoint.",
+      "title": "Amaca abbandonata"
+   },
+   "795da2f8-ce95-4b34-9d89-1ef84f74e36a" : {
+      "description" : "Ha l'aspetto di una base della zattera ma non galleggia tanto. Può essere usato come pavimento in piani più alti.",
+      "title" : "Pavimento della zattera"
+   },
+   "4d0dce2f-7bee-4c38-be21-c8a5ce083f1a" : {
+      "description" : "Ha l'aspetta di una base della zattera rinforzata, ma non galleggia molto. Può essere usata come pavimento in piani più alti.",
+      "title" : "Pavimento della zattera rinforzato"
+   },
+    "4a1888f7-7376-49aa-97a0-1aaf1ae75e2a" : {
+      "description" : "L'hai trovata!\n\n\n\n#050505The matten#050505La materia attorno sembra instabile..\n\n#212328Dart Frog rn#212328Reference a Dart Frog :D",
+      "title" : "Formica Ghiacciata"
    }
 }

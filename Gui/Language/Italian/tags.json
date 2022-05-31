@@ -1,5 +1,5 @@
 {
-    "SaplingGrow": "#00cc00Crescendo...",
+    "SaplingGrow": "#00cc00#00cc00Crescendo...",
     "SaplingNeedLiquid": "Annaffia",
     "SaplingNeedGround": "Piazza nel #ff0000terreno",
     "SaplingCantErase": "Non puoi cancellare l'alberello mentre cresce!",
@@ -8,7 +8,7 @@
     "FarmerBallHelp": "Stavo usando il bagno perchè la mia bottiglia era piena e ora... Beh, sono riuscito a portare qui qualche esplosivo un po' di tempo fa. Ho provato a rompere il muro per andare fuori, ma forse tu puoi finire quello che ho iniziato.",
     "FarmerBallThanks": "Grazie, è la prima volta che vedo la luce del sole in anni! Non vedo l'ore di vedere Bob il pazzo di nuovo",
 
-    "HarpoonPickup": "Raccolto arpione",
+     "HarpoonPickup": "Raccolto arpione",
     "LogbookAdd": "Aggiungi al logbook",
 
 	"BinocularsZoomFactor": "Fattore zoom: ",
@@ -20,28 +20,31 @@
     "CreationRotator_Hor": "Orizzontale",
     "CreationRotator_Roll": "Rotola",
     "CreationRotator_Mult": "Moltiplicatore:",
-    "CreationRotator_CurrentMode": "Modalità corrente: #ffffff",
-    "CreationRotator_Cycle": "'%s' per scorrere avanti, '%s' per cambiare metodo di input e '%s' + '%s' per cambiare il moltiplicatore di forza.",
-    "CreationRotator_CurrentInput": ", #4f4f4fCurrent input#4f4f4fMetodo di input corrente: #ffffff",
+    "CreationRotator_CurrentMode": "Modalità: #ffffff",
+    "CreationRotator_CurrentInput": "#4f4f4f Metodo di input: #ffffff",
     "CreationRotator_Input_mouse": "Mouse",
     "CreationRotator_Input_wasd": "WASD",
+    "CreationRotator_SwitchInput": "cambia metodo di input", 
+    "CreationRotator_AdjustForce": "modifica moltiplicatore di forza",
+
+    "Switch_mode": "cambia modalità",
 
     "WaterSensor_Title": "Sensore d'acqua",
     "WaterSensor_Radius_Title": "Raggio di rilevamento(blocchi)",
     "WaterSensor_Radius": "Raggio: %d blocchi", 
-    "WaterSensor_CurrentRadius": "Raggio di rilevamento corrente: #ffffff",
-    "WaterSensor_CurrentRadius_blocks": " blocco(i)#4f4f4f, Visualizzazione: ",
-    "WaterSensor_Adjust_tip": "'%s' per modificare il raggio di rilevamento e '%s' per alternare la visualizzazione del raggio.",
+    "WaterSensor_CurrentRadius": "Raggio di rilevamento:#ffffff %d blocco(i)",
+    "WaterSensor_Visualization": " #4f4f4fVisual#4f4f4fVisualizzazione: ",
     "WaterSensor_Visualization_on": "#269e44ON",
     "WaterSensor_Visualization_off": "#9e2626OFF",
-
-    "Converter_Cycle": "'%s' per scorrere avanti e '%s' per scorrere indietro.",
+    "WaterSensor_Adjust_Radius": "modifica raggio di rilevamento",
+    "WaterSensor_Adjust_Vis": "alterna visualizzazione del raggio",
 
     "Sail_Tie": "Lega la vela",
     "Sail_Lower": "Abbassa la vela",
     "Sail_Controlled": "Controllato da un'altro input",
 
-    "Trader_dialogue1": "Mhh.. Bertha.. Io farò… OH! Tu.. Sei vivo?! Sono felice di vedere un'altra anima! Hm… Oh.. Penso di sapere un modo per eh- fuggire dal pianeta. Se potresti portare a Berth- eh, a me della verdura impacchettata, sarebbe grandioso! Hehe.. Ti ho segnato la posizione di una stazione di impacchettamento. Impacchetta 2 contenitori di carote e 2 di barbabietole rosse. Poi puoi portarli alla grande vecchia Bertha- eh, la grande pompa di là.. Hehe.",
+    "Trader": "#00bf00Commerciante#ffffff:",
+   "Trader_dialogue1": "Mhh.. Bertha.. Io farò… OH! Tu.. Sei vivo?! Sono felice di vedere un'altra anima! Hm… Oh.. Penso di sapere un modo per eh- fuggire dal pianeta. Se potresti portare a Berth- eh, a me della verdura impacchettata, sarebbe grandioso! Hehe.. Ti ho segnato la posizione di una stazione di impacchettamento. Impacchetta 2 contenitori di carote e 2 di barbabietole rosse. Poi puoi portarli alla grande vecchia Bertha- eh, la grande pompa di là.. Hehe.",
     "Trader_dialogue2": "Che bella sorpresa vederti qui di nuovo! Cioè, non che mi aspettavo di trovare i tuoi arti sulle sponde.. Ehm. Comuqnue, sfortunatamente le verdure sono solo parte della ricett- eh piano. Le altre risorse sono state tenute segrete. Però ho rilevato attività anormale di.. Woc su un'isola strana qui vicino. Dovresti investigare.",
     "Trader_dialogue3": "Perfetto! Presto sarà mi- eh, potremmo abbandonare questo pianeta. *fissa le note* Ah... SI.. LO SAPEVO! Muhahahahaa- Oh, scusa Non sono abituato ad avere compagnia, almeno dopo l'incident- Comunque, mi devi portare altri 2 pacchi di mirtilli e 2 di banane. Ti ho segnato la posizione di un'altra stazione di impacchettamento vicina.",
     "Trader_dialogue4": "*Beve* AH, proprio quello che mi serve! Mi sei mancato così tanto sunshake... Dov'è la mia educazione? Perché non offro un sunshake pure a te? Posso crearne quanti ne vuoi, se mi porti ingredienti freschi. Eh, certo che questo era necessario.. perché.. il.. ah.. sunshake contiene, ah, coordinate di alcune rovine. Visto che la mia vita è ora salvata dal sunshake, potresti anche cercare di liberare il resto del mio equipaggio. Ho sentito dire che potrebbe esserci una chiave nella città in rovine. Se riuscissi a mettere le mie mani su questo dispositivo, potremmo iniziare una missione di salvataggio.",
@@ -49,15 +52,83 @@
     "Trader_dialogue6": "Mi è mancato avere compagnia per così tanto tempo *singhiozza*. Continua a salvare il resto del mio equipaggio! Nel frattempo penserò ad un piano per portarci via dal pianeta e tornare a casa...",
     
     "FishingBait": "Esca: ",
-    "FishingOutOfBait": "Finite le esche!",
-    "FishingBaitNone": "Niente",
+    "FishingOutOfBait": "Esche finite!",
+    "FishingBaitNone": "Nessuna",
     "FishingGetItem": "Pescato: ",
 
     "JunkCollector_Full": "#ff0000Collect#ff0000Raccoglitore pieno",
-    "JunkCollector_SlotsOpen": "Spazio rimasto:#ffffff %d slot",
+    "JunkCollector_SlotsOpen": "Sapzio rimasto:#ffffff %d slot",
+    "JunkCollector_Title": "Rete di raccolta",
+    "JunkCollector_TakeAll": "Prendi tutti gli oggetti",
+    "JunkCollector_TakeAll_Empty": "Nessun'oggetto da raccogliere!", 
 
-    "HammockAllPlayers": "Tutti i giocatori devono dormire per saltare la notte",
+    "HammockAllPlayers": "Tutti devono dormire per saltare la notte",
     "HammockNight": "Puoi solo dormire di notte",
 
-    "ClamDivingSucks": "#ff88ffL'ho già detto che odio fare clam diving?"
+    "AntennaInteract": "Manda segnale di soccorso",
+
+    "ClamDivingSucks": "#ff88ffDid I already mention that I hate clam#ff88ffL'ho già detto che odio clam diving?",
+
+    "Quest_Tutorial": "Disperso",
+    "Quest_Tutorial_Sleep": "Dormi nell'amaca",
+    "Quest_Tutorial_Workbench": "Usa il banco da lavoro",
+    "Quest_Tutorial_Hammer": "Crea un martello di legno",
+
+    "Quest_RangerStation": "Avanposto del Ranger spaziale",
+    "Quest_RangerStation_Logbook": "Leggi il log: \"Avanposto del Ranger spaziale\" ",
+    "Quest_RangerStation_Go_To": "Raggiungi l'avanposto",
+    "Quest_RangerStation_Activate": "Trova un modo per attivare l'avanposto",
+
+    "Quest_BuildRadio": "C'è nessuno?",
+    "Quest_BuildRadio_Logbook": "Leggi il log \"Stato dell'antenna\" ",
+    "Quest_BuildRadio_Craftbot": "Crea un Craftbot",
+    "Quest_BuildRadio_Wood": "Crea 20 blochi di Legno 1",
+    "Quest_BuildRadio_Craft_Antenna": "Crea un'antenna radio improvvisata",
+    "Quest_BuildRadio_Use_Antenna": "Manda un segnale di soccorso",
+
+    "Quest_RadioSignal": "Missione di soccorso",
+    "Quest_RadioSignal_Logbook": "Leggi il log: \"Missione di soccorso\" ",
+    "Quest_RadioSignal_Cotton": "Trova del cotone",
+    "Quest_RadioSignal_Windsock": "Crea una calza a vento",
+    "Quest_RadioSignal_Sail": "Crea una vela",
+    "Quest_RadioSignal_FindWreck": "Raggiungi la fonte del segnale di soccorso",
+    "Quest_RadioSignal_ExploreWreck": "Esplora il relitto per indizi",
+
+    "QuestItemTooEarly": "Dovrei investigarlo dopo",
+
+    "Quest_FindTrader": "Le traccie del commerciante",
+    "Quest_FindTrader_Logbook": "Leggi il log: \"Note del commerciante\" ",
+    "Quest_FindTrader_ReachTrader": "Raggiungi l'isola menzionata nel log",
+    "Quest_FindTrader_TalkTrader": "Parla con il commerciante",
+
+    "Quest_Vegetables": "Meccanico della consegna",
+    "Quest_Vegetables_Logbook": "Leggi il log: \"Verdura per il commerciante\" ",
+    "Quest_Vegetables_ReachStation": "Trova la stazione di impacchettamento",
+    "Quest_Vegetables_SuckCrates": "Consegna i pacchi a \"Bertha\"",
+
+    "Quest_WocTemple": "Il mistero delle woc",
+    "Quest_WocTemple_Logbook": "Leggi il log: \"Il mistero delle woc\" ",
+    "Quest_WocTemple_ReachTemple": "Raggiungi l'isola con attività anormali delle woc",
+    "Quest_WocTemple_FindTemple": "Trova la fonte delle attività anormali delle woc",
+    "Quest_WocTemple_GetRecipe": "Esplora il tempio",
+
+    "SunshakeRecipe": "Ricetta del Sunshake",
+
+    "Quest_Fruits": "Meccanico della consegna (ancora)",
+    "Quest_Fruits_Logbook": "Leggi il log: \"Frutta per il commerciante\" ",
+
+    "Quest_ScrapCity": "Civiltà persa",
+    "Quest_ScrapCity_Logbook": "Leggi il log: \"Città di rottami\" ",
+    "Quest_ScrapCity_ReachCity": "Raggiungi la città abbandonata",
+    "Quest_ScrapCity_FindRuin": "Trova la rovina più alta",
+    "Quest_ScrapCity_GetKey": "Cerca oggetti strani",
+
+    "Quest_Warehouse": "Il guerra-zzino",
+    "Quest_Warehouse_Logbook": "Leggi il log: \"Incursione del magazzino\" ",
+    "Quest_Warehouse_Enter": "Entra in un magazzino",
+    "Quest_Warehouse_FindFarmer": "Trova il contadino in gabbia nel piano più alto",
+    "Quest_Warehouse_SuckFarmer": "Scappa r lascia che Bertha \"salvi\" il contadino",
+
+    "Quest_Chapter2": "Capitolo 2",
+    "Quest_Chapter2_Logbook": "Leggi il log: \"Capitolo 2\" "
 }
