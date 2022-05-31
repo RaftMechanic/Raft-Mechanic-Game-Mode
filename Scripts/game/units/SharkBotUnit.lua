@@ -214,6 +214,8 @@ function SharkBotUnit.server_onCreate( self )
 	self.avoidResetTimer = Timer()
 	self.avoidResetTimer:start( 40 * 16.0 )
 	
+	self.retreatpos = self.unit.character.worldPosition
+
 	self.currentState = self.idleState
 	self.currentState:start()
 end
@@ -251,9 +253,11 @@ function SharkBotUnit.server_onFixedUpdate( self, dt )
 		self.roamState.cliffAvoidance = true
 		self.pathingState:sv_setCliffAvoidance( true )
 		self.land = 0
+		self.retreatpos = self.unit.character.worldPosition
 	else
 		self.land = self.land + 1
 		if self.land > 3 then
+			self.unit.character:setWorldPosition(self.retreatpos)
 			if self.fleeFrom == nil and self.currentState ~= self.fleeState  then
 				self.fleeFrom = self.unit.character.worldPosition + self.unit.character.direction
 			end
@@ -285,6 +289,8 @@ function SharkBotUnit.server_onFixedUpdate( self, dt )
 	updateAirTumble( self, self.idleState )
 	
 	self.griefTimer:tick()
+	if self.griefTimer:done() then
+	end
 	
 	if self.avoidCount > 0 then
 		self.avoidResetTimer:tick()
