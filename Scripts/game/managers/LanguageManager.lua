@@ -15,10 +15,16 @@ function language_tag(name)
     local currentLang = sm.gui.getCurrentLanguage()
     if currentLang ~= g_languageManager.language then --when language changed
         g_languageManager.language = currentLang
-        g_languageManager.tags = sm.json.open("$CONTENT_DATA/Gui/Language/"..g_languageManager.language.."/tags.json")
+        local path = "$CONTENT_DATA/Gui/Language/"..g_languageManager.language.."/tags.json"
+        if sm.json.fileExists(path) then
+            g_languageManager.tags = sm.json.open(path)
+        end
     end
 
-    local textInJson = g_languageManager.tags[name]
+    local textInJson = nil
+    if g_languageManager.tags then
+        textInJson = g_languageManager.tags[name]
+    end
     --try to find tag in the fallback language
     if textInJson == nil then
         textInJson = fallbackLanguage[name]
