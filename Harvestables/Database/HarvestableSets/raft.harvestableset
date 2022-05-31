@@ -3,7 +3,8 @@
         {
 			"name": "hvs_loot_logbook",
 			"showInEditor": false,
-            "uuid": "3b7054d0-9ca7-4efa-8b4a-e8658eda3181",
+            "uuid": "3b7054d0-9ca7-4efa-8b4a-e8658eda3181"
+			//"renderable": "$SURVIVAL_DATA/Harvestables/Renderable/Farmables/hvs_farmables_beehive.rend",
             "color": "",
 			"col": "$CONTENT_DATA/Harvestables/Collision/hvs_loot_bigger_col.obj", 
 			"collides": {
