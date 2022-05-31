@@ -1,6 +1,7 @@
 {
    "partList" : [
       {
+         "showInInventory" : false,
          "autoTool" : "09a952e0-24fe-451a-abe8-b912d1c5bbac",
          "box" : {
             "x" : 1,
@@ -28,6 +29,7 @@
          "uuid" : "ce986935-5b57-4249-acbb-04ef6666bb03"
       },
       {
+         "showInInventory" : false,
          "autoTool" : "09a952e0-24fe-451a-abe8-b912d1c5bbac",
          "box" : {
             "x" : 1,
@@ -55,6 +57,7 @@
          "uuid" : "93e8a46a-5c24-42d2-8261-67be84e05ccf"
       },
       {
+         "showInInventory" : false,
          "autoTool" : "09a952e0-24fe-451a-abe8-b912d1c5bbac",
          "box" : {
             "x" : 1,

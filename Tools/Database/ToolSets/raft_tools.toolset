@@ -78,6 +78,7 @@
 			"uuid": "09a952e0-24fe-451a-abe8-b912d1c5bbac"
 		},
 		{
+		 "showInInventory" : false,
          "name" : "",
          "previewRenderable" : "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/char_binocular_preview.rend",
          "previewRotation" : [ 1, 0, 0, 0, 1, 0, 0, 0, 1 ],
