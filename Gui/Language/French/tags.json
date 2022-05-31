@@ -69,6 +69,26 @@
 
     "ClamDivingSucks": "#ff88ffAi-je déjà dit que je déteste plonger pour aller ramasser les palourdes ?",
 
+    "WrongTool": "Vous avez besoin d'un meilleur outil",
+
+    "Tutorial_Dismiss": "Appuyer sur %s pour fermer",
+    "Tutorial_Food": "Faim",
+    "Tutorial_FoodText": "Pour survivre dans l'océan vous devez adapter votre stratégie de survie. Heureusement, les poissons sont une excellente source de nutriments. Une fois que vous aurez trouvé suffisamment de terre, vous pourrez aussi faire pousser vos propres cultures.",
+    "Tutorial_Water": "Soif",
+    "Tutorial_WaterText": "Comme l'océan est rempli d'eau salée, vous devez trouver un moyen de la rendre potable. On pourrait peut-être la purifier.",
+    "Tutorial_Fish": "Pêche",
+    "Tutorial_FishText": "1. Jetez l'hameçon dans l'eau et attendez.\n2. Laissez les poissons grignoter l'appât.. (vous verrez un PETIT splash)\n3. Tirez quand vous voyez un GRAND SPLASH (vous entendrez également un son)",
+    "Tutorial_Workbench": "Recettes",
+    "Tutorial_WorkbenchText": "En accomplissant des quêtes, vous débloquerez plus d'objets à fabriquer !",
+    "Tutorial_Sail": "Voile",
+    "Tutorial_SailText": "La manche à air vous indique la direction actuelle du vent. Assurez-vous que vos voiles prennent le vent. Bon voyage !",
+    "Tutorial_Sleep": "Dormir",
+    "Tutorial_SleepText": "Après une dure journée de travail, détendez-vous dans le hamac et faites de beaux rêves. Si tous les joueurs dorment dans un hamac vous pourrez sauter la nuit et vous réveiller avec le soleil levant !",
+    "Tutorial_Shark": "REQUINS",
+    "Tutorial_SharkText": "De dangereux robots requins parcourent la mer. Ils vous attaqueront, vous et votre radeau. Il est préférable d'installer des défenses sur votre radeau avant qu'ils ne fassent trop de dégâts.",
+
+    "Quest_ItemUnlock": "Nouvelle recette débloquée : #00f000",
+
     "Quest_Tutorial": "Échoué",
     "Quest_Tutorial_Sleep": "Dormir dans le hamac",
     "Quest_Tutorial_Workbench": "Ouvrir l'établi",
