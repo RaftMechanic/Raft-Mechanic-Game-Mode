@@ -66,6 +66,7 @@ function QuestManager.server_onCreate( self )
 
 	LoadQuestSet( "$CONTENT_DATA/ScriptableObjects/scriptableObjectSets/sob_quests.sobset", self.sv.quests )--RAFT
 
+	QuestManager.Sv_SubscribeEvent( QuestEvent.QuestCompleted, self.scriptableObject, "sv_e_onQuestEvent" )--RAFT
 
 
 end
@@ -414,5 +415,25 @@ end
 function QuestManager.cl_unlock_recipes(self, items)
 	for k, item in ipairs(items) do
 		sm.gui.chatMessage(language_tag("Quest_ItemUnlock") .. sm.shape.getShapeTitle(item))
+	end
+end
+
+function QuestManager.sv_e_onQuestEvent( self, data )
+	if data.event == QuestEvent.QuestCompleted then
+		if data.params.questName == "quest_raft_tutorial" then
+			QuestManager.Sv_UnlockRecipes( "workbench" )
+		elseif data.params.questName == "quest_rangerstation" then
+			QuestManager.Sv_UnlockRecipes( "quest1" )
+		elseif data.params.questName == "quest_radio_interactive" then
+			QuestManager.Sv_UnlockRecipes( "questsail" )
+		elseif data.params.questName == "quest_find_trader" then
+			QuestManager.Sv_UnlockRecipes( "questpropeller" )
+		elseif data.params.questName == "quest_deliver_vegetables" then
+			QuestManager.Sv_UnlockRecipes( "questveggies" )
+		elseif data.params.questName == "quest_deliver_fruits" then
+			QuestManager.Sv_UnlockRecipes( "questharpoon" )
+		elseif data.params.questName == "quest_deliver_fruits" then
+			QuestManager.Sv_UnlockRecipes( "quest_warehouse" )	
+		end
 	end
 end

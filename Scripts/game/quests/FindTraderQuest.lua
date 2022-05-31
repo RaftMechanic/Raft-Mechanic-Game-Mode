@@ -68,8 +68,6 @@ function FindTraderQuest.sv_e_onQuestEvent( self, data )
 	if self.sv.saved.completedStages[Stages.talk_trader] then
 		self.sv.saved.stage = nil
 		QuestManager.Sv_UnsubscribeAllEvents( self.scriptableObject )
-		QuestManager.Sv_CompleteQuest( "quest_find_trader" )
-		QuestManager.Sv_UnlockRecipes( "questpropeller" )
 		QuestManager.Sv_TryActivateQuest( "quest_deliver_vegetables" )
 	end
 

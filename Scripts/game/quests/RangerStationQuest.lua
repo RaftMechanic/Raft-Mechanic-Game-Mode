@@ -87,7 +87,6 @@ function RangerStationQuest.sv_e_onQuestEvent( self, data )
 		self.sv.saved.stage = nil
 		QuestManager.Sv_UnsubscribeAllEvents( self.scriptableObject )
 		QuestManager.Sv_CompleteQuest( "quest_rangerstation" )
-		QuestManager.Sv_UnlockRecipes( "quest1" )
 		QuestManager.Sv_TryActivateQuest( "quest_radio_interactive" )
 	end
 

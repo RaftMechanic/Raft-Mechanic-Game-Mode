@@ -70,7 +70,6 @@ function DeliverVegetablesQuest.sv_e_onQuestEvent( self, data )
 		self.sv.saved.stage = nil
 		QuestManager.Sv_UnsubscribeAllEvents( self.scriptableObject )
 		QuestManager.Sv_CompleteQuest( "quest_deliver_vegetables" )
-		QuestManager.Sv_UnlockRecipes( "questveggies" )
 		QuestManager.Sv_TryActivateQuest( "quest_woc_temple" )
 	end
 
