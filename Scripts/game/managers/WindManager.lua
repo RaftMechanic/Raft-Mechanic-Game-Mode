@@ -35,6 +35,10 @@ function WindManager.server_onCreate(self)
     g_questManager.Sv_SubscribeEvent(QuestEvent.QuestActivated, self.scriptableObject, "sv_e_onQuestChanged")
     g_questManager.Sv_SubscribeEvent(QuestEvent.QuestCompleted, self.scriptableObject, "sv_e_onQuestChanged")
     g_questManager.Sv_SubscribeEvent(QuestEvent.QuestAbandoned, self.scriptableObject, "sv_e_onQuestChanged")
+    
+    --recaculate on rejoin, (could fix if game/script crash)
+    g_questManager.Sv_SubscribeEvent(QuestEvent.PlayerJoined, self.scriptableObject, "sv_e_onQuestChanged")
+
 
     g_windManager = self
 end
@@ -42,7 +46,7 @@ end
 function WindManager:sv_e_onQuestChanged(params)
     self.sv.cachedWind = self:sv_caculateWindCenter()
 
-    self.storage:save(self.sv)
+    self:sv_syncAndSave()
 end
 
 function WindManager.client_onCreate(self)
@@ -55,8 +59,14 @@ function WindManager.client_onCreate(self)
     end
 end
 
+function WindManager:sv_syncAndSave()
+    self.storage:save(self.sv)
+    self.network:setClientData(self.sv)
+end
+
 function WindManager.client_onClientDataUpdate( self, data )
-	self.cl = data
+	self.cl.cachedWind = data.cachedWind
+    self.cl.defaultCenter = data.defaultCenter
 end
 
 ---Get the wind center point based on active quests
@@ -80,7 +90,7 @@ function WindManager:sv_e_randomizeWind(set)
 
     if set then
         self.sv.defaultCenter = windCenter
-        self.storage:save(self.sv)
+        self:sv_syncAndSave()
     end
 
     return windCenter
@@ -109,5 +119,6 @@ function getWindCenter()
     if sm.isServerMode() then
         return g_windManager.sv.cachedWind or g_windManager.sv.defaultCenter
     end
+
     return g_windManager.cl.cachedWind or g_windManager.cl.defaultCenter
 end
