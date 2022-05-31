@@ -624,11 +624,11 @@ function Crafter.cl_updateRecipeGrid( self )
 		elseif recipeSet.name == "questpropeller" then
 			locked = not QuestManager.Cl_IsQuestComplete("quest_find_trader")
 		elseif recipeSet.name == "questveggies" then
-			locked = not QuestManager.Cl_IsQuestComplete("quest_return_to_trader1")
+			locked = not QuestManager.Cl_IsQuestComplete("quest_deliver_vegetables")
 		elseif recipeSet.name == "questharpoon" then
-			locked = not QuestManager.Cl_IsQuestComplete("quest_return_to_trader3")
+			locked = not QuestManager.Cl_IsQuestComplete("quest_deliver_fruits")
 		elseif recipeSet.name == "questfinal" then
-			locked = not QuestManager.Cl_IsQuestComplete("quest_return_to_trader4")
+			locked = not QuestManager.Cl_IsQuestComplete("quest_warehouse")
 		end
 		--RAFT
 
@@ -1431,6 +1431,8 @@ function Crafter.cl_setGuiContainers( self )
 end
 
 function Crafter.client_onInteract( self, character, state )
+	self:cl_updateRecipeGrid()--RAFT
+
 	if state == true then
 		local parent = self:getParent()
 		if not self.crafter.needsPower or ( parent and parent.active ) then
