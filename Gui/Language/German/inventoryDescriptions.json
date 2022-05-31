@@ -45,7 +45,7 @@
    },
    "509505f1-b772-4acd-9827-f9a605a979ec" : {
       "description": "Drücke 'E' um zwischen den Tasten zu wechseln. Gibt ein logisches Signal aus wenn die ausgewählte Taste gedrückt wird.",
-        "title": "WASD Konvertierer""
+        "title": "WASD Konvertierer"
    },
    "5cb15c93-4fa9-48da-9974-2e95ca6c9e1c" : {
       "description" : "Der Raffeneriebot verarbeited deine gesammelten Stämme. Schmeiß sie per Hand ein oder stelle einen Ressourcensammler mit Ressourcen vor ihn. Du solltest ihn auf deinem Floß haben.",
@@ -77,7 +77,7 @@
    },
    "7ceccadf-010f-4a45-907f-18ccc11c509c" : {
       "description": "Ist deine Lunge zu klein? Das wird dir nicht bei deinen Ausdauerproblemen helfen, aber du kannst länger im Wasser bleiben.",
-        "title": "Atemlufttank"
+        "title": "Sauerstoffflasche"
    },
    "7ece8b10-5cc0-4791-b75e-09858ef1b9c4" : {
       "description": "Mit den Flossen kannst du schneller schwimmen. Und sie sehen auch gut aus!",
@@ -101,7 +101,7 @@
    },
    "8e75cddb-040e-4813-8dd6-7e72f3288a91" : {
       "description": "Kann zum Anbau von Feldfrüchten auf dem Floß verwendet werden und löst keine Raubzüge aus.",
-        "title": "Schrott-Feld""
+        "title": "Schrott-Feld"
    },
    "8f460344-ef34-42ab-99e3-d3bed9af4b52" : {
       "description": "Zeigt Windrichtung",
@@ -116,7 +116,7 @@
       "title" : "Leichter Ressourcensammeler"
    },
    "b5ade3b0-be48-4a61-a8c2-13a4cedf1343" : {
-      ""description": "Wirf den Hacken um Müll direkt in deine gierigen Hände zu ziehen! Drücke Rechtsklick um ihn schneller einzufahren",
+      "description": "Wirf den Hacken um Müll direkt in deine gierigen Hände zu ziehen! Drücke Rechtsklick um ihn schneller einzufahren",
         "title": "Wurfhacken"
    },
    "b63c6440-dfc2-4da7-acdb-3c385080b2e4" : {
@@ -202,5 +202,21 @@
    "f2382297-44b4-4259-99ce-b11da671ac51" : {
       "description" : "Sammelt den ganzen Ozeanmüll für dich! Du fauler Sunshake-Suchti...",
       "title": "Sammelnetz"
+   },
+   "56dc8c15-ccc5-46c8-bd56-46bb6bfc85c9" : {
+      "description" : "Hängematten-Attrape für die verlassenen Floße damit Leute nicht einfach drin schlafen und deren Wiederbelebungspunkt verlieren",
+      "title": "Verlassene Hängematte"
+   },
+   "795da2f8-ce95-4b34-9d89-1ef84f74e36a" : {
+      "description" : "Looks like Raft Base, but just doesn't float much. Can be used as Floor on higher decks.",
+      "title" : "Raft Floor"
+   },
+   "4d0dce2f-7bee-4c38-be21-c8a5ce083f1a" : {
+      "description" : "Sieht aus wie ein verstärkter Floßboden schwimmt aber nicht. Kann als Boden für obere Decks benutzt werden",
+      "title" : "Verstärkter Floßboden Boden"
+   },
+    "4a1888f7-7376-49aa-97a0-1aaf1ae75e2a" : {
+      "description" : "Du hast sie gefunden!\n\n\n\n#050505Die Matterie um sie herum sieht instabil aus..\n\n#212328Dart Frog Referenz :D",
+      "title" : "Gefrorene Ameise"
    }
 }
