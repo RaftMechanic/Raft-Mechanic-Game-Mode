@@ -136,7 +136,7 @@ function BuildRadioQuest.cl_updateProgress( self, stage )
 	elseif stage == Stages.get_metal then
 		self.scriptableObject.clientPublicData.progressString = language_tag("Quest_BuildRadio_Metal")
 	elseif stage == Stages.get_component then
-		self.scriptableObject.clientPublicData.progressString = language_tag("Quest_BuildRadio_Components")
+		self.scriptableObject.clientPublicData.progressString = language_tag("Quest_BuildRadio_Component")
 	elseif stage == Stages.craft_antenna then
 		self.scriptableObject.clientPublicData.progressString = language_tag("Quest_BuildRadio_Craft_Antenna")
 	elseif stage == Stages.use_antenna then
