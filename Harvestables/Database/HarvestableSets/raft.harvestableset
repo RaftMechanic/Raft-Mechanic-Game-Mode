@@ -3,8 +3,8 @@
         {
 			"name": "hvs_loot_logbook",
 			"showInEditor": false,
-            "uuid": "3b7054d0-9ca7-4efa-8b4a-e8658eda3181"
-			//"renderable": "$SURVIVAL_DATA/Harvestables/Renderable/Farmables/hvs_farmables_beehive.rend",
+            "uuid": "3b7054d0-9ca7-4efa-8b4a-e8658eda3181",
+			"renderable": "$CONTENT_DATA/Harvestables/Renderables/invis_harvestable.rend",
             "color": "",
 			"col": "$CONTENT_DATA/Harvestables/Collision/hvs_loot_bigger_col.obj", 
 			"collides": {
@@ -29,7 +29,7 @@
 			"showInEditor": true,
 			"type": "filler",
 			"uuid": "38226bbb-1985-4b21-9f2b-ea625b95b3b7",
-			//"renderable": "$SURVIVAL_DATA/Harvestables/Renderable/Farmables/hvs_farmables_beehive.rend",
+			"renderable": "$CONTENT_DATA/Harvestables/Renderables/invis_harvestable.rend",
 			"col": "$CONTENT_DATA/Harvestables/Collision/hvs_loot_bigger_col.obj",
 			"color":"ffffffff",
 			"collides": {
