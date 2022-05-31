@@ -69,20 +69,24 @@
 
     "ClamDivingSucks": "#ff88ffDid I already mention that I hate clam diving?",
 
+    "Quest_Tutorial": "Stranded",
     "Quest_Tutorial_Sleep": "Sleep in the hammock",
     "Quest_Tutorial_Workbench": "Open the workbench",
     "Quest_Tutorial_Hammer": "Craft a wooden hammer",
 
+    "Quest_RangerStation": "Space Ranger's Outpost",
     "Quest_RangerStation_Logbook": "Read \"Space Ranger's Outpost\" log",
     "Quest_RangerStation_Go_To": "Reach the outpost",
     "Quest_RangerStation_Activate": "Find a way to activate the outpost",
 
+    "Quest_BuildRadio": "Anyone out there?",
     "Quest_BuildRadio_Logbook": "Read \"Antenna Status\" log",
     "Quest_BuildRadio_Craftbot": "Build a Craftbot",
     "Quest_BuildRadio_Wood": "Craft 20 Wood Block 1",
     "Quest_BuildRadio_Craft_Antenna": "Craft a Makeshift Radio Antenna",
     "Quest_BuildRadio_Use_Antenna": "Send a distress signal",
 
+    "Quest_RadioSignal'": "Rescue Mission",
     "Quest_RadioSignal_Logbook": "Read \"Rescue Mission\" log",
     "Quest_RadioSignal_Cotton": "Find cotton",
     "Quest_RadioSignal_Windsock": "Craft a wind sock",
@@ -92,14 +96,17 @@
 
     "QuestItemTooEarly": "I should investigate this later",
 
+    "Quest_FindTrader": "The tracks of the Trader",
     "Quest_FindTrader_Logbook": "Read \"Trader's Notes\" log",
     "Quest_FindTrader_ReachTrader": "Reach the island mentioned in the notes",
     "Quest_FindTrader_TalkTrader": "Talk to the Trader",
 
+    "Quest_Vegetables": "Delivery Mechanic",
     "Quest_Vegetables_Logbook": "Read \"Vegetables for Trader\" log",
     "Quest_Vegetables_ReachStation": "Find the packing station",
     "Quest_Vegetables_SuckCrates": "Deliver the crates to \"Bertha\"",
 
+    "Quest_WocTemple": "The Mystery of the Wocs",
     "Quest_WocTemple_Logbook": "Read \"The Mystery of the Wocs\" log",
     "Quest_WocTemple_ReachTemple": "Reach the island with abnormal woc activity",
     "Quest_WocTemple_FindTemple": "Find the source of the abnormal woc activity",
@@ -107,17 +114,21 @@
 
     "SunshakeRecipe": "Sunshake Recipe",
 
+    "Quest_Fruits": "Delivery Mechanic (again)",
     "Quest_Fruits_Logbook": "Read \"Fruits for Trader\" log",
 
+    "Quest_ScrapCity": "Lost Civilization",
     "Quest_ScrapCity_Logbook": "Read \"Scrap City\" log",
     "Quest_ScrapCity_ReachCity": "Reach the abandoned city",
     "Quest_ScrapCity_FindRuin": "Find the tallest ruin",
     "Quest_ScrapCity_GetKey": "Investigate the building for unusual objects",
 
+    "Quest_Warehouse": "The War(e)house",
     "Quest_Warehouse_Logbook": "Read \"Warehouse Raid\" log",
     "Quest_Warehouse_Enter": "Enter a warehouse",
     "Quest_Warehouse_FindFarmer": "Find the caged farmer trapped in the top floor",
     "Quest_Warehouse_SuckFarmer": "Escape the warehouse and let Bertha \"rescue\" the farmer",
 
+    "Quest_Chapter2": "Chapter 2",
     "Quest_Chapter2_Logbook": "Read \"Chapter 2\" log"
 }

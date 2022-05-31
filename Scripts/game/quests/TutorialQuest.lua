@@ -74,6 +74,8 @@ function TutorialQuest.client_onCreate( self )
 	self.cl = {}
 	self.scriptableObject.clientPublicData = {}
 	self.scriptableObject.clientPublicData.progressString = ""
+	self.scriptableObject.clientPublicData.title = language_tag("Quest_Tutorial")
+	self.scriptableObject.clientPublicData.isMainQuest = true
 end
 
 function TutorialQuest.client_onRefresh( self )

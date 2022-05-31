@@ -76,6 +76,8 @@ function Chapter2Quest.client_onCreate( self )
 	self.cl = {}
 	self.scriptableObject.clientPublicData = {}
 	self.scriptableObject.clientPublicData.progressString = ""
+	self.scriptableObject.clientPublicData.title = language_tag("Quest_Chapter2")
+	self.scriptableObject.clientPublicData.isMainQuest = true
 end
 
 function Chapter2Quest.client_onRefresh( self )

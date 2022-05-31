@@ -98,6 +98,8 @@ function RangerStationQuest.client_onCreate( self )
 	self.cl = {}
 	self.scriptableObject.clientPublicData = {}
 	self.scriptableObject.clientPublicData.progressString = ""
+	self.scriptableObject.clientPublicData.title = language_tag("Quest_RangerStation")
+	self.scriptableObject.clientPublicData.isMainQuest = true
 end
 
 function RangerStationQuest.client_onRefresh( self )

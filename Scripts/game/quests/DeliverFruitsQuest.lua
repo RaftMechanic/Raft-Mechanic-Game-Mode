@@ -91,6 +91,8 @@ function DeliverFruitsQuest.client_onCreate( self )
 	self.cl = {}
 	self.scriptableObject.clientPublicData = {}
 	self.scriptableObject.clientPublicData.progressString = ""
+	self.scriptableObject.clientPublicData.title = language_tag("Quest_Fruits")
+	self.scriptableObject.clientPublicData.isMainQuest = true
 end
 
 function DeliverFruitsQuest.client_onRefresh( self )

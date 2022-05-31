@@ -80,6 +80,8 @@ function FindTraderQuest.client_onCreate( self )
 	self.cl = {}
 	self.scriptableObject.clientPublicData = {}
 	self.scriptableObject.clientPublicData.progressString = ""
+	self.scriptableObject.clientPublicData.title = language_tag("Quest_FindTrader")
+	self.scriptableObject.clientPublicData.isMainQuest = true
 end
 
 function FindTraderQuest.client_onRefresh( self )
