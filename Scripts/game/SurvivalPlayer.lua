@@ -455,6 +455,12 @@ function SurvivalPlayer.server_onInventoryChanges( self, container, changes )
 		if FindInventoryChange( changes, obj_sail ) > 0 or FindInventoryChange( changes, obj_windsock ) > 0 then
 			self.network:sendToClient( self.player, "cl_e_tutorial", "sail" )
 		end
+		if FindInventoryChange( changes, obj_oxygen_tank ) > 0 then
+			self.network:sendToClient( self.player, "cl_e_tutorial", "oxygen" )
+		end
+		if FindInventoryChange( changes, obj_scrap_field ) > 0 or FindInventoryChange( changes, obj_large_field ) > 0 then
+			self.network:sendToClient( self.player, "cl_e_tutorial", "farm" )
+		end
 		--RAFT
 	end
 
@@ -888,6 +894,24 @@ function SurvivalPlayer.cl_e_tutorial( self, event )
 				text = "Tutorial_Shark"}
 			setup_tutorial_gui(self, params)
 		end
+
+	elseif event == "oxygen" and not self.cl.tutorialsWatched["oxygen"] then
+		if not self.cl.tutorialGui then
+			local params = {
+				closeCallback = "cl_onCloseTutorialOxygenGui",
+				image = "$CONTENT_DATA/Gui/Tutorial/gui_tutorial_image_oxygen.png",
+				text = "Tutorial_OxygenTank"}
+			setup_tutorial_gui(self, params)
+		end
+
+	elseif event == "farm" and not self.cl.tutorialsWatched["farm"] then
+		if not self.cl.tutorialGui then
+			local params = {
+				closeCallback = "cl_onCloseTutorialFarmGui",
+				image = "$CONTENT_DATA/Gui/Tutorial/gui_tutorial_image_farm.png",
+				text = "Tutorial_Farm"}
+			setup_tutorial_gui(self, params)
+		end
 	end
 end
 
@@ -935,5 +959,17 @@ end
 function SurvivalPlayer.cl_onCloseTutorialSharkGui( self )
 	self.cl.tutorialsWatched["shark"] = true
 	self.network:sendToServer( "sv_e_watchedTutorial", { tutorialKey = "shark" } )
+	self.cl.tutorialGui = nil
+end
+
+function SurvivalPlayer.cl_onCloseTutorialOxygenGui( self )
+	self.cl.tutorialsWatched["oxygen"] = true
+	self.network:sendToServer( "sv_e_watchedTutorial", { tutorialKey = "oxygen" } )
+	self.cl.tutorialGui = nil
+end
+
+function SurvivalPlayer.cl_onCloseTutorialFarmGui( self )
+	self.cl.tutorialsWatched["farm"] = true
+	self.network:sendToServer( "sv_e_watchedTutorial", { tutorialKey = "farm" } )
 	self.cl.tutorialGui = nil
 end

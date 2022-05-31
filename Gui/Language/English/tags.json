@@ -86,6 +86,10 @@
     "Tutorial_SleepText": "After a hard day's work, relax in the hammock and dream. If all players are sleeping in a hammock you can skip the dark night time and wake up to the rising sun!",
     "Tutorial_Shark": "SHARKS",
     "Tutorial_SharkText": "Dangerous sharkbots roam the sea. They will attack you and your raft. Better get some defences for yourself and your raft before they do too much damage.",
+    "Tutorial_Farm": "Farming",
+    "Tutorial_FarmText": "Growing your own crops is a reliable way to feed yourself. If you ever run out of seeds, you can conveniently extract their seeds with the seed press.",
+    "Tutorial_OxygenTank": "Oxygen Tank",
+    "Tutorial_OxygenTankText": "The oxygen tank helps you breathe longer underwater. You can also connect it to seats for the same effect!",
 
     "Quest_ItemUnlock": "New Recipe Unlocked: #00f000",
 
