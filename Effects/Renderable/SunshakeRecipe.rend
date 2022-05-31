@@ -1,17 +1,17 @@
 {
-    "lodList": [
-        {
-            "subMeshList": [
-                {
-                    "textureList": [
-                        "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_dif.tga",
-                        "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_asg.tga",
-                        "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_nor.tga"
-                    ],
-                    "material": "DifAsgNor"
-                }
-            ],
-            "mesh": "$SURVIVAL_DATA/Objects/Mesh/consumable/obj_consumable_sunshake.fbx"
-        }
-    ]
+   "lodList" : [
+      {
+         "mesh" : "$CONTENT_DATA/Objects/Mesh/Renders/woctemplerecipe.fbx",
+         "subMeshMap" : {
+            "Notepad" : {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$CONTENT_DATA/Objects/Textures/Renders/char_woctemplerecipe_tools_dif.tga",
+                  "$CONTENT_DATA/Objects/Textures/Renders/char_woctemplerecipe_tools_asg.tga",
+                  "$CHALLENGE_DATA/Character/Char_observerbot/char_observerbot_tools_nor.tga"
+               ]
+            }
+         }
+      }
+   ]
 }
