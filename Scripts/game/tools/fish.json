@@ -18,5 +18,15 @@
         "triggers": {"water": true, "chemical": false, "oil": false},
         "baits": ["none"],
         "biteTime": 1.0
+    },
+	{
+        //Fishe au Chocolat
+        "uuid": "7c440c4a-5919-4baa-a946-0bb89b8c4d5e",
+        "rarity": 80,
+        "location": { "xMin": -72, "xMax": 71, "yMin": -56, "yMax": 55},
+        "time": {"min": 0, "max": 1},
+        "triggers": {"water": true, "chemical": false, "oil": false},
+        "baits": ["none"],
+        "biteTime": 1.0
     }
 ]
