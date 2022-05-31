@@ -5,6 +5,7 @@ dofile "$SURVIVAL_DATA/Scripts/game/survival_logs.lua"
 
 dofile "$CONTENT_DATA/Scripts/game/raft_logs.lua"--RAFT
 dofile "$CONTENT_DATA/Scripts/game/managers/QuestManager.lua"
+dofile "$CONTENT_DATA/Scripts/game/managers/LanguageManager.lua"
 
 local renderables =   {"$SURVIVAL_DATA/Character/Char_Tools/Char_logbook/char_logbook.rend" }
 local renderablesTp = {"$SURVIVAL_DATA/Character/Char_Male/Animations/char_male_tp_logbook.rend", "$SURVIVAL_DATA/Character/Char_Tools/Char_logbook/char_logbook_tp_animlist.rend"}
@@ -25,6 +26,7 @@ end
 function LogBook.server_onCreate( self )
 	QuestManager.Sv_SubscribeEvent( QuestEvent.InventoryChanges, self.tool, "sv_e_onQuestEvent" )
 	QuestManager.Sv_SubscribeEvent( QuestEvent.QuestCompleted, self.tool, "sv_e_onQuestEvent" )
+	QuestManager.Sv_SubscribeEvent( QuestEvent.TraderTalk, self.tool, "sv_e_onQuestEvent" )
 end
 
 function LogBook:sv_e_onQuestEvent( data )
@@ -43,6 +45,16 @@ function LogBook:sv_e_onQuestEvent( data )
 			self.network:sendToClient( self.tool:getOwner(), "cl_n_addLog", log_deliver_vegetables )
 		elseif data.params.questName == "quest_deliver_vegetables" then
 			self.network:sendToClient( self.tool:getOwner(), "cl_n_addLog", log_woc_temple )
+		end
+	elseif data.event == QuestEvent.TraderTalk then
+		if data.params.msg == "Trader_dialogue3" then
+			self.network:sendToClient( self.tool:getOwner(), "cl_n_addLog", log_deliver_fruits )
+		elseif data.params.msg == "Trader_dialogue4" then
+			self.network:sendToClient( self.tool:getOwner(), "cl_n_addLog", log_scrap_city )
+		elseif data.params.msg == "Trader_dialogue5" then
+			self.network:sendToClient( self.tool:getOwner(), "cl_n_addLog", log_warehouse )
+		elseif data.params.msg == "Trader_dialogue6" then
+			self.network:sendToClient( self.tool:getOwner(), "cl_n_addLog", log_chapter2 )
 		end
 	end
 end
@@ -84,6 +96,19 @@ function LogBook.sv_n_requestInitData( self, _, player )
 	end
 	if QuestManager.Sv_IsQuestComplete( "quest_deliver_vegetables" ) then
 		clientData.logs[#clientData.logs + 1] = log_woc_temple
+	end
+
+	if QuestManager.Sv_GotQuestLog( "quest_deliver_fruits" ) then
+		clientData.logs[#clientData.logs + 1] = log_deliver_fruits
+	end
+	if QuestManager.Sv_GotQuestLog( "quest_scrap_city" ) then
+		clientData.logs[#clientData.logs + 1] = log_scrap_city
+	end
+	if QuestManager.Sv_GotQuestLog( "quest_warehouse" ) then
+		clientData.logs[#clientData.logs + 1] = log_warehouse
+	end
+	if QuestManager.Sv_GotQuestLog( "quest_chapter2" ) then
+		clientData.logs[#clientData.logs + 1] = log_chapter2
 	end
 	
 

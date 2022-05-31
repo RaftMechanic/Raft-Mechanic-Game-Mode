@@ -41,6 +41,30 @@
 			"classname": "WocTempleQuest",
 			"name": "quest_woc_temple",
 			"uuid": "6a729c2c-f37c-4c9d-a1ad-b8f8e8dc49a0"
+		},
+		{
+			"filename": "$CONTENT_DATA/Scripts/game/quests/DeliverFruitsQuest.lua",
+			"classname": "DeliverFruitsQuest",
+			"name": "quest_deliver_fruits",
+			"uuid": "9f2c2a5e-1bc7-45a4-ae25-29b5a208dcab"
+		},
+		{
+			"filename": "$CONTENT_DATA/Scripts/game/quests/ScrapCityQuest.lua",
+			"classname": "ScrapCityQuest",
+			"name": "quest_scrap_city",
+			"uuid": "be20e9dd-6f2c-4648-95fd-9e9bb58fe158"
+		},
+		{
+			"filename": "$CONTENT_DATA/Scripts/game/quests/WarehouseQuest.lua",
+			"classname": "WarehouseQuest",
+			"name": "quest_warehouse",
+			"uuid": "2d876d8e-908f-47cc-8149-78bd148b1c92"
+		},
+		{
+			"filename": "$CONTENT_DATA/Scripts/game/quests/Chapter2Quest.lua",
+			"classname": "Chapter2Quest",
+			"name": "quest_chapter2",
+			"uuid": "9d0c78a9-e980-4a0e-b623-ec9e447ef1ae"
 		}
 	]
 }

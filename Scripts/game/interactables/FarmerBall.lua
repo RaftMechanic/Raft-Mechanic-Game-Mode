@@ -4,6 +4,7 @@ FarmerBall = class()
 
 --RAFT START
 dofile("$CONTENT_DATA/Scripts/game/managers/LanguageManager.lua")
+dofile("$CONTENT_DATA/Scripts/game/managers/QuestManager.lua")
 
 function FarmerBall.server_onCreate( self )
 	self.saved = self.storage:load()
@@ -27,6 +28,8 @@ function FarmerBall.client_onInteract( self, character, state )
 		else
 			msg(language_tag("FarmerBallThanks"))
 		end
+
+		self.network:sendToServer("sv_send_event")
 	end
 end
 
@@ -34,6 +37,10 @@ function FarmerBall.client_canInteract(self)
 	local keyBindingText = sm.gui.getKeyBinding( "Use", true )
     sm.gui.setInteractionText("", keyBindingText, language_tag("FarmerBallTalk"))
 	return true
+end
+
+function FarmerBall.sv_send_event()
+	QuestManager.Sv_OnEvent(QuestEvent.FarmerTalk)
 end
 --RAFT END
 

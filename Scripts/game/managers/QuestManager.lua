@@ -24,8 +24,9 @@ QuestEvent = {
 	TraderTalk = "event.raft.trader_talk",
 	Vegetables = "event.raft.vegetables",
 	SunshakeRecipe = "event.raft.sunshake_recipes",
-
 	Fruits = "event.raft.fruits",
+	Warehouse = "event.raft.warehouse",
+	FarmerTalk = "event.raft.farmer_talk",
 	FarmerSuck = "event.raft.farmer_suck",
 }
 
@@ -366,11 +367,24 @@ function QuestManager.cl_getQuestProgressString( self, questName )
 		self = g_questManager
 	end
 
-	if self.cl.activeQuests[questName] and sm.exists(self.cl.activeQuests[questName]) then
+	if self.cl and self.cl.activeQuests[questName] and sm.exists(self.cl.activeQuests[questName]) then
 		local data = self.cl.activeQuests[questName]:getClientPublicData()
 		if data and data.progressString then
 			return data.progressString
 		end
 	end
 	return nil
+end
+
+function QuestManager.Sv_GotQuestLog(questName)
+	self = g_questManager
+
+	local quest = self.sv.saved.activeQuests[questName] or self.sv.saved.completedQuests[questName]
+	if not quest then
+		return false
+	elseif type(quest) == "boolean" then
+		return quest
+	else
+		return quest:getPublicData().log
+	end
 end

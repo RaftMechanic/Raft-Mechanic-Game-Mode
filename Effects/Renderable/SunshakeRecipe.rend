@@ -1,0 +1,17 @@
+{
+    "lodList": [
+        {
+            "subMeshList": [
+                {
+                    "textureList": [
+                        "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_dif.tga",
+                        "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_asg.tga",
+                        "$SURVIVAL_DATA/Objects/Textures/consumable/obj_consumable_sunshake_nor.tga"
+                    ],
+                    "material": "DifAsgNor"
+                }
+            ],
+            "mesh": "$SURVIVAL_DATA/Objects/Mesh/consumable/obj_consumable_sunshake.fbx"
+        }
+    ]
+}

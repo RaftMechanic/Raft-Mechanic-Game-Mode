@@ -1,7 +1,7 @@
 {
    "effectSetList" : [
       {
-         "path" : "$CONTENT_DATA/Effects/Database/EffectSets/example.effectset",
+         "path" : "$CONTENT_DATA/Effects/Database/EffectSets/raft.effectset",
          "showInEditor" : true
       }
    ]

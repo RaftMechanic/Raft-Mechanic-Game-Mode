@@ -319,6 +319,14 @@ end
 function HideoutTrader.cl_updateTradeGrid( self )
 	self.cl.guiInterface:clearGrid( "TradeGrid" )
 	self.cl.guiInterface:addGridItemsFromFile( "TradeGrid", "$SURVIVAL_DATA/CraftingRecipes/hideout.json" )
+
+	--RAFT
+	if QuestManager.Cl_IsQuestComplete("quest_deliver_fruits") then
+		self.cl.guiInterface:addGridItemsFromFile( "TradeGrid", "$CONTENT_DATA/CraftingRecipes/sunshake.json" )
+	end
+	if QuestManager.Cl_IsQuestComplete("quest_scrap_city") then
+		self.cl.guiInterface:addGridItemsFromFile( "TradeGrid", "$CONTENT_DATA/CraftingRecipes/warehousekey.json" )
+	end
 end
 
 function HideoutTrader.cl_n_addVacuumItem( self, params )
@@ -366,6 +374,8 @@ function HideoutTrader.cl_questCompleted( self, player )
 end
 
 function HideoutTrader.client_onInteract( self, character, state )
+	self:cl_updateTradeGrid()--RAFT
+
 	if state == true then
 		if self.cl.user == nil then
 			character:setLockingInteractable( self.interactable )
@@ -562,12 +572,23 @@ function HideoutTrader:client_canInteract()
 end
 
 function HideoutTrader:send_event()
-	QuestManager.Sv_OnEvent(QuestEvent.TraderTalk)
+	local msg
 	if not QuestManager.Sv_IsQuestComplete("quest_deliver_vegetables") then
-		self.network:sendToClients("cl_msg", "Trader_dialogue1")
+		msg = "Trader_dialogue1"
 	elseif not QuestManager.Sv_IsQuestComplete("quest_woc_temple") then
-		self.network:sendToClients("cl_msg", "Trader_dialogue2")
+		msg = "Trader_dialogue2"
+	elseif not QuestManager.Sv_IsQuestComplete("quest_deliver_fruits") then
+		msg = "Trader_dialogue3"
+	elseif not QuestManager.Sv_IsQuestComplete("quest_scrap_city") then
+		msg = "Trader_dialogue4"
+	elseif not QuestManager.Sv_IsQuestComplete("quest_warehouse") then
+		msg = "Trader_dialogue5"
+	elseif not QuestManager.Sv_IsQuestComplete("quest_chapter2") then
+		msg = "Trader_dialogue6"
 	end
+
+	QuestManager.Sv_OnEvent(QuestEvent.TraderTalk, {msg = msg})
+	self.network:sendToClients("cl_msg", msg)
 end
 
 function HideoutTrader:cl_msg(msg)

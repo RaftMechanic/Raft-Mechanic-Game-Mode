@@ -828,11 +828,16 @@ function SurvivalGame.sv_onChatCommand( self, params, player )
 		elseif params[2] == "wreck" then
 			pos = sm.vec3.new(-29*64, 2*64, 2)
 		elseif params[2] == "trader" then
-			pos = sm.vec3.new(26*64, 34*64, 20)
+			pos = sm.vec3.new(1536, 2048, 12)
 		elseif params[2] == "veggie" then
 			pos = sm.vec3.new(-768, 1280, 2)
 		elseif params[2] == "temple" then
 			pos = sm.vec3.new(3108.874511718750, 2785.419433593750, 9.309272766113281)
+		elseif params[2] == "fruits" then
+			pos = sm.vec3.new(0, -1344, 2)
+		elseif params[2] == "city" then
+			pos = sm.vec3.new(1600.25, -2064.75, 55)
+			
 
 
 
@@ -987,6 +992,8 @@ function SurvivalGame.sv_e_requestWarehouseRestrictions( self, params )
 	if warehouse then
 		sm.event.sendToWorld( params.world, "server_updateRestrictions", warehouse.restrictions )
 	end
+
+	QuestManager.Sv_OnEvent(QuestEvent.Warehouse)--RAFT
 end
 
 function SurvivalGame.sv_e_setWarehouseRestrictions( self, params )
@@ -1083,7 +1090,7 @@ function SurvivalGame.sv_e_createElevatorDestination( self, params )
 
 
 
-	local world = sm.world.createWorld( "$SURVIVAL_DATA/Scripts/game/worlds/WarehouseWorld.lua", "WarehouseWorld", worldData )
+	local world = sm.world.createWorld( "$CONTENT_DATA/Scripts/game/worlds/WarehouseWorld.lua", "WarehouseWorld", worldData )
 	print( "Created WarehouseWorld "..world.id )
 
 	-- Use the same restrictions for the new floor as the other floors

@@ -1626,6 +1626,53 @@
          "stackSize" : 10,
          "sticky" : "+X-X+Y-Y+Z",
          "uuid" : "f2382297-44b4-4259-99ce-b11da671ac51"
-      }
+      },
+      {
+			"uuid": "e49b210a-0d46-4f06-bcd8-08862379d156",
+			"name": "obj_survivalobject_keycard",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$SURVIVAL_DATA/Objects/Textures/survivalobject/obj_survivalobject_keycard_dif.tga",
+									"$SURVIVAL_DATA/Objects/Textures/survivalobject/obj_survivalobject_keycard_asg.tga",
+									"$SURVIVAL_DATA/Objects/Textures/survivalobject/obj_survivalobject_keycard_nor.tga"
+								],
+								"material": "DifAsgNor"
+							}
+						],
+						"mesh": "$SURVIVAL_DATA/Objects/Mesh/survivalobject/obj_survivalobject_keycard.fbx"
+					}
+				]
+			},
+			"color": "cbcbcb",
+			"box": {
+				"x": 2,
+				"y": 2,
+				"z": 1
+			},
+			"rotationSet": "PropYNegZ",
+			"sticky": "+Z-Y",
+			"physicsMaterial": "Metal",
+         "scripted" : {
+            "classname" : "WarehouseKey",
+            "data" : {},
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/WarehouseKey.lua"
+         },
+			"ratings": {
+				"density": 3,
+				"durability": 10,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 1,
+			"restrictions": {
+				"paintable": false
+			},
+			"autoTool": "59a3469c-d7cd-4784-aa5b-316749abc2b6"
+		}
    ]
 }

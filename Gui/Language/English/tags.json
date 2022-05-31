@@ -105,5 +105,21 @@
     "Quest_WocTemple_Logbook": "Read \"The Mystery of the Wocs\" log",
     "Quest_WocTemple_ReachTemple": "Reach the island with abnormal woc activity",
     "Quest_WocTemple_FindTemple": "Find the source of the abnormal woc activity",
-    "Quest_WocTemple_GetRecipe": "Explore the temple"
+    "Quest_WocTemple_GetRecipe": "Explore the temple",
+
+    "SunshakeRecipe": "Sunshake Recipe",
+
+    "Quest_Fruits_Logbook": "Read \"Fruits for Trader\" log",
+
+    "Quest_ScrapCity_Logbook": "Read \"Scrap City\" log",
+    "Quest_ScrapCity_ReachCity": "Reach the abandoned city",
+    "Quest_ScrapCity_FindRuin": "Find the tallest ruin",
+    "Quest_ScrapCity_GetKey": "Investigate the building for unusual objects",
+
+    "Quest_Warehouse_Logbook": "Read \"Warehouse Raid\" log",
+    "Quest_Warehouse_Enter": "Enter a warehouse",
+    "Quest_Warehouse_FindFarmer": "Find the caged farmer trapped in the top floor",
+    "Quest_Warehouse_SuckFarmer": "Escape the warehouse and let Bertha \"rescue\" the farmer",
+
+    "Quest_Chapter2_Logbook": "Read \"Chapter 2\" log"
 }
