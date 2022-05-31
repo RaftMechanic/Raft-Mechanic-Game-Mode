@@ -841,15 +841,18 @@ function Crafter.client_onFixedUpdate( self )
 			destroy_quest_marker(self)
 		end
 
-	elseif self.shape:getShapeUuid() == obj_craftbot_craftbot1 and sm.localPlayer.getPlayer():getCharacter() then
-		local progressString = get_progress("quest_radio_interactive")
-		if progressString == language_tag("Quest_BuildRadio_Craftbot") then 
+	elseif self.shape:getShapeUuid() == obj_craftbot_craftbot1 then
+		if get_progress("quest_radio_interactive") == language_tag("Quest_BuildRadio_Craftbot") then 
 			self.network:sendToServer("sv_send_event")
-		elseif progressString == language_tag("Quest_BuildRadio_Wood") then
+		elseif get_progress("quest_radio_interactive") == language_tag("Quest_BuildRadio_Wood") then
 			if not self.questMarkerGui then
-				create_quest_marker(self)
+				self.questMarkerGui = sm.gui.createWorldIconGui( 60, 60, "$GAME_DATA/Gui/Layouts/Hud/Hud_WorldIcon.layout", false )
+				self.questMarkerGui:setImage( "Icon", image or "icon_questmarker.png" )
+				self.questMarkerGui:setRequireLineOfSight( false )
+				self.questMarkerGui:setMaxRenderDistance( 10000 )
+				self.questMarkerGui:setHost(self.shape)
+				self.questMarkerGui:open()
 			end
-			create_quest_marker(self)
 		elseif self.questMarkerGui then
 			destroy_quest_marker(self)
 		end
@@ -875,7 +878,7 @@ function create_quest_marker(self, image)
 end
 
 function destroy_quest_marker(self)
-	self.questMarkerGui:close()
+	self.questMarkerGui:destroy()
 	self.questMarkerGui = nil
 end
 
