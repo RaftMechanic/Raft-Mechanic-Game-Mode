@@ -825,17 +825,17 @@ end
 function SurvivalPlayer:cl_updateRenderables( args )
 	if args.changes.fins then
 		if args.changes.fins.add then
-			args.char:addRenderable( CONTENT_DATA .. "/Characters/Char_Player/Fins/obj_fins.rend" )
+			args.char:addRenderable("$CONTENT_DATA/Characters/Char_Player/Fins/obj_fins.rend" )
 		else
-			args.char:removeRenderable( CONTENT_DATA .. "/Characters/Char_Player/Fins/obj_fins.rend" )
+			args.char:removeRenderable( "$CONTENT_DATA/Characters/Char_Player/Fins/obj_fins.rend" )
 		end
 	end
 	
 	if args.changes.tank then
 		if args.changes.tank.add then
-			args.char:addRenderable( CONTENT_DATA .. "/Characters/Char_Player/OxygenTank/OxygenTank.rend" )
+			args.char:addRenderable( "$CONTENT_DATA/Characters/Char_Player/OxygenTank/OxygenTank.rend" )
 		else
-			args.char:removeRenderable( CONTENT_DATA .. "/Characters/Char_Player/OxygenTank/OxygenTank.rend" )
+			args.char:removeRenderable( "$CONTENT_DATA/Characters/Char_Player/OxygenTank/OxygenTank.rend" )
 		end
 	end
 end
