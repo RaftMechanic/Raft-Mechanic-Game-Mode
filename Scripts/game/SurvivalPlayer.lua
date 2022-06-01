@@ -50,9 +50,6 @@ local RespawnEndDelay = 1.0 * 40
 
 local BaguetteSteps = 9
 
---RAFT PLS FIX @AXOLOT
-local CONTENT_DATA = "$CONTENT_667b4c22-cc1a-4a2b-bee8-66a6c748d40e"
-
 function SurvivalPlayer.server_onCreate( self )
 	self.sv = {}
 	self.sv.saved = self.storage:load()
