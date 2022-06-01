@@ -37,7 +37,7 @@ function WoodHarvestable.server_onMelee( self, hitPos, attacker, damage )
 		elseif self.data.type == "large" then
 			if type( attacker ) == "Player" then
 				--Raft
-				self.network:sendToClient( attacker, "cl_n_onMessage", language_tag("WrongTool") )
+				self.network:sendToClient( attacker, "cl_n_onMessage", true )
 				--Raft
 			end
 
@@ -53,7 +53,7 @@ function WoodHarvestable:cl_determineValidHit( pos )
 	if sm.localPlayer.getActiveItem() == tool_axe then
 		self.network:sendToServer("sv_determineValidHit", pos )
 	else
-		self:cl_n_onMessage( language_tag("WrongTool") ) --RAFT
+		self:cl_n_onMessage( language_tag("WrongTool") )
 	end
 end
 
@@ -202,6 +202,12 @@ function WoodHarvestable.sv_triggerCreak( self, treePart )
 end
 
 function WoodHarvestable.cl_n_onMessage( self, msg )
+	--epic fix
+	if type(msg) == "boolean" then
+		sm.gui.displayAlertText( language_tag("WrongTool"), 2 )
+		return
+	end
+
 	sm.gui.displayAlertText( msg, 2 )
 end
 

@@ -249,7 +249,7 @@ function TreeTrunk:cl_determineValidHit( pos )
 			self.network:sendToServer("sv_triggerCreak", pos )
 		end
 	else
-		self:cl_n_onMessage( "#{ALERT_TREE_TOO_BIG}" )
+		self:cl_n_onMessage( language_tag("WrongTool") )
 	end
 end
 

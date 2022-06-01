@@ -168,6 +168,9 @@ function Sledgehammer.client_onUpdate( self, dt )
 	if not self.animationsLoaded then
 		return
 	end
+
+	dt = dt * 5
+
 	
 	--synchronized update
 	self.attackCooldownTimer = math.max( self.attackCooldownTimer - dt, 0.0 )

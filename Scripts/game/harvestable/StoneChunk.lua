@@ -30,6 +30,7 @@ function StoneChunk.server_onMelee( self, position, attacker, damage )
 			if type( attacker ) == "Player" then
 				self.network:sendToClient( attacker, "cl_determineValidHit" )
 			end
+
 			if g_survivalDev then
 				self:sv_onHit( self.DamagerPerHit )
 			end
@@ -52,7 +53,7 @@ function StoneChunk:cl_determineValidHit( pos )
 	if sm.localPlayer.getActiveItem() == tool_pickaxe then
 		self.network:sendToServer("sv_onHit", self.DamagerPerHit)
 	else
-		self:cl_n_onMessage( "#{ALERT_STONE_TOO_BIG}" )
+		self:cl_n_onMessage( language_tag("WrongTool") )
 	end
 end
 --Raft

@@ -25,7 +25,7 @@ sm.tool.preloadRenderables( renderables )
 sm.tool.preloadRenderables( renderablesTp )
 sm.tool.preloadRenderables( renderablesFp )
 
-local Range = 3.0
+local Range = 5
 local SwingStaminaSpend = 0.75
 
 Spear.swingCount = 2

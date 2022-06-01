@@ -36,7 +36,7 @@ function StoneHarvestable:cl_determineValidHit( pos )
 	if sm.localPlayer.getActiveItem() == tool_pickaxe then
 		self.network:sendToServer("sv_determineValidHit", pos )
 	else
-		self:cl_n_onMessage( language_tag("WrongTool") ) --RAFT
+		self:cl_n_onMessage( language_tag("WrongTool") )
 	end
 end
 

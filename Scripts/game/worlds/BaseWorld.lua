@@ -347,6 +347,14 @@ function BaseWorld.server_onProjectile( self, hitPos, hitTime, hitVelocity, _, a
 		sm.physics.explode( hitPos, 7, 2.0, 6.0, 25.0, "RedTapeBot - ExplosivesHit" )
 	end
 
+	if projectileUuid == projectile_harpoon then
+		local normal = -hitVelocity:normalize()
+		local zSignOffset = math.min( sign( normal.z ), 0 ) * 0.5
+		local offset = sm.vec3.new( 0, 0, zSignOffset )
+		local lootHarvestable = sm.harvestable.create( hvs_loot, hitPos + offset, sm.vec3.getRotation( sm.vec3.new( 0, 1, 0 ), sm.vec3.new( 0, 0, 1 ) ) )
+		lootHarvestable:setParams( { uuid = obj_harpoon, quantity = 1, epic = false  } )
+	end
+
 
 
 
