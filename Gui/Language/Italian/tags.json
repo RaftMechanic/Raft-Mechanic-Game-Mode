@@ -57,7 +57,7 @@
     "FishingGetItem": "Pescato: ",
 
     "JunkCollector_Full": "#ff0000Collect#ff0000Raccoglitore pieno",
-    "JunkCollector_SlotsOpen": "Sapzio rimasto:#ffffff %d slot",
+    "JunkCollector_SlotsOpen": "Spazio rimasto:#ffffff %d slot",
     "JunkCollector_Title": "Rete di raccolta",
     "JunkCollector_TakeAll": "Prendi tutti gli oggetti",
     "JunkCollector_TakeAll_Empty": "Nessun'oggetto da raccogliere!", 
@@ -67,17 +67,17 @@
 
     "AntennaInteract": "Manda segnale di soccorso",
 
-    "ClamDivingSucks": "#ff88ffDid I already mention that I hate clam#ff88ffL'ho già detto che odio clam diving?",
+    "ClamDivingSucks": "L'ho già detto che odio fare clam diving?",
 
     "Quest_Tutorial": "Disperso",
     "Quest_Tutorial_Sleep": "Dormi nell'amaca",
     "Quest_Tutorial_Workbench": "Usa il banco da lavoro",
     "Quest_Tutorial_Hammer": "Crea un martello di legno",
 
-    "Quest_RangerStation": "Avanposto del Ranger spaziale",
+    "Quest_RangerStation": "Avamposto del Ranger spaziale",
     "Quest_RangerStation_Logbook": "Leggi il log: \"Avanposto del Ranger spaziale\" ",
-    "Quest_RangerStation_Go_To": "Raggiungi l'avanposto",
-    "Quest_RangerStation_Activate": "Trova un modo per attivare l'avanposto",
+    "Quest_RangerStation_Go_To": "Raggiungi l'avamposto",
+    "Quest_RangerStation_Activate": "Trova un modo per attivare l'avamposto",
 
     "Quest_BuildRadio": "C'è nessuno?",
     "Quest_BuildRadio_Logbook": "Leggi il log \"Stato dell'antenna\" ",
@@ -96,7 +96,7 @@
 
     "QuestItemTooEarly": "Dovrei investigarlo dopo",
 
-    "Quest_FindTrader": "Le traccie del commerciante",
+    "Quest_FindTrader": "Le tracce del commerciante",
     "Quest_FindTrader_Logbook": "Leggi il log: \"Note del commerciante\" ",
     "Quest_FindTrader_ReachTrader": "Raggiungi l'isola menzionata nel log",
     "Quest_FindTrader_TalkTrader": "Parla con il commerciante",
@@ -127,7 +127,7 @@
     "Quest_Warehouse_Logbook": "Leggi il log: \"Incursione del magazzino\" ",
     "Quest_Warehouse_Enter": "Entra in un magazzino",
     "Quest_Warehouse_FindFarmer": "Trova il contadino in gabbia nel piano più alto",
-    "Quest_Warehouse_SuckFarmer": "Scappa r lascia che Bertha \"salvi\" il contadino",
+    "Quest_Warehouse_SuckFarmer": "Scappa e lascia che Bertha \"salvi\" il contadino",
 
     "Quest_Chapter2": "Capitolo 2",
     "Quest_Chapter2_Logbook": "Leggi il log: \"Capitolo 2\" "

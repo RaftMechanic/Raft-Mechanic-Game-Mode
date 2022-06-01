@@ -709,9 +709,7 @@ function Crafter.server_onFixedUpdate( self )
 				if val.time < recipeCraftTime then
 
 					-- Begin crafting new item
-					if val.time == -1 then	
-						
-						
+					if val.time == -1 then
 						--RAFT
 						val.startTick = sm.game.getCurrentTick()
 
