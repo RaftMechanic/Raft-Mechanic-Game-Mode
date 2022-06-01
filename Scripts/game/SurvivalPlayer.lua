@@ -56,20 +56,22 @@ local CONTENT_DATA = "$CONTENT_667b4c22-cc1a-4a2b-bee8-66a6c748d40e"
 function SurvivalPlayer.server_onCreate( self )
 	self.sv = {}
 	self.sv.saved = self.storage:load()
-	self.sv.saved = self.sv.saved or {}
-	self.sv.saved.stats = self.sv.saved.stats or {
-		hp = 100, maxhp = 100,
-		food = 100, maxfood = 100,
-		water = 100, maxwater = 100,
-		breath = 100, maxbreath = 100
-	}
-	self.sv.saved.isConscious = self.sv.saved.isConscious or true
-	self.sv.saved.hasRevivalItem = self.sv.saved.hasRevivalItem or false
-	self.sv.saved.isNewPlayer = self.sv.saved.isNewPlayer or true
-	self.sv.saved.inChemical = self.sv.saved.inChemical or false
-	self.sv.saved.inOil = self.sv.saved.inOil or false
-	self.sv.saved.tutorialsWatched = self.sv.saved.tutorialsWatched or {}
-	self.storage:save( self.sv.saved )
+	if self.sv.saved == nil then
+		self.sv.saved = {}
+		self.sv.saved.stats = self.sv.saved.stats or {
+			hp = 100, maxhp = 100,
+			food = 100, maxfood = 100,
+			water = 100, maxwater = 100,
+			breath = 100, maxbreath = 100
+		}
+		self.sv.saved.isConscious = self.sv.saved.isConscious or true
+		self.sv.saved.hasRevivalItem = self.sv.saved.hasRevivalItem or false
+		self.sv.saved.isNewPlayer = self.sv.saved.isNewPlayer or true
+		self.sv.saved.inChemical = self.sv.saved.inChemical or false
+		self.sv.saved.inOil = self.sv.saved.inOil or false
+		self.sv.saved.tutorialsWatched = self.sv.saved.tutorialsWatched or {}
+		self.storage:save( self.sv.saved )
+	end
 
 	self:sv_init()
 	self.network:setClientData( self.sv.saved )
