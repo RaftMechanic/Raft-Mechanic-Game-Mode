@@ -1,0 +1,158 @@
+{
+    "SaplingGrow": "#00cc00Cultivando...",
+    "SaplingNeedLiquid": "Jogue água",
+    "SaplingNeedGround": "Coloque no #ff0000solo",
+    "SaplingCantErase": "Não dá pra remover a muda enquanto está cultivando!",
+
+    "FarmerBallTalk": "Falar",
+    "FarmerBallHelp": "Eu só estava usando o banheiro porque minha bexiga estava cheia e bem... Eu coloquei alguns explosivos aqui há um tempão. Tentei quebrar a parede lá embaixo para sair, mas talvez você possa terminar o trabalho.",
+    "FarmerBallThanks": "Obrigado, é a primeira vez em muitos anos que eu vejo a luz do dia! Não posso esperar ver o doido do Bob de novo!",
+
+    "HarpoonPickup": "Coletou o Arpão",
+    "LogbookAdd": "Adicionar ao Diário de Bordo",
+
+	"BinocularsZoomFactor": "Zoom: ",
+
+    "CreationRotator_Title": "Rotador de Criação",
+    "CreationRotator_Force": "Multiplicador de Força",
+    "CreationRotator_Ver_Hor": "Vertical + Horizontal",
+    "CreationRotator_Ver": "Vertical",
+    "CreationRotator_Hor": "Horizontal",
+    "CreationRotator_Roll": "Rolar",
+    "CreationRotator_Mult": "Multiplicador:",
+    "CreationRotator_CurrentMode": "Modo: #ffffff",
+    "CreationRotator_CurrentInput": "#4f4f4f Modo de entrada: #ffffff",
+    "CreationRotator_Input_mouse": "Mouse",
+    "CreationRotator_Input_wasd": "WASD",
+    "CreationRotator_SwitchInput": "mudar modo de entrada",
+    "CreationRotator_AdjustForce": "ajustar multiplicador de força",
+
+    "Switch_mode": "mudar modos",
+
+    "WaterSensor_Title": "Sensor de Água",
+    "WaterSensor_Radius_Title": "Raio de Alcance(blocos)",
+    "WaterSensor_Radius": "Raio: %d blocos",
+    "WaterSensor_CurrentRadius": "Raio de Alcance:#ffffff %d bloco(s)",
+    "WaterSensor_Visualization": " #4f4f4fVisualização: ",
+    "WaterSensor_Visualization_on": "#269e44Ligado",
+    "WaterSensor_Visualization_off": "#9e2626Desligado",
+    "WaterSensor_Adjust_Radius": "ajustar raio de alcance",
+    "WaterSensor_Adjust_Vis": "alternar raio de alcance",
+
+    "Sail_Tie": "Erguer Velas",
+    "Sail_Lower": "Baixar velas",
+    "Sail_Controlled": "Controlado por Lógica",
+
+    "Trader": "#00bf00Comerciante#ffffff:",
+    "Trader_dialogue1": "Ummm.. Bertha.. Eu vou... OH! Você está vivo?! Estou feliz por ver outra alma viva! Hm... Oh... Acho que sei de uma maneira de escapar deste planeta. Se você puder trazer para a Berth-err... para mim, algumas caixas de legumes, seria ótimo! Hehe.. Eu marquei uma estação de empacotamento bem próxima para você. Embale 2 caixas de cenouras e 2 de beterrabas. Então você pode trazê-los para a grande e velha Bertha-errr.. a grande bomba de sucção ali... Hehe.",
+    "Trader_dialogue2": "Que grata surpresa vê-lo novamente! Quero dizer, não que eu esperasse que seus membros aparecessem boiando nas margens... Errr... de qualquer forma, infelizmente os vegetais são apenas parte da receit... do plano. Os outros recursos foram mantidos em segredo. No entanto, detectei atividade anormal de Woc.. em uma ilha meio estranha, mas próxima. Você deveria dar uma investigada nisso.",
+    "Trader_dialogue3": "Perfeito! Em breve será meu... Err... seremos capazes de deixar este planeta. *olha para as notas* Ah... SIM.. EU SABIA! Muhahahahaa- Ah, desculpe, não estou acostumado com companhia, pelo menos desde o acident... De qualquer forma, você vai precisar me trazer mais 2 caixas de amoras e 2 de bananas. Marquei uma estação de empacotamento bem próxima para você.",
+    "Trader_dialogue4": "*GLUB* AH, exatamente o que eu precisava! Faz tanto tempo sem você, meu querido Sunshake... Onde estão minhas maneiras? Por que você não bebe um Sunshake também? Eu posso preparar o quanto você precisar, desde que você me traga suprimentos fresquinhos. Eh, claro que isso era necessário.. porque.. o.. err.. Sunshake contém, err... as coordenadas para algumas ruínas! Isso! Já que minha vida foi salva pelo Sunshake, agora você pode tentar libertar o resto da minha tripulação. Ouvi rumores sobre uma chave escondida naquela cidade em ruínas. Se eu conseguir pôr as mãos em tal dispositivo, talvez possamos iniciar uma missão de resgate.",
+    "Trader_dialogue5": "Eu não posso acreditar que você está vivo, tão corajoso! Deixe-me dar uma olhada nesta chave. AH.. SIM.. Um circuito tão simples... Eu acho que sou capaz de recriá-lo facilmente usando as ferramentas certas. Mas com esta chave, você poderá entrar nos armazéns onde o resto da minha tripulação mantida como refém por usar os banheiros em vez de... Bom, só não pergunte por que há tantas garrafas de água no oceano... De qualquer forma, alcance o topo de um armazém e resgate-o! Então venha até mim e a grande Bertha cuidará do resto.",
+    "Trader_dialogue6": "Eu senti falta de companhia por tanto tempo *soluço*. Continue resgatando mais membros da minha tripulação! Enquanto isso, pensarei em um plano para nos tirar deste planeta e voltar para casa...",
+
+    "FishingBait": "Isca: ",
+    "FishingOutOfBait": "Sem Iscas!",
+    "FishingBaitNone": "Nenhuma",
+    "FishingGetItem": "Pescado: ",
+
+    "JunkCollector_Full": "#ff0000Coletor cheio",
+    "JunkCollector_SlotsOpen": "Capacidade restante:#ffffff %d ítens",
+    "JunkCollector_Title": "Rede de Coleta",
+    "JunkCollector_TakeAll": "Pegar tudo",
+    "JunkCollector_TakeAll_Empty": "Nenhum item coletado!",
+
+    "HammockAllPlayers": "Todos os jogadores precisam dormir para pular a noite",
+    "HammockNight": "Você pode dormir apenas à noite",
+
+    "AntennaInteract": "Enviar sinal de alerta",
+
+    "ClamDivingSucks": "#ff88ffEu já comentei que odeio caçar conchas?",
+
+    "WrongTool": "Você precisa de ferramentas melhores para quebrar este recurso",
+
+    "Tutorial_Dismiss": "Pressione %s para dispensar",
+    "Tutorial_Food": "Matando a Fome",
+    "Tutorial_FoodText": "Para sobreviver no oceano, você precisa adaptar sua estratégia de sobrevivência. Felizmente, os peixes são uma fonte de nutrientes excelente. E uma vez que você encontre solo o suficiente, você também poderá tentar cultivar suas próprias plantações.",
+    "Tutorial_Water": "Lidando com a Sede",
+    "Tutorial_WaterText": "Já que o oceano é cheio de água salfada, você precisa encontrar um meio de transformá-la em água potável. Talvez ela possa ser 'purificada'.",
+    "Tutorial_Fish": "Pescando",
+    "Tutorial_FishText": "1. Jogue o anzol ao mar.\n2. Deixe o peixe se aproximar da isca.\n3. Pressione o botão de pescar quando você ver um grande 'SPLASH!' (você também ouvirá um sinal sonoro).",
+    "Tutorial_Workbench": "Receitas",
+    "Tutorial_WorkbenchText": "Ao completar missões, você desbloqueará mais itens para você construir!",
+    "Tutorial_Sail": "Velejando",
+    "Tutorial_SailText": "A biruta mostra para onde o vento sopra. Certifique-se de que suas velas apontem na mesma direção. E aproveite o passeio!",
+    "Tutorial_Sleep": "Soneca",
+    "Tutorial_SleepText": "Depois de um árduo dia de trabalho, relaxe na rede e sonhe. Se todos os jogadores estiverem dormindo em uma rede, você pode pular a noite e acordar com o sol nascente!",
+    "Tutorial_Shark": "TUBARÕES",
+    "Tutorial_SharkText": "Tubarões Robôs perigosos vagam pelo mar. Eles vão atacar você e sua jangada. Melhor conseguir algumas defesas antes que eles causem muito dano.",
+    "Tutorial_Farm": "Cultivando",
+    "Tutorial_FarmText": "Cultivar suas próprias colheitas é uma maneira confiável de se alimentar. Se você ficar sem sementes, você pode convenientemente extraí-las de legumes e frutas usando a Prensa de Sementes.",
+    "Tutorial_OxygenTank": "Tanque de Oxigênio",
+    "Tutorial_OxygenTankText": "O tanque de oxigênio ajuda você a respirar mais tempo debaixo d'água. Você também pode conectá-lo aos assentos para obter o mesmo efeito!",
+
+    "Quest_ItemUnlock": "Nova Receita desbloqueada: #00f000",
+
+    "Quest_Tutorial": "Encalhado",
+    "Quest_Tutorial_Sleep": "Durma na rede",
+    "Quest_Tutorial_Workbench": "Abrir bancada de trabalho",
+    "Quest_Tutorial_Hammer": "Construa o martelo de madeira",
+
+    "Quest_RangerStation": "Posto Avançado do Patrulheiro Espacial",
+    "Quest_RangerStation_Logbook": "Leia o diário de bordo do \"Posto Avançado do Patrulheiro Espacial\"",
+    "Quest_RangerStation_Go_To": "Alcance o posto avançado",
+    "Quest_RangerStation_Activate": "Encontre um modo de ativar o posto avançado",
+
+    "Quest_BuildRadio": "Alguém por aí?",
+    "Quest_BuildRadio_Logbook": "Leia o diário de bordo do \"Status da Antena\"",
+    "Quest_BuildRadio_Craftbot": "Construa um Bot de Construção",
+    "Quest_BuildRadio_Wood": "Crie 20 Bloco de Madeira 1",
+    "Quest_BuildRadio_Craft_Antenna": "Crie uma Antena de Rádio Improvisada",
+    "Quest_BuildRadio_Use_Antenna": "Envie um sinal de alerta",
+
+    "Quest_RadioSignal": "Missão de Resgate",
+    "Quest_RadioSignal_Logbook": "Leia o diárion de bordo da \"Missão de Resgate\"",
+    "Quest_RadioSignal_Cotton": "Encontre algodão",
+    "Quest_RadioSignal_Windsock": "Construa uma biruta",
+    "Quest_RadioSignal_Sail": "Construa uma vela para embarcações",
+    "Quest_RadioSignal_FindWreck": "Alcance a fonte do sinal de alerta",
+    "Quest_RadioSignal_ExploreWreck": "Explore os destroços em busca de pistas",
+
+    "QuestItemTooEarly": "Eu deveria investigar isso mais tarde",
+
+    "Quest_FindTrader": "Os rastros do Comerciante",
+    "Quest_FindTrader_Logbook": "Leia o diário de bordo \"Notas do Comerciante\"",
+    "Quest_FindTrader_ReachTrader": "Alcance a ilha mencionada nas anotações",
+    "Quest_FindTrader_TalkTrader": "Fale com o Comerciante",
+
+    "Quest_Vegetables": "Mecânica de Entregas",
+    "Quest_Vegetables_Logbook": "Leia o diário de bordo \"Legumes para o Comerciante\"",
+    "Quest_Vegetables_ReachStation": "Encontre a estação de empacotamento",
+    "Quest_Vegetables_SuckCrates": "Entregue as caixas para a \"Bertha\"",
+
+    "Quest_WocTemple": "O Mistério das Wocs",
+    "Quest_WocTemple_Logbook": "Leia o diário de bordo \"O Mistério das Wocs\"",
+    "Quest_WocTemple_ReachTemple": "Alcance a ilha com atividade anormal de wocs",
+    "Quest_WocTemple_FindTemple": "Encontre a fonte da atividade anormal de wocs",
+    "Quest_WocTemple_GetRecipe": "Explorar o templo",
+
+    "SunshakeRecipe": "Receita de Sunshake",
+
+    "Quest_Fruits": "Mecânica de Entregas (de novo)",
+    "Quest_Fruits_Logbook": "Leia o diário de bordo \"Frutas para o Comerciante\"",
+
+    "Quest_ScrapCity": "Civilização Perdida",
+    "Quest_ScrapCity_Logbook": "Leia o diário de bordo \"Cidade da Sucata\"",
+    "Quest_ScrapCity_ReachCity": "Alcance a cidade abandonada",
+    "Quest_ScrapCity_FindRuin": "Encontre a ruína mais alta",
+    "Quest_ScrapCity_GetKey": "Investigue a construção em busca de objetos incomuns",
+
+    "Quest_Warehouse": "O (Arma)zém",
+    "Quest_Warehouse_Logbook": "Leia o diário de bordo \"Invasão ao Armazém\"",
+    "Quest_Warehouse_Enter": "Entre em um armazém",
+    "Quest_Warehouse_FindFarmer": "Encontre o fazendeiro enjaulado preso no último andar",
+    "Quest_Warehouse_SuckFarmer": "Fuja do armazém e deixe Bertha \"resgatar\" o fazendeiro",
+
+    "Quest_Chapter2": "Capítulo 2",
+    "Quest_Chapter2_Logbook": "Leia o diário de bordo \"Capítulo 2\""
+}

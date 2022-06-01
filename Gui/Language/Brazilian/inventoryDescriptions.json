@@ -1,0 +1,222 @@
+{
+   "01a4d4c6-469a-4d28-8c69-b74fff83fbdf" : {
+      "title" : "Pinha de Abeto",
+      "description" : "Plante-a em um Vaso de Árvores ou no Campo de Cultivo de Sucata para cultivar outra árvore. Há rumores de que fluidos estranhos fazem crescer árvores estranhas..."
+   },
+   "03075a5a-92f5-49bd-b132-7d8e0cb80156" : {
+      "title" : "Tanque de Ar",
+      "description" : "Use uma entrada lógica para ligar e desligar. É pesado quando desligado, mas muito leve e flutuante quando ativado."
+   },
+   "0db1ecd5-503d-4dd3-807e-869c243a7c08" : {
+      "title" : "Lança",
+      "description" : "Uma vara afiada. Útil para cutucar e ferir coisas."
+   },
+   "1daebe24-4e16-422c-b5e7-c3f45f9296d8" : {
+      "title" : "Machado",
+      "description": "Permite cortar algumas madeiras!"
+   },
+   "2af00456-b22e-4743-b338-a91934aba7c5" : {
+      "title" : "Bot Cozinheiro Leve",
+      "description" : "Cozinha comida deliciosa que vai encher sua barra de saúde ou reviver amigos caídos. Você precisa de um sua jangada."
+   },
+   "4a971f7d-14e6-454d-bce8-0879243c4474" : {
+      "description" : "É disso que sua jangada é feita. Coloque mais para expandir sua jangada (ou consertá-la).",
+      "title" : "Base de Jangada"
+   },
+   "4a971f7d-14e6-454d-bce8-0879243c4575" : {
+      "description" : "Esta base de jangada *parruda* deve ser bem difícil de mastigar para esses tubarões irritantes!",
+      "title" : "Base Reforçada de Jangada"
+   },
+   "4a971f7d-14e6-454d-bce8-0879243c4857" : {
+      "title" : "Arpão",
+      "description" : "Pontiagudo e afiado! Usado como munição para a Arma de Arpão."
+   },
+   "4bd05d7d-898c-4947-8788-e34b84b5d386" : {
+      "title" : "Água limpa",
+      "description" : "Monóxido de di-hidrogênio (também conhecido como agá-dois-ó). Excelente para cultivar árvores, plantações ou matar a sede!"
+   },
+   "4c1aed86-a402-4240-81e7-b67edf433fd5" : {
+      "title" : "Rede de Dormir",
+      "description": "O que é melhor do que relaxar em uma rede e aproveitar a imensidão do oceano..."
+   },
+   "4e69beb8-4519-4fff-a382-fdcfffbad6c2" : {
+      "title" : "Hélice Pequena",
+      "description" : "Mais compacta, mas também menos potente."
+   },
+   "509505f1-b772-4acd-9827-f9a605a979ec" : {
+      "title" : "Conversor WASD",
+      "description" : "Pressione 'E' para alternar entre as teclas. Emite um sinal lógico quando a tecla selecionada é pressionada."
+   },
+   "5cb15c93-4fa9-48da-9974-2e95ca6c9e1c" : {
+      "title" : "Bot de Refinamento Leve",
+      "description" : "Deixe o Bot de Refinamento ajudá-lo e refinar todos as suas toras coletadas. Coloque-as manualmente ou posicionando um Coletor de Recursos, cheio de toras, próximo a ele. Você precisa de um sua jangada."
+   },
+   "67dd0023-023d-46cb-9839-e4ada2609a9b" : {
+      "title" : "Grelha",
+      "description" : "Grelha alimentos, requer madeira como combustível."
+   },
+   "6db7aacf-f2b3-4cbb-a6d2-2a01d5ee5562" : {
+      "title" : "Sensor de Água",
+      "description" : "Emite um sinal lógico quando toca a água."
+   },
+   "71ac7645-57f5-4d49-9574-c8482b431862" : {
+      "title" : "Rotador de Criação",
+      "description" : "Gira sua criação com base na direção da câmera ou na teclas A/D. Pressione 'E' para selecionar um modo. Primeiros 3 modos - controle do mouse, rolar - A/D. Emite um sinal lógico durante o uso."
+   },
+   "767a3121-2c31-473c-a5ab-27e188fdd55a" : {
+      "title" : "Bot Costureiro Leve",
+      "description": "Use o Bot Costureiro para fazer roupas novas para o seu Mecânico. Basta adicionar suas caixas de roupas e a quantidade certa de algodão. Você também pode personalizar sua aparência usando o guarda-roupa azul. Você precisa de um sua jangada."
+   },
+   "7c440c4a-5919-4baa-a946-0bb89b8c4d5d" : {
+      "title" : "Peixe Crú",
+      "description" : "Salgado demais... Não é exatamente comestível..."
+   },
+   "7c440c4a-5919-4baa-a946-0bb89b8c4d85" : {
+      "title" : "Peixe Crú SUS",
+      "description" : "Esse peixe é meio SUS"
+   },
+   "7ceccadf-010f-4a45-907f-18ccc11c509c" : {
+      "title" : "Tanque de Oxigênio",
+      "description": "Seus pulmões são muito pequenos? Isso não resolverá seus problemas de exercício, mas você durará mais tempo debaixo d'água. Conecte-o a um assento para tirar um pouco o peso dos seus ombros."
+   },
+   "7ece8b10-5cc0-4791-b75e-09858ef1b9c4" : {
+      "title" : "Nadadeiras",
+      "description" : "Com um par de nadadeiras, você pode nadar muito mais rápido! Elas também parecem muito legais!"
+   },
+   "80c9edb7-0f86-4899-bf60-c3baca3fa841" : {
+      "title" : "Purificador de água",
+      "description" : "Transforma água engarrafada regular em água limpa que você pode beber, requer madeira como combustível."
+   },
+   "819fb238-a68b-4aab-a6f2-c1037f6bfb5b" : {
+      "description" : "Cultive suas próprias árvores onde quiser! Obtenha mudas de árvores reais! (ok.... não é como se as árvores plantadas por aqui fossem falsas)",
+      "title" : "Vaso de Árvores"
+   },
+   "869d4736-289a-4952-96cd-8a40117a2d28" : {
+      "title" : "Água",
+      "description": "Ainda bastante salgado..."
+   },
+   "885513a7-baa3-44ee-aa6e-7546bf0715a7" : {
+      "title" : "Hélice",
+      "description" : "Gire-o para fazer sua jangada ir brrrr. Sua força depende da direção e velocidade de rotação. (Muito menos poderoso no ar)"
+   },
+   "8e75cddb-040e-4813-8dd6-7e72f3288a91" : {
+      "description" : "Pode ser usado para cultivar colheitas em sua jangada, não aciona ataques.",
+      "title" : "Campo de Cultivo de Sucata"
+   },
+   "8f460344-ef34-42ab-99e3-d3bed9af4b52" : {
+      "title" : "Biruta",
+      "description" : "Mostra a direção do vento."
+   },
+   "9e815dcf-cfb0-4672-b0f4-34f1e9ecc1a1" : {
+      "title" : "Pinha de Pinheiro",
+      "description" : "Plante-a em um Vaso de Árvores ou no Campo de Cultivo de Sucata para cultivar outra árvore. Há rumores de que fluidos estranhos fazem crescer árvores estranhas..."
+   },
+   "a930a42f-63ed-4fb0-933e-56ce8a889cc5" : {
+      "title" : "Coletor de Recursos Leve",
+      "description" : "Perfeito para coletar e empilhar toras. Quando estiver cheio, coloque-o ao lado de um Bot de Refinamento para transformar as toras em blocos. Você precisa de em sua jangada."
+   },
+   "b5ade3b0-be48-4a61-a8c2-13a4cedf1343" : {
+      "title" : "Gancho de Puxar",
+      "description" : "Jogue o gancho para puxar um pouco de lixo do oceano e direto para suas mãozinhas gananciosas! Pressione o botão direito para fazer o gancho voltar mais rápido enquanto vem em sua direção."
+   },
+   "b63c6440-dfc2-4da7-acdb-3c385080b2e4" : {
+      "title" : "Bot de Construção Leve",
+      "description" : "O Bot de Construção ajudará você a criar tudo, desde novos blocos até peças interativas úteis. Você deve ter em sua jangada."
+   },
+   "b84e5fbb-97f2-4de5-bc39-4adb325a56f1" : {
+      "title" : "Semente de Árvore",
+      "description": "Plante-a em um Vaso de Árvores ou no Campo de Cultivo de Sucata para cultivar outra árvore. Há rumores de que fluidos estranhos fazem crescer árvores estranhas..."
+   },
+   "bb641a4f-e391-441c-bc6d-0ae21a069477" : {
+      "title" : "Martelo de Madeira",
+      "description": "Um martelo de madeira. Útil para todos os tipos de coisas, mas não muito bom."
+   },
+   "c2418698-7a91-40fa-95a3-3be5ddb3ec1d" : {
+      "title" : "Abelha Rainha",
+      "description": "A mãe de todas as abelhas. Que captura!"
+   },
+   "c57fe6d6-03b1-46d4-9104-29cf19f176ab" : {
+      "title" : "Peixe Grelhado",
+      "description" : "Parece delicioso, mas cheira mal."
+   },
+   "c80e2932-0d21-48bb-b5a2-dba03d73cfb7" : {
+      "title" : "Campo de Cultivo Dobrado",
+      "description" : "Dobre o solo, dobre a diversão! Cultiva 2 colheitas de uma vez, não aciona ataques."
+   },
+   "c883b283-ea7a-4bba-af0d-5c13fd73051d" : {
+      "title" : "Picareta",
+      "description" : "Pode quebrar as rochas no fundo do oceano"
+   },
+   "ce986935-5b57-4249-acbb-04ef6666bb03" : {
+      "title" : "Tocha",
+      "description" : "Decore sua jangada com ela (e reze para que os desenvolvedores não adicionem mecânica de fogo logo)."
+   },
+   "e34387d3-fa29-4831-89b8-c94417b6fce6" : {
+      "title" : "Arma de Arpão",
+      "description" : "Uma arma poderosa que atira arpões afiados! Você pode coletá-los depois que eles caem no chão. (Pode ser usado debaixo d'água)"
+   },
+   "e3bcf8fa-68d7-49a8-b17b-c1e864d53b69" : {
+      "title" : "Vara de Pescar",
+      "description" : "Jogue o gancho na água. Espere o peixe começar a mordiscar. Puxe quando o peixe morder e o respingo enorme que se segue! Os peixes vão lutar e criar pequenos respingos e sons! Além dos peixes, outros ítens estranhos podem ser pescadas no oceano..."
+   },
+   "f3aeb880-f103-43c8-947b-d0525eaeb505": {
+	  "title" : "Luneta",
+	  "description": "Uma ferramenta para ajudar a ver objetos de longe."
+   },
+   "e9c7d080-ae4b-4fec-b626-34afda6f5114" : {
+      "title" : "Prensa de Sementes",
+      "description": "Plantar. Cultivar. Prensar. Repetir."
+   },
+   "ebabda72-94d8-40c5-ab07-7001d1b67380" : {
+      "title" : "Apiário",
+      "description" : "Oh não, as abelhas! Se você conseguir achar uma abelha rainha, você pode ter sua própria colméia de abelhas! Desfrute de cera de abelha fresquinha (e algumas picadas)."
+   },
+   "eea9794b-bcdf-431e-bdcd-7b2ff6ffa145" : {
+      "title" : "Vela para Embarcações",
+      "description" : "Capture ventos! Certifique-se de que está apontada para a direção certa para maximizar seu impulso. A Biruta mostrará a direção do vento."
+   },
+   "eefb0967-d21c-445e-8120-0a09422e1374" : {
+      "title" : "Pinha de Bétula",
+      "description" : "Plante-a em um Vaso de Árvores ou no Campo de Cultivo de Sucata para cultivar outra árvore. Há rumores de que fluidos estranhos fazem crescer árvores estranhas..."
+   },
+   "f3163e62-e6c3-475c-805e-559f8bb07ad1" : {
+      "title" : "Bancada de Trabalho",
+      "description" : "Usado para criar itens essenciais para você e sua jangada."
+   },
+   "f95beb80-49c8-4d4c-98e9-5b87225c4570" : {
+      "title": "Antena de Rádio Improvisada",
+      "description" : "Ajuda?\n...\n\nAlguém por aí?\n..."
+   },
+   "7c440c4a-5919-4baa-a946-0bb89b8c4d5e" : {
+      "title" : "Le Peixê Au Chocolatê",
+      "description": "Eu sei o que é um 'xeque-mate em um', errou feio, errou rude e tomou um En Passant!"
+   },
+   "74a3f240-65b2-4f52-9555-666217366a0a" : {
+      "title": "Costela de Woc Crua",
+      "description": "Não é o melhor dos alimentos, mas pelo menos é comestível."
+   },
+   "74a3f240-65b2-4f52-9555-666217366a0e" : {
+      "title": "Costela de Woc Grelhada",
+      "description" : "O ponto perfeito!"
+   },
+   "f2382297-44b4-4259-99ce-b11da671ac51" : {
+      "title" : "Rede de Coleta",
+      "description" : "Coleta todo o lixo do oceano para você! Seu viciado em sunshake preguiçoso..."
+   },
+   "56dc8c15-ccc5-46c8-bd56-46bb6bfc85c9" : {
+      "title" : "Rede de Dormir Abandonada",
+      "description" : "Rede falsa para as jangadas abandonadas para que as pessoas não durmam nelas e percam seu ponto de respawn."
+   },
+   "795da2f8-ce95-4b34-9d89-1ef84f74e36a" : {
+      "title" : "Piso da Jangada",
+      "description" : "Parece a Base de Jangada, mas não flutua muito. Pode ser usado como Piso em decks mais altos."
+   },
+   "4d0dce2f-7bee-4c38-be21-c8a5ce083f1a" : {
+      "title" : "Piso da Jangada Reforçado",
+      "description": "Parece uma Base Reforçada de Jangada, mas não flutua. Pode ser usado como Piso em decks mais altos."
+   },
+    "4a1888f7-7376-49aa-97a0-1aaf1ae75e2a" : {
+       "title": "Formiga Congelada",
+      "description" : "Você encontrou!\n\n\n\n#050505A matéria em torno dela parece meio instável..\n\n#212328Referência ao Dart Frog."
+   }
+}
