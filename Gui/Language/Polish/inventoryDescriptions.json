@@ -1,0 +1,222 @@
+{
+   "01a4d4c6-469a-4d28-8c69-b74fff83fbdf" : {
+      "description" : "Posadź w farmie drzew lub na podłodze. Mówią że dziwne płyny rosną dziwne drzewa... ",
+      "title" : "Sadzonka świerku"
+   },
+   "03075a5a-92f5-49bd-b132-7d8e0cb80156" : {
+      "description" : "Użyj logiki żeby włączać i wyłaczać. Jest bardzo ciężkie kiedy wyłączone, ale bardzo lekkie.",
+      "title" : "Zbiornik powietrza"
+   },
+   "0db1ecd5-503d-4dd3-807e-869c243a7c08" : {
+      "description" : "Ostry patyk, użyteczny do dźgania rzeczy.",
+      "title" : "Dzida"
+   },
+   "1daebe24-4e16-422c-b5e7-c3f45f9296d8" : {
+      "description" : "Pozwala zdobyć ci trochę drewna!",
+      "title" : "Siekiera"
+   },
+   "2af00456-b22e-4743-b338-a91934aba7c5" : {
+      "description" : "Gotuje smaczne jedzenie które napełni twoje chęci i ożywi upadłych przyjaciół. Powinieneś mieć na tratwie.",
+      "title" : "Lekki KuchBot"
+   },
+   "4a971f7d-14e6-454d-bce8-0879243c4474" : {
+      "description" : "To jest to z czego twoja tratwa jest zrobiona. Postaw więcej żeby powiększyć tratwe (lub aby naprawić).",
+      "title" : "Baza tratwy"
+   },
+   "4a971f7d-14e6-454d-bce8-0879243c4575" : {
+      "description" : "Ta *G R U B A* baza tratwy powinna być twarda do przeżucia przez te sharkbot'y!",
+      "title" : "Wzmocniona baza tratwy"
+   },
+   "4a971f7d-14e6-454d-bce8-0879243c4857" : {
+      "description" : "Kolczasty i ostry! Użyj jako ammunicja do armatki na harpuny",
+      "title" : "Harpun"
+   },
+   "4bd05d7d-898c-4947-8788-e34b84b5d386" : {
+      "description" : "Dihydrogen monoxide (aka włota). Idealne do rośnięcia drzew, roślin i uspokojenia twojego pragnienia!",
+      "title" : "Czysta woda"
+   },
+   "4c1aed86-a402-4240-81e7-b67edf433fd5" : {
+      "description" : "Co jest lepsze niż odpoczywanie na hamaku i patrzenie na pustke oceanu...",
+      "title" : "Hamak"
+   },
+   "4e69beb8-4519-4fff-a382-fdcfffbad6c2" : {
+      "description" : "Mniejsze i słabsze.",
+      "title" : "Małe śmigło"
+   },
+   "509505f1-b772-4acd-9827-f9a605a979ec" : {
+      "description" : "Kliknij 'E' Żeby zmienić powiędzy przyciskami. Oddaje logiczne wyjście kiedy włączone.",
+      "title" : "Konwerter WASD"
+   },
+   "5cb15c93-4fa9-48da-9974-2e95ca6c9e1c" : {
+      "description" : "Pozwól RefinBot'owi pomóc, daj mu troche drewna. Włóż je ręcznie lub połóż zbieracz zasobów z drewnem obok niego. Powienieneś mieć na tratwie.",
+      "title" : "Lekki RefinBot"
+   },
+   "67dd0023-023d-46cb-9839-e4ada2609a9b" : {
+      "description" : "Grilluje jedzenie, Potrzebuje drewna jako paliwa.",
+      "title" : "Grill"
+   },
+   "6db7aacf-f2b3-4cbb-a6d2-2a01d5ee5562" : {
+      "description" : "Daje sygnał logiczny kiedy dotknie wody.",
+      "title" : "Sensor Wody"
+   },
+   "71ac7645-57f5-4d49-9574-c8482b431862" : {
+      "description" : "Obraca twoją kreacje zależnie od tego gdzie patrzy się twoja kamera lub wejściach A/D. Kliknij 'E' żeby wybrać tryb. Pierwsze 3 tryby- Kontrola myszką, obrót - A/D. Wysyła logiczne wyjście kiedy w użyciu.",
+      "title" : "Rotator kreacji"
+   },
+   "767a3121-2c31-473c-a5ab-27e188fdd55a" : {
+      "description" : "Użyj CiuchBot'a żeby kustomizować swojego mechanika. Poprostu dodaj swojego garment boxa i dobrą ilość bawełny. Możesz zawsze zmienić swój wygląd używająć niebieskiej garderoby. Powinieneś mieć na swojej tratwie.",
+      "title" : "Lekki CiuchBot"
+   },
+   "7c440c4a-5919-4baa-a946-0bb89b8c4d5d" : {
+      "description" : "Dalej słone... Chyba niejadalne..",
+      "title" : "Surowa ryba"
+   },
+   "7c440c4a-5919-4baa-a946-0bb89b8c4d85" : {
+      "description" : "Ta ryba jest troche SUS",
+      "title" : "Surowy rybus"
+   },
+   "7ceccadf-010f-4a45-907f-18ccc11c509c" : {
+      "description" : "Twoje płuca są zamałe? To nie naprawi problemu z twoimi ćwiczeniami, Ale wytrzymasz dłużej podwodą. Podłącz do siedzenia i zdejmij troche wagi z twoich pleców.",
+      "title" : "Butla z tlenem"
+   },
+   "7ece8b10-5cc0-4791-b75e-09858ef1b9c4" : {
+      "description" : "Z parą płetw, możesz pływac owiele szybciej! Także wyglądają bardzo fajnie!",
+      "title" : "Płetwy"
+   },
+   "80c9edb7-0f86-4899-bf60-c3baca3fa841" : {
+      "description" : "Zmienia normalną butelkowaną wode na pitną świerzą wode, wymaga drewna jako paliwa.",
+      "title" : "Oczyszczacz wody"
+   },
+   "819fb238-a68b-4aab-a6f2-c1037f6bfb5b" : {
+      "description" : "Rośnij swoje drzewa gdziekolwiek chcesz! Zdobądź sadzonki z prawdziwych drzew! (Nie tak że wyrośnięte drzewa nie sa przawdziwe)",
+      "title" : "Farma Drzew"
+   },
+   "869d4736-289a-4952-96cd-8a40117a2d28" : {
+      "description" : "Dalej troche słona...",
+      "title" : "Woda"
+   },
+   "885513a7-baa3-44ee-aa6e-7546bf0715a7" : {
+      "description" : "Zakręć je żeby twoja tratwa robiła brrrr. Jego moc zależa od prędkości kręcenia. (Owiele słabsze w powietrzu)",
+      "title" : "Śmigło"
+   },
+   "8e75cddb-040e-4813-8dd6-7e72f3288a91" : {
+      "description" : "Może byc użyte żeby sadzić rośliny na twojej tratwie, nie włącza rajdów.",
+      "title" : "Złomowe pole"
+   },
+   "8f460344-ef34-42ab-99e3-d3bed9af4b52" : {
+      "description" : "Pokazuje skąd leci wiatr",
+      "title" : "Skarpetka wiatrowa"
+   },
+   "9e815dcf-cfb0-4672-b0f4-34f1e9ecc1a1" : {
+      "description" : "Posadź w farmie drzew lub na podłodze. Mówią że dziwne płyny rosną dziwne drzewa... ",
+      "title" : "Sadzonka sosny"
+   },
+   "a930a42f-63ed-4fb0-933e-56ce8a889cc5" : {
+      "description" : "Idealny do zbierania surowcy. Kiedy pełny, postaw obok RefinBota żeby przerobił wszystko na bloki. Powinieneś mieć na swojej tratwie.",
+      "title" : "Lekki zbieracz surowcy"
+   },
+   "b5ade3b0-be48-4a61-a8c2-13a4cedf1343" : {
+      "description" : "Żuć do oceanu i wciągnij przedmioty prosto do swoich rąk! Kliknij prawy przycisk myszy żeby wciągnąć wszystko.",
+      "title" : "Hak wyciągający"
+   },
+   "b63c6440-dfc2-4da7-acdb-3c385080b2e4" : {
+      "description" : "Lekki twórz bot pozwoli ci robić wszystkie interaktywne rzeczy. Powinieneś mieć na swojej tratwie.",
+      "title" : "Lekki TwórzBot"
+   },
+   "b84e5fbb-97f2-4de5-bc39-4adb325a56f1" : {
+      "description" : "Posadź w farmie drzew lub na podłodze. Mówią że dziwne płyny rosną dziwne drzewa... ",
+      "title" : "Żołądź dębu"
+   },
+   "bb641a4f-e391-441c-bc6d-0ae21a069477" : {
+      "description" : "Drewniany młotek. Uzyteczny do wielu rzeczy, ale nie dobry w nich.",
+      "title" : "Drewniany młotek"
+   },
+   "c2418698-7a91-40fa-95a3-3be5ddb3ec1d" : {
+      "description" : "Matka wszystkich pszczół. Co za złapanie!",
+      "title" : "Królowa pszczoła"
+   },
+   "c57fe6d6-03b1-46d4-9104-29cf19f176ab" : {
+      "description" : "Wygląda bardzo smacznie, ale śmierdzi.",
+      "title" : "Ugotowana ryba"
+   },
+   "c80e2932-0d21-48bb-b5a2-dba03d73cfb7" : {
+      "description" : "2 razy więcej ziemi, 2 razy więcej zabawy! Rośnie 2 rośliny na raz, nie włącza rajdów.",
+      "title" : "Duże pole"
+   },
+   "c883b283-ea7a-4bba-af0d-5c13fd73051d" : {
+      "description" : "Może niszczyć skały na dnie oceanu",
+      "title" : "Kilof"
+   },
+   "ce986935-5b57-4249-acbb-04ef6666bb03" : {
+      "description" : "Dekoruj swoją tratwe nimi(I miej nadzieje że twórcy nie dodadzą fizyk ognia niedługo).",
+      "title" : "Pochodnia"
+   },
+   "e34387d3-fa29-4831-89b8-c94417b6fce6" : {
+      "description" : "Mocny pistolet strzelający harpunami! Możesz je zebrać kiedy dotkną podłogi. (Może być użyty pod wodą)",
+      "title" : "Harpunowa armatka"
+   },
+   "e3bcf8fa-68d7-49a8-b17b-c1e864d53b69" : {
+      "description" : "Rzuć haczyk do wody. Czekaj jak ryba zacznie jeść. Pociągnij kiedy będzie wielkie plusknięcie! Ryba będzie walczyła i robiła małe plusknięcia, i dźwięki! Dziwne rzeczy mogą być wyłowione z oceanu...",
+      "title" : "Wędka"
+   },
+   "f3aeb880-f103-43c8-947b-d0525eaeb505": {
+	  "title": "Luneta",
+	  "description": "Narzędzie które pomorze ci oglądać rzeczy z daleka."
+   },
+   "e9c7d080-ae4b-4fec-b626-34afda6f5114" : {
+      "description" : "Zasadź. Rośnij. Miażdż. Powtórz.",
+      "title" : "Wyciskarka nasion"
+   },
+   "ebabda72-94d8-40c5-ab07-7001d1b67380" : {
+      "description" : "O nie, pszczoły! Jeżeli możesz złapać królową, możesz mieć swój własny ul! Nie trzeba dziękować za darmowy miód (i ugryzienia)",
+      "title" : "Pasieka"
+   },
+   "eea9794b-bcdf-431e-bdcd-7b2ff6ffa145" : {
+      "description" : "Złap moc wiatru! Bądź pewny że jest obrócony w dobrą strone żeby użyć maksimum mocy. Skarpetka wiatrowa pokarze ci strone wiatru.",
+      "title" : "Żagle"
+   },
+   "eefb0967-d21c-445e-8120-0a09422e1374" : {
+      "description" : "Posadź w farmie drzew lub na podłodze. Mówią że dziwne płyny rosną dziwne drzewa... ",
+      "title" : "Sadzonka Brzozy"
+   },
+   "f3163e62-e6c3-475c-805e-559f8bb07ad1" : {
+      "description" : "Użyty żeby zrobić użyteczne przedmioty",
+      "title" : "Stół rzemieślniczy"
+   },
+   "f95beb80-49c8-4d4c-98e9-5b87225c4570" : {
+      "description" : "Pomocy?\n...\n\nKtokolwiek jest tam?\n...",
+      "title" : "Słaba antenna radiowa"
+   },
+   "7c440c4a-5919-4baa-a946-0bb89b8c4d5e" : {
+      "description" : "Znam pare osób które to lubi.",
+      "title" : "Le Fishe Au Chocolat"
+   },
+   "74a3f240-65b2-4f52-9555-666217366a0a" : {
+      "description" : "Nie najlepsze z dań, ale jadalne.",
+      "title" : "Surowy aworkowy schab"
+   },
+   "74a3f240-65b2-4f52-9555-666217366a0e" : {
+      "description" : "Perfekcyjny schab!",
+      "title" : "Grillowany aworkowy schab"
+   },
+   "f2382297-44b4-4259-99ce-b11da671ac51" : {
+      "description" : "Zbiera śmieci z oceanu! Ty leniwy nałogowcu sunshake'a...",
+      "title": "Siatka zbierająca"
+   },
+   "56dc8c15-ccc5-46c8-bd56-46bb6bfc85c9" : {
+      "description" : "Nie prawdziwy hamak w którym nie powinieneś spać on tylko usunie twój spawn point.",
+      "title": "Opuszczony hamak"
+   },
+   "795da2f8-ce95-4b34-9d89-1ef84f74e36a" : {
+      "description" : "Wygląda jak baza tratwy, Ale nie pływa tak mocno. Może być użyta jako podłoga na wyższych piętrach.",
+      "title" : "Podłoga tratwy"
+   },
+   "4d0dce2f-7bee-4c38-be21-c8a5ce083f1a" : {
+      "description" : "Wygląda jak wzmocniona baza tratwy, Ale nie pływa tak mocno. Może być użyta jako podłoga na wyższych piętrach.",
+      "title" : "Wzmocniona podłoga tratwy"
+   },
+    "4a1888f7-7376-49aa-97a0-1aaf1ae75e2a" : {
+      "description" : "Znalazłeś to!\n\n\n\n#050505Atomy na około tego nie wyglądaja stabilnie..",
+      "title" : "Zamrożona mrówka"
+   }
+}

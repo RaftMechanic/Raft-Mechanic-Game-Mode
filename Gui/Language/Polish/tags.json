@@ -1,0 +1,134 @@
+{
+    "SaplingGrow": "#00cc00Rośnie...",
+    "SaplingNeedLiquid": "Polej płynem",
+    "SaplingNeedGround": "Postaw na #ff0000ziemi",
+    "SaplingCantErase": "Nie można usunąć sadzonki kiedy rośnie!",
+
+    "FarmerBallTalk": "Mów",
+    "FarmerBallHelp": "Tylko używałem łazienki bo moja butelka była pełna... Wniosłem ładunki wybuchowe do środka. Próbowałem niszczyć ściany żeby się wydostać na zewnątrz, ale możesz teraz dokończyć robotę.",
+    "FarmerBallThanks": "Dzięki, to jest pierwszy raz kiedy zobaczyłem światło od lat! Nie moge się doczekać zobaczyć szalonego Bob'a znowu!",
+
+    "HarpoonPickup": "Podniesiono harpun",
+    "LogbookAdd": "Dodaj do logbooka",
+
+	"BinocularsZoomFactor": "Przybliżenie: ",
+
+    "CreationRotator_Title": "Rotacja kreacji",
+    "CreationRotator_Force": "Mnożnik mocy",
+    "CreationRotator_Ver_Hor": "Pionowo + poziomo",
+    "CreationRotator_Ver": "Pionowo",
+    "CreationRotator_Hor": "Poziomo",
+    "CreationRotator_Roll": "Obrót",
+    "CreationRotator_Mult": "Mnożnik:",
+    "CreationRotator_CurrentMode": "Tryb: #ffffff",
+    "CreationRotator_CurrentInput": "#4f4f4f Metoda wejścia: #ffffff",
+    "CreationRotator_Input_mouse": "Mysz",
+    "CreationRotator_Input_wasd": "WASD",
+    "CreationRotator_SwitchInput": "Zmień metode wejścia", 
+    "CreationRotator_AdjustForce": "zmień mnożnik mocy",
+
+    "Switch_mode": "zmień tryby",
+
+    "WaterSensor_Title": "Sensor wody",
+    "WaterSensor_Radius_Title": "Zasięg sensora(bloki)",
+    "WaterSensor_Radius": "Zasięg: %d bloki", 
+    "WaterSensor_CurrentRadius": "Zasięg sensora:#ffffff %d blok(i)",
+    "WaterSensor_Visualization": " #4f4f4fWizualizacja: ",
+    "WaterSensor_Visualization_on": "#269e44Włączona",
+    "WaterSensor_Visualization_off": "#9e2626Wyłączona",
+    "WaterSensor_Adjust_Radius": "zmień zasięg sensora",
+    "WaterSensor_Adjust_Vis": "włącz/wyłącz wizualizacje zasięgu",
+
+    "Sail_Tie": "Zwiń żagiel",
+    "Sail_Lower": "Obniż żagiel",
+    "Sail_Controlled": "Kontrolowany logiką",
+
+    "Trader": "#00bf00Handlarz#ffffff:",
+    "Trader_dialogue1": " Hmm.. Bertha.. Ja… O! Ty.. żyjesz?! Jestem szczęśliwy żeby zobaczyć inną dusze! Hm… O.. Zdaje mi się że wiem jak możemy eh-ucieknąć z tej planety. Jeżeli możesz przynieść eh, troche zapakowanych ważyw, to byłoby świetne! Hehe.. Zaznaczyłem bliska stacje pakującą dla ciebie. Zapakuj 2 skrzyni marchewek i buraków. Potem możesz przynieść starą dużą Berth`e- he, duża pompa jest tam.. Hehe.",
+    "Trader_dialogue2": "Co za miła niespodzianka znowu cię widzieć! Nie to że spodziewałem się zobaczyć twoje kończyny na plaży .. . Nieważne, niestety ważywa są tylko częścią przepi-planu! Reszta materiałów była trzymana sekretem. Ale zobaczyłem dziwne zachowania aworków.. zachowania na wyspie niedaleko. Powinieneś to zinwestygować.",
+    "Trader_dialogue3": "Perfekcyjnie! Za niedługo wszystko będzie moj-eh, będziemy mogli uciec z tej planety. *patrzy na notatki* Aa... tak.. WIEDZIAŁEM! Muhahahahaa- O, pszepraszam nie jestem przyzwyczajony do towarzystwa, przynajmniej od tego wypadk-.Bedziesz mi musiał przynieść jeszcze po dwie skrzynie jagód i bananów. Zaznaczyłem niedaleką stacje pakująca dla ciebie.",
+    "Trader_dialogue4": "*siorbie*Ah.. to było to czego potrzebowałem! To było tak długo bez ciebie sunshake... Gdzie są moje maniery? Dlaczego też nie zabierzesz sobie sunshake'a ? Moge zrobić tak dużo jak potrzebujesz, tak długo jak mi przyniesiesz świeże owoce. Eh, oczywiście to było wymagane.. ponieważ.. ah.. sunshake zawiera, ah, koordynaty do paru ruin. Od kiedy moje życie było uratowane przez sunshake'a, może odrazu uratujesz reszte mojej drużyny. Słyszałem o historiach o kluczu w zruinowany mieście. Jeżeli mógłbym zdobyć swoje ręce na takim urządzeniu, może byśmy mogli zacząć misje ratunkową.",
+    "Trader_dialogue5": "Nie moge uwiezyć że żyje- ah, tak przygodowo! Daj mi zobaczyć na ten klucz. AH.. TAK.. Tak prosty obwód… Powinienem móć skopiować ten klucz z dobrymi narzędziami. Ale z tym kluczem, powinieneś móc wejść do magazynu gdzie reszta mojej drużyny jest trzymana jako zakładnicy za używanie toalety zamiast.. Poprostu nie pytaj czemu jest tak dużo plastikowych butelek w oceanie.. Nieważne, Dojdź do samej góry magazynu i uratuj jednego z nich! Potem przyjdź do mnie i starej dużej Berth'y i ona się nimi zajmie.",
+    "Trader_dialogue6": "Brakowało mi towarzystwa tak długo *płacze*. Ratuj więcej mojej drużyny! W tym czasie pomyśle o planie jak wrócic do domu…",
+    
+    "FishingBait": "Przynęta: ",
+    "FishingOutOfBait": "Brak przynęt!",
+    "FishingBaitNone": "Brak",
+    "FishingGetItem": "Wyłowiono: ",
+
+    "JunkCollector_Full": "#ff0000Zbieracz pełny",
+    "JunkCollector_SlotsOpen": "Wolne miejsce:#ffffff %d miejsce",
+    "JunkCollector_Title": "Siatka zbierająca",
+    "JunkCollector_TakeAll": "Zbierz wszystkie przedmioty",
+    "JunkCollector_TakeAll_Empty": "Brak przedmiotów do zebrania!", 
+
+    "HammockAllPlayers": "Wszyscy gracze muszą iść spać żeby pominąć noc",
+    "HammockNight": "Możesz spać tylko w nocy",
+
+    "AntennaInteract": "Wyślij sygnał pomocniczy",
+
+    "ClamDivingSucks": "#ff88ffCzy już mówiłem że nie nawidze zbierania muszel?",
+
+    "Quest_Tutorial": "Zagubiony",
+    "Quest_Tutorial_Sleep": "Śpij w hamaku",
+    "Quest_Tutorial_Workbench": "Otwórz stół rzemieślniczy",
+    "Quest_Tutorial_Hammer": "Stwórz drewniany młot",
+
+    "Quest_RangerStation": "Posterunek kosmicznego strażnika",
+    "Quest_RangerStation_Logbook": "Przeczytaj\"Posterunek kosmicznego strażnika\" log",
+    "Quest_RangerStation_Go_To": "Dostań się do posterunku",
+    "Quest_RangerStation_Activate": "Znajdź sposób żeby włączyć posterunek",
+
+    "Quest_BuildRadio": "Jest tam ktokolwiek?",
+    "Quest_BuildRadio_Logbook": "Przeczytaj \"Status anteny\" log",
+    "Quest_BuildRadio_Craftbot": "Zbuduj TwórzBota",
+    "Quest_BuildRadio_Wood": "Stwórz 20 bloków drewna 1",
+    "Quest_BuildRadio_Craft_Antenna": "Stwórz słabą antene",
+    "Quest_BuildRadio_Use_Antenna": "Wyślij sygnał pomocniczy",
+
+    "Quest_RadioSignal": "Misja pomocnicza",
+    "Quest_RadioSignal_Logbook": "Przeczytaj \"Misja pomocnicza\" log",
+    "Quest_RadioSignal_Cotton": "Znajdź bawełne",
+    "Quest_RadioSignal_Windsock": "Stwórz skarpetke wiatrową",
+    "Quest_RadioSignal_Sail": "Stwórz żagiel",
+    "Quest_RadioSignal_FindWreck": "Dostań się do sygnału pomocniczego",
+    "Quest_RadioSignal_ExploreWreck": "Przeszukaj złom po wskazówki",
+
+    "QuestItemTooEarly": "Powinienem zinwestygować to później",
+
+    "Quest_FindTrader": "Ślady Handlarza",
+    "Quest_FindTrader_Logbook": "Przeczytaj \"Notatki Handlarza\" log",
+    "Quest_FindTrader_ReachTrader": "Dostań się do wyspy napisanej w notatkach",
+    "Quest_FindTrader_TalkTrader": "Rozmawiaj z Handlarzem",
+
+    "Quest_Vegetables": "Dostawca mechanik",
+    "Quest_Vegetables_Logbook": "Przeczytaj \"Ważywa dla Handlarza\" log",
+    "Quest_Vegetables_ReachStation": "Znajdź stacje pakującą",
+    "Quest_Vegetables_SuckCrates": "Dostarcz skrzynki do \"Berthy\"",
+
+    "Quest_WocTemple": "Zagadka aworków",
+    "Quest_WocTemple_Logbook": "Przeczytaj \"Zagadka aworków\" log",
+    "Quest_WocTemple_ReachTemple": "Dostań się do wyspy z dziwnymi zachowaniami aworków",
+    "Quest_WocTemple_FindTemple": "Znajdź powód dziwnych zachowań aworków",
+    "Quest_WocTemple_GetRecipe": "Zeksploruj świątynie",
+
+    "SunshakeRecipe": "Przepis na Sunshake",
+
+    "Quest_Fruits": "Dostawca mechanik (znowu)",
+    "Quest_Fruits_Logbook": "Przeczytaj \"Owoce dla Handlarza\" log",
+
+    "Quest_ScrapCity": "Zagubiona cywilizacja",
+    "Quest_ScrapCity_Logbook": "Przeczytaj \"Wielkie 'Scrap City'\" log",
+    "Quest_ScrapCity_ReachCity": "Dostań się do zagubionego miasta",
+    "Quest_ScrapCity_FindRuin": "Znajdź największą ruine",
+    "Quest_ScrapCity_GetKey": "Zinwestuj budynek po dziwne objekty",
+
+    "Quest_Warehouse": "Wojngazyn",
+    "Quest_Warehouse_Logbook": "Przeczytaj \"Najazd na magazyn\" log",
+    "Quest_Warehouse_Enter": "Wejdź do magazynu",
+    "Quest_Warehouse_FindFarmer": "Znajdź uwięzionego farmera na górnym piętrze",
+    "Quest_Warehouse_SuckFarmer": "Ucieknij z magazynu i pozwól Berth'cie\"uratować\" farmera",
+
+    "Quest_Chapter2": "Rozdział 2",
+    "Quest_Chapter2_Logbook": "Przeczytaj \"Rozdział 2\" log"
+}
