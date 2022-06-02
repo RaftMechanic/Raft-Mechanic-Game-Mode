@@ -4,8 +4,9 @@
         <Property key="ImageTexture" value="$CONTENT_667b4c22-cc1a-4a2b-bee8-66a6c748d40e/Gui/Overlays/BinocularsVignette.png"/>
         <Widget type="TextBox" skin="TextBox" position_real="0.4296875 0.83333333333333337 0.13020833333333334 0.046296296296296294" name="ZoomFactorDisplay">
             <Property key="TextAlign" value="Center"/>
-            <Property key="FontName" value="SM_HeaderXLarge_Wide"/>
+            <Property key="FontName" value="SM_ItemTitle"/>
             <Property key="Caption" value="Placeholder Text: 2x"/>
+            <Property key="FontHeight" value="15"/>
         </Widget>
     </Widget>
     <CodeGeneratorSettings/>
