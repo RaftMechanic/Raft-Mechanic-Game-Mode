@@ -63,7 +63,7 @@
     "JunkCollector_TakeAll_Empty": "Нет предметов!", 
 
     "HammockAllPlayers": "Все игроки должны спать, чтобы пропустить ночь",
-    "HammockNight": "Вы можете спать только ночью",
+    "HammockNight": "Спать можно только ночью",
 
     "AntennaInteract": "Отправить сигнал бедствия",
 
@@ -94,44 +94,44 @@
     "Quest_ItemUnlock": "Открыт новый рецепт: #00f000",
 
     "Quest_Tutorial": "Застрявший",
-    "Quest_Tutorial_Sleep": "Поспите в гамаке",
-    "Quest_Tutorial_Workbench": "Откройте верстак",
-    "Quest_Tutorial_Hammer": "Смастерите деревянный молот",
+    "Quest_Tutorial_Sleep": "Поспать в гамаке",
+    "Quest_Tutorial_Workbench": "Открыть верстак",
+    "Quest_Tutorial_Hammer": "Сделать деревянный молот",
 
     "Quest_RangerStation": "Аванпост космического рейнджера",
-    "Quest_RangerStation_Logbook": "Прочитайте \"Аванпост космического рейнджера\"",
-    "Quest_RangerStation_Go_To": "Доберитесь до аванпоста",
-    "Quest_RangerStation_Activate": "Найдите способ активировать аванпост",
+    "Quest_RangerStation_Logbook": "Прочитать \"Аванпост космического рейнджера\"",
+    "Quest_RangerStation_Go_To": "Добраться до аванпоста",
+    "Quest_RangerStation_Activate": "Найти способ активировать аванпост",
 
     "Quest_BuildRadio": "Есть тут кто?",
-    "Quest_BuildRadio_Logbook": "Прочитайте \"Статус антенны\"",
-    "Quest_BuildRadio_Craftbot": "Создайте бота-мастера",
-    "Quest_BuildRadio_Wood": "Создайте 20 деревянных блоков 1",
-    "Quest_BuildRadio_Craft_Antenna": "Смастерите примитивную радиоантенну",
-    "Quest_BuildRadio_Use_Antenna": "Отправьте сигнал бедствия",
+    "Quest_BuildRadio_Logbook": "Прочитать \"Статус антенны\"",
+    "Quest_BuildRadio_Craftbot": "Создать бота-мастера",
+    "Quest_BuildRadio_Wood": "Создать 20 деревянных блоков 1",
+    "Quest_BuildRadio_Craft_Antenna": "Сделать примитивную радиоантенну",
+    "Quest_BuildRadio_Use_Antenna": "Отправить сигнал бедствия",
 
     "Quest_RadioSignal": "Миссия спасения",
-    "Quest_RadioSignal_Logbook": "Читать \"Спасательная миссия\"",
+    "Quest_RadioSignal_Logbook": "Прочитать \"Спасательная миссия\"",
     "Quest_RadioSignal_Cotton": "Найти хлопок",
-    "Quest_RadioSignal_Windsock": "Смастерить флюгер",
-    "Quest_RadioSignal_Sail": "Смастерить парус",
+    "Quest_RadioSignal_Windsock": "Сделать флюгер",
+    "Quest_RadioSignal_Sail": "Сделать парус",
     "Quest_RadioSignal_FindWreck": "Добраться к источнику сигнала бедствия",
     "Quest_RadioSignal_ExploreWreck": "Исследовать обломки на улики",
 
     "QuestItemTooEarly": "Мне стоит исследовать это позже.",
 
     "Quest_FindTrader": "Следы торговца",
-    "Quest_FindTrader_Logbook": "Читать \"Записки торговца\"",
+    "Quest_FindTrader_Logbook": "Прочитать \"Записки торговца\"",
     "Quest_FindTrader_ReachTrader": "Добраться до острова, упомянутого в записках",
     "Quest_FindTrader_TalkTrader": "Поговорить с торговцем",
 
     "Quest_Vegetables": "Механик-доставщик",
-    "Quest_Vegetables_Logbook": "Читать \"Овощи для торговца\"",
+    "Quest_Vegetables_Logbook": "Прочитать \"Овощи для торговца\"",
     "Quest_Vegetables_ReachStation": "Найти упаковочную станцию",
     "Quest_Vegetables_SuckCrates": "Доставить ящики \"Берте\"",
 
     "Quest_WocTemple": "Загадка воков",
-    "Quest_WocTemple_Logbook": "Читать \"Загадка воков\"",
+    "Quest_WocTemple_Logbook": "Прочитать \"Загадка воков\"",
     "Quest_WocTemple_ReachTemple": "Добраться до острова с аномальной активностью воков",
     "Quest_WocTemple_FindTemple": "Найти источник аномальной активности воков",
     "Quest_WocTemple_GetRecipe": "Изучить храм",
@@ -139,20 +139,20 @@
     "SunshakeRecipe": "Рецепт саншейка",
 
     "Quest_Fruits": "Механик-доставщик (снова)",
-    "Quest_Fruits_Logbook": "Читать \"Фрукты для торговца\"",
+    "Quest_Fruits_Logbook": "Прочитать \"Фрукты для торговца\"",
 
     "Quest_ScrapCity": "Потерянная цивилизация",
-    "Quest_ScrapCity_Logbook": "Читать \"Заброшенный город\"",
+    "Quest_ScrapCity_Logbook": "Прочитать \"Заброшенный город\"",
     "Quest_ScrapCity_ReachCity": "Добраться до заброшенного города",
     "Quest_ScrapCity_FindRuin": "Найти самую высокую руину",
     "Quest_ScrapCity_GetKey": "Исследовать здание на необычные предметы",
 
     "Quest_Warehouse": "Склад",
-    "Quest_Warehouse_Logbook": "Читать \"Рейд склада\"",
+    "Quest_Warehouse_Logbook": "Прочитать \"Рейд склада\"",
     "Quest_Warehouse_Enter": "Войти в склад",
     "Quest_Warehouse_FindFarmer": "Найти фермера в клетке на верхнем этаже",
     "Quest_Warehouse_SuckFarmer": "Сбежать со склада и позволить Берте \"спасти\" фермера",
 
     "Quest_Chapter2": "Глава 2",
-    "Quest_Chapter2_Logbook": "Читать \"Глава 2\""
+    "Quest_Chapter2_Logbook": "Прочитать \"Глава 2\""
 }
