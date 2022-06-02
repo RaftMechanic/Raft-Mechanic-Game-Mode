@@ -214,7 +214,7 @@
          "physicsMaterial" : "Metal",
          "ratings" : {
             "buoyancy" : 1,
-            "density" : 10,
+            "density" : 5,
             "durability" : 4,
             "friction" : 4
          },
@@ -280,7 +280,7 @@
          "physicsMaterial" : "Metal",
          "ratings" : {
             "buoyancy" : 10,
-            "density" : 1,
+            "density" : 5,
             "durability" : 4,
             "friction" : 4
          },
