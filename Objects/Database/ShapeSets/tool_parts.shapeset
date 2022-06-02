@@ -1,0 +1,109 @@
+{
+	"partList": [
+		{
+			"uuid": "108fb249-868e-427d-acba-bd8e80d8ef30",
+			"name": "obj_tool_fishing_rod",
+			"renderable": "$CONTENT_DATA/Characters/Char_Tools/Char_fishingrod/char_char_fishingrod_preview.rend",
+			"color": "ffffff",
+			"box": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"physicsMaterial": "Plastic",
+			"ratings": {},
+			"stackSize": 1,
+			"showInInventory": true
+		},
+        {
+			"uuid": "d0840a29-80d9-4081-be36-aa04518fc674",
+			"name": "obj_tool_hook",
+			"renderable": "$CONTENT_DATA/Characters/Char_Tools/Char_pullinghook/char_pullinghook_preview.rend",
+			"color": "ffffff",
+			"box": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"physicsMaterial": "Plastic",
+			"ratings": {},
+			"stackSize": 1,
+			"showInInventory": true
+		},
+        {
+			"uuid": "c190da26-1f1b-4590-935c-d8cc17a24bbd",
+			"name": "obj_tool_axe",
+			"renderable": "$CONTENT_DATA/Characters/Char_Tools/Char_axe/char_axe_preview.rend",
+			"color": "ffffff",
+			"box": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"physicsMaterial": "Plastic",
+			"ratings": {},
+			"stackSize": 1,
+			"showInInventory": true
+		},
+        {
+			"uuid": "2e5e8950-3a82-42b5-8f4e-36a446bf5f06",
+			"name": "obj_tool_pickaxe",
+			"renderable": "$CONTENT_DATA/Characters/Char_Tools/Char_pickaxe/char_pickaxe_preview.rend",
+			"color": "ffffff",
+			"box": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"physicsMaterial": "Plastic",
+			"ratings": {},
+			"stackSize": 1,
+			"showInInventory": true
+		},
+        {
+			"uuid": "4967b981-d88f-4b9f-9a6a-d0c052b54e45",
+			"name": "obj_tool_spear",
+			"renderable": "$CONTENT_DATA/Characters/Char_Tools/Char_spear/char_spear.rend",
+			"color": "ffffff",
+			"box": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"physicsMaterial": "Plastic",
+			"ratings": {},
+			"stackSize": 1,
+			"showInInventory": true
+		},
+        {
+			"uuid": "64e437f7-73fd-44e3-90db-650ef61adacc",
+			"name": "obj_tool_harpoon",
+			"renderable": "$CONTENT_DATA/Characters/Char_Tools/Char_harpoon/char_harpoon_preview.rend",
+			"color": "ffffff",
+			"box": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"physicsMaterial": "Plastic",
+			"ratings": {},
+			"stackSize": 1,
+			"showInInventory": true
+		},
+        {
+			"uuid": "e1227b41-f78a-4e33-a498-47d2a21b1066",
+			"name": "obj_tool_wood_hammer",
+			"renderable": "$CONTENT_DATA/Characters/Char_Tools/Char_woodsledgehammer/char_woodsledgehammer.rend",
+			"color": "ffffff",
+			"box": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"physicsMaterial": "Plastic",
+			"ratings": {},
+			"stackSize": 1,
+			"showInInventory": true
+		}
+    ]
+}

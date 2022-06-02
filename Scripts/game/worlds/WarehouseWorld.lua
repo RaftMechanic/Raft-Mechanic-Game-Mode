@@ -1,5 +1,5 @@
-dofile( "$SURVIVAL_DATA/Scripts/game/SurvivalGame.lua")
-dofile( "$SURVIVAL_DATA/Scripts/game/worlds/BaseWorld.lua")
+dofile( "$CONTENT_DATA/Scripts/game/SurvivalGame.lua")
+dofile( "$CONTENT_DATA/Scripts/game/worlds/BaseWorld.lua")
 dofile( "$SURVIVAL_DATA/Scripts/game/survival_units.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/survival_shapes.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/util.lua" )
@@ -395,6 +395,7 @@ function WarehouseWorld.server_onCellLoaded( self, x, y )
 end
 
 function WarehouseWorld.server_onProjectile( self, hitPos, hitTime, hitVelocity, _, attacker, damage, userData, hitNormal, target, projectileUuid )
+	print( hitPos, hitTime, hitVelocity, _, attacker, damage, userData, hitNormal, target, projectileUuid )
 	BaseWorld.server_onProjectile( self, hitPos, hitTime, hitVelocity, _, attacker, damage, userData, hitNormal, target, projectileUuid )
 
 

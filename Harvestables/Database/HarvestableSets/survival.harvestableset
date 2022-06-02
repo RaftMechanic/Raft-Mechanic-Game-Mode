@@ -99,6 +99,26 @@
                 "class": "CottonPlant", 
                 "data": {} 
             }
-        }
+        },
+        {
+			"name": "hvs_loot",
+			"showInEditor": false,
+			"type": "filler",
+			"uuid": "97fe0cf2-0591-4e98-9beb-9186f4fd83c8",
+			"col": "$SURVIVAL_DATA/Harvestables/Collision/Loot/hvs_loot_col.obj",
+			"color":"ffffffff",
+			"collides": {
+				"character": false,
+				"body": false,
+				"projectile": false,
+				"melee": false
+			},
+			"removable": true,  
+			"script": { 
+				"file": "$CONTENT_DATA/Scripts/game/harvestable/LootHarvestable.lua", 
+				"class": "LootHarvestable", 
+				"data": {} 
+			}
+		}
 	]
 }

@@ -308,7 +308,7 @@ function BaseWorld.server_onInteractableDestroyed( self, interactable )
 end
 
 function BaseWorld.server_onProjectile( self, hitPos, hitTime, hitVelocity, _, attacker, damage, userData, hitNormal, target, projectileUuid )
-
+	print( hitPos, hitTime, hitVelocity, _, attacker, damage, userData, hitNormal, target, projectileUuid )
 	-- Spawn loot from projectiles with loot user data
 	if userData and userData.lootUid then
 		local normal = -hitVelocity:normalize()
@@ -347,6 +347,7 @@ function BaseWorld.server_onProjectile( self, hitPos, hitTime, hitVelocity, _, a
 		sm.physics.explode( hitPos, 7, 2.0, 6.0, 25.0, "RedTapeBot - ExplosivesHit" )
 	end
 
+	--raft
 	if projectileUuid == projectile_harpoon then
 		local normal = -hitVelocity:normalize()
 		local zSignOffset = math.min( sign( normal.z ), 0 ) * 0.5

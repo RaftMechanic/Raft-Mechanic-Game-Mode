@@ -11,6 +11,7 @@
       "$CONTENT_DATA/Objects/Database/ShapeSets/survival_interactive.shapeset",
       "$CONTENT_DATA/Objects/Database/ShapeSets/survival_harvests.shapeset",
       "$CONTENT_DATA/Objects/Database/ShapeSets/survival_stoneparts.shapeset",
-      "$CONTENT_DATA/Objects/Database/ShapeSets/survival_treeparts.shapeset"
+      "$CONTENT_DATA/Objects/Database/ShapeSets/survival_treeparts.shapeset",
+      "$CONTENT_DATA/Objects/Database/ShapeSets/tool_parts.shapeset"
    ]
 }
