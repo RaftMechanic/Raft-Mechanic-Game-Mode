@@ -12,11 +12,11 @@
       "title" : "Spear"
    },
    "1daebe24-4e16-422c-b5e7-c3f45f9296d8" : {
-      "description" : "Allows you to chop some wood!",
+      "description" : "Allows you to chop down some trees!",
       "title" : "Axe"
    },
    "2af00456-b22e-4743-b338-a91934aba7c5" : {
-      "description" : "Cooks delicious food that will fill up your health bar or revive fallen friends. You should have one on your raft.",
+      "description" : "Cooks delicious food that will fill up your health bar or revive fallen friends. It's good to have one of these on your raft!",
       "title" : "Lightweight Cookbot"
    },
    "4a971f7d-14e6-454d-bce8-0879243c4474" : {
@@ -48,7 +48,7 @@
       "title" : "WASD Converter"
    },
    "5cb15c93-4fa9-48da-9974-2e95ca6c9e1c" : {
-      "description" : "Let the Refinebot help you out and refine all your collected logs. Put them in by hand or by placing a Resource Collector with logs next to it. You should have on your raft.",
+      "description" : "Let the Refinebot help you out and refine all your collected logs. Put them in by hand or by placing a Resource Collector with logs next to it. It's good to have one of these on your raft!",
       "title" : "Lightweight Refinebot"
    },
    "67dd0023-023d-46cb-9839-e4ada2609a9b" : {
@@ -60,11 +60,11 @@
       "title" : "Water Sensor"
    },
    "71ac7645-57f5-4d49-9574-c8482b431862" : {
-      "description" : "Rotates your creation based on either your camera direction or A/D input. Press 'E' on to select a mode. First 3 modes - mouse control, Roll - A/D. Outputs a logic signal while in use.",
+      "description" : "Rotates your creation based on either your camera direction or A/D input. Interact with it to adjust it's settings. Outputs a logic signal while in use.",
       "title" : "Creation Rotator"
    },
    "767a3121-2c31-473c-a5ab-27e188fdd55a" : {
-      "description" : "Use the Dressbot to make new clothes for your Mechanic. Just add your garment boxes and the right amount of cotton. You can also customise your look by using the blue wardrobe. You should have on your raft.",
+      "description" : "Use the Dressbot to make new clothes for your Mechanic. Just add your garment boxes and the right amount of cotton. You can also customise your look by using the blue wardrobe. It's good to have one of these on your raft!",
       "title" : "Lightweight Dressbot"
    },
    "7c440c4a-5919-4baa-a946-0bb89b8c4d5d" : {
@@ -76,7 +76,7 @@
       "title" : "Raw Fishus"
    },
    "7ceccadf-010f-4a45-907f-18ccc11c509c" : {
-      "description" : "Are your lungs too small? This won’t fix your exercise issues, but you’ll last longer underwater. Connect it to a seat to lift some weight of your shoulders.",
+      "description" : "Are your lungs too small? This won’t fix your exercise issues, but you’ll last longer underwater. Connect it to a seat to lift some weight off your shoulders.",
       "title" : "Oxygen Tank"
    },
    "7ece8b10-5cc0-4791-b75e-09858ef1b9c4" : {
@@ -96,7 +96,7 @@
       "title" : "Water"
    },
    "885513a7-baa3-44ee-aa6e-7546bf0715a7" : {
-      "description" : "Spin it to make your raft go brrrr. Its force depends on the spin direction and speed. (Much less powerful in the air)",
+      "description" : "Spin it to make your raft go brrrr. It's force depends on the spin direction and speed. (Much less powerful in the air)",
       "title" : "Propeller"
    },
    "8e75cddb-040e-4813-8dd6-7e72f3288a91" : {
@@ -112,7 +112,7 @@
       "title" : "Pine Tree Cone"
    },
    "a930a42f-63ed-4fb0-933e-56ce8a889cc5" : {
-      "description" : "Perfect for collecting and stacking logs. When full, place it next to a refinebot to turn logs in to blocks. You should have on your raft.",
+      "description" : "Perfect for collecting and stacking logs. When full, place it next to a refinebot to turn logs in to blocks. It's good to have one of these on your raft!",
       "title" : "Lightweight Resource Collector"
    },
    "b5ade3b0-be48-4a61-a8c2-13a4cedf1343" : {
@@ -120,7 +120,7 @@
       "title" : "Pulling Hook"
    },
    "b63c6440-dfc2-4da7-acdb-3c385080b2e4" : {
-      "description" : "The Craftbot will help you craft everything from new blocks to useful interactive parts. You should have on your raft.",
+      "description" : "The Craftbot will help you craft everything from new blocks to useful interactive parts. It's good to have one of these on your raft!",
       "title" : "Lightweight Craftbot"
    },
    "b84e5fbb-97f2-4de5-bc39-4adb325a56f1" : {
@@ -152,7 +152,7 @@
       "title" : "Torch"
    },
    "e34387d3-fa29-4831-89b8-c94417b6fce6" : {
-      "description" : "A powerful gun that shoots pointy harpoons! You can collect them after they drop to the ground. (Can be used underwater)",
+      "description" : "A powerful gun that shoots pointy harpoons! You can collect them after they drop to the ground. Can be used underwater",
       "title" : "Harpoon Gun"
    },
    "e3bcf8fa-68d7-49a8-b17b-c1e864d53b69" : {
@@ -161,7 +161,7 @@
    },
    "f3aeb880-f103-43c8-947b-d0525eaeb505": {
 	  "title": "Spyglass",
-	  "description": "A tool to help with seeing objects from afar."
+	  "description": "A tool to help see objects from afar."
    },
    "e9c7d080-ae4b-4fec-b626-34afda6f5114" : {
       "description" : "Plant. Grow. Press. Repeat.",
@@ -204,7 +204,7 @@
       "title": "Collection Net"
    },
    "56dc8c15-ccc5-46c8-bd56-46bb6bfc85c9" : {
-      "description" : "Fake hammock for the abandoned rafts so that people cant sleep in them and loose their respawn point.",
+      "description" : "Fake hammock for the abandoned rafts so that people can't sleep in them and lose their respawn point.",
       "title": "Abandoned Hammock"
    },
    "795da2f8-ce95-4b34-9d89-1ef84f74e36a" : {
