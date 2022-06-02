@@ -39,8 +39,8 @@
     "WaterSensor_Adjust_Radius": "настроить радиус действия",
     "WaterSensor_Adjust_Vis": "переключить визуализацию радиуса",
 
-    "Sail_Tie": "Привязать парус",
-    "Sail_Lower": "Опустить парус",
+    "Sail_Tie": "Убрать парус",
+    "Sail_Lower": "Поднять парус",
     "Sail_Controlled": "Управляется логикой",
 
     "Trader": "#00bf00Торговец#ffffff:",
@@ -107,16 +107,16 @@
     "Quest_BuildRadio_Logbook": "Прочитать \"Статус антенны\"",
     "Quest_BuildRadio_Craftbot": "Создать бота-мастера",
     "Quest_BuildRadio_Wood": "Создать 20 деревянных блоков 1",
-    "Quest_BuildRadio_Craft_Antenna": "Сделать примитивную радиоантенну",
+    "Quest_BuildRadio_Craft_Antenna": "Сделать примитивное радио",
     "Quest_BuildRadio_Use_Antenna": "Отправить сигнал бедствия",
 
-    "Quest_RadioSignal": "Миссия спасения",
+    "Quest_RadioSignal": "Спасательная миссия",
     "Quest_RadioSignal_Logbook": "Прочитать \"Спасательная миссия\"",
     "Quest_RadioSignal_Cotton": "Найти хлопок",
     "Quest_RadioSignal_Windsock": "Сделать флюгер",
     "Quest_RadioSignal_Sail": "Сделать парус",
     "Quest_RadioSignal_FindWreck": "Добраться к источнику сигнала бедствия",
-    "Quest_RadioSignal_ExploreWreck": "Исследовать обломки на улики",
+    "Quest_RadioSignal_ExploreWreck": "Исследовать обломки корабля",
 
     "QuestItemTooEarly": "Мне стоит исследовать это позже.",
 
