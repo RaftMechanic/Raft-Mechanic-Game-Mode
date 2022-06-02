@@ -1,25 +1,8 @@
 [[[----------------RELEASE----------------]]]
 
 
-- Improved terrain gen
-- Saplings can now be splashed with strange liquids...
-- Crop farms have better effects now
-- Oxygen tank will recharge instantly
-- Optimized final quest of story
-- Added torch
-- Improved saw blade collision
-- Fishing rod major rework!
-- Hook fixed and reworked
-- Added collectors to pick up ocean junk
-- New and smaller purifier model
-- Added wedge to craftbot #wedgegang
-- Glowbugs help you swim faster
-- Added spyglass
-- Sleeping in a hammock skips night!
-- New shark model (and fixed ai?)
-- You won't loose equipment when dying
-- Added some easter eggs
-- Added raft floor pieces for building
-- Added plantable corn
-- Improved sailing
-- Added tutorials
+- Harpoons now drop on hit
+- Spear range increased
+- small bug fixes
+- Fixed Italian Translation
+- Added Russian Translation
