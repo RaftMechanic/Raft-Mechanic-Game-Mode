@@ -308,7 +308,6 @@ function BaseWorld.server_onInteractableDestroyed( self, interactable )
 end
 
 function BaseWorld.server_onProjectile( self, hitPos, hitTime, hitVelocity, _, attacker, damage, userData, hitNormal, target, projectileUuid )
-	print( hitPos, hitTime, hitVelocity, _, attacker, damage, userData, hitNormal, target, projectileUuid )
 	-- Spawn loot from projectiles with loot user data
 	if userData and userData.lootUid then
 		local normal = -hitVelocity:normalize()
