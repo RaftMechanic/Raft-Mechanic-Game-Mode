@@ -187,6 +187,7 @@ function Collector:client_onTinker( character, state )
         return
     end
 
+    sm.audio.play("Sledgehammer - Swing")
     self.network:sendToServer("sv_takeAllJunk", sm.localPlayer.getInventory())
 end
 
