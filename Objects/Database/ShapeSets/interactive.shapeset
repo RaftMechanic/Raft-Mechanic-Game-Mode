@@ -1458,7 +1458,8 @@
          "restrictions" : {
             "usable" : true
          },
-         "rotationSet" : "PropFullMinusNegY",
+         "rotationSet" : "PropY",
+         "sticky" : "-Y",
          "scripted" : {
             "classname" : "Hammock",
             "data" : {},
@@ -1497,7 +1498,6 @@
                "ragdollFile" : "$SURVIVAL_DATA/Character/bed_ragdoll.json"
             }
          },
-         "sticky" : "-Z+Z-Y-X+X",
          "uuid" : "4c1aed86-a402-4240-81e7-b67edf433fd5"
       },
       {
@@ -1620,7 +1620,7 @@
                }
             ]
          },
-         "rotationSet" : "PropYX",
+         "rotationSet" : "PropNegX",
          "scripted" : {
             "classname" : "Collector",
             "data" : {},

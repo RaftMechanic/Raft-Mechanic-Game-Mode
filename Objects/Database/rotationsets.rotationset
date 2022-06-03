@@ -1,3 +1,15 @@
 {
-	"rotationSet": []
+	"rotationSet": [
+		{
+			"name": "PropNegX",
+			"prop": true,
+			"rotation": [
+				/*X*/
+				{ "south": "Y", "east": "-Z" },
+				{ "south": "X", "east": "-Z" },
+				{ "south": "-Y", "east": "-Z" },
+				{ "south": "-X", "east": "-Z" }
+			]
+		}
+	]
 }
