@@ -23,15 +23,6 @@ sm.tool.preloadRenderables( renderablesFp )
 function Harpoon.client_onCreate( self )
 	self.shootEffect = sm.effect.createEffect( "SpudgunBasic - BasicMuzzel" )
 	self.shootEffectFP = sm.effect.createEffect( "SpudgunBasic - FPBasicMuzzel" )
-
-	--Raft
-	self.player = sm.localPlayer.getPlayer()
-	self.effects = {}
-	--Raft
-end
-
-function Harpoon:server_onCreate()
-	self.spears = {}
 end
 
 function Harpoon.client_onRefresh( self )
@@ -262,17 +253,7 @@ function Harpoon.client_onUpdate( self, dt )
 
 		self.tool:setDispersionFraction( clamp( self.movementDispersion + spreadFactor * recoilDispersion, 0.0, 1.0 ) )
 
-		if self.aiming then
-			if self.tool:isInFirstPersonView() then
-				self.tool:setCrossHairAlpha( 0.0 )
-			else
-				self.tool:setCrossHairAlpha( 1.0 )
-			end
-			self.tool:setInteractionTextSuppressed( true )
-		else
-			self.tool:setCrossHairAlpha( 1.0 )
-			self.tool:setInteractionTextSuppressed( false )
-		end
+		self.tool:setInteractionTextSuppressed( self.aiming )
 	end
 
 	-- Sprint block
@@ -610,7 +591,6 @@ function Harpoon.cl_onPrimaryUse( self, state )
 			local owner = self.tool:getOwner()
 			if owner then
 				sm.projectile.projectileAttack( projectile_harpoon, Damage, firePos, dir * fireMode.fireVelocity, owner, fakePosition, fakePositionSelf )
-				--self.network:sendToServer( "sv_shootSpear", { pos = firePos, dir = dir, owner = self.player })
 			end
 
 			-- Timers
