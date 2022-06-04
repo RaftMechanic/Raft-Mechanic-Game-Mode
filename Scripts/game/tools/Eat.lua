@@ -21,6 +21,8 @@ local WocSteakGrilldRenderables = { "$CONTENT_DATA/Characters/Char_Tools/Char_ea
 
 local PotatRenderables = { "$CONTENT_DATA/Characters/Char_Tools/Char_eattool/char_eattool_potat.rend" }
 
+local CokkieRenderables = { "$CONTENT_DATA/Characters/Char_Tools/Char_eattool/char_eattool_cokkie.rend" }
+
 
 
 local SunshakeRenderables = { "$SURVIVAL_DATA/Character/Char_Tools/Char_eattool/char_eattool_sunshake.rend" }
@@ -67,6 +69,7 @@ sm.tool.preloadRenderables(WocSteakRawRenderables)
 sm.tool.preloadRenderables(WocSteakGrilldRenderables)
 
 sm.tool.preloadRenderables(PotatRenderables)
+sm.tool.preloadRenderables(CokkieRenderables)
 
 local FoodUuidToRenderable =
 {
@@ -93,7 +96,8 @@ local FoodUuidToRenderable =
 	[tostring(obj_fish_au_chocolate)] = FisheauchocolatRenderables,
 	[tostring(obj_wocsteak_raw)] = WocSteakRawRenderables,
 	[tostring(obj_wocsteak_grilld)] = WocSteakGrilldRenderables,
-	[tostring(obj_potat)] = PotatRenderables
+	[tostring(obj_potat)] = PotatRenderables,
+	[tostring(obj_cokkie)] = CokkieRenderables
 }
 local Drinks = { obj_consumable_sunshake, obj_consumable_milk, obj_water_clean } --Raft
 

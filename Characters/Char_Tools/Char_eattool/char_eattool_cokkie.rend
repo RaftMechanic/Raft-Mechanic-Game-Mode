@@ -1,0 +1,21 @@
+{
+   "lodList" : [
+      {
+         "mesh" : "$CONTENT_DATA/Characters/Char_Tools/Char_eattool/char_eattool_cokkie.dae",
+         "subMeshList" : [
+            {
+               "material" : "Dif",
+               "textureList" : [ "$CONTENT_DATA/Objects/Textures/Consumables/cokkie_dough.tga", "", "" ]
+            },
+            {
+               "material" : "DifAsg",
+               "textureList" : [
+                  "$CONTENT_DATA/Objects/Textures/color_atlas.tga",
+                  "$CONTENT_DATA/Objects/Textures/asg_atlas.tga",
+                  ""
+               ]
+            }
+         ]
+      }
+   ]
+}

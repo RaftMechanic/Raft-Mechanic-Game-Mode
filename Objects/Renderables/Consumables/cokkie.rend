@@ -1,0 +1,21 @@
+{
+   "lodList" : [
+      {
+         "mesh" : "$CONTENT_DATA/Objects/Mesh/Consumables/cokkie.fbx",
+         "subMeshList" : [
+            {
+               "material" : "Dif",
+               "textureList" : [ "$CONTENT_DATA/Objects/Textures/Consumables/cokkie_dough.tga", "", "" ]
+            },
+            {
+               "material" : "DifAsg",
+               "textureList" : [
+                  "$CONTENT_DATA/Objects/Textures/color_atlas.tga",
+                  "$CONTENT_DATA/Objects/Textures/asg_atlas.tga",
+                  ""
+               ]
+            }
+         ]
+      }
+   ]
+}

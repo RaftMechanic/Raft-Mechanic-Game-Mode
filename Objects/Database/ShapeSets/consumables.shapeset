@@ -356,6 +356,40 @@
          "sticky" : "-Y+Y",
          "showInInventory": false,
          "uuid" : "f74c2891-79a9-45e0-982e-4896651c2259"
+      },
+      {
+         "autoTool" : "2bff990a-0e74-43c7-b7dc-889b3a086fa3",
+         "color" : "696969",
+         "consumable" : true,
+         "cylinder" : {
+            "axis" : "Y",
+            "depth" : 1,
+            "diameter" : 1,
+            "margin" : 0.10
+         },
+         "edible" : {
+            "foodGain" : 80,
+            "hpGain" : 50,
+            "waterGain" : 20
+         },
+         "flammable" : true,
+         "name" : "obj_cokkie",
+         "physicsMaterial" : "Fruit",
+         "ratings" : {
+            "buoyancy" : 8,
+            "density" : 2,
+            "durability" : 1,
+            "friction" : 5
+         },
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Consumables/cokkie.rend",
+         "restrictions" : {
+            "erasable" : true
+         },
+         "rotationSet" : "PropY",
+         "stackSize" : 3,
+         "sticky" : "-Y",
+         "showInInventory": true,
+         "uuid" : "7881a01e-9fcc-4554-88f0-afc17982a9c4"
       }
    ]
 }
