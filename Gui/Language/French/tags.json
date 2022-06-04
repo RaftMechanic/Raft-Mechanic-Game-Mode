@@ -86,6 +86,10 @@
     "Tutorial_SleepText": "Après une dure journée de travail, détendez-vous dans le hamac et faites de beaux rêves. Si tous les joueurs dorment dans un hamac vous pourrez sauter la nuit et vous réveiller avec le soleil levant !",
     "Tutorial_Shark": "REQUINS",
     "Tutorial_SharkText": "De dangereux robots requins parcourent la mer. Ils vous attaqueront, vous et votre radeau. Il est préférable d'installer des défenses sur votre radeau avant qu'ils ne fassent trop de dégâts.",
+    "Tutorial_Farm": "L'agriculture",
+    "Tutorial_FarmText": "Faire pousser ses propres cultures est un moyen fiable de se nourrir. Si jamais vous êtes à court de graines, vous pouvez facilement en extraire les graines avec la presse à graines.",
+    "Tutorial_OxygenTank": "Bouteilles de plongée",
+    "Tutorial_OxygenTankText": "Les bouteilles de plongée vous aide à respirer plus longtemps sous l'eau. Vous pouvez également la connecter aux sièges pour obtenir le même effet !",
 
     "Quest_ItemUnlock": "Nouvelle recette débloquée : #00f000",
 
