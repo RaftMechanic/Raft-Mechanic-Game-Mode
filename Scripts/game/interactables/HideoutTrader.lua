@@ -316,6 +316,7 @@ function HideoutTrader.client_onDestroy(self)
 	end
 end
 
+
 function HideoutTrader.cl_updateTradeGrid( self )
 	self.cl.guiInterface:clearGrid( "TradeGrid" )
 	self.cl.guiInterface:addGridItemsFromFile( "TradeGrid", "$CONTENT_DATA/CraftingRecipes/hideout.json" )
@@ -327,6 +328,7 @@ function HideoutTrader.cl_updateTradeGrid( self )
 	if QuestManager.Cl_IsQuestComplete("quest_scrap_city") then
 		self.cl.guiInterface:addGridItemsFromFile( "TradeGrid", "$CONTENT_DATA/CraftingRecipes/warehousekey.json" )
 	end
+		self.cl.guiInterface:addGridItemsFromFile( "TradeGrid", "$CONTENT_DATA/Scripts/HideoutMergedRecipes.json" )
 end
 
 function HideoutTrader.cl_n_addVacuumItem( self, params )

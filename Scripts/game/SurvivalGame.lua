@@ -25,6 +25,9 @@ dofile( "$CONTENT_DATA/Scripts/game/raft_items.lua" )
 dofile( "$CONTENT_DATA/Scripts/game/managers/QuestManager.lua" )
 dofile( "$CONTENT_DATA/Scripts/game/managers/QuestEntityManager.lua" )
 
+--Modded Craftbot Recipes
+dofile("RecipeLoader.lua")
+
 
 
 ---@class SurvivalGame : GameClass
@@ -281,12 +284,17 @@ end
 
 
 function SurvivalGame.loadCraftingRecipes( self )
+	--Modded Crafting Recipes
+	merge_custom_crafting_recipes()
+	--
 	raft_LoadCraftingRecipes({
-		workbench = "$CONTENT_DATA/CraftingRecipes/workbench.json",
 		dispenser = "$CONTENT_DATA/CraftingRecipes/dispenser.json",
 		cookbot = "$SURVIVAL_DATA/CraftingRecipes/cookbot.json",
-		craftbot = "$CONTENT_DATA/CraftingRecipes/craftbot.json",
 		dressbot = "$SURVIVAL_DATA/CraftingRecipes/dressbot.json",
+		
+		--Craftbot recipe modified, Modded Crafting Recipes
+		craftbot = cmi_merged_recipes_paths.craftbot,
+		workbench = cmi_merged_recipes_paths.workbench,
 
 		--Raft
 		farm = "$CONTENT_DATA/CraftingRecipes/farm.json",
