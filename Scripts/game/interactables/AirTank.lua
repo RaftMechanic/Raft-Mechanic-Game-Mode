@@ -1,4 +1,4 @@
-dofile("$SURVIVAL_DATA/Scripts/game/survival_items.lua")
+dofile("$CONTENT_DATA/Scripts/game/raft_items.lua")
 
 AirTank = class()
 AirTank.maxParentCount = 1
@@ -20,6 +20,9 @@ function AirTank:server_onFixedUpdate(dt)
 	elseif shape.uuid == obj_airtank_full then
 		shape:replaceShape(obj_airtank_empty)
 	end
+
+	if self.shape.uuid ~= obj_airtank_empty then return end
+	sm.physics.applyImpulse( self.shape, sm.vec3.new(0,0,-1) * 100, true)
 end
 
 function AirTank:client_canInteract()
