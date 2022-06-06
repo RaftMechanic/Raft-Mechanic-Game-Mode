@@ -1,8 +1,10 @@
 [[[----------------RELEASE----------------]]]
 
 
-- Harpoons now drop on hit
-- Spear range increased
-- small bug fixes
-- Fixed Italian Translation
-- Added Russian Translation
+- Players no longer have full health on rejoining the game
+- Fixed Craftbot weight
+- Fixed trader recipes
+- Dropped tools now show models
+- Harpoon crosshair doesn't disappear on aiming
+- Added mod support for other mods into the craftbot
+- Added more raft building pieces
