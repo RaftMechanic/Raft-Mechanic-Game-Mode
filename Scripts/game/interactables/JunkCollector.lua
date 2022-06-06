@@ -238,7 +238,7 @@ function Collector:client_onUpdate( dt )
             k.effect:setRotation( sm.quat.slerp(k.rot, k.dir, windupProgress) )
 
             --replace with attached effect if the pull animation is done
-            if windupProgress == 1 then
+            if windupProgress >= 1 then
                 k.attached = true
                 k.effect:stopImmediate()
                 k.effect = sm.effect.createEffect("ShapeRenderable", self.interactable)
