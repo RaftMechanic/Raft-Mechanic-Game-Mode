@@ -265,6 +265,38 @@
 			}
 		]
 	},
+	//RaftFloorCorner
+	{
+		"itemId": "fe70aab4-1a51-4428-bb33-566551f0aea5",
+		"quantity": 2,
+		"craftTime": 16,
+		"ingredientList": [
+			{
+				"quantity": 10,
+				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+			},
+			{
+				"quantity": 10,
+				"itemId": "628b2d61-5ceb-43e9-8334-a4135566df7a"
+			}
+		]
+	},
+	//RaftFloorRamp
+	{
+		"itemId": "ce5c6bce-a157-4e0b-8707-ce987b1d4d19",
+		"quantity": 2,
+		"craftTime": 16,
+		"ingredientList": [
+			{
+				"quantity": 15,
+				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+			},
+			{
+				"quantity": 15,
+				"itemId": "628b2d61-5ceb-43e9-8334-a4135566df7a"
+			}
+		]
+	},
 	//WaterPurifier
 	{
 		"itemId": "80c9edb7-0f86-4899-bf60-c3baca3fa841",

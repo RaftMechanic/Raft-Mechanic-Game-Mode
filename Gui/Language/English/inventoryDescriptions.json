@@ -218,5 +218,13 @@
     "4a1888f7-7376-49aa-97a0-1aaf1ae75e2a" : {
       "description" : "You found it!\n\n\n\n#050505The matter around it seems unstable..\n\n#212328Dart Frog reference :D",
       "title" : "Frozen Ant"
+   },
+   "fe70aab4-1a51-4428-bb33-566551f0aea5" : {
+      "description" : "Use this piece to make your raft look professional!",
+      "title" : "Raft Floor Corner"
+   },
+   "ce5c6bce-a157-4e0b-8707-ce987b1d4d19" : {
+      "description" : "Lets you rrrramp-up to the next floor! Great at doing wedge-like things.",
+      "title" : "Raft Floor Ramp"
    }
 }
