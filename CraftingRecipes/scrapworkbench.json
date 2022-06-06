@@ -297,6 +297,18 @@
 			}
 		]
 	},
+	//RaftLeafRoof
+	{
+		"itemId": "b818bfa7-bc68-403f-a1cb-51cad1b35344",
+		"quantity": 2,
+		"craftTime": 16,
+		"ingredientList": [
+			{
+				"quantity": 20,
+				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+			}
+		]
+	},
 	//WaterPurifier
 	{
 		"itemId": "80c9edb7-0f86-4899-bf60-c3baca3fa841",

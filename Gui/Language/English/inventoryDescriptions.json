@@ -226,5 +226,9 @@
    "ce5c6bce-a157-4e0b-8707-ce987b1d4d19" : {
       "description" : "Lets you rrrramp-up to the next floor! Great at doing wedge-like things.",
       "title" : "Raft Floor Ramp"
+   },
+   "b818bfa7-bc68-403f-a1cb-51cad1b35344" : {
+      "description" : "Use it so it doesn't rain on your head. Very green type of roofing.",
+      "title" : "Raft Leaf Roof"
    }
 }
