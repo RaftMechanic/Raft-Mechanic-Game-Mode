@@ -388,7 +388,7 @@
          "rotationSet" : "PropY",
          "stackSize" : 3,
          "sticky" : "-Y",
-         "showInInventory": true,
+         "showInInventory": false,
          "uuid" : "7881a01e-9fcc-4554-88f0-afc17982a9c4"
       }
    ]
