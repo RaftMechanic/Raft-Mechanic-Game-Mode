@@ -22,7 +22,7 @@ function AirTank:server_onFixedUpdate(dt)
 	end
 
 	if self.shape.uuid ~= obj_airtank_empty then return end
-	sm.physics.applyImpulse( self.shape, sm.vec3.new(0,0,-1) * 100, true)
+	sm.physics.applyImpulse( self.shape, sm.vec3.new(0,0,-1) * 25, true)
 end
 
 function AirTank:client_canInteract()
