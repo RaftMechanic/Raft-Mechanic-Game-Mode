@@ -124,5 +124,5 @@ function OilGeyser.server_spawnJunk(self)
 		return
 	end
 
-	local status, error = pcall( sm.creation.importFromFile( player:getCharacter():getWorld(), "$CONTENT_DATA/LocalBlueprints/junk" .. tostring(junkIndex) .. ".blueprint", vec ) )
+	local status, error = pcall( sm.creation.importFromFile, player:getCharacter():getWorld(), "$CONTENT_DATA/LocalBlueprints/junk" .. tostring(junkIndex) .. ".blueprint", vec  )
 end

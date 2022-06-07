@@ -20,6 +20,7 @@ function GlobUnit.server_onCreate( self )
 	end
 	if self.saved.stats == nil then
 		self.saved.stats = { hp = 100, maxhp = 100, cardboardEaten = 0 }
+		self.saved.hasSpawnedShark = false
 	end
 
 	if self.params then
@@ -83,13 +84,15 @@ function GlobUnit.server_onCreate( self )
 
 	--Raft
 	--if glowbug is placed down by player, dont even consider spawning a shark
-	if self.params ~= nil and math.random() < 0.5 then
+	if self.params ~= nil and math.random() < 0.35 and not self.saved.hasSpawnedShark then
 		local pos = self.unit.character:getWorldPosition()
 		local dif = sm.vec3.new( -2336, -2592, 16 ) - pos
 		local safeDistance = 64*4
 
 		if math.abs(dif.x) > safeDistance or math.abs(dif.y) > safeDistance then
-			sm.unit.createUnit( unit_sharkbot, pos + sm.vec3.new(0,0,2.5), 0, { tetherPoint = pos, deathTick = sm.game.getCurrentTick() + DaysInTicks( 5 ) + 400 } )
+			sm.unit.createUnit( unit_sharkbot, pos + sm.vec3.new(0,0,2.5), 0, { tetherPoint = pos, deathTick = sm.game.getCurrentTick() + DaysInTicks( 2.5 ) + 200 } )
+			self.saved.hasSpawnedShark = true
+			self.storage:save( self.saved )
 		end
 	end
 	--Raft
