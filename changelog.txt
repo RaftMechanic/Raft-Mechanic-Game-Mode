@@ -4,3 +4,5 @@
 - Harpoon crosshair doesn't disappear on aiming
 - Added mod support for other mods into the craftbot
 - Added more raft building pieces
+- Added more raft building pieces
+- Minor improvements to air tank and junk collector
