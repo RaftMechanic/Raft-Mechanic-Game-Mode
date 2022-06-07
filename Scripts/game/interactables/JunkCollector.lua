@@ -14,6 +14,16 @@ local collectables = {
 	obj_consumable_sunshake
 }
 
+local function getFirstOpenSlot( container )
+    for k, v in pairs(sm.container.quantity(container)) do
+        if v == 0 then
+            return k - 1
+        end
+    end
+
+    return nil
+end
+
 function Collector:server_onCreate()
     self.sv = {}
     self.sv.data = self.storage:load()
@@ -38,16 +48,8 @@ function Collector:server_onCreate()
 end
 
 function Collector.server_onCollision( self, shape, position, selfPointVelocity, otherPointVelocity, normal )
-    local couldCollect = false
-    for i = 1, containerSize do
-        if self.sv.container:getItem(i-1).uuid == sm.uuid.getNil() then
-            couldCollect = true
-            break
-        end
-    end
-    if not couldCollect then return end
-
-    if not sm.exists(shape) or type(shape) ~= "Shape" then return end
+    local openSlot = getFirstOpenSlot(self.sv.container)
+    if not sm.exists(shape) or type(shape) ~= "Shape" or openSlot == nil then return end
 
     local shapeUUID = shape:getShapeUuid()
     local shapeId = shape:getId()
@@ -65,33 +67,17 @@ function Collector.server_onCollision( self, shape, position, selfPointVelocity,
 
     self.sv.data.effectData[#self.sv.data.effectData+1] = effectData
 
-    if sm.item.isBlock( shapeUUID ) then
+    if sm.item.isBlock( shapeUUID ) or not sm.shape.getIsStackable(shapeUUID) then
         effectData.size = box
-
         box = box * 4
         quantity = box.x * box.y * box.z
     else
-        --bruh sunshake
-        if sm.shape.getIsStackable(shapeUUID) then
-            effectData.size = box / 2
-            quantity = shape.stackedAmount
-        else
-            effectData.size = box
-            box = box * 4
-            quantity = box.x * box.y * box.z
-        end
+        effectData.size = box / 2
+        quantity = shape.stackedAmount
     end
 
     sm.container.beginTransaction()
-    local index = 0
-    for i = 1, containerSize do
-        if self.sv.container:getItem(i-1).uuid == sm.uuid.getNil() then
-            index = i - 1
-            break
-        end
-    end
-
-    self.sv.container:setItem( index, shapeUUID, quantity )
+    self.sv.container:setItem( openSlot, shapeUUID, quantity )
     sm.container.endTransaction()
 
     self.sv.data.items = {}
@@ -248,8 +234,6 @@ function Collector:client_onUpdate( dt )
                 k.effect:setOffsetRotation( k.dir )
                 k.effect:start()
             end
-        else
-            k.effect:setOffsetRotation( k.dir )
         end
     end
 end

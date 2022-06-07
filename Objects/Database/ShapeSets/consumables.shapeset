@@ -255,7 +255,7 @@
          },
          "renderable" : "$CONTENT_DATA/Objects/Renderables/Consumables/harpoon_ammo.rend",
          "rotationSet" : "PropY",
-         "stackSize" : 5,
+         "stackSize" : 30,
          "sticky" : "-Y",
          "uuid" : "4a971f7d-14e6-454d-bce8-0879243c4857"
       },

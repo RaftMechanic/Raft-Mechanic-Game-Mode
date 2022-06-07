@@ -4,5 +4,8 @@
 - Harpoon crosshair doesn't disappear on aiming
 - Added mod support for other mods into the craftbot
 - Added more raft building pieces
-- Added more raft building pieces
-- Minor improvements to air tank and junk collector
+- Improved air tank and junk collector
+- Updated a few of the translations
+- Harpoon changes:
+	- Max stack size is now 30
+	- If the projectile hits an enemy, theres a 15% chance for it a drop, otherwise theres a 75% for it to drop
