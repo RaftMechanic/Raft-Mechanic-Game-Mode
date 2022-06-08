@@ -1,0 +1,41 @@
+{
+   "lodList" : [
+      {
+         "mesh" : "$CONTENT_DATA/Objects/Mesh/Parts/RaftFloorSteep.obj",
+         "subMeshList" : [
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$GAME_DATA/Textures/Tiled/Wood/t_tiled_birch_dif.tga",
+                  "$GAME_DATA/Textures/Tiled/Wood/t_tiled_birch_asg.tga",
+                  "$GAME_DATA/Textures/Tiled/Wood/t_tiled_birch_nor.tga"
+               ]
+            },
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+               ]
+            },
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
+               ]
+            },
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_dif.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_asg.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_nor.tga"
+               ]
+            }
+         ]
+      }
+   ]
+}
