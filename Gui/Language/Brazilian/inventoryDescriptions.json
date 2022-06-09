@@ -218,5 +218,17 @@
     "4a1888f7-7376-49aa-97a0-1aaf1ae75e2a" : {
        "title": "Formiga Congelada",
       "description" : "Você encontrou!\n\n\n\n#050505A matéria em torno dela parece meio instável..\n\n#212328Referência ao Dart Frog."
+   },
+   "fe70aab4-1a51-4428-bb33-566551f0aea5" : {
+      "description" : "Use essa peça para fazer sua jangada parecer profissionall!",
+      "title" : "Chão de Canto da Jangada"
+   },
+   "ce5c6bce-a157-4e0b-8707-ce987b1d4d19" : {
+      "description" : "Deixa você subiiiiiir para o próximo andar! Ótimo para fazer coisas relacionadas com rampas e coisa e tal.",
+      "title" : "Rampa para Jangada"
+   },
+   "b818bfa7-bc68-403f-a1cb-51cad1b35344" : {
+      "description" : "Use para não pegar chuva! Ajuda a evitar o resfriado.",
+      "title" : "Telha de Folha para Jangada"
    }
 }
