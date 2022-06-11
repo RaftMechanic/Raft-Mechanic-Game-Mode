@@ -714,7 +714,7 @@ function Crafter.server_onFixedUpdate( self )
 					-- Begin crafting new item
 					if val.time == -1 then
 						--RAFT
-						val.startTick = sm.game.getCurrentTick()
+						val.startTick = sm.game.getServerTick()
 
 						if idx > 1 and self.isCrafting then
 							local prevVal = self.sv.craftArray[idx - 1]
@@ -738,7 +738,7 @@ function Crafter.server_onFixedUpdate( self )
 						self:sv_markClientDataDirty()
 					end
 
-					val.time = sm.game.getCurrentTick() - val.startTick --RAFT
+					val.time = sm.game.getServerTick() - val.startTick --RAFT
 
 
 					local isSpawner = self.sv.saved and self.sv.saved.spawner
@@ -817,7 +817,7 @@ function Crafter.client_onFixedUpdate( self )
 			if val.time < recipeCraftTime then
 				--RAFT
 				if val.startTick then
-					val.time = sm.game.getCurrentTick() - val.startTick
+					val.time = sm.game.getServerTick() - val.startTick
 				else
 					val.time = val.time + 1
 				end
