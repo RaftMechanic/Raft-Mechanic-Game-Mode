@@ -700,6 +700,8 @@ function Crafter.server_onFixedUpdate( self )
 	local parent = self:getParent()
 
 	if not self.crafter.needsPower or ( parent and parent.active ) then
+		local isCrafting = false --RAFT
+
 		-- Update first in array
 		for idx, val in ipairs( self.sv.craftArray ) do
 			if val then
@@ -707,13 +709,14 @@ function Crafter.server_onFixedUpdate( self )
 				local recipeCraftTime = math.ceil( recipe.craftTime / self.crafter.speed ) + 120 -- 1s windup + 2s winddown
 
 				if val.time < recipeCraftTime then
+					isCrafting = true --RAFT
 
 					-- Begin crafting new item
 					if val.time == -1 then
 						--RAFT
 						val.startTick = sm.game.getCurrentTick()
 
-						if idx > 1 then
+						if idx > 1 and self.isCrafting then
 							local prevVal = self.sv.craftArray[idx - 1]
 							local prevRecipeCraftTime = math.ceil( prevVal.recipe.craftTime / self.crafter.speed ) + 120
 							val.startTick = prevVal.startTick + prevRecipeCraftTime
@@ -787,6 +790,7 @@ function Crafter.server_onFixedUpdate( self )
 				end
 			end
 		end
+		self.isCrafting = isCrafting
 	end
 
 	self:sv_sendClientData()
