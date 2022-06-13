@@ -74,68 +74,65 @@ dofile( "$CONTENT_DATA/Scripts/game/managers/QuestManager.lua" )
 Hammock = class(Bed)
 
 local sleepTime = 40*5 --ticks
+g_sleepers = g_sleepers or {}
 
 function Hammock:server_onCreate()
 	Bed.server_onCreate(self)
 
-	if not g_sleepers then
-		g_sleepers = {}
-		g_sleepers.update = sm.game.getCurrentTick()
-	end
+	self.id = #g_sleepers + 1
+	g_sleepers[self.id] = self.shape
+
+	self.skip = {
+		active = false,
+		tick = 0
+	}
 end
+
+function Hammock:server_onDestroy()
+	g_sleepers[self.id] = nil
+end
+
 function Hammock:sv_activateBed( character )
 	Bed.sv_activateBed(self, character)
 	QuestManager.Sv_OnEvent(QuestEvent.Sleep, {character = character})
 end
 
-
 function Hammock:server_onFixedUpdate( dt )
 	Bed.server_onFixedUpdate(self)
 
-	if g_sleepers.update < sm.game.getCurrentTick() then
-		g_sleepers.update = sm.game.getCurrentTick()
+	local time = sm.storage.load( STORAGE_CHANNEL_TIME )
+	local night = time.timeOfDay > 0.85 or time.timeOfDay < 0.175
 
-		if g_sleepers.skipNight then
-			if g_sleepers.skipNight < sm.game.getCurrentTick() then
-				sm.event.sendToGame("sv_setTimeOfDay", 0.175+0.001)
-				g_sleepers.skipNight = false
-			end
-			return
-		end
+	if not night then return end
 
-		local time = sm.storage.load( STORAGE_CHANNEL_TIME )
-		local night = time.timeOfDay > 0.85 or time.timeOfDay < 0.175
+	--only the first bed in the table does stuff
+	for _, check in pairs(g_sleepers) do
+		if check ~= nil and self.shape ~= check then break end
 
-		for _, player in ipairs(sm.player.getAllPlayers()) do
-			local char = player:getCharacter()
-			if char then
-				local interactable = char:getLockingInteractable()
-				if interactable and interactable.shape.uuid == self.shape.uuid and g_sleepers[player.id] then
-					g_sleepers[player.id].ticks = g_sleepers[player.id].ticks + 1
-				else
-					g_sleepers[player.id] = {ticks = 0, player = player}
+		--print("first hammock did stuff!", self.shape.id, #g_sleepers)
+		if not self.skip.active then
+			local sleepingPeople = 0
+			for k, player in pairs(sm.player.getAllPlayers()) do
+				local char = player.character
+				if sm.exists(char) then
+					local lockingInt = char:getLockingInteractable()
+					if lockingInt ~= nil and lockingInt.shape.uuid == obj_hammock then
+						sleepingPeople = sleepingPeople + 1
+					end
 				end
 			end
-		end
 
-		local sleeping = 0
-		for id, sleep in ipairs(g_sleepers) do
-			if sleep.ticks == sleepTime then
-				self.network:sendToClient(sleep.player, "cl_show_message", not night and "HammockNight" or "HammockAllPlayers")
-			elseif sleep.ticks > sleepTime then
-				sleeping = sleeping + 1
+			if sleepingPeople == #sm.player.getAllPlayers() then
+				self.skip.active = true
+				self.skip.tick = sm.game.getCurrentTick() + 40
+				self.network:sendToClients("cl_sleep")
 			end
-		end
-
-		if night and sleeping == #sm.player.getAllPlayers() then
-			self.network:sendToClients("cl_sleep")
-			g_sleepers.skipNight = sm.game.getCurrentTick() + 40
+		elseif sm.game.getCurrentTick() >= self.skip.tick then
+			sm.event.sendToGame("sv_setTimeOfDay", 0.175+0.001)
+			self.skip.active = false
+			self.skip.tick = 0
 		end
 	end
-end
-
-function Hammock:cl_show_message(tag)
-	sm.gui.displayAlertText(language_tag(tag))
 end
 
 function Hammock:cl_sleep()
@@ -158,9 +155,38 @@ function Hammock:client_onFixedUpdate(dt)
 	end
 end
 
+function Hammock:client_canInteract()
+	local o1 = "<p textShadow='false' bg='gui_keybinds_bg_orange' color='#4f4f4f' spacing='9'>"
+    local o2 = "</p>"
+
+	local time = sm.game.getTimeOfDay()
+	local night = time > 0.85 or time < 0.175
+	if not night then
+		sm.gui.setInteractionText(o1..language_tag("HammockNight")..o2)
+	end
+
+	return true
+end
+
 function Hammock:client_onInteract(character, state )
 	Bed.client_onInteract(self, character, state)
 	if state == true then
 		sm.event.sendToPlayer(sm.localPlayer.getPlayer(), "cl_e_tutorial", "sleep")
+
+		local sleepingPeople = 0
+		for k, player in pairs(sm.player.getAllPlayers()) do
+			local char = player.character
+			if sm.exists(char) then
+				local lockingInt = char:getLockingInteractable()
+																						--epic fix
+				if lockingInt ~= nil and lockingInt.shape.uuid == obj_hammock or player == sm.localPlayer.getPlayer() then
+					sleepingPeople = sleepingPeople + 1
+				end
+			end
+		end
+
+		if sleepingPeople ~= #sm.player.getAllPlayers() then
+			sm.gui.displayAlertText(language_tag("HammockAllPlayers"))
+		end
 	end
 end
