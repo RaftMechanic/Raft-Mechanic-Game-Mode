@@ -84,6 +84,7 @@ function Hammock:server_onCreate()
 
 	self.skip = {
 		active = false,
+		sleeping = false,
 		tick = 0
 	}
 end
@@ -124,13 +125,20 @@ function Hammock:server_onFixedUpdate( dt )
 
 			if sleepingPeople == #sm.player.getAllPlayers() then
 				self.skip.active = true
-				self.skip.tick = sm.game.getCurrentTick() + 40
-				self.network:sendToClients("cl_sleep")
+				self.skip.tick = sm.game.getCurrentTick() + sleepTime
 			end
 		elseif sm.game.getCurrentTick() >= self.skip.tick then
+			if not self.skip.sleeping then
+				self.skip.sleeping = true
+				self.skip.tick = sm.game.getCurrentTick() + 40
+				self.network:sendToClients("cl_sleep")
+				return
+			end
+
 			sm.event.sendToGame("sv_setTimeOfDay", 0.175+0.001)
 			self.skip.active = false
 			self.skip.tick = 0
+			self.skip.sleeping = false
 		end
 	end
 end
