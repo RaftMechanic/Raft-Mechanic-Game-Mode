@@ -569,7 +569,7 @@ function SharkBotUnit.server_onUnitUpdate( self, dt )
 
 	-- Find dangerous obstacles
 	local shouldAvoid = false
-	local closestDangerShape, _ = g_unitManager:sv_getClosestDangers( self.unit.character.worldPosition )
+	local closestDangerShape, _ = g_unitManager:sv_shark_getClosestDangers( self.unit.character.worldPosition )
 	if closestDangerShape then
 		local fromToDanger = closestDangerShape.worldPosition - self.unit.character.worldPosition
 		local distance = fromToDanger:length()
