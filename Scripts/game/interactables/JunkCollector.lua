@@ -45,6 +45,7 @@ function Collector:server_onCreate()
     self.network:sendToClients("cl_addJunk_onCreate", self.sv.data.effectData)
 
     self.sv.ignoreIds = {}
+    self.sv.pos = sm.vec3.zero()
 end
 
 function Collector.server_onCollision( self, shape, position, selfPointVelocity, otherPointVelocity, normal )
@@ -80,11 +81,7 @@ function Collector.server_onCollision( self, shape, position, selfPointVelocity,
     self.sv.container:setItem( openSlot, shapeUUID, quantity )
     sm.container.endTransaction()
 
-    self.sv.data.items = {}
-    for i = 1, containerSize do
-        self.sv.data.items[#self.sv.data.items+1] = self.sv.container:getItem( i-1 )
-    end
-    self.storage:save(self.sv.data)
+    self:sv_rebuildItemTable()
 
     self.network:sendToClients("cl_addJunk", effectData)
     local selfPos = self.shape:getWorldPosition()
@@ -94,6 +91,7 @@ function Collector.server_onCollision( self, shape, position, selfPointVelocity,
 end
 
 function Collector:server_onFixedUpdate()
+    self.sv.pos = self.shape.worldPosition
     if self.sv.container:hasChanged( sm.game.getServerTick() - 1 ) then
         for i = 1, containerSize do
             local item = self.sv.container:getItem( i-1 )
@@ -105,6 +103,30 @@ function Collector:server_onFixedUpdate()
             end
         end
     end
+end
+
+function Collector:server_onDestroy()
+    --probably not the best check, rip
+    for k, player in pairs(sm.player.getAllPlayers()) do
+        if player:getInventory():hasChanged( sm.game.getServerTick() - 1 ) then
+            return
+        end
+    end
+
+    local origin = sm.player.getAllPlayers()[1]
+    local lootTable = {}
+    for i = 1, containerSize do
+        local item = self.sv.data.items[i]
+        if item ~= nil and item.uuid ~= sm.uuid.getNil() then
+            lootTable[#lootTable+1] = { uuid = item.uuid, chance = 1, quantity = item.quantity }
+        end
+    end
+
+    raft_SpawnLoot(
+        origin,
+        lootTable,
+        self.sv.pos
+    )
 end
 
 function Collector:sv_takeAllJunk( inv )
@@ -120,7 +142,18 @@ function Collector:sv_takeAllJunk( inv )
         end
     end
     sm.container.endTransaction()
+
+    --self:sv_rebuildItemTable()
 end
+
+function Collector:sv_rebuildItemTable()
+    self.sv.data.items = {}
+    for i = 1, containerSize do
+        self.sv.data.items[#self.sv.data.items+1] = self.sv.container:getItem( i-1 )
+    end
+    self.storage:save(self.sv.data)
+end
+
 
 
 function Collector:client_onCreate()
@@ -157,7 +190,7 @@ function Collector.client_onInteract( self, character, state )
         self.cl.containerGui = sm.gui.createContainerGui( true )
         self.cl.containerGui:setText( "UpperName", language_tag("JunkCollector_Title") )
         self.cl.containerGui:setVisible( "ChestIcon", true )
-        self.cl.containerGui:setVisible( "TakeAll", true )
+        --self.cl.containerGui:setVisible( "TakeAll", true )
         self.cl.containerGui:setContainer( "UpperGrid", container );
         self.cl.containerGui:setText( "LowerName", "#{INVENTORY_TITLE}" )
         self.cl.containerGui:setContainer( "LowerGrid", sm.localPlayer.getInventory() )

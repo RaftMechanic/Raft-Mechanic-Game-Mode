@@ -9,4 +9,5 @@
 - Harpoon changes:
 	- Max stack size is now 30
 	- If the projectile hits an enemy, theres a 15% chance for it a drop, otherwise theres a 75% for it to drop
-- Adjusted Shark spawning code
+- Adjusted Shark spawning code, they're less common now
+- Collection Net drops its contents upon being destroyed
