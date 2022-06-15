@@ -86,5 +86,29 @@
                 "itemId": "36335664-6e61-4d44-9876-54f9660a8565"
             }
         ]
+    },
+    //Spyglass
+    {
+        "itemId": "f3aeb880-f103-43c8-947b-d0525eaeb505",
+        "quantity": 1,
+        "craftTime": 32,
+        "ingredientList": [
+            {
+                "quantity": 20,
+                "itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
+            },
+            {
+                "quantity": 10,
+                "itemId": "5f41af56-df4c-4837-9b3c-10781335757f"
+            },
+            {
+                "quantity": 1,
+                "itemId": "36335664-6e61-4d44-9876-54f9660a8565"
+            },
+            {
+                "quantity": 10,
+                "itemId": "628b2d61-5ceb-43e9-8334-a4135566df7a"
+            }
+        ]
     }
 ]
