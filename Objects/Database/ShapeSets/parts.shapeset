@@ -307,7 +307,9 @@
          "uuid" : "fe70aab4-1a51-4428-bb33-566551f0aea5"
       },
 	        {
-         "box" : {
+         "slant" : {
+            "back" : "-X",
+            "bottom" : "-Y",
             "x" : 4,
             "y" : 4,
             "z" : 1
@@ -327,47 +329,46 @@
             "lodList" : [
                {
                   "mesh" : "$CONTENT_DATA/Objects/Mesh/Parts/RaftFloorWedge2.obj",
-                  "subMeshMap" : {
-				    "barke" : {
-                        "material" : "DifAsgNor",
-                        "textureList" : [
+					"subMeshList" : [
+						{
+						   "material" : "DifAsgNor",
+						   "textureList" : [
                            "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_dif.tga",
                            "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_asg.tga",
                            "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_nor.tga"
-                        ]
-                     },
-					 "lambert2" : {
-                        "material" : "DifAsgNor",
-                        "textureList" : [
+						   ]
+						},
+						{
+						   "material" : "DifAsgNor",
+						   "textureList" : [
                            "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
                            "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
                            "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
-                        ]
-                     },
-					 "innerwood" : {
-                        "material" : "DifAsgNor",
-                        "textureList" : [
+						   ]
+						},
+						{
+						   "material" : "DifAsgNor",
+						   "textureList" : [
                            "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
                            "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
                            "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
-                        ]
-                     },
-                     "Plastic" : {
-                        "color" : "0b9ade",
-                        "material" : "DifAsgNor",
-                        "textureList" : [
-                           "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_plastic_dif.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_plastic_asg.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_plastic_nor.tga"
-                        ]
-                     }
-                  }
-               }
+						   ]
+						},
+						{
+						   "material" : "DifAsgNor",
+						   "textureList" : [
+							  "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_dif.tga",
+							  "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_asg.tga",
+							  "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_nor.tga"
+						   ]
+						}
+					 ]
+					 }
             ]
          },
          "rotationSet" : "PropYX",
          "stackSize" : 10,
-         "sticky" : "+X-X+Y-Y+Z",
+         "sticky" : "+X-X+Y-Y-Z",
          "uuid" : "69c559b4-5099-4322-8dda-9ebabdc4c600"
       },
       {
@@ -617,6 +618,68 @@
          "stackSize" : 10,
          "sticky" : "+X-X+Y-Y+Z-Z",
          "uuid" : "3a880447-6556-4278-9356-7be8bf6a8ae9"
+      },
+	  	  {
+         "color" : "008ae1",
+         "flammable" : true,
+         "name" : "obj_raft_floor_outer_corner",
+         "physicsMaterial" : "Wood",
+         "ratings" : {
+            "buoyancy" : 2,
+            "density" : 1,
+            "durability" : 3,
+            "friction" : 10
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Parts/RaftFloorOuterCorner.obj",
+					 "subMeshList" : [
+						{
+						   "material" : "DifAsgNor",
+						   "textureList" : [
+                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_dif.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_asg.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_nor.tga"
+						   ]
+						},
+						{
+						   "material" : "DifAsgNor",
+						   "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+						   ]
+						},
+						{
+						   "material" : "DifAsgNor",
+						   "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
+						   ]
+						},
+						{
+						   "material" : "DifAsgNor",
+						   "textureList" : [
+							  "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_dif.tga",
+							  "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_asg.tga",
+							  "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_nor.tga"
+						   ]
+						}
+					 ]
+					 }
+            ]
+         },
+         "rotationSet" : "PropYX",
+         "box" : {
+            "x" : 4,
+            "y" : 4,
+            "z" : 4
+         },
+         "stackSize" : 10,
+         "sticky" : "+X-X+Y-Y+Z-Z",
+         "uuid" : "811ea5d1-a2bf-4db7-b1c3-a86cee2c9e94"
       },
 	  {
          "color" : "008ae1",
