@@ -523,90 +523,49 @@
             "lodList" : [
                {
                   "mesh" : "$CONTENT_DATA/Objects/Mesh/Parts/RaftLeafRoofInnerCorner.obj",
-                  "subMeshMap" : {
-                     "Barrel.004" : {
-                        "material" : "DifAsgNor",
-                        "textureList" : [
-                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_barrel_blueberry_dif.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_barrel_blueberry_asg.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_barrel_blueberry_nor.tga"
-                        ]
-                     },
-                     "Plastic.005" : {
-                        "color" : "0b9ade",
-                        "material" : "DifAsgNor",
-                        "textureList" : [
-                           "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_plastic_dif.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_plastic_asg.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_plastic_nor.tga"
-                        ]
-                     },
-                     "bark.005" : {
-                        "material" : "DifAsgNor",
-                        "textureList" : [
+					 "subMeshList" : [
+						{
+							"material" : "Leaves",
+							"textureList" : [
+							   "$SURVIVAL_DATA/Harvestables/Textures/Trees/hvs_trees_spruce_dif.tga",
+							   "$SURVIVAL_DATA/Harvestables/Textures/Trees/hvs_trees_spruce_asg.tga",
+							   "$SURVIVAL_DATA/Harvestables/Textures/Trees/hvs_trees_spruce_nor.tga"
+							]
+						},
+						{
+						   "material" : "DifAsgNor",
+						   "textureList" : [
                            "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_dif.tga",
                            "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_asg.tga",
                            "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_nor.tga"
-                        ]
-                     },
-                     "innerwood.005" : {
-                        "material" : "DifAsgNor",
-                        "textureList" : [
-                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
-                        ]
-                     },
-                     "lambert2.005" : {
-                        "material" : "DifAsgNor",
-                        "textureList" : [
+						   ]
+						},
+						{
+						   "material" : "DifAsgNor",
+						   "textureList" : [
                            "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
                            "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
                            "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
-                        ]
-                     },
-                     "submesh0_bark.002" : {
-                        "material" : "DifAsgNor",
-                        "textureList" : [
-                           "$GAME_DATA/Textures/Tiled/Wood/t_tiled_brownbark_dif.tga",
-                           "$GAME_DATA/Textures/Tiled/Wood/t_tiled_brownbark_asg.tga",
-                           "$GAME_DATA/Textures/Tiled/Wood/t_tiled_brownbark_nor.tga"
-                        ]
-                     },
-                     "submesh1_innerwood.002" : {
-                        "material" : "DifAsgNor",
-                        "textureList" : [
+						   ]
+						},
+						{
+						   "material" : "DifAsgNor",
+						   "textureList" : [
                            "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
                            "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
                            "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
-                        ]
-                     },
-                     "submesh0_leaves.002" : {
-                        "material" : "Leaves",
-                        "textureList" : [
-                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/hvs_trees_spruce_dif.tga",
-                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/hvs_trees_spruce_asg.tga",
-                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/hvs_trees_spruce_nor.tga"
-                        ]
-                     },
-                     "submesh1_bark.002" : {
-                        "material" : "DifAsgNor",
-                        "textureList" : [
-                           "$GAME_DATA/Textures/Tiled/Wood/t_tiled_brownbark_dif.tga",
-                           "$GAME_DATA/Textures/Tiled/Wood/t_tiled_brownbark_asg.tga",
-                           "$GAME_DATA/Textures/Tiled/Wood/t_tiled_brownbark_nor.tga"
-                        ]
-                     },
-                     "submesh1_innerwood.002" : {
-                        "material" : "DifAsgNor",
-                        "textureList" : [
-                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
-                        ]
-                     }
-                  }
-               }
+						   ]
+						},
+						{
+						   "material" : "DifAsgNor",
+						   "textureList" : [
+							  "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_dif.tga",
+							  "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_asg.tga",
+							  "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_nor.tga"
+						   ]
+						}
+					 ]
+				}
             ]
          },
          "rotationSet" : "PropYX",
@@ -619,6 +578,77 @@
          "stackSize" : 10,
          "sticky" : "+X-X+Y-Y+Z-Z",
          "uuid" : "3a880447-6556-4278-9356-7be8bf6a8ae9"
+      },
+	  	  {
+         "color" : "7BAF0A",
+         "flammable" : true,
+         "name" : "obj_raft_leaf_roof_outer_corner",
+         "physicsMaterial" : "Wood",
+         "ratings" : {
+            "buoyancy" : 2,
+            "density" : 1,
+            "durability" : 3,
+            "friction" : 10
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Parts/RaftLeafRoofOuterCorner.obj",
+					 "subMeshList" : [
+						{
+							"material" : "Leaves",
+							"textureList" : [
+							   "$SURVIVAL_DATA/Harvestables/Textures/Trees/hvs_trees_spruce_dif.tga",
+							   "$SURVIVAL_DATA/Harvestables/Textures/Trees/hvs_trees_spruce_asg.tga",
+							   "$SURVIVAL_DATA/Harvestables/Textures/Trees/hvs_trees_spruce_nor.tga"
+							]
+						},
+						{
+						   "material" : "DifAsgNor",
+						   "textureList" : [
+                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_dif.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_asg.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_nor.tga"
+						   ]
+						},
+						{
+						   "material" : "DifAsgNor",
+						   "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+						   ]
+						},
+						{
+						   "material" : "DifAsgNor",
+						   "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
+						   ]
+						},
+						{
+						   "material" : "DifAsgNor",
+						   "textureList" : [
+							  "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_dif.tga",
+							  "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_asg.tga",
+							  "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_nor.tga"
+						   ]
+						}
+					 ]
+				}
+            ]
+         },
+         "rotationSet" : "PropYX",
+         "hull" : {
+            "col" : "$CONTENT_DATA/Objects/Collision/parts/raft_floor_outer_corner_col.obj",
+            "x" : 4,
+            "y" : 4,
+            "z" : 4
+         },
+         "stackSize" : 10,
+         "sticky" : "+X-X+Y-Y+Z-Z",
+         "uuid" : "7a13d6ff-ceee-461b-b143-308e2589b07d"
       },
 	  	  {
          "color" : "008ae1",
@@ -694,7 +724,6 @@
          "flammable" : true,
          "name" : "obj_raft_floor_ramp_inner_corner",
          "physicsMaterial" : "Plastic",
-         "previewRotation" : [ 1, 0, 0, 0, 1, 0, 0, 0, 1 ],
          "ratings" : {
             "buoyancy" : 2,
             "density" : 1,

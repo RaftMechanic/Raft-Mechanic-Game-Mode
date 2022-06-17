@@ -297,9 +297,65 @@
 			}
 		]
 	},
+	//RaftFloorInnerCornerRamp
+	{
+		"itemId": "49350ac2-f7dc-457d-b29d-a2f117670f86",
+		"quantity": 2,
+		"craftTime": 16,
+		"ingredientList": [
+			{
+				"quantity": 15,
+				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+			},
+			{
+				"quantity": 15,
+				"itemId": "628b2d61-5ceb-43e9-8334-a4135566df7a"
+			}
+		]
+	},
+	//RaftFloorOuterCornerRamp
+	{
+		"itemId": "811ea5d1-a2bf-4db7-b1c3-a86cee2c9e94",
+		"quantity": 2,
+		"craftTime": 16,
+		"ingredientList": [
+			{
+				"quantity": 15,
+				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+			},
+			{
+				"quantity": 15,
+				"itemId": "628b2d61-5ceb-43e9-8334-a4135566df7a"
+			}
+		]
+	},
 	//RaftLeafRoof
 	{
 		"itemId": "b818bfa7-bc68-403f-a1cb-51cad1b35344",
+		"quantity": 2,
+		"craftTime": 16,
+		"ingredientList": [
+			{
+				"quantity": 20,
+				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+			}
+		]
+	},
+	//RaftLeafInnerCornerRoof
+	{
+		"itemId": "3a880447-6556-4278-9356-7be8bf6a8ae9",
+		"quantity": 2,
+		"craftTime": 16,
+		"ingredientList": [
+			{
+				"quantity": 20,
+				"itemId": "1fc74a28-addb-451a-878d-c3c605d63811"
+			}
+		]
+	},
+	//RaftLeafOuterCornerRoof
+	{
+		"itemId": "7a13d6ff-ceee-461b-b143-308e2589b07d",
 		"quantity": 2,
 		"craftTime": 16,
 		"ingredientList": [

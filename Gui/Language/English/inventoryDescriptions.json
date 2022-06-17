@@ -227,8 +227,24 @@
       "description" : "Lets you rrrramp-up to the next floor! Great at doing wedge-like things.",
       "title" : "Raft Floor Ramp"
    },
+   "49350ac2-f7dc-457d-b29d-a2f117670f86" : {
+      "description" : "Lets you rrrramp-up to the next floor! Great at doing wedge-like things.",
+      "title" : "Raft Floor Ramp Inner Corner"
+   },
+   "811ea5d1-a2bf-4db7-b1c3-a86cee2c9e94" : {
+      "description" : "Lets you rrrramp-up to the next floor! Great at doing wedge-like things.",
+      "title" : "Raft Floor Ramp Outer Corner"
+   },
    "b818bfa7-bc68-403f-a1cb-51cad1b35344" : {
       "description" : "Use it so it doesn't rain on your head. Very green type of roofing.",
       "title" : "Raft Leaf Roof"
+   },
+   "3a880447-6556-4278-9356-7be8bf6a8ae9" : {
+      "description" : "Use it so it doesn't rain on your head. Very green type of roofing.",
+      "title" : "Raft Leaf Roof Inner Corner"
+   },
+   "7a13d6ff-ceee-461b-b143-308e2589b07d" : {
+      "description" : "Use it so it doesn't rain on your head. Very green type of roofing.",
+      "title" : "Raft Leaf Roof Outer Corner"
    }
 }
