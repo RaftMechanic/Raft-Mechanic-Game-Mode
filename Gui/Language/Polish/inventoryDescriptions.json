@@ -218,5 +218,21 @@
     "4a1888f7-7376-49aa-97a0-1aaf1ae75e2a" : {
       "description" : "Znalazłeś ją, brawo!!\n\n\n\n#050505Materia w jej pobliżu wydaje się niestabilna..\n\n#212328Dart Frog reference :D",
       "title" : "Zmrożona Mrówka"
+   },
+   "49350ac2-f7dc-457d-b29d-a2f117670f86" : {
+      "description" : "Pozwala wejść ci na wyższy poziom gry.",
+      "title" : "Podłoga tratwy zakręt wewnętrzny"
+   },
+   "811ea5d1-a2bf-4db7-b1c3-a86cee2c9e94" : {
+      "description" : "Pozwala wejść ci na wyższy poziom gry.",
+      "title" : "Podłoga tratwy zakręt zewnętrzny"
+   },
+   "3a880447-6556-4278-9356-7be8bf6a8ae9" : {
+      "description" : "Użyj tego żeby nie padało ci na głowę. Bardzo zielony rodzaj sufitu.",
+      "title" : "Sufit tratwy z liści zakręt wewnętrzny"
+   },
+   "7a13d6ff-ceee-461b-b143-308e2589b07d" : {
+      "description" : "Użyj tego żeby nie padało ci na głowę. Bardzo zielony rodzaj sufitu.",
+      "title" : "Sufit tratwy z liści zakręt zewnętrzny"
    }
 }
