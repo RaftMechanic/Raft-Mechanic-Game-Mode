@@ -610,7 +610,8 @@
             ]
          },
          "rotationSet" : "PropYX",
-         "box" : {
+         "hull" : {
+            "col" : "$CONTENT_DATA/Objects/Collision/parts/raft_floor_inner_corner_col.obj",
             "x" : 4,
             "y" : 4,
             "z" : 4
@@ -672,7 +673,8 @@
             ]
          },
          "rotationSet" : "PropYX",
-         "box" : {
+         "hull" : {
+            "col" : "$CONTENT_DATA/Objects/Collision/parts/raft_floor_outer_corner_col.obj",
             "x" : 4,
             "y" : 4,
             "z" : 4
@@ -682,7 +684,8 @@
          "uuid" : "811ea5d1-a2bf-4db7-b1c3-a86cee2c9e94"
       },
 	  {
-         "box" : {
+         "hull" : {
+            "col" : "$CONTENT_DATA/Objects/Collision/parts/raft_floor_inner_corner_col.obj",
             "x" : 4,
             "y" : 4,
             "z" : 4
