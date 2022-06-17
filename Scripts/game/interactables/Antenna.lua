@@ -14,8 +14,8 @@ function Antenna:server_onCreate()
 	self.sv = {}
 	self.sv.loaded = true
 	self.sv.iconData = {
-		iconIndex = 0,
-		colorIndex = 1
+		iconIndex = 10,
+		colorIndex = 3
 	}
 
 	self.network:setClientData( { iconIndex = self.sv.iconData.iconIndex, colorIndex = self.sv.iconData.colorIndex } )
