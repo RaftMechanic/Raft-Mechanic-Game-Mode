@@ -234,11 +234,11 @@ function SharkBotUnit.sv_flee( self )
 	end
 end
 
-function SharkBotUnit.server_onRefresh( self )
+function SharkBotUnit:server_onRefresh()
 	print( "-- SharkBotUnit refreshed --" )
 end
 
-function SharkBotUnit.server_onDestroy( self )
+function SharkBotUnit:server_onDestroy()
 	print( "-- SharkBotUnit terminated --" )
 end
 
@@ -541,7 +541,7 @@ function SharkBotUnit.server_onUnitUpdate( self, dt )
 	end
 
 	-- Breach check
-	local breachDestination = nil
+	local breachDestination
 	if self.isInCombat and self.currentState ~= self.breachState then
 		local nextTargetPosition
 		if self.target then
@@ -931,6 +931,6 @@ function SharkBotUnit.sv_e_receiveTarget( self, params )
 	end
 end
 
-function SharkBotUnit.sv_e_onEnterWater( self ) end
+function SharkBotUnit:sv_e_onEnterWater() end
 
-function SharkBotUnit.sv_e_onStayWater( self ) end
+function SharkBotUnit:sv_e_onStayWater() end
