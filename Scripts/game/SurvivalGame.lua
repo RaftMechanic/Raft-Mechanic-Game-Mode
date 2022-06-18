@@ -266,6 +266,9 @@ function SurvivalGame.bindChatCommands( self )
 		sm.game.bindChatCommand( "/reloadcell", {{ "int", "x", true }, { "int", "y", true }}, "cl_onChatCommand", "Reload cells at self or {x,y}" )
 		sm.game.bindChatCommand( "/tutorialstartkit", {}, "cl_onChatCommand", "Spawn a starter kit for building a scrap car" )
 
+		--Raft
+		sm.game.bindChatCommand( "/dev", {}, "cl_onChatCommand", "Gives you god mode and unlimited inventory" )
+		--Raft
 
 
 
@@ -397,6 +400,12 @@ function SurvivalGame.client_showMessage( self, msg )
 	sm.gui.chatMessage( msg )
 end
 
+
+--Raft
+local devCheats = false
+--Raft
+
+
 function SurvivalGame.cl_onChatCommand( self, params )
 
 	local unitSpawnNames =
@@ -485,6 +494,20 @@ function SurvivalGame.cl_onChatCommand( self, params )
 		self.network:sendToServer( "sv_setTimeProgress", false )
 	elseif params[1] == "/die" then
 		self.network:sendToServer( "sv_killPlayer", { player = sm.localPlayer.getPlayer() })
+	
+	--Raft
+	elseif params[1] == "/dev" then
+		if devCheats then
+			devCheats = false
+			self.network:sendToServer( "sv_switchGodMode" )
+			self.network:sendToServer( "sv_setLimitedInventory", true )
+		else
+			devCheats = true
+			self.network:sendToServer( "sv_switchGodMode" )
+			self.network:sendToServer( "sv_setLimitedInventory", false )
+		end
+
+	--Raft
 
 
 

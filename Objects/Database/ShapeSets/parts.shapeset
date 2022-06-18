@@ -369,6 +369,7 @@
          "rotationSet" : "PropYX",
          "stackSize" : 10,
          "sticky" : "+X-X+Y-Y-Z",
+         "showInInventory" : false,
          "uuid" : "69c559b4-5099-4322-8dda-9ebabdc4c600"
       },
       {
