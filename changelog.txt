@@ -13,5 +13,5 @@
 - Collection Net drops its contents upon being destroyed
 - Added Spyglass
 - Fixed instant craft glitch
-- Fixed crafter times in muliplayer
+- Fixed crafter times in multiplayer
 - Changed icon and colour of the waypoint in the makeshift antenna
