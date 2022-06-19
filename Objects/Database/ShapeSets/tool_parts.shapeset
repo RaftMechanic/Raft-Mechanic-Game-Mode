@@ -104,6 +104,21 @@
 			"ratings": {},
 			"stackSize": 1,
 			"showInInventory": false
+		},
+		{
+			"uuid": "77ff422b-0cfb-4f56-8e1a-5aa33aa28042",
+			"name": "obj_tool_spyglass",
+			"renderable": "$CONTENT_DATA/Characters/Char_Tools/Char_binocular/char_binocular_preview.rend",
+			"color": "ffffff",
+			"box": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"physicsMaterial": "Plastic",
+			"ratings": {},
+			"stackSize": 1,
+			"showInInventory": false
 		}
     ]
 }

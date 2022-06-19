@@ -91,7 +91,8 @@ obj_tool_axe = sm.uuid.new("c190da26-1f1b-4590-935c-d8cc17a24bbd")
 obj_tool_pickaxe = sm.uuid.new("2e5e8950-3a82-42b5-8f4e-36a446bf5f06")
 obj_tool_spear = sm.uuid.new("4967b981-d88f-4b9f-9a6a-d0c052b54e45")
 obj_tool_harpoon = sm.uuid.new("64e437f7-73fd-44e3-90db-650ef61adacc")
-obj_tool_wood_hammer = sm.uuid.new("e1227b41-f78a-4e33-a498-47d2a21b1066")
+obj_tool_wood_hammer = sm.uuid.new("e1227b41-f78a-4e33-a498-47d2a21b1066") 
+obj_tool_spyglass = sm.uuid.new("77ff422b-0cfb-4f56-8e1a-5aa33aa28042")
 
 --projectiles.projectileset
 projectile_harpoon = sm.uuid.new("382c818f-bdf6-41fd-96dd-7a4a1a176d9a")

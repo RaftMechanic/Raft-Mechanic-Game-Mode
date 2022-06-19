@@ -867,7 +867,8 @@ local ToolItems = {
     [tostring(tool_pickaxe)] = obj_tool_pickaxe,
     [tostring(tool_spear)] = obj_tool_spear,
     [tostring(tool_harpoon)] = obj_tool_harpoon,
-    [tostring(tool_wood_hammer)] = obj_tool_wood_hammer
+    [tostring(tool_wood_hammer)] = obj_tool_wood_hammer, 
+	[tostring(tool_spyglass)] = obj_tool_spyglass
 }
 function GetToolProxyItem( toolUuid )
 	return ToolItems[tostring( toolUuid )]
