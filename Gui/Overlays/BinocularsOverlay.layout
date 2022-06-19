@@ -6,7 +6,7 @@
             <Property key="TextAlign" value="Center"/>
             <Property key="FontName" value="SM_ItemTitle"/>
             <Property key="Caption" value="Placeholder Text: 2x"/>
-            <Property key="FontHeight" value="15"/>
+            <Property key="FontHeight" value="36"/>
         </Widget>
     </Widget>
     <CodeGeneratorSettings/>
