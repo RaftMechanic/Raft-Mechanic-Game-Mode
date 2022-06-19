@@ -253,7 +253,13 @@ function SharkBotUnit.server_onFixedUpdate( self, dt )
 		self.roamState.cliffAvoidance = true
 		self.pathingState:sv_setCliffAvoidance( true )
 		self.land = 0
-		self.retreatpos = self.unit.character.worldPosition
+		self.rayhit = sm.physics.raycast(self.unit.character.worldPosition,self.unit.character.worldPosition - sm.vec3.new(0,-4,0),{"terrainSurface"})
+		if self.rayhit == nil then
+			self.retreatpos = self.unit.character.worldPosition
+			self.rayhit = nil
+		else
+			self.rayhit = nil
+		end
 	else
 		self.land = self.land + 1
 		if self.land > 3 then
