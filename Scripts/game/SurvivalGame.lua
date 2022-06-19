@@ -42,7 +42,7 @@ SurvivalGame.enableFuelConsumption = true
 SurvivalGame.enableAmmoConsumption = true
 SurvivalGame.enableUpgrade = true
 
---SURVIVAL_DEV_SPAWN_POINT = sm.vec3.new(-1682.5, -1722, 2)
+SURVIVAL_DEV_SPAWN_POINT = sm.vec3.new(-1682.5, -1722, 2)
 
 local SyncInterval = 400 -- 400 ticks | 10 seconds
 local IntroFadeDuration = 1.1

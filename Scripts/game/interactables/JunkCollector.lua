@@ -105,7 +105,7 @@ function Collector:server_onFixedUpdate()
     end
 end
 
-function Collector:server_onDestroy()
+--[[function Collector:server_onDestroy()
     --probably not the best check, rip
     for k, player in pairs(sm.player.getAllPlayers()) do
         if player:getInventory():hasChanged( sm.game.getServerTick() - 1 ) then
@@ -127,7 +127,7 @@ function Collector:server_onDestroy()
         lootTable,
         self.sv.pos
     )
-end
+end]]
 
 function Collector:sv_takeAllJunk( inv )
     sm.container.beginTransaction()
