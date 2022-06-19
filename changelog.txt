@@ -11,3 +11,7 @@
 	- If the projectile hits an enemy, theres a 15% chance for it a drop, otherwise theres a 75% for it to drop
 - Adjusted Shark spawning code, they're less common now
 - Collection Net drops its contents upon being destroyed
+- Added Spyglass
+- Fixed instant craft glitch
+- Fixed crafter times in multiplayer
+- Changed icon and colour of the waypoint in the makeshift antenna

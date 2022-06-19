@@ -667,14 +667,15 @@
                {
                   "mesh" : "$CONTENT_DATA/Objects/Mesh/Parts/RaftFloorOuterCorner.obj",
 					 "subMeshList" : [
-						{
+                  {
 						   "material" : "DifAsgNor",
 						   "textureList" : [
-                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_dif.tga",
-                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_asg.tga",
-                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_nor.tga"
+                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
 						   ]
 						},
+						
 						{
 						   "material" : "DifAsgNor",
 						   "textureList" : [
@@ -686,9 +687,9 @@
 						{
 						   "material" : "DifAsgNor",
 						   "textureList" : [
-                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
+                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_dif.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_asg.tga",
+                           "$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_birch_nor.tga"
 						   ]
 						},
 						{
