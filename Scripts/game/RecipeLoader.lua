@@ -90,8 +90,8 @@ function merge_custom_crafting_recipes()
 	local workbench_recipes = {}
 	local hideout_recipes   = {}
 
-	load_recipes_and_store_in_table("$SURVIVAL_DATA/CraftingRecipes/craftbot.json" , craftbot_recipes )
-	load_recipes_and_store_in_table("$SURVIVAL_DATA/CraftingRecipes/workbench.json", workbench_recipes)
+	load_recipes_and_store_in_table("$CONTENT_DATA/CraftingRecipes/craftbot.json" , craftbot_recipes )
+	load_recipes_and_store_in_table("$CONTENT_DATA/CraftingRecipes/workbench.json", workbench_recipes)
 	load_recipes_and_store_in_table("$SURVIVAL_DATA/CraftingRecipes/hideout.json"  , hideout_recipes  )
 
 	for mod_uuid, v in pairs(ModDatabase.databases.descriptions) do
