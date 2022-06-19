@@ -1,3 +1,8 @@
 [[[----------------RELEASE----------------]]]
 
 - Removed item drop from scrap collectors due to bug which we cannot fix
+- Fixed model of inner raft roof corner
+- Improved shark AI
+- Added item pickup message
+- Fixed modded crafting recipes
+- Fixed item drop for spyglass
