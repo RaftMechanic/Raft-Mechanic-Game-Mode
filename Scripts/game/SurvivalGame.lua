@@ -832,7 +832,10 @@ function SurvivalGame.sv_onChatCommand(self, params, player)
 			pos = sm.vec3.new(0, -1344, 2)
 		elseif params[2] == "city" then
 			pos = sm.vec3.new(1600.25, -2064.75, 55)
-
+		elseif params[2] == "oil" then
+			pos = sm.vec3.new(0.25, 0.25, 100)
+		elseif params[2] == "maze" then
+			pos = sm.vec3.new(1536.25, 1280.25, 100)
 
 
 
