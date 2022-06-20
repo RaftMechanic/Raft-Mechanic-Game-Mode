@@ -230,5 +230,21 @@
    "b818bfa7-bc68-403f-a1cb-51cad1b35344" : {
       "description" : "Use para não pegar chuva! Ajuda a evitar o resfriado.",
       "title" : "Telha de Folha para Jangada"
+   },
+   "49350ac2-f7dc-457d-b29d-a2f117670f86" : {
+      "description" : "Deixa você subiiiiiir para o próximo andar! Ótimo para fazer coisas relacionadas com rampas e coisa e tal.",
+      "title" : "Canto Interno da Rampa para Jangada"
+   },
+   "811ea5d1-a2bf-4db7-b1c3-a86cee2c9e94" : {
+      "description" : "Deixa você subiiiiiir para o próximo andar! Ótimo para fazer coisas relacionadas com rampas e coisa e tal.",
+      "title" : "Canto Externo da Rampa para Jangada"
+   },
+   "3a880447-6556-4278-9356-7be8bf6a8ae9" : {
+      "description" : "Use para não pegar chuva! Ajuda a evitar o resfriado.",
+      "title" : "Canto Interno da Telha de Folha para Jangada"
+   },
+   "7a13d6ff-ceee-461b-b143-308e2589b07d" : {
+      "description" : "Use para não pegar chuva! Ajuda a evitar o resfriado.",
+      "title" : "Canto Externo da Telha de Folha para Jangada"
    }
 }

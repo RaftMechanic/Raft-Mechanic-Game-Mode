@@ -230,5 +230,21 @@
    "b818bfa7-bc68-403f-a1cb-51cad1b35344" : {
       "description" : "Usalo per fare in modo che non piova sulla tua testa. Un tipo di tetto molto verde.",
       "title" : "Tetto di foglie della zattera"
+   },
+   "49350ac2-f7dc-457d-b29d-a2f117670f86" : {
+      "description" : "Ti permette di elevarti al livello successivo! Perfetto per creare cose a cuneo.",
+      "title" : "Rampa della zattera angolo interno"
+   },
+   "811ea5d1-a2bf-4db7-b1c3-a86cee2c9e94" : {
+      "description" : "Ti permette di elevarti al livello successivo! Perfetto per creare cose a cuneo.",
+      "title" : "Rampa della zattera angolo esterno"
+   },
+   "3a880447-6556-4278-9356-7be8bf6a8ae9" : {
+      "description" : "Usalo per fare in modo che non ti piova sulla testa. Un tipo di tetto molto verde.",
+      "title" : "Tetto di foglie della zattera angolo interno"
+   },
+   "7a13d6ff-ceee-461b-b143-308e2589b07d" : {
+      "description" : "Usalo per fare in modo che non ti piova sulla testa. Un tipo di tetto molto verde.",
+      "title" : "Tetto di foglie della zattera angolo esterno"
    }
 }
