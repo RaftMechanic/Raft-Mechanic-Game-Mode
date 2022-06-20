@@ -1,7 +1,6 @@
 {
    "partList" : [
       {
-         "showInInventory" : false,
          "autoTool" : "09a952e0-24fe-451a-abe8-b912d1c5bbac",
          "box" : {
             "x" : 1,
@@ -24,12 +23,12 @@
             "classname" : "Torch",
             "filename" : "$CONTENT_DATA/Scripts/game/interactables/Torch.lua"
          },
+         "showInInventory" : true,
          "stackSize" : 10,
          "sticky" : "-Y",
          "uuid" : "ce986935-5b57-4249-acbb-04ef6666bb03"
       },
       {
-         "showInInventory" : false,
          "autoTool" : "09a952e0-24fe-451a-abe8-b912d1c5bbac",
          "box" : {
             "x" : 1,
@@ -52,12 +51,12 @@
             "classname" : "Torch",
             "filename" : "$CONTENT_DATA/Scripts/game/interactables/Torch.lua"
          },
+         "showInInventory" : false,
          "stackSize" : 10,
          "sticky" : "-Y",
          "uuid" : "93e8a46a-5c24-42d2-8261-67be84e05ccf"
       },
       {
-         "showInInventory" : false,
          "autoTool" : "09a952e0-24fe-451a-abe8-b912d1c5bbac",
          "box" : {
             "x" : 1,
@@ -80,6 +79,7 @@
             "classname" : "Torch",
             "filename" : "$CONTENT_DATA/Scripts/game/interactables/Torch.lua"
          },
+         "showInInventory" : false,
          "stackSize" : 10,
          "sticky" : "-Y",
          "uuid" : "ca0baeac-1ba7-41b2-9119-2fa09ed6c96a"
@@ -1459,7 +1459,6 @@
             "usable" : true
          },
          "rotationSet" : "PropY",
-         "sticky" : "-Y",
          "scripted" : {
             "classname" : "Hammock",
             "data" : {},
@@ -1498,6 +1497,7 @@
                "ragdollFile" : "$SURVIVAL_DATA/Character/bed_ragdoll.json"
             }
          },
+         "sticky" : "-Y",
          "uuid" : "4c1aed86-a402-4240-81e7-b67edf433fd5"
       },
       {
@@ -1631,51 +1631,51 @@
          "uuid" : "f2382297-44b4-4259-99ce-b11da671ac51"
       },
       {
-			"uuid": "e49b210a-0d46-4f06-bcd8-08862379d156",
-			"name": "obj_survivalobject_keycard",
-			"renderable": {
-				"lodList": [
-					{
-						"subMeshList": [
-							{
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/survivalobject/obj_survivalobject_keycard_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/survivalobject/obj_survivalobject_keycard_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/survivalobject/obj_survivalobject_keycard_nor.tga"
-								],
-								"material": "DifAsgNor"
-							}
-						],
-						"mesh": "$SURVIVAL_DATA/Objects/Mesh/survivalobject/obj_survivalobject_keycard.fbx"
-					}
-				]
-			},
-			"color": "cbcbcb",
-			"box": {
-				"x": 2,
-				"y": 2,
-				"z": 1
-			},
-			"rotationSet": "PropYNegZ",
-			"sticky": "+Z-Y",
-			"physicsMaterial": "Metal",
+         "autoTool" : "59a3469c-d7cd-4784-aa5b-316749abc2b6",
+         "box" : {
+            "x" : 2,
+            "y" : 2,
+            "z" : 1
+         },
+         "color" : "cbcbcb",
+         "flammable" : false,
+         "name" : "obj_survivalobject_keycard",
+         "physicsMaterial" : "Metal",
+         "ratings" : {
+            "buoyancy" : 3,
+            "density" : 3,
+            "durability" : 10,
+            "friction" : 3
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$SURVIVAL_DATA/Objects/Mesh/survivalobject/obj_survivalobject_keycard.fbx",
+                  "subMeshList" : [
+                     {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/survivalobject/obj_survivalobject_keycard_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/survivalobject/obj_survivalobject_keycard_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/survivalobject/obj_survivalobject_keycard_nor.tga"
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         "restrictions" : {
+            "paintable" : false
+         },
+         "rotationSet" : "PropYNegZ",
          "scripted" : {
             "classname" : "WarehouseKey",
             "data" : {},
             "filename" : "$CONTENT_DATA/Scripts/game/interactables/WarehouseKey.lua"
          },
-			"ratings": {
-				"density": 3,
-				"durability": 10,
-				"friction": 3,
-				"buoyancy": 3
-			},
-			"flammable": false,
-			"stackSize": 1,
-			"restrictions": {
-				"paintable": false
-			},
-			"autoTool": "59a3469c-d7cd-4784-aa5b-316749abc2b6"
-		}
+         "stackSize" : 1,
+         "sticky" : "+Z-Y",
+         "uuid" : "e49b210a-0d46-4f06-bcd8-08862379d156"
+      }
    ]
 }
