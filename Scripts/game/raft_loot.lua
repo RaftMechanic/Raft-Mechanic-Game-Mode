@@ -163,13 +163,13 @@ function raft_SpawnLoot( origin, lootList, worldPosition, ringAngle )
 			local loot = lootList[i]
 			local params = { lootUid = loot.uuid, lootQuantity = loot.quantity or 1, epic = loot.epic }
 			local vel = dir * (4+math.random()*2)
-			local projectileName = loot.epic and "epicloot" or "loot"
+			local projectileUuid = loot.epic and projectile_epicloot or projectile_loot
 			if type( origin ) == "Shape" then
-				sm.projectile.shapeCustomProjectileAttack( params, projectileName, 0, sm.vec3.new( 0, 0, 0 ), vel, origin, 0 )
+				sm.projectile.shapeCustomProjectileAttack( params, projectileUuid, 0, sm.vec3.new( 0, 0, 0 ), vel, origin, 0 )
 			elseif type( origin ) == "Player" or type( origin ) == "Unit" then
-				sm.projectile.customProjectileAttack( params, projectileName, 0, worldPosition, vel, origin, worldPosition, worldPosition, 0 )
+				sm.projectile.customProjectileAttack( params, projectileUuid, 0, worldPosition, vel, origin, worldPosition, worldPosition, 0 )
 			elseif type( origin ) == "Harvestable" then
-				sm.projectile.harvestableCustomProjectileAttack( params, projectileName, 0, worldPosition, vel, origin, 0 )
+				sm.projectile.harvestableCustomProjectileAttack( params, projectileUuid, 0, worldPosition, vel, origin, 0 )
 			end
 		end
 	end
