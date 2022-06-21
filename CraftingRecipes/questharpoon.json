@@ -22,11 +22,11 @@
 	//Projectile
 	{
 		"itemId": "4a971f7d-14e6-454d-bce8-0879243c4857",
-		"quantity": 1,
+		"quantity": 5,
 		"craftTime": 17,
 		"ingredientList": [
 			{
-				"quantity": 5,
+				"quantity": 10,
 				"itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
 			}
 		]

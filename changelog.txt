@@ -1,2 +1,7 @@
 [[[----------------RELEASE----------------]]]
 
+- Harpoon changes:
+-- Adjusted the recipe so that 10 metal 1 gives you 5 harpoons
+-- Drop chances adjusted:
+--- harpoon hits enemy - 50% chance
+--- harpoon hits anything else - 100% chance

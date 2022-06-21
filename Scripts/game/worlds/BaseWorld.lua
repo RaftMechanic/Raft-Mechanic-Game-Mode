@@ -347,7 +347,7 @@ function BaseWorld.server_onProjectile( self, hitPos, hitTime, hitVelocity, _, a
 	end
 
 	--raft
-	local dropChance = type(target) == "Character" and 0.15 or 0.75
+	local dropChance = type(target) == "Character" and 0.5 or 1
 	if projectileUuid == projectile_harpoon and math.random() < dropChance then
 		local normal = -hitVelocity:normalize()
 		local zSignOffset = math.min( sign( normal.z ), 0 ) * 0.5
