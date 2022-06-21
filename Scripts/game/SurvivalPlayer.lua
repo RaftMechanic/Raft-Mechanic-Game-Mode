@@ -461,10 +461,10 @@ function SurvivalPlayer.server_onInventoryChanges( self, container, changes )
 			self.network:sendToClient( self.player, "cl_e_tutorial", "farm" )
 		end
 		--RAFT
-		self.network:sendToClient( self.player, "cl_n_onInventoryChanges", { container = container, changes = changes } )
 	end
 
 	--RAFT
+	self.network:sendToClient( self.player, "cl_n_onInventoryChanges", { container = container, changes = changes } )
 	self:sv_checkRenderables(container)
 end
 
