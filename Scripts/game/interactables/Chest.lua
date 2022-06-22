@@ -27,15 +27,17 @@ end
 local function getOverlappingShapes( table )
     local overlapping = {}
     for v, shape in pairs(table) do
-        local shapes = { shape }
-        for k, overlap in pairs(table) do
-            if overlap ~= shape and overlap:getWorldPosition() == shape:getWorldPosition() then
-                shapes[#shapes+1] = overlap
+        if sm.exists(shape) then
+            local shapes = { shape }
+            for k, overlap in pairs(table) do
+                if sm.exists(overlap) and overlap ~= shape and overlap:getWorldPosition() == shape:getWorldPosition() then
+                    shapes[#shapes+1] = overlap
+                end
             end
-        end
 
-        if #shapes > 1 then
-            overlapping[#overlapping+1] = shapes
+            if #shapes > 1 then
+                overlapping[#overlapping+1] = shapes
+            end
         end
     end
 
