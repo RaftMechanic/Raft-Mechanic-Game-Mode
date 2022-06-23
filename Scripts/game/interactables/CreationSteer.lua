@@ -19,6 +19,7 @@ local controlModes = {
 }
 
 local maxForceMult = 25
+local massDivider = 15
 
 function Steer:server_onCreate()
     self.sv = {}
@@ -122,7 +123,7 @@ function Steer:server_onFixedUpdate( dt )
         forceDir = parentDir * seatParent:getSteeringAngle()
     end
 
-    sm.physics.applyTorque( bodyToRotate, forceDir * (creationMass / 2.5) * dt * self.sv.data.slider, true )
+    sm.physics.applyTorque( bodyToRotate, forceDir * (creationMass / massDivider) * dt * self.sv.data.slider, true )
     if not self.interactable:isActive() then
         self:sv_updateState( { active = true, power = 1, index = 7 } )
     end
