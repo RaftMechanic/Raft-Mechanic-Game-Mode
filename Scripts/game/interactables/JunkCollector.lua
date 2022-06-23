@@ -1,4 +1,5 @@
 dofile "$CONTENT_DATA/Scripts/game/raft_loot.lua"
+dofile "$SURVIVAL_DATA/Scripts/util.lua"
 
 Collector = class()
 
@@ -276,22 +277,5 @@ function Collector:client_onUpdate( dt )
                 k.effect:start()
             end
         end
-    end
-
-    if not self.cl.beaconIconGui then
-        self.cl.beaconIconGui = sm.gui.createWorldIconGui( 44, 44, "$GAME_DATA/Gui/Layouts/Hud/Hud_BeaconIcon.layout", false )
-        local clientData = {
-            iconIndex = 0,
-            colorIndex = 1
-        }
-        self.cl.beaconIconGui:setItemIcon( "Icon", "BeaconIconMap", "BeaconIconMap", tostring( clientData.iconIndex ) )
-        local beaconColor = BEACON_COLORS[clientData.colorIndex]
-        self.cl.beaconIconGui:setColor( "Icon", beaconColor )
-        self.cl.beaconIconGui:setHost( self.shape )
-        self.cl.beaconIconGui:setRequireLineOfSight( false )
-        self.cl.beaconIconGui:setMaxRenderDistance(10000)
-        self.cl.beaconIconGui:open()
-    else
-        self.cl.beaconIconGui:setWorldPosition(self.shape.worldPosition)
     end
 end
