@@ -5,14 +5,13 @@
          "subMeshList" : [
             {
                "material" : "Dif",
-               "textureList" : [ "$CONTENT_DATA/Objects/Textures/Consumables/Fish.png", "", "" ]
+               "textureList" : [ "$CONTENT_DATA/Objects/Textures/Consumables/Fish.png" ]
             },
             {
                "material" : "DifAsg",
                "textureList" : [
                   "$CONTENT_DATA/Objects/Textures/color_atlas.tga",
-                  "$CONTENT_DATA/Objects/Textures/asg_atlas.tga",
-                  ""
+                  "$CONTENT_DATA/Objects/Textures/asg_atlas.tga"
                ]
             }
          ]

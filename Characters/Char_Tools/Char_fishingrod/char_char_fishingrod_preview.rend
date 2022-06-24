@@ -3,7 +3,7 @@
 		{
 			"subMeshMap": {
 				"bark": {
-					"material": "Dif",
+					"material": "DifAsgNor",
 					"textureList": [
 					  	"$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_brownbark_dif.tga",
 						"$SURVIVAL_DATA/Harvestables/Textures/Trees/t_tiled_brownbark_asg.tga",
@@ -21,9 +21,7 @@
 				"initialShadingGroup": {
 					"material": "Dif",
 					"textureList": [
-						"$CONTENT_DATA/Characters/Char_Tools/Char_fishingrod/FishingRod.png",
-						"",
-						""
+						"$CONTENT_DATA/Characters/Char_Tools/Char_fishingrod/FishingRod.png"
 					]
 				}
 			},

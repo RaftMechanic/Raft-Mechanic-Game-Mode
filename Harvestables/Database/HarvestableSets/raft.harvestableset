@@ -27,7 +27,6 @@
 		{
 			"name": "hvs_loot_sunshake_recipe",
 			"showInEditor": true,
-			"type": "filler",
 			"uuid": "38226bbb-1985-4b21-9f2b-ea625b95b3b7",
 			"renderable": "$CONTENT_DATA/Harvestables/Renderables/invis_harvestable.rend",
 			"col": "$CONTENT_DATA/Harvestables/Collision/hvs_loot_bigger_col.obj",
@@ -39,6 +38,10 @@
 				"melee": false
 			},
 			"removable": true,
+			"size": 1,
+			"type": "filler",
+			"material": "Wood",
+			"mass": 15000,	
 			"script": { 
 				"file": "$CONTENT_DATA/Scripts/game/harvestable/SunshakeRecipe.lua", 
 				"class": "SunshakeRecipe", 

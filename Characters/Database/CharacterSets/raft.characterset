@@ -18,7 +18,8 @@
             "unit":
             {
                 "scriptPath": "$CONTENT_DATA/Scripts/game/units/SharkBotUnit.lua",
-                "scriptClass": "SharkBotUnit"
+                "scriptClass": "SharkBotUnit",
+                "data": {}
             },
             "character": 
             {

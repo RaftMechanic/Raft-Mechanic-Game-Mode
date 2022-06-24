@@ -5,9 +5,7 @@
 				"lambert2SG": {
 					"material": "Dif",
 					"textureList": [
-					  	"$CONTENT_DATA/Objects/Textures/Consumables/Fishus.png",
-					  	"",
-					  	""
+					  	"$CONTENT_DATA/Objects/Textures/Consumables/Fishus.png"
 					]
 				}
 			},
