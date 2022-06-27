@@ -475,14 +475,6 @@
                            "$GAME_DATA/Textures/Tiled/Wood/t_tiled_brownbark_asg.tga",
                            "$GAME_DATA/Textures/Tiled/Wood/t_tiled_brownbark_nor.tga"
                         ]
-                     },
-                     "submesh1_innerwood.002" : {
-                        "material" : "DifAsgNor",
-                        "textureList" : [
-                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
-                        ]
                      }
                   }
                }
@@ -552,6 +544,7 @@
                            "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
                            "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
                            "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
+<<<<<<< Updated upstream
                         ]
                      },
                      {
@@ -564,6 +557,12 @@
                      }
                   ]
                }
+=======
+						   ]
+						}
+					 ]
+				}
+>>>>>>> Stashed changes
             ]
          },
          "rotationSet" : "PropYX",

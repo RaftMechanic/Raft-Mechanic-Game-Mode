@@ -141,7 +141,7 @@
          },
          "rotationSet" : "PropY",
          "scripted" : {
-            "classname" : "ScrapField",
+            "classname" : "FieldCrafter",
             "filename" : "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
          },
          "sticky" : "-Y",
@@ -196,7 +196,7 @@
          },
          "rotationSet" : "PropY",
          "scripted" : {
-            "classname" : "BigFarm",
+            "classname" : "FieldCrafter",
             "filename" : "$CONTENT_DATA/Scripts/game/interactables/Crafter.lua"
          },
          "sticky" : "+X-X-Y+Z-Z",
