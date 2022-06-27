@@ -351,9 +351,8 @@ function Crafter.sv_init( self )
 
 	--Raft
 	for idx, val in ipairs( self.sv.craftArray ) do
-		local craftTime = math.ceil( val.recipe.craftTime / self.crafter.speed ) + 120
-		if val and (val.time <= craftTime and isAnyOf(self.shape.uuid, { obj_grill, obj_scrap_field, obj_large_field } ) or val.time < craftTime) then
-			self.network:sendToClients("cl_onCraftStart", val.recipe)
+		if val and (isAnyOf(self.shape.uuid, { obj_grill, obj_scrap_field, obj_large_field, obj_scrap_tree_grower } ) or val.time < val.recipe.craftTime) then
+			self.network:sendToClients("cl_onCraftStart", val)
 			break
 		end
 	end
@@ -732,7 +731,6 @@ function Crafter.server_onFixedUpdate( self )
 
 						if self.shape:getShapeUuid() == obj_scrap_tree_grower then
 							for _, itemId in ipairs( val.recipe.ingredientList) do
-								local tree = nil
 								for __, uuid in pairs(itemId) do
 									if isAnyOf(uuid, saplings) then
 										local treeTable = treeEffects[tostring(uuid)]
@@ -742,7 +740,7 @@ function Crafter.server_onFixedUpdate( self )
 							end
 						end
 
-						self.network:sendToClients("cl_onCraftStart", recipe)
+						self.network:sendToClients("cl_onCraftStart", val)
 						--RAFT
 
 						self:sv_markClientDataDirty()
@@ -1707,10 +1705,11 @@ function FieldCrafter:getEffectOffsetPos(craftProgress)
 	end
 end
 
-function FieldCrafter:cl_onCraftStart(recipe)
+function FieldCrafter:cl_onCraftStart(val)
 	local pos1, pos2 = self:getEffectPos()
+	local recipe = val.recipe
 
-	if recipeHasFertilizer(recipe) then
+	if recipeHasFertilizer(recipe) and val.time < recipe.craftTime then
 		self.cl.mainEffects["fertilizer1"]:setOffsetPosition(self.shape:transformPoint(pos1))
 		self.cl.mainEffects["fertilizer1"]:start()
 		if pos2 then
@@ -1730,6 +1729,10 @@ function FieldCrafter:cl_onCraftStart(recipe)
 		self.cl.mainEffects["crop2"]:setScale(sm.vec3.zero())
 		self.cl.mainEffects["crop2"]:start()
 		sm.effect.playEffect( "Plants - Planted", pos2 )
+	end
+
+	if val.time >= recipe.craftTime then
+		self:cl_onCraftUpdate(val, math.min(val.time/recipe.craftTime, 1))
 	end
 end
 
@@ -1780,8 +1783,9 @@ end
 ScrapTreeGrower = class( RaftCrafter )
 ScrapTreeGrower.requireRecipeUpdate = true
 ScrapTreeGrower.requireOnItemCollected = true
-function ScrapTreeGrower:cl_onCraftStart(recipe)
-	if recipeHasFertilizer(recipe) then
+function ScrapTreeGrower:cl_onCraftStart(val)
+	local recipe = val.recipe
+	if recipeHasFertilizer(recipe) and val.time < recipe.craftTime then
 		self.cl.mainEffects["fertilizer"]:start()
 	end
 
@@ -1791,6 +1795,10 @@ function ScrapTreeGrower:cl_onCraftStart(recipe)
 	self.cl.mainEffects["tree"]:setScale(sm.vec3.zero())
 	self.cl.mainEffects["tree"]:start()
 	sm.effect.playEffect( "Plants - Planted", self.shape:getWorldPosition() + self.shape.at*0.6 )
+
+	if val.time >= recipe.craftTime then
+		self:cl_onCraftUpdate(val, math.min(val.time/recipe.craftTime, 1))
+	end
 end
 
 function ScrapTreeGrower:cl_onCraftUpdate(val, craftProgress)
@@ -1851,8 +1859,11 @@ end
 
 Grill = class( RaftCrafter )
 Grill.requireOnItemCollected = true
-function Grill:cl_onCraftStart(recipe)
-	self.cl.mainEffects["fire"]:start()
+function Grill:cl_onCraftStart(val)
+	local recipe = val.recipe
+	if val.time < val.recipe.craftTime then
+		self.cl.mainEffects["fire"]:start()
+	end
 
 	local food = nil
 	for _, itemId in ipairs(recipe.ingredientList) do
