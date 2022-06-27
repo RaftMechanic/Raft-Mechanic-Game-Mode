@@ -544,25 +544,10 @@
                            "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_dif.tga",
                            "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_asg.tga",
                            "$SURVIVAL_DATA/Objects/Textures/harvests/Loggs/obj_harvest_log_nor.tga"
-<<<<<<< Updated upstream
-                        ]
-                     },
-                     {
-                        "material" : "DifAsgNor",
-                        "textureList" : [
-                           "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_dif.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_asg.tga",
-                           "$SURVIVAL_DATA/Objects/Textures/blocks/blk_plastic_nor.tga"
                         ]
                      }
                   ]
                }
-=======
-						   ]
-						}
-					 ]
-				}
->>>>>>> Stashed changes
             ]
          },
          "rotationSet" : "PropYX",
