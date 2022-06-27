@@ -112,18 +112,7 @@ function Hammock:server_onFixedUpdate( dt )
 
 		--print("first hammock did stuff!", self.shape.id, #g_sleepers)
 		if not self.skip.active then
-			local sleepingPeople = 0
-			for k, player in pairs(sm.player.getAllPlayers()) do
-				local char = player.character
-				if sm.exists(char) then
-					local lockingInt = char:getLockingInteractable()
-					if lockingInt ~= nil and lockingInt.shape.uuid == obj_hammock then
-						sleepingPeople = sleepingPeople + 1
-					end
-				end
-			end
-
-			if sleepingPeople == #sm.player.getAllPlayers() then
+			if self:getSleepingPeople() == #sm.player.getAllPlayers() then
 				self.skip.active = true
 				self.skip.tick = sm.game.getCurrentTick() + sleepTime
 			end
@@ -176,25 +165,36 @@ function Hammock:client_canInteract()
 	return true
 end
 
-function Hammock:client_onInteract(character, state )
+function Hammock:client_onInteract( character, state )
 	Bed.client_onInteract(self, character, state)
 	if state == true then
 		sm.event.sendToPlayer(sm.localPlayer.getPlayer(), "cl_e_tutorial", "sleep")
-
-		local sleepingPeople = 0
-		for k, player in pairs(sm.player.getAllPlayers()) do
-			local char = player.character
-			if sm.exists(char) then
-				local lockingInt = char:getLockingInteractable()
-																						--epic fix
-				if lockingInt ~= nil and lockingInt.shape.uuid == obj_hammock or player == sm.localPlayer.getPlayer() then
-					sleepingPeople = sleepingPeople + 1
-				end
-			end
-		end
-
-		if sleepingPeople ~= #sm.player.getAllPlayers() then
+		if self:getSleepingPeople() + 1 ~= #sm.player.getAllPlayers() then
 			sm.gui.displayAlertText(language_tag("HammockAllPlayers"))
 		end
 	end
+end
+
+function Hammock:getSleepingPeople()
+	local sleepingPeople = 0
+	for k, player in pairs(sm.player.getAllPlayers()) do
+		local char = player.character
+		if sm.exists(char) then
+			local lockingInt = char:getLockingInteractable()
+			if lockingInt ~= nil and lockingInt.shape.uuid == obj_hammock then
+				sleepingPeople = sleepingPeople + 1
+			end
+		end
+	end
+
+	return sleepingPeople
+end
+
+function Hammock:client_onAction( controllerAction, state )
+	local time = sm.game.getTimeOfDay()
+	local night = time > 0.85 or time < 0.175
+	if night then return true end
+
+	Bed.client_onAction( self, controllerAction, state )
+	return true
 end
