@@ -59,5 +59,68 @@
     "HammockAllPlayers": "Alle Spieler müssen schlafen um die Nacht zu überspringen",
     "HammockNight": "Du kannst nur Nachts schlafen",
 
-    "ClamDivingSucks": "#ff88ffHabe ich schon gesagt dass ich Muscheltauchen hasse?"
+    "ClamDivingSucks": "#ff88ffHabe ich schon gesagt dass ich Muscheltauchen hasse?",
+
+    "Quest_Tutorial": "Gestrandet",
+    "Quest_Tutorial_Sleep": "Schlafe in der Hängematte",
+    "Quest_Tutorial_Workbench": "Öffne die Werkbank",
+    "Quest_Tutorial_Hammer": "Stelle einen Holzhammer her",
+
+    "Quest_RangerStation": "Außenposten des Weltraum Rangers",
+    "Quest_RangerStation_Logbook": "Lese den \"Außenposten des Weltraum Rangers\" Eintrag",
+    "Quest_RangerStation_Go_To": "Erreiche den Außenposten",
+    "Quest_RangerStation_Activate": "Finde einen Weg den Außenposten zu aktivieren",
+
+    "Quest_BuildRadio": "Irgendjemand da draußen?",
+    "Quest_BuildRadio_Logbook": "Lese den \"Antennenstatus\" Eintrag",
+    "Quest_BuildRadio_Craftbot": "Baue einen Handwerkerbot",
+    "Quest_BuildRadio_Wood": "Stelle 20 Holzblock 1 her",
+    "Quest_BuildRadio_Craft_Antenna": "Stelle eine Behilfsmäßige Radio Antenne her",
+    "Quest_BuildRadio_Use_Antenna": "Sende ein Notsignal",
+
+    "Quest_RadioSignal": "Rettungsmission",
+    "Quest_RadioSignal_Logbook": "Lese den \"Rettungsmission\" Eintrag",
+    "Quest_RadioSignal_Cotton": "Finde Baumwolle",
+    "Quest_RadioSignal_Windsock": "Stelle eine Windsocke her",
+    "Quest_RadioSignal_Sail": "Stelle ein Segel her",
+    "Quest_RadioSignal_FindWreck": "Erreiche die Quelle des Notsignals",
+    "Quest_RadioSignal_ExploreWreck": "Erkunde das Wrack für Hinweise",
+
+    "QuestItemTooEarly": "Ich sollte das später untersuchen",
+
+    "Quest_FindTrader": "Die Spuren des Händlers",
+    "Quest_FindTrader_Logbook": "Lese den \"Notizen des Händlers\" Eintrag",
+    "Quest_FindTrader_ReachTrader": "Erreiche die in den Notizen erwähnte Insel",
+    "Quest_FindTrader_TalkTrader": "Rede mit dem Händler",
+
+    "Quest_Vegetables": "Liefermechaniker",
+    "Quest_Vegetables_Logbook": "Lese den \"Gemüse für den Händler\" Eintrag",
+    "Quest_Vegetables_ReachStation": "Finde die Verpackungsstation",
+    "Quest_Vegetables_SuckCrates": "Liefere die Kisten zu \"Bertha\"",
+
+    "Quest_WocTemple": "Das Mysterium der Wocs",
+    "Quest_WocTemple_Logbook": "Lese den \"Das Mysterium der Wocs\" Eintrag",
+    "Quest_WocTemple_ReachTemple": "Erreiche die Insel mit abnormaler Wocaktivität",
+    "Quest_WocTemple_FindTemple": "Finde die Quelle der abnormalen Wocaktivität",
+    "Quest_WocTemple_GetRecipe": "Erkunde den Tempel",
+
+    "SunshakeRecipe": "Sunshake Rezept",
+
+    "Quest_Fruits": "Liefermechaniker (Schon wieder)",
+    "Quest_Fruits_Logbook": "Lese den \"Früchte für den Händler\" Eintrag",
+
+    "Quest_ScrapCity": "Verlorene Zivilisation",
+    "Quest_ScrapCity_Logbook": "Lese den \"Scrap City\" Eintrag",
+    "Quest_ScrapCity_ReachCity": "Erreiche die verlassene Stadt",
+    "Quest_ScrapCity_FindRuin": "Finde die höchste Ruine",
+    "Quest_ScrapCity_GetKey": "Untersuche das Gebäude auf eigenartige Objekte",
+
+    "Quest_Warehouse": "Das Lagerhaus",
+    "Quest_Warehouse_Logbook": "Lese den \"Warenhausüberfall\" Eintrag",
+    "Quest_Warehouse_Enter": "Betrete das Lagerhaus",
+    "Quest_Warehouse_FindFarmer": "Finde den gefangenen Bauer im obersten Stockwerk",
+    "Quest_Warehouse_SuckFarmer": "Entkomme dem Lagerhaus und lass Bertha den Bauer \"retten\"",
+
+    "Quest_Chapter2": "Kapitel 2",
+    "Quest_Chapter2_Logbook": "Lies den \"Kapitel 2\" Eintrag"
 }
