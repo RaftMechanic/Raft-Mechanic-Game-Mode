@@ -1,7 +1,7 @@
 {
    "lodList" : [
       {
-         "mesh" : "$CONTENT_DATA/Objects/Mesh/Parts/RaftFloorSteep.obj",
+         "mesh" : "$CONTENT_DATA/Objects/Mesh/Parts/raft-floors/raft-floor-steep.obj",
          "subMeshList" : [
             {
                "material" : "DifAsgNor",
