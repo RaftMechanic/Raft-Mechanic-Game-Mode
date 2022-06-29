@@ -218,5 +218,33 @@
     "4a1888f7-7376-49aa-97a0-1aaf1ae75e2a" : {
       "description" : "Du hast sie gefunden!\n\n\n\n#050505Die Matterie um sie herum sieht instabil aus..\n\n#212328Dart Frog Referenz :D",
       "title" : "Gefrorene Ameise"
+   },
+    "fe70aab4-1a51-4428-bb33-566551f0aea5" : {
+      "description" : "Benutz dieses Teil um dein Floß professionell aussehen zu lassen!",
+      "title" : "Floßbodeneck"
+   },
+    "ce5c6bce-a157-4e0b-8707-ce987b1d4d19" : {
+      "description" : "Eine Rampe die je nach Perspektive einen Stock höher oder tiefer geht",
+      "title" : "Floßbodenrampe"
+   },
+    "b818bfa7-bc68-403f-a1cb-51cad1b35344" : {
+      "description" : "Benutz es um zu verhindern dass Regen deinen Kopf trifft. Ein sehr grünes Dach",
+      "title" : "Blattdach"
+   },
+    "49350ac2-f7dc-457d-b29d-a2f117670f86" : {
+      "description" : "Eine Rampe die je nach Perspektive einen Stock höher oder tiefer geht",
+      "title" : "Inneres Floßbodenrampeneck"
+   },
+    "811ea5d1-a2bf-4db7-b1c3-a86cee2c9e94" : {
+      "description" : "Eine Rampe die je nach Perspektive einen Stock höher oder tiefer geht",
+      "title" : "Außeres Floßbodenrampeneck"
+   },
+   "3a880447-6556-4278-9356-7be8bf6a8ae9" : {
+      "description" : "Benutz es um zu verhindern dass Regen deinen Kopf trifft. Ein sehr grünes Dach.",
+      "title" : "Inneres Blattdackeck"
+   },
+   "7a13d6ff-ceee-461b-b143-308e2589b07d" : {
+      "description" : "Liest jemand diese Beschreibungen überhaupt?",
+      "title" : "Äußeres Blattdacheck"
    }
 }
