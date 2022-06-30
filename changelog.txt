@@ -13,3 +13,4 @@
 - Fixed model and alignment of Raft roof piece
 - Fixes to crafter code
 - Fixed bug which allowed you to get out of bed after you started to skip the night
+- Made Airtank paintable
