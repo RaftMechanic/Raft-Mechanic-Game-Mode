@@ -319,7 +319,6 @@ end
 
 function HideoutTrader.cl_updateTradeGrid( self )
 	self.cl.guiInterface:clearGrid( "TradeGrid" )
-	self.cl.guiInterface:addGridItemsFromFile( "TradeGrid", "$CONTENT_DATA/CraftingRecipes/hideout.json" )
 
 	--RAFT
 	if QuestManager.Cl_IsQuestComplete("quest_deliver_fruits") then
@@ -328,7 +327,12 @@ function HideoutTrader.cl_updateTradeGrid( self )
 	if QuestManager.Cl_IsQuestComplete("quest_scrap_city") then
 		self.cl.guiInterface:addGridItemsFromFile( "TradeGrid", "$CONTENT_DATA/CraftingRecipes/warehousekey.json" )
 	end
-		self.cl.guiInterface:addGridItemsFromFile( "TradeGrid", "$CONTENT_DATA/Scripts/HideoutMergedRecipes.json" )
+	--RAFT
+
+	local gui_int = self.cl.guiInterface
+	for k, path in ipairs(cmi_valid_crafting_recipes.hideout) do
+		gui_int:addGridItemsFromFile("TradeGrid", path)
+	end
 end
 
 function HideoutTrader.cl_n_addVacuumItem( self, params )

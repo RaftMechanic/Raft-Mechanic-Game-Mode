@@ -281,7 +281,7 @@ end
 
 function SurvivalGame.loadCraftingRecipes(self)
 	--Modded Crafting Recipes
-	merge_custom_crafting_recipes()
+	initialize_crafting_recipes()
 	--
 	raft_LoadCraftingRecipes({
 		dispenser = "$CONTENT_DATA/CraftingRecipes/dispenser.json",
@@ -289,8 +289,8 @@ function SurvivalGame.loadCraftingRecipes(self)
 		dressbot = "$SURVIVAL_DATA/CraftingRecipes/dressbot.json",
 
 		--Craftbot recipe modified, Modded Crafting Recipes
-		craftbot = cmi_merged_recipes_paths.craftbot,
-		workbench = cmi_merged_recipes_paths.workbench,
+		craftbot = cmi_valid_crafting_recipes.craftbot,
+		workbench = cmi_valid_crafting_recipes.workbench,
 
 		--Raft
 		farm = "$CONTENT_DATA/CraftingRecipes/farm.json",

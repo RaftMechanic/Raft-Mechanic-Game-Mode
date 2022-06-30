@@ -619,30 +619,42 @@ end
 function Crafter.cl_updateRecipeGrid( self )
 	self.cl.guiInterface:clearGrid( "RecipeGrid" )
 	for _, recipeSet in ipairs( self.crafter.recipeSets ) do
-		print( "Adding", g_craftingRecipes[recipeSet.name].path ) 
+		local rec_set_name = recipeSet.name
+		print( "Adding", g_craftingRecipes[rec_set_name].path ) 
+		local cur_recipe_data = g_craftingRecipes[rec_set_name].path
 
 
 		--RAFT --TODO make quest system work
 		local locked = recipeSet.locked
-		if recipeSet.name == "workbench" then
+		if rec_set_name == "workbench" then
 			locked = not QuestManager.Cl_IsQuestComplete("quest_raft_tutorial")
-		elseif recipeSet.name == "quest1" then
+		elseif rec_set_name == "quest1" then
 			locked = not QuestManager.Cl_IsQuestComplete("quest_rangerstation")
-		elseif recipeSet.name == "questsail" then
+		elseif rec_set_name == "questsail" then
 			locked = not QuestManager.Cl_IsQuestComplete("quest_radio_interactive")
-		elseif recipeSet.name == "questpropeller" then
+		elseif rec_set_name == "questpropeller" then
 			locked = not QuestManager.Cl_IsQuestComplete("quest_find_trader")
-		elseif recipeSet.name == "questveggies" then
+		elseif rec_set_name == "questveggies" then
 			locked = not QuestManager.Cl_IsQuestComplete("quest_deliver_vegetables")
-		elseif recipeSet.name == "questharpoon" then
+		elseif rec_set_name == "questharpoon" then
 			locked = not QuestManager.Cl_IsQuestComplete("quest_deliver_fruits")
-		elseif recipeSet.name == "questfinal" then
+		elseif rec_set_name == "questfinal" then
 			locked = not QuestManager.Cl_IsQuestComplete("quest_warehouse")
 		end
 		--RAFT
 
+		--Modded Craftbot Recipes
+		local gui_int = self.cl.guiInterface
+		local locked_data = { locked = locked }
 
-		self.cl.guiInterface:addGridItemsFromFile( "RecipeGrid", g_craftingRecipes[recipeSet.name].path, { locked = locked } )
+		if type(cur_recipe_data) == "table" then
+			for k, recipe_path in pairs(cur_recipe_data) do
+				gui_int:addGridItemsFromFile("RecipeGrid", recipe_path, locked_data)
+			end
+		else
+			gui_int:addGridItemsFromFile("RecipeGrid", cur_recipe_data, locked_data)
+		end
+		--Modded Craftbot Recipes
 	end
 end
 
