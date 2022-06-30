@@ -208,7 +208,7 @@
             "y" : 2,
             "z" : 2
          },
-         "color" : "ff0000",
+         "color" : "c88505",
          "flammable" : true,
          "name" : "obj_airtank_empty",
          "physicsMaterial" : "Metal",
@@ -235,7 +235,7 @@
                      "Material" : {
                         "material" : "DifAsgNor",
                         "textureList" : [
-                           "$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_dif.tga",
+                           "$CONTENT_DATA/Objects/Textures/Interactables/char_spudgun_tank_basic_dif.tga",
                            "$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_asg.tga",
                            "$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_nor.tga"
                         ]
@@ -274,7 +274,7 @@
             "y" : 2,
             "z" : 2
          },
-         "color" : "00ff00",
+         "color" : "c88505",
          "flammable" : true,
          "name" : "obj_airtank_full",
          "physicsMaterial" : "Metal",
@@ -301,7 +301,7 @@
                      "Material" : {
                         "material" : "DifAsgNor",
                         "textureList" : [
-                           "$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_dif.tga",
+                           "$CONTENT_DATA/Objects/Textures/Interactables/char_spudgun_tank_basic_dif.tga",
                            "$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_asg.tga",
                            "$GAME_DATA/Character/Char_Tools/Char_spudgun/Tank/Tank_basic/char_spudgun_tank_basic_nor.tga"
                         ]
