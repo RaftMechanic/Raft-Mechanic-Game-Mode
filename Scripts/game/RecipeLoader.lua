@@ -113,9 +113,9 @@ end
 
 local _json_file_exists = sm.json.fileExists
 function initialize_crafting_recipes()
-	local l_craftbot_recipes  = { "$SURVIVAL_DATA/CraftingRecipes/craftbot.json" }
-	local l_workbench_recipes = { "$SURVIVAL_DATA/CraftingRecipes/workbench.json" }
-	local l_hideout_recipes   = { "$SURVIVAL_DATA/CraftingRecipes/hideout.json" }
+	local l_craftbot_recipes  = { "$CONTENT_DATA/CraftingRecipes/craftbot.json" }
+	local l_workbench_recipes = { "$CONTENT_DATA/CraftingRecipes/workbench.json" }
+	local l_hideout_recipes   = { "$CONTENT_DATA/CraftingRecipes/hideout.json" }
  
 	for mod_uuid, v in pairs(ModDatabase.databases.descriptions) do
 		local mod_key = "$CONTENT_"..mod_uuid
