@@ -14,3 +14,5 @@
 - Fixes to crafter code
 - Fixed bug which allowed you to get out of bed after you started to skip the night
 - Made Airtank paintable
+- Fixed duplicated recipes
+- Updates to the mod support system
