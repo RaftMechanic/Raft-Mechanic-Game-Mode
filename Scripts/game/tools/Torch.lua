@@ -213,7 +213,29 @@ function TorchTool:cl_equip( item )
 	end
 end
 
+local function get_anim_data(anim_table)
+	local out_table = {}
+
+	for k, v in pairs(anim_table) do
+		out_table[k] = { weight = v.weight, time = v.time }
+	end
+
+	return out_table
+end
+
+local function set_anim_data(anim_table, anim_data)
+	for k, v in pairs(anim_table) do
+		local cur_data = anim_data[k]
+
+		v.weight = cur_data.weight
+		v.time   = cur_data.time
+	end
+end
+
 function TorchTool:cl_updateRenderables( item, loadAnim )
+	local tp_anim_data = get_anim_data(self.tpAnimations.animations)
+	local fp_anim_data = get_anim_data(self.fpAnimations.animations)
+
 	local currentRenderablesTp = {}
 	local currentRenderablesFp = {}
 
@@ -237,6 +259,9 @@ function TorchTool:cl_updateRenderables( item, loadAnim )
 			setFpAnimation( self.fpAnimations, "idle", 0.0001 )
 		end
 	end
+
+	set_anim_data(self.tpAnimations.animations, tp_anim_data)
+	set_anim_data(self.fpAnimations.animations, fp_anim_data)
 end
 
 function TorchTool.client_onUnequip( self )
