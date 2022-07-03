@@ -118,7 +118,6 @@ function TorchTool.client_onUpdate( self, dt )
 			if item ~= self.cl.equippedItem and isAnyOf(item, torches) then
 				self.cl.lit = item == obj_torch_lit
 
-				self.network:sendToServer("sv_updateFire", item == obj_torch_lit)
 				self.network:sendToServer("sv_equip", item)
 			end
 
@@ -194,9 +193,7 @@ function TorchTool.client_onEquip( self )
 end
 
 function TorchTool:sv_equip( item )
-	if item == obj_torch_lit then
-		self:sv_updateFire(true)
-	end
+	self:sv_updateFire(item == obj_torch_lit)
 
 	self.network:sendToClients("cl_equip", item)
 end
@@ -280,6 +277,11 @@ function TorchTool.client_onUnequip( self )
 				swapFpAnimation( self.fpAnimations, "equip", "unequip", 0.2 )
 			end
 		end
+
+		local s_fire_eff = self.cl.effect
+		if sm.exists(s_fire_eff) and s_fire_eff:isPlaying() then
+			s_fire_eff:stop()
+		end
 	end
 end
 
@@ -316,10 +318,16 @@ function TorchTool:sv_updateFire( toggle )
 end
 
 function TorchTool:cl_updateFire( args )
+	local s_eff = self.cl.effect
+	local eff_playing = s_eff:isPlaying()
 	if args.toggle then
-		self.cl.effect:start()
+		if not eff_playing then
+			s_eff:start()
+		end
 	else
-		self.cl.effect:stop()
+		if eff_playing then
+			s_eff:stop()
+		end
 	end
 
 	self:cl_updateRenderables( args.item )
