@@ -41,6 +41,8 @@ function TorchTool.cl_init( self )
 	self.cl.equippedItem = sm.uuid.getNil()
 	self.renderable = nil
 
+	self.cl.fire_noise = 0
+
 	if self.tool:isLocal() then
 		self.cl.lit = false
 	end
@@ -128,6 +130,14 @@ function TorchTool.client_onUpdate( self, dt )
 			end
 		end
 		updateFpAnimations( self.fpAnimations, self.equipped, dt )
+	end
+
+	local s_eff = self.cl.effect
+	if s_eff and s_eff:isPlaying() then
+		self.cl.fire_noise = self.cl.fire_noise + dt
+		local light_noise = sm.noise.simplexNoise1d(self.cl.fire_noise * 4) * 0.3
+
+		s_eff:setParameter("intensity", 2 + light_noise)
 	end
 
 	if not self.equipped then
@@ -280,7 +290,7 @@ function TorchTool.client_onUnequip( self )
 
 		local s_fire_eff = self.cl.effect
 		if sm.exists(s_fire_eff) and s_fire_eff:isPlaying() then
-			s_fire_eff:stop()
+			s_fire_eff:stopImmediate()
 		end
 	end
 end
