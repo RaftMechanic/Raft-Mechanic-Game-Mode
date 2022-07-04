@@ -226,8 +226,7 @@ local function get_anim_data(anim_table)
 	if anim_table ~= nil then
 		out_table = {}
 		
-		local anim_data = anim_table.animations
-		for k, v in pairs(anim_data) do
+		for k, v in pairs(anim_table.animations) do
 			out_table[k] = { weight = v.weight, time = v.time }
 		end
 	end
@@ -238,11 +237,13 @@ end
 local function set_anim_data(anim_table, anim_data)
 	if anim_data == nil then return end
 
-	for k, v in pairs(anim_table) do
-		local cur_data = anim_data[k]
-
-		v.weight = cur_data.weight
-		v.time   = cur_data.time
+	if anim_table ~= nil then
+		for k, v in pairs(anim_table.animations) do
+			local cur_data = anim_data[k]
+	
+			v.weight = cur_data.weight
+			v.time   = cur_data.time
+		end
 	end
 end
 
@@ -274,8 +275,8 @@ function TorchTool:cl_updateRenderables( item, loadAnim )
 		end
 	end
 
-	set_anim_data(self.tpAnimations.animations, tp_anim_data)
-	set_anim_data(self.fpAnimations.animations, fp_anim_data)
+	set_anim_data(self.tpAnimations, tp_anim_data)
+	set_anim_data(self.fpAnimations, fp_anim_data)
 end
 
 function TorchTool.client_onUnequip( self )
