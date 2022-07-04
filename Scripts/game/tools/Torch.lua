@@ -304,6 +304,10 @@ function TorchTool.client_onUnequip( self )
 	end
 end
 
+function TorchTool:client_canStayLit(char)
+	return not (char:isSwimming() or char:isDiving())
+end
+
 function TorchTool.client_onEquippedUpdate( self, primaryState, secondaryState, forceBuild )
 	local char = self.tool:getOwner().character
  	if not sm.exists(char) then return end
@@ -320,7 +324,7 @@ function TorchTool.client_onEquippedUpdate( self, primaryState, secondaryState, 
 		self.cl.lit = forceBuild == false and not self.cl.lit or false
 	end
 
-	if char:isSwimming() or char:isDiving() then
+	if not self:client_canStayLit(char) then
 		self.cl.lit = false
 	end
 
