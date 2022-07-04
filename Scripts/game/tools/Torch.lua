@@ -196,10 +196,14 @@ function TorchTool.client_onUpdate( self, dt )
 end
 
 function TorchTool.client_onEquip( self )
+	local item = obj_torch
+
 	if self.tool:isLocal() then
-		local item = sm.localPlayer.getActiveItem()
+		item = sm.localPlayer.getActiveItem()
 		self.network:sendToServer("sv_equip", item)
 	end
+
+	self:cl_equip(item)
 end
 
 function TorchTool:sv_equip( item )
