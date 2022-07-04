@@ -211,6 +211,7 @@ end
 function TorchTool:cl_equip( item )
 	self.wantEquipped = true
 	self.cl.equippedItem = item
+	self.cl.lit = (item == obj_torch_lit)
 
 	self:cl_updateRenderables( item, false )
 
@@ -225,7 +226,7 @@ local function get_anim_data(anim_table)
 
 	if anim_table ~= nil then
 		out_table = {}
-		
+
 		for k, v in pairs(anim_table.animations) do
 			out_table[k] = { weight = v.weight, time = v.time }
 		end
