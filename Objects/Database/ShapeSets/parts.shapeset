@@ -863,6 +863,22 @@
          "renderable" : "$CONTENT_DATA/Objects/Renderables/Parts/obj_frozenant.rend",
          "rotationSet" : "PropY",
          "uuid" : "4a1888f7-7376-49aa-97a0-1aaf1ae75e2a"
+      },
+      {
+         "box" : {
+            "x" : 2,
+            "y" : 2,
+            "z" : 3
+         },
+         "color" : "474238",
+         "name" : "obj_barrel",
+         "physicsMaterial" : "Wood",
+         "ratings" : {
+            "durability" : 5
+         },
+         "renderable" : "$CONTENT_DATA/Objects/Renderables/Parts/Barrel.rend",
+         "rotationSet" : "PropFull",
+         "uuid" : "da30da15-6975-4ed1-bda7-9546e9d17fcd"
       }
    ]
 }

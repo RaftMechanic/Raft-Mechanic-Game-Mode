@@ -1,0 +1,25 @@
+{
+   "lodList" : [
+      {
+         "mesh" : "$CONTENT_DATA/Objects/Mesh/Parts/Barrel/Barrel.fbx",
+         "subMeshList" : [
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_dif.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_asg.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_seed_nor.tga"
+               ]
+            },
+            {
+               "material" : "DifAsgNor",
+               "textureList" : [
+                  "$GAME_DATA/Objects/Textures/Blocks/blk_metal01_dif.tga",
+                  "$GAME_DATA/Objects/Textures/Blocks/blk_metal01_asg.tga",
+                  "$GAME_DATA/Objects/Textures/Blocks/blk_metal01_nor.tga"
+               ]
+            }
+         ]
+      }
+   ]
+}
