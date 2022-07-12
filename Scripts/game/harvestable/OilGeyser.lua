@@ -90,15 +90,34 @@ function OilGeyser.server_spawnJunk(self)
 	local vec = self.harvestable:getPosition()
 	vec.z = -2
 
+	if true then
+		sm.shape.createPart(
+			obj_barrel,
+			vec,
+			sm.quat.identity(),
+			true,
+			true
+		)
+		return
+	end
+
 	local random = math.random(1,1000)
 	local junkIndex
 	if random <= 10 then
-		local crate = hvs_lootcrate
+		--[[local crate = hvs_lootcrate
 		if math.random(1,25) == 25 then
 			crate = hvs_lootcrateepic
 		end
 
-		sm.harvestable.create( crate, vec, self.harvestable.worldRotation )
+		sm.harvestable.create( crate, vec, self.harvestable.worldRotation )]]
+
+		sm.shape.createPart(
+			obj_barrel,
+			vec,
+			sm.quat.identity(),
+			true,
+			true
+		)
 		return
 	elseif random <= 100 then
 		return

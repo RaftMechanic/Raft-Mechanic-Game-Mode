@@ -35,6 +35,7 @@ obj_raft_base = sm.uuid.new("4a971f7d-14e6-454d-bce8-0879243c4474")
 obj_reinforced_raft_base = sm.uuid.new("4a971f7d-14e6-454d-bce8-0879243c4575")
 obj_bee_queen = sm.uuid.new("c2418698-7a91-40fa-95a3-3be5ddb3ec1d")
 obj_black_fish = sm.uuid.new("8131f4e1-7921-4980-9134-06863aa457f8")
+obj_barrel = sm.uuid.new("da30da15-6975-4ed1-bda7-9546e9d17fcd")
 
 --consumables.shapeset
 obj_water_clean = sm.uuid.new("4bd05d7d-898c-4947-8788-e34b84b5d386")

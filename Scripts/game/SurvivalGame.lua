@@ -261,6 +261,7 @@ function SurvivalGame.bindChatCommands(self)
 
 		--Raft
 		sm.game.bindChatCommand("/dev", {}, "cl_onChatCommand", "Gives you god mode and unlimited inventory")
+		sm.game.bindChatCommand("/testing", {}, "cl_onChatCommand", "Activates: /unlimited; /timeprogress 0; /timeofday 0.5; /god")
 		--Raft
 
 
@@ -506,7 +507,8 @@ function SurvivalGame.cl_onChatCommand(self, params)
 			self.network:sendToServer("sv_switchGodMode")
 			self.network:sendToServer("sv_setLimitedInventory", false)
 		end
-
+	elseif params[1] == "/testing" then
+		self.network:sendToServer( "sv_testingCommand" )
 		--Raft
 
 
@@ -642,6 +644,13 @@ function SurvivalGame.cl_onChatCommand(self, params)
 	else
 		self.network:sendToServer("sv_onChatCommand", params)
 	end
+end
+
+function SurvivalGame:sv_testingCommand()
+	sm.game.setLimitedInventory(false)
+	self:sv_setTimeProgress(false)
+	self:sv_setTimeOfDay(0.5)
+	g_godMode = true
 end
 
 function SurvivalGame.sv_reloadCell(self, params, player)

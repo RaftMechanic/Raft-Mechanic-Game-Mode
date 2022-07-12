@@ -1,5 +1,6 @@
 dofile "$CONTENT_DATA/Scripts/game/raft_loot.lua"
 dofile "$SURVIVAL_DATA/Scripts/util.lua"
+dofile "$CONTENT_DATA/Scripts/game/interactables/Barrel.lua"
 
 Collector = class()
 
@@ -12,7 +13,8 @@ local collectables = {
 	obj_consumable_gas,
 	obj_consumable_water,
 	obj_consumable_fertilizer,
-	obj_consumable_sunshake
+	obj_consumable_sunshake,
+    obj_barrel
 }
 
 local function getFirstOpenSlot( container )
@@ -71,13 +73,13 @@ function Collector.server_onCollision( self, shape, position, selfPointVelocity,
 
     self.sv.data.effectData[#self.sv.data.effectData+1] = effectData
 
-    if sm.item.isBlock( shapeUUID ) or not sm.shape.getIsStackable(shapeUUID) then
+    if sm.item.isBlock( shapeUUID ) or not sm.shape.getIsStackable(shapeUUID) and shapeUUID ~= obj_barrel then
         effectData.size = box
         box = box * 4
         quantity = box.x * box.y * box.z
     else
         effectData.size = box / 2
-        quantity = shape.stackedAmount
+        quantity = sm.shape.getIsStackable(shapeUUID) and shape.stackedAmount or 1
     end
 
     sm.container.beginTransaction()
@@ -144,10 +146,39 @@ function Collector:sv_takeAllJunk( inv )
         local slot = i - 1
         local item = self.sv.container:getItem( slot )
         local itemId = item.uuid
-        local itemQuant = item.quantity
-        if inv:canCollect( itemId, itemQuant ) then
-            sm.container.collect( inv, itemId, itemQuant )
-            sm.container.spendFromSlot( self.sv.container, slot, itemId, itemQuant )
+
+        if itemId == obj_barrel then
+            local loot = {}
+            for j = 1, math.random( Barrel.minLoot, Barrel.maxLoot ) do
+                loot[#loot+1] = Barrel.lootTable[math.random(#Barrel.lootTable)]
+            end
+
+            local droppedLoot = {}
+            for k, barrelItem in pairs(loot) do
+                local quantity = type(barrelItem.quantity) == "function" and barrelItem.quantity() or barrelItem.quantity
+                local uuid = barrelItem.uuid
+
+                if inv:canCollect( uuid, quantity ) then
+                    sm.container.collect( inv, uuid, quantity )
+                else
+                    droppedLoot[#droppedLoot+1] = { uuid = uuid, chance = 1, quantity = quantity }
+                end
+            end
+
+            if #droppedLoot > 0 then
+                raft_SpawnLoot(
+                    self.shape,
+                    droppedLoot
+                )
+            end
+
+            sm.container.spendFromSlot( self.sv.container, slot, itemId, 1 )
+        else
+            local itemQuant = item.quantity
+            if inv:canCollect( itemId, itemQuant ) then
+                sm.container.collect( inv, itemId, itemQuant )
+                sm.container.spendFromSlot( self.sv.container, slot, itemId, itemQuant )
+            end
         end
     end
     sm.container.endTransaction()

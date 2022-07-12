@@ -874,10 +874,17 @@
          "name" : "obj_barrel",
          "physicsMaterial" : "Wood",
          "ratings" : {
-            "durability" : 5
+            "durability" : 5,
+            "buoyancy": 7
          },
          "renderable" : "$CONTENT_DATA/Objects/Renderables/Parts/Barrel.rend",
-         "rotationSet" : "PropFull",
+         "rotationSet" : "PropZ",
+         "sticky": "-Z+Z",
+         "scripted" : {
+            "classname" : "Barrel",
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Barrel.lua",
+            "data": {}
+         },
          "uuid" : "da30da15-6975-4ed1-bda7-9546e9d17fcd"
       }
    ]
