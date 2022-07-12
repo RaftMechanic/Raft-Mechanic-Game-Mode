@@ -19,6 +19,10 @@ function Barrel:server_onProjectile( position, airTime, velocity, projectileName
     self:sv_dropItems()
 end
 
+function Barrel.server_onExplosion( self, center, destructionLevel )
+    self:sv_dropItems()
+end
+
 --[[
 function Barrel.server_onCollision( self, other, position, selfPointVelocity, otherPointVelocity, normal )
     if isAnyOf(type(other), { "Body", "Shape" }) and other:getVelocity():length2() >= 25 then

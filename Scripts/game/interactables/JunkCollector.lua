@@ -1,3 +1,4 @@
+dofile( "$CONTENT_DATA/scripts/game/raft_items.lua" )
 dofile "$CONTENT_DATA/Scripts/game/raft_loot.lua"
 dofile "$SURVIVAL_DATA/Scripts/util.lua"
 dofile "$CONTENT_DATA/Scripts/game/interactables/Barrel.lua"

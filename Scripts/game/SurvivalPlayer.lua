@@ -6,7 +6,9 @@ dofile( "$SURVIVAL_DATA/Scripts/game/util/Timer.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/util.lua" )
 dofile( "$SURVIVAL_DATA/scripts/game/quest_util.lua" )
 
-dofile( "$CONTENT_DATA/scripts/game/raft_items.lua" )--RAFT
+dofile( "$CONTENT_DATA/scripts/game/raft_items.lua" )
+dofile( "$CONTENT_DATA/scripts/game/interactables/Barrel.lua" )
+dofile "$CONTENT_DATA/Scripts/game/raft_loot.lua"
 
 
 SurvivalPlayer = class( BasePlayer )
@@ -728,6 +730,37 @@ function SurvivalPlayer.server_onShapeRemoved( self, removedShapes )
 
 
 
+		end
+
+		if removedShapeType.uuid == obj_barrel then
+			sm.container.beginTransaction()
+			local inv = sm.game.getLimitedInventory() and self.player:getInventory() or self.player:getHotbar()
+			sm.container.spend(inv, obj_barrel, 1)
+
+			local loot = {}
+            for j = 1, math.random( Barrel.minLoot, Barrel.maxLoot ) do
+                loot[#loot+1] = Barrel.lootTable[math.random(#Barrel.lootTable)]
+            end
+
+			local droppedLoot = {}
+            for k, barrelItem in pairs(loot) do
+                local quantity = type(barrelItem.quantity) == "function" and barrelItem.quantity() or barrelItem.quantity
+                local uuid = barrelItem.uuid
+
+                if inv:canCollect( uuid, quantity ) then
+                    sm.container.collect( inv, uuid, quantity )
+                else
+                    droppedLoot[#droppedLoot+1] = { uuid = uuid, chance = 1, quantity = quantity }
+                end
+            end
+			sm.container.endTransaction()
+
+            if #droppedLoot > 0 then
+                raft_SpawnLoot(
+                    self.player,
+                    droppedLoot
+                )
+            end
 		end
 	end
 
