@@ -246,5 +246,13 @@
    "7a13d6ff-ceee-461b-b143-308e2589b07d" : {
       "description" : "Usalo per fare in modo che non ti piova sulla testa. Un tipo di tetto molto verde.",
       "title" : "Tetto di foglie della zattera angolo esterno"
+   },
+   "eb4fba32-32ee-4cbd-a389-ddfa5835198a" : {
+      "description" : "È un bastone luminoso, ma su una collana! Si rompe dopo 10 giorni del gioco.",
+      "title" : "Lampada da collana"
+   },
+   "da30da15-6975-4ed1-bda7-9546e9d17fcd" : {
+      "description" : "Ottieni tanti oggetti con una sola presa!",
+      "title" : "Barile"
    }
 }

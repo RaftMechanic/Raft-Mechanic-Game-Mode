@@ -57,6 +57,10 @@
         "description": "Avec une paire de palmes, vous pouvez nager beaucoup plus vite ! Elles sont aussi très stylé !",
         "title": "Palmes"
     },
+    "eb4fba32-32ee-4cbd-a389-ddfa5835198a" : {
+        "description" : "C'est comme un bâton lumineux, mais sur un collier ! Le collier se casse après 10-15 jours de jeu.",
+        "title" : "Collier lumineux"
+    },
     "7ceccadf-010f-4a45-907f-18ccc11c509c": {
         "description": "Pas assez de souffle ? Cela ne résoudra pas vos problèmes d'exercice, mais vous pourrez rester plus longtemps sous l'eau. Connectez-le à un siège pour ne pas perdre de souffle lorsque vous êtes assis(utile pour faire un sous-marin).",
         "title": "Bouteille de plongée"
@@ -149,6 +153,38 @@
       "description" : "Vous l'avez trouvé !\n\n\n\n#050505La matière qui l'entoure semble instable..\n\n#212328Dart Frog reference :D",
       "title" : "Fourmi gelée"
    },
+   "fe70aab4-1a51-4428-bb33-566551f0aea5" : {
+    "description" : "Utilisez cette pièce pour donner à votre radeau un aspect professionnel !",
+    "title" : "Plancher de radeau : Coin"
+    },
+    "ce5c6bce-a157-4e0b-8707-ce987b1d4d19" : {
+       "description" : "Passez à l'étage suivant !",
+       "title" : "Plancher de radeau : Rampe"
+    },
+    "49350ac2-f7dc-457d-b29d-a2f117670f86" : {
+       "description" : "Passez à l'étage suivant !",
+       "title" : "Plancher de radeau : Coin vers interieur"
+    },
+    "811ea5d1-a2bf-4db7-b1c3-a86cee2c9e94" : {
+       "description" : "Passez à l'étage suivant !",
+       "title" : "Plancher de radeau : Coin extérieur"
+    },
+    "b818bfa7-bc68-403f-a1cb-51cad1b35344" : {
+       "description" : "Utilisez-le pour qu'il ne pleuve pas sur votre tête. Un type de toiture très écologique.",
+       "title" : "Toit de radeau"
+    },
+    "3a880447-6556-4278-9356-7be8bf6a8ae9" : {
+       "description" : "Utilisez-le pour qu'il ne pleuve pas sur votre tête. Un type de toiture très écologique.",
+       "title" : "Toit de radeau : Inner Corner"
+    },
+    "7a13d6ff-ceee-461b-b143-308e2589b07d" : {
+       "description" : "Utilisez-le pour qu'il ne pleuve pas sur votre tête. Un type de toiture très écologique.",
+       "title" : "Toit de radeau : Coin extérieur"
+    },  
+    "da30da15-6975-4ed1-bda7-9546e9d17fcd" : {
+        "description" : "Collect a whole lotta of items with a single catch!",
+        "title" : "Barrel"
+    },
  
     //saplings
     "eefb0967-d21c-445e-8120-0a09422e1374": {
