@@ -136,6 +136,12 @@ function SurvivalPlayer.cl_init( self )
 	self.cl.revivalChewCount = 0
 
 	--Raft
+	if self.cl.lampEffect then
+		self.cl.lampEffect:stop()
+		self.cl.lampEffect:destroy()
+		self.cl.lampEffect = nil
+	end
+
 	self.cl.lampEffect = sm.effect.createEffect( "Glowstick - Hold", self.player.character, "jnt_spine2" )
 	--self.cl.lampEffect:setParameter("radius", 25)
 	--self.cl.lampEffect:setParameter("intensity", 5)
@@ -890,7 +896,13 @@ function SurvivalPlayer:sv_checkRenderables( inv )
 		changes.lamp = { add = hasLamp }
 	end
 
-	if changes then
+	--fuck you #
+	local actualFuckingLength = 0
+	for k, v in pairs(changes) do
+		actualFuckingLength = actualFuckingLength + 1
+	end
+
+	if actualFuckingLength > 0 then
 		self.network:sendToClients("cl_updateRenderables", {changes = changes, char = self.player:getCharacter()})
 	end
 
