@@ -865,26 +865,27 @@
          "uuid" : "4a1888f7-7376-49aa-97a0-1aaf1ae75e2a"
       },
       {
-         "box" : {
-            "x" : 3,
-            "y" : 3,
-            "z" : 5
-         },
          "color" : "474238",
+         "cylinder" : {
+            "axis" : "Z",
+            "depth" : 5,
+            "diameter" : 4
+         },
          "name" : "obj_barrel",
          "physicsMaterial" : "Wood",
          "ratings" : {
-            "durability" : 5,
-            "buoyancy": 7
+            "buoyancy" : 7,
+            "density" : 3,
+            "durability" : 5
          },
          "renderable" : "$CONTENT_DATA/Objects/Renderables/Parts/Barrel.rend",
          "rotationSet" : "PropZ",
-         "sticky": "-Z+Z",
          "scripted" : {
             "classname" : "Barrel",
-            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Barrel.lua",
-            "data": {}
+            "data" : {},
+            "filename" : "$CONTENT_DATA/Scripts/game/interactables/Barrel.lua"
          },
+         "sticky" : "-Z+Z",
          "uuid" : "da30da15-6975-4ed1-bda7-9546e9d17fcd"
       }
    ]

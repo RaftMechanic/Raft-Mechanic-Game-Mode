@@ -60,7 +60,7 @@ function Collector.server_onCollision( self, shape, position, selfPointVelocity,
 
     local shapeUUID = shape:getShapeUuid()
     local shapeId = shape:getId()
-    if not isAnyOf(shapeUUID, collectables) or shape:getBody():getMass() > bodyMassThreshold or isAnyOf(shapeId, self.sv.ignoreIds) then return end
+    if not isAnyOf(shapeUUID, collectables) or (shape:getBody():getMass() > bodyMassThreshold and shapeUUID ~= obj_barrel) or isAnyOf(shapeId, self.sv.ignoreIds) then return end
 
     self.sv.ignoreIds[#self.sv.ignoreIds+1] = shapeId
     local quantity = 0
@@ -79,8 +79,8 @@ function Collector.server_onCollision( self, shape, position, selfPointVelocity,
         box = box * 4
         quantity = box.x * box.y * box.z
     else
-        effectData.size = box / 2
-        quantity = sm.shape.getIsStackable(shapeUUID) and shape.stackedAmount or 1
+        effectData.size = shapeUUID == obj_barrel and (box / 4) - sm.vec3.new(0,0,0.0625) or box / 2
+        quantity = shapeUUID == obj_barrel and 1 or shape.stackedAmount
     end
 
     sm.container.beginTransaction()
