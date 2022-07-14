@@ -87,6 +87,22 @@
             }
         ]
     },
+    //Necklace Lamp
+    {
+        "itemId": "eb4fba32-32ee-4cbd-a389-ddfa5835198a",
+        "quantity": 1,
+        "craftTime": 20,
+        "ingredientList": [
+            {
+                "quantity": 2,
+                "itemId": "3a3280e4-03b6-4a4d-9e02-e348478213c9"
+            },
+            {
+                "quantity": 5,
+                "itemId": "3440440b-d362-4473-aa03-b7c41e1fe7ad"
+            }
+        ]
+    },
     //Spyglass
     {
         "itemId": "f3aeb880-f103-43c8-947b-d0525eaeb505",
