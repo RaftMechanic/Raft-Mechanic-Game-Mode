@@ -16,3 +16,5 @@
 - Made Airtank paintable
 - Fixed duplicated recipes
 - Updates to the mod support system
+- Added floating barrels
+- Chests on the water dont spawn anymore
