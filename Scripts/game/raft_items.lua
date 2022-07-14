@@ -29,6 +29,7 @@ obj_planter_corn = sm.uuid.new("d4ebdbbe-0f1c-4b3e-93b0-2bfe79436178")
 --equipment.shapeset
 obj_fins = sm.uuid.new("7ece8b10-5cc0-4791-b75e-09858ef1b9c4")
 obj_oxygen_tank = sm.uuid.new("7ceccadf-010f-4a45-907f-18ccc11c509c")
+obj_necklace_lamp = sm.uuid.new("eb4fba32-32ee-4cbd-a389-ddfa5835198a")
 
 --parts.shapeset
 obj_raft_base = sm.uuid.new("4a971f7d-14e6-454d-bce8-0879243c4474")

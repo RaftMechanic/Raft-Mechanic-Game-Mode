@@ -195,6 +195,17 @@ function Hammock:client_onAction( controllerAction, state )
 	local night = time > 0.85 or time < 0.175
 	if night then return true end
 
-	Bed.client_onAction( self, controllerAction, state )
-	return true
+	local consumeAction = true
+
+	if state == true then
+		if controllerAction == sm.interactable.actions.use or controllerAction == sm.interactable.actions.jump then
+			self:cl_seat()
+		else
+			consumeAction = false
+		end
+	else
+		consumeAction = false
+	end
+
+	return consumeAction
 end

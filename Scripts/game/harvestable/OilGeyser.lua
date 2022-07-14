@@ -90,17 +90,6 @@ function OilGeyser.server_spawnJunk(self)
 	local vec = self.harvestable:getPosition()
 	vec.z = -2
 
-	if true then
-		sm.shape.createPart(
-			obj_barrel,
-			vec,
-			sm.quat.identity(),
-			true,
-			true
-		)
-		return
-	end
-
 	local random = math.random(1,1000)
 	local junkIndex
 	if random <= 10 then

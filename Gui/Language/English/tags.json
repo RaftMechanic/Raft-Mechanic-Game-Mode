@@ -71,6 +71,8 @@
 
     "WrongTool": "You need better tools to break this harvestable",
 
+    "Lamp_break": "Your Necklace Lamp has broken!",
+
     "Tutorial_Dismiss": "Press %s to dismiss",
     "Tutorial_Food": "Hunger",
     "Tutorial_FoodText": "To survive in the ocean, you need to adapt your survival strategy. Luckily, fish are a great source of nutrients. Once you found enough soil, you could also try growing your own crops.",

@@ -97,6 +97,8 @@ function SurvivalPlayer.sv_init( self )
 	self.sv.raft = {}
 	self.sv.raft.oxygenTankCount = 0
 	self.sv.checkRenderables = true
+	self.sv.lampObtainTick = nil
+	self.sv.lampLifeTime = nil
 end
 
 function SurvivalPlayer.client_onCreate( self )
@@ -132,6 +134,12 @@ function SurvivalPlayer.cl_init( self )
 	self.currentCutscene = {}
 
 	self.cl.revivalChewCount = 0
+
+	--Raft
+	self.cl.lampEffect = sm.effect.createEffect( "Glowstick - Hold", self.player.character, "jnt_spine2" )
+	--self.cl.lampEffect:setParameter("radius", 25)
+	--self.cl.lampEffect:setParameter("intensity", 5)
+	--Raft
 end
 
 function SurvivalPlayer.client_onClientDataUpdate( self, data )
@@ -301,6 +309,18 @@ end
 function SurvivalPlayer.server_onFixedUpdate( self, dt )
 	BasePlayer.server_onFixedUpdate( self, dt )
 
+	--Raft
+	if self.sv.lampObtainTick ~= nil then
+		local tick = sm.game.getServerTick()
+		if tick - self.sv.lampObtainTick >= self.sv.lampLifeTime then
+			sm.container.beginTransaction()
+			sm.container.spend( self.player:getInventory(), obj_necklace_lamp, 1, true )
+			self.network:sendToClient( self.player, "cl_raft_neckLaceMsg" )
+			sm.container.endTransaction()
+		end
+	end
+	--Raft
+
 	if g_survivalDev and not self.sv.saved.isConscious and not self.sv.saved.hasRevivalItem then
 		if sm.container.canSpend( self.player:getInventory(), obj_consumable_longsandwich, 1 ) then
 			if sm.container.beginTransaction() then
@@ -357,9 +377,9 @@ function SurvivalPlayer.server_onFixedUpdate( self, dt )
 			--RAFT
 			local oxygenTankCount = math.max(sm.container.totalQuantity( inv, obj_oxygen_tank ) + self.sv.raft.oxygenTankCount, 0)
 			self.sv.saved.stats.breath = math.max( self.sv.saved.stats.breath - (BreathLostPerTick/(oxygenTankCount + 1)), 0 )
-			
-			
-			
+
+
+
 			if self.sv.saved.stats.breath == 0 then
 				self.sv.drownTimer:tick()
 				if self.sv.drownTimer:done() then
@@ -461,6 +481,15 @@ function SurvivalPlayer.server_onInventoryChanges( self, container, changes )
 		end
 		if FindInventoryChange( changes, obj_scrap_field ) > 0 or FindInventoryChange( changes, obj_large_field ) > 0 then
 			self.network:sendToClient( self.player, "cl_e_tutorial", "farm" )
+		end
+
+		local lamps = sm.container.totalQuantity( container, obj_necklace_lamp )
+		if lamps > 0 then
+			self.sv.lampObtainTick = sm.game.getServerTick()
+			self.sv.lampLifeTime = DaysInTicks(math.random(1000, 1500) / 100)
+		elseif lamps == 0 then
+			self.sv.lampObtainTick = nil
+			self.sv.lampLifeTime = nil
 		end
 		--RAFT
 	end
@@ -848,6 +877,7 @@ end
 function SurvivalPlayer:sv_checkRenderables( inv )
 	local hasFins = inv:canSpend(obj_fins, 1)
 	local hasTank = inv:canSpend(obj_oxygen_tank, 1)
+	local hasLamp = inv:canSpend(obj_necklace_lamp, 1)
 	local changes = {}
 
 	if hasFins ~= self.fins then
@@ -856,6 +886,9 @@ function SurvivalPlayer:sv_checkRenderables( inv )
 	if hasTank ~= self.tank then
 		changes.tank = { add = hasTank }
 	end
+	if hasLamp ~= self.lamp then
+		changes.lamp = { add = hasLamp }
+	end
 
 	if changes then
 		self.network:sendToClients("cl_updateRenderables", {changes = changes, char = self.player:getCharacter()})
@@ -863,6 +896,7 @@ function SurvivalPlayer:sv_checkRenderables( inv )
 
 	self.fins = hasFins
 	self.tank = hasTank
+	self.lamp = hasLamp
 end
 
 function SurvivalPlayer:cl_updateRenderables( args )
@@ -873,12 +907,24 @@ function SurvivalPlayer:cl_updateRenderables( args )
 			args.char:removeRenderable( "$CONTENT_DATA/Characters/Char_Player/Fins/obj_fins.rend" )
 		end
 	end
-	
+
 	if args.changes.tank then
 		if args.changes.tank.add then
 			args.char:addRenderable( "$CONTENT_DATA/Characters/Char_Player/OxygenTank/OxygenTank.rend" )
 		else
 			args.char:removeRenderable( "$CONTENT_DATA/Characters/Char_Player/OxygenTank/OxygenTank.rend" )
+		end
+	end
+
+	if args.changes.lamp then
+		if args.changes.lamp.add then
+			args.char:addRenderable( "$CONTENT_DATA/Characters/Char_Player/NecklaceLamp/NecklaceLamp.rend" )
+			if not self.cl.lampEffect:isPlaying() then
+				self.cl.lampEffect:start()
+			end
+		else
+			args.char:removeRenderable( "$CONTENT_DATA/Characters/Char_Player/NecklaceLamp/NecklaceLamp.rend" )
+			self.cl.lampEffect:stop()
 		end
 	end
 end
@@ -956,6 +1002,10 @@ function SurvivalPlayer.cl_e_tutorial( self, event )
 			setup_tutorial_gui(self, params)
 		end
 	end
+end
+
+function SurvivalPlayer:cl_raft_neckLaceMsg()
+	sm.gui.displayAlertText( language_tag("Lamp_break"), 2.5 )
 end
 
 function setup_tutorial_gui(self, params)

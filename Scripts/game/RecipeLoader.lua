@@ -74,6 +74,11 @@ local mod_exception_list =
 	["df10d497-a28e-4413-a707-5a07813aec37"] = --wings mod
 	{
 		craftbot = "/Survival/CraftingRecipes/craftbot.json"
+	},
+	["fed51d61-bc85-420d-82af-b645f2a23145"] = { --RM_creative, avoid duping recipes
+		craftbot = "/Survival/CraftingRecipes/craftbot.json",
+		workbench = "/Survival/CraftingRecipes/workbench.json",
+		hideout = "/Survival/CraftingRecipes/hideout.json"
 	}
 }
 
@@ -116,12 +121,12 @@ function initialize_crafting_recipes()
 	local l_craftbot_recipes  = { "$CONTENT_DATA/CraftingRecipes/craftbot.json" }
 	local l_workbench_recipes = { "$CONTENT_DATA/CraftingRecipes/workbench.json" }
 	local l_hideout_recipes   = { "$CONTENT_DATA/CraftingRecipes/hideout.json" }
- 
+
 	for mod_uuid, v in pairs(ModDatabase.databases.descriptions) do
 		local mod_key = "$CONTENT_"..mod_uuid
 
 		local success, fileExists = pcall(_json_file_exists, mod_key)
-		if success == true and fileExists == true then
+		if success == true and fileExists == true and v.type ~= "Custom Game" then
 			local cur_exception = mod_exception_list[mod_uuid]
 
 			if cur_exception == nil then

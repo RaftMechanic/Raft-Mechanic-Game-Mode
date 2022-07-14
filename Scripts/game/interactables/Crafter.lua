@@ -1266,15 +1266,15 @@ function Crafter.cl_setGuiContainers( self )
 end
 
 function Crafter.client_onInteract( self, character, state )
-	--RAFT
-	self:cl_updateRecipeGrid()
-
-	if self.interactable.shape.uuid == obj_scrap_workbench then
-		sm.event.sendToPlayer(sm.localPlayer.getPlayer(), "cl_e_tutorial", "workbench")
-	end
-	--RAFT
-
 	if state == true then
+		--RAFT
+		self:cl_updateRecipeGrid()
+
+		if self.interactable.shape.uuid == obj_scrap_workbench then
+			sm.event.sendToPlayer(sm.localPlayer.getPlayer(), "cl_e_tutorial", "workbench")
+		end
+		--RAFT
+
 		local parent = self:getParent()
 		if not self.crafter.needsPower or ( parent and parent.active ) then
 
