@@ -193,7 +193,7 @@ end
 function Hammock:client_onAction( controllerAction, state )
 	local time = sm.game.getTimeOfDay()
 	local night = time > 0.85 or time < 0.175
-	if night then return true end
+	if night and self:getSleepingPeople() == #sm.player.getAllPlayers() then return true end
 
 	local consumeAction = true
 
