@@ -126,5 +126,21 @@
                 "itemId": "628b2d61-5ceb-43e9-8334-a4135566df7a"
             }
         ]
+    },
+    //Torch
+    {
+        "itemId": "ce986935-5b57-4249-acbb-04ef6666bb03",
+        "quantity": 1,
+        "craftTime": 15,
+        "ingredientList": [
+            {
+                "quantity": 30,
+                "itemId": "1f7ac0bb-ad45-4246-9817-59bdf7f7ab39"
+            },
+            {
+                "quantity": 10,
+                "itemId": "3440440b-d362-4473-aa03-b7c41e1fe7ad"
+            }
+        ]
     }
 ]

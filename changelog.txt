@@ -9,7 +9,6 @@
 - Re Added feature for scrap collectors to drop their loot when destroyed
 - Adjustments to creation rotator
 - Updated translations
-- Fixed placeable torch
 - Fixed model and alignment of Raft roof piece
 - Fixes to crafter code
 - Fixed bug which allowed you to get out of bed after you started to skip the night
@@ -18,3 +17,5 @@
 - Updates to the mod support system
 - Added floating barrels
 - Chests on the water dont spawn anymore
+- Added torch
+- Added Necklace lamp
