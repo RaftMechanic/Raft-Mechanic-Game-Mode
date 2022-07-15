@@ -250,6 +250,7 @@ function SurvivalPlayer.cl_localPlayerUpdate( self, dt )
 	BasePlayer.cl_localPlayerUpdate( self, dt )
 	self:cl_updateCamera( dt )
 
+	local character = self.player.character
 	if character and not self.cl.isConscious then
 		local keyBindingText =  sm.gui.getKeyBinding( "Use", true )
 		if self.cl.hasRevivalItem then
