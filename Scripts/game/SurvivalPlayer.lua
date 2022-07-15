@@ -134,18 +134,6 @@ function SurvivalPlayer.cl_init( self )
 	self.currentCutscene = {}
 
 	self.cl.revivalChewCount = 0
-
-	--Raft
-	if self.cl.lampEffect then
-		self.cl.lampEffect:stop()
-		self.cl.lampEffect:destroy()
-		self.cl.lampEffect = nil
-	end
-
-	self.cl.lampEffect = sm.effect.createEffect( "Glowstick - Hold", self.player.character, "jnt_spine2" )
-	--self.cl.lampEffect:setParameter("radius", 25)
-	--self.cl.lampEffect:setParameter("intensity", 5)
-	--Raft
 end
 
 function SurvivalPlayer.client_onClientDataUpdate( self, data )
@@ -262,7 +250,6 @@ function SurvivalPlayer.cl_localPlayerUpdate( self, dt )
 	BasePlayer.cl_localPlayerUpdate( self, dt )
 	self:cl_updateCamera( dt )
 
-	local character = self.player:getCharacter()
 	if character and not self.cl.isConscious then
 		local keyBindingText =  sm.gui.getKeyBinding( "Use", true )
 		if self.cl.hasRevivalItem then
@@ -929,6 +916,11 @@ function SurvivalPlayer:cl_updateRenderables( args )
 	end
 
 	if args.changes.lamp then
+		local character = self.player.character
+		if self.cl.lampEffect == nil and character then
+			self.cl.lampEffect = sm.effect.createEffect( "Glowstick - Hold", character, "jnt_spine2" )
+		end
+
 		if args.changes.lamp.add then
 			args.char:addRenderable( "$CONTENT_DATA/Characters/Char_Player/NecklaceLamp/NecklaceLamp.rend" )
 			if not self.cl.lampEffect:isPlaying() then
