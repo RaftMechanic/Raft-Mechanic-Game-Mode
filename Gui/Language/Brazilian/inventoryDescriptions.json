@@ -246,5 +246,13 @@
    "7a13d6ff-ceee-461b-b143-308e2589b07d" : {
       "description" : "Use para não pegar chuva! Ajuda a evitar o resfriado.",
       "title" : "Canto Externo da Telha de Folha para Jangada"
+   },
+   "eb4fba32-32ee-4cbd-a389-ddfa5835198a" : {
+      "description" : "Exatamente como uma glowstick, mas pendurada no seu pescoço! O colar se quebra depois de 10-15 dias de jogo.",
+      "title" : "Colar Luminoso"
+   },
+   "da30da15-6975-4ed1-bda7-9546e9d17fcd" : {
+      "description" : "Colete um monte de ítens numa única captura!",
+      "title" : "Barril"
    }
 }
