@@ -246,5 +246,14 @@
    "7a13d6ff-ceee-461b-b143-308e2589b07d" : {
       "description" : "Liest jemand diese Beschreibungen überhaupt?",
       "title" : "Äußeres Blattdacheck"
+   },
+   "eb4fba32-32ee-4cbd-a389-ddfa5835198a" : {
+      "description" : "Es ist wie ein Knicklicht, aber als Halskette! Der Gegenstand wird nach 10-15 Tagen nutzlos.",
+      "title" : "Halslampe"
+   },
+
+   "da30da15-6975-4ed1-bda7-9546e9d17fcd" : {
+      "description" : "Sammel eine große Menge Zeug mit einem Fang!",
+      "title" : "Fass"
    }
 }
