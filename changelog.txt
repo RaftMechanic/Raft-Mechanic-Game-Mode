@@ -19,3 +19,4 @@
 - Chests on the water dont spawn anymore
 - Added torch
 - Added Necklace lamp
+- Changed Fruit Quest Log Image
