@@ -1,3 +1,6 @@
+# Contributing
+Please refer to CONTRIBUTING.md for information on how you can contribute.
+
 We're no strangers to love
 You know the rules and so do I
 A full commitment's what I'm thinking of
@@ -55,10 +58,3 @@ Never gonna make you cry
 Never gonna say goodbye
 
 Also, this Scrap Mechanic mod makes the game more like Axolot's other game, Raft.
-
-
-# Contributing
-the main branch is protected so you'll have to do a pull request and ask for review
-branch naming conventions
-`username/feature`
-if your name is too long you can shorten it
