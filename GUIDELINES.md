@@ -21,7 +21,7 @@ The folder & file structures can be chosen as seen fit, but it is nevertheless i
 
 **Example**  
 Namespace: `Application.DataAccess.Json`  
-Class nae: `JsonWriter`  
+Class name: `JsonWriter`  
 File name: `JsonWriter.lua`  
 File and folder structure: `Scripts/Application/DataAccess/Json/JsonWriter.lua`
 
