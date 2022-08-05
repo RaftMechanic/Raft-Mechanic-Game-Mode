@@ -1,7 +1,6 @@
 # Git conventions
 This project uses git as its version control and GitHub as the platform for organisational aspects. There are several points to consider if you intend to contribute to the project. When contributing, we use the [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow) as our workflow with some minor changes.
 
-- No feature, major refactoring, or Pull Request without a corresponding issue
 - Keep a clean and logically coherent commit history with sensible commit messages. Read [this](https://initialcommit.com/blog/git-commit-messages-best-practices) article for more information
 - Use short and descriptive branch names
 - Within the Maintainer team, branch names are prefixed with `username/` followed by the branch name. Long or complicated names can be shortened but must be unique
@@ -62,7 +61,7 @@ end
 ```
 ---
 ## Layout conventions
-- use four spaces for indentation
+- Use four spaces for indentation
 - No spaces between parantheses and brackets
 - One statement per line
 - If applicable, group declarations logically
