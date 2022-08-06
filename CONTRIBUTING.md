@@ -1,7 +1,18 @@
+# Contributing
+Before you start contributing, read about the project's conventions and guidelines in the GUIDELINES.md file.
+
+You can contribute in many ways, as long as you follow these steps when doing so:
+1. Check for issues or pull requests, whether your contribution idea is already being worked on
+2. Fork this repository. You only need the main branch in your fork to start working
+3. Create a new branch for your contribution
+4. Make your changes in line with our conventions and guidelines
+5. Create a Pull Request and wait for a maintainer to review your changes
+
+---
+---
 # Git conventions
 This project uses git as its version control and GitHub as the platform for organisational aspects. There are several points to consider if you intend to contribute to the project. When contributing, we use the [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow) as our workflow with some minor changes.
 
-- No feature, major refactoring, or Pull Request without a corresponding issue
 - Keep a clean and logically coherent commit history with sensible commit messages. Read [this](https://initialcommit.com/blog/git-commit-messages-best-practices) article for more information
 - Use short and descriptive branch names
 - Within the Maintainer team, branch names are prefixed with `username/` followed by the branch name. Long or complicated names can be shortened but must be unique
@@ -62,7 +73,7 @@ end
 ```
 ---
 ## Layout conventions
-- use four spaces for indentation
+- Use four spaces for indentation
 - No spaces between parantheses and brackets
 - One statement per line
 - If applicable, group declarations logically
