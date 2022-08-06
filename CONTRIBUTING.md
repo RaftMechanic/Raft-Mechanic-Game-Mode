@@ -1,5 +1,5 @@
 # Contributing
-Before you start contributing, read about the project's conventions and guidelines in the GUIDELINES.md file.
+Before you start contributing, read about the project's conventions and guidelines further below.
 
 You can contribute in many ways, as long as you follow these steps when doing so:
 1. Check for issues or pull requests, whether your contribution idea is already being worked on
