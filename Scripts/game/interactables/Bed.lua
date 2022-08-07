@@ -1,30 +1,30 @@
--- Bed.lua --
-
+---@class Bed : ShapeClass
+---@field loaded boolean
 Bed = class( nil )
 
-function Bed.server_onDestroy( self )
+function Bed:server_onDestroy()
 	if self.loaded then
 		g_respawnManager:sv_destroyBed( self.shape )
 		self.loaded = false
 	end
 end
 
-function Bed.server_onUnload( self )
+function Bed:server_onUnload()
 	if self.loaded then
 		g_respawnManager:sv_updateBed( self.shape )
 		self.loaded = false
 	end
 end
 
-function Bed.sv_activateBed( self, character )
+function Bed:sv_activateBed( character )
 	g_respawnManager:sv_registerBed( self.shape, character )
 end
 
-function Bed.server_onCreate( self )
+function Bed:server_onCreate()
 	self.loaded = true
 end
 
-function Bed.server_onFixedUpdate( self )
+function Bed:server_onFixedUpdate()
 	local prevWorld = self.currentWorld
 	self.currentWorld = self.shape.body:getWorld()
 	if prevWorld ~= nil and self.currentWorld ~= prevWorld then
@@ -34,7 +34,7 @@ end
 
 -- Client
 
-function Bed.client_onInteract( self, character, state )
+function Bed:client_onInteract(character, state )
 	if state == true then
 		if self.shape.body:getWorld().id > 1 then
 			sm.gui.displayAlertText( "#{INFO_HOME_NOT_STORED}" )
@@ -46,13 +46,13 @@ function Bed.client_onInteract( self, character, state )
 	end
 end
 
-function Bed.cl_seat( self )
+function Bed:cl_seat()
 	if sm.localPlayer.getPlayer() and sm.localPlayer.getPlayer():getCharacter() then
 		self.interactable:setSeatCharacter( sm.localPlayer.getPlayer():getCharacter() )
 	end
 end
 
-function Bed.client_onAction( self, controllerAction, state )
+function Bed:client_onAction( controllerAction, state )
 	local consumeAction = true
 	if state == true then
 		if controllerAction == sm.interactable.actions.use or controllerAction == sm.interactable.actions.jump then
@@ -71,6 +71,15 @@ dofile("$CONTENT_DATA/Scripts/game/managers/LanguageManager.lua")
 dofile("$CONTENT_DATA/Scripts/game/raft_quests.lua")
 dofile( "$CONTENT_DATA/Scripts/game/managers/QuestManager.lua" )
 
+---@class Skip
+---@field active boolean
+---@field sleeping boolean
+---@field tick integer
+
+---@class Hammock : Bed
+---@field questMarkerGui : GuiInterface
+---@field id integer ID of the hammock
+---@field skip Skip An object containing information whether the hammock should skip the night
 Hammock = class(Bed)
 
 local sleepTime = 40*5 --ticks
@@ -98,7 +107,7 @@ function Hammock:sv_activateBed( character )
 	QuestManager.Sv_OnEvent(QuestEvent.Sleep, {character = character})
 end
 
-function Hammock:server_onFixedUpdate( dt )
+function Hammock:server_onFixedUpdate()
 	Bed.server_onFixedUpdate(self)
 
 	local time = sm.storage.load( STORAGE_CHANNEL_TIME )
@@ -124,7 +133,7 @@ function Hammock:server_onFixedUpdate( dt )
 				return
 			end
 
-			sm.event.sendToGame("sv_setTimeOfDay", 0.175+0.001)
+			sm.event.sendToGame("sv_setTimeOfDay_noMsg", 0.176)
 			self.skip.active = false
 			self.skip.tick = 0
 			self.skip.sleeping = false
@@ -136,7 +145,7 @@ function Hammock:cl_sleep()
 	sm.event.sendToPlayer( sm.localPlayer.getPlayer(), "cl_e_startFadeToBlack", { duration = 1.0, timeout = 3.0 } )
 end
 
-function Hammock:client_onFixedUpdate(dt)
+function Hammock:client_onFixedUpdate()
 	if g_questManager:cl_getQuestProgressString("quest_raft_tutorial") == language_tag("Quest_Tutorial_Sleep") then 
 		if not self.questMarkerGui then
 			self.questMarkerGui = sm.gui.createWorldIconGui( 60, 60, "$GAME_DATA/Gui/Layouts/Hud/Hud_WorldIcon.layout", false )
@@ -177,7 +186,7 @@ end
 
 function Hammock:getSleepingPeople()
 	local sleepingPeople = 0
-	for k, player in pairs(sm.player.getAllPlayers()) do
+	for _, player in pairs(sm.player.getAllPlayers()) do
 		local char = player.character
 		if sm.exists(char) then
 			local lockingInt = char:getLockingInteractable()

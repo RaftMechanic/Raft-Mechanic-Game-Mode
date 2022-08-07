@@ -30,7 +30,6 @@ dofile("$CONTENT_DATA/Scripts/game/managers/UnitManager.lua")
 dofile("RecipeLoader.lua")
 
 
-
 ---@class SurvivalGame : GameClass
 ---@field sv table
 ---@field cl table
@@ -756,6 +755,14 @@ function SurvivalGame.sv_recreateWorld(self, player)
 		self.network:sendToClients("client_showMessage", "Recreating world")
 	else
 		self.network:sendToClients("client_showMessage", "Recreate world only allowed for overworld")
+	end
+end
+
+
+function SurvivalGame:sv_setTimeOfDay_noMsg(timeOfDay)
+	if timeOfDay then
+		self.sv.time.timeOfDay = timeOfDay
+		self.sv.syncTimer.count = self.sv.syncTimer.ticks -- Force sync
 	end
 end
 

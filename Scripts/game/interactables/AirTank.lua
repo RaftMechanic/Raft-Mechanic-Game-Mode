@@ -1,6 +1,8 @@
 dofile("$CONTENT_DATA/Scripts/game/raft_items.lua")
 
+---@class AirTank : ShapeClass
 AirTank = class()
+
 AirTank.maxParentCount = 1
 AirTank.maxChildCount = 0
 AirTank.connectionInput = sm.interactable.connectionType.logic
@@ -8,7 +10,7 @@ AirTank.connectionOutput = sm.interactable.connectionType.none
 AirTank.colorNormal = sm.color.new( 0x00ccccff )
 AirTank.colorHighlight = sm.color.new( 0x00ffffff )
 
-function AirTank:server_onFixedUpdate(dt)
+function AirTank:server_onFixedUpdate()
 	local parent = self.interactable:getSingleParent()
 	local shape = self.shape
 	if parent then

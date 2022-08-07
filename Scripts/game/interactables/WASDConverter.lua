@@ -1,3 +1,18 @@
+---@class ClientData
+---@field count number
+
+---@class Client
+---@field data ClientData
+
+---@class ServerData
+---@field count number
+
+---@class Server
+---@field data ServerData
+
+---@class Converter : ShapeClass
+---@field sv Server
+---@field cl Client
 Converter = class()
 Converter.maxChildCount = -1
 Converter.maxParentCount = 1
@@ -63,7 +78,7 @@ function Converter:client_onCreate()
     }
 end
 
-function Converter:server_onFixedUpdate( dt )
+function Converter:server_onFixedUpdate()
     if not self.sv or not self.sv.data then return end
 
     local parent = self.interactable:getSingleParent()
@@ -124,14 +139,14 @@ function Converter:client_canInteract()
     return true
 end
 
-function Converter:client_onInteract( char, lookAt )
+function Converter:client_onInteract( _, lookAt )
     if lookAt then
         self.network:sendToServer("sv_changeCount", "add")
         sm.audio.play("PaintTool - ColorPick")
     end
 end
 
-function Converter:client_onTinker( char, lookAt )
+function Converter:client_onTinker(_, lookAt )
     if lookAt then
         self.network:sendToServer("sv_changeCount", "subtract")
         sm.audio.play("PaintTool - ColorPick")
