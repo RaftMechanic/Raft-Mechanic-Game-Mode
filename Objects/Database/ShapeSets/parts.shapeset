@@ -818,28 +818,16 @@
          "renderable" : {
             "lodList" : [
                {
-                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Parts/BeeQueen.fbx",
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/Parts/obj_beehive_queen.fbx",
                   "minViewSize" : 12,
                   "subMeshMap" : {
-                     "Body" : {
-                        "material" : "Dif",
-                        "textureList" : [ "$CONTENT_DATA/Objects/Textures/Parts/Bee/Body.jpg", "", "" ]
-                     },
-                     "Material2" : {
-                        "material" : "Dif",
-                        "textureList" : [ "$CONTENT_DATA/Objects/Textures/Parts/Bee/Material2.png", "", "" ]
-                     },
-                     "Wings" : {
-                        "material" : "Dif",
-                        "textureList" : [ "$CONTENT_DATA/Objects/Textures/Parts/Bee/Wings.png", "", "" ]
-                     },
-                     "back" : {
-                        "material" : "Dif",
-                        "textureList" : [ "$CONTENT_DATA/Objects/Textures/Parts/Bee/Back.png", "", "" ]
-                     },
-                     "headlegs" : {
-                        "material" : "Dif",
-                        "textureList" : [ "$CONTENT_DATA/Objects/Textures/Parts/Bee/Material1.png", "", "" ]
+                     "lambert0" : {
+                        "material" : "DifAsgNorAlpha",
+                        "textureList" : [
+                           "$CONTENT_DATA/Objects/Textures/Parts/Bee/obj_beehive_queen_dif.tga",
+                           "$CONTENT_DATA/Objects/Textures/Parts/Bee/obj_beehive_queen_asg.tga",
+                           "$CONTENT_DATA/Objects/Textures/Parts/Bee/obj_beehive_queen_nor.tga"
+                        ]
                      }
                   }
                }
