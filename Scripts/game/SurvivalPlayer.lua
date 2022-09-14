@@ -918,7 +918,7 @@ function SurvivalPlayer:cl_updateRenderables( args )
 
 	if args.changes.lamp then
 		local character = self.player.character
-		if self.cl.lampEffect == nil and character then
+		if (self.cl.lampEffect == nil or not sm.exists(self.cl.lampEffect)) and character then
 			self.cl.lampEffect = sm.effect.createEffect( "Glowstick - Hold", character, "jnt_spine2" )
 		end
 
