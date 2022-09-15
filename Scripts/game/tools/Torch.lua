@@ -109,6 +109,10 @@ function TorchTool.cl_loadAnimations( self )
 end
 
 function TorchTool.client_onUpdate( self, dt )
+	if self.cl.effect == nil or not sm.exists(self.cl.effect) then
+		self.cl.effect = sm.effect.createEffect( "Fire - small01", self.tool:getOwner().character, "jnt_fertilizer" )
+		self.cl.effect:setOffsetPosition(sm.vec3.new(0, 0.35, -0.35))
+	end
 
 	-- First person animation
 	local isSprinting =  self.tool:isSprinting()

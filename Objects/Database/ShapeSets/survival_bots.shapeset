@@ -11,7 +11,7 @@
             "col": "$SURVIVAL_DATA/Objects/Collision/char_cookbot_col.obj"
         },
         "scripted": {
-            "filename": "$SURVIVAL_DATA/Scripts/game/interactables/Cookbot.lua",
+            "filename": "$CONTENT_DATA/Scripts/game/interactables/Cookbot.lua",
             "classname": "Cookbot"
         },
         "rotationSet": "PropY",
