@@ -410,7 +410,7 @@ Shape.worldPosition = {}
 Shape.worldRotation = {}
 
 ---**Get**:
----Returns the local x-axis vector of a shape.  
+---Returns the local xaxis vector of a shape.  
 ---@type Vec3
 Shape.xAxis = {}
 
@@ -420,7 +420,7 @@ Shape.xAxis = {}
 Shape.yAxis = {}
 
 ---**Get**:
----Returns the local z-axis vector of a shape.  
+---Returns the local zaxis vector of a shape.  
 ---@type Vec3
 Shape.zAxis = {}
 
@@ -579,7 +579,7 @@ function Shape:getWorldPosition() end
 ---@return Quat
 function Shape:getWorldRotation() end
 
----Returns the local x-axis vector of a shape.  
+---Returns the local xaxis vector of a shape.  
 ---@return Vec3
 function Shape:getXAxis() end
 
@@ -587,7 +587,7 @@ function Shape:getXAxis() end
 ---@return Vec3
 function Shape:getYAxis() end
 
----Returns the local z-axis vector of a shape.  
+---Returns the local zaxis vector of a shape.  
 ---@return Vec3
 function Shape:getZAxis() end
 
@@ -758,10 +758,10 @@ function Body:createBlock(uuid, size, position, forceAccept) end
 ---Create a part on body  
 ---@param uuid Uuid The uuid of the shape.
 ---@param position Vec3 The shape's local position.
----@param z-axis Vec3 The shape's local z direction.
----@param x-axis Vec3 The shape's local x direction.
+---@param zaxis Vec3 The shape's local z direction.
+---@param xaxis Vec3 The shape's local x direction.
 ---@param forceAccept? boolean Set true to force the body to accept the shape. (Defaults to true)
-function Body:createPart(uuid, position, z-axis, x-axis, forceAccept) end
+function Body:createPart(uuid, position, zaxis, xaxis, forceAccept) end
 
 ---*Server only*  
 ---Returns a table with all characters seated in this body  
@@ -1394,7 +1394,7 @@ Joint.uuid = {}
 Joint.worldPosition = {}
 
 ---**Get**:
----Returns the local x-axis vector of a joint.  
+---Returns the local xaxis vector of a joint.  
 ---@type Vec3
 Joint.xAxis = {}
 
@@ -1404,7 +1404,7 @@ Joint.xAxis = {}
 Joint.yAxis = {}
 
 ---**Get**:
----Returns the local z-axis vector of a joint.  
+---Returns the local zaxis vector of a joint.  
 ---@type Vec3
 Joint.zAxis = {}
 
@@ -1492,7 +1492,7 @@ function Joint:getWorldPosition() end
 ---@return Quat
 function Joint:getWorldRotation() end
 
----Returns the local x-axis vector of a joint.  
+---Returns the local xaxis vector of a joint.  
 ---@return Vec3
 function Joint:getXAxis() end
 
@@ -1500,7 +1500,7 @@ function Joint:getXAxis() end
 ---@return Vec3
 function Joint:getYAxis() end
 
----Returns the local z-axis vector of a joint.  
+---Returns the local zaxis vector of a joint.  
 ---@return Vec3
 function Joint:getZAxis() end
 
@@ -2923,7 +2923,7 @@ function Effect:setScale(scale) end
 ---@param start number Start normalized time of day.
 ---@param end number End normalized time of day.
 ---@param inversed boolean If true, period between start-end becomes inactive time.
-function Effect:setTimeOfDay(enabled, start, end, inversed) end
+function Effect:setTimeOfDay(enabled, start, tend, inversed) end
 
 ---*Client only*  
 ---Sets the velocity of an effect. The effect will move along at the set velocity until it receives a new position.  
@@ -3385,7 +3385,6 @@ local Widget = {}
 ---**Get**:
 ---@deprecated Use [GuiInterface]
 ---Removed!  
----@type 
 Widget.id = {}
 
 ---**Get**:
@@ -3394,7 +3393,6 @@ Widget.id = {}
 ---**Set**:
 ---@deprecated Use [GuiInterface]
 ---Removed!  
----@type 
 Widget.position = {}
 
 ---**Get**:
@@ -3403,7 +3401,6 @@ Widget.position = {}
 ---**Set**:
 ---@deprecated Use [GuiInterface]
 ---Removed!  
----@type 
 Widget.size = {}
 
 ---**Get**:
@@ -3412,7 +3409,6 @@ Widget.size = {}
 ---**Set**:
 ---@deprecated Use [GuiInterface]
 ---Removed!  
----@type 
 Widget.visible = {}
 
 ---@deprecated Use [GuiInterface]
@@ -4374,7 +4370,7 @@ function sm.physics.multicast(casts) end
 ---@param body? Body The body to be ignored. (Optional)
 ---@param mask? integer The collision mask. Defaults to [sm.physics.filter, sm.physics.filter.default] (Optional)
 ---@return boolean,	RaycastResult
-function sm.physics.raycast(start, end, body, mask) end
+function sm.physics.raycast(start, tend, body, mask) end
 
 ---Performs a <a target="_blank" href="https://en.wikipedia.org/wiki/Ray_casting">ray cast</a> between two positions to find a specific target.  
 ---a [Body] must be provided as a target.  
@@ -4383,7 +4379,7 @@ function sm.physics.raycast(start, end, body, mask) end
 ---@param end Vec3 The end position.
 ---@param body Body The body to be exclusively checked.
 ---@return boolean,	RaycastResult
-function sm.physics.raycastTarget(start, end, body) end
+function sm.physics.raycastTarget(start, tend, body) end
 
 ---*Server only*  
 ---Sets the gravitational acceleration affecting [Shape, shapes] and [Body, bodies].  
@@ -4407,7 +4403,7 @@ function sm.physics.sphereContactCount(worldPosition, radius, includeTerrain, co
 ---@param body? Body The body to be ignored. (Optional)
 ---@param mask? integer The collision mask. Defaults to [sm.physics.filter, sm.physics.filter.default] (Optional)
 ---@return boolean,	RaycastResult
-function sm.physics.spherecast(start, end, radius, body, mask) end
+function sm.physics.spherecast(start, tend, radius, body, mask) end
 
 
 ---A <strong>shape</strong> is any block, part or basic material that can be built by a player. Shapes are always connected to a [sm.body, body], which is a collection of shapes.  
@@ -6880,10 +6876,10 @@ function sm.terrainTile.getCreatorId(path) end
 
 ---Returns all decals for a cell in a tile.  
 ---@param id Uuid The tile id
----@param X-offset integer The offset along the X axis
----@param Y-offset integer The offset along the Y axis
+---@param xoffset integer The offset along the X axis
+---@param yoffset integer The offset along the Y axis
 ---@return table
-function sm.terrainTile.getDecalsForCell(id, X-offset, Y-offset) end
+function sm.terrainTile.getDecalsForCell(id, xoffset, yoffset) end
 
 ---Returns a table of all harvestables in a terrain cell.  
 ---@param tileId Uuid The tile id.
@@ -6923,17 +6919,17 @@ function sm.terrainTile.getMaterialAt(tileId, tileOffsetX, tileOffsetY, lod, x, 
 
 ---Returns all nodes for a cell in a tile.  
 ---@param id Uuid The tile id
----@param X-offset integer The offset along the X axis
----@param Y-offset integer The offset along the Y axis
+---@param xoffset integer The offset along the X axis
+---@param yoffset integer The offset along the Y axis
 ---@return table
-function sm.terrainTile.getNodesForCell(id, X-offset, Y-offset) end
+function sm.terrainTile.getNodesForCell(id, xoffset, yoffset) end
 
 ---Returns all prefabs in a cell.  
 ---@param tileId Uuid The tile id.
----@param X-offset integer The offset along the X axis.
----@param Y-offset integer The offset along the Y axis.
+---@param xoffset integer The offset along the X axis.
+---@param yoffset integer The offset along the Y axis.
 ---@return table
-function sm.terrainTile.getPrefabsForCell(tileId, X-offset, Y-offset) end
+function sm.terrainTile.getPrefabsForCell(tileId, xoffset, yoffset) end
 
 ---Returns the size of a tile as the number of cells along one of the axises.  
 ---@param path string The tile's path.
